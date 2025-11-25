@@ -79,7 +79,7 @@ def generate_launch_description():
                 executable='joint_state_publisher',
                 name='joint_state_publisher',
                 output='screen',
-                parameters=[{'source_list': ['/cohan_sim_joint_states'], 'rate': 50}]
+                parameters=[{'source_list': ['/cohan_sim_joint_states'], 'rate': 50, 'use_sim_time': use_sim_time}]
             )
         ]
     )
@@ -117,7 +117,7 @@ def generate_launch_description():
                 respawn=use_respawn,
                 respawn_delay=2.0,
                 output='screen',
-                parameters=[{'source_list': ['/cohan_sim_joint_states'], 'rate': 50}]
+                parameters=[{'source_list': ['/cohan_sim_joint_states'], 'rate': 50, 'use_sim_time': use_sim_time}]
             )
         ]
     )

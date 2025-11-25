@@ -139,11 +139,7 @@ void SimROS::initMessages() {
 }
 
 void SimROS::publishROS() {
-#if ROS == 1
-  auto now = ros::Time::now();
-#elif ROS == 2
-  auto now = node_->now();
-#endif
+  auto now = sim_time_;
   for (auto& robot : sim_->robots()) {
     std::string prefix = (robot.idx == 0) ? "" : robot.name + "/";
     scan_msgs_[robot.idx].header.stamp = now;

@@ -140,6 +140,8 @@ controller_server:
     #COHAN Params
     FollowPath:
       plugin: "hateb_local_planner::HATebLocalPlannerROS"
+      predict_srv_name: "/agent_path_predict/predict_agent_poses"
+      reset_prediction_srv_name: "/agent_path_predict/reset_prediction_services"
       pose_prediction_reset_time: 10.0
       odom_topic: odom
       map_frame: odom

@@ -572,6 +572,7 @@ bool HATebLocalPlannerROS::onGoalReached() {
 
 bool HATebLocalPlannerROS::tickTreeAndUpdatePlans(const geometry_msgs::msg::PoseStamped& robot_pose, std::vector<AgentPlanCombined>& transformed_agent_plans,
                                                   AgentPlanVelMap& transformed_agent_plan_vel_map) {
+  auto node = node_.lock();
   // Ticks the tree once and returns the current planning mode
   auto mode_info = bt_mode_switch_.tickAndGetMode();
   // hateb_local_planner::msg::PlanningMode mode_info;
@@ -1242,7 +1243,7 @@ FootprintModelPtr HATebLocalPlannerROS::getRobotFootprintFromParamServer(const r
   // line
   if (model_name == "line") {
     // check parameters
-    if (cfg_->robot_footprint.line_start.empty() || !cfg_->robot_footprint.line_end.empty()) {
+    if (cfg_->robot_footprint.line_start.empty() || cfg_->robot_footprint.line_end.empty()) {
       RCLCPP_ERROR_STREAM(
           logger_,
           "Footprint model 'line' cannot be loaded for trajectory optimization, since param 'footprint_model.line_start' and/or 'footprint_model.line_end' do not exist. Using point-model instead.");
@@ -1588,7 +1589,7 @@ void HATebLocalPlannerROS::resetAgentsPrediction() {
   }
 
   auto future = reset_agents_prediction_client_->async_send_request(request);
-  if (future.wait_for(std::chrono::milliseconds(10)) != std::future_status::ready) {
+  if (future.wait_for(std::chrono::milliseconds(500)) != std::future_status::ready) {
     RCLCPP_WARN_THROTTLE(logger_, *clock_, THROTTLE_RATE * 1000, "Failed to call %s service, is agent prediction server running?", reset_prediction_srv_name_.c_str());
   }
 }

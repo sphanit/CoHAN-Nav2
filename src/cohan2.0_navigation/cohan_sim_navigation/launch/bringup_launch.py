@@ -136,6 +136,7 @@ def generate_launch_description():
             executable='component_container_isolated',
             parameters=[configured_params, {'autostart': autostart}],
             arguments=['--ros-args', '--log-level', log_level],
+            prefix="xterm -hold -e gdb -ex run --args",
             remappings=remappings,
             output='screen'),
 

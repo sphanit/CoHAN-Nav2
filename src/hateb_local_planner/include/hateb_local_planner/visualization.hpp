@@ -113,6 +113,7 @@
 #define TTG_TOPIC "time_to_goal"
 #define TRACKED_AGENTS_SUB "/tracked_agents"
 #define CLEARING_TIMER_DURATION 1.0  // seconds
+#define DEFAULT_AGENT_SEGMENT cohan_msgs::msg::TrackedSegmentType::TORSO
 
 namespace hateb_local_planner {
 

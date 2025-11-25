@@ -6,7 +6,7 @@ occupied_thresh: 0.65
 free_thresh: 0.196
 
 ## For the simulator
-speed: 2.0              # Keyboard linear speed (m/s)
+speed: 1.0             # Keyboard linear speed (m/s)
 angular_speed: 1.5708   # Keyboard angular speed (rad/s), default pi/2
 
 entities:
@@ -16,7 +16,7 @@ entities:
     start_theta: 0
     radius: 0.3
     color: [0, 100, 255, 255]
-    use_keyboard: true
+    use_keyboard: false
     use_differential: false
     use_laser: true
     laser_range: 7
@@ -28,7 +28,7 @@ entities:
     start_theta: 3.14
     radius: 0.3
     color: [150, 75, 0, 255]
-    use_keyboard: false
+    use_keyboard: true
     use_differential: false
     use_laser: true
     laser_range: 7

@@ -232,7 +232,7 @@ void Simulator2D::add_entity(SimEntity sim_entity) {
       std::cout << "Warning: Invalid laser range provided, defaulting to " << LASER_DEFAULT_RANGE << " meters" << std::endl;
     }
   }
-  last_vel_command_ = SDL_GetTicks();  // Initialize last velocity command timestamp
+  sim_entity.last_vel_command = SDL_GetTicks();  // Initialize last velocity command timestamp for this entity
   sim_entity.idx = entity_count_;
   entities_.push_back(sim_entity);
   entity_count_++;
@@ -540,7 +540,7 @@ void Simulator2D::update_entity(SimEntity& sim_entity) {
     sim_entity.entity.keyboardControl(config_.speed, config_.angular_speed);
   } else {
     Uint32 current_time = SDL_GetTicks();
-    if (current_time - last_vel_command_ > VELOCITY_TIMEOUT_MS) {
+    if (current_time - sim_entity.last_vel_command > VELOCITY_TIMEOUT_MS) {
       // Zero out velocities if no recent command
       sim_entity.entity.setVelocity(0, 0, 0);
     }
@@ -825,7 +825,7 @@ void Simulator2D::resetSim() {
     ent.entity.setPose(ent.initial_x, ent.initial_y, ent.initial_theta);
     ent.entity.setVelocity(0, 0, 0);
     ent.head_rotation = 0.0;
-    last_vel_command_ = SDL_GetTicks();  // Reset last velocity command timestamp
+    ent.last_vel_command = SDL_GetTicks();  // Reset last velocity command timestamp
   }
   // Reset zoom and pan
   zoom_ = 1.0;
@@ -835,8 +835,8 @@ void Simulator2D::resetSim() {
 
 void Simulator2D::setRobotVelocity(int idx, double vx, double vy, double omega) {
   if (idx >= 0 && idx < entity_count_) {
-    last_vel_command_ = SDL_GetTicks();  // Update last velocity command timestamp
     auto* sim_ent = &entities_[idx];
+    sim_ent->last_vel_command = SDL_GetTicks();  // Update last velocity command timestamp
     sim_ent->entity.setVelocity(vx, vy, omega);
   }
 }

@@ -304,6 +304,7 @@ struct SimEntity {
   double head_rotation = 0.0;                                        //!< Current head rotation angle
   double target_head_angle = 0.0;                                    //!< Target angle for head rotation
   bool head_at_target = true;                                        //!< Whether head reached target angle
+  Uint32 last_vel_command = 0;                                       //!< Timestamp of last velocity command for this entity
 };
 
 /**

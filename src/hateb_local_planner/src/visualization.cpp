@@ -698,55 +698,57 @@ void TebVisualization::publishTrackedAgents(cohan_msgs::msg::TrackedAgents::Cons
     arrow.header.stamp = node_->now();
 
     for (const auto& segment : agent.segments) {  // Set the namespace and id for this marker.  This serves to create a unique ID
-      // Any marker sent with the same namespace and id will overwrite the old one
-      marker.ns = "body";
-      marker.id = i;
-      arrow.ns = "direction";
-      arrow.id = i;
+      if (segment.type == DEFAULT_AGENT_SEGMENT) {
+        // Any marker sent with the same namespace and id will overwrite the old one
+        marker.ns = "body";
+        marker.id = i;
+        arrow.ns = "direction";
+        arrow.id = i;
 
-      // Set the marker type.  Initially this is CUBE, and cycles between that and SPHERE, ARROW, and CYLINDER
-      marker.type = visualization_msgs::msg::Marker::CYLINDER;
-      arrow.type = visualization_msgs::msg::Marker::ARROW;
+        // Set the marker type.  Initially this is CUBE, and cycles between that and SPHERE, ARROW, and CYLINDER
+        marker.type = visualization_msgs::msg::Marker::CYLINDER;
+        arrow.type = visualization_msgs::msg::Marker::ARROW;
 
-      marker.action = visualization_msgs::msg::Marker::ADD;
-      arrow.action = visualization_msgs::msg::Marker::ADD;
+        marker.action = visualization_msgs::msg::Marker::ADD;
+        arrow.action = visualization_msgs::msg::Marker::ADD;
 
-      // Set the pose of the marker.  This is a full 6DOF pose relative to the frame/time specified in the header
-      marker.pose.position.x = segment.pose.pose.position.x;
-      marker.pose.position.y = segment.pose.pose.position.y;
-      marker.pose.position.z = 0.9;
-      marker.pose.orientation = segment.pose.pose.orientation;
+        // Set the pose of the marker.  This is a full 6DOF pose relative to the frame/time specified in the header
+        marker.pose.position.x = segment.pose.pose.position.x;
+        marker.pose.position.y = segment.pose.pose.position.y;
+        marker.pose.position.z = 0.9;
+        marker.pose.orientation = segment.pose.pose.orientation;
 
-      arrow.pose.position.x = segment.pose.pose.position.x;
-      arrow.pose.position.y = segment.pose.pose.position.y;
-      arrow.pose.position.z = 0.0;
-      arrow.pose.orientation = segment.pose.pose.orientation;
+        arrow.pose.position.x = segment.pose.pose.position.x;
+        arrow.pose.position.y = segment.pose.pose.position.y;
+        arrow.pose.position.z = 0.0;
+        arrow.pose.orientation = segment.pose.pose.orientation;
 
-      // Set the scale of the marker -- 1x1x1 here means 1m on a side
-      marker.scale.x = 0.6;
-      marker.scale.y = 0.6;
-      marker.scale.z = 1.8;
+        // Set the scale of the marker -- 1x1x1 here means 1m on a side
+        marker.scale.x = 0.6;
+        marker.scale.y = 0.6;
+        marker.scale.z = 1.8;
 
-      arrow.scale.x = 0.8;
-      arrow.scale.y = 0.05;
-      arrow.scale.z = 0.05;
+        arrow.scale.x = 0.8;
+        arrow.scale.y = 0.05;
+        arrow.scale.z = 0.05;
 
-      // Set the color -- be sure to set alpha to something non-zero!
-      marker.color.r = 0.0f;
-      marker.color.g = 1.0f;
-      marker.color.b = 0.0f;
-      marker.color.a = 1.0;
+        // Set the color -- be sure to set alpha to something non-zero!
+        marker.color.r = 0.0f;
+        marker.color.g = 1.0f;
+        marker.color.b = 0.0f;
+        marker.color.a = 1.0;
 
-      arrow.color.r = 1.0f;
-      arrow.color.g = 1.0f;
-      arrow.color.b = 0.0f;
-      arrow.color.a = 1.0;
+        arrow.color.r = 1.0f;
+        arrow.color.g = 1.0f;
+        arrow.color.b = 0.0f;
+        arrow.color.a = 1.0;
 
-      marker.lifetime = rclcpp::Duration::from_seconds(2.0);
-      arrow.lifetime = rclcpp::Duration::from_seconds(2.0);
-      marker_arr.markers.push_back(marker);
-      arrow_arr.markers.push_back(arrow);
-      i++;
+        marker.lifetime = rclcpp::Duration::from_seconds(2.0);
+        arrow.lifetime = rclcpp::Duration::from_seconds(2.0);
+        marker_arr.markers.push_back(marker);
+        arrow_arr.markers.push_back(arrow);
+        i++;
+      }
     }
   }
   agent_marker_pub_->publish(marker_arr);
