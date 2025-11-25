@@ -136,7 +136,7 @@ def generate_launch_description():
             executable='component_container_isolated',
             parameters=[configured_params, {'autostart': autostart}],
             arguments=['--ros-args', '--log-level', log_level],
-            prefix="xterm -hold -e gdb -ex run --args",
+            # prefix="xterm -hold -e gdb -ex run --args",           ## Debug the whole container as it is not possible to add it to ComposedNodes
             remappings=remappings,
             output='screen'),
 

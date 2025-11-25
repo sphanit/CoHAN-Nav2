@@ -333,7 +333,7 @@ local_costmap:
       resolution: 0.05
       robot_radius: 0.47
       footprint: "[[-0.325, -0.325], [-0.325, 0.325], [0.325, 0.325], [0.46, 0.0], [0.325, -0.325]]"
-      plugins: ["voxel_layer", "inflation_layer"]
+      plugins: ["voxel_layer", "inflation_layer", "human_static_layer", "human_visibility_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
@@ -361,6 +361,11 @@ local_costmap:
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
         map_subscribe_transient_local: True
+      human_static_layer:
+        plugin: "cohan_layers::StaticAgentLayer"
+        agent_radius: 0.80
+      human_visibility_layer:
+        plugin: "cohan_layers::AgentVisibilityLayer"
       always_send_full_costmap: True
 
 global_costmap:
@@ -370,12 +375,14 @@ global_costmap:
       publish_frequency: 1.0
       global_frame: map
       robot_base_frame: base_link
+      tracked_agents_topic: "/tracked_agents"
+      agents_states_topic: "/agents_info"
       use_sim_time: True
       robot_radius: 0.47
       footprint: "[[-0.325, -0.325], [-0.325, 0.325], [0.325, 0.325], [0.46, 0.0], [0.325, -0.325]]"
       resolution: 0.05
       track_unknown_space: true
-      plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
+      plugins: ["static_layer", "obstacle_layer", "inflation_layer", "human_static_layer", "human_visibility_layer"]
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
@@ -398,6 +405,12 @@ global_costmap:
         cost_scaling_factor: 3.0
         inflation_radius: 0.55
       always_send_full_costmap: True
+      human_static_layer:
+        plugin: "cohan_layers::StaticAgentLayer"
+        agent_radius: 0.80
+      human_visibility_layer:
+        plugin: "cohan_layers::AgentVisibilityLayer"
+
 
 map_server:
   ros__parameters:

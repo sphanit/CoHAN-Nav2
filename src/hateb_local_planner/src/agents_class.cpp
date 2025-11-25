@@ -240,36 +240,36 @@ void Agents::trackedAgentsCB(const cohan_msgs::msg::TrackedAgents::SharedPtr tra
     // Adds a temporary costmap around the agents to let planner plan safe
     // trajectories
 
-    if (cfg_->planning_mode > 0) {
-      for (int i = 0; i < sorted_ids.size() && i < agents_.size(); i++) {
-        geometry_msgs::msg::Point v1;
-        geometry_msgs::msg::Point v2;
-        geometry_msgs::msg::Point v3;
-        geometry_msgs::msg::Point v4;
-        auto idx = sorted_ids[i];
-        auto agent_radius = agents_radii[idx];
-        v1.x = agents_[idx].position.x - agent_radius, v1.y = agents_[idx].position.y - agent_radius, v1.z = 0.0;
-        v2.x = agents_[idx].position.x - agent_radius, v2.y = agents_[idx].position.y + agent_radius, v2.z = 0.0;
-        v3.x = agents_[idx].position.x + agent_radius, v3.y = agents_[idx].position.y + agent_radius, v3.z = 0.0;
-        v4.x = agents_[idx].position.x + agent_radius, v4.y = agents_[idx].position.y - agent_radius, v4.z = 0.0;
+    // if (cfg_->planning_mode > 0) {
+    //   for (int i = 0; i < sorted_ids.size() && i < agents_.size(); i++) {
+    //     geometry_msgs::msg::Point v1;
+    //     geometry_msgs::msg::Point v2;
+    //     geometry_msgs::msg::Point v3;
+    //     geometry_msgs::msg::Point v4;
+    //     auto idx = sorted_ids[i];
+    //     auto agent_radius = agents_radii[idx];
+    //     v1.x = agents_[idx].position.x - agent_radius, v1.y = agents_[idx].position.y - agent_radius, v1.z = 0.0;
+    //     v2.x = agents_[idx].position.x - agent_radius, v2.y = agents_[idx].position.y + agent_radius, v2.z = 0.0;
+    //     v3.x = agents_[idx].position.x + agent_radius, v3.y = agents_[idx].position.y + agent_radius, v3.z = 0.0;
+    //     v4.x = agents_[idx].position.x + agent_radius, v4.y = agents_[idx].position.y - agent_radius, v4.z = 0.0;
 
-        std::vector<geometry_msgs::msg::Point> agent_pos_costmap;
+    //     std::vector<geometry_msgs::msg::Point> agent_pos_costmap;
 
-        transform_stamped = tf_->lookupTransform(cfg_->map_frame, cfg_->global_frame, tf2::TimePointZero, tf2::durationFromSec(0.5));
-        tf2::doTransform(v1, v1, transform_stamped);
-        tf2::doTransform(v2, v2, transform_stamped);
-        tf2::doTransform(v3, v3, transform_stamped);
-        tf2::doTransform(v4, v4, transform_stamped);
+    //     transform_stamped = tf_->lookupTransform(cfg_->map_frame, cfg_->global_frame, tf2::TimePointZero, tf2::durationFromSec(0.5));
+    //     tf2::doTransform(v1, v1, transform_stamped);
+    //     tf2::doTransform(v2, v2, transform_stamped);
+    //     tf2::doTransform(v3, v3, transform_stamped);
+    //     tf2::doTransform(v4, v4, transform_stamped);
 
-        agent_pos_costmap.push_back(v1);
-        agent_pos_costmap.push_back(v2);
-        agent_pos_costmap.push_back(v3);
-        agent_pos_costmap.push_back(v4);
+    //     agent_pos_costmap.push_back(v1);
+    //     agent_pos_costmap.push_back(v2);
+    //     agent_pos_costmap.push_back(v3);
+    //     agent_pos_costmap.push_back(v4);
 
-        bool set_success = false;
-        set_success = costmap_->setConvexPolygonCost(agent_pos_costmap, COST_OBS);
-      }
-    }
+    //     bool set_success = false;
+    //     set_success = costmap_->setConvexPolygonCost(agent_pos_costmap, COST_OBS);
+    //   }
+    // }
 
     agents_info_pub_->publish(agents_info);
   } catch (tf2::TransformException& ex) {

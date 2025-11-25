@@ -38,7 +38,8 @@
 #include <rclcpp/rclcpp.hpp>
 #include <rclcpp_lifecycle/lifecycle_node.hpp>
 
-#include "behaviortree_cpp/bt_factory.h"
+// Use system BehaviorTree.CPP v3 headers (ROS 2 Humble)
+#include "behaviortree_cpp_v3/bt_factory.h"
 
 /**
  * @brief Constants for numerical precision and distance thresholds

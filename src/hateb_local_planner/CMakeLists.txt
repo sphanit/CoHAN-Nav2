@@ -48,7 +48,7 @@ find_package(tf2_ros REQUIRED)
 find_package(agent_path_prediction REQUIRED)
 find_package(cohan_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
-find_package(behaviortree_cpp REQUIRED)
+find_package(behaviortree_cpp_v3 REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(ros2_helpers REQUIRED)
 
@@ -116,7 +116,7 @@ set(dependencies
   agent_path_prediction
   cohan_msgs
   visualization_msgs
-  behaviortree_cpp
+  behaviortree_cpp_v3
   ros2_helpers
 )
 

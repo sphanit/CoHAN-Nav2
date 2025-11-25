@@ -30,7 +30,8 @@
 #include <hateb_local_planner/agents_class.hpp>
 #include <rclcpp/rclcpp.hpp>
 
-#include "behaviortree_cpp/bt_factory.h"
+// Use system BehaviorTree.CPP v3 (ROS 2 Humble)
+#include "behaviortree_cpp_v3/bt_factory.h"
 
 // Messages
 #include <action_msgs/msg/goal_status_array.hpp>

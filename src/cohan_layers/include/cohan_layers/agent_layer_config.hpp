@@ -72,7 +72,7 @@ class AgentLayerConfig {
     enabled = true;
     amplitude = 150.0;
     radius = 1.5;
-    agent_radius = 1.0;
+    agent_radius = 0.3;
     ns = "";
 
     // Bind parameters with layer name prefix for scoping

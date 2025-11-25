@@ -115,7 +115,7 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     bhv_tree_.rootBlackboard()->set("reset", false);
     bhv_tree_.rootBlackboard()->set("recovery", false);
 
-    auto status = bhv_tree_.tickOnce();  // This is needed to update all blackboard entries
+    auto status = bhv_tree_.tickRoot();  // This is needed to update all blackboard entries
     initialized_ = true;
     BT_INFO(name_, "Behavior Tree initialized.")
   } else {
@@ -166,7 +166,7 @@ void ModeSwitch::resultNavigateToPoseCB(const action_msgs::msg::GoalStatusArray:
 
 BT::NodeStatus ModeSwitch::tickBT() {
   // Tick the tree from the start
-  auto status = bhv_tree_.tickOnce();
+  auto status = bhv_tree_.tickRoot();
 
   updateMode();
   if (goal_update_) {
