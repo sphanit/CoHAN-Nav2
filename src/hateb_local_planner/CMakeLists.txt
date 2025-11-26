@@ -139,6 +139,7 @@ add_library(hateb_local_planner_core SHARED
   src/behavior_tree/action/set_mode.cpp
   src/mode_switch.cpp
   src/agents_class.cpp
+  src/hateb_goal_checker.cpp
 )
 
 

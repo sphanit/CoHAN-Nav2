@@ -539,8 +539,7 @@ class HATebLocalPlannerROS : public nav2_core::Controller {
 
   // Agent prediction services and related variables
   rclcpp::Client<agent_path_prediction::srv::AgentPosePredict>::SharedPtr predict_agents_client_;  //!< Client for predicting agent trajectories
-  rclcpp::Client<std_srvs::srv::Trigger>::SharedPtr reset_agents_prediction_client_;               //!< Client for resetting agent predictions
-  rclcpp::Client<std_srvs::srv::Trigger>::SharedPtr publish_predicted_markers_client_;             //!< Client for publishing prediction markers
+  rclcpp::Client<std_srvs::srv::Empty>::SharedPtr reset_agents_prediction_client_;                 //!< Client for resetting agent predictions
 
   std::string predict_srv_name_;           //!< Name of the prediction service
   std::string reset_prediction_srv_name_;  //!< Name of the reset prediction service
@@ -572,6 +571,10 @@ class HATebLocalPlannerROS : public nav2_core::Controller {
   rclcpp::Clock::SharedPtr clock_;                                  //!< ROS 2 clock
   rclcpp::Node::SharedPtr intra_node_costmap_converter_;            //!< Shared pointer to node for costmap converter
   rclcpp::Node::SharedPtr intra_node_btree_;                        //!< Shared pointer to node for behavior tree
+
+  // For Service Clients
+  rclcpp::Node::SharedPtr client_node_;                                         //!< Node for action client
+  std::shared_ptr<rclcpp::executors::SingleThreadedExecutor> client_executor_;  //!< Executor for action client
 
  public:
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW

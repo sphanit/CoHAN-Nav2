@@ -123,6 +123,36 @@ class AgentPathPrediction : public rclcpp::Node {
     geometry_msgs::msg::TwistWithCovariance vel;  // Initial velocity of the agent
   };
 
+  // ROS2 Action Clients
+  using ComputePathToPose = nav2_msgs::action::ComputePathToPose;
+  rclcpp_action::Client<ComputePathToPose>::SharedPtr get_plan_client_;                    //!< Action client for computing navigation paths
+  using GoalHandleComputePathToPose = rclcpp_action::ClientGoalHandle<ComputePathToPose>;  //!< Goal handle type for ComputePathToPose action
+
+  // Action Goal Handlers
+  /**
+   * @brief Sends a goal to the ComputePathToPose action server
+   * @param goal_msg The goal message containing the target pose and start pose
+   */
+  void sendActionGoal(ComputePathToPose::Goal goal_msg);
+
+  /**
+   * @brief Callback for processing action goal responses from ComputePathToPose
+   * @param goal_handle Shared pointer to the goal handle returned by the action server
+   */
+  void goalResponseCB(GoalHandleComputePathToPose::SharedPtr goal_handle);
+
+  /**
+   * @brief Callback for processing action results from ComputePathToPose
+   * @param result The wrapped result from the action server
+   */
+  void resultCB(const GoalHandleComputePathToPose::WrappedResult& result);
+
+  /**
+   * @brief Checks if the planning action is done
+   * @return True if planning is done, false otherwise
+   */
+  bool isPlanningDone() const { return planning_done_; }
+
   // subscriber callbacks
   /**
    * @brief Callback for tracked agents updates
@@ -185,6 +215,7 @@ class AgentPathPrediction : public rclcpp::Node {
    * @param path_vels Vector of agent paths and velocities
    */
   void predictAgentsFromPaths(const std::shared_ptr<agent_path_prediction::srv::AgentPosePredict::Request> req, std::shared_ptr<agent_path_prediction::srv::AgentPosePredict::Response> res);
+
   /**
    * @brief Service to reset all prediction services
    * @param req Empty service request
@@ -247,10 +278,6 @@ class AgentPathPrediction : public rclcpp::Node {
   rclcpp::Service<agent_path_prediction::srv::AgentGoal>::SharedPtr set_goal_srv_;                  //!< Server for setting agent goals
   rclcpp::Service<std_srvs::srv::Empty>::SharedPtr reset_prediction_services_server_;               //!< Server for resetting predictions
 
-  // ROS2 Action Clients
-  using ComputePathToPose = nav2_msgs::action::ComputePathToPose;
-  rclcpp_action::Client<ComputePathToPose>::SharedPtr get_plan_client_;  //!< Action client for computing navigation paths
-
   // Transform listener
   std::shared_ptr<tf2_ros::Buffer> tf_buffer_;      //!< TF2 buffer for coordinate transformations
   std::shared_ptr<tf2_ros::TransformListener> tf_;  //!< TF2 transform listener for coordinate transformations
@@ -272,6 +299,10 @@ class AgentPathPrediction : public rclcpp::Node {
   std::string tracked_agents_sub_topic_;                                          //!< Topic name for tracked agents subscription
   std::string get_plan_srv_name_;                                                 //!< Service name for get plan service
   std::string ns_;                                                                //!< Namespace for the node
+  bool planning_done_;                                                            //!< Flag indicating if planning is done
+  nav_msgs::msg::Path planned_path_;                                              //!< Planned path from action server
+  rclcpp::Node::SharedPtr client_node_;                                           //!< Node for action client
+  std::shared_ptr<rclcpp::executors::SingleThreadedExecutor> client_executor_;    //!< Executor for action client
 };
 }  // namespace agents
 

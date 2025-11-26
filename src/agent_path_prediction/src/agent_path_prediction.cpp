@@ -70,14 +70,60 @@ void AgentPathPrediction::initialize() {
       this->create_subscription<agent_path_prediction::msg::PredictedGoals>(cfg_->predicted_goal_topic, 1, std::bind(&AgentPathPrediction::predictedGoalCB, this, std::placeholders::_1));
 
   // Initialize Service clients
-  get_plan_client_ = rclcpp_action::create_client<ComputePathToPose>(this, get_plan_srv_name_);
+  client_node_ = std::make_shared<rclcpp::Node>("get_plan_client_node");
+  get_plan_client_ = rclcpp_action::create_client<ComputePathToPose>(client_node_, get_plan_srv_name_);
+  client_executor_ = std::make_shared<rclcpp::executors::SingleThreadedExecutor>();
+  client_executor_->add_node(client_node_);
 
   // Initialize properties
   showing_markers_ = false;
   got_new_agent_paths_ = false;
   got_external_goal_ = false;
 
-  RCLCPP_INFO(this->get_logger(), "node %s initialized", NODE_NAME);
+  RCLCPP_INFO(this->get_logger(), "AgentPathPrediction initialized");
+}
+
+void AgentPathPrediction::sendActionGoal(ComputePathToPose::Goal goal_msg) {
+  using namespace std::placeholders;
+
+  planning_done_ = false;
+
+  if (!get_plan_client_->wait_for_action_server()) {
+    RCLCPP_ERROR(client_node_->get_logger(), "%s action server not available after waiting", cfg_->get_plan_srv_name.c_str());
+  }
+
+  auto send_goal_options = rclcpp_action::Client<ComputePathToPose>::SendGoalOptions();
+  send_goal_options.goal_response_callback = std::bind(&AgentPathPrediction::goalResponseCB, this, _1);
+  send_goal_options.result_callback = std::bind(&AgentPathPrediction::resultCB, this, _1);
+  get_plan_client_->async_send_goal(goal_msg, send_goal_options);
+}
+
+void AgentPathPrediction::goalResponseCB(GoalHandleComputePathToPose::SharedPtr goal_handle) {
+  if (!goal_handle) {
+    RCLCPP_ERROR(client_node_->get_logger(), "Action Goal was rejected by server");
+  } else {
+    RCLCPP_DEBUG(client_node_->get_logger(), "Action Goal accepted by server, waiting for result");
+  }
+}
+
+void AgentPathPrediction::resultCB(const GoalHandleComputePathToPose::WrappedResult& result) {
+  planning_done_ = true;
+  planned_path_ = nav_msgs::msg::Path();  // Clear previous path
+  switch (result.code) {
+    case rclcpp_action::ResultCode::SUCCEEDED:
+      break;
+    case rclcpp_action::ResultCode::ABORTED:
+      RCLCPP_ERROR(client_node_->get_logger(), "Action Goal was aborted");
+      return;
+    case rclcpp_action::ResultCode::CANCELED:
+      RCLCPP_ERROR(client_node_->get_logger(), "Action Goal was canceled");
+      return;
+    default:
+      RCLCPP_ERROR(client_node_->get_logger(), "Unknown result code");
+      return;
+  }
+  RCLCPP_DEBUG(client_node_->get_logger(), "Action Result received");
+  planned_path_ = result.result->path;
 }
 
 void AgentPathPrediction::trackedAgentsCB(const cohan_msgs::msg::TrackedAgents::SharedPtr tracked_agents) { tracked_agents_ = *tracked_agents; }
@@ -419,40 +465,38 @@ void AgentPathPrediction::predictAgentsExternal(const std::shared_ptr<agent_path
           goal_msg.goal.pose.position.y = ext_goal[agent_start_pose_vel.id].pose.position.y;
           goal_msg.goal.pose.position.z = ext_goal[agent_start_pose_vel.id].pose.position.z;
           goal_msg.goal.pose.orientation = ext_goal[agent_start_pose_vel.id].pose.orientation;
+          goal_msg.use_start = true;
 
           RCLCPP_DEBUG(this->get_logger(), "agent start: x=%.2f, y=%.2f, theta=%.2f, goal: x=%.2f, y=%.2f, theta=%.2f", goal_msg.start.pose.position.x, goal_msg.start.pose.position.y,
                        tf2::getYaw(goal_msg.start.pose.orientation), goal_msg.goal.pose.position.x, goal_msg.goal.pose.position.y, tf2::getYaw(goal_msg.goal.pose.orientation));
 
-          // make plan for agent using action client
+          // make plan for agent
           if (get_plan_client_) {
-            // Send goal and wait for acceptance
-            auto goal_handle_future = get_plan_client_->async_send_goal(goal_msg);
-            if (goal_handle_future.wait_for(std::chrono::seconds(2)) == std::future_status::ready) {
-              auto goal_handle = goal_handle_future.get();
-              if (goal_handle) {  // Goal accepted by server
-                // Wait for the result
-                auto result_future = get_plan_client_->async_get_result(goal_handle);
-                if (result_future.wait_for(std::chrono::seconds(2)) == std::future_status::ready) {
-                  auto result = result_future.get();
-                  if (result.code == rclcpp_action::ResultCode::SUCCEEDED && !result.result->path.poses.empty()) {
-                    AgentPathVel agent_path_vel;
-                    agent_path_vel.id = agent_start_pose_vel.id;
-                    agent_path_vel.path = result.result->path;
-                    agent_path_vel.start_vel = agent_start_pose_vel.vel;
-                    path_vels_.push_back(agent_path_vel);
-                    got_new_agent_paths_ = true;
-                  } else {
-                    RCLCPP_WARN(this->get_logger(), "Got empty path for agent, start or goal position is probably invalid");
-                  }
-                } else {
-                  RCLCPP_WARN(this->get_logger(), "Failed to get result from path planning action");
-                }
-              } else {
-                RCLCPP_ERROR(this->get_logger(), "Goal was rejected by server");
+            // send goal and wait for acceptance
+            this->sendActionGoal(goal_msg);
+
+            // wait for planning to finish
+            auto start_time = this->now();
+            while (!isPlanningDone()) {
+              if ((this->now() - start_time).seconds() > 10.0) {
+                RCLCPP_WARN(this->get_logger(), "Timeout while waiting for path planning result");
+                break;
               }
-            } else {
-              RCLCPP_WARN(this->get_logger(), "Failed to send goal to %s action server", cfg_->get_plan_srv_name.c_str());
+              client_executor_->spin_some();
             }
+            RCLCPP_DEBUG(this->get_logger(), "Path planning finished for agent %d", planned_path_.poses.size());
+
+            if (!planned_path_.poses.empty()) {
+              AgentPathVel agent_path_vel;
+              agent_path_vel.id = agent_start_pose_vel.id;
+              agent_path_vel.path = planned_path_;
+              agent_path_vel.start_vel = agent_start_pose_vel.vel;
+              path_vels_.push_back(agent_path_vel);
+              got_new_agent_paths_ = true;
+            } else {
+              RCLCPP_WARN(this->get_logger(), "Got empty path for agent, start or goal position is probably invalid");
+            }
+
           } else {
             RCLCPP_WARN(this->get_logger(), "%s action server does not exist, re-trying to connect", cfg_->get_plan_srv_name.c_str());
             get_plan_client_ = rclcpp_action::create_client<ComputePathToPose>(this, cfg_->get_plan_srv_name);
@@ -595,40 +639,38 @@ void AgentPathPrediction::predictAgentsBehind(const std::shared_ptr<agent_path_p
         goal_msg.goal.pose.position.y = behind_pose_.translation.y;
         goal_msg.goal.pose.position.z = behind_pose_.translation.z;
         goal_msg.goal.pose.orientation = behind_pose_.rotation;
+        goal_msg.use_start = true;
 
         RCLCPP_DEBUG(this->get_logger(), "agent start: x=%.2f, y=%.2f, theta=%.2f, goal: x=%.2f, y=%.2f, theta=%.2f", goal_msg.start.pose.position.x, goal_msg.start.pose.position.y,
                      tf2::getYaw(goal_msg.start.pose.orientation), goal_msg.goal.pose.position.x, goal_msg.goal.pose.position.y, tf2::getYaw(goal_msg.goal.pose.orientation));
 
         // make plan for agent
         if (get_plan_client_) {
-          // Send goal and wait for acceptance
-          auto goal_handle_future = get_plan_client_->async_send_goal(goal_msg);
-          if (goal_handle_future.wait_for(std::chrono::seconds(2)) == std::future_status::ready) {
-            auto goal_handle = goal_handle_future.get();
-            if (goal_handle) {  // Goal accepted by server
-              // Wait for the result
-              auto result_future = get_plan_client_->async_get_result(goal_handle);
-              if (result_future.wait_for(std::chrono::seconds(2)) == std::future_status::ready) {
-                auto result = result_future.get();
-                if (result.code == rclcpp_action::ResultCode::SUCCEEDED && !result.result->path.poses.empty()) {
-                  AgentPathVel agent_path_vel;
-                  agent_path_vel.id = agent_start_pose_vel.id;
-                  agent_path_vel.path = result.result->path;
-                  agent_path_vel.start_vel = agent_start_pose_vel.vel;
-                  path_vels_.push_back(agent_path_vel);
-                  got_new_agent_paths_ = true;
-                } else {
-                  RCLCPP_WARN(this->get_logger(), "Got empty path for agent, start or goal position is probably invalid");
-                }
-              } else {
-                RCLCPP_WARN(this->get_logger(), "Failed to get result from path planning action");
-              }
-            } else {
-              RCLCPP_ERROR(this->get_logger(), "Goal was rejected by server");
+          // send goal and wait for acceptance
+          this->sendActionGoal(goal_msg);
+
+          // wait for planning to finish
+          auto start_time = this->now();
+          while (!isPlanningDone()) {
+            if ((this->now() - start_time).seconds() > 10.0) {
+              RCLCPP_WARN(this->get_logger(), "Timeout while waiting for path planning result");
+              break;
             }
-          } else {
-            RCLCPP_WARN(this->get_logger(), "Failed to send goal to %s action server", cfg_->get_plan_srv_name.c_str());
+            client_executor_->spin_some();
           }
+          RCLCPP_DEBUG(this->get_logger(), "Path planning finished for agent %d", planned_path_.poses.size());
+
+          if (!planned_path_.poses.empty()) {
+            AgentPathVel agent_path_vel;
+            agent_path_vel.id = agent_start_pose_vel.id;
+            agent_path_vel.path = planned_path_;
+            agent_path_vel.start_vel = agent_start_pose_vel.vel;
+            path_vels_.push_back(agent_path_vel);
+            got_new_agent_paths_ = true;
+          } else {
+            RCLCPP_WARN(this->get_logger(), "Got empty path for agent, start or goal position is probably invalid");
+          }
+
         } else {
           RCLCPP_WARN(this->get_logger(), "%s action server does not exist, re-trying to connect", cfg_->get_plan_srv_name.c_str());
           get_plan_client_ = rclcpp_action::create_client<ComputePathToPose>(this, cfg_->get_plan_srv_name);
@@ -759,40 +801,38 @@ void AgentPathPrediction::predictAgentsGoal(const std::shared_ptr<agent_path_pre
         goal_msg.goal.header.frame_id = cfg_->map_frame_id;
         goal_msg.goal.header.stamp = now;
         goal_msg.goal.pose = predicted_goals[agent_start_pose_vel.id];
+        goal_msg.use_start = true;
 
         RCLCPP_DEBUG(this->get_logger(), "agent start: x=%.2f, y=%.2f, theta=%.2f, goal: x=%.2f, y=%.2f, theta=%.2f", goal_msg.start.pose.position.x, goal_msg.start.pose.position.y,
                      tf2::getYaw(goal_msg.start.pose.orientation), goal_msg.goal.pose.position.x, goal_msg.goal.pose.position.y, tf2::getYaw(goal_msg.goal.pose.orientation));
 
         // make plan for agent
         if (get_plan_client_) {
-          // Send goal and wait for acceptance
-          auto goal_handle_future = get_plan_client_->async_send_goal(goal_msg);
-          if (goal_handle_future.wait_for(std::chrono::seconds(2)) == std::future_status::ready) {
-            auto goal_handle = goal_handle_future.get();
-            if (goal_handle) {  // Goal accepted by server
-              // Wait for the result
-              auto result_future = get_plan_client_->async_get_result(goal_handle);
-              if (result_future.wait_for(std::chrono::seconds(2)) == std::future_status::ready) {
-                auto result = result_future.get();
-                if (result.code == rclcpp_action::ResultCode::SUCCEEDED && !result.result->path.poses.empty()) {
-                  AgentPathVel agent_path_vel;
-                  agent_path_vel.id = agent_start_pose_vel.id;
-                  agent_path_vel.path = result.result->path;
-                  agent_path_vel.start_vel = agent_start_pose_vel.vel;
-                  path_vels_.push_back(agent_path_vel);
-                  got_new_agent_paths_ = true;
-                } else {
-                  RCLCPP_WARN(this->get_logger(), "Got empty path for agent, start or goal position is probably invalid");
-                }
-              } else {
-                RCLCPP_WARN(this->get_logger(), "Failed to get result from path planning action");
-              }
-            } else {
-              RCLCPP_ERROR(this->get_logger(), "Goal was rejected by server");
+          // send goal and wait for acceptance
+          this->sendActionGoal(goal_msg);
+
+          // wait for planning to finish
+          auto start_time = this->now();
+          while (!isPlanningDone()) {
+            if ((this->now() - start_time).seconds() > 10.0) {
+              RCLCPP_WARN(this->get_logger(), "Timeout while waiting for path planning result");
+              break;
             }
-          } else {
-            RCLCPP_WARN(this->get_logger(), "Failed to send goal to %s action server", cfg_->get_plan_srv_name.c_str());
+            client_executor_->spin_some();
           }
+          RCLCPP_DEBUG(this->get_logger(), "Path planning finished for agent %d", planned_path_.poses.size());
+
+          if (!planned_path_.poses.empty()) {
+            AgentPathVel agent_path_vel;
+            agent_path_vel.id = agent_start_pose_vel.id;
+            agent_path_vel.path = planned_path_;
+            agent_path_vel.start_vel = agent_start_pose_vel.vel;
+            path_vels_.push_back(agent_path_vel);
+            got_new_agent_paths_ = true;
+          } else {
+            RCLCPP_WARN(this->get_logger(), "Got empty path for agent, start or goal position is probably invalid");
+          }
+
         } else {
           RCLCPP_WARN(this->get_logger(), "%s action server does not exist, re-trying to connect", cfg_->get_plan_srv_name.c_str());
           get_plan_client_ = rclcpp_action::create_client<ComputePathToPose>(this, cfg_->get_plan_srv_name);
@@ -914,19 +954,18 @@ void AgentPathPrediction::setGoal(const std::shared_ptr<agent_path_prediction::s
   for (auto& goal : req->goals) {
     external_goals_.push_back(goal);
   }
-
   res->success = true;
   res->message = "Goal has been set.";
 }
 
 void AgentPathPrediction::resetPredictionSrvs(const std::shared_ptr<std_srvs::srv::Empty::Request> /*req*/, std::shared_ptr<std_srvs::srv::Empty::Response> /*res*/) {
+  RCLCPP_INFO(this->get_logger(), "Agent path prediction has been reset.");
   got_new_agent_paths_ = false;
   got_external_goal_ = false;
   last_predicted_poses_.clear();
   path_vels_.clear();
   check_path_ = false;
   behind_pose_ = geometry_msgs::msg::Transform();
-  RCLCPP_INFO(this->get_logger(), "Reset agent path prediction");
 }
 
 nav_msgs::msg::Path AgentPathPrediction::setFixedPath(const geometry_msgs::msg::PoseStamped& start_pose) {

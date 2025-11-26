@@ -150,14 +150,8 @@ void HATebLocalPlannerROS::configure(const rclcpp_lifecycle::LifecycleNode::Weak
   collision_checker_ = std::make_shared<nav2_costmap_2d::FootprintCollisionChecker<nav2_costmap_2d::Costmap2D*>>(costmap_);
   collision_checker_->setCostmap(costmap_);
 
-  /*
-  /
-  / May not be needed ?
-  /
-  /
-  */
+  // Initialize odometry helper
   odom_helper_ = std::make_shared<nav2_util::OdomSmoother>(node, 0.3, cfg_->odom_topic);
-  /////
 
   // Validate optimization footprint and costmap footprint
   validateFootprints(cfg_->robot_model->getInscribedRadius(), robot_inscribed_radius_, cfg_->obstacles.min_obstacle_dist);
@@ -189,8 +183,11 @@ void HATebLocalPlannerROS::configure(const rclcpp_lifecycle::LifecycleNode::Weak
       node->create_subscription<costmap_converter_msgs::msg::ObstacleArrayMsg>(invisible_humans_sub_topic_, 1, std::bind(&HATebLocalPlannerROS::InvHumansCB, this, std::placeholders::_1));
 
   // Setup agent prediction clients
-  predict_agents_client_ = node->create_client<agent_path_prediction::srv::AgentPosePredict>(predict_srv_name_);
-  reset_agents_prediction_client_ = node->create_client<std_srvs::srv::Trigger>(reset_prediction_srv_name_);
+  client_node_ = std::make_shared<rclcpp::Node>("hateb_client_node");
+  predict_agents_client_ = client_node_->create_client<agent_path_prediction::srv::AgentPosePredict>(predict_srv_name_);
+  reset_agents_prediction_client_ = client_node_->create_client<std_srvs::srv::Empty>(reset_prediction_srv_name_);
+  client_executor_ = std::make_shared<rclcpp::executors::SingleThreadedExecutor>();
+  client_executor_->add_node(client_node_);
 
   // Service servers and publishers
   optimize_server_ = node->create_service<cohan_msgs::srv::Optimize>(OPTIMIZE_SRV_NAME, std::bind(&HATebLocalPlannerROS::optimizeStandalone, this, std::placeholders::_1, std::placeholders::_2));
@@ -350,6 +347,7 @@ geometry_msgs::msg::TwistStamped HATebLocalPlannerROS::computeVelocityCommands(c
   // Check if we have reached the goal
   geometry_msgs::msg::PoseStamped global_goal;
   tf2::doTransform(global_plan_.poses.back(), global_goal, tf_plan_to_global);
+
   if (!goal_reached_ && goal_checker->isGoalReached(pose.pose, global_goal.pose, velocity)) {
     goal_reached_ = true;  // prevent multiple calls
     onGoalReached();
@@ -639,7 +637,7 @@ bool HATebLocalPlannerROS::tickTreeAndUpdatePlans(const geometry_msgs::msg::Pose
       break;
     }
   }
-  RCLCPP_INFO(logger_, "Requesting prediction for %d agents", num_agents);
+  RCLCPP_DEBUG(logger_, "Requesting prediction for %d agents", num_agents);
 
   // Set the prediction method based on the mode
   switch (mode_info.predict_mode) {
@@ -674,35 +672,38 @@ bool HATebLocalPlannerROS::tickTreeAndUpdatePlans(const geometry_msgs::msg::Pose
   // Call the predict agents service and update the agents plans
   if (predict_agents_client_) {
     auto future = predict_agents_client_->async_send_request(predict_srv);
-    RCLCPP_INFO(logger_, "Waiting for agent prediction service response...");
-    if (future.wait_for(std::chrono::milliseconds(100)) == std::future_status::ready) {
-      RCLCPP_WARN(logger_, "Agent prediction service call timed out");
-      auto response = future.get();
-      tf2::Stamped<tf2::Transform> tf_agent_plan_to_global;
-
-      for (auto predicted_agents_poses : response->predicted_agents_poses) {
-        // Transform agent plans
-        AgentPlanCombined agent_plan_combined;
-        auto& transformed_vel = predicted_agents_poses.start_velocity;
-        if (!transformAgentPlan(robot_pose, *costmap_, global_frame_, predicted_agents_poses.poses, agent_plan_combined, transformed_vel, &tf_agent_plan_to_global)) {
-          RCLCPP_WARN(logger_, "Could not transform the agent %d plan to the frame of the controller", predicted_agents_poses.id);
-          continue;
-        }
-
-        agent_plan_combined.id = predicted_agents_poses.id;
-        transformed_agent_plans.push_back(agent_plan_combined);  // Only used for visualization.. remove?
-
-        PlanStartVelGoalVel plan_start_vel_goal_vel;
-        plan_start_vel_goal_vel.plan = agent_plan_combined.plan_to_optimize;
-        plan_start_vel_goal_vel.start_vel = transformed_vel.twist;
-        plan_start_vel_goal_vel.nominal_vel = std::max(0.3, agents_ptr_->getNominalVels()[predicted_agents_poses.id]);  // update this
-        if (agent_plan_combined.plan_after.size() > 0) {
-          plan_start_vel_goal_vel.goal_vel = transformed_vel.twist;
-        }
-        transformed_agent_plan_vel_map[agent_plan_combined.id] = plan_start_vel_goal_vel;
+    // Wait for the result with a timeout
+    auto start_time = client_node_->now();
+    while (future.wait_for(std::chrono::milliseconds(1)) != std::future_status::ready) {
+      client_executor_->spin_some();
+      if ((client_node_->now() - start_time).seconds() > 5.0) {
+        RCLCPP_WARN(logger_, "Agent prediction service call timed out");
+        break;
       }
-    } else {
-      RCLCPP_WARN_THROTTLE(logger_, *clock_, THROTTLE_RATE * 1000, "Failed to call %s service, is agent prediction server running?", predict_srv_name_.c_str());
+    }
+    // Get the response and build plans
+    auto response = future.get();
+    tf2::Stamped<tf2::Transform> tf_agent_plan_to_global;
+
+    for (auto predicted_agents_poses : response->predicted_agents_poses) {
+      // Transform agent plans
+      AgentPlanCombined agent_plan_combined;
+      auto& transformed_vel = predicted_agents_poses.start_velocity;
+      if (!transformAgentPlan(robot_pose, *costmap_, global_frame_, predicted_agents_poses.poses, agent_plan_combined, transformed_vel, &tf_agent_plan_to_global)) {
+        RCLCPP_WARN(logger_, "Could not transform the agent %d plan to the frame of the controller", predicted_agents_poses.id);
+        continue;
+      }
+      agent_plan_combined.id = predicted_agents_poses.id;
+      transformed_agent_plans.push_back(agent_plan_combined);  // Only used for visualization.. remove?
+
+      PlanStartVelGoalVel plan_start_vel_goal_vel;
+      plan_start_vel_goal_vel.plan = agent_plan_combined.plan_to_optimize;
+      plan_start_vel_goal_vel.start_vel = transformed_vel.twist;
+      plan_start_vel_goal_vel.nominal_vel = std::max(0.3, agents_ptr_->getNominalVels()[predicted_agents_poses.id]);  // update this
+      if (agent_plan_combined.plan_after.size() > 0) {
+        plan_start_vel_goal_vel.goal_vel = transformed_vel.twist;
+      }
+      transformed_agent_plan_vel_map[agent_plan_combined.id] = plan_start_vel_goal_vel;
     }
   } else {
     RCLCPP_WARN_THROTTLE(logger_, *clock_, THROTTLE_RATE * 1000, "Predict agents client not initialized");
@@ -1580,17 +1581,22 @@ void HATebLocalPlannerROS::InvHumansCB(const costmap_converter_msgs::msg::Obstac
 
 void HATebLocalPlannerROS::resetAgentsPrediction() {
   auto node = node_.lock();
-  auto request = std::make_shared<std_srvs::srv::Trigger::Request>();
-  RCLCPP_INFO(logger_, "Resetting agent pose prediction");
-
   if (!reset_agents_prediction_client_) {
     RCLCPP_WARN_THROTTLE(logger_, *clock_, THROTTLE_RATE * 1000, "Reset agents prediction client not initialized");
     return;
   }
-
+  // send the request
+  auto request = std::make_shared<std_srvs::srv::Empty::Request>();
   auto future = reset_agents_prediction_client_->async_send_request(request);
-  if (future.wait_for(std::chrono::milliseconds(500)) != std::future_status::ready) {
-    RCLCPP_WARN_THROTTLE(logger_, *clock_, THROTTLE_RATE * 1000, "Failed to call %s service, is agent prediction server running?", reset_prediction_srv_name_.c_str());
+
+  // wait for the result
+  auto start_time = client_node_->now();
+  while (future.wait_for(std::chrono::milliseconds(1)) != std::future_status::ready) {
+    client_executor_->spin_some();
+    if ((client_node_->now() - start_time).seconds() > 10.0) {
+      RCLCPP_WARN(logger_, "Failed to call %s service, is agent prediction server running?", reset_prediction_srv_name_.c_str());
+      break;
+    }
   }
 }
 

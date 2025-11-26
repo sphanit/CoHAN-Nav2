@@ -35,11 +35,11 @@
  *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  *  POSSIBILITY OF SUCH DAMAGE.
  *
- * Author: Christoph Rösmann
+ * Author: Phani Teja Singamaneni
  *********************************************************************/
 
-#ifndef TEB_CONFIG_H_
-#define TEB_CONFIG_H_
+#ifndef HATEB_CONFIG_H_
+#define HATEB_CONFIG_H_
 
 #include <hateb_local_planner/footprint_model.h>
 
@@ -526,4 +526,4 @@ class HATebConfig {
 
 }  // namespace hateb_local_planner
 
-#endif
+#endif  // HATEB_CONFIG_H_
