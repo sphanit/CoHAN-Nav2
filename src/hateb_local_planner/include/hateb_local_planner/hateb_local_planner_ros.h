@@ -46,6 +46,7 @@
 #include <ros2_helpers/utils.hpp>
 
 // nav2 base class and utilities
+#include <hateb_local_planner/hateb_goal_checker.hpp>
 #include <nav2_core/controller.hpp>
 #include <nav2_core/exceptions.hpp>
 #include <nav2_core/goal_checker.hpp>

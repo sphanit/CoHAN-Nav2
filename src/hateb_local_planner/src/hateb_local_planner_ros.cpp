@@ -348,6 +348,10 @@ geometry_msgs::msg::TwistStamped HATebLocalPlannerROS::computeVelocityCommands(c
   geometry_msgs::msg::PoseStamped global_goal;
   tf2::doTransform(global_plan_.poses.back(), global_goal, tf_plan_to_global);
 
+  auto my_checker = dynamic_cast<hateb_local_planner::HATEBGoalChecker*>(goal_checker);
+  if (my_checker != nullptr) {
+    my_checker->setGoalControl(goal_ctrl_);
+  }
   if (!goal_reached_ && goal_checker->isGoalReached(pose.pose, global_goal.pose, velocity)) {
     goal_reached_ = true;  // prevent multiple calls
     onGoalReached();
