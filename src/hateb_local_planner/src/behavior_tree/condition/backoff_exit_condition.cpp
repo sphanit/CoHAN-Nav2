@@ -99,10 +99,17 @@ bool BackoffExitCondition::isRecoveryComplete() {
   }
 
   // If a new goal is given, stop recovery
-  if (started_ && new_goal_ && !backoff_ptr_->isRecoveryGoal()) {
-    // getInput("nav_goal", current_goal_);
-    BT_INFO(name_, "New goal!")
-    return true;
+  BT_INFO(name_, started_ << " " << new_goal_ << " " << !backoff_ptr_->isRecoveryGoal())
+  BT_INFO(name_, current_goal_.pose.position.x << ", " << current_goal_.pose.position.y)
+  if (started_ && new_goal_) {
+    if (!backoff_ptr_->isRecoveryGoal()) {
+      getInput("nav_goal", current_goal_);
+      BT_INFO(name_, "New goal!")
+      return true;
+    } else if (backoff_ptr_->isRecoveryGoal()) {
+      backoff_ptr_->resetRecoveryGoal();
+      BT_INFO(name_, "New goal but was recovery goal!")
+    }
   }
 
   // If timeout has been completed, reset goal

@@ -75,8 +75,12 @@ class BackoffExitCondition : public BT::ConditionNode {
    *         and recovery status as output
    */
   static BT::PortsList providedPorts() {
-    return {BT::InputPort<agent_path_prediction::msg::AgentsInfo>("agents_info"), BT::InputPort<std::shared_ptr<Backoff>>("backoff_ptr"),
-            BT::BidirectionalPort<geometry_msgs::msg::PoseStamped>("nav_goal"), BT::InputPort<std::shared_ptr<hateb_local_planner::Agents>>("agents_ptr"), BT::OutputPort<bool>("recovery")};
+    return {BT::InputPort<agent_path_prediction::msg::AgentsInfo>("agents_info"),
+            BT::InputPort<std::shared_ptr<Backoff>>("backoff_ptr"),
+            BT::BidirectionalPort<geometry_msgs::msg::PoseStamped>("nav_goal"),
+            BT::InputPort<std::shared_ptr<hateb_local_planner::Agents>>("agents_ptr"),
+            BT::InputPort<bool>("goal_update"),
+            BT::OutputPort<bool>("recovery")};
   }
 
  private:

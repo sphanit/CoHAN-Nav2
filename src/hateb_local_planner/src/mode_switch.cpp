@@ -139,12 +139,13 @@ void ModeSwitch::planCB(const nav_msgs::msg::Path::SharedPtr plan_msg) {
   // Set the goal status
   BT_INFO(name_, "New path is set!")
   auto goal = plan_msg->poses.back();
+  std::cout << "New Goal received at: " << goal.pose.position.x << ", " << goal.pose.position.y << std::endl;
 
   double goal_dist_change = std::hypot(goal.pose.position.x - goal_.pose.position.x, goal.pose.position.y - goal_.pose.position.y);
 
   if (goal_dist_change > 0.2) {
     bhv_tree_.rootBlackboard()->set("goal_update", true);
-    bhv_tree_.rootBlackboard()->set("nav_goal", goal_);
+    bhv_tree_.rootBlackboard()->set("nav_goal", goal);
     goal_update_ = true;
     BT_INFO(name_, "Goal updated in blackboard.");
   }

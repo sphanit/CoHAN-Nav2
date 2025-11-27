@@ -97,13 +97,12 @@ class Backoff {
    * @brief Checks if the current goal is a recovery goal
    * @return True if the goal was published by this node
    */
-  bool isRecoveryGoal() {
-    if (self_published_) {
-      self_published_ = false;
-      return true;
-    }
-    return false;
-  }
+  bool isRecoveryGoal() { return self_published_; }
+
+  /**
+   * @brief Resets the recovery goal status
+   */
+  void resetRecoveryGoal() { self_published_ = false; }
 
   /**
    * @brief Checks if the backoff goal position has been reached
