@@ -171,7 +171,7 @@ install(FILES
 )
 
 install(DIRECTORY
-  launch cfg scripts behavior_trees
+  launch scripts behavior_trees
   DESTINATION share/${PROJECT_NAME}
   PATTERN ".svn" EXCLUDE
 )

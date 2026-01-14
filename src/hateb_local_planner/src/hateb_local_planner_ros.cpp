@@ -647,9 +647,8 @@ bool HATebLocalPlannerROS::tickTreeAndUpdatePlans(const geometry_msgs::msg::Pose
   switch (mode_info.predict_mode) {
     case PREDICTION::CONST_VEL: {
       double traj_size = 10;
-      double predict_time = 5.0;  // TODO(sphanit): make these values configurable
       for (double i = 1.0; i <= traj_size; i++) {
-        predict_srv->predict_times.push_back(predict_time * (i / traj_size));
+        predict_srv->predict_times.push_back(cfg_->hateb.prediction_time_horizon * (i / traj_size));
       }
       predict_srv->type = agent_path_prediction::srv::AgentPosePredict::Request::VELOCITY_OBSTACLE;
     } break;

@@ -218,6 +218,7 @@ void HATebConfig::bindParameters() {
   param_helper_.bindFloatParam(param_name("rel_vel_cost_threshold"), hateb.rel_vel_cost_threshold, 0.0, 100.0, "Relative velocity cost threshold");
   param_helper_.bindFloatParam(param_name("invisible_human_threshold"), hateb.invisible_human_threshold, 0.0, 100.0, "Invisible human threshold");
   param_helper_.bindFloatParam(param_name("visibility_cost_threshold"), hateb.visibility_cost_threshold, 0.0, 100.0, "Visibility cost threshold");
+  param_helper_.bindFloatParam(param_name("prediction_time_horizon"), hateb.prediction_time_horizon, 0.0, 100.0, "Prediction time horizon for constant velocity agent path prediction");
 
   // Recovery parameters
   param_helper_.bindBoolParam(param_name("shrink_horizon_backup"), recovery.shrink_horizon_backup, "Shrink horizon backup");

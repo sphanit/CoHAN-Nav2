@@ -201,6 +201,7 @@ controller_server:
       rel_vel_cost_threshold: 1.5
       visibility_cost_threshold: 2.5
       invisible_human_threshold: 1.0
+      prediction_time_horizon: 10.0
       # GoalTolerance
       xy_goal_tolerance: 0.2
       yaw_goal_tolerance: 0.2

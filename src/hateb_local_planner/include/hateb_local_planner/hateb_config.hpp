@@ -253,6 +253,7 @@ class HATebConfig {
     double rel_vel_cost_threshold;      //!< Threshold value for Relative Velocity Constraint (lower means higher reaction)
     double invisible_human_threshold;   //!< Threshold value for Invisible Humans Constraint (higher means higher reaction)
     double visibility_cost_threshold;   //!< Threshold value for Visibility Constraint (lower means higher reaction)
+    double prediction_time_horizon;     //!< Prediction time horizon for constant velocity agent path prediction
   } hateb;
 
   //! Recovery/backup related parameters
@@ -454,6 +455,10 @@ class HATebConfig {
     hateb.pose_prediction_reset_time = 2.0;
     hateb.min_agent_robot_dist = 0.6;
     hateb.min_agent_agent_dist = 0.2;
+    hateb.rel_vel_cost_threshold = 1.0;
+    hateb.invisible_human_threshold = 1.0;
+    hateb.visibility_cost_threshold = 1.0;
+    hateb.prediction_time_horizon = 5.0;
 
     // Recovery
     recovery.shrink_horizon_backup = true;
