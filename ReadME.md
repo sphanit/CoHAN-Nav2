@@ -1,4 +1,4 @@
-WIP: ROS2 Version
+ROS2 Version
 
 
 CoHAN 2.0 is an enhanced version of the Cooperative Human-Aware Navigation framework, building on the foundations of the original [CoHAN](https://github.com/sphanit/cohan_planner_multi) system [Singamaneni et al., IROS 2021](https://ieeexplore.ieee.org/document/9636613). This new iteration significantly improves the stability and robustness of the navigation pipeline in dynamic human environments. A key advancement in CoHAN 2.0 is the integration of behavior trees for context-aware mode switching, enabling more structured and scalable decision-making during navigation.
