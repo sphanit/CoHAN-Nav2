@@ -117,8 +117,6 @@
 #define THROTTLE_RATE 5.0  // seconds
 
 namespace hateb_local_planner {
-// enum class AgentState : std::uint8_t { NO_STATE, STATIC, MOVING, STOPPED, BLOCKED };
-
 /**
  * @class HATebLocalPlannerROS
  * @brief Implements the nav2_core::Controller interface for Nav2,
@@ -477,6 +475,14 @@ class HATebLocalPlannerROS : public nav2_core::Controller {
    * @return True if optimization was successful, false otherwise
    */
   bool optimizeStandalone(const std::shared_ptr<cohan_msgs::srv::Optimize::Request> req, std::shared_ptr<cohan_msgs::srv::Optimize::Response> res);
+
+  /**
+   * @brief Check if the path between start and goal poses passes through any obstacles
+   * @param start Starting pose of the path
+   * @param goal Goal pose of the path
+   * @return True if the path passes through an obstacle, false otherwise
+   */
+  bool isPassingThroughObstacle(const geometry_msgs::msg::Pose start, const geometry_msgs::msg::Pose goal, const nav2_costmap_2d::Costmap2D& costmap) const;
 
  private:
   // Definition of member variables

@@ -1474,18 +1474,15 @@ bool HATebLocalPlannerROS::transformAgentPlan(const geometry_msgs::msg::PoseStam
     geometry_msgs::msg::PoseStamped transformed_pose;
     tf2::Transform tf_pose;
     const auto& agent_start_pose = agent_plan[0];
-    for (const auto& agent_pose : agent_plan) {
-      if (isMode_ >= 1 && isMode_ < 3) {
-        if (std::hypot(agent_pose.pose.pose.position.x - agent_start_pose.pose.pose.position.x, agent_pose.pose.pose.position.y - agent_start_pose.pose.pose.position.y) > (cfg_->agent.radius)) {
-          unsigned int mx;
-          unsigned int my;
-          if (costmap_->worldToMap(agent_pose.pose.pose.position.x, agent_pose.pose.pose.position.y, mx, my)) {
-            if (costmap_->getCost(mx, my) >= nav2_costmap_2d::LETHAL_OBSTACLE) {
-              break;
-            }
-          }
+    for (size_t i = 0; i < agent_plan.size(); ++i) {
+      auto& agent_pose = agent_plan[i];
+      if (std::hypot(agent_pose.pose.pose.position.x - agent_start_pose.pose.pose.position.x, agent_pose.pose.pose.position.y - agent_start_pose.pose.pose.position.y) > (cfg_->agent.radius)) {
+        if (isPassingThroughObstacle(agent_pose.pose.pose, agent_plan[i + 1].pose.pose, costmap)) {
+          RCLCPP_DEBUG(logger_, "Agent plan point at (%f, %f) is in obstacle, stopping plan transformation.", agent_pose.pose.pose.position.x, agent_pose.pose.pose.position.y);
+          break;
         }
       }
+
       tf2::fromMsg(agent_pose.pose.pose, tf_pose);
       tf_pose_stamped.setData(agent_plan_to_global_transform_ * tf_pose);
       tf_pose_stamped.stamp_ = agent_plan_to_global_transform_.stamp_;
@@ -1575,7 +1572,7 @@ bool HATebLocalPlannerROS::transformAgentPlan(const geometry_msgs::msg::PoseStam
   }
 
   return true;
-}
+}  // namespace hateb_local_planner
 
 void HATebLocalPlannerROS::InvHumansCB(const costmap_converter_msgs::msg::ObstacleArrayMsg::SharedPtr obst_msg) {
   std::scoped_lock l(inv_human_mutex_);
@@ -1812,9 +1809,30 @@ bool HATebLocalPlannerROS::optimizeStandalone(const std::shared_ptr<cohan_msgs::
   return true;
 }
 
-void hateb_local_planner::HATebLocalPlannerROS::setSpeedLimit(const double& speed_limit, const bool& percentage) {
+void HATebLocalPlannerROS::setSpeedLimit(const double& speed_limit, const bool& percentage) {
   // TODO: Implement speed limit logic if needed
   // For now, just ignore the parameters
 }
 
+bool HATebLocalPlannerROS::isPassingThroughObstacle(const geometry_msgs::msg::Pose start, const geometry_msgs::msg::Pose goal, const nav2_costmap_2d::Costmap2D& costmap) const {
+  // Simple check: if the straight line between start and goal intersects any obstacle
+  double dx = goal.position.x - start.position.x;
+  double dy = goal.position.y - start.position.y;
+  double distance = std::hypot(dx, dy);
+  int steps = static_cast<int>(distance / 0.01);  // check every 1 cm
+  for (int i = 0; i <= steps; ++i) {
+    double t = static_cast<double>(i) / steps;
+    double x = start.position.x + t * dx;
+    double y = start.position.y + t * dy;
+    unsigned int mx;
+    unsigned int my;
+    if (costmap_->worldToMap(x, y, mx, my)) {
+      // RCLCPP_INFO(logger_, "Checking costmap at (%f, %f) -> map cell (%u, %u) = %u", x, y, mx, my, costmap_->getCost(mx, my));
+      if (static_cast<int>(costmap_->getCost(mx, my)) > 200) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
 }  // end namespace hateb_local_planner
