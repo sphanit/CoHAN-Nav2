@@ -1582,7 +1582,12 @@ void HATebLocalPlannerROS::InvHumansCB(const costmap_converter_msgs::msg::Obstac
 void HATebLocalPlannerROS::resetAgentsPrediction() {
   auto node = node_.lock();
   if (!reset_agents_prediction_client_) {
-    RCLCPP_WARN_THROTTLE(logger_, *clock_, THROTTLE_RATE * 1000, "Reset agents prediction client not initialized");
+    RCLCPP_WARN(logger_, "Reset agents prediction client not initialized");
+    return;
+  }
+
+  if (!reset_agents_prediction_client_->wait_for_service(std::chrono::seconds(0))) {
+    RCLCPP_WARN(logger_, "Reset agents prediction service not available");
     return;
   }
   // send the request

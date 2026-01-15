@@ -139,7 +139,6 @@ void ModeSwitch::planCB(const nav_msgs::msg::Path::SharedPtr plan_msg) {
   // Set the goal status
   BT_INFO(name_, "New path is set!")
   auto goal = plan_msg->poses.back();
-  std::cout << "New Goal received at: " << goal.pose.position.x << ", " << goal.pose.position.y << std::endl;
 
   double goal_dist_change = std::hypot(goal.pose.position.x - goal_.pose.position.x, goal.pose.position.y - goal_.pose.position.y);
 
