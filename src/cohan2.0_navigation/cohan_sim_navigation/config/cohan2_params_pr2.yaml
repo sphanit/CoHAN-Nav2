@@ -49,7 +49,7 @@ bt_navigator:
     default_server_timeout: 20
     wait_for_service_timeout: 1000
     #### The below can only be replaced using absolute path or RewrittenYaml in Launch file (CoHAN uses custom_navigate_to_pose.xml which is a copy of navigate_to_pose_w_replanning_and_recovery.xml with some modifications to the behavior tree) ####
-    # default_nav_to_pose_bt_xml: "navigate_to_pose_w_replanning_and_recovery.xml" 
+    default_nav_to_pose_bt_xml: $(find-pkg-share cohan_sim_navigation)/config/custom_navigate_to_pose.xml
     # default_nav_through_poses_bt_xml: "navigate_through_poses_w_replanning_and_recovery.xml"
     plugin_lib_names:
       - nav2_compute_path_to_pose_action_bt_node

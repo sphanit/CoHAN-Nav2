@@ -29,9 +29,6 @@ def generate_launch_description():
     use_respawn = LaunchConfiguration('use_respawn')
     log_level = LaunchConfiguration('log_level')
 
-    custom_bt_xml_path = os.path.join(nav_dir, 'config', 'custom_navigate_to_pose.xml')
-
-
     lifecycle_nodes = ['controller_server',
                        'smoother_server', # could be optional
                        'planner_server',
@@ -46,7 +43,6 @@ def generate_launch_description():
 
     # Create our own temporary YAML files that include substitutions
     param_substitutions = {
-        'default_nav_to_pose_bt_xml': custom_bt_xml_path,
         'use_sim_time': use_sim_time,
         'autostart': autostart}
 
