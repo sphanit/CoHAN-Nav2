@@ -184,7 +184,7 @@ void Agents::trackedAgentsCB(const cohan_msgs::msg::TrackedAgents::SharedPtr tra
             }
           }
 
-          // Check if the human is stuck and update the angle for backoff recovery
+          // Check if the human is stuck and update
           if (h_id == stuck_agent_id_) {
             stuck_ = hr_dist <= cfg_->planning_radius && rh_vec.dot(robot_vec) >= 0;
           }

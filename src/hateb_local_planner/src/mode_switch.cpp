@@ -36,7 +36,7 @@ ModeSwitch::ModeSwitch() {
   initialized_ = false;
 }
 
-void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::string& xml_path, std::shared_ptr<hateb_local_planner::Agents>& agents_ptr, std::shared_ptr<Backoff>& backoff_ptr) {
+void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::string& xml_path, std::shared_ptr<hateb_local_planner::Agents>& agents_ptr) {
   if (!initialized_) {
     // Initialize the ROS components
     // TODO(sphanit): Check if you need to make them configurable
@@ -66,7 +66,6 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     // Initialize the parameters
     goal_reached_ = true;
     goal_update_ = false;
-    backoff_ptr_ = backoff_ptr;
 
     // Register the BT nodes
     registerNodes();
@@ -109,7 +108,6 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     init_mode.predict = PREDICTION::CONST_VEL;
     bhv_tree_.rootBlackboard()->set("planning_mode", init_mode);
     bhv_tree_.rootBlackboard()->set("goal_update", false);
-    bhv_tree_.rootBlackboard()->set("backoff_ptr", backoff_ptr);
     bhv_tree_.rootBlackboard()->set("agents_ptr", agents_ptr);
     bhv_tree_.rootBlackboard()->set("passage_type", psg_type);
     bhv_tree_.rootBlackboard()->set("reset", false);
@@ -224,7 +222,6 @@ void ModeSwitch::registerNodes() {
   bhv_factory_.registerNodeType<hateb_local_planner::SingleBandExitCondition>("singleBandExitCond");
   bhv_factory_.registerNodeType<hateb_local_planner::DualBandExitCondition>("dualBandExitCond");
   bhv_factory_.registerNodeType<hateb_local_planner::VelObsExitCondition>("velobsExitCond");
-  bhv_factory_.registerNodeType<hateb_local_planner::BackoffExitCondition>("backoffExitCond");
   bhv_factory_.registerNodeType<hateb_local_planner::PassThroughCondition>("passThroughCond");
 }
 

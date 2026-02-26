@@ -47,15 +47,11 @@
 // BT Nodes
 #include <hateb_local_planner/behavior_tree/action/set_mode.h>
 #include <hateb_local_planner/behavior_tree/bt_core.h>
-#include <hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h>
 #include <hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h>
 #include <hateb_local_planner/behavior_tree/condition/is_goal_updated.h>
 #include <hateb_local_planner/behavior_tree/condition/passthrough_condition.h>
 #include <hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h>
 #include <hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h>
-
-// Backoff recovery mechanism
-#include <hateb_local_planner/backoff.h>
 
 // Stdlib
 #include <mutex>
@@ -94,9 +90,8 @@ class ModeSwitch {
    * @param node ROS 2 node shared pointer
    * @param xml_path Path to the behavior tree XML description
    * @param agents_ptr Pointer to the agents management class
-   * @param backoff_ptr Pointer to the backoff behavior handler
    */
-  void initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::string& xml_path, std::shared_ptr<hateb_local_planner::Agents>& agents_ptr, std::shared_ptr<Backoff>& backoff_ptr);
+  void initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::string& xml_path, std::shared_ptr<hateb_local_planner::Agents>& agents_ptr);
 
   /**
    * @brief Executes one tick of the behavior tree
@@ -186,7 +181,6 @@ class ModeSwitch {
   rclcpp::Subscription<action_msgs::msg::GoalStatusArray>::SharedPtr result_sub_;            //!< Subscriber for navigation results
   rclcpp::Subscription<cohan_msgs::msg::PassageType>::SharedPtr passage_detect_sub_;         //!< Subscriber for passage detection
   rclcpp::Publisher<hateb_local_planner::msg::PlanningMode>::SharedPtr planning_mode_pub_;   //!< Publisher for current planning mode
-  rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr backoff_srv_;                           //!< Service server for backoff requests
 
   // State information
   geometry_msgs::msg::PoseStamped goal_;                //!< Current navigation goal
@@ -202,8 +196,6 @@ class ModeSwitch {
   std::string name_;                                  //!< Name of this node
   hateb_local_planner::msg::PlanningMode plan_mode_;  //!< Current planning mode
   ModeInfo mode_info_;                                //!< Detailed mode information
-
-  std::shared_ptr<Backoff> backoff_ptr_;  //!< Pointer to backoff behavior handler
 
   // Params for namespace and subscription topics
   std::string ns_;                     //!< Namespace of the node

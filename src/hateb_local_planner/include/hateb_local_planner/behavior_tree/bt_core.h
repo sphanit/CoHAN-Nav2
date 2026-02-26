@@ -173,7 +173,6 @@ enum PLAN : std::uint8_t {
   SINGLE_BAND,  //!< Single elastic band optimization
   DUAL_BAND,    //!< Dual elastic band optimization for robot and human
   VELOBS,       //!< Velocity obstacles-based planning
-  BACKOFF,      //!< Backoff behavior when stuck
   PASSTHROUGH   //!< PassThrough Mode at passages
 };
 

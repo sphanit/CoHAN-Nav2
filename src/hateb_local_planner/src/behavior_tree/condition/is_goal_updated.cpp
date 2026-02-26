@@ -47,7 +47,6 @@ BT::NodeStatus IsGoalUpdated::tick() {
   getInput("recovery", recovery);
 
   // Goal updated case
-  // (Note: This will not be called when a manual goal is given during backoff recovery. Is it an issue?)
   if (updated && !recovery) {
     BT_INFO(name_, "Goal updated, restarting the tree!")
     return BT::NodeStatus::SUCCESS;

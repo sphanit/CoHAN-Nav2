@@ -55,10 +55,6 @@ BT::NodeStatus SetMode::onStart() {
     p_msg_.plan = PLAN::VELOBS;
   }
 
-  else if (plan_type_ == "backoff") {
-    p_msg_.plan = PLAN::BACKOFF;
-  }
-
   else if (plan_type_ == "passthrough") {
     p_msg_.plan = PLAN::PASSTHROUGH;
   }
