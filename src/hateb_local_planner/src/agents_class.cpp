@@ -220,6 +220,7 @@ void Agents::trackedAgentsCB(const cohan_msgs::msg::TrackedAgents::SharedPtr tra
     agents_info.visible = sorted_ids;
 
     for (auto& f_id : sorted_ids) {
+      humans_info[f_id].state = agents_states_[f_id];  // Update the state info message in all cases to avoid the edge cases
       if (agents_states_[f_id] == hateb_local_planner::AgentState::NO_STATE || agents_states_[f_id] == hateb_local_planner::AgentState::STATIC) {
         agents_states_[f_id] = hateb_local_planner::AgentState::STATIC;
         humans_info[f_id].state = hateb_local_planner::AgentState::STATIC;

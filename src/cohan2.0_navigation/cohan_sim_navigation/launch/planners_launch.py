@@ -38,21 +38,22 @@ def generate_launch_description():
                 remappings=[('/agent_planner/map', '/map'),]
             ),
 
-            Node(
-                package='nav2_planner',
-                executable='planner_server',
-                namespace='backoff_planner',
-                output='screen',
-                parameters=planner_params,
-                remappings=[('/backoff_planner/map', '/map'),]
-            ),
+            # Node(
+            #     package='nav2_planner',
+            #     executable='planner_server',
+            #     namespace='backoff_planner',
+            #     output='screen',
+            #     parameters=planner_params,
+            #     remappings=[('/backoff_planner/map', '/map'),]
+            # ),
             ## Lifecycle activation with delay --> Nav2_lifecycle_manager does not work well here
             Node(
                 package='cohan_sim_navigation',
                 executable='activate_lifecylenodes_with_delay.py',
                 name='activate_planners_client',
                 output='screen',
-                arguments=['1.0', 'agent_planner/planner_server', 'backoff_planner/planner_server']
+                # arguments=['1.0', 'agent_planner/planner_server', 'backoff_planner/planner_server']
+                arguments=['1.0', 'agent_planner/planner_server']
             ),
         ]
     )
