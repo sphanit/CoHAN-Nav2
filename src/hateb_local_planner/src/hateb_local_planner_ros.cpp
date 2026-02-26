@@ -193,16 +193,13 @@ void HATebLocalPlannerROS::configure(const rclcpp_lifecycle::LifecycleNode::Weak
   optimize_server_ = node->create_service<cohan_msgs::srv::Optimize>(OPTIMIZE_SRV_NAME, std::bind(&HATebLocalPlannerROS::optimizeStandalone, this, std::placeholders::_1, std::placeholders::_2));
   log_pub_ = node->create_publisher<std_msgs::msg::String>(HATEB_LOG, 1);
 
-  // Initialize the pointer to agents, backoff and mode switch
+  // Initialize the pointer to agents and mode switch
   agents_ptr_ = std::make_shared<hateb_local_planner::Agents>(node, tf_, costmap_ros, cfg_);
-  backoff_ptr_ = std::make_shared<Backoff>(node, costmap_ros, cfg_);
-  backoff_ptr_->initializeOffsets(robot_circumscribed_radius_);
-
   // Get behavior tree XML path
   if (cfg_->bt_xml_path.empty()) {
     RCLCPP_ERROR(logger_, "Please provide the xml path by setting the bt_xml_path param");
   }
-  bt_mode_switch_.initialize(node, cfg_->bt_xml_path, agents_ptr_, backoff_ptr_);
+  bt_mode_switch_.initialize(node, cfg_->bt_xml_path, agents_ptr_);
 
   // Initialize timers and properties
   last_call_time_ = clock_->now() - rclcpp::Duration::from_seconds(cfg_->hateb.pose_prediction_reset_time);
@@ -239,7 +236,6 @@ void HATebLocalPlannerROS::cleanup() {
   costmap_converter_->stopWorker();
   collision_checker_.reset();
   agents_ptr_.reset();
-  backoff_ptr_.reset();
 
   // Reset subscribers, publishers, and service clients/servers
   custom_obst_sub_.reset();
@@ -352,7 +348,7 @@ geometry_msgs::msg::TwistStamped HATebLocalPlannerROS::computeVelocityCommands(c
   if (my_checker != nullptr) {
     my_checker->setGoalControl(goal_ctrl_);
   }
-  if (!goal_reached_ && goal_checker->isGoalReached(pose.pose, global_goal.pose, velocity)) {
+  if (!goal_reached_ && my_checker->isGoalReached(pose.pose, global_goal.pose, velocity)) {
     goal_reached_ = true;  // prevent multiple calls
     onGoalReached();
     return cmd_vel;
@@ -420,12 +416,10 @@ geometry_msgs::msg::TwistStamped HATebLocalPlannerROS::computeVelocityCommands(c
   } else if (isMode_ == 1) {
     mode = "VelObs";
   } else if (isMode_ == 2) {
-    mode = "Backoff";
-  } else if (isMode_ == 3) {
     mode = "Passing through";
-  } else if (isMode_ == 4) {
+  } else if (isMode_ == 3) {
     mode = "Approaching Pillar";
-  } else if (isMode_ == 5) {
+  } else if (isMode_ == 4) {
     mode = "Approaching Goal";
   } else {
     mode = "SingleBand";
@@ -490,7 +484,6 @@ geometry_msgs::msg::TwistStamped HATebLocalPlannerROS::computeVelocityCommands(c
     footprint_spec_ = costmap_ros_->getRobotFootprint();
     // The radii are updated in the function below
     nav2_costmap_2d::calculateMinAndMaxDistances(footprint_spec_, robot_inscribed_radius_, robot_circumscribed_radius_);
-    // backoff_ptr_->initializeOffsets(robot_circumscribed_radius_);
   }
 
   bool feasible = planner_->isTrajectoryFeasible(collision_checker_, footprint_spec_, robot_inscribed_radius_, robot_circumscribed_radius_, cfg_->trajectory.feasibility_check_no_poses);
@@ -541,10 +534,6 @@ geometry_msgs::msg::TwistStamped HATebLocalPlannerROS::computeVelocityCommands(c
   // a feasible solution should be found, reset counter
   no_infeasible_plans_ = 0;
 
-  if (backoff_ptr_->isBackoffGoalReached() && !goal_ctrl_) {
-    cmd_vel.twist = geometry_msgs::msg::Twist();
-  }
-
   // store last command (for recovery analysis etc.)
   last_cmd_ = cmd_vel.twist;
 
@@ -581,12 +570,6 @@ bool HATebLocalPlannerROS::tickTreeAndUpdatePlans(const geometry_msgs::msg::Pose
 
   // TODO(sphanit): Update this globally across the package
   isMode_ = static_cast<int>(mode_info.plan_mode) - 1;
-
-  if (mode_info.plan_mode == PLAN::BACKOFF) {
-    // Stopping the planner from the setting the goal to complete to do the Backoff Recovery
-    goal_ctrl_ = false;
-    return true;
-  }
 
   goal_ctrl_ = true;
 

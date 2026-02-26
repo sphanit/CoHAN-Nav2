@@ -100,9 +100,6 @@
 
 #include <pluginlib/class_loader.hpp>
 
-// Backoff recovery
-#include <hateb_local_planner/backoff.h>
-
 // Behavior Tree and Mode Switch
 #include <hateb_local_planner/mode_switch.h>
 
@@ -570,7 +567,6 @@ class HATebLocalPlannerROS : public nav2_core::Controller {
 
   // Helper class instances
   std::shared_ptr<hateb_local_planner::Agents> agents_ptr_;  //!< Pointer to agents management class
-  std::shared_ptr<Backoff> backoff_ptr_;                     //!< Pointer to backoff behavior class
   ModeSwitch bt_mode_switch_;                                //!< Behavior tree mode switch handler
 
   // ROS 2 logging and time

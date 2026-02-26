@@ -129,10 +129,8 @@ add_library(hateb_local_planner_core SHARED
   src/recovery_behaviors.cpp
   src/hateb_config.cpp
   src/hateb_local_planner_ros.cpp
-  src/backoff.cpp
   src/behavior_tree/condition/is_goal_updated.cpp
   src/behavior_tree/condition/vel_obs_exit_condition.cpp
-  src/behavior_tree/condition/backoff_exit_condition.cpp
   src/behavior_tree/condition/single_band_exit_condition.cpp
   src/behavior_tree/condition/dual_band_exit_condition.cpp
   src/behavior_tree/condition/passthrough_condition.cpp

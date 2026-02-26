@@ -659,12 +659,10 @@ void TebVisualization::publishMode(int mode) {
   else if (mode == 1)
     mode_text.text = "VelObs";
   else if (mode == 2)
-    mode_text.text = "Backoff";
-  else if (mode == 3)
     mode_text.text = "PassingThrough";
-  else if (mode == 4)
+  else if (mode == 3)
     mode_text.text = "ApproachingPillar";
-  else if (mode == 5)
+  else if (mode == 4)
     mode_text.text = "ApproachingGoal";
   else
     mode_text.text = "No Mode yet";

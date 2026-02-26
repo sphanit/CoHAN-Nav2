@@ -48,10 +48,9 @@ bt_navigator:
     bt_loop_duration: 10
     default_server_timeout: 20
     wait_for_service_timeout: 1000
-    # 'default_nav_through_poses_bt_xml' and 'default_nav_to_pose_bt_xml' are use defaults:
-    # nav2_bt_navigator/navigate_to_pose_w_replanning_and_recovery.xml
-    # nav2_bt_navigator/navigate_through_poses_w_replanning_and_recovery.xml
-    # They can be set here or via a RewrittenYaml remap from a parent launch file to Nav2.
+    #### The below can only be replaced using absolute path or RewrittenYaml in Launch file (CoHAN uses custom_navigate_to_pose.xml which is a copy of navigate_to_pose_w_replanning_and_recovery.xml with some modifications to the behavior tree) ####
+    # default_nav_to_pose_bt_xml: "navigate_to_pose_w_replanning_and_recovery.xml" 
+    # default_nav_through_poses_bt_xml: "navigate_through_poses_w_replanning_and_recovery.xml"
     plugin_lib_names:
       - nav2_compute_path_to_pose_action_bt_node
       - nav2_compute_path_through_poses_action_bt_node
@@ -112,7 +111,7 @@ bt_navigator_navigate_to_pose_rclcpp_node:
 controller_server:
   ros__parameters:
     use_sim_time: True
-    controller_frequency: 5.0
+    controller_frequency: 20.0
     min_x_velocity_threshold: 0.001
     min_y_velocity_threshold: 0.5
     min_theta_velocity_threshold: 0.001
@@ -445,7 +444,7 @@ waypoint_follower:
 velocity_smoother:
   ros__parameters:
     use_sim_time: True
-    smoothing_frequency: 20.0
+    smoothing_frequency: 50.0
     scale_velocities: False
     feedback: "OPEN_LOOP"
     max_velocity: [0.7, 0.0, 1.0]
