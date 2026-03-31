@@ -1,0 +1,6 @@
+<library path="smac_multi_planner">
+	<class
+		name="smac_multi_planner/SmacMultiPlanner"
+		type="smac_multi_planner::SmacMultiPlanner"
+		base_class_type="nav2_core::GlobalPlanner"/>
+</library>

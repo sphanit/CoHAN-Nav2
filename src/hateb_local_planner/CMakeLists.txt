@@ -51,6 +51,8 @@ find_package(visualization_msgs REQUIRED)
 find_package(behaviortree_cpp_v3 REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(ros2_helpers REQUIRED)
+find_package(nav2_smac_planner REQUIRED)
+find_package(nav2_navfn_planner REQUIRED)
 
 message(STATUS "System: ${CMAKE_SYSTEM}")
 
@@ -181,6 +183,22 @@ install(PROGRAMS
 
 pluginlib_export_plugin_description_file(nav2_core hateb_local_planner_plugin.xml)
 
+add_library(smac_multi_planner SHARED
+  src/smac_multi_planner.cpp)
+
+install(TARGETS smac_multi_planner
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin)
+
+install(FILES plugin.xml
+  DESTINATION share/${PROJECT_NAME})
+
+ament_target_dependencies(smac_multi_planner
+  rclcpp nav2_core nav2_navfn_planner nav_msgs pluginlib)
+
+pluginlib_export_plugin_description_file(nav2_core plugin.xml)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
@@ -188,6 +206,7 @@ endif()
 
 ament_export_include_directories(include)
 ament_export_libraries(hateb_local_planner_core)
+ament_export_libraries(smac_multi_planner)
 ament_export_dependencies(${dependencies})
 
 ament_package()

@@ -388,7 +388,23 @@ planner_server:
       plugin: "nav2_navfn_planner/NavfnPlanner"
       tolerance: 0.5
       use_astar: false
-      allow_unknown: true
+      allow_unknown: false
+
+# planner_server:
+#   ros__parameters:
+#     expected_planner_frequency: 5.0
+#     use_sim_time: True
+#     planner_plugins: ["SmacMulti"]
+#     SmacMulti:
+#       plugin: "smac_multi_planner/SmacMultiPlanner"
+#       num_paths: 7
+#       goal_yaw_offset: 0.2
+#       goal_xy_offset: 0.15
+
+#       smac:
+#         tolerance: 0.5
+#         downsample_costmap: false
+#         motion_model_for_search: "DUBIN"
 
 smoother_server:
   ros__parameters:
