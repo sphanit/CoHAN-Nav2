@@ -42,6 +42,7 @@
 #include <hateb_local_planner/msg/planning_mode.hpp>
 #include <nav2_msgs/action/navigate_to_pose.hpp>
 #include <nav_msgs/msg/path.hpp>
+#include <std_msgs/msg/bool.hpp>
 #include <std_srvs/srv/trigger.hpp>
 
 // BT Nodes
@@ -153,6 +154,12 @@ class ModeSwitch {
   void passageCB(const cohan_msgs::msg::PassageType::SharedPtr passage_msg);
 
   /**
+   * @brief Callback for processing valid plan status from homotopy planner
+   * @param valid_plan_msg Message containing valid plan flag
+   */
+  void validPlanCB(const std_msgs::msg::Bool::SharedPtr valid_plan_msg);
+
+  /**
    * @brief Updates the current planning mode
    * @param duration Optional duration parameter for the update
    */
@@ -180,6 +187,7 @@ class ModeSwitch {
   rclcpp::Subscription<nav_msgs::msg::Path>::SharedPtr plan_sub_;                            //!< Subscriber for navigation goals
   rclcpp::Subscription<action_msgs::msg::GoalStatusArray>::SharedPtr result_sub_;            //!< Subscriber for navigation results
   rclcpp::Subscription<cohan_msgs::msg::PassageType>::SharedPtr passage_detect_sub_;         //!< Subscriber for passage detection
+  rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr valid_plan_sub_;                      //!< Subscriber for valid plan status
   rclcpp::Publisher<hateb_local_planner::msg::PlanningMode>::SharedPtr planning_mode_pub_;   //!< Publisher for current planning mode
 
   // State information

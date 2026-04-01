@@ -72,7 +72,8 @@ class VelObsExitCondition : public BT::ConditionNode {
    */
   static BT::PortsList providedPorts() {
     // This action has a single input port called "agents_info"
-    return {BT::InputPort<agent_path_prediction::msg::AgentsInfo>("agents_info"), BT::InputPort<std::shared_ptr<hateb_local_planner::Agents>>("agents_ptr"), BT::OutputPort<int>("stuck_agent")};
+    return {BT::InputPort<agent_path_prediction::msg::AgentsInfo>("agents_info"), BT::InputPort<std::shared_ptr<hateb_local_planner::Agents>>("agents_ptr"), BT::InputPort<bool>("valid_plan"),
+            BT::OutputPort<int>("stuck_agent")};
   }
 
  private:
@@ -92,5 +93,6 @@ class VelObsExitCondition : public BT::ConditionNode {
   int nearest_human_id_;     //!< ID of the nearest human agent
   int t_stuck_;              //!< Time counter for how long an agent has been stuck
   std::mutex agents_mutex_;  //!< Mutex to protect concurrent access to agent data
+  bool valid_plan_;          //!< Flag indicating if the homotopy plan exists or not
 };
 };  // namespace hateb_local_planner

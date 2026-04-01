@@ -50,17 +50,20 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     plan_sub_topic_ = std::string(PLAN_SUB);
     result_sub_topic_ = std::string(RESULT_SUB);
     passage_sub_topic_ = std::string(PASSAGE_SUB);
+    auto homotopy_planner_check = std::string("homotopy_planner/valid_plan");
     if (!ns_.empty()) {
       agents_info_sub_topic_ = "/" + ns_ + agents_info_sub_topic_;
       plan_sub_topic_ = "/" + ns_ + plan_sub_topic_;
       result_sub_topic_ = "/" + ns_ + result_sub_topic_;
       passage_sub_topic_ = "/" + ns_ + passage_sub_topic_;
+      homotopy_planner_check = "/" + ns_ + homotopy_planner_check;
     }
 
     agents_info_sub_ = node_->create_subscription<agent_path_prediction::msg::AgentsInfo>(agents_info_sub_topic_, 1, std::bind(&ModeSwitch::agentsInfoCB, this, std::placeholders::_1));
     plan_sub_ = node_->create_subscription<nav_msgs::msg::Path>(plan_sub_topic_, 1, std::bind(&ModeSwitch::planCB, this, std::placeholders::_1));
     result_sub_ = node_->create_subscription<action_msgs::msg::GoalStatusArray>(result_sub_topic_, 1, std::bind(&ModeSwitch::resultNavigateToPoseCB, this, std::placeholders::_1));
     passage_detect_sub_ = node_->create_subscription<cohan_msgs::msg::PassageType>(passage_sub_topic_, 1, std::bind(&ModeSwitch::passageCB, this, std::placeholders::_1));
+    valid_plan_sub_ = node_->create_subscription<std_msgs::msg::Bool>(homotopy_planner_check, 1, std::bind(&ModeSwitch::validPlanCB, this, std::placeholders::_1));
     planning_mode_pub_ = node_->create_publisher<hateb_local_planner::msg::PlanningMode>("planning_mode", 10);
 
     // Initialize the parameters
@@ -112,6 +115,7 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     bhv_tree_.rootBlackboard()->set("passage_type", psg_type);
     bhv_tree_.rootBlackboard()->set("reset", false);
     bhv_tree_.rootBlackboard()->set("recovery", false);
+    bhv_tree_.rootBlackboard()->set("valid_plan", true);
 
     auto status = bhv_tree_.tickRoot();  // This is needed to update all blackboard entries
     initialized_ = true;
@@ -124,6 +128,11 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
 void ModeSwitch::passageCB(const cohan_msgs::msg::PassageType::SharedPtr passage_msg) {
   // Set the passage type on the blackboard
   bhv_tree_.rootBlackboard()->set("passage_type", passage_msg->type);
+}
+
+void ModeSwitch::validPlanCB(const std_msgs::msg::Bool::SharedPtr valid_plan_msg) {
+  // Set the valid plan status on the blackboard
+  bhv_tree_.rootBlackboard()->set("valid_plan", valid_plan_msg->data);
 }
 
 void ModeSwitch::agentsInfoCB(const agent_path_prediction::msg::AgentsInfo::SharedPtr info_msg) {

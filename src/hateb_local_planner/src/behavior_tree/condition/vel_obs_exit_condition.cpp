@@ -42,23 +42,20 @@ VelObsExitCondition::~VelObsExitCondition() {
 }
 
 BT::NodeStatus VelObsExitCondition::tick() {
-  // As the robot is stuck, increament t_stuck everytime this node is ticked
-  t_stuck_++;
   if (agents_ptr_ == nullptr) {
     // Get the agents pointer from blackboard
     getInput("agents_ptr", agents_ptr_);
   }
+  getInput("valid_plan", valid_plan_);
 
-  // Check if the human as stopped too (while the robot is stuck)
-  if (hasHumanStopped() && t_stuck_ >= 20) {  // TODO(unknown): Remove the magic number 20
-    t_stuck_ = 0;
-    BT_INFO(name_, "Both human and robot are stuck. Exiting VelObs!")
+  // Check if the human has stopped too (while the robot is stuck)
+  if (hasHumanStopped() && !valid_plan_) {
     // Lock the agents pointer before updating
     std::scoped_lock lock(agents_mutex_);
     // Set the human state to BLOCKED
     agents_ptr_->setState(hateb_local_planner::AgentState::BLOCKED, nearest_human_id_);
-    // Update the blackboard
-    // setOutput("stuck_agent", nearest_human_id_); // Not needed
+
+    BT_INFO(name_, "Both human and robot are stuck. Exiting VelObs!")
     return BT::NodeStatus::SUCCESS;
   }
 

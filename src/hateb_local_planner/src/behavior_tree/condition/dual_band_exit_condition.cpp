@@ -86,11 +86,9 @@ bool DualBandExitCondition::isRobotStuck() {
     goal_dist_ = std::hypot(dx, dy);
   }
 
-  // If the goal_dist is not decreasing for over 2.0 sec, exit the mode
-  if ((rclcpp::Clock().now() - stopped_time_).seconds() >= 2.0) {  // TODO(sphanit): Remove the magic number 2.0s here
-    if (goal_dist_ - std::hypot(dx, dy) < 2 * DIST_EPS) {
-      return true;
-    }
+  // If the goal_dist is not decreasing for over 5.0 sec, exit the mode
+  if ((rclcpp::Clock().now() - stopped_time_).seconds() >= 5.0) {  // TODO(sphanit): Remove the magic number 5.0s here
+    return true;
   }
 
   // Otherwise the robot is moving well

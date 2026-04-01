@@ -23,8 +23,8 @@
 						<setMode name="dual_band" plan_type="dual" predict_type="const_vel" mode="{planning_mode}"/>
 					</ReactiveFallback>
 					<ReactiveFallback>
-						<velobsExitCond name="velobs mode" agents_info="{agents_info}" agents_ptr="{agents_ptr}" stuck_agent="{stuck_agent}"/>
-						<setMode name="vel_obs_" plan_type="velobs" predict_type="const_vel" mode="{planning_mode}"/>
+						<velobsExitCond name="velobs mode" agents_info="{agents_info}" agents_ptr="{agents_ptr}" stuck_agent="{stuck_agent}" valid_plan="{valid_plan}"/>
+						<setMode name="vel_obs" plan_type="velobs" predict_type="const_vel" mode="{planning_mode}"/>
 					</ReactiveFallback>
 				</SequenceStar>
 			</ReactiveFallback>

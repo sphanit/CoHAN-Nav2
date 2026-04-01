@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>homotopy_planner</name>
+  <version>0.1.0</version>
+  <description>
+    The homotopy_planner package implements a custom global planner plugin that can switch between Navfn Planning and Bernstein-based Homotopy Class Planning based on the Planning Mode.
+  </description>
+
+  <maintainer email="ptsingaman@laas.fr">Phani Teja Singamaneni</maintainer>
+  <author email="ptsingaman@laas.fr">Phani Teja Singamaneni</author>
+
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <depend>ament_index_cpp</depend>
+  <depend>rclcpp</depend>
+  <depend>nav2_core</depend>
+  <depend>nav_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>pluginlib</depend>
+  <depend>nav2_navfn_planner</depend>
+  <depend>hateb_local_planner</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+    <nav2_core plugin="${prefix}/homotopy_planner_plugin.xml"/>
+  </export>
+</package>

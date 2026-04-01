@@ -129,13 +129,13 @@ void StaticAgentLayer::updateCosts(nav2_costmap_2d::Costmap2D& /*master_grid*/, 
       by = oy + (res / 2);
       var = cfg_->radius;
       if (state > 2) {
-        rad = cfg_->agent_radius;
+        rad = 2 * cfg_->agent_radius;
       }
     }
 
     else {
       if (type == 1) {
-        rad = cfg_->agent_radius;
+        rad = 2 * cfg_->agent_radius;
       } else {
         rad = robot_radius_;
       }

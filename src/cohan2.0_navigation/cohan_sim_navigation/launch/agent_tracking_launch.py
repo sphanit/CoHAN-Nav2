@@ -56,6 +56,13 @@ def generate_launch_description():
                         'goals_adream.yaml']),
                     'use_sim_time': use_sim_time}]
                 ),
+            Node(
+                package='invisible_humans_detection',
+                executable='invisible_humans_detection_node',
+                name='invisible_humans_detection',
+                output='screen',
+                parameters=[{'use_sim_time': use_sim_time}] 
+            ),
         ]
     )
 
@@ -90,7 +97,17 @@ def generate_launch_description():
                     'use_sim_time': use_sim_time
                 }],
                 remappings=[('map', '/map')]
-            )
+            ),
+
+            Node(
+                package='invisible_humans_detection',
+                executable='invisible_humans_detection_node',
+                name='invisible_humans_detection',
+                output='screen',
+                namespace=namespace,
+                parameters=[{'use_sim_time': use_sim_time}],
+                remappings=[('map', '/map')]
+            ),
         ]
     )
 

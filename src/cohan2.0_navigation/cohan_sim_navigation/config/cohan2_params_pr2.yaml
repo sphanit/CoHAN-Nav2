@@ -205,7 +205,7 @@ controller_server:
       yaw_goal_tolerance: 0.2
       free_goal_vel: True
       # Obstacles
-      min_obstacle_dist: 0.3
+      min_obstacle_dist: 0.2
       include_costmap_obstacles: True
       costmap_obstacles_behind_robot_dist: 0.5
       obstacle_poses_affected: 1
@@ -289,7 +289,7 @@ local_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        inflation_radius: 0.6
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
@@ -315,10 +315,12 @@ local_costmap:
         map_subscribe_transient_local: True
       human_static_layer:
         plugin: "cohan_layers::StaticAgentLayer"
-        agent_radius: 0.80
+        agent_radius: 0.30
+        amplitude: 150.0
       human_visibility_layer:
         plugin: "cohan_layers::AgentVisibilityLayer"
-      always_send_full_costmap: True
+        agent_radius: 0.30
+        amplitude: 250.0
 
 global_costmap:
   global_costmap:
@@ -355,14 +357,16 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        inflation_radius: 0.6
       always_send_full_costmap: True
       human_static_layer:
         plugin: "cohan_layers::StaticAgentLayer"
-        agent_radius: 0.80
+        agent_radius: 0.30
+        amplitude: 150.0
       human_visibility_layer:
         plugin: "cohan_layers::AgentVisibilityLayer"
-
+        agent_radius: 0.30
+        amplitude: 250.0
 
 map_server:
   ros__parameters:
@@ -379,32 +383,27 @@ map_saver:
     occupied_thresh_default: 0.65
     map_subscribe_transient_local: True
 
+# planner_server:
+#   ros__parameters:
+#     expected_planner_frequency: 5.0
+#     use_sim_time: True
+#     planner_plugins: ["GridBased"]
+#     GridBased:
+#       plugin: "nav2_navfn_planner/NavfnPlanner"
+#       tolerance: 0.5
+#       use_astar: false
+#       allow_unknown: false
+
 planner_server:
   ros__parameters:
     expected_planner_frequency: 5.0
     use_sim_time: True
     planner_plugins: ["GridBased"]
     GridBased:
-      plugin: "nav2_navfn_planner/NavfnPlanner"
+      plugin: "homotopy_planner/HomotopyPlanner"
       tolerance: 0.5
       use_astar: false
       allow_unknown: false
-
-# planner_server:
-#   ros__parameters:
-#     expected_planner_frequency: 5.0
-#     use_sim_time: True
-#     planner_plugins: ["SmacMulti"]
-#     SmacMulti:
-#       plugin: "smac_multi_planner/SmacMultiPlanner"
-#       num_paths: 7
-#       goal_yaw_offset: 0.2
-#       goal_xy_offset: 0.15
-
-#       smac:
-#         tolerance: 0.5
-#         downsample_costmap: false
-#         motion_model_for_search: "DUBIN"
 
 smoother_server:
   ros__parameters:
