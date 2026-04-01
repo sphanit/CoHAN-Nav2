@@ -1,6 +1,8 @@
 #ifndef HOMOTOPY_PLANNER_HPP_
 #define HOMOTOPY_PLANNER_HPP_
 
+#include <cohan_msgs/msg/agent_path.hpp>
+#include <cohan_msgs/msg/agent_path_array.hpp>
 #include <hateb_local_planner/msg/planning_mode.hpp>
 #include <homotopy_planner/bernstein.hpp>
 #include <nav2_core/global_planner.hpp>
@@ -44,15 +46,20 @@ class HomotopyPlanner : public nav2_core::GlobalPlanner {
   rclcpp::Subscription<hateb_local_planner::msg::PlanningMode>::SharedPtr planning_mode_sub_;
   hateb_local_planner::msg::PlanningMode current_planning_mode_;
   rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr valid_plan_pub_;
+  rclcpp::Publisher<cohan_msgs::msg::AgentPathArray>::SharedPtr all_homotopy_paths_pub_;
   rclcpp::Time last_update_time_;
   nav_msgs::msg::Path last_path_;
+  std::vector<nav_msgs::msg::Path> last_all_paths_;
   Point last_goal_;
+  bool control_points_;
+  uint64_t path_id_counter_;
 
   void planningModeCallback(const hateb_local_planner::msg::PlanningMode::SharedPtr msg) { current_planning_mode_ = *msg; }
 
   bool checkCollision(const std::vector<Point>& points);
   double calculateLength(const std::vector<Point>& points);
   std::vector<Point> generateHomotopyPaths(const Point& start, const Point& goal);
+  void publishAllHomotopyPaths();
   nav_msgs::msg::Path convertPointsToPath(const std::vector<Point>& points, const std::string& frame_id);
 };
 
