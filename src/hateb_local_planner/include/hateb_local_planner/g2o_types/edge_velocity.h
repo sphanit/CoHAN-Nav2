@@ -93,7 +93,7 @@ class EdgeVelocity : public BaseTebMultiEdge<2, double> {
     double vel_theta = cfg_->robot.max_vel_theta;
 
     // TODO(phani): Make this configurable
-    if (mode_ == 3) {
+    if (mode_ == 2) {
       vel_linear = 0.2;
     }
 
@@ -239,7 +239,7 @@ class EdgeVelocityHolonomic : public BaseTebMultiEdge<3, double> {
     double vel_theta = cfg_->robot.max_vel_theta;
 
     // TODO(phani): Make this configurable
-    if (mode_ == 3) {
+    if (mode_ == 2) {
       vel_linear_x = 0.2;
       vel_linear_y = 0.01;
     }

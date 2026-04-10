@@ -59,6 +59,10 @@ BT::NodeStatus SetMode::onStart() {
     p_msg_.plan = PLAN::PASSTHROUGH;
   }
 
+  else if (plan_type_ == "evade") {
+    p_msg_.plan = PLAN::EVADE;
+  }
+
   if (predict_type_ == "const_vel") {
     p_msg_.predict = PREDICTION::CONST_VEL;
   }

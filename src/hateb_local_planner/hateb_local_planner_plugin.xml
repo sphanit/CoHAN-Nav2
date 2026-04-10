@@ -7,7 +7,7 @@
 			<!-- <library path="libg2o_core.so"/> -->
 		</class>
 	</library>
-	<library path="hateb_local_planner_core">
+	<library path="hateb_goal_checker">
 		<class type="hateb_local_planner::HATEBGoalChecker" base_class_type="nav2_core::GoalChecker">
 			<description>Custom goal checker for hateb_local_planner</description>
 		</class>

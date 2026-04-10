@@ -38,6 +38,7 @@
 #include <agent_path_prediction/msg/agents_info.hpp>
 #include <cohan_msgs/msg/passage_type.hpp>
 #include <geometry_msgs/msg/pose.hpp>
+#include <geometry_msgs/msg/pose_array.hpp>
 #include <geometry_msgs/msg/pose_stamped.hpp>
 #include <hateb_local_planner/msg/planning_mode.hpp>
 #include <nav2_msgs/action/navigate_to_pose.hpp>
@@ -49,6 +50,7 @@
 #include <hateb_local_planner/behavior_tree/action/set_mode.h>
 #include <hateb_local_planner/behavior_tree/bt_core.h>
 #include <hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h>
+#include <hateb_local_planner/behavior_tree/condition/evade_condition.h>
 #include <hateb_local_planner/behavior_tree/condition/is_goal_updated.h>
 #include <hateb_local_planner/behavior_tree/condition/passthrough_condition.h>
 #include <hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h>
@@ -61,7 +63,9 @@
 #define AGENTS_INFO_SUB "/agents_info"
 #define PLAN_SUB "/plan"
 #define RESULT_SUB "/navigate_to_pose/_action/status"
-#define PASSAGE_SUB "/map_scanner/passage"
+#define PASSAGE_SUB "/invisible_humans_detection/passage"
+#define HOMOTOPY_PLANNER_CHECK "/homotopy_planner/valid_plan"
+#define CORNERS_SUB "/invisible_humans_detection/invisible_humans_corners"
 
 namespace hateb_local_planner {
 
@@ -160,6 +164,12 @@ class ModeSwitch {
   void validPlanCB(const std_msgs::msg::Bool::SharedPtr valid_plan_msg);
 
   /**
+   * @brief Callback for processing corner information
+   * @param corners_msg Message containing corner positions
+   */
+  void cornersCB(const geometry_msgs::msg::PoseArray::SharedPtr corners_msg);
+
+  /**
    * @brief Updates the current planning mode
    * @param duration Optional duration parameter for the update
    */
@@ -188,6 +198,7 @@ class ModeSwitch {
   rclcpp::Subscription<action_msgs::msg::GoalStatusArray>::SharedPtr result_sub_;            //!< Subscriber for navigation results
   rclcpp::Subscription<cohan_msgs::msg::PassageType>::SharedPtr passage_detect_sub_;         //!< Subscriber for passage detection
   rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr valid_plan_sub_;                      //!< Subscriber for valid plan status
+  rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr corners_sub_;               //!< Subscriber for corners information
   rclcpp::Publisher<hateb_local_planner::msg::PlanningMode>::SharedPtr planning_mode_pub_;   //!< Publisher for current planning mode
 
   // State information
@@ -206,11 +217,13 @@ class ModeSwitch {
   ModeInfo mode_info_;                                //!< Detailed mode information
 
   // Params for namespace and subscription topics
-  std::string ns_;                     //!< Namespace of the node
-  std::string agents_info_sub_topic_;  //!< Topic for agents information
-  std::string plan_sub_topic_;         //!< Topic for robot plan
-  std::string result_sub_topic_;       //!< Topic for robot goal result
-  std::string passage_sub_topic_;      //!< Topic for passage detection (from invisible humans)
+  std::string ns_;                      //!< Namespace of the node
+  std::string agents_info_sub_topic_;   //!< Topic for agents information
+  std::string plan_sub_topic_;          //!< Topic for robot plan
+  std::string result_sub_topic_;        //!< Topic for robot goal result
+  std::string passage_sub_topic_;       //!< Topic for passage detection (from invisible humans)
+  std::string homotopy_planner_check_;  //!< Topic for valid plan status from homotopy planner
+  std::string corners_sub_topic_;       //!< Topic for corners information
 };
 
 }  // namespace hateb_local_planner

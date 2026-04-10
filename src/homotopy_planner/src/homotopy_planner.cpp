@@ -214,40 +214,41 @@ nav_msgs::msg::Path HomotopyPlanner::convertPointsToPath(const std::vector<Point
 }
 
 nav_msgs::msg::Path HomotopyPlanner::createPlan(const geometry_msgs::msg::PoseStamped& start, const geometry_msgs::msg::PoseStamped& goal) {
-  if ((node_->get_clock()->now() - last_update_time_).seconds() < 10.0 && !last_path_.poses.empty()) {
-    RCLCPP_INFO(node_->get_logger(), "Using cached homotopy path");
-    // Publish cached paths again
-    publishAllHomotopyPaths();
-    return last_path_;
-  }
-
-  // If plan_mode is 2, generate homotopy Bezier curves
-  if (static_cast<int>(current_planning_mode_.plan_mode) == 2 && last_path_.poses.empty()) {
-    Point start_pt(start.pose.position.x, start.pose.position.y);
-    Point goal_pt(goal.pose.position.x, goal.pose.position.y);
-
-    auto best_path = generateHomotopyPaths(start_pt, goal_pt);
-
-    // Publish all generated homotopy paths
-    publishAllHomotopyPaths();
-
-    if (!best_path.empty()) {
-      std_msgs::msg::Bool msg;
-      msg.data = true;
-      valid_plan_pub_->publish(msg);
-      last_path_ = convertPointsToPath(best_path, start.header.frame_id);
-      last_update_time_ = node_->get_clock()->now();
-      last_goal_ = goal_pt;
+  if (static_cast<int>(current_planning_mode_.plan_mode) == 4) {
+    if (!last_path_.poses.empty()) {
+      RCLCPP_INFO(node_->get_logger(), "Using cached homotopy path");
+      // Publish cached paths again
+      publishAllHomotopyPaths();
       return last_path_;
-    } else {
-      std_msgs::msg::Bool msg;
-      msg.data = false;
-      valid_plan_pub_->publish(msg);
-      RCLCPP_WARN(node_->get_logger(), "No valid homotopy paths found, falling back to navfn");
+    }
+    // If plan_mode is Evasion, generate homotopy Bezier curves
+    else {
+      Point start_pt(start.pose.position.x, start.pose.position.y);
+      Point goal_pt(goal.pose.position.x, goal.pose.position.y);
+      RCLCPP_INFO(node_->get_logger(), "Generating homotopy paths for start: (%.2f, %.2f) and goal: (%.2f, %.2f)", start_pt.x, start_pt.y, goal_pt.x, goal_pt.y);
+      auto best_path = generateHomotopyPaths(start_pt, goal_pt);
+
+      // Publish all generated homotopy paths
+      publishAllHomotopyPaths();
+
+      if (!best_path.empty()) {
+        std_msgs::msg::Bool msg;
+        msg.data = true;
+        valid_plan_pub_->publish(msg);
+        last_path_ = convertPointsToPath(best_path, start.header.frame_id);
+        last_update_time_ = node_->get_clock()->now();
+        last_goal_ = goal_pt;
+        return last_path_;
+      } else {
+        std_msgs::msg::Bool msg;
+        msg.data = false;
+        valid_plan_pub_->publish(msg);
+        RCLCPP_WARN(node_->get_logger(), "No valid homotopy paths found, falling back to navfn");
+      }
     }
   }
 
-  if (static_cast<int>(current_planning_mode_.plan_mode) != 2 || (last_goal_ - Point(goal.pose.position.x, goal.pose.position.y)).norm() > 1.0) {
+  else if (static_cast<int>(current_planning_mode_.plan_mode) != 4 || (last_goal_ - Point(goal.pose.position.x, goal.pose.position.y)).norm() > 1.0) {
     last_path_.poses.clear();
     last_all_paths_.clear();
   }

@@ -418,9 +418,7 @@ geometry_msgs::msg::TwistStamped HATebLocalPlannerROS::computeVelocityCommands(c
   } else if (isMode_ == 2) {
     mode = "Passing through";
   } else if (isMode_ == 3) {
-    mode = "Approaching Pillar";
-  } else if (isMode_ == 4) {
-    mode = "Approaching Goal";
+    mode = "Evasion Mode";
   } else {
     mode = "SingleBand";
   }

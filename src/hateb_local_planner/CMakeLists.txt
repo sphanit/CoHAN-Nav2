@@ -134,6 +134,7 @@ add_library(hateb_local_planner_core SHARED
   src/behavior_tree/condition/single_band_exit_condition.cpp
   src/behavior_tree/condition/dual_band_exit_condition.cpp
   src/behavior_tree/condition/passthrough_condition.cpp
+  src/behavior_tree/condition/evade_condition.cpp
   src/behavior_tree/action/set_mode.cpp
   src/mode_switch.cpp
   src/agents_class.cpp

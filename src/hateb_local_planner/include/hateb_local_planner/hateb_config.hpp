@@ -302,7 +302,7 @@ class HATebConfig {
     bt_xml_path = "behavior_trees/all_modes.xml";
     predict_srv_name = "/agent_path_prediction/predict_agent_poses";
     reset_prediction_srv_name = "/agent_path_prediction/reset_prediction_services";
-    invisible_humans_sub_topic = "/map_scanner/invisible_humans_obs";
+    invisible_humans_sub_topic = "/invisible_humans_detection/invisible_humans_obs";
 
     planning_mode = 1;       // Agent-Aware planning by default
     planning_radius = 10.0;  // meters

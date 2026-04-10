@@ -2,29 +2,34 @@
 	<BehaviorTree ID="MainTree">
 		<ReactiveFallback>
 			<!-- Condition -->
-			<isGoalUpdated name="goal_update_check" goal_update="{goal_update}" recovery="{recovery}"/>
+			<IsGoalUpdated name="goal_update_check" goal_update="{goal_update}" recovery="{recovery}"/>
 			<ReactiveFallback name="goal_tree">
-				<!-- First Control -->
+				<!-- First Control: Passage Detection -->
 				<Sequence>
-					<passThroughCond name="is_passage_detected" passage_type="{passage_type}"/>
+					<PassThrough name="is_passage_detected" passage_type="{passage_type}"/>
 					<Timeout msec="5000">
-						<setMode plan_type="passthrough" predict_type="const_vel" mode="{planning_mode}"/>
+						<SetMode plan_type="passthrough" predict_type="const_vel" mode="{planning_mode}"/>
 					</Timeout>
 				</Sequence>
-				<!-- Second Control -->
-				<!-- Second Control: SequenceWithMemory replaced with SequenceStar for BT v3 compatibility -->
+				<!-- Second Control: Evasion Detection -->
+				<ReactiveSequence>
+					<Evade name="evasion_check" agents_info="{agents_info}" nearest_corner="{nearest_corner}"/>
+					<SetMode name="evasion_mode" plan_type="evade" predict_type="const_vel" mode="{planning_mode}"/>
+				</ReactiveSequence>
+				<!-- Main Planning Mode Selection (Single/Dual/VelObs) -->
+				<!-- SequenceWithMemory replaced with SequenceStar for BT v3 compatibility -->
 				<SequenceStar>
 					<ReactiveFallback>
-						<singleBandExitCond name="single band mode" agents_info="{agents_info}" dist_max="10"/>
-						<setMode plan_type="single" predict_type="const_vel" mode="{planning_mode}"/>
+						<SingleBandExitCond name="single band mode" agents_info="{agents_info}" dist_max="10"/>
+						<SetMode plan_type="single" predict_type="const_vel" mode="{planning_mode}"/>
 					</ReactiveFallback>
 					<ReactiveFallback>
-						<dualBandExitCond name="dual band mode" agents_info="{agents_info}" dist_threshold="2.5" nav_goal="{nav_goal}"/>
-						<setMode name="dual_band" plan_type="dual" predict_type="const_vel" mode="{planning_mode}"/>
+						<DualBandExitCond name="dual band mode" agents_info="{agents_info}" dist_threshold="2.5" nav_goal="{nav_goal}"/>
+						<SetMode name="dual_band" plan_type="dual" predict_type="const_vel" mode="{planning_mode}"/>
 					</ReactiveFallback>
 					<ReactiveFallback>
-						<velobsExitCond name="velobs mode" agents_info="{agents_info}" agents_ptr="{agents_ptr}" stuck_agent="{stuck_agent}" valid_plan="{valid_plan}"/>
-						<setMode name="vel_obs" plan_type="velobs" predict_type="const_vel" mode="{planning_mode}"/>
+						<VelObsExitCond name="velobs mode" agents_info="{agents_info}" agents_ptr="{agents_ptr}" stuck_agent="{stuck_agent}" valid_plan="{valid_plan}"/>
+						<SetMode name="vel_obs" plan_type="velobs" predict_type="const_vel" mode="{planning_mode}"/>
 					</ReactiveFallback>
 				</SequenceStar>
 			</ReactiveFallback>

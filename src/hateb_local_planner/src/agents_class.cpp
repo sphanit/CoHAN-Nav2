@@ -211,12 +211,6 @@ void Agents::trackedAgentsCB(const cohan_msgs::msg::TrackedAgents::SharedPtr tra
       sorted_ids = visible_agent_ids_;
     }
 
-    // Causes the backoff to clear as soon as the agent goes out of the FOV(need to have a timeout?)
-    // if (!std::binary_search(sorted_ids.begin(), sorted_ids.end(), stuck_agent_id_)) {
-    //   // id does not exist
-    //   stuck_ = false;
-    // }
-
     agents_info.visible = sorted_ids;
 
     for (auto& f_id : sorted_ids) {
@@ -233,6 +227,11 @@ void Agents::trackedAgentsCB(const cohan_msgs::msg::TrackedAgents::SharedPtr tra
           agents_info.moving.push_back(f_id);
         }
       }
+
+      humans_info[f_id].pose.x = agents_[f_id].position.x;
+      humans_info[f_id].pose.y = agents_[f_id].position.y;
+      auto hyaw = tf2::getYaw(agents_[f_id].orientation);
+      humans_info[f_id].pose.theta = hyaw;
 
       agents_info.humans.push_back(humans_info[f_id]);
     }
