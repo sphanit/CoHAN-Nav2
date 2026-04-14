@@ -16,6 +16,25 @@ If you are using this version of any of our previous versions, please cite these
 
 - Singamaneni, P. T., & Alami, R. (2020). HATEB-2: Reactive Planning and Decision Making in Human-Robot Co-navigation. In Proceedings of the International Conference on Robot & Human Interactive Communication (RO-MAN).
 
+# Quick Installation on Ubuntu 22.04 and ROS Humble
+## Installation
+  ```
+  git clone https://github.com/sphanit/CoHAN-Nav2.git -b main ~/
+  cd ~/CoHAN-Nav2
+  ./install-deps.sh ## Install all the dependencies
+  ./compile.sh ## Compiles the packages
+  ```
+## Usage
+You can find the sample launch and config files in cohan2.0_navigation. Here is how to launch and test on a simulated PR2.
+  ```
+  cd ~/CoHAN-Nav2
+  source install/setup.bash
+  ros2 launch cohan_sim_navigation cohan_sim_pr2_launch.py
+  ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=/human1/cmd_vel
+  ```
+Now you can give a goal to the robot and move the human around with teleop to test the system.
+
+Check the **Required Topics** here to publish all the topics: https://laas-hri.github.io/CoHAN2.0_docs/tutorial.html
 
 # Bibtex
 ```
