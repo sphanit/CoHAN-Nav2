@@ -20,6 +20,8 @@ void HomotopyPlanner::configure(const rclcpp_lifecycle::LifecycleNode::WeakPtr& 
   last_update_time_ = node_->get_clock()->now();
   control_points_ = true;
   path_id_counter_ = 0;
+  last_goal_.x = 999.0;
+  last_goal_.y = 999.0;
 }
 
 void HomotopyPlanner::cleanup() { navfn_.cleanup(); }
@@ -214,6 +216,14 @@ nav_msgs::msg::Path HomotopyPlanner::convertPointsToPath(const std::vector<Point
 }
 
 nav_msgs::msg::Path HomotopyPlanner::createPlan(const geometry_msgs::msg::PoseStamped& start, const geometry_msgs::msg::PoseStamped& goal) {
+  if ((last_goal_ - Point(goal.pose.position.x, goal.pose.position.y)).norm() > 0.1) {
+    current_planning_mode_.plan_mode = 0;  // Reset to default planning mode
+    last_path_.poses.clear();
+    last_all_paths_.clear();
+    last_goal_ = Point(goal.pose.position.x, goal.pose.position.y);
+    RCLCPP_INFO(node_->get_logger(), "Goal change detected, resetting to default planning mode and clearing cached paths");
+  }
+
   if (static_cast<int>(current_planning_mode_.plan_mode) == 4) {
     if (!last_path_.poses.empty()) {
       RCLCPP_INFO(node_->get_logger(), "Using cached homotopy path");
@@ -246,11 +256,6 @@ nav_msgs::msg::Path HomotopyPlanner::createPlan(const geometry_msgs::msg::PoseSt
         RCLCPP_WARN(node_->get_logger(), "No valid homotopy paths found, falling back to navfn");
       }
     }
-  }
-
-  else if (static_cast<int>(current_planning_mode_.plan_mode) != 4 || (last_goal_ - Point(goal.pose.position.x, goal.pose.position.y)).norm() > 1.0) {
-    last_path_.poses.clear();
-    last_all_paths_.clear();
   }
 
   // Default: use navfn planner

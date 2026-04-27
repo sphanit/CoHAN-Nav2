@@ -8,6 +8,7 @@ Panels:
         - /Status1
         - /Map1/Update Topic1
         - /AgentPathArray1
+        - /MarkerArray1
       Splitter Ratio: 0.5
     Tree Height: 719
   - Class: rviz_common/Selection
@@ -634,7 +635,7 @@ Visualization Manager:
       Enabled: true
       Name: LocalPlanPoses
       Namespaces:
-        robot_fp_poses: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -646,7 +647,7 @@ Visualization Manager:
       Enabled: true
       Name: AgentsLocalPlansPoses
       Namespaces:
-        agents_fp_poses: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -682,7 +683,7 @@ Visualization Manager:
       Enabled: true
       Name: PlanningMode
       Namespaces:
-        mode: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -718,6 +719,18 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /GridBased/all_homotopy_paths
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /controller_server/evade_vectors
       Value: true
   Enabled: true
   Global Options:

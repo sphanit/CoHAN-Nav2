@@ -173,6 +173,7 @@ void ModeSwitch::planCB(const nav_msgs::msg::Path::SharedPtr plan_msg) {
   if (goal_dist_change > 0.2) {
     bhv_tree_.rootBlackboard()->set("goal_update", true);
     bhv_tree_.rootBlackboard()->set("nav_goal", goal);
+    bhv_tree_.rootBlackboard()->set("recovery", false);
     goal_update_ = true;
     BT_INFO(name_, "Goal updated in blackboard.");
   }

@@ -30,6 +30,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(ament_index_cpp REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(pluginlib REQUIRED)
 find_package(nav2_core REQUIRED)
 find_package(nav2_costmap_2d REQUIRED)
 find_package(nav2_util REQUIRED)
@@ -40,7 +41,6 @@ find_package(interactive_markers REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(std_srvs REQUIRED)
-find_package(pluginlib REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_eigen REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
@@ -98,6 +98,7 @@ include_directories(
 set(dependencies
   ament_index_cpp
   rclcpp
+  pluginlib
   nav2_core
   nav2_costmap_2d
   nav2_util
@@ -108,7 +109,6 @@ set(dependencies
   nav_msgs
   std_msgs
   std_srvs
-  pluginlib
   tf2
   tf2_eigen
   tf2_geometry_msgs
@@ -180,6 +180,7 @@ install(PROGRAMS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+pluginlib_export_plugin_description_file(nav2_core  hateb_local_planner_plugin.xml)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

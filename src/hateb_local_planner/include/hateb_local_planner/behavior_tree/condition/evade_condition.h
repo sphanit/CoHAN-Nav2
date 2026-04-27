@@ -25,7 +25,7 @@
  *********************************************************************************/
 
 #include <rclcpp/rclcpp.hpp>
-// #include <rclcpp_lifecycle/lifecycle_node.hpp>
+#include <rclcpp_lifecycle/lifecycle_node.hpp>
 
 // New
 #include <hateb_local_planner/behavior_tree/bt_core.h>
@@ -63,7 +63,7 @@ class EvadeCondition : public BT::ConditionNode {
   ~EvadeCondition() override;
 
   /**
-   * @brief Method called to evaluate the conditione dist
+   * @brief Method called to evaluate the conditione on each tick of the behavior tree
    * @return Status indicating whether condition is met
    */
   BT::NodeStatus tick() override;
@@ -72,13 +72,50 @@ class EvadeCondition : public BT::ConditionNode {
    * @brief Defines input ports for condition evaluation
    * @return Ports list containing agents_info and dist_max as inputs
    */
-  static BT::PortsList providedPorts() { return {BT::InputPort<agent_path_prediction::msg::AgentsInfo>("agents_info"), BT::InputPort<geometry_msgs::msg::Pose>("nearest_corner")}; }
+  static BT::PortsList providedPorts() {
+    return {BT::InputPort<agent_path_prediction::msg::AgentsInfo>("agents_info"), BT::InputPort<geometry_msgs::msg::Pose>("nearest_corner"), BT::BidirectionalPort<bool>("recovery"),
+            BT::InputPort<geometry_msgs::msg::PoseStamped>("nav_goal")};
+  }
 
  private:
   /**
    * @brief Publishes visualization markers for the evasion vectors
    */
-  // void publishVectors();
+  void publishVectors();
+
+  struct Point {
+    long long x, y;
+    Point(long long _x, long long _y) : x(_x), y(_y) {}
+  };
+
+  // Function returns true if segment p1q1 and p2q2 intersect
+  bool doSegmentsIntersect(Point p1, Point q1, Point p2, Point q2) {
+    // Lambda to get orientation: 0=collinear, 1=CW, 2=CCW
+    auto getOrient = [](Point a, Point b, Point c) {
+      long long val = (b.y - a.y) * (c.x - b.x) - (b.x - a.x) * (c.y - b.y);
+      return (val == 0) ? 0 : ((val > 0) ? 1 : 2);
+    };
+
+    // Lambda to check if point q lies on segment pr
+    auto onSeg = [](Point p, Point q, Point r) { return q.x <= std::max(p.x, r.x) && q.x >= std::min(p.x, r.x) && q.y <= std::max(p.y, r.y) && q.y >= std::min(p.y, r.y); };
+
+    int o1 = getOrient(p1, q1, p2);
+    int o2 = getOrient(p1, q1, q2);
+    int o3 = getOrient(p2, q2, p1);
+    int o4 = getOrient(p2, q2, q1);
+
+    // General case: Segments straddle each other
+    if (o1 != o2 && o3 != o4) return true;
+
+    // Special cases: Points are collinear and lie on the other segment
+    if (o1 == 0 && onSeg(p1, p2, q1)) return true;
+    if (o2 == 0 && onSeg(p1, q2, q1)) return true;
+    if (o3 == 0 && onSeg(p2, p1, q2)) return true;
+    if (o4 == 0 && onSeg(p2, q1, q2)) return true;
+
+    return false;
+  }
+
   // Blackboard entries
   agent_path_prediction::msg::AgentsInfo agents_info_;  //!< Information about agents in the environment
   geometry_msgs::msg::Pose nearest_corner_;             //!< Position of the nearest corner
@@ -86,10 +123,11 @@ class EvadeCondition : public BT::ConditionNode {
   double mid_y_;                                        //!< Midpoint y-coordinate between human and corner
   std::pair<double, double> r_dx_dy_;                   //!< Pair to store the evasion direction vector (dx, dy)
   bool evasion_triggered_;                              //!< Flag to indicate if evasion has been triggered
+  geometry_msgs::msg::PoseStamped goal_;                //!< Current navigation goal
 
   // // ROS
-  // rclcpp_lifecycle::LifecycleNode::SharedPtr node_;                                //!< ROS node for publishing
-  // rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr vector_pub_;  //!< Publisher for vector markers
+  rclcpp_lifecycle::LifecycleNode::SharedPtr node_;                                //!< ROS node for publishing
+  rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr vector_pub_;  //!< Publisher for vector markers
 
   // name of the node
   std::string name_;  //!< Name of the condition node

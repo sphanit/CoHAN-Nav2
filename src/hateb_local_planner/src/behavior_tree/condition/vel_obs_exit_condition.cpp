@@ -74,7 +74,7 @@ bool VelObsExitCondition::hasHumanStopped() {
 
     BT_INFO(name_, (int)agents_info_.humans[0].state);
 
-    // If the human has either stopped moving or already blocked, exit the mode and start backoff recovery
+    // If the human has either stopped moving or already blocked, exit the mode
     if (agents_info_.humans[0].state == hateb_local_planner::AgentState::STOPPED || agents_info_.humans[0].state == hateb_local_planner::AgentState::BLOCKED) {
       return true;
     }
