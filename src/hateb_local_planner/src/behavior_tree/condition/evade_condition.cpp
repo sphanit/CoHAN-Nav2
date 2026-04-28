@@ -65,13 +65,9 @@ BT::NodeStatus EvadeCondition::tick() {
       return BT::NodeStatus::FAILURE;
     }
 
-    auto dx = nearest_corner_.position.x - agents_info_.humans[0].pose.x;
-    auto dy = nearest_corner_.position.y - agents_info_.humans[0].pose.y;
-
     // Check if Evasion is needed or not
     if (!doSegmentsIntersect(Point(agents_info_.robot_pose.x, agents_info_.robot_pose.y), Point(goal_.pose.position.x, goal_.pose.position.y),
-                             Point(agents_info_.humans[0].pose.x, agents_info_.humans[0].pose.y), Point(nearest_corner_.position.x, nearest_corner_.position.y)) &&
-        std::hypot(dx, dy) > 1.5) {
+                             Point(agents_info_.humans[0].pose.x, agents_info_.humans[0].pose.y), Point(nearest_corner_.position.x, nearest_corner_.position.y))) {
       BT_INFO(name_, "Evasion not needed! Human is not on the path to the goal.")
       publishVectors();  // Publish even when not evading
       return BT::NodeStatus::FAILURE;
@@ -83,7 +79,10 @@ BT::NodeStatus EvadeCondition::tick() {
     r_dx_dy_ = std::make_pair(mid_x_ - agents_info_.robot_pose.x, mid_y_ - agents_info_.robot_pose.y);
     // }
 
-    if (std::hypot(dx, dy) > 1.5) {  // Safety distance threshold for evasion, can be made configurable
+    auto dx = nearest_corner_.position.x - agents_info_.humans[0].pose.x;
+    auto dy = nearest_corner_.position.y - agents_info_.humans[0].pose.y;
+
+    if (std::hypot(dx, dy) > 1.8) {  // Safety distance threshold for evasion, can be made configurable
       BT_INFO(name_, "Evasion not needed! Human is far from the corner.")
       publishVectors();  // Publish even when not evading
       return BT::NodeStatus::FAILURE;

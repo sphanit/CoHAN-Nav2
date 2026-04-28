@@ -70,7 +70,7 @@ void InvHumansDetection::publishInvisibleHumans(const geometry_msgs::msg::PoseAr
   pub_invis_humans_pos_->publish(poses);
 
   // Publish corners
-  pub_invis_human_corners_->publish(corners);
+  // pub_invis_human_corners_->publish(corners);
 
   costmap_converter_msgs::msg::ObstacleArrayMsg obstacle_msg;
   obstacle_msg.header.stamp = this->now();
@@ -139,6 +139,9 @@ void InvHumansDetection::detectOccludedCorners() {
 
   robot_vec_ << cos(theta), sin(theta);
   ranges_.resize(cfg_->samples, 0.0);
+  geometry_msgs::msg::PoseArray laser_points_array;
+  laser_points_array.header.stamp = this->now();
+  laser_points_array.header.frame_id = MAP_FRAME;
 
   // Scan the map using a fake laser at robot's position
   for (int i = 0; i < cfg_->samples; i++) {
@@ -174,6 +177,27 @@ void InvHumansDetection::detectOccludedCorners() {
   if (cfg_->publish_scan) {
     scan_msg_.ranges = ranges_;
     scan_pub_->publish(scan_msg_);
+
+    tf2::Quaternion q(footprint_transform.transform.rotation.x, footprint_transform.transform.rotation.y, footprint_transform.transform.rotation.z, footprint_transform.transform.rotation.w);
+    tf2::Vector3 p(footprint_transform.transform.translation.x, footprint_transform.transform.translation.y, footprint_transform.transform.translation.z);
+    tf2::Transform transform(q, p);
+
+    ang = cfg_->angle_min;
+
+    for (int i = 0; i < cfg_->samples; i++) {
+      double x1 = ranges_[i] * cos(ang);
+      double y1 = ranges_[i] * sin(ang);
+      auto laser_point_posistion = tf2::Vector3(x1, y1, 0.);
+      laser_point_posistion = transform * laser_point_posistion;
+      geometry_msgs::msg::Pose laser_point;
+      laser_point.position.x = laser_point_posistion.x();
+      laser_point.position.y = laser_point_posistion.y();
+      laser_point.orientation.w = 1;
+      laser_points_array.poses.push_back(laser_point);
+      ang += angle_increment;
+    }
+
+    pub_invis_human_corners_->publish(laser_points_array);
   }
 
   // The Corner detection part starts from here

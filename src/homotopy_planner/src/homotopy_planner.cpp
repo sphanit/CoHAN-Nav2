@@ -15,6 +15,8 @@ void HomotopyPlanner::configure(const rclcpp_lifecycle::LifecycleNode::WeakPtr& 
   costmap_ros_ = costmap_ros;
   navfn_.configure(node_, name_ + ".navfn", tf, costmap_ros);
   planning_mode_sub_ = node_->create_subscription<hateb_local_planner::msg::PlanningMode>("planning_mode", 10, std::bind(&HomotopyPlanner::planningModeCallback, this, std::placeholders::_1));
+  evasion_control_point_sub_ =
+      node_->create_subscription<geometry_msgs::msg::Point>("evasion_control_point", 10, std::bind(&HomotopyPlanner::evasionControlPointCallback, this, std::placeholders::_1));
   valid_plan_pub_ = node_->create_publisher<std_msgs::msg::Bool>(name_ + "/valid_plan", 10);
   all_homotopy_paths_pub_ = node_->create_publisher<cohan_msgs::msg::AgentPathArray>(name_ + "/all_homotopy_paths", 10);
   last_update_time_ = node_->get_clock()->now();
@@ -22,6 +24,7 @@ void HomotopyPlanner::configure(const rclcpp_lifecycle::LifecycleNode::WeakPtr& 
   path_id_counter_ = 0;
   last_goal_.x = 999.0;
   last_goal_.y = 999.0;
+  fail_count_ = 0;
 }
 
 void HomotopyPlanner::cleanup() { navfn_.cleanup(); }
@@ -81,26 +84,29 @@ std::vector<HomotopyPlanner::Point> HomotopyPlanner::generateHomotopyPaths(const
   Point unit_dir = direction * (1.0 / dist_total);
   Point normal(-unit_dir.y, unit_dir.x);
 
-  // Generate offsets from -6.0 to 6.0
   // Make this configurable in the future if needed
+  // TODO: Make these numbers configurable
   std::vector<double> offsets;
-  for (int i = 0; i < 20; ++i) {
-    offsets.push_back(-6.0 + i * (12.0 / 19.0));
+  for (int i = 0; i < 40; ++i) {
+    offsets.push_back(-4.0 + i * (8.0 / 39.0));
   }
 
   for (double offset : offsets) {
     // Create control points for Bezier curve // TODO: Make the control point generation configurable
-    Point p1;
-    Point p2;
-    if (!control_points_) {
-      p1 = start + direction * 0.1 + normal * offset;
-      p2 = start + direction * 0.3 + normal * offset;
-      control_points_ = true;
-    } else {
-      p1 = start - direction * 0.5 + normal * offset;
-      p2 = start + direction * 0.3 + normal * offset;
-      control_points_ = false;
-    }
+    // Point p1;
+    // Point p2;
+    // if (!control_points_) {
+    //   p1 = start + direction * 0.1 + normal * offset;
+    //   p2 = start + direction * 0.3 + normal * offset;
+    //   control_points_ = true;
+    // } else {
+    //   p1 = start - direction * 0.5 + normal * offset;
+    //   p2 = start + direction * 0.3 + normal * offset;
+    //   control_points_ = false;
+    // }
+    Point p1 = start - direction * fail_count_ * 0.1 + normal * offset;
+    Point p2 = evasion_control_point_ + normal * offset;  // Use evasion control point as second control point
+
     std::vector<Point> pts = {start, p1, p2, goal};
     std::vector<Point> path = bernstein_curve(pts, 50);
 
@@ -146,22 +152,14 @@ std::vector<HomotopyPlanner::Point> HomotopyPlanner::generateHomotopyPaths(const
 
   RCLCPP_INFO(node_->get_logger(), "Found %d left-side paths and %d right-side paths", left_count, right_count);
 
-  // // Store all generated paths for publishing
-  // for (const auto& path : left_paths) {
-  //   last_all_paths_.push_back(convertPointsToPath(path, "map"));
-  // }
-  // for (const auto& path : right_paths) {
-  //   last_all_paths_.push_back(convertPointsToPath(path, "map"));
-  // }
-
   if (left_count > right_count && left_count > 0) {
-    return left_paths[left_count - 1];  // Return middle path from dominant side
+    return left_paths[left_count / 4];  // Return middle path from dominant side
   } else if (right_count > left_count && right_count > 0) {
-    return right_paths[right_count - 1];  // Return middle path from dominant side
+    return right_paths[right_count / 4];  // Return middle path from dominant side
   } else if (right_count > 0) {
-    return right_paths[right_count - 1];
+    return right_paths[right_count / 4];
   } else if (left_count > 0) {
-    return left_paths[left_count - 1];
+    return left_paths[left_count / 4];
   }
 
   // No valid paths found
@@ -221,7 +219,7 @@ nav_msgs::msg::Path HomotopyPlanner::createPlan(const geometry_msgs::msg::PoseSt
     last_path_.poses.clear();
     last_all_paths_.clear();
     last_goal_ = Point(goal.pose.position.x, goal.pose.position.y);
-    RCLCPP_INFO(node_->get_logger(), "Goal change detected, resetting to default planning mode and clearing cached paths");
+    fail_count_ = 0;
   }
 
   if (static_cast<int>(current_planning_mode_.plan_mode) == 4) {
@@ -248,16 +246,17 @@ nav_msgs::msg::Path HomotopyPlanner::createPlan(const geometry_msgs::msg::PoseSt
         last_path_ = convertPointsToPath(best_path, start.header.frame_id);
         last_update_time_ = node_->get_clock()->now();
         last_goal_ = goal_pt;
+        fail_count_ = 0;  // Reset fail count on successful path generation
         return last_path_;
       } else {
         std_msgs::msg::Bool msg;
         msg.data = false;
         valid_plan_pub_->publish(msg);
+        fail_count_++;
         RCLCPP_WARN(node_->get_logger(), "No valid homotopy paths found, falling back to navfn");
       }
     }
   }
-
   // Default: use navfn planner
   return navfn_.createPlan(start, goal);
 }

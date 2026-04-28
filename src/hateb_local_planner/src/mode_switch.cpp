@@ -61,13 +61,17 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
       corners_sub_topic_ = "/" + ns_ + corners_sub_topic_;
     }
 
+    // Subscriptions that help populate the blackboard
     agents_info_sub_ = node_->create_subscription<agent_path_prediction::msg::AgentsInfo>(agents_info_sub_topic_, 1, std::bind(&ModeSwitch::agentsInfoCB, this, std::placeholders::_1));
     plan_sub_ = node_->create_subscription<nav_msgs::msg::Path>(plan_sub_topic_, 1, std::bind(&ModeSwitch::planCB, this, std::placeholders::_1));
     result_sub_ = node_->create_subscription<action_msgs::msg::GoalStatusArray>(result_sub_topic_, 1, std::bind(&ModeSwitch::resultNavigateToPoseCB, this, std::placeholders::_1));
     passage_detect_sub_ = node_->create_subscription<cohan_msgs::msg::PassageType>(passage_sub_topic_, 1, std::bind(&ModeSwitch::passageCB, this, std::placeholders::_1));
     valid_plan_sub_ = node_->create_subscription<std_msgs::msg::Bool>(homotopy_planner_check_, 1, std::bind(&ModeSwitch::validPlanCB, this, std::placeholders::_1));
-    planning_mode_pub_ = node_->create_publisher<hateb_local_planner::msg::PlanningMode>("planning_mode", 10);
     corners_sub_ = node_->create_subscription<geometry_msgs::msg::PoseArray>(corners_sub_topic_, 1, std::bind(&ModeSwitch::cornersCB, this, std::placeholders::_1));
+
+    // Publishers
+    planning_mode_pub_ = node_->create_publisher<hateb_local_planner::msg::PlanningMode>("planning_mode", 10);
+    evasion_control_point_pub_ = node_->create_publisher<geometry_msgs::msg::Point>("evasion_control_point", 10);
 
     // Initialize the parameters
     goal_reached_ = true;
@@ -120,7 +124,7 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     bhv_tree_.rootBlackboard()->set("passage_type", psg_type);
     bhv_tree_.rootBlackboard()->set("reset", false);
     bhv_tree_.rootBlackboard()->set("recovery", false);
-    bhv_tree_.rootBlackboard()->set("valid_plan", true);
+    bhv_tree_.rootBlackboard()->set("valid_plan", true);  // TOOD: Remove this
     bhv_tree_.rootBlackboard()->set("nearest_corner", nearest_corner);
     bhv_tree_.rootBlackboard()->set("node", node_);
 
@@ -154,6 +158,25 @@ void ModeSwitch::cornersCB(const geometry_msgs::msg::PoseArray::SharedPtr corner
   }
   // Set the closest corner information on the blackboard
   bhv_tree_.rootBlackboard()->set("nearest_corner", nearest_corner);
+
+  // Calcultae and publish the evasion control point (should never coincide, otherwise the devision will be zero)
+
+  if (agents_info_.humans.empty()) {
+    return;
+  }
+
+  geometry_msgs::msg::Point control_point;
+  auto dx = agents_info_.humans[0].pose.x - nearest_corner.position.x;
+  auto dy = agents_info_.humans[0].pose.y - nearest_corner.position.y;
+  auto dist = std::hypot(dx, dy);
+
+  if (dist == 0) {
+    return;
+  }
+
+  control_point.x = agents_info_.humans[0].pose.x + 2.0 * dx / dist;
+  control_point.y = agents_info_.humans[0].pose.y + 2.0 * dy / dist;
+  evasion_control_point_pub_->publish(control_point);
 }
 
 void ModeSwitch::agentsInfoCB(const agent_path_prediction::msg::AgentsInfo::SharedPtr info_msg) {

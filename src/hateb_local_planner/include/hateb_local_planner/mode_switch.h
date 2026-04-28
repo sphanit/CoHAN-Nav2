@@ -37,6 +37,7 @@
 #include <action_msgs/msg/goal_status_array.hpp>
 #include <agent_path_prediction/msg/agents_info.hpp>
 #include <cohan_msgs/msg/passage_type.hpp>
+#include <geometry_msgs/msg/point.hpp>
 #include <geometry_msgs/msg/pose.hpp>
 #include <geometry_msgs/msg/pose_array.hpp>
 #include <geometry_msgs/msg/pose_stamped.hpp>
@@ -200,6 +201,7 @@ class ModeSwitch {
   rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr valid_plan_sub_;                      //!< Subscriber for valid plan status
   rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr corners_sub_;               //!< Subscriber for corners information
   rclcpp::Publisher<hateb_local_planner::msg::PlanningMode>::SharedPtr planning_mode_pub_;   //!< Publisher for current planning mode
+  rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr evasion_control_point_pub_;        //!< Publisher for evasion control point
 
   // State information
   geometry_msgs::msg::PoseStamped goal_;                //!< Current navigation goal

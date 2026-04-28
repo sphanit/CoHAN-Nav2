@@ -44,6 +44,7 @@ class HomotopyPlanner : public nav2_core::GlobalPlanner {
   std::string name_;
   std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap_ros_;
   rclcpp::Subscription<hateb_local_planner::msg::PlanningMode>::SharedPtr planning_mode_sub_;
+  rclcpp::Subscription<geometry_msgs::msg::Point>::SharedPtr evasion_control_point_sub_;
   hateb_local_planner::msg::PlanningMode current_planning_mode_;
   rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr valid_plan_pub_;
   rclcpp::Publisher<cohan_msgs::msg::AgentPathArray>::SharedPtr all_homotopy_paths_pub_;
@@ -51,10 +52,16 @@ class HomotopyPlanner : public nav2_core::GlobalPlanner {
   nav_msgs::msg::Path last_path_;
   std::vector<nav_msgs::msg::Path> last_all_paths_;
   Point last_goal_;
+  Point evasion_control_point_;
   bool control_points_;
   uint64_t path_id_counter_;
+  int fail_count_;
 
   void planningModeCallback(const hateb_local_planner::msg::PlanningMode::SharedPtr msg) { current_planning_mode_ = *msg; }
+  void evasionControlPointCallback(const geometry_msgs::msg::Point::SharedPtr msg) {
+    // Store the evasion control point for use in path generation
+    evasion_control_point_ = Point(msg->x, msg->y);
+  }
 
   bool checkCollision(const std::vector<Point>& points);
   double calculateLength(const std::vector<Point>& points);

@@ -83,35 +83,77 @@ class EvadeCondition : public BT::ConditionNode {
    */
   void publishVectors();
 
+  /**
+   * @brief Helper struct for geometric calculations
+   */
   struct Point {
-    long long x, y;
-    Point(long long _x, long long _y) : x(_x), y(_y) {}
+    double x, y;
+    Point(double _x, double _y) : x(_x), y(_y) {}
   };
 
-  // Function returns true if segment p1q1 and p2q2 intersect
+  /**
+   * @brief Gets the orientation of three points
+   * @param a First point
+   * @param b Second point
+   * @param c Third point
+   * @return 0=collinear, 1=CW, 2=CCW
+   */
+  int getOrient(Point a, Point b, Point c) {
+    double val = (b.y - a.y) * (c.x - b.x) - (b.x - a.x) * (c.y - b.y);
+    if (val > 0) {
+      return 1;
+    }  // Clockwise
+    if (val < 0) {
+      return 2;
+    }  // Counterclockwise
+    return 0;
+  };
+
+  /**
+   * @brief Checks if a point q lies on the segment pr
+   * @param p First point of the segment
+   * @param q Point to check
+   * @param r Second point of the segment
+   * @return true if q lies on segment pr, false otherwise
+   */
+  bool onSegment(Point p, Point q, Point r) {
+    bool val = q.x <= std::max(p.x, r.x) && q.x >= std::min(p.x, r.x) && q.y <= std::max(p.y, r.y) && q.y >= std::min(p.y, r.y);
+
+    return val;
+  };
+
+  /**
+   * @brief Checks if two line segments intersect
+   * @param p1 First point of the first segment
+   * @param q1 Second point of the first segment
+   * @param p2 First point of the second segment
+   * @param q2 Second point of the second segment
+   * @return true if segments intersect, false otherwise
+   */
   bool doSegmentsIntersect(Point p1, Point q1, Point p2, Point q2) {
-    // Lambda to get orientation: 0=collinear, 1=CW, 2=CCW
-    auto getOrient = [](Point a, Point b, Point c) {
-      long long val = (b.y - a.y) * (c.x - b.x) - (b.x - a.x) * (c.y - b.y);
-      return (val == 0) ? 0 : ((val > 0) ? 1 : 2);
-    };
-
-    // Lambda to check if point q lies on segment pr
-    auto onSeg = [](Point p, Point q, Point r) { return q.x <= std::max(p.x, r.x) && q.x >= std::min(p.x, r.x) && q.y <= std::max(p.y, r.y) && q.y >= std::min(p.y, r.y); };
-
     int o1 = getOrient(p1, q1, p2);
     int o2 = getOrient(p1, q1, q2);
     int o3 = getOrient(p2, q2, p1);
     int o4 = getOrient(p2, q2, q1);
 
-    // General case: Segments straddle each other
-    if (o1 != o2 && o3 != o4) return true;
+    // 1. General case: segments straddle each other
+    if (o1 != o2 && o3 != o4) {
+      return true;
+    }
 
-    // Special cases: Points are collinear and lie on the other segment
-    if (o1 == 0 && onSeg(p1, p2, q1)) return true;
-    if (o2 == 0 && onSeg(p1, q2, q1)) return true;
-    if (o3 == 0 && onSeg(p2, p1, q2)) return true;
-    if (o4 == 0 && onSeg(p2, q1, q2)) return true;
+    // 2. Special cases: handles touching endpoints or overlapping collinear segments
+    if (o1 == 0 && onSegment(p1, p2, q1)) {
+      return true;
+    }
+    if (o2 == 0 && onSegment(p1, q2, q1)) {
+      return true;
+    }
+    if (o3 == 0 && onSegment(p2, p1, q2)) {
+      return true;
+    }
+    if (o4 == 0 && onSegment(p2, q1, q2)) {
+      return true;
+    }
 
     return false;
   }

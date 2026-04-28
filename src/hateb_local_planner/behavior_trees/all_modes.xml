@@ -13,7 +13,7 @@
 				</Sequence>
 				<!-- Second Control: Evasion Detection -->
 				<ReactiveSequence>
-					<Evade name="evasion_check" agents_info="{agents_info}" nearest_corner="{nearest_corner}" recovery="{recovery}"/>
+					<Evade name="evasion_check" agents_info="{agents_info}" nearest_corner="{nearest_corner}" recovery="{recovery}" nav_goal="{nav_goal}"/>
 					<SetMode name="evasion_mode" plan_type="evade" predict_type="const_vel" mode="{planning_mode}"/>
 				</ReactiveSequence>
 				<!-- Main Planning Mode Selection (Single/Dual/VelObs) -->
