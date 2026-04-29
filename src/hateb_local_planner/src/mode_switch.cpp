@@ -76,6 +76,8 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     // Initialize the parameters
     goal_reached_ = true;
     goal_update_ = false;
+    look_ahead_distance_ = 5.0;
+    goal_.pose.orientation.w = 1.0;  // Initialize with a valid orientation
 
     // Register the BT nodes
     registerNodes();
@@ -127,6 +129,8 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     bhv_tree_.rootBlackboard()->set("valid_plan", true);  // TOOD: Remove this
     bhv_tree_.rootBlackboard()->set("nearest_corner", nearest_corner);
     bhv_tree_.rootBlackboard()->set("node", node_);
+    // bhv_tree_.rootBlackboard()->set("look_ahead_goal", goal_);
+    // bhv_tree_.rootBlackboard()->set("nav_goal", goal_);
 
     auto status = bhv_tree_.tickRoot();  // This is needed to update all blackboard entries
     initialized_ = true;
@@ -147,10 +151,14 @@ void ModeSwitch::validPlanCB(const std_msgs::msg::Bool::SharedPtr valid_plan_msg
 }
 
 void ModeSwitch::cornersCB(const geometry_msgs::msg::PoseArray::SharedPtr corners_msg) {
+  if (agents_info_.humans.empty()) {
+    return;
+  }
+
   double nearest_corner_dist = std::numeric_limits<double>::max();
   geometry_msgs::msg::Pose nearest_corner;
   for (size_t i = 0; i < corners_msg->poses.size(); i++) {
-    double dist = std::hypot(corners_msg->poses[i].position.x - agents_info_.robot_pose.x, corners_msg->poses[i].position.y - agents_info_.robot_pose.y);
+    double dist = std::hypot(corners_msg->poses[i].position.x - agents_info_.humans[0].pose.x, corners_msg->poses[i].position.y - agents_info_.humans[0].pose.y);
     if (dist < nearest_corner_dist) {
       nearest_corner_dist = dist;
       nearest_corner = corners_msg->poses[i];
@@ -161,10 +169,6 @@ void ModeSwitch::cornersCB(const geometry_msgs::msg::PoseArray::SharedPtr corner
 
   // Calcultae and publish the evasion control point (should never coincide, otherwise the devision will be zero)
 
-  if (agents_info_.humans.empty()) {
-    return;
-  }
-
   geometry_msgs::msg::Point control_point;
   auto dx = agents_info_.humans[0].pose.x - nearest_corner.position.x;
   auto dy = agents_info_.humans[0].pose.y - nearest_corner.position.y;
@@ -174,8 +178,8 @@ void ModeSwitch::cornersCB(const geometry_msgs::msg::PoseArray::SharedPtr corner
     return;
   }
 
-  control_point.x = agents_info_.humans[0].pose.x + 2.0 * dx / dist;
-  control_point.y = agents_info_.humans[0].pose.y + 2.0 * dy / dist;
+  control_point.x = agents_info_.humans[0].pose.x + 1.0 * dx / dist;
+  control_point.y = agents_info_.humans[0].pose.y + 1.0 * dy / dist;
   evasion_control_point_pub_->publish(control_point);
 }
 
@@ -199,6 +203,24 @@ void ModeSwitch::planCB(const nav_msgs::msg::Path::SharedPtr plan_msg) {
     bhv_tree_.rootBlackboard()->set("recovery", false);
     goal_update_ = true;
     BT_INFO(name_, "Goal updated in blackboard.");
+  }
+
+  double plan_distance = 0.0;
+  for (size_t i = 0; i < plan_msg->poses.size(); ++i) {
+    const auto& pose = plan_msg->poses[i];
+
+    // Calculate distance from robot to first pose (if i == 0) or cumulative path distance
+    if (i == 0) {
+      plan_distance = std::hypot(pose.pose.position.x - agents_info_.robot_pose.x, pose.pose.position.y - agents_info_.robot_pose.y);
+    } else {
+      plan_distance += std::hypot(pose.pose.position.x - plan_msg->poses[i - 1].pose.position.x, pose.pose.position.y - plan_msg->poses[i - 1].pose.position.y);
+    }
+
+    if (plan_distance >= look_ahead_distance_ || i == plan_msg->poses.size() - 1) {
+      bhv_tree_.rootBlackboard()->set("look_ahead_goal", pose);
+      BT_INFO(name_, "Updated look-ahead goal in blackboard.");
+      break;
+    }
   }
 
   goal_ = goal;

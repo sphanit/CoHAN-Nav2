@@ -55,7 +55,7 @@ BT::NodeStatus EvadeCondition::tick() {
   getInput("agents_info", agents_info_);
   getInput("nearest_corner", nearest_corner_);
   getInput("recovery", evasion_triggered_);
-  getInput("nav_goal", goal_);
+  getInput("look_ahead_goal", goal_);
 
   if (!evasion_triggered_) {
     // Check if there are any humans to evade

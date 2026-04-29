@@ -74,7 +74,7 @@ class EvadeCondition : public BT::ConditionNode {
    */
   static BT::PortsList providedPorts() {
     return {BT::InputPort<agent_path_prediction::msg::AgentsInfo>("agents_info"), BT::InputPort<geometry_msgs::msg::Pose>("nearest_corner"), BT::BidirectionalPort<bool>("recovery"),
-            BT::InputPort<geometry_msgs::msg::PoseStamped>("nav_goal")};
+            BT::InputPort<geometry_msgs::msg::PoseStamped>("look_ahead_goal")};
   }
 
  private:

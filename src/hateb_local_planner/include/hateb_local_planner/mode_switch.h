@@ -188,9 +188,10 @@ class ModeSwitch {
   }
 
   // Status flags
-  bool goal_reached_;  //!< Flag indicating if current goal was reached
-  bool initialized_;   //!< Flag indicating if class was properly initialized
-  bool goal_update_;   //!< Flag indicating if goal was updated
+  bool goal_reached_;           //!< Flag indicating if current goal was reached
+  bool initialized_;            //!< Flag indicating if class was properly initialized
+  bool goal_update_;            //!< Flag indicating if goal was updated
+  double look_ahead_distance_;  //!< Distance to look ahead in the plan for evasion decisions
 
   // ROS communication members
   rclcpp_lifecycle::LifecycleNode::SharedPtr node_;                                          //!< ROS 2 node shared pointer

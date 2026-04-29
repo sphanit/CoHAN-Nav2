@@ -68,6 +68,7 @@ class HomotopyPlanner : public nav2_core::GlobalPlanner {
   std::vector<Point> generateHomotopyPaths(const Point& start, const Point& goal);
   void publishAllHomotopyPaths();
   nav_msgs::msg::Path convertPointsToPath(const std::vector<Point>& points, const std::string& frame_id);
+  nav_msgs::msg::Path combinePaths(const nav_msgs::msg::Path& path1, const nav_msgs::msg::Path& path2);
 };
 
 }  // namespace homotopy_planner
