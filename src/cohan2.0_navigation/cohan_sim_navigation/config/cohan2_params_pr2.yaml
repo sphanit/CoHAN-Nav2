@@ -400,7 +400,7 @@ planner_server:
     use_sim_time: True
     planner_plugins: ["GridBased"]
     GridBased:
-      plugin: "homotopy_planner/HomotopyPlanner"
+      plugin: "evasion_planner/EvasionPlanner"
       tolerance: 0.5
       use_astar: false
       allow_unknown: false

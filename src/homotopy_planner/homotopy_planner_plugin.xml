@@ -1,6 +1,0 @@
-<library path="homotopy_planner">
-	<class
-		name="homotopy_planner/HomotopyPlanner"
-		type="homotopy_planner::HomotopyPlanner"
-		base_class_type="nav2_core::GlobalPlanner"/>
-</library>

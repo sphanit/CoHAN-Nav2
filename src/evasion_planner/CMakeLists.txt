@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(homotopy_planner)
+project(evasion_planner)
 
 # Default to C++20
 if(NOT CMAKE_CXX_STANDARD)
@@ -46,21 +46,21 @@ set(dependencies
   hateb_local_planner
 )
 
-add_library(homotopy_planner SHARED
-  src/homotopy_planner.cpp)
+add_library(evasion_planner SHARED
+  src/evasion_planner.cpp)
 
-install(TARGETS homotopy_planner
+install(TARGETS evasion_planner
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin)
 
-install(FILES homotopy_planner_plugin.xml
+install(FILES evasion_planner_plugin.xml
   DESTINATION share/${PROJECT_NAME})
 
-ament_target_dependencies(homotopy_planner
+ament_target_dependencies(evasion_planner
   rclcpp nav2_core nav2_navfn_planner nav_msgs pluginlib hateb_local_planner)
 
-pluginlib_export_plugin_description_file(nav2_core homotopy_planner_plugin.xml)
+pluginlib_export_plugin_description_file(nav2_core evasion_planner_plugin.xml)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -68,7 +68,7 @@ if(BUILD_TESTING)
 endif()
 
 ament_export_include_directories(include)
-ament_export_libraries(homotopy_planner)
+ament_export_libraries(evasion_planner)
 ament_export_dependencies(${dependencies})
 
 ament_package()

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>homotopy_planner</name>
+  <name>evasion_planner</name>
   <version>0.1.0</version>
   <description>
-    The homotopy_planner package implements a custom global planner plugin that can switch between Navfn Planning and Bernstein-based Homotopy Class Planning based on the Planning Mode.
+    The evasion_planner package implements a custom global planner plugin that can generate an evasion path based on the Planning Mode and the control point.
   </description>
 
   <maintainer email="ptsingaman@laas.fr">Phani Teja Singamaneni</maintainer>
@@ -33,6 +33,6 @@
 
   <export>
     <build_type>ament_cmake</build_type>
-    <nav2_core plugin="${prefix}/homotopy_planner_plugin.xml"/>
+    <nav2_core plugin="${prefix}/evasion_planner_plugin.xml"/>
   </export>
 </package>

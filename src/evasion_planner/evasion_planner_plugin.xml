@@ -1,0 +1,6 @@
+<library path="evasion_planner">
+	<class
+		name="evasion_planner/EvasionPlanner"
+		type="evasion_planner::EvasionPlanner"
+		base_class_type="nav2_core::GlobalPlanner"/>
+</library>
