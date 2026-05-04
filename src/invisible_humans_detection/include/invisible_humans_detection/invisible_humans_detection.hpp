@@ -211,6 +211,7 @@ class InvHumansDetection : public rclcpp::Node {
   rclcpp::Publisher<costmap_converter_msgs::msg::ObstacleArrayMsg>::SharedPtr pub_invis_human_;  //!< Publisher for invisible human obstacle msg
   rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr pub_invis_human_corners_;          //!< Publisher for invisible human corner data
   rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr pub_invis_humans_pos_;             //!< Publisher for invisible human positions
+  rclcpp::Publisher<cohan_msgs::msg::PassageType>::SharedPtr map_scan_poses_pub_;                //!< Publisher for map scan poses in world frame
   rclcpp::Publisher<cohan_msgs::msg::PassageType>::SharedPtr passage_detect_pub_;                //!< Publisher for detected passages
   nav_msgs::msg::OccupancyGrid map_;                                                             //!< Occupancy grid map data
   std::vector<float> ranges_;                                                                    //!< Ranges from sensor data

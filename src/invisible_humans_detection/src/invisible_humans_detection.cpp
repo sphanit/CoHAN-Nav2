@@ -54,6 +54,7 @@ void InvHumansDetection::initialize() {
   pub_invis_humans_pos_ = this->create_publisher<geometry_msgs::msg::PoseArray>("~/invisible_humans", 1);
   pub_invis_human_ = this->create_publisher<costmap_converter_msgs::msg::ObstacleArrayMsg>("~/invisible_humans_obs", 1);
   passage_detect_pub_ = this->create_publisher<cohan_msgs::msg::PassageType>("~/passage", 1);
+  map_scan_poses_pub_ = this->create_publisher<cohan_msgs::msg::PassageType>("~/map_scan_poses", 1);
 
   // Initialize laser scan msg
   scan_msg_.angle_min = cfg_->angle_min;
@@ -70,7 +71,7 @@ void InvHumansDetection::publishInvisibleHumans(const geometry_msgs::msg::PoseAr
   pub_invis_humans_pos_->publish(poses);
 
   // Publish corners
-  // pub_invis_human_corners_->publish(corners);
+  pub_invis_human_corners_->publish(corners);
 
   costmap_converter_msgs::msg::ObstacleArrayMsg obstacle_msg;
   obstacle_msg.header.stamp = this->now();
@@ -197,7 +198,7 @@ void InvHumansDetection::detectOccludedCorners() {
       ang += angle_increment;
     }
 
-    pub_invis_human_corners_->publish(laser_points_array);
+    map_scan_poses_pub_->publish(laser_points_array);
   }
 
   // The Corner detection part starts from here

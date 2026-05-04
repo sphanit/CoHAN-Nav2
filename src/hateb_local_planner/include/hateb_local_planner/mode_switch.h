@@ -66,7 +66,7 @@
 #define RESULT_SUB "/navigate_to_pose/_action/status"
 #define PASSAGE_SUB "/invisible_humans_detection/passage"
 #define HOMOTOPY_PLANNER_CHECK "/homotopy_planner/valid_plan"
-#define CORNERS_SUB "/invisible_humans_detection/invisible_humans_corners"
+#define MAP_SCAN_SUB "/invisible_humans_detection/map_scan_poses"
 
 namespace hateb_local_planner {
 
