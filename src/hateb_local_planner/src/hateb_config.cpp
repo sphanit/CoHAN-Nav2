@@ -107,18 +107,18 @@ void HATebConfig::bindParameters() {
   param_helper_.bindFloatParam(param_name("visualize_with_time_as_z_axis_scale"), trajectory.visualize_with_time_as_z_axis_scale, 0.0, 100.0, "Visualization time as z-axis scale");
 
   // Robot parameters
-  param_helper_.bindFloatParam(param_name("max_vel_x"), robot.max_vel_x, 0.0, 10.0, "Max forward velocity");
-  param_helper_.bindFloatParam(param_name("max_vel_x_backwards"), robot.max_vel_x_backwards, 0.0, 10.0, "Max backward velocity");
-  param_helper_.bindFloatParam(param_name("max_vel_y"), robot.max_vel_y, 0.0, 10.0, "Max strafing velocity");
-  param_helper_.bindFloatParam(param_name("max_vel_theta"), robot.max_vel_theta, 0.0, 10.0, "Max angular velocity");
-  param_helper_.bindFloatParam(param_name("acc_lim_x"), robot.acc_lim_x, 0.0, 10.0, "Max forward acceleration");
-  param_helper_.bindFloatParam(param_name("acc_lim_y"), robot.acc_lim_y, 0.0, 10.0, "Max strafing acceleration");
-  param_helper_.bindFloatParam(param_name("acc_lim_theta"), robot.acc_lim_theta, 0.0, 10.0, "Max angular acceleration");
-  param_helper_.bindFloatParam(param_name("min_turning_radius"), robot.min_turning_radius, 0.0, 100.0, "Min turning radius");
-  param_helper_.bindFloatParam(param_name("wheelbase"), robot.wheelbase, 0.0, 10.0, "Wheelbase length");
-  param_helper_.bindBoolParam(param_name("cmd_angle_instead_rotvel"), robot.cmd_angle_instead_rotvel, "Command angle instead of rotational velocity");
-  param_helper_.bindBoolParam(param_name("is_footprint_dynamic"), robot.is_footprint_dynamic, "Is footprint dynamic");
-  param_helper_.bindBoolParam(param_name("use_simulated_fov"), robot.use_simulated_fov, "Use simulated field of view for human-aware planning");
+  param_helper_.bindFloatParam(param_name("robot.max_vel_x"), robot.max_vel_x, 0.0, 10.0, "Max forward velocity");
+  param_helper_.bindFloatParam(param_name("robot.max_vel_x_backwards"), robot.max_vel_x_backwards, 0.0, 10.0, "Max backward velocity");
+  param_helper_.bindFloatParam(param_name("robot.max_vel_y"), robot.max_vel_y, 0.0, 10.0, "Max strafing velocity");
+  param_helper_.bindFloatParam(param_name("robot.max_vel_theta"), robot.max_vel_theta, 0.0, 10.0, "Max angular velocity");
+  param_helper_.bindFloatParam(param_name("robot.acc_lim_x"), robot.acc_lim_x, 0.0, 10.0, "Max forward acceleration");
+  param_helper_.bindFloatParam(param_name("robot.acc_lim_y"), robot.acc_lim_y, 0.0, 10.0, "Max strafing acceleration");
+  param_helper_.bindFloatParam(param_name("robot.acc_lim_theta"), robot.acc_lim_theta, 0.0, 10.0, "Max angular acceleration");
+  param_helper_.bindFloatParam(param_name("robot.min_turning_radius"), robot.min_turning_radius, 0.0, 100.0, "Min turning radius");
+  param_helper_.bindFloatParam(param_name("robot.wheelbase"), robot.wheelbase, 0.0, 10.0, "Wheelbase length");
+  param_helper_.bindBoolParam(param_name("robot.cmd_angle_instead_rotvel"), robot.cmd_angle_instead_rotvel, "Command angle instead of rotational velocity");
+  param_helper_.bindBoolParam(param_name("robot.is_footprint_dynamic"), robot.is_footprint_dynamic, "Is footprint dynamic");
+  param_helper_.bindBoolParam(param_name("robot.use_simulated_fov"), robot.use_simulated_fov, "Use simulated field of view for human-aware planning");
 
   // Robot footprint model parameters
   param_helper_.bindStringParam(param_name("footprint_model.type"), robot_footprint.type, "Footprint model type (point, circular, two_circles, line, polygon)");
@@ -168,49 +168,49 @@ void HATebConfig::bindParameters() {
   param_helper_.bindIntParam(param_name("costmap_converter_rate"), obstacles.costmap_converter_rate, 1, 100, "Costmap converter rate");
 
   // Optimization parameters
-  param_helper_.bindIntParam(param_name("no_inner_iterations"), optim.no_inner_iterations, 1, 100, "Number of inner iterations");
-  param_helper_.bindIntParam(param_name("no_outer_iterations"), optim.no_outer_iterations, 1, 100, "Number of outer iterations");
-  param_helper_.bindBoolParam(param_name("optimization_activate"), optim.optimization_activate, "Activate optimization");
-  param_helper_.bindBoolParam(param_name("optimization_verbose"), optim.optimization_verbose, "Verbose optimization output");
-  param_helper_.bindFloatParam(param_name("penalty_epsilon"), optim.penalty_epsilon, 0.0, 1.0, "Penalty epsilon");
-  param_helper_.bindFloatParam(param_name("time_penalty_epsilon"), optim.time_penalty_epsilon, 0.0, 1.0, "Time penalty epsilon");
-  param_helper_.bindBoolParam(param_name("cap_optimaltime_penalty"), optim.cap_optimaltime_penalty, "Cap optimal time penalty");
-  param_helper_.bindFloatParam(param_name("weight_max_vel_x"), optim.weight_max_vel_x, 0.0, 1000.0, "Weight max vel x");
-  param_helper_.bindFloatParam(param_name("weight_max_vel_y"), optim.weight_max_vel_y, 0.0, 1000.0, "Weight max vel y");
-  param_helper_.bindFloatParam(param_name("weight_max_vel_theta"), optim.weight_max_vel_theta, 0.0, 1000.0, "Weight max vel theta");
-  param_helper_.bindFloatParam(param_name("weight_acc_lim_x"), optim.weight_acc_lim_x, 0.0, 1000.0, "Weight acc lim x");
-  param_helper_.bindFloatParam(param_name("weight_acc_lim_y"), optim.weight_acc_lim_y, 0.0, 1000.0, "Weight acc lim y");
-  param_helper_.bindFloatParam(param_name("weight_acc_lim_theta"), optim.weight_acc_lim_theta, 0.0, 1000.0, "Weight acc lim theta");
-  param_helper_.bindFloatParam(param_name("weight_kinematics_nh"), optim.weight_kinematics_nh, 0.0, 10000.0, "Weight kinematics non-holonomic");
-  param_helper_.bindFloatParam(param_name("weight_kinematics_forward_drive"), optim.weight_kinematics_forward_drive, 0.0, 1000.0, "Weight kinematics forward drive");
-  param_helper_.bindFloatParam(param_name("weight_kinematics_turning_radius"), optim.weight_kinematics_turning_radius, 0.0, 1000.0, "Weight kinematics turning radius");
-  param_helper_.bindFloatParam(param_name("weight_optimaltime"), optim.weight_optimaltime, 0.0, 1000.0, "Weight optimal time");
-  param_helper_.bindFloatParam(param_name("weight_shortest_path"), optim.weight_shortest_path, 0.0, 1000.0, "Weight shortest path");
-  param_helper_.bindFloatParam(param_name("weight_obstacle"), optim.weight_obstacle, 0.0, 1000.0, "Weight obstacle");
-  param_helper_.bindFloatParam(param_name("weight_inflation"), optim.weight_inflation, 0.0, 100.0, "Weight inflation");
-  param_helper_.bindFloatParam(param_name("weight_dynamic_obstacle"), optim.weight_dynamic_obstacle, 0.0, 1000.0, "Weight dynamic obstacle");
-  param_helper_.bindFloatParam(param_name("weight_dynamic_obstacle_inflation"), optim.weight_dynamic_obstacle_inflation, 0.0, 100.0, "Weight dynamic obstacle inflation");
-  param_helper_.bindFloatParam(param_name("weight_viapoint"), optim.weight_viapoint, 0.0, 1000.0, "Weight viapoint");
-  param_helper_.bindFloatParam(param_name("weight_prefer_rotdir"), optim.weight_prefer_rotdir, 0.0, 1000.0, "Weight prefer rotation direction");
-  param_helper_.bindFloatParam(param_name("weight_adapt_factor"), optim.weight_adapt_factor, 1.0, 10.0, "Weight adaptation factor");
-  param_helper_.bindFloatParam(param_name("obstacle_cost_exponent"), optim.obstacle_cost_exponent, 0.1, 10.0, "Obstacle cost exponent");
-  param_helper_.bindFloatParam(param_name("weight_max_agent_vel_x"), optim.weight_max_agent_vel_x, 0.0, 1000.0, "Weight max agent vel x");
-  param_helper_.bindFloatParam(param_name("weight_max_agent_vel_y"), optim.weight_max_agent_vel_y, 0.0, 1000.0, "Weight max agent vel y");
-  param_helper_.bindFloatParam(param_name("weight_nominal_agent_vel_x"), optim.weight_nominal_agent_vel_x, 0.0, 1000.0, "Weight nominal agent vel x");
-  param_helper_.bindFloatParam(param_name("weight_max_agent_vel_theta"), optim.weight_max_agent_vel_theta, 0.0, 1000.0, "Weight max agent vel theta");
-  param_helper_.bindFloatParam(param_name("weight_agent_acc_lim_x"), optim.weight_agent_acc_lim_x, 0.0, 1000.0, "Weight agent acc lim x");
-  param_helper_.bindFloatParam(param_name("weight_agent_acc_lim_y"), optim.weight_agent_acc_lim_y, 0.0, 1000.0, "Weight agent acc lim y");
-  param_helper_.bindFloatParam(param_name("weight_agent_acc_lim_theta"), optim.weight_agent_acc_lim_theta, 0.0, 1000.0, "Weight agent acc lim theta");
-  param_helper_.bindFloatParam(param_name("weight_agent_optimaltime"), optim.weight_agent_optimaltime, 0.0, 1000.0, "Weight agent optimal time");
-  param_helper_.bindFloatParam(param_name("weight_agent_viapoint"), optim.weight_agent_viapoint, 0.0, 1000.0, "Weight agent viapoint");
-  param_helper_.bindFloatParam(param_name("weight_invisible_human"), optim.weight_invisible_human, 0.0, 1000.0, "Weight invisible human");
-  param_helper_.bindFloatParam(param_name("weight_agent_robot_safety"), optim.weight_agent_robot_safety, 0.0, 1000.0, "Weight agent robot safety");
-  param_helper_.bindFloatParam(param_name("weight_agent_agent_safety"), optim.weight_agent_agent_safety, 0.0, 1000.0, "Weight agent agent safety");
-  param_helper_.bindFloatParam(param_name("weight_agent_robot_rel_vel"), optim.weight_agent_robot_rel_vel, 0.0, 1000.0, "Weight agent robot relative velocity");
-  param_helper_.bindFloatParam(param_name("weight_agent_robot_visibility"), optim.weight_agent_robot_visibility, 0.0, 1000.0, "Weight agent robot visibility");
-  param_helper_.bindBoolParam(param_name("disable_warm_start"), optim.disable_warm_start, "Disable warm start");
-  param_helper_.bindBoolParam(param_name("disable_rapid_omega_chage"), optim.disable_rapid_omega_chage, "Disable rapid omega change");
-  param_helper_.bindFloatParam(param_name("omega_chage_time_seperation"), optim.omega_chage_time_seperation, 0.0, 10.0, "Omega change time separation");
+  param_helper_.bindIntParam(param_name("optim.no_inner_iterations"), optim.no_inner_iterations, 1, 100, "Number of inner iterations");
+  param_helper_.bindIntParam(param_name("optim.no_outer_iterations"), optim.no_outer_iterations, 1, 100, "Number of outer iterations");
+  param_helper_.bindBoolParam(param_name("optim.optimization_activate"), optim.optimization_activate, "Activate optimization");
+  param_helper_.bindBoolParam(param_name("optim.optimization_verbose"), optim.optimization_verbose, "Verbose optimization output");
+  param_helper_.bindFloatParam(param_name("optim.penalty_epsilon"), optim.penalty_epsilon, 0.0, 1.0, "Penalty epsilon");
+  param_helper_.bindFloatParam(param_name("optim.time_penalty_epsilon"), optim.time_penalty_epsilon, 0.0, 1.0, "Time penalty epsilon");
+  param_helper_.bindBoolParam(param_name("optim.cap_optimaltime_penalty"), optim.cap_optimaltime_penalty, "Cap optimal time penalty");
+  param_helper_.bindFloatParam(param_name("optim.weight_max_vel_x"), optim.weight_max_vel_x, 0.0, 1000.0, "Weight max vel x");
+  param_helper_.bindFloatParam(param_name("optim.weight_max_vel_y"), optim.weight_max_vel_y, 0.0, 1000.0, "Weight max vel y");
+  param_helper_.bindFloatParam(param_name("optim.weight_max_vel_theta"), optim.weight_max_vel_theta, 0.0, 1000.0, "Weight max vel theta");
+  param_helper_.bindFloatParam(param_name("optim.weight_acc_lim_x"), optim.weight_acc_lim_x, 0.0, 1000.0, "Weight acc lim x");
+  param_helper_.bindFloatParam(param_name("optim.weight_acc_lim_y"), optim.weight_acc_lim_y, 0.0, 1000.0, "Weight acc lim y");
+  param_helper_.bindFloatParam(param_name("optim.weight_acc_lim_theta"), optim.weight_acc_lim_theta, 0.0, 1000.0, "Weight acc lim theta");
+  param_helper_.bindFloatParam(param_name("optim.weight_kinematics_nh"), optim.weight_kinematics_nh, 0.0, 10000.0, "Weight kinematics non-holonomic");
+  param_helper_.bindFloatParam(param_name("optim.weight_kinematics_forward_drive"), optim.weight_kinematics_forward_drive, 0.0, 1000.0, "Weight kinematics forward drive");
+  param_helper_.bindFloatParam(param_name("optim.weight_kinematics_turning_radius"), optim.weight_kinematics_turning_radius, 0.0, 1000.0, "Weight kinematics turning radius");
+  param_helper_.bindFloatParam(param_name("optim.weight_optimaltime"), optim.weight_optimaltime, 0.0, 1000.0, "Weight optimal time");
+  param_helper_.bindFloatParam(param_name("optim.weight_shortest_path"), optim.weight_shortest_path, 0.0, 1000.0, "Weight shortest path");
+  param_helper_.bindFloatParam(param_name("optim.weight_obstacle"), optim.weight_obstacle, 0.0, 1000.0, "Weight obstacle");
+  param_helper_.bindFloatParam(param_name("optim.weight_inflation"), optim.weight_inflation, 0.0, 100.0, "Weight inflation");
+  param_helper_.bindFloatParam(param_name("optim.weight_dynamic_obstacle"), optim.weight_dynamic_obstacle, 0.0, 1000.0, "Weight dynamic obstacle");
+  param_helper_.bindFloatParam(param_name("optim.weight_dynamic_obstacle_inflation"), optim.weight_dynamic_obstacle_inflation, 0.0, 100.0, "Weight dynamic obstacle inflation");
+  param_helper_.bindFloatParam(param_name("optim.weight_viapoint"), optim.weight_viapoint, 0.0, 1000.0, "Weight viapoint");
+  param_helper_.bindFloatParam(param_name("optim.weight_prefer_rotdir"), optim.weight_prefer_rotdir, 0.0, 1000.0, "Weight prefer rotation direction");
+  param_helper_.bindFloatParam(param_name("optim.weight_adapt_factor"), optim.weight_adapt_factor, 1.0, 10.0, "Weight adaptation factor");
+  param_helper_.bindFloatParam(param_name("optim.obstacle_cost_exponent"), optim.obstacle_cost_exponent, 0.1, 10.0, "Obstacle cost exponent");
+  param_helper_.bindFloatParam(param_name("optim.weight_max_agent_vel_x"), optim.weight_max_agent_vel_x, 0.0, 1000.0, "Weight max agent vel x");
+  param_helper_.bindFloatParam(param_name("optim.weight_max_agent_vel_y"), optim.weight_max_agent_vel_y, 0.0, 1000.0, "Weight max agent vel y");
+  param_helper_.bindFloatParam(param_name("optim.weight_nominal_agent_vel_x"), optim.weight_nominal_agent_vel_x, 0.0, 1000.0, "Weight nominal agent vel x");
+  param_helper_.bindFloatParam(param_name("optim.weight_max_agent_vel_theta"), optim.weight_max_agent_vel_theta, 0.0, 1000.0, "Weight max agent vel theta");
+  param_helper_.bindFloatParam(param_name("optim.weight_agent_acc_lim_x"), optim.weight_agent_acc_lim_x, 0.0, 1000.0, "Weight agent acc lim x");
+  param_helper_.bindFloatParam(param_name("optim.weight_agent_acc_lim_y"), optim.weight_agent_acc_lim_y, 0.0, 1000.0, "Weight agent acc lim y");
+  param_helper_.bindFloatParam(param_name("optim.weight_agent_acc_lim_theta"), optim.weight_agent_acc_lim_theta, 0.0, 1000.0, "Weight agent acc lim theta");
+  param_helper_.bindFloatParam(param_name("optim.weight_agent_optimaltime"), optim.weight_agent_optimaltime, 0.0, 1000.0, "Weight agent optimal time");
+  param_helper_.bindFloatParam(param_name("optim.weight_agent_viapoint"), optim.weight_agent_viapoint, 0.0, 1000.0, "Weight agent viapoint");
+  param_helper_.bindFloatParam(param_name("optim.weight_invisible_human"), optim.weight_invisible_human, 0.0, 1000.0, "Weight invisible human");
+  param_helper_.bindFloatParam(param_name("optim.weight_agent_robot_safety"), optim.weight_agent_robot_safety, 0.0, 1000.0, "Weight agent robot safety");
+  param_helper_.bindFloatParam(param_name("optim.weight_agent_agent_safety"), optim.weight_agent_agent_safety, 0.0, 1000.0, "Weight agent agent safety");
+  param_helper_.bindFloatParam(param_name("optim.weight_agent_robot_rel_vel"), optim.weight_agent_robot_rel_vel, 0.0, 1000.0, "Weight agent robot relative velocity");
+  param_helper_.bindFloatParam(param_name("optim.weight_agent_robot_visibility"), optim.weight_agent_robot_visibility, 0.0, 1000.0, "Weight agent robot visibility");
+  param_helper_.bindBoolParam(param_name("optim.disable_warm_start"), optim.disable_warm_start, "Disable warm start");
+  param_helper_.bindBoolParam(param_name("optim.disable_rapid_omega_chage"), optim.disable_rapid_omega_chage, "Disable rapid omega change");
+  param_helper_.bindFloatParam(param_name("optim.omega_chage_time_seperation"), optim.omega_chage_time_seperation, 0.0, 10.0, "Omega change time separation");
 
   // HATEB parameters
   param_helper_.bindBoolParam(param_name("use_agent_robot_safety_c"), hateb.use_agent_robot_safety_c, "Use agent robot safety constraint");
@@ -237,15 +237,15 @@ void HATebConfig::bindParameters() {
   param_helper_.bindFloatParam(param_name("oscillation_filter_duration"), recovery.oscillation_filter_duration, 0.0, 100.0, "Oscillation filter duration");
 
   // Visualization parameters
-  param_helper_.bindBoolParam(param_name("publish_robot_global_plan"), visualization.publish_robot_global_plan, "Publish robot global plan");
-  param_helper_.bindBoolParam(param_name("publish_robot_local_plan"), visualization.publish_robot_local_plan, "Publish robot local plan");
-  param_helper_.bindBoolParam(param_name("publish_robot_local_plan_poses"), visualization.publish_robot_local_plan_poses, "Publish robot local plan poses");
-  param_helper_.bindBoolParam(param_name("publish_robot_local_plan_fp_poses"), visualization.publish_robot_local_plan_fp_poses, "Publish robot local plan footprint poses");
-  param_helper_.bindBoolParam(param_name("publish_agents_global_plans"), visualization.publish_agents_global_plans, "Publish agents global plans");
-  param_helper_.bindBoolParam(param_name("publish_agents_local_plans"), visualization.publish_agents_local_plans, "Publish agents local plans");
-  param_helper_.bindBoolParam(param_name("publish_agents_local_plan_poses"), visualization.publish_agents_local_plan_poses, "Publish agents local plan poses");
-  param_helper_.bindBoolParam(param_name("publish_agents_local_plan_fp_poses"), visualization.publish_agents_local_plan_fp_poses, "Publish agents local plan footprint poses");
-  param_helper_.bindFloatParam(param_name("pose_array_z_scale"), visualization.pose_array_z_scale, 0.0, 100.0, "Pose array z-axis scale");
+  param_helper_.bindBoolParam(param_name("visualization.publish_robot_global_plan"), visualization.publish_robot_global_plan, "Publish robot global plan");
+  param_helper_.bindBoolParam(param_name("visualization.publish_robot_local_plan"), visualization.publish_robot_local_plan, "Publish robot local plan");
+  param_helper_.bindBoolParam(param_name("visualization.publish_robot_local_plan_poses"), visualization.publish_robot_local_plan_poses, "Publish robot local plan poses");
+  param_helper_.bindBoolParam(param_name("visualization.publish_robot_local_plan_fp_poses"), visualization.publish_robot_local_plan_fp_poses, "Publish robot local plan footprint poses");
+  param_helper_.bindBoolParam(param_name("visualization.publish_agents_global_plans"), visualization.publish_agents_global_plans, "Publish agents global plans");
+  param_helper_.bindBoolParam(param_name("visualization.publish_agents_local_plans"), visualization.publish_agents_local_plans, "Publish agents local plans");
+  param_helper_.bindBoolParam(param_name("visualization.publish_agents_local_plan_poses"), visualization.publish_agents_local_plan_poses, "Publish agents local plan poses");
+  param_helper_.bindBoolParam(param_name("visualization.publish_agents_local_plan_fp_poses"), visualization.publish_agents_local_plan_fp_poses, "Publish agents local plan footprint poses");
+  param_helper_.bindFloatParam(param_name("visualization.pose_array_z_scale"), visualization.pose_array_z_scale, 0.0, 100.0, "Pose array z-axis scale");
 }
 
 void HATebConfig::checkParameters() const {

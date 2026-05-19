@@ -142,6 +142,7 @@ controller_server:
       base_frame: base_link
       footprint_frame: base_footprint
       planning_mode: 1
+
       # Trajectory
       teb_autosize: True
       dt_ref: 0.1
@@ -153,21 +154,20 @@ controller_server:
       global_plan_viapoint_sep: 0.2
       disable_warm_start: True
       shrink_horizon_backup: True
+      
       # Robot
-      # These are not needed anymore
-      # holonomic_robot: false 
-      # type: 0 #(0: Robot, 1: Human)
-      # robot_radius: 0.47
-      max_vel_y: 0.7
-      acc_lim_y: 0.3
-      max_vel_x: 0.7
-      min_vel_x: 0.02
-      max_vel_x_backwards: 0.4
-      max_vel_theta: 1.2
-      min_vel_theta: 0.1
-      acc_lim_x: 0.3
-      acc_lim_theta: 0.4
-      min_turning_radius: 0.0
+      robot:
+        max_vel_y: 0.7
+        acc_lim_y: 0.3
+        max_vel_x: 0.7
+        min_vel_x: 0.02
+        max_vel_x_backwards: 0.4
+        max_vel_theta: 1.2
+        min_vel_theta: 0.1
+        acc_lim_x: 0.3
+        acc_lim_theta: 0.4
+        min_turning_radius: 0.0
+        
       footprint_model: # types: "point", "circular", "two_circles", "line", "polygon" --> for PR2
         type: "polygon"
         radius: 0.34 # for type "circular"
@@ -233,52 +233,56 @@ controller_server:
          ransac_convert_outlier_pts: True
          ransac_filter_remaining_outlier_pts: False
          convex_hull_min_pt_separation: 0.1
+
       # Optimization
-      no_inner_iterations: 8
-      no_outer_iterations: 4
-      optimization_activate: True
-      optimization_verbose: False
-      penalty_epsilon: 0.01
-      weight_max_vel_x: 2.
-      weight_max_vel_y: 2.
-      weight_max_agent_vel_x: 4.
-      weight_max_agent_vel_y: 4.
-      weight_nominal_agent_vel_x: 2.
-      weight_max_vel_theta: 1.
-      weight_max_agent_vel_theta: 2.
-      weight_acc_lim_x: 1.
-      weight_acc_lim_y: 1.
-      weight_agent_acc_lim_x: 2.
-      weight_agent_acc_lim_y: 2.
-      weight_acc_lim_theta: 1.
-      weight_agent_acc_lim_theta: 2.
-      weight_kinematics_nh: 1000.
-      weight_kinematics_forward_drive: 100.0
-      weight_kinematics_turning_radius: 0.
-      weight_optimaltime: 1.0
-      weight_agent_optimaltime: 3.0
-      weight_obstacle: 50.0
-      weight_dynamic_obstacle: 50.
-      weight_viapoint: 0.05
-      weight_agent_viapoint: 0.5
-      weight_shortest_path: 1.0
-      selection_alternative_time_cost: False
-      cap_optimaltime_penalty: True
-      weight_agent_robot_safety: 5.0
-      weight_agent_agent_safety: 2.0
-      weight_agent_robot_rel_vel: 5.0
-      weight_agent_robot_visibility: 5.0
-      weight_invisible_human: 1.0
+      optim:
+        no_inner_iterations: 8
+        no_outer_iterations: 4
+        optimization_activate: True
+        optimization_verbose: False
+        penalty_epsilon: 0.01
+        weight_max_vel_x: 2.
+        weight_max_vel_y: 2.
+        weight_max_agent_vel_x: 4.
+        weight_max_agent_vel_y: 4.
+        weight_nominal_agent_vel_x: 2.
+        weight_max_vel_theta: 1.
+        weight_max_agent_vel_theta: 2.
+        weight_acc_lim_x: 1.
+        weight_acc_lim_y: 1.
+        weight_agent_acc_lim_x: 2.
+        weight_agent_acc_lim_y: 2.
+        weight_acc_lim_theta: 1.
+        weight_agent_acc_lim_theta: 2.
+        weight_kinematics_nh: 0.0
+        weight_kinematics_forward_drive: 0.0
+        weight_kinematics_turning_radius: 0.0
+        weight_optimaltime: 1.0
+        weight_agent_optimaltime: 3.0
+        weight_obstacle: 50.0
+        weight_dynamic_obstacle: 50.
+        weight_viapoint: 0.05
+        weight_agent_viapoint: 0.5
+        weight_shortest_path: 1.0
+        selection_alternative_time_cost: False
+        cap_optimaltime_penalty: True
+        weight_agent_robot_safety: 5.0
+        weight_agent_agent_safety: 2.0
+        weight_agent_robot_rel_vel: 5.0
+        weight_agent_robot_visibility: 5.0
+        weight_invisible_human: 1.0
+
       # Visualization
-      pose_array_z_scale: 0.5
-      publish_agents_global_plans: true
-      publish_agents_local_plan_fp_poses: true
-      publish_agents_local_plan_poses: true
-      publish_agents_local_plans: true
-      publish_robot_global_plan: true
-      publish_robot_local_plan: true
-      publish_robot_local_plan_fp_poses: true
-      publish_robot_local_plan_poses: true
+      visualization:
+        pose_array_z_scale: 0.5
+        publish_agents_global_plans: true
+        publish_agents_local_plan_fp_poses: true
+        publish_agents_local_plan_poses: true
+        publish_agents_local_plans: true
+        publish_robot_global_plan: true
+        publish_robot_local_plan: true
+        publish_robot_local_plan_fp_poses: true
+        publish_robot_local_plan_poses: true
 
 local_costmap:
   local_costmap:
@@ -470,10 +474,10 @@ velocity_smoother:
     smoothing_frequency: 50.0
     scale_velocities: False
     feedback: "OPEN_LOOP"
-    max_velocity: [0.7, 0.0, 1.0]
-    min_velocity: [-0.7, 0.0, -1.0]
-    max_accel: [2.5, 0.0, 3.2]
-    max_decel: [-2.5, 0.0, -3.2]
+    max_velocity: [0.7, 0.7, 1.2] ## Make sure these match with the cohan params
+    min_velocity: [-0.7, -0.7, -1.2] ## Make sure these match with the cohan params
+    max_accel: [2.5, 2.5, 3.2] ## Make sure these match with the cohan params
+    max_decel: [-2.5, -2.5, -3.2] ## Make sure these match with the cohan params
     odom_topic: "odom"
     odom_duration: 0.1
     deadband_velocity: [0.0, 0.0, 0.0]
