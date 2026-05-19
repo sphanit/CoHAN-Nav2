@@ -73,7 +73,7 @@ class EvadeCondition : public BT::ConditionNode {
    * @return Ports list containing agents_info and dist_max as inputs
    */
   static BT::PortsList providedPorts() {
-    return {BT::InputPort<agent_path_prediction::msg::AgentsInfo>("agents_info"), BT::InputPort<geometry_msgs::msg::Pose>("nearest_corner"), BT::BidirectionalPort<bool>("recovery"),
+    return {BT::InputPort<agent_path_prediction::msg::AgentsInfo>("agents_info"), BT::InputPort<geometry_msgs::msg::Pose>("nearest_obstacle"), BT::BidirectionalPort<bool>("recovery"),
             BT::InputPort<geometry_msgs::msg::PoseStamped>("look_ahead_goal")};
   }
 
@@ -160,9 +160,9 @@ class EvadeCondition : public BT::ConditionNode {
 
   // Blackboard entries
   agent_path_prediction::msg::AgentsInfo agents_info_;  //!< Information about agents in the environment
-  geometry_msgs::msg::Pose nearest_corner_;             //!< Position of the nearest corner
-  double mid_x_;                                        //!< Midpoint x-coordinate between human and corner
-  double mid_y_;                                        //!< Midpoint y-coordinate between human and corner
+  geometry_msgs::msg::Pose nearest_obstacle_;           //!< Position of the nearest obstacle
+  double mid_x_;                                        //!< Midpoint x-coordinate between human and obstacle
+  double mid_y_;                                        //!< Midpoint y-coordinate between human and obstacle
   std::pair<double, double> r_dx_dy_;                   //!< Pair to store the evasion direction vector (dx, dy)
   bool evasion_triggered_;                              //!< Flag to indicate if evasion has been triggered
   geometry_msgs::msg::PoseStamped goal_;                //!< Current navigation goal

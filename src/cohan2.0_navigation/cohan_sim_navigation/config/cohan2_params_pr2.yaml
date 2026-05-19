@@ -154,9 +154,10 @@ controller_server:
       disable_warm_start: True
       shrink_horizon_backup: True
       # Robot
-      holonomic_robot: false
-      type: 0 #(0: Robot, 1: Human)
-      robot_radius: 0.47
+      # These are not needed anymore
+      # holonomic_robot: false 
+      # type: 0 #(0: Robot, 1: Human)
+      # robot_radius: 0.47
       max_vel_y: 0.7
       acc_lim_y: 0.3
       max_vel_x: 0.7
@@ -177,6 +178,14 @@ controller_server:
         rear_offset: 0.2 # for type "two_circles"
         rear_radius: 0.2 # for type "two_circles"
         vertices: "[[-0.325, -0.325], [-0.325, 0.325], [0.325, 0.325] [0.325, -0.325]]" # for type "polygon"
+
+      bt_mode_switch:
+        bt_xml_path: "behavior_trees/all_modes.xml"
+        agents_info_topic: "/agents_info"
+        plan_sub_topic: "/plan"
+        result_sub_topic: "/navigate_to_pose/_action/status"
+        passage_sub_topic: "/invisible_humans_detection/passage"
+        scan_sub_topic: "/scan"
 
       # Agents
       ## Agent Model Params

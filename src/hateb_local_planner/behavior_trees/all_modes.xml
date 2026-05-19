@@ -13,7 +13,7 @@
 				</Sequence>
 				<!-- Second Control: Evasion Detection -->
 				<ReactiveSequence>
-					<Evade name="evasion_check" agents_info="{agents_info}" nearest_corner="{nearest_corner}" recovery="{recovery}" look_ahead_goal="{look_ahead_goal}"/>
+					<Evade name="evasion_check" agents_info="{agents_info}" nearest_obstacle="{nearest_obstacle}" recovery="{recovery}" look_ahead_goal="{look_ahead_goal}"/>
 					<SetMode name="evasion_mode" plan_type="evade" predict_type="const_vel" mode="{planning_mode}"/>
 				</ReactiveSequence>
 				<!-- Main Planning Mode Selection (Single/Dual/VelObs) -->
@@ -28,7 +28,7 @@
 						<SetMode name="dual_band" plan_type="dual" predict_type="const_vel" mode="{planning_mode}"/>
 					</ReactiveFallback>
 					<ReactiveFallback>
-						<VelObsExitCond name="velobs mode" agents_info="{agents_info}" agents_ptr="{agents_ptr}" stuck_agent="{stuck_agent}" valid_plan="{valid_plan}"/>
+						<VelObsExitCond name="velobs mode" agents_info="{agents_info}" agents_ptr="{agents_ptr}" stuck_agent="{stuck_agent}" />
 						<SetMode name="vel_obs" plan_type="velobs" predict_type="const_vel" mode="{planning_mode}"/>
 					</ReactiveFallback>
 				</SequenceStar>

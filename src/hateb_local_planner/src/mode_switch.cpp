@@ -36,29 +36,30 @@ ModeSwitch::ModeSwitch() {
   initialized_ = false;
 }
 
-void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::string& xml_path, std::shared_ptr<hateb_local_planner::Agents>& agents_ptr) {
+void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::shared_ptr<HATebConfig> cfg, std::shared_ptr<hateb_local_planner::Agents>& agents_ptr,
+                            std::shared_ptr<tf2_ros::Buffer> tf) {
   if (!initialized_) {
     // Initialize the ROS components
     // TODO(sphanit): Check if you need to make them configurable
     node_ = node;
+    tf_ = tf;
+    cfg_ = cfg;
 
     // Get the namespace from the parameter (different from the cfg server)
     node->get_parameter_or("ns", ns_, std::string(""));
 
     // Map the subscriptions properly
-    agents_info_sub_topic_ = std::string(AGENTS_INFO_SUB);
-    plan_sub_topic_ = std::string(PLAN_SUB);
-    result_sub_topic_ = std::string(RESULT_SUB);
-    passage_sub_topic_ = std::string(PASSAGE_SUB);
-    homotopy_planner_check_ = std::string(HOMOTOPY_PLANNER_CHECK);
-    corners_sub_topic_ = std::string(CORNERS_SUB);
+    agents_info_sub_topic_ = std::string(cfg_->bt_mode_switch.agents_info_topic);
+    plan_sub_topic_ = std::string(cfg_->bt_mode_switch.plan_sub_topic);
+    result_sub_topic_ = std::string(cfg_->bt_mode_switch.result_sub_topic);
+    passage_sub_topic_ = std::string(cfg_->bt_mode_switch.passage_sub_topic);
+    scan_sub_topic_ = std::string(cfg_->bt_mode_switch.scan_sub_topic);
     if (!ns_.empty()) {
       agents_info_sub_topic_ = "/" + ns_ + agents_info_sub_topic_;
       plan_sub_topic_ = "/" + ns_ + plan_sub_topic_;
       result_sub_topic_ = "/" + ns_ + result_sub_topic_;
       passage_sub_topic_ = "/" + ns_ + passage_sub_topic_;
-      homotopy_planner_check_ = "/" + ns_ + homotopy_planner_check_;
-      corners_sub_topic_ = "/" + ns_ + corners_sub_topic_;
+      scan_sub_topic_ = "/" + ns_ + scan_sub_topic_;
     }
 
     // Subscriptions that help populate the blackboard
@@ -66,8 +67,7 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     plan_sub_ = node_->create_subscription<nav_msgs::msg::Path>(plan_sub_topic_, 1, std::bind(&ModeSwitch::planCB, this, std::placeholders::_1));
     result_sub_ = node_->create_subscription<action_msgs::msg::GoalStatusArray>(result_sub_topic_, 1, std::bind(&ModeSwitch::resultNavigateToPoseCB, this, std::placeholders::_1));
     passage_detect_sub_ = node_->create_subscription<cohan_msgs::msg::PassageType>(passage_sub_topic_, 1, std::bind(&ModeSwitch::passageCB, this, std::placeholders::_1));
-    valid_plan_sub_ = node_->create_subscription<std_msgs::msg::Bool>(homotopy_planner_check_, 1, std::bind(&ModeSwitch::validPlanCB, this, std::placeholders::_1));
-    corners_sub_ = node_->create_subscription<geometry_msgs::msg::PoseArray>(corners_sub_topic_, 1, std::bind(&ModeSwitch::cornersCB, this, std::placeholders::_1));
+    scan_sub_ = node_->create_subscription<sensor_msgs::msg::LaserScan>(scan_sub_topic_, 1, std::bind(&ModeSwitch::scanCB, this, std::placeholders::_1));
 
     // Publishers
     planning_mode_pub_ = node_->create_publisher<hateb_local_planner::msg::PlanningMode>("planning_mode", 10);
@@ -83,6 +83,7 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     registerNodes();
 
     // Build the Behavior Tree from the XML
+    std::string xml_path = cfg_->bt_mode_switch.bt_xml_path;
     if (xml_path == "") {
       BT_ERROR("ModeSwitch", "Please provide the correct xml to create the tree!")
       exit(0);
@@ -118,7 +119,7 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     init_mode.plan = PLAN::SINGLE_BAND;
     init_mode.predict = PREDICTION::CONST_VEL;
     int8_t psg_type = cohan_msgs::msg::PassageType::OPEN;
-    geometry_msgs::msg::Pose nearest_corner;
+    geometry_msgs::msg::Pose nearest_obstacle;
 
     bhv_tree_.rootBlackboard()->set("planning_mode", init_mode);
     bhv_tree_.rootBlackboard()->set("goal_update", false);
@@ -126,11 +127,8 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     bhv_tree_.rootBlackboard()->set("passage_type", psg_type);
     bhv_tree_.rootBlackboard()->set("reset", false);
     bhv_tree_.rootBlackboard()->set("recovery", false);
-    bhv_tree_.rootBlackboard()->set("valid_plan", true);  // TOOD: Remove this
-    bhv_tree_.rootBlackboard()->set("nearest_corner", nearest_corner);
+    bhv_tree_.rootBlackboard()->set("nearest_obstacle", nearest_obstacle);
     bhv_tree_.rootBlackboard()->set("node", node_);
-    // bhv_tree_.rootBlackboard()->set("look_ahead_goal", goal_);
-    // bhv_tree_.rootBlackboard()->set("nav_goal", goal_);
 
     auto status = bhv_tree_.tickRoot();  // This is needed to update all blackboard entries
     initialized_ = true;
@@ -140,38 +138,42 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
   }
 }
 
-void ModeSwitch::passageCB(const cohan_msgs::msg::PassageType::SharedPtr passage_msg) {
-  // Set the passage type on the blackboard
-  bhv_tree_.rootBlackboard()->set("passage_type", passage_msg->type);
-}
+void ModeSwitch::scanCB(const sensor_msgs::msg::LaserScan::SharedPtr scan_msg) {
+  std::scoped_lock lock(scan_mutex_);
 
-void ModeSwitch::validPlanCB(const std_msgs::msg::Bool::SharedPtr valid_plan_msg) {
-  // Set the valid plan status on the blackboard
-  bhv_tree_.rootBlackboard()->set("valid_plan", valid_plan_msg->data);
-}
+  // Process the laser scan and store the points in the latest_scan_ member variable
+  processScan(scan_msg);
 
-void ModeSwitch::cornersCB(const geometry_msgs::msg::PoseArray::SharedPtr corners_msg) {
   if (agents_info_.humans.empty()) {
     return;
   }
 
-  double nearest_corner_dist = std::numeric_limits<double>::max();
-  geometry_msgs::msg::Pose nearest_corner;
-  for (size_t i = 0; i < corners_msg->poses.size(); i++) {
-    double dist = std::hypot(corners_msg->poses[i].position.x - agents_info_.humans[0].pose.x, corners_msg->poses[i].position.y - agents_info_.humans[0].pose.y);
-    if (dist < nearest_corner_dist) {
-      nearest_corner_dist = dist;
-      nearest_corner = corners_msg->poses[i];
+  if (latest_scan_.poses.empty()) {
+    return;
+  }
+
+  double nearest_obs_dist = std::numeric_limits<double>::max();
+  geometry_msgs::msg::Pose nearest_obstacle;
+  for (size_t i = 0; i < latest_scan_.poses.size(); i++) {
+    double dist = std::hypot(latest_scan_.poses[i].position.x - agents_info_.humans[0].pose.x, latest_scan_.poses[i].position.y - agents_info_.humans[0].pose.y);
+
+    if (dist < 0.4) {
+      continue;  // Skip points that are too close to the human, as they are not useful for evasion and can cause instability
+    }
+
+    if (dist < nearest_obs_dist) {
+      nearest_obs_dist = dist;
+      nearest_obstacle = latest_scan_.poses[i];
     }
   }
-  // Set the closest corner information on the blackboard
-  bhv_tree_.rootBlackboard()->set("nearest_corner", nearest_corner);
+  // Set the closest obstacle information on the blackboard
+  bhv_tree_.rootBlackboard()->set("nearest_obstacle", nearest_obstacle);
 
   // Calcultae and publish the evasion control point (should never coincide, otherwise the devision will be zero)
 
   geometry_msgs::msg::Point control_point;
-  auto dx = agents_info_.humans[0].pose.x - nearest_corner.position.x;
-  auto dy = agents_info_.humans[0].pose.y - nearest_corner.position.y;
+  auto dx = agents_info_.humans[0].pose.x - nearest_obstacle.position.x;
+  auto dy = agents_info_.humans[0].pose.y - nearest_obstacle.position.y;
   auto dist = std::hypot(dx, dy);
 
   if (dist == 0) {
@@ -181,6 +183,11 @@ void ModeSwitch::cornersCB(const geometry_msgs::msg::PoseArray::SharedPtr corner
   control_point.x = agents_info_.humans[0].pose.x + 1.0 * dx / dist;
   control_point.y = agents_info_.humans[0].pose.y + 1.0 * dy / dist;
   evasion_control_point_pub_->publish(control_point);
+}
+
+void ModeSwitch::passageCB(const cohan_msgs::msg::PassageType::SharedPtr passage_msg) {
+  // Set the passage type on the blackboard
+  bhv_tree_.rootBlackboard()->set("passage_type", passage_msg->type);
 }
 
 void ModeSwitch::agentsInfoCB(const agent_path_prediction::msg::AgentsInfo::SharedPtr info_msg) {

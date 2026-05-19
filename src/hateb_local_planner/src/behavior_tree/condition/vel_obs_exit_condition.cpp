@@ -46,10 +46,9 @@ BT::NodeStatus VelObsExitCondition::tick() {
     // Get the agents pointer from blackboard
     getInput("agents_ptr", agents_ptr_);
   }
-  getInput("valid_plan", valid_plan_);
 
   // Check if the human has stopped too (while the robot is stuck)
-  if (hasHumanStopped() && !valid_plan_) {
+  if (hasHumanStopped()) {
     // Lock the agents pointer before updating
     std::scoped_lock lock(agents_mutex_);
     // Set the human state to BLOCKED

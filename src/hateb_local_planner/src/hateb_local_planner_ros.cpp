@@ -196,10 +196,10 @@ void HATebLocalPlannerROS::configure(const rclcpp_lifecycle::LifecycleNode::Weak
   // Initialize the pointer to agents and mode switch
   agents_ptr_ = std::make_shared<hateb_local_planner::Agents>(node, tf_, costmap_ros, cfg_);
   // Get behavior tree XML path
-  if (cfg_->bt_xml_path.empty()) {
+  if (cfg_->bt_mode_switch.bt_xml_path.empty()) {
     RCLCPP_ERROR(logger_, "Please provide the xml path by setting the bt_xml_path param");
   }
-  bt_mode_switch_.initialize(node, cfg_->bt_xml_path, agents_ptr_);
+  bt_mode_switch_.initialize(node, cfg_, agents_ptr_, tf_);
 
   // Initialize timers and properties
   last_call_time_ = clock_->now() - rclcpp::Duration::from_seconds(cfg_->hateb.pose_prediction_reset_time);

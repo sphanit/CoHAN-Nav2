@@ -54,7 +54,6 @@ void InvHumansDetection::initialize() {
   pub_invis_humans_pos_ = this->create_publisher<geometry_msgs::msg::PoseArray>("~/invisible_humans", 1);
   pub_invis_human_ = this->create_publisher<costmap_converter_msgs::msg::ObstacleArrayMsg>("~/invisible_humans_obs", 1);
   passage_detect_pub_ = this->create_publisher<cohan_msgs::msg::PassageType>("~/passage", 1);
-  map_scan_poses_pub_ = this->create_publisher<cohan_msgs::msg::PassageType>("~/map_scan_poses", 1);
 
   // Initialize laser scan msg
   scan_msg_.angle_min = cfg_->angle_min;
@@ -140,9 +139,6 @@ void InvHumansDetection::detectOccludedCorners() {
 
   robot_vec_ << cos(theta), sin(theta);
   ranges_.resize(cfg_->samples, 0.0);
-  geometry_msgs::msg::PoseArray laser_points_array;
-  laser_points_array.header.stamp = this->now();
-  laser_points_array.header.frame_id = MAP_FRAME;
 
   // Scan the map using a fake laser at robot's position
   for (int i = 0; i < cfg_->samples; i++) {
@@ -178,27 +174,6 @@ void InvHumansDetection::detectOccludedCorners() {
   if (cfg_->publish_scan) {
     scan_msg_.ranges = ranges_;
     scan_pub_->publish(scan_msg_);
-
-    tf2::Quaternion q(footprint_transform.transform.rotation.x, footprint_transform.transform.rotation.y, footprint_transform.transform.rotation.z, footprint_transform.transform.rotation.w);
-    tf2::Vector3 p(footprint_transform.transform.translation.x, footprint_transform.transform.translation.y, footprint_transform.transform.translation.z);
-    tf2::Transform transform(q, p);
-
-    ang = cfg_->angle_min;
-
-    for (int i = 0; i < cfg_->samples; i++) {
-      double x1 = ranges_[i] * cos(ang);
-      double y1 = ranges_[i] * sin(ang);
-      auto laser_point_posistion = tf2::Vector3(x1, y1, 0.);
-      laser_point_posistion = transform * laser_point_posistion;
-      geometry_msgs::msg::Pose laser_point;
-      laser_point.position.x = laser_point_posistion.x();
-      laser_point.position.y = laser_point_posistion.y();
-      laser_point.orientation.w = 1;
-      laser_points_array.poses.push_back(laser_point);
-      ang += angle_increment;
-    }
-
-    map_scan_poses_pub_->publish(laser_points_array);
   }
 
   // The Corner detection part starts from here
@@ -238,8 +213,6 @@ void InvHumansDetection::detectOccludedCorners() {
     ang += angle_increment;
   }
 
-  // std::cout << "Detected corners 1: " << corner_set1.size() << std::endl;
-  // std::cout << "Detected corners 2: " << corner_set2.size() << std::endl;
   // Locate the invisible humans using the detected corners
   locateInvHumans(corner_set1, corner_set2, dir, footprint_transform);
 }
@@ -395,8 +368,7 @@ bool InvHumansDetection::locateInvHumans(Coordinates c1, Coordinates c2, std::ve
 
       // Point p = {pt.first, pt.second};
       // centers.push_back(p);
-      // Now add the corners and invibsle humans
-      // Corners
+      // Now add the corners and invibsle humans Corners
       auto corner_position = tf2::Vector3(x1, y1, 0.);
       corner_position = transform * corner_position;
       geometry_msgs::msg::Pose corner_pose;

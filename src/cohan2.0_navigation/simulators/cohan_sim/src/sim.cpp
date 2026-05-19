@@ -238,6 +238,48 @@ void Simulator2D::add_entity(SimEntity sim_entity) {
   entity_count_++;
 }
 
+static double rayAgentIntersectionRange(const SimEntity& sim_entity, const std::vector<SimEntity>& entities, double ray_angle) {
+  const double start_x = sim_entity.entity.x();
+  const double start_y = sim_entity.entity.y();
+  const double dir_x = cos(ray_angle);
+  const double dir_y = sin(ray_angle);
+  double best_range = sim_entity.laser_range;
+
+  for (const auto& other : entities) {
+    if (&other == &sim_entity) {
+      continue;
+    }
+
+    const double cx = other.entity.x();
+    const double cy = other.entity.y();
+    const double radius = other.entity.radius();
+    const double ox = cx - start_x;
+    const double oy = cy - start_y;
+    const double projection = ox * dir_x + oy * dir_y;
+
+    if (projection <= 0.0) {
+      continue;
+    }
+
+    const double closest_dist_sq = (ox * ox + oy * oy) - (projection * projection);
+    const double radius_sq = radius * radius;
+    if (closest_dist_sq > radius_sq) {
+      continue;
+    }
+
+    const double half_chord = sqrt(radius_sq - closest_dist_sq);
+    double hit_range = projection - half_chord;
+    if (hit_range < 0.0) {
+      hit_range = projection + half_chord;
+    }
+    if (hit_range > 0.0 && hit_range < best_range) {
+      best_range = hit_range;
+    }
+  }
+
+  return best_range;
+}
+
 void Simulator2D::laser_scan(SimEntity& sim_entity) {
   int robot_px;
   int robot_py;
@@ -258,15 +300,18 @@ void Simulator2D::laser_scan(SimEntity& sim_entity) {
   for (int i = 0; i < n_rays; i++) {
     sim_entity.laser_data[i] = sim_entity.laser_range;
     double angle = angle_min + (i * angle_increment) + sim_entity.entity.theta();
-    // printf("angle = %f\n", angle);
     if (angle > TWO_PI) {
       angle -= TWO_PI;
     }
     if (angle < 0) {
       angle += TWO_PI;
     }
-    double wx = sim_entity.entity.x() + (sim_entity.laser_range * cos(angle));
-    double wy = sim_entity.entity.y() + (sim_entity.laser_range * sin(angle));
+
+    // Check other agents first so we can clamp the maximum range before evaluating the occupancy grid.
+    sim_entity.laser_data[i] = rayAgentIntersectionRange(sim_entity, entities_, angle);
+
+    double wx = sim_entity.entity.x() + (sim_entity.laser_data[i] * cos(angle));
+    double wy = sim_entity.entity.y() + (sim_entity.laser_data[i] * sin(angle));
     int end_x;
     int end_y;
     world_to_map_coords(wx, wy, &end_x, &end_y);
@@ -300,7 +345,9 @@ void Simulator2D::laser_scan(SimEntity& sim_entity) {
         if (range >= sim_entity.laser_range) {
           range = sim_entity.laser_range;
         }
-        sim_entity.laser_data[i] = range;
+        if (range < sim_entity.laser_data[i]) {
+          sim_entity.laser_data[i] = range;
+        }
         int prev_sx;
         int prev_sy;
         map_to_screen(prev_x, prev_y, &prev_sx, &prev_sy);

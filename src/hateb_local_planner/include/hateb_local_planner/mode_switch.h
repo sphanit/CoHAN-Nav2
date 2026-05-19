@@ -34,6 +34,11 @@
 #include "behaviortree_cpp_v3/bt_factory.h"
 
 // Messages
+#include <tf2/LinearMath/Quaternion.h>
+#include <tf2/LinearMath/Transform.h>
+#include <tf2/LinearMath/Vector3.h>
+#include <tf2/utils.h>
+
 #include <action_msgs/msg/goal_status_array.hpp>
 #include <agent_path_prediction/msg/agents_info.hpp>
 #include <cohan_msgs/msg/passage_type.hpp>
@@ -44,6 +49,7 @@
 #include <hateb_local_planner/msg/planning_mode.hpp>
 #include <nav2_msgs/action/navigate_to_pose.hpp>
 #include <nav_msgs/msg/path.hpp>
+#include <sensor_msgs/msg/laser_scan.hpp>
 #include <std_msgs/msg/bool.hpp>
 #include <std_srvs/srv/trigger.hpp>
 
@@ -61,12 +67,13 @@
 #include <mutex>
 
 // All topics are good here
-#define AGENTS_INFO_SUB "/agents_info"
-#define PLAN_SUB "/plan"
-#define RESULT_SUB "/navigate_to_pose/_action/status"
-#define PASSAGE_SUB "/invisible_humans_detection/passage"
-#define HOMOTOPY_PLANNER_CHECK "/homotopy_planner/valid_plan"
-#define MAP_SCAN_SUB "/invisible_humans_detection/map_scan_poses"
+// #define AGENTS_INFO_SUB "/agents_info"
+// #define PLAN_SUB "/plan"
+// #define RESULT_SUB "/navigate_to_pose/_action/status"
+// #define PASSAGE_SUB "/invisible_humans_detection/passage"
+// #define SCAN_SUB "/scan"
+// #define MAP_FRAME "map"
+// #define FOOTPRINT_FRAME "base_footprint"
 
 namespace hateb_local_planner {
 
@@ -94,10 +101,11 @@ class ModeSwitch {
   /**
    * @brief Initializes the mode switch with required components
    * @param node ROS 2 node shared pointer
-   * @param xml_path Path to the behavior tree XML description
+   * @param cfg Configuration pointer
    * @param agents_ptr Pointer to the agents management class
+   * @param tf TF buffer shared pointer
    */
-  void initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::string& xml_path, std::shared_ptr<hateb_local_planner::Agents>& agents_ptr);
+  void initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::shared_ptr<HATebConfig> cfg, std::shared_ptr<hateb_local_planner::Agents>& agents_ptr, std::shared_ptr<tf2_ros::Buffer> tf);
 
   /**
    * @brief Executes one tick of the behavior tree
@@ -159,16 +167,10 @@ class ModeSwitch {
   void passageCB(const cohan_msgs::msg::PassageType::SharedPtr passage_msg);
 
   /**
-   * @brief Callback for processing valid plan status from homotopy planner
-   * @param valid_plan_msg Message containing valid plan flag
-   */
-  void validPlanCB(const std_msgs::msg::Bool::SharedPtr valid_plan_msg);
-
-  /**
    * @brief Callback for processing corner information
-   * @param corners_msg Message containing corner positions
+   * @param scan_msg Message containing laser scan data
    */
-  void cornersCB(const geometry_msgs::msg::PoseArray::SharedPtr corners_msg);
+  void scanCB(const sensor_msgs::msg::LaserScan::SharedPtr scan_msg);
 
   /**
    * @brief Updates the current planning mode
@@ -187,6 +189,49 @@ class ModeSwitch {
     }
   }
 
+  void processScan(const sensor_msgs::msg::LaserScan::SharedPtr scan_msg) {
+    latest_scan_.poses.clear();
+
+    // Get the robot's current pose in the map frame
+    geometry_msgs::msg::TransformStamped footprint_transform;
+    try {
+      std::string base_frame = cfg_->footprint_frame;
+      if (!ns_.empty()) {
+        base_frame = ns_ + "/" + base_frame;
+      }
+      footprint_transform = tf_->lookupTransform(cfg_->global_frame, base_frame, tf2::TimePointZero);
+    } catch (tf2::TransformException& ex) {
+      RCLCPP_WARN(node_->get_logger(), "%s", ex.what());
+      return;
+    }
+
+    tf2::Quaternion q(footprint_transform.transform.rotation.x, footprint_transform.transform.rotation.y, footprint_transform.transform.rotation.z, footprint_transform.transform.rotation.w);
+    tf2::Vector3 p(footprint_transform.transform.translation.x, footprint_transform.transform.translation.y, footprint_transform.transform.translation.z);
+    tf2::Transform transform(q, p);
+
+    auto ranges = scan_msg->ranges;
+    auto angle_increment = scan_msg->angle_increment;
+    auto angle_min = scan_msg->angle_min;
+    auto samples = scan_msg->ranges.size();
+    double ang = angle_min;
+
+    latest_scan_.header.stamp = node_->now();
+    latest_scan_.header.frame_id = cfg_->global_frame;
+
+    for (int i = 0; i < samples; i++) {
+      double x1 = ranges[i] * cos(ang);
+      double y1 = ranges[i] * sin(ang);
+      auto laser_point_posistion = tf2::Vector3(x1, y1, 0.);
+      laser_point_posistion = transform * laser_point_posistion;
+      geometry_msgs::msg::Pose laser_point;
+      laser_point.position.x = laser_point_posistion.x();
+      laser_point.position.y = laser_point_posistion.y();
+      laser_point.orientation.w = 1;
+      latest_scan_.poses.push_back(laser_point);
+      ang += angle_increment;
+    }
+  }
+
   // Status flags
   bool goal_reached_;           //!< Flag indicating if current goal was reached
   bool initialized_;            //!< Flag indicating if class was properly initialized
@@ -199,10 +244,10 @@ class ModeSwitch {
   rclcpp::Subscription<nav_msgs::msg::Path>::SharedPtr plan_sub_;                            //!< Subscriber for navigation goals
   rclcpp::Subscription<action_msgs::msg::GoalStatusArray>::SharedPtr result_sub_;            //!< Subscriber for navigation results
   rclcpp::Subscription<cohan_msgs::msg::PassageType>::SharedPtr passage_detect_sub_;         //!< Subscriber for passage detection
-  rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr valid_plan_sub_;                      //!< Subscriber for valid plan status
-  rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr corners_sub_;               //!< Subscriber for corners information
-  rclcpp::Publisher<hateb_local_planner::msg::PlanningMode>::SharedPtr planning_mode_pub_;   //!< Publisher for current planning mode
-  rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr evasion_control_point_pub_;        //!< Publisher for evasion control point
+  rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr scan_sub_;                    //!< Subscriber for laser scan information
+
+  rclcpp::Publisher<hateb_local_planner::msg::PlanningMode>::SharedPtr planning_mode_pub_;  //!< Publisher for current planning mode
+  rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr evasion_control_point_pub_;       //!< Publisher for evasion control point
 
   // State information
   geometry_msgs::msg::PoseStamped goal_;                //!< Current navigation goal
@@ -213,20 +258,25 @@ class ModeSwitch {
   BT::BehaviorTreeFactory bhv_factory_;  //!< Factory for creating BT nodes
   BT::Tree bhv_tree_;                    //!< The behavior tree instance
 
-  std::mutex pub_mutex_;  //!< Mutex for thread-safe publishing
+  std::mutex pub_mutex_;   //!< Mutex for thread-safe publishing
+  std::mutex scan_mutex_;  //!< Mutex for thread-safe access to latest scan data
 
   std::string name_;                                  //!< Name of this node
   hateb_local_planner::msg::PlanningMode plan_mode_;  //!< Current planning mode
   ModeInfo mode_info_;                                //!< Detailed mode information
 
   // Params for namespace and subscription topics
-  std::string ns_;                      //!< Namespace of the node
-  std::string agents_info_sub_topic_;   //!< Topic for agents information
-  std::string plan_sub_topic_;          //!< Topic for robot plan
-  std::string result_sub_topic_;        //!< Topic for robot goal result
-  std::string passage_sub_topic_;       //!< Topic for passage detection (from invisible humans)
-  std::string homotopy_planner_check_;  //!< Topic for valid plan status from homotopy planner
-  std::string corners_sub_topic_;       //!< Topic for corners information
+  std::string ns_;                     //!< Namespace of the node
+  std::string agents_info_sub_topic_;  //!< Topic for agents information
+  std::string plan_sub_topic_;         //!< Topic for robot plan
+  std::string result_sub_topic_;       //!< Topic for robot goal result
+  std::string passage_sub_topic_;      //!< Topic for passage detection (from invisible humans)
+  std::string scan_sub_topic_;         //!< Topic for laser scan data
+
+  // TF buffer for transformations
+  std::shared_ptr<tf2_ros::Buffer> tf_;        //!< TF buffer for transformations
+  geometry_msgs::msg::PoseArray latest_scan_;  //!< Latest laser scan data
+  std::shared_ptr<HATebConfig> cfg_;           //!< Config class that stores and manages all related parameters
 };
 
 }  // namespace hateb_local_planner

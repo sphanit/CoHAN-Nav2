@@ -68,7 +68,6 @@ class HATebConfig {
   std::string map_frame;        //!< map frame for local planning
   std::string base_frame;       //!< Robot base frame
   std::string footprint_frame;  //!< Robot footprint frame
-  std::string bt_xml_path;      //!< Name of this planner plugin
 
   FootprintModelPtr robot_model;     //!< model of the robot's footprint
   CircularFootprintPtr human_model;  //!< model of the agent's footprint
@@ -280,6 +279,15 @@ class HATebConfig {
     double pose_array_z_scale;                //!< Multiplier to show time on z value of pose array for agents and robot
   } visualization;
 
+  struct BTModeSwitch {
+    std::string bt_xml_path;        //!< Path to the behavior tree XML file
+    std::string agents_info_topic;  //!< Topic name for subscribing to agents information
+    std::string plan_sub_topic;     //!< Topic name for subscribing to the planned path
+    std::string result_sub_topic;   //!< Topic name for subscribing to the navigation result
+    std::string passage_sub_topic;  //!< Topic name for subscribing to passage information
+    std::string scan_sub_topic;     //!< Topic name for subscribing to laser scan data
+  } bt_mode_switch;
+
   /**
    * @brief Construct the HATebConfig using default values.
    * @warning If the \b rosparam server or/and \b dynamic_reconfigure (rqt_reconfigure) node are used,
@@ -299,7 +307,6 @@ class HATebConfig {
     map_frame = "odom";
     base_frame = "base_link";
     footprint_frame = "base_footprint";
-    bt_xml_path = "behavior_trees/all_modes.xml";
     predict_srv_name = "/agent_path_prediction/predict_agent_poses";
     reset_prediction_srv_name = "/agent_path_prediction/reset_prediction_services";
     invisible_humans_sub_topic = "/invisible_humans_detection/invisible_humans_obs";
@@ -307,8 +314,15 @@ class HATebConfig {
     planning_mode = 1;       // Agent-Aware planning by default
     planning_radius = 10.0;  // meters
 
-    // Trajectory
+    // Behavior Tree Mode Switch
+    bt_mode_switch.bt_xml_path = "behavior_trees/all_modes.xml";
+    bt_mode_switch.agents_info_topic = "/agents_info";
+    bt_mode_switch.plan_sub_topic = "/plan";
+    bt_mode_switch.result_sub_topic = "/navigate_to_pose/_action/status";
+    bt_mode_switch.passage_sub_topic = "/invisible_humans_detection/passage";
+    bt_mode_switch.scan_sub_topic = "/scan";
 
+    // Trajectory
     trajectory.teb_autosize = true;
     trajectory.dt_ref = 0.3;
     trajectory.dt_hysteresis = 0.1;

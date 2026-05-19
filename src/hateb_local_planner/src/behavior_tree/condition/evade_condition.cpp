@@ -53,7 +53,7 @@ BT::NodeStatus EvadeCondition::tick() {
 
   // Read the values from blackboard
   getInput("agents_info", agents_info_);
-  getInput("nearest_corner", nearest_corner_);
+  getInput("nearest_obstacle", nearest_obstacle_);
   getInput("recovery", evasion_triggered_);
   getInput("look_ahead_goal", goal_);
 
@@ -67,23 +67,23 @@ BT::NodeStatus EvadeCondition::tick() {
 
     // Check if Evasion is needed or not
     if (!doSegmentsIntersect(Point(agents_info_.robot_pose.x, agents_info_.robot_pose.y), Point(goal_.pose.position.x, goal_.pose.position.y),
-                             Point(agents_info_.humans[0].pose.x, agents_info_.humans[0].pose.y), Point(nearest_corner_.position.x, nearest_corner_.position.y))) {
+                             Point(agents_info_.humans[0].pose.x, agents_info_.humans[0].pose.y), Point(nearest_obstacle_.position.x, nearest_obstacle_.position.y))) {
       BT_INFO(name_, "Evasion not needed! Human is not on the path to the goal.")
       publishVectors();  // Publish even when not evading
       return BT::NodeStatus::FAILURE;
     }
 
     // if (mid_x_ == std::numeric_limits<double>::max() || mid_y_ == std::numeric_limits<double>::max()) {
-    mid_x_ = (nearest_corner_.position.x + agents_info_.humans[0].pose.x) / 2.;
-    mid_y_ = (nearest_corner_.position.y + agents_info_.humans[0].pose.y) / 2.;
+    mid_x_ = (nearest_obstacle_.position.x + agents_info_.humans[0].pose.x) / 2.;
+    mid_y_ = (nearest_obstacle_.position.y + agents_info_.humans[0].pose.y) / 2.;
     r_dx_dy_ = std::make_pair(mid_x_ - agents_info_.robot_pose.x, mid_y_ - agents_info_.robot_pose.y);
     // }
 
-    auto dx = nearest_corner_.position.x - agents_info_.humans[0].pose.x;
-    auto dy = nearest_corner_.position.y - agents_info_.humans[0].pose.y;
+    auto dx = nearest_obstacle_.position.x - agents_info_.humans[0].pose.x;
+    auto dy = nearest_obstacle_.position.y - agents_info_.humans[0].pose.y;
 
     if (std::hypot(dx, dy) > 1.8) {  // Safety distance threshold for evasion, can be made configurable
-      BT_INFO(name_, "Evasion not needed! Human is far from the corner.")
+      BT_INFO(name_, "Evasion not needed! Human is far from the obstacle.")
       publishVectors();  // Publish even when not evading
       return BT::NodeStatus::FAILURE;
     }

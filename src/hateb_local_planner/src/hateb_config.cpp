@@ -71,10 +71,17 @@ void HATebConfig::bindParameters() {
   param_helper_.bindStringParam(param_name("base_frame"), base_frame, "Base frame ID");
   param_helper_.bindStringParam(param_name("footprint_frame"), footprint_frame, "Footprint frame ID");
   param_helper_.bindIntParam(param_name("planning_mode"), planning_mode, 0, 10, "Planning mode");
-  param_helper_.bindStringParam(param_name("bt_xml_path"), bt_xml_path, "Behavior tree XML file path");
   param_helper_.bindStringParam(param_name("predict_srv_name"), predict_srv_name, "Agent prediction service name");
   param_helper_.bindStringParam(param_name("reset_prediction_srv_name"), reset_prediction_srv_name, "Agent Prediction reset service name");
   param_helper_.bindStringParam(param_name("invisible_humans_sub_topic"), invisible_humans_sub_topic, "Invisible humans subscription topic name");
+
+  // Behavior Tree Mode Switch parameters
+  param_helper_.bindStringParam(param_name("bt_mode_switch.bt_xml_path"), bt_mode_switch.bt_xml_path, "Behavior tree XML file path");
+  param_helper_.bindStringParam(param_name("bt_mode_switch.agents_info_topic"), bt_mode_switch.agents_info_topic, "Agents information subscription topic name");
+  param_helper_.bindStringParam(param_name("bt_mode_switch.plan_sub_topic"), bt_mode_switch.plan_sub_topic, "Planned path subscription topic name");
+  param_helper_.bindStringParam(param_name("bt_mode_switch.result_sub_topic"), bt_mode_switch.result_sub_topic, "Navigation result subscription topic name");
+  param_helper_.bindStringParam(param_name("bt_mode_switch.passage_sub_topic"), bt_mode_switch.passage_sub_topic, "Passage information subscription topic name");
+  param_helper_.bindStringParam(param_name("bt_mode_switch.scan_sub_topic"), bt_mode_switch.scan_sub_topic, "Laser scan subscription topic name");
 
   // Trajectory parameters
   param_helper_.bindBoolParam(param_name("teb_autosize"), trajectory.teb_autosize, "Enable TEB autosize");
