@@ -1052,8 +1052,6 @@ void HATebLocalPlannerROS::saturateVelocity(double& vx, double& vy, double& omeg
   // Limit translational velocity for forward driving
   vx = std::min(vx, max_vel_x);
 
-  std::cout << vy << std::endl;
-
   // limit strafing velocity
   if (vy > max_vel_y) {
     vy = max_vel_y;
