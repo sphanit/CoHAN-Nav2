@@ -48,7 +48,7 @@ bt_navigator:
     bt_loop_duration: 10
     default_server_timeout: 20
     wait_for_service_timeout: 1000
-    default_nav_to_pose_bt_xml: $(find-pkg-share cohan_sim_navigation)/config/custom_navigate_to_pose.xml
+    # default_nav_to_pose_bt_xml: navigate_to_pose_w_replanning_and_recovery.xml
     # default_nav_through_poses_bt_xml: "navigate_through_poses_w_replanning_and_recovery.xml"
     plugin_lib_names:
       - nav2_compute_path_to_pose_action_bt_node
@@ -145,8 +145,8 @@ controller_server:
         
       ##Footprint 
       footprint_model: # types: "point", "circular", "two_circles", "line", "polygon" --> for PR2
-        type: "polygon"
-        radius: 0.34 # for type "circular"
+        type: "circular"
+        radius: 0.25 # for type "circular"
         line_start: [-0.3, 0.0] # for type "line"
         line_end: [0.3, 0.0] # for type "line"
         front_offset: 0.2 # for type "two_circles"
@@ -208,7 +208,7 @@ controller_server:
         use_agent_robot_visi_c: True
         add_invisible_humans: True
         min_agent_agent_dist: 0.4
-        min_agent_robot_dist: 0.6
+        min_agent_robot_dist: 0.8
         rel_vel_cost_threshold: 1.5
         visibility_cost_threshold: 2.5
         invisible_human_threshold: 1.0
@@ -217,7 +217,7 @@ controller_server:
       # GoalTolerance
       goal:
         xy_goal_tolerance: 0.2
-        yaw_goal_tolerance: 0.2
+        yaw_goal_tolerance: 0.1
         free_goal_vel: True
 
       # Obstacles
@@ -262,8 +262,8 @@ controller_server:
         weight_agent_acc_lim_y: 2.
         weight_acc_lim_theta: 1.
         weight_agent_acc_lim_theta: 2.
-        weight_kinematics_nh: 0.0 ## 0 for Omni, 1000 for diff
-        weight_kinematics_forward_drive: 50.
+        weight_kinematics_nh: 1000. ## 0 for Omni, 1000 for diff
+        weight_kinematics_forward_drive: 10.
         weight_kinematics_turning_radius: 0.0
         weight_optimaltime: 1.0
         weight_agent_optimaltime: 3.0
@@ -305,8 +305,7 @@ local_costmap:
       width: 15
       height: 15
       resolution: 0.05
-      robot_radius: 0.47
-      footprint: "[[-0.325, -0.325], [-0.325, 0.325], [0.325, 0.325], [0.46, 0.0], [0.325, -0.325]]"
+      robot_radius: 0.25
       plugins: ["voxel_layer", "inflation_layer", "human_static_layer", "human_visibility_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
@@ -354,8 +353,7 @@ global_costmap:
       tracked_agents_topic: "/tracked_agents"
       agents_states_topic: "/agents_info"
       use_sim_time: True
-      robot_radius: 0.47
-      footprint: "[[-0.325, -0.325], [-0.325, 0.325], [0.325, 0.325], [0.46, 0.0], [0.325, -0.325]]"
+      robot_radius: 0.25
       resolution: 0.05
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "inflation_layer", "human_static_layer", "human_visibility_layer"]
