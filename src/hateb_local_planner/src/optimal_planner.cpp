@@ -1569,6 +1569,11 @@ void HATebOptimalPlanner::AddEdgesPreferRotDir() {
 
 void HATebOptimalPlanner::AddEdgesAgentRobotSafety() {
   auto robot_teb_size = teb_.sizePoses();
+  auto weight_safety = cfg_->optim.weight_agent_robot_safety;
+
+  if (isMode_ == 1) {
+    weight_safety = 0.5 * weight_safety;
+  }
 
   if (current_agent_robot_min_dist_ < 2.0) {
     for (auto& agent_teb_kv : agents_tebs_map_) {
@@ -1576,7 +1581,7 @@ void HATebOptimalPlanner::AddEdgesAgentRobotSafety() {
 
       for (unsigned int i = 0; (i < agent_teb.sizePoses()) && (i < robot_teb_size); i++) {
         Eigen::Matrix<double, 1, 1> information_agent_robot;
-        information_agent_robot.fill(cfg_->optim.weight_agent_robot_safety);
+        information_agent_robot.fill(weight_safety);
         auto* agent_robot_safety_edge = new EdgeAgentRobotSafety;
         agent_robot_safety_edge->setVertex(0, teb_.PoseVertex(i));
         agent_robot_safety_edge->setVertex(1, agent_teb.PoseVertex(i));
@@ -1610,7 +1615,12 @@ void HATebOptimalPlanner::AddEdgesAgentAgentSafety() {
 
 void HATebOptimalPlanner::AddEdgesAgentRobotRelVelocity() {
   Eigen::Matrix<double, 1, 1> information_agent_robot_rel_vel;
-  information_agent_robot_rel_vel.fill(cfg_->optim.weight_agent_robot_rel_vel);
+  auto weight_rel_vel = cfg_->optim.weight_agent_robot_rel_vel;
+
+  if (isMode_ == 1) {
+    weight_rel_vel = 0.6 * weight_rel_vel;
+  }
+  information_agent_robot_rel_vel.fill(weight_rel_vel);
 
   auto robot_teb_size = teb_.sizePoses();
   for (auto& agent_teb_kv : agents_tebs_map_) {

@@ -213,8 +213,6 @@ void InvHumansDetection::detectOccludedCorners() {
     ang += angle_increment;
   }
 
-  // std::cout << "Detected corners 1: " << corner_set1.size() << std::endl;
-  // std::cout << "Detected corners 2: " << corner_set2.size() << std::endl;
   // Locate the invisible humans using the detected corners
   locateInvHumans(corner_set1, corner_set2, dir, footprint_transform);
 }
@@ -370,8 +368,7 @@ bool InvHumansDetection::locateInvHumans(Coordinates c1, Coordinates c2, std::ve
 
       // Point p = {pt.first, pt.second};
       // centers.push_back(p);
-      // Now add the corners and invibsle humans
-      // Corners
+      // Now add the corners and invibsle humans Corners
       auto corner_position = tf2::Vector3(x1, y1, 0.);
       corner_position = transform * corner_position;
       geometry_msgs::msg::Pose corner_pose;

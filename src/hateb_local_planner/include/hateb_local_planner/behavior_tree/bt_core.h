@@ -45,7 +45,7 @@
  * @brief Constants for numerical precision and distance thresholds
  */
 #define EPS 0.01      // Small epsilon value for floating-point comparisons
-#define DIST_EPS 0.3  // Distance threshold for progress checks
+#define DIST_EPS 0.3  // Distance threshold for proximity checks
 
 /**
  * @brief Debug printing configuration and macros

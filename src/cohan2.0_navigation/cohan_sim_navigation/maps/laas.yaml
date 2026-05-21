@@ -14,7 +14,7 @@ entities:
     start_x: 2
     start_y: 2
     start_theta: 0
-    radius: 0.3
+    radius: 0.46
     color: [0, 100, 255, 255]
     use_keyboard: false
     use_differential: false

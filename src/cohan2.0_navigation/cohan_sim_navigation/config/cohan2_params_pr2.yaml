@@ -112,7 +112,7 @@ controller_server:
     use_sim_time: True
     controller_frequency: 20.0
     min_x_velocity_threshold: 0.001
-    min_y_velocity_threshold: 0.5
+    min_y_velocity_threshold: 0.001
     min_theta_velocity_threshold: 0.001
     failure_tolerance: 0.3
     progress_checker_plugin: "progress_checker"
@@ -142,31 +142,8 @@ controller_server:
       base_frame: base_link
       footprint_frame: base_footprint
       planning_mode: 1
-      # Trajectory
-      teb_autosize: True
-      dt_ref: 0.1
-      dt_hysteresis: 0.01
-      global_plan_overwrite_orientation: True
-      allow_init_with_backwards_motion: False
-      max_global_plan_lookahead_dist: 0.0
-      feasibility_check_no_poses: 2
-      global_plan_viapoint_sep: 0.2
-      disable_warm_start: True
-      shrink_horizon_backup: True
-      # Robot
-      holonomic_robot: false
-      type: 0 #(0: Robot, 1: Human)
-      robot_radius: 0.47
-      max_vel_y: 0.7
-      acc_lim_y: 0.3
-      max_vel_x: 0.7
-      min_vel_x: 0.02
-      max_vel_x_backwards: 0.4
-      max_vel_theta: 1.2
-      min_vel_theta: 0.1
-      acc_lim_x: 0.3
-      acc_lim_theta: 0.4
-      min_turning_radius: 0.0
+        
+      ##Footprint 
       footprint_model: # types: "point", "circular", "two_circles", "line", "polygon" --> for PR2
         type: "polygon"
         radius: 0.34 # for type "circular"
@@ -178,98 +155,143 @@ controller_server:
         rear_radius: 0.2 # for type "two_circles"
         vertices: "[[-0.325, -0.325], [-0.325, 0.325], [0.325, 0.325] [0.325, -0.325]]" # for type "polygon"
 
+      # Behavior Tree
+      bt_mode_switch:
+        bt_xml_path: "behavior_trees/all_modes.xml"
+        agents_info_topic: "/agents_info"
+        plan_sub_topic: "/plan"
+        result_sub_topic: "/navigate_to_pose/_action/status"
+        passage_sub_topic: "/invisible_humans_detection/passage"
+
+      # Robot
+      robot:
+        max_vel_y: 0.7
+        acc_lim_y: 0.3
+        max_vel_x: 0.7
+        min_vel_x: 0.02
+        max_vel_x_backwards: 0.4
+        max_vel_theta: 1.2
+        min_vel_theta: 0.1
+        acc_lim_x: 0.3
+        acc_lim_theta: 0.4
+        min_turning_radius: 0.0
+
       # Agents
       ## Agent Model Params
-      agent_radius: 0.30
-      max_agent_vel_x: 1.3
-      max_agent_vel_y: 0.4
-      max_agent_vel_x_backwards: 0.01
-      max_agent_vel_theta: 1.1
-      agent_acc_lim_x: 0.6
-      agent_acc_lim_y: 0.3
-      agent_acc_lim_theta: 0.8
+      agent:
+        agent_radius: 0.30
+        max_agent_vel_x: 1.3
+        max_agent_vel_y: 0.4
+        max_agent_vel_x_backwards: 0.01
+        max_agent_vel_theta: 1.1
+        agent_acc_lim_x: 0.6
+        agent_acc_lim_y: 0.3
+        agent_acc_lim_theta: 0.8
+
+      # Trajectory
+      trajectory:
+        teb_autosize: True
+        dt_ref: 0.1
+        dt_hysteresis: 0.01
+        global_plan_overwrite_orientation: True
+        allow_init_with_backwards_motion: False
+        max_global_plan_lookahead_dist: 0.0
+        feasibility_check_no_poses: 2
+        global_plan_viapoint_sep: 0.2
+        shrink_horizon_backup: True
+      
       ## HATEB Params
-      use_agent_agent_safety_c: True
-      use_agent_robot_safety_c: True
-      use_agent_robot_rel_vel_c: True
-      use_agent_robot_visi_c: True
-      add_invisible_humans: True
-      min_agent_agent_dist: 0.4
-      min_agent_robot_dist: 0.6
-      rel_vel_cost_threshold: 1.5
-      visibility_cost_threshold: 2.5
-      invisible_human_threshold: 1.0
-      prediction_time_horizon: 10.0
+      hateb:
+        use_agent_agent_safety_c: True
+        use_agent_robot_safety_c: True
+        use_agent_robot_rel_vel_c: True
+        use_agent_robot_visi_c: True
+        add_invisible_humans: True
+        min_agent_agent_dist: 0.4
+        min_agent_robot_dist: 0.6
+        rel_vel_cost_threshold: 1.5
+        visibility_cost_threshold: 2.5
+        invisible_human_threshold: 1.0
+        prediction_time_horizon: 10.0
+      
       # GoalTolerance
-      xy_goal_tolerance: 0.2
-      yaw_goal_tolerance: 0.2
-      free_goal_vel: True
+      goal:
+        xy_goal_tolerance: 0.2
+        yaw_goal_tolerance: 0.2
+        free_goal_vel: True
+
       # Obstacles
-      min_obstacle_dist: 0.3
-      include_costmap_obstacles: True
-      costmap_obstacles_behind_robot_dist: 0.5
-      obstacle_poses_affected: 1
-      costmap_converter_plugin: "costmap_converter::CostmapToLinesDBSRANSAC"
-      costmap_converter_spin_thread: True
-      costmap_converter_rate: 10
-      obstacle_cost_mult: 1.0
-      use_nonlinear_obstacle_penalty: True
-      costmap_converter/CostmapToLinesDBSRANSAC:
-         cluster_max_distance: 0.8
-         cluster_min_pts: 2
-         ransac_inlier_distance: 0.15
-         ransac_min_inliers: 10
-         ransac_no_iterations: 1500
-         ransac_remainig_outliers: 3
-         ransac_convert_outlier_pts: True
-         ransac_filter_remaining_outlier_pts: False
-         convex_hull_min_pt_separation: 0.1
+      obstacles:
+        min_obstacle_dist: 0.2
+        include_costmap_obstacles: True
+        costmap_obstacles_behind_robot_dist: 0.5
+        obstacle_poses_affected: 1
+        costmap_converter_plugin: "costmap_converter::CostmapToLinesDBSRANSAC"
+        costmap_converter_spin_thread: True
+        costmap_converter_rate: 10
+        obstacle_cost_mult: 1.0
+        use_nonlinear_obstacle_penalty: True
+        costmap_converter/CostmapToLinesDBSRANSAC:
+          cluster_max_distance: 0.8
+          cluster_min_pts: 2
+          ransac_inlier_distance: 0.15
+          ransac_min_inliers: 10
+          ransac_no_iterations: 1500
+          ransac_remainig_outliers: 3
+          ransac_convert_outlier_pts: True
+          ransac_filter_remaining_outlier_pts: False
+          convex_hull_min_pt_separation: 0.1
+
       # Optimization
-      no_inner_iterations: 8
-      no_outer_iterations: 4
-      optimization_activate: True
-      optimization_verbose: False
-      penalty_epsilon: 0.01
-      weight_max_vel_x: 2.
-      weight_max_vel_y: 2.
-      weight_max_agent_vel_x: 4.
-      weight_max_agent_vel_y: 4.
-      weight_nominal_agent_vel_x: 2.
-      weight_max_vel_theta: 1.
-      weight_max_agent_vel_theta: 2.
-      weight_acc_lim_x: 1.
-      weight_acc_lim_y: 1.
-      weight_agent_acc_lim_x: 2.
-      weight_agent_acc_lim_y: 2.
-      weight_acc_lim_theta: 1.
-      weight_agent_acc_lim_theta: 2.
-      weight_kinematics_nh: 1000.
-      weight_kinematics_forward_drive: 100.0
-      weight_kinematics_turning_radius: 0.
-      weight_optimaltime: 1.0
-      weight_agent_optimaltime: 3.0
-      weight_obstacle: 50.0
-      weight_dynamic_obstacle: 50.
-      weight_viapoint: 0.05
-      weight_agent_viapoint: 0.5
-      weight_shortest_path: 1.0
-      selection_alternative_time_cost: False
-      cap_optimaltime_penalty: True
-      weight_agent_robot_safety: 5.0
-      weight_agent_agent_safety: 2.0
-      weight_agent_robot_rel_vel: 5.0
-      weight_agent_robot_visibility: 5.0
-      weight_invisible_human: 1.0
+      optim:
+        no_inner_iterations: 8
+        no_outer_iterations: 4
+        optimization_activate: True
+        optimization_verbose: False
+        penalty_epsilon: 0.01
+        weight_max_vel_x: 2.
+        weight_max_vel_y: 2.
+        weight_max_agent_vel_x: 4.
+        weight_max_agent_vel_y: 4.
+        weight_nominal_agent_vel_x: 2.
+        weight_max_vel_theta: 1.
+        weight_max_agent_vel_theta: 2.
+        weight_acc_lim_x: 1.
+        weight_acc_lim_y: 1.
+        weight_agent_acc_lim_x: 2.
+        weight_agent_acc_lim_y: 2.
+        weight_acc_lim_theta: 1.
+        weight_agent_acc_lim_theta: 2.
+        weight_kinematics_nh: 0.0 ## 0 for Omni, 1000 for diff
+        weight_kinematics_forward_drive: 50.
+        weight_kinematics_turning_radius: 0.0
+        weight_optimaltime: 1.0
+        weight_agent_optimaltime: 3.0
+        weight_obstacle: 50.0
+        weight_dynamic_obstacle: 50.
+        weight_agent_viapoint: 0.5
+        weight_shortest_path: 1.0
+        selection_alternative_time_cost: False
+        cap_optimaltime_penalty: True
+        weight_agent_robot_safety: 5.0
+        weight_agent_agent_safety: 2.0
+        weight_agent_robot_rel_vel: 5.0
+        weight_agent_robot_visibility: 5.0
+        weight_invisible_human: 1.0
+        disable_warm_start: True
+
+
       # Visualization
-      pose_array_z_scale: 0.5
-      publish_agents_global_plans: true
-      publish_agents_local_plan_fp_poses: true
-      publish_agents_local_plan_poses: true
-      publish_agents_local_plans: true
-      publish_robot_global_plan: true
-      publish_robot_local_plan: true
-      publish_robot_local_plan_fp_poses: true
-      publish_robot_local_plan_poses: true
+      visualization:
+        pose_array_z_scale: 0.5
+        publish_agents_global_plans: true
+        publish_agents_local_plan_fp_poses: true
+        publish_agents_local_plan_poses: true
+        publish_agents_local_plans: true
+        publish_robot_global_plan: true
+        publish_robot_local_plan: true
+        publish_robot_local_plan_fp_poses: true
+        publish_robot_local_plan_poses: true
 
 local_costmap:
   local_costmap:
@@ -289,7 +311,7 @@ local_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        inflation_radius: 0.6
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
@@ -315,10 +337,12 @@ local_costmap:
         map_subscribe_transient_local: True
       human_static_layer:
         plugin: "cohan_layers::StaticAgentLayer"
-        agent_radius: 0.80
+        agent_radius: 0.30
+        amplitude: 150.0
       human_visibility_layer:
         plugin: "cohan_layers::AgentVisibilityLayer"
-      always_send_full_costmap: True
+        agent_radius: 0.30
+        amplitude: 250.0
 
 global_costmap:
   global_costmap:
@@ -355,14 +379,16 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        inflation_radius: 0.6
       always_send_full_costmap: True
       human_static_layer:
         plugin: "cohan_layers::StaticAgentLayer"
-        agent_radius: 0.80
+        agent_radius: 0.30
+        amplitude: 150.0
       human_visibility_layer:
         plugin: "cohan_layers::AgentVisibilityLayer"
-
+        agent_radius: 0.30
+        amplitude: 250.0
 
 map_server:
   ros__parameters:
@@ -388,7 +414,7 @@ planner_server:
       plugin: "nav2_navfn_planner/NavfnPlanner"
       tolerance: 0.5
       use_astar: false
-      allow_unknown: true
+      allow_unknown: false
 
 smoother_server:
   ros__parameters:
@@ -446,10 +472,10 @@ velocity_smoother:
     smoothing_frequency: 50.0
     scale_velocities: False
     feedback: "OPEN_LOOP"
-    max_velocity: [0.7, 0.0, 1.0]
-    min_velocity: [-0.7, 0.0, -1.0]
-    max_accel: [2.5, 0.0, 3.2]
-    max_decel: [-2.5, 0.0, -3.2]
+    max_velocity: [0.7, 0.7, 1.2] ## Make sure these match with the cohan params
+    min_velocity: [-0.7, -0.7, -1.2] ## Make sure these match with the cohan params
+    max_accel: [2.5, 2.5, 3.2] ## Make sure these match with the cohan params
+    max_decel: [-2.5, -2.5, -3.2] ## Make sure these match with the cohan params
     odom_topic: "odom"
     odom_duration: 0.1
     deadband_velocity: [0.0, 0.0, 0.0]

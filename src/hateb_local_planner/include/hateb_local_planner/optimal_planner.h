@@ -828,8 +828,6 @@ class HATebOptimalPlanner : public PlannerInterface {
   std::vector<geometry_msgs::msg::Pose> static_agents_;  //!< Store poses of static agents in the environment that do not move but need consideration for visibility and safety
   bool initialized_;                                     //!< Keeps track about the correct initialization of this class
   bool optimized_;                                       //!< This variable is \c true as long as the last optimization has been completed successful
-  double agent_radius_;                                  //!< Radius of the circular footprint used for agent collision checking and safety distances
-  double robot_radius_;                                  //!< Radius of the robot's circular footprint used for collision checking and safety calculations
   int isMode_;                                           //!< Planning Mode
   std::vector<double> agent_nominal_vels_;               //!< Nominal agent velocities calculated using moving average filter
   double current_agent_robot_min_dist_;                  //!< Controls addition of edges

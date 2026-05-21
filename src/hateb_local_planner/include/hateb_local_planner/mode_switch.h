@@ -57,10 +57,10 @@
 #include <mutex>
 
 // All topics are good here
-#define AGENTS_INFO_SUB "/agents_info"
-#define PLAN_SUB "/plan"
-#define RESULT_SUB "/navigate_to_pose/_action/status"
-#define PASSAGE_SUB "/map_scanner/passage"
+// #define AGENTS_INFO_SUB "/agents_info"
+// #define PLAN_SUB "/plan"
+// #define RESULT_SUB "/navigate_to_pose/_action/status"
+// #define PASSAGE_SUB "/invisible_humans_detection/passage"
 
 namespace hateb_local_planner {
 
@@ -88,10 +88,10 @@ class ModeSwitch {
   /**
    * @brief Initializes the mode switch with required components
    * @param node ROS 2 node shared pointer
-   * @param xml_path Path to the behavior tree XML description
+   * @param cfg Configuration pointer
    * @param agents_ptr Pointer to the agents management class
    */
-  void initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::string& xml_path, std::shared_ptr<hateb_local_planner::Agents>& agents_ptr);
+  void initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::shared_ptr<HATebConfig> cfg, std::shared_ptr<hateb_local_planner::Agents>& agents_ptr);
 
   /**
    * @brief Executes one tick of the behavior tree
@@ -203,6 +203,8 @@ class ModeSwitch {
   std::string plan_sub_topic_;         //!< Topic for robot plan
   std::string result_sub_topic_;       //!< Topic for robot goal result
   std::string passage_sub_topic_;      //!< Topic for passage detection (from invisible humans)
+
+  std::shared_ptr<HATebConfig> cfg_;
 };
 
 }  // namespace hateb_local_planner

@@ -36,20 +36,21 @@ ModeSwitch::ModeSwitch() {
   initialized_ = false;
 }
 
-void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::string& xml_path, std::shared_ptr<hateb_local_planner::Agents>& agents_ptr) {
+void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::shared_ptr<HATebConfig> cfg, std::shared_ptr<hateb_local_planner::Agents>& agents_ptr) {
   if (!initialized_) {
     // Initialize the ROS components
     // TODO(sphanit): Check if you need to make them configurable
     node_ = node;
+    cfg_ = cfg;
 
     // Get the namespace from the parameter (different from the cfg server)
     node->get_parameter_or("ns", ns_, std::string(""));
 
     // Map the subscriptions properly
-    agents_info_sub_topic_ = std::string(AGENTS_INFO_SUB);
-    plan_sub_topic_ = std::string(PLAN_SUB);
-    result_sub_topic_ = std::string(RESULT_SUB);
-    passage_sub_topic_ = std::string(PASSAGE_SUB);
+    agents_info_sub_topic_ = std::string(cfg_->bt_mode_switch.agents_info_topic);
+    plan_sub_topic_ = std::string(cfg_->bt_mode_switch.plan_sub_topic);
+    result_sub_topic_ = std::string(cfg_->bt_mode_switch.result_sub_topic);
+    passage_sub_topic_ = std::string(cfg_->bt_mode_switch.passage_sub_topic);
     if (!ns_.empty()) {
       agents_info_sub_topic_ = "/" + ns_ + agents_info_sub_topic_;
       plan_sub_topic_ = "/" + ns_ + plan_sub_topic_;
@@ -57,10 +58,13 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
       passage_sub_topic_ = "/" + ns_ + passage_sub_topic_;
     }
 
+    // Subscriptions that help populate the blackboard
     agents_info_sub_ = node_->create_subscription<agent_path_prediction::msg::AgentsInfo>(agents_info_sub_topic_, 1, std::bind(&ModeSwitch::agentsInfoCB, this, std::placeholders::_1));
     plan_sub_ = node_->create_subscription<nav_msgs::msg::Path>(plan_sub_topic_, 1, std::bind(&ModeSwitch::planCB, this, std::placeholders::_1));
     result_sub_ = node_->create_subscription<action_msgs::msg::GoalStatusArray>(result_sub_topic_, 1, std::bind(&ModeSwitch::resultNavigateToPoseCB, this, std::placeholders::_1));
     passage_detect_sub_ = node_->create_subscription<cohan_msgs::msg::PassageType>(passage_sub_topic_, 1, std::bind(&ModeSwitch::passageCB, this, std::placeholders::_1));
+
+    // Publishers
     planning_mode_pub_ = node_->create_publisher<hateb_local_planner::msg::PlanningMode>("planning_mode", 10);
 
     // Initialize the parameters
@@ -71,6 +75,7 @@ void ModeSwitch::initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std
     registerNodes();
 
     // Build the Behavior Tree from the XML
+    std::string xml_path = cfg_->bt_mode_switch.bt_xml_path;
     if (xml_path == "") {
       BT_ERROR("ModeSwitch", "Please provide the correct xml to create the tree!")
       exit(0);
@@ -143,6 +148,7 @@ void ModeSwitch::planCB(const nav_msgs::msg::Path::SharedPtr plan_msg) {
   if (goal_dist_change > 0.2) {
     bhv_tree_.rootBlackboard()->set("goal_update", true);
     bhv_tree_.rootBlackboard()->set("nav_goal", goal);
+    bhv_tree_.rootBlackboard()->set("recovery", false);
     goal_update_ = true;
     BT_INFO(name_, "Goal updated in blackboard.");
   }

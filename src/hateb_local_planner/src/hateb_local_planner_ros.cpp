@@ -196,10 +196,10 @@ void HATebLocalPlannerROS::configure(const rclcpp_lifecycle::LifecycleNode::Weak
   // Initialize the pointer to agents and mode switch
   agents_ptr_ = std::make_shared<hateb_local_planner::Agents>(node, tf_, costmap_ros, cfg_);
   // Get behavior tree XML path
-  if (cfg_->bt_xml_path.empty()) {
+  if (cfg_->bt_mode_switch.bt_xml_path.empty()) {
     RCLCPP_ERROR(logger_, "Please provide the xml path by setting the bt_xml_path param");
   }
-  bt_mode_switch_.initialize(node, cfg_->bt_xml_path, agents_ptr_);
+  bt_mode_switch_.initialize(node, cfg_, agents_ptr_);
 
   // Initialize timers and properties
   last_call_time_ = clock_->now() - rclcpp::Duration::from_seconds(cfg_->hateb.pose_prediction_reset_time);
@@ -417,10 +417,6 @@ geometry_msgs::msg::TwistStamped HATebLocalPlannerROS::computeVelocityCommands(c
     mode = "VelObs";
   } else if (isMode_ == 2) {
     mode = "Passing through";
-  } else if (isMode_ == 3) {
-    mode = "Approaching Pillar";
-  } else if (isMode_ == 4) {
-    mode = "Approaching Goal";
   } else {
     mode = "SingleBand";
   }
