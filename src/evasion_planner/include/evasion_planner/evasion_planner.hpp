@@ -47,10 +47,14 @@ class EvasionPlanner : public nav2_core::GlobalPlanner {
   nav_msgs::msg::Path last_path_;
   Point last_goal_;
   Point evasion_control_point_;
+  bool evasion_point_updated_;
 
   void planningModeCallback(const hateb_local_planner::msg::PlanningMode::SharedPtr msg) { current_planning_mode_ = *msg; }
   void evasionControlPointCallback(const geometry_msgs::msg::Point::SharedPtr msg) {
     // Store the evasion control point for use in path generation
+    if (std::hypot(evasion_control_point_.x - msg->x, evasion_control_point_.y - msg->y) > 2.0) {
+      evasion_point_updated_ = true;
+    }
     evasion_control_point_ = Point(msg->x, msg->y);
   }
   nav_msgs::msg::Path combinePaths(const nav_msgs::msg::Path& path1, const nav_msgs::msg::Path& path2);

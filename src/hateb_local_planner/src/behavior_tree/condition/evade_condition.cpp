@@ -34,8 +34,8 @@ EvadeCondition::EvadeCondition(const std::string& condition_name, const BT::Node
   mid_x_ = std::numeric_limits<double>::max();
   mid_y_ = std::numeric_limits<double>::max();
   evasion_triggered_ = false;
-  previous_human_pose_.x = -999.;
-  previous_human_pose_.y = -999.;
+  // previous_human_pose_.x = -999.;
+  // previous_human_pose_.y = -999.;
   // node_ = nullptr;
   // vector_pub_ = nullptr;
   BT_INFO(name_, "Starting the EvadeCondition BT Node");
@@ -70,14 +70,14 @@ BT::NodeStatus EvadeCondition::tick() {
     return BT::NodeStatus::FAILURE;
   }
 
-  double p_dx = previous_human_pose_.x - agents_info_.humans[0].pose.x;
-  double p_dy = previous_human_pose_.y - agents_info_.humans[0].pose.y;
+  // double p_dx = previous_human_pose_.x - agents_info_.humans[0].pose.x;
+  // double p_dy = previous_human_pose_.y - agents_info_.humans[0].pose.y;
 
-  if (evasion_triggered_ && std::hypot(p_dx, p_dy) > 0.5) {
-    BT_INFO(name_, "The human has moved away!")
-    evasion_triggered_ = false;
-    setOutput("recovery", true);
-  }
+  // if (evasion_triggered_ && std::hypot(p_dx, p_dy) > 0.05) {
+  //   BT_INFO(name_, "The human has moved away!")
+  //   evasion_triggered_ = false;
+  //   setOutput("recovery", true);
+  // }
 
   if (!evasion_triggered_) {
     // // Check if there are any humans to evade
@@ -86,6 +86,8 @@ BT::NodeStatus EvadeCondition::tick() {
     //   publishVectors();
     //   return BT::NodeStatus::FAILURE;
     // }
+
+    // previous_human_pose_ = Point(agents_info_.humans[0].pose.x, agents_info_.humans[0].pose.y);
 
     // Check if Evasion is needed or not
     if (!doSegmentsIntersect(Point(agents_info_.robot_pose.x, agents_info_.robot_pose.y), Point(goal_.pose.position.x, goal_.pose.position.y),
@@ -109,8 +111,6 @@ BT::NodeStatus EvadeCondition::tick() {
       publishVectors();  // Publish even when not evading
       return BT::NodeStatus::FAILURE;
     }
-
-    previous_human_pose_ = Point(agents_info_.humans[0].pose.x, agents_info_.humans[0].pose.y);
   }
 
   auto r_dx = mid_x_ - agents_info_.robot_pose.x;

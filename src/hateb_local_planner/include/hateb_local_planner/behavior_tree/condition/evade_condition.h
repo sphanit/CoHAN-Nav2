@@ -167,7 +167,7 @@ class EvadeCondition : public BT::ConditionNode {
   std::pair<double, double> r_dx_dy_;                   //!< Pair to store the evasion direction vector (dx, dy)
   bool evasion_triggered_;                              //!< Flag to indicate if evasion has been triggered
   geometry_msgs::msg::PoseStamped goal_;                //!< Current navigation goal
-  Point previous_human_pose_;
+  // Point previous_human_pose_;
 
   // // ROS
   rclcpp_lifecycle::LifecycleNode::SharedPtr node_;                                //!< ROS node for publishing

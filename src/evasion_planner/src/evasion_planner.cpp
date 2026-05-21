@@ -43,6 +43,11 @@ nav_msgs::msg::Path EvasionPlanner::createPlan(const geometry_msgs::msg::PoseSta
   control_point_pose.pose.position.z = 0.0;
   control_point_pose.pose.orientation.w = 1.0;
 
+  if (evasion_point_updated_) {
+    last_path_.poses.clear();
+    evasion_point_updated_ = false;
+  }
+
   if (static_cast<int>(current_planning_mode_.plan_mode) == 4) {
     if (!last_path_.poses.empty()) {
       RCLCPP_INFO(node_->get_logger(), "Using cached path");
