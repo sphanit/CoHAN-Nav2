@@ -270,6 +270,7 @@ controller_server:
         weight_obstacle: 50.0
         weight_dynamic_obstacle: 50.
         weight_agent_viapoint: 0.5
+        weight_viapoint: 0.05
         weight_shortest_path: 1.0
         selection_alternative_time_cost: False
         cap_optimaltime_penalty: True

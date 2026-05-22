@@ -127,5 +127,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export DISABLE_ROS1_EOL_WARNINGS=1
-source /opt/ros/melodic/setup.bash
+source /opt/ros/humble/setup.bash
+export ROS_DOMAIN_ID=0
+export ROS_LOCALHOST_ONLY=1
+export TURTLEBOT3_MODEL=waffle  # Iron and older only with Gazebo Classic
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models # Iron and older only with Gazebo Classic
