@@ -63,6 +63,14 @@ def generate_launch_description():
                 output='screen',
                 parameters=[{'use_sim_time': use_sim_time}] 
             ),
+            Node(
+                package='cohan_layers',
+                executable='agent_filter.py',
+                name='agent_filter',
+                output='screen',
+                arguments=[namespace],
+                parameters=[{'use_sim_time': use_sim_time}] 
+            ),
         ]
     )
 
@@ -107,6 +115,17 @@ def generate_launch_description():
                 namespace=namespace,
                 parameters=[{'use_sim_time': use_sim_time}],
                 remappings=[('map', '/map')]
+            ),
+            Node(
+                package='cohan_layers',
+                executable='agent_filter.py',
+                name='agent_filter',
+                output='screen',
+                namespace=namespace,
+                arguments=[namespace],
+                parameters=[{'use_sim_time': use_sim_time}],
+                remappings=[('map', '/map')]
+
             ),
         ]
     )

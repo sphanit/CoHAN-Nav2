@@ -263,7 +263,7 @@ controller_server:
         weight_acc_lim_theta: 1.
         weight_agent_acc_lim_theta: 2.
         weight_kinematics_nh: 1000. ## 0 for Omni, 1000 for diff
-        weight_kinematics_forward_drive: 10.
+        weight_kinematics_forward_drive: 50.
         weight_kinematics_turning_radius: 0.0
         weight_optimaltime: 1.0
         weight_agent_optimaltime: 3.0
@@ -322,7 +322,7 @@ local_costmap:
         mark_threshold: 0
         observation_sources: scan
         scan:
-          topic: /scan
+          topic: /base_scan_filtered
           max_obstacle_height: 2.0
           clearing: True
           marking: True
@@ -362,7 +362,7 @@ global_costmap:
         enabled: True
         observation_sources: scan
         scan:
-          topic: /scan
+          topic: /base_scan_filtered
           max_obstacle_height: 2.0
           clearing: True
           marking: True

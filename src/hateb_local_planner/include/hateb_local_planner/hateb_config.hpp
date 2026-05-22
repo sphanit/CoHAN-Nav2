@@ -289,16 +289,6 @@ class HATebConfig {
 
   /**
    * @brief Construct the HATebConfig using default values.
-   * @warning If the \b rosparam server or/and \b dynamic_reconfigure (rqt_reconfigure) node are used,
-   *	     the default variables will be overwritten: \n
-   *	     E.g. if \e base_local_planner is utilized as plugin for the navigation stack, the initialize() method will register a
-   * 	     dynamic_reconfigure server. A subset (not all but most) of the parameters are considered for dynamic modifications.
-   * 	     All parameters considered by the dynamic_reconfigure server (and their \b default values) are
-   * 	     set in \e PROJECT_SRC/cfg/HATebLocalPlannerReconfigure.cfg. \n
-   * 	     In addition the rosparam server can be queried to get parameters e.g. defiend in a launch file.
-   * 	     The plugin source (or a possible binary source) can call loadRosParamFromNodeHandle() to update the parameters.
-   * 	     In \e summary, default parameters are loaded in the following order (the right one overrides the left ones): \n
-   * 		<b>HATebConfig Constructor defaults << dynamic_reconfigure defaults << rosparam server defaults</b>
    */
   HATebConfig() {
     odom_topic = "odom";

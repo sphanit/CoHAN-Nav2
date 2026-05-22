@@ -79,4 +79,13 @@ ament_export_dependencies(
   ros2_helpers
 )
 
+# Install scripts (Python executables)
+install(
+  PROGRAMS
+    scripts/agent_filter.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+
+
 ament_package()
