@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="edge__agent__agent__safety_8h" kind="file" language="C++">
+    <compoundname>edge_agent_agent_safety.h</compoundname>
+    <includes refid="base__teb__edges_8h" local="no">hateb_local_planner/g2o_types/base_teb_edges.h</includes>
+    <includes refid="penalties_8h" local="no">hateb_local_planner/g2o_types/penalties.h</includes>
+    <includes refid="vertex__pose_8h" local="no">hateb_local_planner/g2o_types/vertex_pose.h</includes>
+    <includes refid="hateb__config_8hpp" local="no">hateb_local_planner/hateb_config.hpp</includes>
+    <includedby refid="optimal__planner_8h" local="no">optimal_planner.h</includedby>
+    <incdepgraph>
+      <node id="19">
+        <label>boost/pointer_cast.hpp</label>
+      </node>
+      <node id="35">
+        <label>functional</label>
+      </node>
+      <node id="20">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="22">
+        <label>geometry_msgs/msg/polygon.hpp</label>
+      </node>
+      <node id="34">
+        <label>ros2_helpers/parameters.hpp</label>
+        <link refid="parameters_8hpp"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>hateb_local_planner/footprint_model.h</label>
+        <link refid="footprint__model_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="29">
+        <label>geometry_msgs/msg/pose.hpp</label>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner/g2o_types/base_teb_edges.h</label>
+        <link refid="base__teb__edges_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>cmath</label>
+      </node>
+      <node id="6">
+        <label>cassert</label>
+      </node>
+      <node id="48">
+        <label>g2o/core/hyper_graph_action.h</label>
+      </node>
+      <node id="12">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="42">
+        <label>rclcpp/logging.hpp</label>
+      </node>
+      <node id="40">
+        <label>string</label>
+      </node>
+      <node id="45">
+        <label>hateb_local_planner/g2o_types/vertex_pose.h</label>
+        <link refid="vertex__pose_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>g2o/core/base_multi_edge.h</label>
+      </node>
+      <node id="31">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="28">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="24">
+        <label>geometry_msgs/msg/twist_with_covariance.hpp</label>
+      </node>
+      <node id="33">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="47">
+        <label>g2o/core/base_vertex.h</label>
+      </node>
+      <node id="11">
+        <label>hateb_local_planner/misc.h</label>
+        <link refid="hateb__local__planner_2include_2hateb__local__planner_2misc_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>hateb_local_planner/g2o_types/penalties.h</label>
+        <link refid="penalties_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>g2o/config.h</label>
+      </node>
+      <node id="18">
+        <label>Eigen/StdVector</label>
+      </node>
+      <node id="23">
+        <label>geometry_msgs/msg/quaternion_stamped.hpp</label>
+      </node>
+      <node id="7">
+        <label>hateb_local_planner/hateb_config.hpp</label>
+        <link refid="hateb__config_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>hateb_local_planner/obstacles.h</label>
+        <link refid="obstacles_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>rcl_interfaces/msg/parameter_descriptor.hpp</label>
+      </node>
+      <node id="15">
+        <label>vector</label>
+      </node>
+      <node id="37">
+        <label>rcl_interfaces/msg/integer_range.hpp</label>
+      </node>
+      <node id="25">
+        <label>utility</label>
+      </node>
+      <node id="3">
+        <label>g2o/core/base_binary_edge.h</label>
+      </node>
+      <node id="5">
+        <label>g2o/core/base_unary_edge.h</label>
+      </node>
+      <node id="14">
+        <label>boost/utility.hpp</label>
+      </node>
+      <node id="1">
+        <label>edge_agent_agent_safety.h</label>
+        <link refid="edge__agent__agent__safety_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="41">
+        <label>unordered_map</label>
+      </node>
+      <node id="32">
+        <label>mutex</label>
+      </node>
+      <node id="26">
+        <label>hateb_local_planner/pose_se2.h</label>
+        <link refid="pose__se2_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>g2o/stuff/misc.h</label>
+      </node>
+      <node id="21">
+        <label>complex</label>
+      </node>
+      <node id="16">
+        <label>algorithm</label>
+      </node>
+      <node id="10">
+        <label>hateb_local_planner/distance_calculations.h</label>
+        <link refid="distance__calculations_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="13">
+        <label>boost/type_traits.hpp</label>
+      </node>
+      <node id="36">
+        <label>rcl_interfaces/msg/floating_point_range.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>visualization.cpp</label>
+        <link refid="visualization_8cpp"/>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner_ros.cpp</label>
+        <link refid="hateb__local__planner__ros_8cpp"/>
+      </node>
+      <node id="1">
+        <label>edge_agent_agent_safety.h</label>
+        <link refid="edge__agent__agent__safety_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hateb_local_planner_ros.h</label>
+        <link refid="hateb__local__planner__ros_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>optimal_planner.h</label>
+        <link refid="optimal__planner_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>optimal_planner.cpp</label>
+        <link refid="optimal__planner_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhateb__local__planner_1_1EdgeAgentAgentSafety" prot="public">hateb_local_planner::EdgeAgentAgentSafety</innerclass>
+    <innernamespace refid="namespacehateb__local__planner">hateb_local_planner</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(MIT<sp/>License)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2020-2025<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Notes:</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>The<sp/>following<sp/>class<sp/>is<sp/>derived<sp/>from<sp/>a<sp/>class<sp/>defined<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>g2o-framework.<sp/>g2o<sp/>is<sp/>licensed<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>BSD<sp/>License.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>Refer<sp/>to<sp/>the<sp/>base<sp/>class<sp/>source<sp/>for<sp/>detailed<sp/>licensing<sp/>information.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EDGE_AGENT_AGENT_SAFETY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EDGE_AGENT_AGENT_SAFETY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="base__teb__edges_8h" kindref="compound">hateb_local_planner/g2o_types/base_teb_edges.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="penalties_8h" kindref="compound">hateb_local_planner/g2o_types/penalties.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="vertex__pose_8h" kindref="compound">hateb_local_planner/g2o_types/vertex_pose.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="hateb__config_8hpp" kindref="compound">hateb_local_planner/hateb_config.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehateb__local__planner" kindref="compound">hateb_local_planner</ref><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classhateb__local__planner_1_1EdgeAgentAgentSafety" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1EdgeAgentAgentSafety" kindref="compound">EdgeAgentAgentSafety</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseTebBinaryEdge" kindref="compound">BaseTebBinaryEdge</ref>&lt;1,<sp/>double,<sp/>VertexPose,<sp/>VertexPose&gt;<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58" refid="classhateb__local__planner_1_1EdgeAgentAgentSafety_1aad47d0fcf0a01457e982db85e05de707" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1EdgeAgentAgentSafety_1aad47d0fcf0a01457e982db85e05de707" kindref="member">EdgeAgentAgentSafety</ref>()<sp/>{<sp/>this-&gt;setMeasurement(0.);<sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classhateb__local__planner_1_1EdgeAgentAgentSafety_1a79b3fed9ae67fbf18c9337aaaf1dd388" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1EdgeAgentAgentSafety_1a79b3fed9ae67fbf18c9337aaaf1dd388" kindref="member">computeError</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(<ref refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1af5ba7be337a1f51e8f000255ffd40e71" kindref="member">cfg_</ref>,<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>must<sp/>call<sp/>setHATebConfig()<sp/>on<sp/>EdgeAgentAgentSafety()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>agent1_bandpt<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[0]);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>agent2_bandpt<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[1]);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>agent_radius<sp/>=<sp/><ref refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1af5ba7be337a1f51e8f000255ffd40e71" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a1e83960102cc75c1876b830b69a97076" kindref="member">human_model</ref>-&gt;getCircumscribedRadius();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>distance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>std::hypot(agent1_bandpt-&gt;x()<sp/>-<sp/>agent2_bandpt-&gt;x(),<sp/>agent1_bandpt-&gt;y()<sp/>-<sp/>agent2_bandpt-&gt;y())<sp/>-<sp/>(2<sp/>*<sp/>agent_radius);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS2:<sp/>RCLCPP_DEBUG_THROTTLE<sp/>requires<sp/>clock<sp/>parameter<sp/>-<sp/>comment<sp/>out<sp/>for<sp/>now<sp/>as<sp/>this<sp/>is<sp/>not<sp/>critical</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>RCLCPP_DEBUG_THROTTLE(rclcpp::get_logger(&quot;hateb_local_planner&quot;),<sp/>*clock,<sp/>500,<sp/>&quot;agent<sp/>agent<sp/>external<sp/>dist<sp/>=<sp/>%f&quot;,<sp/>dist);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[0]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1ac0fc0ad9921b131015538d3d29ec4f75" kindref="member">penaltyBoundFromBelowQuad</ref>(dist,<sp/><ref refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1af5ba7be337a1f51e8f000255ffd40e71" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1af59ebc08ba1da01cb166b76483ac5f89" kindref="member">hateb</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1aa93c9f5b6e5786fdda5c2f1cf0f12314" kindref="member">min_agent_agent_dist</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1af5ba7be337a1f51e8f000255ffd40e71" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[0]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAgentAgentSafety::computeError()<sp/>_error[0]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[0]);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>EIGEN_MAKE_ALIGNED_OPERATOR_NEW</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">};<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hateb_local_planner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>EDGE_AGENT_AGENT_SAFETY_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_agent_safety.h"/>
+  </compounddef>
+</doxygen>

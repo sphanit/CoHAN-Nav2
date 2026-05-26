@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_3a47e67455ca1b272c769d9ef23039b1" kind="dir">
+    <compoundname>include</compoundname>
+    <innerdir refid="dir_a8e3bb89a129734a0c61c386bd2bc2f0">cohan_layers</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cohan_layers/include/"/>
+  </compounddef>
+</doxygen>

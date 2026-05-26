@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="defines_8h" kind="file" language="C++">
+    <compoundname>defines.h</compoundname>
+    <includes local="no">opencv2/opencv.hpp</includes>
+    <includedby refid="Ctracker_8h" local="yes">Ctracker.h</includedby>
+    <includedby refid="HungarianAlg_8h" local="yes">HungarianAlg.h</includedby>
+    <includedby refid="Kalman_8h" local="yes">Kalman.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="1">
+        <label>defines.h</label>
+        <link refid="defines_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>Kalman.h</label>
+        <link refid="Kalman_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Ctracker.cpp</label>
+        <link refid="Ctracker_8cpp"/>
+      </node>
+      <node id="2">
+        <label>Ctracker.h</label>
+        <link refid="Ctracker_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>HungarianAlg.cpp</label>
+        <link refid="HungarianAlg_8cpp"/>
+      </node>
+      <node id="3">
+        <label>costmap_to_dynamic_obstacles.h</label>
+        <link refid="costmap__to__dynamic__obstacles_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>HungarianAlg.h</label>
+        <link refid="HungarianAlg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Kalman.cpp</label>
+        <link refid="Kalman_8cpp"/>
+      </node>
+      <node id="4">
+        <label>costmap_to_dynamic_obstacles.cpp</label>
+        <link refid="costmap__to__dynamic__obstacles_8cpp"/>
+      </node>
+      <node id="1">
+        <label>defines.h</label>
+        <link refid="defines_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="defines_8h_1ab1a8d0e1d0eb73f62b8beee8a243475e" prot="public" static="no">
+        <name>Mat_t</name>
+        <initializer>CV_32FC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/defines.h" line="9" column="9" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/defines.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" prot="public" static="no">
+        <type>float</type>
+        <definition>typedef float track_t</definition>
+        <argsstring></argsstring>
+        <name>track_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/defines.h" line="7" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/defines.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="defines_8h_1a55bf6c4ee469b78ed649446615641b97" prot="public" static="no">
+        <type>cv::Point3_&lt; <ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref> &gt;</type>
+        <definition>typedef cv::Point3_&lt;track_t&gt; Point_t</definition>
+        <argsstring></argsstring>
+        <name>Point_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/defines.h" line="8" column="21" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/defines.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Based<sp/>on<sp/>https://github.com/Smorodov/Multitarget-tracker/tree/master/Tracker,<sp/>GPLv3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Refer<sp/>to<sp/>README.md<sp/>in<sp/>this<sp/>directory.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;opencv2/opencv.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref>;</highlight></codeline>
+<codeline lineno="8" refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>cv::Point3_&lt;track_t&gt;<sp/><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref>;</highlight></codeline>
+<codeline lineno="9" refid="defines_8h_1ab1a8d0e1d0eb73f62b8beee8a243475e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Mat_t<sp/>CV_32FC</highlight></codeline>
+    </programlisting>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/defines.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hateb__goal__checker_8hpp" kind="file" language="C++">
+    <compoundname>hateb_goal_checker.hpp</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">nav2_core/goal_checker.hpp</includes>
+    <includes local="no">rcl_interfaces/msg/set_parameters_result.hpp</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">rclcpp_lifecycle/lifecycle_node.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="hateb__local__planner__ros_8h" local="no">hateb_local_planner_ros.h</includedby>
+    <includedby refid="hateb__goal__checker_8cpp" local="no">hateb_goal_checker.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>rcl_interfaces/msg/set_parameters_result.hpp</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="3">
+        <label>nav2_core/goal_checker.hpp</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>hateb_goal_checker.hpp</label>
+        <link refid="hateb__goal__checker_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>hateb_local_planner_ros.cpp</label>
+        <link refid="hateb__local__planner__ros_8cpp"/>
+      </node>
+      <node id="4">
+        <label>hateb_goal_checker.cpp</label>
+        <link refid="hateb__goal__checker_8cpp"/>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner_ros.h</label>
+        <link refid="hateb__local__planner__ros_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hateb_goal_checker.hpp</label>
+        <link refid="hateb__goal__checker_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhateb__local__planner_1_1HATEBGoalChecker" prot="public">hateb_local_planner::HATEBGoalChecker</innerclass>
+    <innernamespace refid="namespacehateb__local__planner">hateb_local_planner</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(MIT<sp/>License)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024-2025<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HATEB_GOAL_CHECKER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HATEB_GOAL_CHECKER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav2_core/goal_checker.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rcl_interfaces/msg/set_parameters_result.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp/rclcpp.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp_lifecycle/lifecycle_node.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehateb__local__planner" kindref="compound">hateb_local_planner</ref><sp/>{</highlight></codeline>
+<codeline lineno="38" refid="classhateb__local__planner_1_1HATEBGoalChecker" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1HATEBGoalChecker" kindref="compound">HATEBGoalChecker</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>nav2_core::GoalChecker<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1a50ec4756fffa3a5e175a7d717368a922" kindref="member">HATEBGoalChecker</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classhateb__local__planner_1_1HATEBGoalChecker_1af3b049f1f9e030de23c6c29f95913ae1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1af3b049f1f9e030de23c6c29f95913ae1" kindref="member">~HATEBGoalChecker</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1a6a8b93140cd9edd944641ddee39ac53a" kindref="member">initialize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp_lifecycle::LifecycleNode::WeakPtr&amp;<sp/>parent,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>plugin_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;nav2_costmap_2d::Costmap2DROS&gt;<sp/>costmap_ros)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1a4bcab734eb6fa1e29c8ff3d40de87ffe" kindref="member">reset</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1ad280c32d278a163985b69f1f147c1a3a" kindref="member">isGoalReached</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::Pose&amp;<sp/>query_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::Pose&amp;<sp/>goal_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::Twist&amp;<sp/>velocity)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1a197d6d415e411a979b705cc0b399e990" kindref="member">getTolerances</ref>(geometry_msgs::msg::Pose&amp;<sp/>pose_tolerance,<sp/>geometry_msgs::msg::Twist&amp;<sp/>vel_tolerance)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classhateb__local__planner_1_1HATEBGoalChecker_1a9230dff17311d44f89d9f19b3e45cae1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1a9230dff17311d44f89d9f19b3e45cae1" kindref="member">setGoalControl</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)<sp/>{<sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1a1914465764a6c25a48f4561173c094e9" kindref="member">goal_ctrl_</ref><sp/>=<sp/>enable;<sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61" refid="classhateb__local__planner_1_1HATEBGoalChecker_1a419f68dd3b8c42fa2d697be32200dc10" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1a419f68dd3b8c42fa2d697be32200dc10" kindref="member">xy_goal_tolerance_</ref>,<sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1ab8b427f5820913521071f46fd25a219b" kindref="member">yaw_goal_tolerance_</ref>;</highlight></codeline>
+<codeline lineno="62" refid="classhateb__local__planner_1_1HATEBGoalChecker_1ab171a35b5bc28b11206bf9b278416791" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1af6e9d33c28d140c6428a2b889282e3c6" kindref="member">stateful_</ref>,<sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1ab171a35b5bc28b11206bf9b278416791" kindref="member">check_xy_</ref>;</highlight></codeline>
+<codeline lineno="63" refid="classhateb__local__planner_1_1HATEBGoalChecker_1a1914465764a6c25a48f4561173c094e9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1a1914465764a6c25a48f4561173c094e9" kindref="member">goal_ctrl_</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Cached<sp/>squared<sp/>xy_goal_tolerance_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classhateb__local__planner_1_1HATEBGoalChecker_1afe99eb84b72853033516e76e50950480" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1afe99eb84b72853033516e76e50950480" kindref="member">xy_goal_tolerance_sq_</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Dynamic<sp/>parameters<sp/>handler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classhateb__local__planner_1_1HATEBGoalChecker_1afafc0ebdaeefafb9b580ea7a7573bc23" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1afafc0ebdaeefafb9b580ea7a7573bc23" kindref="member">dyn_params_handler_</ref>;</highlight></codeline>
+<codeline lineno="69" refid="classhateb__local__planner_1_1HATEBGoalChecker_1a9cf9142d951ac021c19e1ee977cf6761" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1a9cf9142d951ac021c19e1ee977cf6761" kindref="member">plugin_name_</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>rcl_interfaces::msg::SetParametersResult<sp/><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1a8f4976afb734ebece04f70c8c3ad96bd" kindref="member">dynamicParametersCallback</ref>(std::vector&lt;rclcpp::Parameter&gt;<sp/><ref refid="namespaceparameters" kindref="compound">parameters</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hateb_local_planner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>HATEB_GOAL_CHECKER_H_</highlight></codeline>
+    </programlisting>
+    <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp"/>
+  </compounddef>
+</doxygen>

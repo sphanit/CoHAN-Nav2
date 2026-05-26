@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,46,133,73"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1VertexPose.html" title="This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized..." alt="" coords="181,5,335,47"/>
+<area shape="rect" id="node3" href="$classhateb__local__planner_1_1VertexTimeDiff.html" title="This class stores and wraps a time difference &#160;into a vertex that can be optimized via g2o." alt="" coords="181,71,335,112"/>
+</map>

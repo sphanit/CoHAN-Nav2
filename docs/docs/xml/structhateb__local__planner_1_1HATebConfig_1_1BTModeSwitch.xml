@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch" kind="struct" language="C++" prot="public">
+    <compoundname>hateb_local_planner::HATebConfig::BTModeSwitch</compoundname>
+    <includes refid="hateb__config_8hpp" local="no">hateb_config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch_1a9e30a24f9aa50f21ad896e49abcc003e" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::HATebConfig::BTModeSwitch::bt_xml_path</definition>
+        <argsstring></argsstring>
+        <name>bt_xml_path</name>
+        <briefdescription>
+<para>Path to the behavior tree XML file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="283" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch_1a197009bb007c24e1e11b203139070db9" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::HATebConfig::BTModeSwitch::agents_info_topic</definition>
+        <argsstring></argsstring>
+        <name>agents_info_topic</name>
+        <briefdescription>
+<para>Topic name for subscribing to agents information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="284" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch_1adab58114c45594ccd67ffafece8fef9d" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::HATebConfig::BTModeSwitch::plan_sub_topic</definition>
+        <argsstring></argsstring>
+        <name>plan_sub_topic</name>
+        <briefdescription>
+<para>Topic name for subscribing to the planned path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="285" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch_1a993f05670943826329f5d6acb2f9c5a6" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::HATebConfig::BTModeSwitch::result_sub_topic</definition>
+        <argsstring></argsstring>
+        <name>result_sub_topic</name>
+        <briefdescription>
+<para>Topic name for subscribing to the navigation result. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="286" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch_1a6289fb2e1938077f334b7486a24530a6" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::HATebConfig::BTModeSwitch::passage_sub_topic</definition>
+        <argsstring></argsstring>
+        <name>passage_sub_topic</name>
+        <briefdescription>
+<para>Topic name for subscribing to passage information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="287" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="282" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="282" bodyend="288"/>
+    <listofallmembers>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch_1a197009bb007c24e1e11b203139070db9" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::BTModeSwitch</scope><name>agents_info_topic</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch_1a9e30a24f9aa50f21ad896e49abcc003e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::BTModeSwitch</scope><name>bt_xml_path</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch_1a6289fb2e1938077f334b7486a24530a6" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::BTModeSwitch</scope><name>passage_sub_topic</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch_1adab58114c45594ccd67ffafece8fef9d" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::BTModeSwitch</scope><name>plan_sub_topic</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch_1a993f05670943826329f5d6acb2f9c5a6" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::BTModeSwitch</scope><name>result_sub_topic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgeInflatedObstacle" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgeInflatedObstacle</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebUnaryEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebUnaryEdge&lt; 2, const Obstacle *, VertexPose &gt;</basecompoundref>
+    <includes refid="edge__obstacle_8h" local="no">edge_obstacle.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1EdgeInflatedObstacle_1a4e8cfc994fcce56f217f546bd6c10ff4" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hateb_local_planner::EdgeInflatedObstacle::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_obstacle.h" line="242" column="7" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_obstacle.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeInflatedObstacle_1a6faaa1c2612b546133c4a97401719f0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeInflatedObstacle::EdgeInflatedObstacle</definition>
+        <argsstring>()</argsstring>
+        <name>EdgeInflatedObstacle</name>
+        <briefdescription>
+<para>Construct edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_obstacle.h" line="190" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_obstacle.h" bodystart="190" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeInflatedObstacle_1a473358a97a208f52e2f7c5d99f940908" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeInflatedObstacle::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Actual cost function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_obstacle.h" line="195" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_obstacle.h" bodystart="195" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeInflatedObstacle_1a4295d5f7713853ad3b81439491ea44e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeInflatedObstacle::setParameters</definition>
+        <argsstring>(const HATebConfig &amp;cfg, const Obstacle *obstacle, const int type)</argsstring>
+        <name>setParameters</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> &amp;</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref> *</type>
+          <declname>obstacle</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Set all parameters at once. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D position vector containing the position of the obstacle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent type (0 - Robot, 1 - Human) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_obstacle.h" line="235" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_obstacle.h" bodystart="235" bodyend="239"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Edge defining the cost function for keeping a minimum distance from inflated obstacles. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The edge depends on a single vertex <formula id="10">$ \mathbf{s}_i $</formula> and minimizes: <linebreak/>
+ <formula id="12">$ \min \textrm{penaltyBelow}( dist2point, min_obstacle_dist ) \cdot weight_inflation $</formula>. <linebreak/>
+Additional, a second penalty is provided with <linebreak/>
+ <formula id="13">$ \min \textrm{penaltyBelow}( dist2point, inflation_dist ) \cdot weight_inflation $</formula>. It is assumed that inflation_dist &gt; min_obstacle_dist and weight_inflation &lt;&lt; weight_inflation. <emphasis>dist2point</emphasis> denotes the minimum distance to the point obstacle. <linebreak/>
+<emphasis>penaltyBelow</emphasis> denotes the penalty function, see <ref refid="namespacehateb__local__planner_1ab0d8f17ad8f685bedc4aaf2ea24a47f1" kindref="member">penaltyBoundFromBelow()</ref> <linebreak/>
+<simplesect kind="see"><para>TebOptimalPlanner::AddEdgesObstacles, TebOptimalPlanner::EdgeObstacle </para>
+</simplesect>
+<simplesect kind="remark"><para>Do not forget to call <ref refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1a5e515f4663cbcfa4942b2d5449d62618" kindref="member">setHATebConfig()</ref> and setObstacle() </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebUnaryEdge&lt; 2, const Obstacle *, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebUnaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeInflatedObstacle</label>
+        <link refid="classhateb__local__planner_1_1EdgeInflatedObstacle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseUnaryEdge&lt; D, const Obstacle *, VertexPose &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebUnaryEdge&lt; 2, const Obstacle *, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebUnaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeInflatedObstacle</label>
+        <link refid="classhateb__local__planner_1_1EdgeInflatedObstacle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseUnaryEdge&lt; D, const Obstacle *, VertexPose &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_obstacle.h" line="185" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_obstacle.h" bodystart="185" bodyend="246"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1aa1485afb0fdfc42fc331165a7d5c8b30" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeInflatedObstacle</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeInflatedObstacle_1a473358a97a208f52e2f7c5d99f940908" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInflatedObstacle</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeInflatedObstacle_1a6faaa1c2612b546133c4a97401719f0f" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInflatedObstacle</scope><name>EdgeInflatedObstacle</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1aadf8f1d82509963f06807b27ef0c8166" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInflatedObstacle</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1a7c199ff0a5a802ac533257e1254cd5a0" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeInflatedObstacle</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1a5e515f4663cbcfa4942b2d5449d62618" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInflatedObstacle</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeInflatedObstacle_1a4295d5f7713853ad3b81439491ea44e4" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInflatedObstacle</scope><name>setParameters</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeInflatedObstacle_1a4e8cfc994fcce56f217f546bd6c10ff4" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeInflatedObstacle</scope><name>type_</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1ae722abea8571e278cd57acf7fc2542cf" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeInflatedObstacle</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

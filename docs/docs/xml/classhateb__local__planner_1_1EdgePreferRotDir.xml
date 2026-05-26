@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgePreferRotDir" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgePreferRotDir</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebBinaryEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;</basecompoundref>
+    <includes refid="edge__prefer__rotdir_8h" local="no">edge_prefer_rotdir.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgePreferRotDir_1aa1ffe70a0946f6862f6e35ba933065a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgePreferRotDir::EdgePreferRotDir</definition>
+        <argsstring>()</argsstring>
+        <name>EdgePreferRotDir</name>
+        <briefdescription>
+<para>Construct edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_prefer_rotdir.h" line="69" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_prefer_rotdir.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgePreferRotDir_1a90b382fbfe5ea582f50191cb959aa4e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgePreferRotDir::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Actual cost function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_prefer_rotdir.h" line="74" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_prefer_rotdir.h" bodystart="74" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgePreferRotDir_1a8476b1f865032da0a2d9f046872600a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgePreferRotDir::setRotDir</definition>
+        <argsstring>(double dir)</argsstring>
+        <name>setRotDir</name>
+        <param>
+          <type>double</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Specify the prefered direction of rotation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>+1 to prefer the left side, -1 to prefer the right side </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_prefer_rotdir.h" line="87" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_prefer_rotdir.h" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgePreferRotDir_1acd8a087bcc95d6b7105d0031798d1251" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgePreferRotDir::preferRight</definition>
+        <argsstring>()</argsstring>
+        <name>preferRight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prefer rotations to the right </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_prefer_rotdir.h" line="90" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_prefer_rotdir.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgePreferRotDir_1a0235ad84dfe724ffbe35ffe17c637ee7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgePreferRotDir::preferLeft</definition>
+        <argsstring>()</argsstring>
+        <name>preferLeft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prefer rotations to the right </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_prefer_rotdir.h" line="93" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_prefer_rotdir.h" bodystart="93" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Edge defining the cost function for penalzing a specified turning direction, in particular left resp. right turns. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The edge depends on two consecutive vertices <formula id="14">$ \mathbf{s}_i, \mathbf{s}_{i+1} $</formula> and penalizes a given rotation direction based on the <emphasis>weight</emphasis> and <emphasis>dir</emphasis> ( <formula id="15">$ dir \in \{-1,1\} $</formula>) <emphasis>dir</emphasis> should be +1 to prefer left rotations and -1 to prefer right rotations <linebreak/>
+<emphasis>weight</emphasis> can be set using setInformation(). <linebreak/>
+<simplesect kind="see"><para>TebOptimalPlanner::AddEdgePreferRotDir </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebBinaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgePreferRotDir</label>
+        <link refid="classhateb__local__planner_1_1EdgePreferRotDir"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseBinaryEdge&lt; D, double , VertexPose , VertexPose  &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebBinaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgePreferRotDir</label>
+        <link refid="classhateb__local__planner_1_1EdgePreferRotDir"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseBinaryEdge&lt; D, double , VertexPose , VertexPose  &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_prefer_rotdir.h" line="64" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_prefer_rotdir.h" bodystart="64" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1af5ba7be337a1f51e8f000255ffd40e71" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgePreferRotDir</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgePreferRotDir_1a90b382fbfe5ea582f50191cb959aa4e2" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgePreferRotDir</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgePreferRotDir_1aa1ffe70a0946f6862f6e35ba933065a3" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgePreferRotDir</scope><name>EdgePreferRotDir</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a0c0f4853fd8744194a18775226f9b731" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgePreferRotDir</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgePreferRotDir_1a0235ad84dfe724ffbe35ffe17c637ee7" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgePreferRotDir</scope><name>preferLeft</name></member>
+      <member refid="classhateb__local__planner_1_1EdgePreferRotDir_1acd8a087bcc95d6b7105d0031798d1251" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgePreferRotDir</scope><name>preferRight</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a0b775d38f7afb0f63f9156ed241fbe25" prot="public" virt="virtual"><scope>hateb_local_planner::EdgePreferRotDir</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1abc6ae7a9e1fd02416a4a94cbb785ba19" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgePreferRotDir</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1EdgePreferRotDir_1a8476b1f865032da0a2d9f046872600a2" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgePreferRotDir</scope><name>setRotDir</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a85a24cf969c90917f50cb057173527ca" prot="public" virt="virtual"><scope>hateb_local_planner::EdgePreferRotDir</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

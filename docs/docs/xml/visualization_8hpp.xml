@@ -1,0 +1,1269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="visualization_8hpp" kind="file" language="C++">
+    <compoundname>visualization.hpp</compoundname>
+    <includes refid="footprint__model_8h" local="no">hateb_local_planner/footprint_model.h</includes>
+    <includes refid="hateb__config_8hpp" local="no">hateb_local_planner/hateb_config.hpp</includes>
+    <includes refid="timed__elastic__band_8hpp" local="no">hateb_local_planner/timed_elastic_band.hpp</includes>
+    <includes local="no">tf2/utils.h</includes>
+    <includes local="no">tf2_ros/buffer.h</includes>
+    <includes local="no">tf2_ros/transform_listener.h</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">tf2_geometry_msgs/tf2_geometry_msgs.hpp</includes>
+    <includes local="no">boost/graph/adjacency_list.hpp</includes>
+    <includes local="no">boost/graph/graph_traits.hpp</includes>
+    <includes local="no">boost/utility.hpp</includes>
+    <includes local="no">cohan_msgs/msg/agent_path_array.hpp</includes>
+    <includes local="no">cohan_msgs/msg/agent_time_to_goal.hpp</includes>
+    <includes local="no">cohan_msgs/msg/agent_time_to_goal_array.hpp</includes>
+    <includes local="no">cohan_msgs/msg/agent_trajectory_array.hpp</includes>
+    <includes local="no">cohan_msgs/msg/crossing_info.hpp</includes>
+    <includes local="no">cohan_msgs/msg/tracked_agents.hpp</includes>
+    <includes local="no">cohan_msgs/msg/tracked_segment_type.hpp</includes>
+    <includes local="no">cohan_msgs/msg/trajectory_point.hpp</includes>
+    <includes local="no">cohan_msgs/msg/trajectory_stamped.hpp</includes>
+    <includes local="no">geometry_msgs/msg/pose_array.hpp</includes>
+    <includes local="no">geometry_msgs/msg/pose_stamped.hpp</includes>
+    <includes local="no">hateb_local_planner/msg/feedback_msg.hpp</includes>
+    <includes refid="visualization_8hpp" local="no">hateb_local_planner/visualization.hpp</includes>
+    <includes local="no">nav_msgs/msg/odometry.hpp</includes>
+    <includes local="no">nav_msgs/msg/path.hpp</includes>
+    <includes local="no">std_msgs/msg/color_rgba.hpp</includes>
+    <includes local="no">std_msgs/msg/float32.hpp</includes>
+    <includes local="no">visualization_msgs/msg/marker.hpp</includes>
+    <includes local="no">visualization_msgs/msg/marker_array.hpp</includes>
+    <includedby refid="hateb__local__planner__ros_8h" local="no">hateb_local_planner_ros.h</includedby>
+    <includedby refid="optimal__planner_8h" local="no">optimal_planner.h</includedby>
+    <includedby refid="visualization_8hpp" local="no">visualization.hpp</includedby>
+    <incdepgraph>
+      <node id="39">
+        <label>geometry_msgs/msg/pose_array.hpp</label>
+      </node>
+      <node id="13">
+        <label>boost/pointer_cast.hpp</label>
+      </node>
+      <node id="43">
+        <label>ros2_helpers/utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>cohan_msgs/msg/tracked_agents.hpp</label>
+      </node>
+      <node id="65">
+        <label>hateb_local_planner/msg/feedback_msg.hpp</label>
+      </node>
+      <node id="30">
+        <label>functional</label>
+      </node>
+      <node id="14">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="16">
+        <label>geometry_msgs/msg/polygon.hpp</label>
+      </node>
+      <node id="41">
+        <label>limits</label>
+      </node>
+      <node id="40">
+        <label>geometry_msgs/msg/pose_stamped.hpp</label>
+      </node>
+      <node id="57">
+        <label>cohan_msgs/msg/agent_time_to_goal.hpp</label>
+      </node>
+      <node id="68">
+        <label>std_msgs/msg/color_rgba.hpp</label>
+      </node>
+      <node id="29">
+        <label>ros2_helpers/parameters.hpp</label>
+        <link refid="parameters_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner/footprint_model.h</label>
+        <link refid="footprint__model_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>nav_msgs/msg/odometry.hpp</label>
+      </node>
+      <node id="11">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="23">
+        <label>geometry_msgs/msg/pose.hpp</label>
+      </node>
+      <node id="63">
+        <label>cohan_msgs/msg/trajectory_point.hpp</label>
+      </node>
+      <node id="52">
+        <label>g2o/core/hyper_graph_action.h</label>
+      </node>
+      <node id="67">
+        <label>nav_msgs/msg/path.hpp</label>
+      </node>
+      <node id="6">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="53">
+        <label>hateb_local_planner/g2o_types/vertex_timediff.h</label>
+        <link refid="vertex__timediff_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>rclcpp/logging.hpp</label>
+      </node>
+      <node id="35">
+        <label>string</label>
+      </node>
+      <node id="49">
+        <label>hateb_local_planner/g2o_types/vertex_pose.h</label>
+        <link refid="vertex__pose_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="22">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="58">
+        <label>cohan_msgs/msg/agent_time_to_goal_array.hpp</label>
+      </node>
+      <node id="18">
+        <label>geometry_msgs/msg/twist_with_covariance.hpp</label>
+      </node>
+      <node id="45">
+        <label>tf2/convert.h</label>
+      </node>
+      <node id="28">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="64">
+        <label>cohan_msgs/msg/trajectory_stamped.hpp</label>
+      </node>
+      <node id="37">
+        <label>hateb_local_planner/timed_elastic_band.hpp</label>
+        <link refid="timed__elastic__band_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>boost/graph/graph_traits.hpp</label>
+      </node>
+      <node id="51">
+        <label>g2o/core/base_vertex.h</label>
+      </node>
+      <node id="5">
+        <label>hateb_local_planner/misc.h</label>
+        <link refid="hateb__local__planner_2include_2hateb__local__planner_2misc_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>g2o/config.h</label>
+      </node>
+      <node id="12">
+        <label>Eigen/StdVector</label>
+      </node>
+      <node id="17">
+        <label>geometry_msgs/msg/quaternion_stamped.hpp</label>
+      </node>
+      <node id="26">
+        <label>hateb_local_planner/hateb_config.hpp</label>
+        <link refid="hateb__config_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>cohan_msgs/msg/agent_path_array.hpp</label>
+      </node>
+      <node id="3">
+        <label>hateb_local_planner/obstacles.h</label>
+        <link refid="obstacles_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>cohan_msgs/msg/tracked_segment_type.hpp</label>
+      </node>
+      <node id="33">
+        <label>rcl_interfaces/msg/parameter_descriptor.hpp</label>
+      </node>
+      <node id="46">
+        <label>tf2/time.h</label>
+      </node>
+      <node id="44">
+        <label>tf2/LinearMath/Vector3.h</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="32">
+        <label>rcl_interfaces/msg/integer_range.hpp</label>
+      </node>
+      <node id="19">
+        <label>utility</label>
+      </node>
+      <node id="8">
+        <label>boost/utility.hpp</label>
+      </node>
+      <node id="24">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="60">
+        <label>cohan_msgs/msg/crossing_info.hpp</label>
+      </node>
+      <node id="36">
+        <label>unordered_map</label>
+      </node>
+      <node id="69">
+        <label>std_msgs/msg/float32.hpp</label>
+      </node>
+      <node id="70">
+        <label>visualization_msgs/msg/marker_array.hpp</label>
+      </node>
+      <node id="27">
+        <label>mutex</label>
+      </node>
+      <node id="48">
+        <label>tf2_ros/transform_listener.h</label>
+      </node>
+      <node id="38">
+        <label>boost/optional.hpp</label>
+      </node>
+      <node id="20">
+        <label>hateb_local_planner/pose_se2.h</label>
+        <link refid="pose__se2_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>g2o/stuff/misc.h</label>
+      </node>
+      <node id="54">
+        <label>boost/graph/adjacency_list.hpp</label>
+      </node>
+      <node id="47">
+        <label>tf2_ros/buffer.h</label>
+      </node>
+      <node id="15">
+        <label>complex</label>
+      </node>
+      <node id="10">
+        <label>algorithm</label>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner/distance_calculations.h</label>
+        <link refid="distance__calculations_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>visualization.hpp</label>
+        <link refid="visualization_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="7">
+        <label>boost/type_traits.hpp</label>
+      </node>
+      <node id="59">
+        <label>cohan_msgs/msg/agent_trajectory_array.hpp</label>
+      </node>
+      <node id="31">
+        <label>rcl_interfaces/msg/floating_point_range.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>visualization.cpp</label>
+        <link refid="visualization_8cpp"/>
+      </node>
+      <node id="3">
+        <label>hateb_local_planner_ros.cpp</label>
+        <link refid="hateb__local__planner__ros_8cpp"/>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner_ros.h</label>
+        <link refid="hateb__local__planner__ros_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>optimal_planner.h</label>
+        <link refid="optimal__planner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>optimal_planner.cpp</label>
+        <link refid="optimal__planner_8cpp"/>
+      </node>
+      <node id="1">
+        <label>visualization.hpp</label>
+        <link refid="visualization_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structhateb__local__planner_1_1PlanTrajCombined" prot="public">hateb_local_planner::PlanTrajCombined</innerclass>
+    <innerclass refid="structhateb__local__planner_1_1PlanCombined" prot="public">hateb_local_planner::PlanCombined</innerclass>
+    <innerclass refid="structhateb__local__planner_1_1AgentPlanTrajCombined" prot="public">hateb_local_planner::AgentPlanTrajCombined</innerclass>
+    <innerclass refid="structhateb__local__planner_1_1AgentPlanCombined" prot="public">hateb_local_planner::AgentPlanCombined</innerclass>
+    <innerclass refid="classhateb__local__planner_1_1TebVisualization" prot="public">hateb_local_planner::TebVisualization</innerclass>
+    <innernamespace refid="namespacehateb__local__planner">hateb_local_planner</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="visualization_8hpp_1a87fb60abbdea44501569200652c77a62" prot="public" static="no">
+        <name>GLOBAL_PLAN_TOPIC</name>
+        <initializer>&quot;global_plan&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="88" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1adebaf6daa832bf6d3dbc4e9eb717a779" prot="public" static="no">
+        <name>LOCAL_PLAN_TOPIC</name>
+        <initializer>&quot;local_plan&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="89" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a6d6f4da3aea8e3cf69e8a6be42dbd44a" prot="public" static="no">
+        <name>LOCAL_TRAJ_TOPIC</name>
+        <initializer>&quot;local_traj&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="90" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1ab2cc20554028dc2c8af68c2786877d58" prot="public" static="no">
+        <name>LOCAL_PLAN_POSES_TOPIC</name>
+        <initializer>&quot;local_plan_poses&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="91" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a1fb6b1744f84ded5edecf2b5d811f210" prot="public" static="no">
+        <name>LOCAL_PLAN_FP_POSES_TOPIC</name>
+        <initializer>&quot;local_plan_fp_poses&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="92" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1ad65a0039f8da8ae721d0d60b10060569" prot="public" static="no">
+        <name>AGENT_GLOBAL_PLANS_TOPIC</name>
+        <initializer>&quot;agents_global_plans&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="93" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a5e30d61377f56c03a54e34969116303f" prot="public" static="no">
+        <name>AGENT_LOCAL_PLANS_TOPIC</name>
+        <initializer>&quot;agents_local_plans&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="94" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a1c8bbda05111484320a210ef826ccba9" prot="public" static="no">
+        <name>AGENT_LOCAL_TRAJS_TOPIC</name>
+        <initializer>&quot;agents_local_trajs&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="95" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1ae74f5aa19afdf1154bbac1ad9356efae" prot="public" static="no">
+        <name>AGENT_LOCAL_PLANS_POSES_TOPIC</name>
+        <initializer>&quot;agents_local_plans_poses&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="96" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a2bcfb3618748ffa21d501d4b355c09d6" prot="public" static="no">
+        <name>AGENT_LOCAL_PLANS_FP_POSES_TOPIC</name>
+        <initializer>&quot;agents_local_plans_fp_poses&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="97" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a014f7df82a47e3708cc6f614d1a499b9" prot="public" static="no">
+        <name>ROBOT_FP_POSES_NS</name>
+        <initializer>&quot;robot_fp_poses&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="98" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a4116983fa64e0d7c537fde9032e450f5" prot="public" static="no">
+        <name>AGENT_FP_POSES_NS</name>
+        <initializer>&quot;agents_fp_poses&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="99" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a7a5d2f08418f5739336391784e88b0e2" prot="public" static="no">
+        <name>ROBOT_TRAJ_TIME_TOPIC</name>
+        <initializer>&quot;traj_time&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="100" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a7ef7ceb6c04d20fc53e236ff1f5908cb" prot="public" static="no">
+        <name>ROBOT_PATH_TIME_TOPIC</name>
+        <initializer>&quot;plan_time&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="101" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a4291d106e69beae4dd3281e6ce9fb991" prot="public" static="no">
+        <name>AGENT_TRAJS_TIME_TOPIC</name>
+        <initializer>&quot;agents_trajs_time&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="102" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a795afb902a67ac8a09a22f4f41b8a970" prot="public" static="no">
+        <name>AGENT_PATHS_TIME_TOPIC</name>
+        <initializer>&quot;agents_plans_time&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="103" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a2f624e1a52967b5d964861df910a4d62" prot="public" static="no">
+        <name>AGENT_MARKER_TOPIC</name>
+        <initializer>&quot;agent_marker&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="104" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1aa704710e6ef01c22e41bc0cf304f3965" prot="public" static="no">
+        <name>AGENT_ARROW_TOPIC</name>
+        <initializer>&quot;agent_arrow&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="105" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a84fbff89ea093f979c5a54b0787f34d9" prot="public" static="no">
+        <name>ROBOT_NEXT_POSE_TOPIC</name>
+        <initializer>&quot;robot_next_pose&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="106" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a48c33c093011f94ee0d1a37c55745df9" prot="public" static="no">
+        <name>AGENT_NEXT_POSE_TOPIC</name>
+        <initializer>&quot;agent_next_pose&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="107" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1af7f746aa0e1cb97b582a03542c8b45d9" prot="public" static="no">
+        <name>FEEDBACK_TOPIC</name>
+        <initializer>&quot;teb_feedback&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="108" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a0bce04529a2e1cf43baae159425d1fac" prot="public" static="no">
+        <name>TEB_MARKER_TOPIC</name>
+        <initializer>&quot;teb_markers&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="109" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1aac11bbf93316280c053f5ae1fcabce13" prot="public" static="no">
+        <name>MODE_TEXT_TOPIC</name>
+        <initializer>&quot;mode_text&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="110" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a2319687dcf2d9192b98fcdcca97a64f9" prot="public" static="no">
+        <name>CROSSING_POINT_TOPIC</name>
+        <initializer>&quot;crossing_points&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="111" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a8d66653d75b793a14fbe288103da0947" prot="public" static="no">
+        <name>CROSSING_INFO_TOPIC</name>
+        <initializer>&quot;crossing_info&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="112" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1ae044f78f124336287f592f2385130ab5" prot="public" static="no">
+        <name>TTG_TOPIC</name>
+        <initializer>&quot;time_to_goal&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="113" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1ab11c2b6087ea76911944279ff5a6d65e" prot="public" static="no">
+        <name>TRACKED_AGENTS_SUB</name>
+        <initializer>&quot;/tracked_agents&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="114" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1ab83b5f67f4eb6ff332347da5a681208a" prot="public" static="no">
+        <name>CLEARING_TIMER_DURATION</name>
+        <initializer>1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="115" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="visualization_8hpp_1a191e5a424a0b478c977515d5694610a8" prot="public" static="no">
+        <name>DEFAULT_AGENT_SEGMENT</name>
+        <initializer>cohan_msgs::msg::TrackedSegmentType::TORSO</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="116" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Majorly<sp/>modified<sp/>by<sp/>Phani<sp/>Teja<sp/>Singamaneni<sp/>from<sp/>2020-2025</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Additional<sp/>changes<sp/>licensed<sp/>under<sp/>the<sp/>MIT<sp/>License.<sp/>See<sp/>LICENSE<sp/>file.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(BSD<sp/>License)</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2016,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>TU<sp/>Dortmund<sp/>-<sp/>Institute<sp/>of<sp/>Control<sp/>Theory<sp/>and<sp/>Systems<sp/>Engineering.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2020<sp/>LAAS/CNRS</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>copyright<sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>disclaimer<sp/>in<sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>institute<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/><sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/><sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/><sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/><sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/><sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Christoph<sp/>Rösmann</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>Modified<sp/>by:<sp/>Phani<sp/>Teja<sp/>Singamaneni</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VISUALIZATION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VISUALIZATION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>teb<sp/>stuff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="footprint__model_8h" kindref="compound">hateb_local_planner/footprint_model.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="hateb__config_8hpp" kindref="compound">hateb_local_planner/hateb_config.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="timed__elastic__band_8hpp" kindref="compound">hateb_local_planner/timed_elastic_band.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ros<sp/>stuff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/utils.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_ros/buffer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_ros/transform_listener.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp/rclcpp.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>boost</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/graph/adjacency_list.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/graph/graph_traits.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/utility.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>messages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/agent_path_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/agent_time_to_goal.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/agent_time_to_goal_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/agent_trajectory_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/crossing_info.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/tracked_agents.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/tracked_segment_type.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/trajectory_point.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/trajectory_stamped.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/msg/pose_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/msg/pose_stamped.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hateb_local_planner/msg/feedback_msg.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="visualization_8hpp" kindref="compound">hateb_local_planner/visualization.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav_msgs/msg/odometry.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav_msgs/msg/path.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;std_msgs/msg/color_rgba.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;std_msgs/msg/float32.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;visualization_msgs/msg/marker.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;visualization_msgs/msg/marker_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="visualization_8hpp_1a87fb60abbdea44501569200652c77a62" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLOBAL_PLAN_TOPIC<sp/>&quot;global_plan&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="visualization_8hpp_1adebaf6daa832bf6d3dbc4e9eb717a779" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOCAL_PLAN_TOPIC<sp/>&quot;local_plan&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="visualization_8hpp_1a6d6f4da3aea8e3cf69e8a6be42dbd44a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOCAL_TRAJ_TOPIC<sp/>&quot;local_traj&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="visualization_8hpp_1ab2cc20554028dc2c8af68c2786877d58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOCAL_PLAN_POSES_TOPIC<sp/>&quot;local_plan_poses&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="visualization_8hpp_1a1fb6b1744f84ded5edecf2b5d811f210" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOCAL_PLAN_FP_POSES_TOPIC<sp/>&quot;local_plan_fp_poses&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="visualization_8hpp_1ad65a0039f8da8ae721d0d60b10060569" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_GLOBAL_PLANS_TOPIC<sp/>&quot;agents_global_plans&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="visualization_8hpp_1a5e30d61377f56c03a54e34969116303f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_LOCAL_PLANS_TOPIC<sp/>&quot;agents_local_plans&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="visualization_8hpp_1a1c8bbda05111484320a210ef826ccba9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_LOCAL_TRAJS_TOPIC<sp/>&quot;agents_local_trajs&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="visualization_8hpp_1ae74f5aa19afdf1154bbac1ad9356efae" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_LOCAL_PLANS_POSES_TOPIC<sp/>&quot;agents_local_plans_poses&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="visualization_8hpp_1a2bcfb3618748ffa21d501d4b355c09d6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_LOCAL_PLANS_FP_POSES_TOPIC<sp/>&quot;agents_local_plans_fp_poses&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="visualization_8hpp_1a014f7df82a47e3708cc6f614d1a499b9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROBOT_FP_POSES_NS<sp/>&quot;robot_fp_poses&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="visualization_8hpp_1a4116983fa64e0d7c537fde9032e450f5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_FP_POSES_NS<sp/>&quot;agents_fp_poses&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="visualization_8hpp_1a7a5d2f08418f5739336391784e88b0e2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROBOT_TRAJ_TIME_TOPIC<sp/>&quot;traj_time&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="visualization_8hpp_1a7ef7ceb6c04d20fc53e236ff1f5908cb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROBOT_PATH_TIME_TOPIC<sp/>&quot;plan_time&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="visualization_8hpp_1a4291d106e69beae4dd3281e6ce9fb991" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_TRAJS_TIME_TOPIC<sp/>&quot;agents_trajs_time&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="visualization_8hpp_1a795afb902a67ac8a09a22f4f41b8a970" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_PATHS_TIME_TOPIC<sp/>&quot;agents_plans_time&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="visualization_8hpp_1a2f624e1a52967b5d964861df910a4d62" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_MARKER_TOPIC<sp/>&quot;agent_marker&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="visualization_8hpp_1aa704710e6ef01c22e41bc0cf304f3965" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_ARROW_TOPIC<sp/>&quot;agent_arrow&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="visualization_8hpp_1a84fbff89ea093f979c5a54b0787f34d9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROBOT_NEXT_POSE_TOPIC<sp/>&quot;robot_next_pose&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="visualization_8hpp_1a48c33c093011f94ee0d1a37c55745df9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_NEXT_POSE_TOPIC<sp/>&quot;agent_next_pose&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="visualization_8hpp_1af7f746aa0e1cb97b582a03542c8b45d9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FEEDBACK_TOPIC<sp/>&quot;teb_feedback&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="visualization_8hpp_1a0bce04529a2e1cf43baae159425d1fac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEB_MARKER_TOPIC<sp/>&quot;teb_markers&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="visualization_8hpp_1aac11bbf93316280c053f5ae1fcabce13" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MODE_TEXT_TOPIC<sp/>&quot;mode_text&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="visualization_8hpp_1a2319687dcf2d9192b98fcdcca97a64f9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CROSSING_POINT_TOPIC<sp/>&quot;crossing_points&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="visualization_8hpp_1a8d66653d75b793a14fbe288103da0947" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CROSSING_INFO_TOPIC<sp/>&quot;crossing_info&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="visualization_8hpp_1ae044f78f124336287f592f2385130ab5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TTG_TOPIC<sp/>&quot;time_to_goal&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="visualization_8hpp_1ab11c2b6087ea76911944279ff5a6d65e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRACKED_AGENTS_SUB<sp/>&quot;/tracked_agents&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="visualization_8hpp_1ab83b5f67f4eb6ff332347da5a681208a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLEARING_TIMER_DURATION<sp/>1.0<sp/><sp/></highlight><highlight class="comment">//<sp/>seconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="visualization_8hpp_1a191e5a424a0b478c977515d5694610a8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_AGENT_SEGMENT<sp/>cohan_msgs::msg::TrackedSegmentType::TORSO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehateb__local__planner" kindref="compound">hateb_local_planner</ref><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="structhateb__local__planner_1_1PlanTrajCombined" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121" refid="structhateb__local__planner_1_1PlanTrajCombined_1a28700899c4ed86f6c17f101a13b3642b" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::msg::PoseStamped&gt;<sp/><ref refid="structhateb__local__planner_1_1PlanTrajCombined_1a28700899c4ed86f6c17f101a13b3642b" kindref="member">plan_before</ref>;</highlight></codeline>
+<codeline lineno="122" refid="structhateb__local__planner_1_1PlanTrajCombined_1a4b78fc5af4b788aec7df639cd8c0e11c" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;cohan_msgs::msg::TrajectoryPoint&gt;<sp/><ref refid="structhateb__local__planner_1_1PlanTrajCombined_1a4b78fc5af4b788aec7df639cd8c0e11c" kindref="member">optimized_trajectory</ref>;</highlight></codeline>
+<codeline lineno="123" refid="structhateb__local__planner_1_1PlanTrajCombined_1a8f352454dc26bda11396ecd71e9c218a" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::msg::PoseStamped&gt;<sp/><ref refid="structhateb__local__planner_1_1PlanTrajCombined_1a8f352454dc26bda11396ecd71e9c218a" kindref="member">plan_after</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}<sp/><ref refid="structhateb__local__planner_1_1PlanTrajCombined" kindref="compound">PlanTrajCombined</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="structhateb__local__planner_1_1PlanCombined" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127" refid="structhateb__local__planner_1_1PlanCombined_1a6471de07c74bfd32f42d779a847c43ec" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::msg::PoseStamped&gt;<sp/><ref refid="structhateb__local__planner_1_1PlanCombined_1a6471de07c74bfd32f42d779a847c43ec" kindref="member">plan_before</ref>;</highlight></codeline>
+<codeline lineno="128" refid="structhateb__local__planner_1_1PlanCombined_1ad23f186a1ff0d8f609f7bbca31542a17" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::msg::PoseStamped&gt;<sp/><ref refid="structhateb__local__planner_1_1PlanCombined_1ad23f186a1ff0d8f609f7bbca31542a17" kindref="member">plan_to_optimize</ref>;</highlight></codeline>
+<codeline lineno="129" refid="structhateb__local__planner_1_1PlanCombined_1a89427a81c07b3b4bb37112d32c6edbaa" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::msg::PoseStamped&gt;<sp/><ref refid="structhateb__local__planner_1_1PlanCombined_1a89427a81c07b3b4bb37112d32c6edbaa" kindref="member">plan_after</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}<sp/><ref refid="structhateb__local__planner_1_1PlanCombined" kindref="compound">PlanCombined</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="structhateb__local__planner_1_1AgentPlanTrajCombined" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133" refid="structhateb__local__planner_1_1AgentPlanTrajCombined_1a54531cfa04e0466ad2a8ecc371ed1a02" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="structhateb__local__planner_1_1AgentPlanTrajCombined_1a54531cfa04e0466ad2a8ecc371ed1a02" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="134" refid="structhateb__local__planner_1_1AgentPlanTrajCombined_1ae438ec657b856e120d649893e879a7fd" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::msg::PoseStamped&gt;<sp/><ref refid="structhateb__local__planner_1_1AgentPlanTrajCombined_1ae438ec657b856e120d649893e879a7fd" kindref="member">plan_before</ref>;</highlight></codeline>
+<codeline lineno="135" refid="structhateb__local__planner_1_1AgentPlanTrajCombined_1abbdd891606fa7b454231dd1811500019" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;cohan_msgs::msg::TrajectoryPoint&gt;<sp/><ref refid="structhateb__local__planner_1_1AgentPlanTrajCombined_1abbdd891606fa7b454231dd1811500019" kindref="member">optimized_trajectory</ref>;</highlight></codeline>
+<codeline lineno="136" refid="structhateb__local__planner_1_1AgentPlanTrajCombined_1a34da3f990f912a0d49b94f78c1b81597" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::msg::PoseStamped&gt;<sp/><ref refid="structhateb__local__planner_1_1AgentPlanTrajCombined_1a34da3f990f912a0d49b94f78c1b81597" kindref="member">plan_after</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}<sp/><ref refid="structhateb__local__planner_1_1AgentPlanTrajCombined" kindref="compound">AgentPlanTrajCombined</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="structhateb__local__planner_1_1AgentPlanCombined" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140" refid="structhateb__local__planner_1_1AgentPlanCombined_1ae58baf3c2241d7f55db0f078cec8f143" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="structhateb__local__planner_1_1AgentPlanCombined_1ae58baf3c2241d7f55db0f078cec8f143" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="141" refid="structhateb__local__planner_1_1AgentPlanCombined_1abc403dbe132c62211c6784818b976434" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::msg::PoseStamped&gt;<sp/><ref refid="structhateb__local__planner_1_1AgentPlanCombined_1abc403dbe132c62211c6784818b976434" kindref="member">plan_before</ref>;</highlight></codeline>
+<codeline lineno="142" refid="structhateb__local__planner_1_1AgentPlanCombined_1ad5dc88e715921c6842b4cf63be0cce05" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::msg::PoseStamped&gt;<sp/><ref refid="structhateb__local__planner_1_1AgentPlanCombined_1ad5dc88e715921c6842b4cf63be0cce05" kindref="member">plan_to_optimize</ref>;</highlight></codeline>
+<codeline lineno="143" refid="structhateb__local__planner_1_1AgentPlanCombined_1ace81b935364a2160510c87ef2654df36" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::msg::PoseStamped&gt;<sp/><ref refid="structhateb__local__planner_1_1AgentPlanCombined_1ace81b935364a2160510c87ef2654df36" kindref="member">plan_after</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}<sp/><ref refid="structhateb__local__planner_1_1AgentPlanCombined" kindref="compound">AgentPlanCombined</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner" kindref="compound">HATebOptimalPlanner</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="classhateb__local__planner_1_1TebVisualization" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1TebVisualization" kindref="compound">TebVisualization</ref><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ae0c4bd25168c07bee265b0bf3e25ac2f" kindref="member">TebVisualization</ref>();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ae0c4bd25168c07bee265b0bf3e25ac2f" kindref="member">TebVisualization</ref>(rclcpp_lifecycle::LifecycleNode::SharedPtr<sp/>node,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;HATebConfig&gt;<sp/>cfg);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ac74ac1cd72781a1cbc3b65418b80abee" kindref="member">initialize</ref>(rclcpp_lifecycle::LifecycleNode::SharedPtr<sp/>node,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;HATebConfig&gt;<sp/>cfg);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a655675ecc19d457efccca683b43489e8" kindref="member">publishGlobalPlan</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;geometry_msgs::msg::PoseStamped&gt;&amp;<sp/>global_plan)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a9e0986d46cb93602c44d36cdd5828b07" kindref="member">publishAgentGlobalPlans</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;AgentPlanCombined&gt;&amp;<sp/>agents_plans)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a272fb1802212ed844415c01b8d180cb5" kindref="member">publishLocalPlan</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;geometry_msgs::msg::PoseStamped&gt;&amp;<sp/>local_plan)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a18653590b7c02583fe6f1f4c3deda0e9" kindref="member">publishTrackedAgents</ref>(cohan_msgs::msg::TrackedAgents::ConstSharedPtr<sp/><ref refid="namespaceagents" kindref="compound">agents</ref>);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ab357aebc5c3d34472d59eba5ea32d795" kindref="member">publishLocalPlanAndPoses</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TimedElasticBand" kindref="compound">TimedElasticBand</ref>&amp;<sp/>teb,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel" kindref="compound">BaseFootprintModel</ref>&amp;<sp/>robot_model,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fp_size,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std_msgs::msg::ColorRGBA&amp;<sp/>color<sp/>=<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aa44bf3bd42b9593635bbfd2b8d4094a9" kindref="member">toColorMsg</ref>(0.5,<sp/>0.0,<sp/>0.8,<sp/>0.0));</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aa24450d87dce99e8fdc8bc1972b8c198" kindref="member">publishAgentLocalPlansAndPoses</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;uint64_t,<sp/>TimedElasticBand&gt;&amp;<sp/>agents_tebs_map,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel" kindref="compound">BaseFootprintModel</ref>&amp;<sp/>agent_model,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fp_size,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std_msgs::msg::ColorRGBA&amp;<sp/>color<sp/>=<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aa44bf3bd42b9593635bbfd2b8d4094a9" kindref="member">toColorMsg</ref>(0.5,<sp/>0.0,<sp/>0.8,<sp/>0.0));</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a4b2cde271caa8b74230aa9ee24e3fe0d" kindref="member">publishTrajectory</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhateb__local__planner_1_1PlanTrajCombined" kindref="compound">PlanTrajCombined</ref>&amp;<sp/>plan_traj_combined);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ad564ecfa87b4dced5b5a4c4040291bfc" kindref="member">publishAgentTrajectories</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;AgentPlanTrajCombined&gt;&amp;<sp/>agents_plans_combined);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a41378142739e9d4247e18605b420ea3f" kindref="member">publishRobotFootprintModel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel" kindref="compound">BaseFootprintModel</ref>&amp;<sp/>robot_model,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>ns<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;RobotFootprintModel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std_msgs::msg::ColorRGBA&amp;<sp/>color<sp/>=<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aa44bf3bd42b9593635bbfd2b8d4094a9" kindref="member">toColorMsg</ref>(0.5,<sp/>0.0,<sp/>0.8,<sp/>0.0));</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a7adf0817a78d3a1ee526f28d42e1d2b6" kindref="member">publishInfeasibleRobotPose</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel" kindref="compound">BaseFootprintModel</ref>&amp;<sp/>robot_model);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aa221459c4a282bbb130bf7f07093d048" kindref="member">publishObstacles</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehateb__local__planner_1aa2fd52c70b6b2295dc138647919ea794" kindref="member">ObstContainer</ref>&amp;<sp/>obstacles)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1acfe0f9bdd2eb7760c18b625206321172" kindref="member">publishViaPoints</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Eigen::Vector2d,<sp/>Eigen::aligned_allocator&lt;Eigen::Vector2d&gt;<sp/>&gt;&amp;<sp/>via_points,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>ns<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ViaPoints&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>GraphType&gt;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a40b9087596923916b103ed54ebc9f9ea" kindref="member">publishGraph</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GraphType&amp;<sp/>graph,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>ns_prefix<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Graph&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>B</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">irIter&gt;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ae1b0b3b81d634655283512389a60dd7d" kindref="member">publishPathContainer</ref>(BidirIter<sp/>first,<sp/>BidirIter<sp/>last,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>ns<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;PathContainer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a8a79203230be009d29b2b73f34e6722f" kindref="member">publishTebContainer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::shared_ptr&lt;HATebOptimalPlanner&gt;<sp/>&gt;&amp;<sp/>teb_planner,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>ns<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;TebContainer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335" refid="classhateb__local__planner_1_1TebVisualization_1a97afdf45fb1e88dc80e607efac4126e9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a97afdf45fb1e88dc80e607efac4126e9" kindref="member">publishFeedbackMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::shared_ptr&lt;HATebOptimalPlanner&gt;<sp/>&gt;&amp;<sp/>teb_planners,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>selected_trajectory_idx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehateb__local__planner_1aa2fd52c70b6b2295dc138647919ea794" kindref="member">ObstContainer</ref>&amp;<sp/>obstacles);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a97afdf45fb1e88dc80e607efac4126e9" kindref="member">publishFeedbackMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner" kindref="compound">HATebOptimalPlanner</ref>&amp;<sp/>teb_planner,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehateb__local__planner_1aa2fd52c70b6b2295dc138647919ea794" kindref="member">ObstContainer</ref>&amp;<sp/>obstacles);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std_msgs::msg::ColorRGBA<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aa44bf3bd42b9593635bbfd2b8d4094a9" kindref="member">toColorMsg</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>g,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a0bd6b5b2b163313384757118a080674a" kindref="member">publishCrossingPoses</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TimedElasticBand" kindref="compound">TimedElasticBand</ref>&amp;<sp/>teb,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;uint64_t,<sp/>TimedElasticBand&gt;&amp;<sp/>agents_tebs_map);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ab57a3d2e2503740f0b3bf9a7d54d2d24" kindref="member">setMarkerColour</ref>(visualization_msgs::msg::Marker&amp;<sp/>marker,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>itr,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a114bb30139bba28b7adbf1d633c6cd2a" kindref="member">publishMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a183b88c2bd0b99715510f26e1ce4a9c5" kindref="member">printErrorWhenNotInitialized</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1abdf307b1141aac35877719802e68017f" kindref="member">clearingTimerCB</ref>();</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396" refid="classhateb__local__planner_1_1TebVisualization_1aff8b0e1edb2fe692d3a907998ba722e1" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp_lifecycle::LifecycleNode::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aff8b0e1edb2fe692d3a907998ba722e1" kindref="member">node_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="397" refid="classhateb__local__planner_1_1TebVisualization_1adf6e15ba186ec94df9ef1bac435fd3ef" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;nav_msgs::msg::Path&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1adf6e15ba186ec94df9ef1bac435fd3ef" kindref="member">global_plan_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="398" refid="classhateb__local__planner_1_1TebVisualization_1aa31c22c132fc7c0eaff11eece0f6a531" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;nav_msgs::msg::Path&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aa31c22c132fc7c0eaff11eece0f6a531" kindref="member">local_plan_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="399" refid="classhateb__local__planner_1_1TebVisualization_1aea6804e34d119bb3d69b0120214c2a61" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;cohan_msgs::msg::TrajectoryStamped&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aea6804e34d119bb3d69b0120214c2a61" kindref="member">local_traj_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="400" refid="classhateb__local__planner_1_1TebVisualization_1ae81b8fbc36e83f70e40cba040a28a0f4" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;cohan_msgs::msg::AgentPathArray&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ae81b8fbc36e83f70e40cba040a28a0f4" kindref="member">agents_global_plans_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="401" refid="classhateb__local__planner_1_1TebVisualization_1a1a238c7b51d34ca764fded385ce2ddd7" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;cohan_msgs::msg::AgentPathArray&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a1a238c7b51d34ca764fded385ce2ddd7" kindref="member">agents_local_plans_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="402" refid="classhateb__local__planner_1_1TebVisualization_1a0e5c80e65dc5cdb6d2e44889520a15ce" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;cohan_msgs::msg::AgentTrajectoryArray&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a0e5c80e65dc5cdb6d2e44889520a15ce" kindref="member">agents_local_trajs_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="403" refid="classhateb__local__planner_1_1TebVisualization_1af99a47db55a31c231e8af30e40529b81" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;geometry_msgs::msg::PoseArray&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a3675b48b09416c6d7128587b50c8d3d9" kindref="member">teb_poses_pub_</ref>,<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1af99a47db55a31c231e8af30e40529b81" kindref="member">agents_tebs_poses_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="404" refid="classhateb__local__planner_1_1TebVisualization_1a49c51c60d6dccc9efad7795089d5e5e0" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a966ffb6e8e9c24a0cdb4cf755c3fa921" kindref="member">teb_fp_poses_pub_</ref>,<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a49c51c60d6dccc9efad7795089d5e5e0" kindref="member">agents_tebs_fp_poses_pub_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="405" refid="classhateb__local__planner_1_1TebVisualization_1ae92f830d99b53365a9125545c7374cac" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;visualization_msgs::msg::Marker&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ae92f830d99b53365a9125545c7374cac" kindref="member">teb_marker_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="406" refid="classhateb__local__planner_1_1TebVisualization_1a11326e3c9b65a05edf6087be7c325e93" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;hateb_local_planner::msg::FeedbackMsg&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a11326e3c9b65a05edf6087be7c325e93" kindref="member">feedback_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="407" refid="classhateb__local__planner_1_1TebVisualization_1a4eeb344c59e0437abf67a4e8b049f319" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;visualization_msgs::msg::Marker&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a4eeb344c59e0437abf67a4e8b049f319" kindref="member">mode_text_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="408" refid="classhateb__local__planner_1_1TebVisualization_1a672c31c1a75144aed7e274f6e89d70c5" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;cohan_msgs::msg::AgentTimeToGoal&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a672c31c1a75144aed7e274f6e89d70c5" kindref="member">robot_traj_time_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="409" refid="classhateb__local__planner_1_1TebVisualization_1aa0cd85ece78b9b0410bc386ce5c5a614" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;cohan_msgs::msg::AgentTimeToGoal&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aa0cd85ece78b9b0410bc386ce5c5a614" kindref="member">robot_path_time_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="410" refid="classhateb__local__planner_1_1TebVisualization_1ac0f29916b8d455e84b765bfd392d3993" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;geometry_msgs::msg::PoseStamped&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ac0f29916b8d455e84b765bfd392d3993" kindref="member">robot_next_pose_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="411" refid="classhateb__local__planner_1_1TebVisualization_1ae4961ae6498adac818ad0f5024d84695" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;geometry_msgs::msg::PoseStamped&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ae4961ae6498adac818ad0f5024d84695" kindref="member">agent_next_pose_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="412" refid="classhateb__local__planner_1_1TebVisualization_1a1b24430729d5596a9d47545b804f4625" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;cohan_msgs::msg::AgentTimeToGoalArray&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a1b24430729d5596a9d47545b804f4625" kindref="member">agent_trajs_time_pub_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="413" refid="classhateb__local__planner_1_1TebVisualization_1a0a2e1dbac86173b2deacf8ad907670fd" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;cohan_msgs::msg::AgentTimeToGoalArray&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a0a2e1dbac86173b2deacf8ad907670fd" kindref="member">agent_paths_time_pub_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="414" refid="classhateb__local__planner_1_1TebVisualization_1a07d6f6ac319ccba499f65f8c120d5881" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a07d6f6ac319ccba499f65f8c120d5881" kindref="member">agent_marker_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="415" refid="classhateb__local__planner_1_1TebVisualization_1a1ff80d18faf7bd07ff702e0b9d029582" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a1ff80d18faf7bd07ff702e0b9d029582" kindref="member">agent_arrow_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="416" refid="classhateb__local__planner_1_1TebVisualization_1a5ba2cd508454e81923a35c8437fa11f3" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;geometry_msgs::msg::PoseArray&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a5ba2cd508454e81923a35c8437fa11f3" kindref="member">crossing_point_pub_</ref>;</highlight></codeline>
+<codeline lineno="417" refid="classhateb__local__planner_1_1TebVisualization_1a76d143f9e0d7911e0eb58ac9c0e3549c" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;cohan_msgs::msg::CrossingInfo&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a76d143f9e0d7911e0eb58ac9c0e3549c" kindref="member">crossing_info_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="418" refid="classhateb__local__planner_1_1TebVisualization_1ad9567f51f6204e31c72030f2bdf05394" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;cohan_msgs::msg::TrackedAgents&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ad9567f51f6204e31c72030f2bdf05394" kindref="member">tracked_agents_sub_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="419" refid="classhateb__local__planner_1_1TebVisualization_1a74bb9087ff93d11dd65a08c4899578b4" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a74bb9087ff93d11dd65a08c4899578b4" kindref="member">vel_robot_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="420" refid="classhateb__local__planner_1_1TebVisualization_1a4c35c85e15d92f2660436b0811d4f4b4" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a4c35c85e15d92f2660436b0811d4f4b4" kindref="member">vel_agent_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="421" refid="classhateb__local__planner_1_1TebVisualization_1ad1e846978c3e1c986f0438526d556b3e" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;tf2_ros::Buffer&gt;<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ad1e846978c3e1c986f0438526d556b3e" kindref="member">tf_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TF2<sp/>buffer<sp/>for<sp/>coordinate<sp/>transformations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422" refid="classhateb__local__planner_1_1TebVisualization_1aba3da04ca495887e142ffcea242b3ffb" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;tf2_ros::TransformListener&gt;<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aba3da04ca495887e142ffcea242b3ffb" kindref="member">tf_listener_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TF2<sp/>transform<sp/>listener<sp/>for<sp/>coordinate<sp/>transformations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="423" refid="classhateb__local__planner_1_1TebVisualization_1a2646143d017d51ad2e5228a70715d8ae" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;std_msgs::msg::Float32&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a2646143d017d51ad2e5228a70715d8ae" kindref="member">ttg_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="424" refid="classhateb__local__planner_1_1TebVisualization_1a547d2dcd85bf88ed8b7c63e878b99ac6" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a547d2dcd85bf88ed8b7c63e878b99ac6" kindref="member">ns_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="425" refid="classhateb__local__planner_1_1TebVisualization_1a24d3f19150fd3a0e72fbe2667abeed4d" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a24d3f19150fd3a0e72fbe2667abeed4d" kindref="member">tracked_agents_sub_topic_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="427" refid="classhateb__local__planner_1_1TebVisualization_1a4a6a92c409f2303be7d7a6639f9ffd64" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;HATebConfig&gt;<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a4a6a92c409f2303be7d7a6639f9ffd64" kindref="member">cfg_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="428" refid="classhateb__local__planner_1_1TebVisualization_1aefd9c7353f7cca488c105c794046b8de" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aefd9c7353f7cca488c105c794046b8de" kindref="member">initialized_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="429" refid="classhateb__local__planner_1_1TebVisualization_1a67f0f69359f5d72c3d29e64dd3d96765" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a67f0f69359f5d72c3d29e64dd3d96765" kindref="member">clearing_timer_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431" refid="classhateb__local__planner_1_1TebVisualization_1a47460cf695b80be9173392fb846c2b54" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a47460cf695b80be9173392fb846c2b54" kindref="member">last_publish_robot_global_plan_</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="432" refid="classhateb__local__planner_1_1TebVisualization_1a4e1dfbe068f664090ba1be80180fc07e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a4e1dfbe068f664090ba1be80180fc07e" kindref="member">last_publish_robot_local_plan_</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="433" refid="classhateb__local__planner_1_1TebVisualization_1ab46113e35dec3a8b75312ad73f67dfc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ab46113e35dec3a8b75312ad73f67dfc2" kindref="member">last_publish_robot_local_plan_poses_</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="434" refid="classhateb__local__planner_1_1TebVisualization_1a34478d4421ea14275e3d648646708865" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a34478d4421ea14275e3d648646708865" kindref="member">last_publish_robot_local_plan_fp_poses_</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="435" refid="classhateb__local__planner_1_1TebVisualization_1ac319a63a42ca5ad245f45f453d3830e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ac319a63a42ca5ad245f45f453d3830e8" kindref="member">last_publish_agents_global_plans_</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="436" refid="classhateb__local__planner_1_1TebVisualization_1a509f6f646b8825f11a470529c1989ab3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a509f6f646b8825f11a470529c1989ab3" kindref="member">last_publish_agents_local_plans_</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="437" refid="classhateb__local__planner_1_1TebVisualization_1a200fed97b7b01eadf645b819418cbf04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a200fed97b7b01eadf645b819418cbf04" kindref="member">last_publish_agents_local_plan_poses_</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="438" refid="classhateb__local__planner_1_1TebVisualization_1a50984055158afa68905b8a5b073af971" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a50984055158afa68905b8a5b073af971" kindref="member">last_publish_agents_local_plan_fp_poses_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440" refid="classhateb__local__planner_1_1TebVisualization_1a2e4e98bb5e713cee08e1585fb82f0c7c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a2e4e98bb5e713cee08e1585fb82f0c7c" kindref="member">last_robot_fp_poses_idx_</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="441" refid="classhateb__local__planner_1_1TebVisualization_1a07aab63a4077418fdc0467a75dadc134" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a07aab63a4077418fdc0467a75dadc134" kindref="member">last_agent_fp_poses_idx_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/>EIGEN_MAKE_ALIGNED_OPERATOR_NEW</highlight></codeline>
+<codeline lineno="445"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight></codeline>
+<codeline lineno="448" refid="namespacehateb__local__planner_1a3106e664caee6d9f224ff0b25fb131f0" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacehateb__local__planner_1a3106e664caee6d9f224ff0b25fb131f0" kindref="member">TebVisualizationPtr</ref><sp/>=<sp/>std::shared_ptr&lt;TebVisualization&gt;;</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451" refid="namespacehateb__local__planner_1a640aced052258f3d210b181eb4d1f045" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacehateb__local__planner_1a640aced052258f3d210b181eb4d1f045" kindref="member">TebVisualizationConstPtr</ref><sp/>=<sp/>std::shared_ptr&lt;const<sp/>TebVisualization&gt;;</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>GraphType&gt;</highlight></codeline>
+<codeline lineno="454" refid="classhateb__local__planner_1_1TebVisualization_1a40b9087596923916b103ed54ebc9f9ea" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a40b9087596923916b103ed54ebc9f9ea" kindref="member">TebVisualization::publishGraph</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GraphType&amp;<sp/>graph,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>ns_prefix)<sp/>{</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1TebVisualization_1a183b88c2bd0b99715510f26e1ce4a9c5" kindref="member">printErrorWhenNotInitialized</ref>())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>GraphVertexIterator<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>boost::graph_traits&lt;GraphType&gt;::vertex_iterator;</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>GraphEdgeIterator<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>boost::graph_traits&lt;GraphType&gt;::edge_iterator;</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Visualize<sp/>Edges</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/>visualization_msgs::msg::Marker<sp/>marker;</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/>marker.header.frame_id<sp/>=<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a4a6a92c409f2303be7d7a6639f9ffd64" kindref="member">cfg_</ref>-&gt;map_frame;</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/>marker.header.stamp<sp/>=<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aff8b0e1edb2fe692d3a907998ba722e1" kindref="member">node_</ref>-&gt;now();</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/>marker.ns<sp/>=<sp/>ns_prefix<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;Edges&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/>marker.id<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#define<sp/>TRIANGLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>TRIANGLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/>marker.type<sp/>=<sp/>visualization_msgs::msg::Marker::TRIANGLE_LIST;</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/>marker.type<sp/>=<sp/>visualization_msgs::msg::Marker::LINE_LIST;</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/>marker.action<sp/>=<sp/>visualization_msgs::msg::Marker::ADD;</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/>GraphEdgeIterator<sp/>it_edge;</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/>GraphEdgeIterator<sp/>end_edges;</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(boost::tie(it_edge,<sp/>end_edges)<sp/>=<sp/>boost::edges(graph);<sp/>it_edge<sp/>!=<sp/>end_edges;<sp/>++it_edge)<sp/>{</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>TRIANGLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref><sp/>point_start1;</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/>point_start1.x<sp/>=<sp/>graph[boost::source(*it_edge,<sp/>graph)].pos[0]<sp/>+<sp/>0.05;</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/>point_start1.y<sp/>=<sp/>graph[boost::source(*it_edge,<sp/>graph)].pos[1]<sp/>-<sp/>0.05;</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/>point_start1.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.points.push_back(point_start1);</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref><sp/>point_start2;</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/>point_start2.x<sp/>=<sp/>graph[boost::source(*it_edge,<sp/>graph)].pos[0]<sp/>-<sp/>0.05;</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/>point_start2.y<sp/>=<sp/>graph[boost::source(*it_edge,<sp/>graph)].pos[1]<sp/>+<sp/>0.05;</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/>point_start2.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.points.push_back(point_start2);</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"></highlight></codeline>
+<codeline lineno="489"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref><sp/>point_start;</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/>point_start.x<sp/>=<sp/>graph[boost::source(*it_edge,<sp/>graph)].pos[0];</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/>point_start.y<sp/>=<sp/>graph[boost::source(*it_edge,<sp/>graph)].pos[1];</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/>point_start.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.points.push_back(point_start);</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref><sp/>point_end;</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/>point_end.x<sp/>=<sp/>graph[boost::target(*it_edge,<sp/>graph)].pos[0];</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/>point_end.y<sp/>=<sp/>graph[boost::target(*it_edge,<sp/>graph)].pos[1];</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/>point_end.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.points.push_back(point_end);</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"></highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>color</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/>std_msgs::msg::ColorRGBA<sp/>color;</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/>color.a<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/>color.r<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/>color.g<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/>color.b<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.colors.push_back(color);</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.colors.push_back(color);</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>TRIANGLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.colors.push_back(color);</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>TRIANGLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/>marker.scale.x<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/>marker.scale.y<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/>marker.scale.z<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/>marker.scale.x<sp/>=<sp/>0.01;</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/>marker.color.a<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/>marker.color.r<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/>marker.color.g<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/>marker.color.b<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"></highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>publish<sp/>edge<sp/>markers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ae92f830d99b53365a9125545c7374cac" kindref="member">teb_marker_pub_</ref>-&gt;publish(marker);</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Visualize<sp/>vertices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/>marker.header.frame_id<sp/>=<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a4a6a92c409f2303be7d7a6639f9ffd64" kindref="member">cfg_</ref>-&gt;map_frame;</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/>marker.header.stamp<sp/>=<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aff8b0e1edb2fe692d3a907998ba722e1" kindref="member">node_</ref>-&gt;now();</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/>marker.ns<sp/>=<sp/>ns_prefix<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;Vertices&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/>marker.id<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/>marker.type<sp/>=<sp/>visualization_msgs::msg::Marker::POINTS;</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/>marker.action<sp/>=<sp/>visualization_msgs::msg::Marker::ADD;</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"></highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/>GraphVertexIterator<sp/>it_vert;</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/>GraphVertexIterator<sp/>end_vert;</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(boost::tie(it_vert,<sp/>end_vert)<sp/>=<sp/>boost::vertices(graph);<sp/>it_vert<sp/>!=<sp/>end_vert;<sp/>++it_vert)<sp/>{</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref><sp/>point;</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/>point.x<sp/>=<sp/>graph[*it_vert].pos[0];</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/>point.y<sp/>=<sp/>graph[*it_vert].pos[1];</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/><sp/><sp/>point.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.points.push_back(point);</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>color</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"><sp/><sp/><sp/><sp/>std_msgs::msg::ColorRGBA<sp/>color;</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/>color.a<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it_vert<sp/>==<sp/>end_vert<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>color.r<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>color.g<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>color.b<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>color.r<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>color.g<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>color.b<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.colors.push_back(color);</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>first<sp/>color<sp/>(start<sp/>vertix)<sp/>to<sp/>blue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!marker.colors.empty())<sp/>{</highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.colors.front().b<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.colors.front().g<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="566"><highlight class="normal"></highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/>marker.scale.x<sp/>=<sp/>0.1;</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/>marker.scale.y<sp/>=<sp/>0.1;</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/>marker.color.a<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/>marker.color.r<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/>marker.color.g<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/>marker.color.b<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"></highlight></codeline>
+<codeline lineno="574"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>publish<sp/>vertex<sp/>markers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ae92f830d99b53365a9125545c7374cac" kindref="member">teb_marker_pub_</ref>-&gt;publish(marker);</highlight></codeline>
+<codeline lineno="576"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"></highlight></codeline>
+<codeline lineno="578"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>B</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">irIter&gt;</highlight></codeline>
+<codeline lineno="579" refid="classhateb__local__planner_1_1TebVisualization_1ae1b0b3b81d634655283512389a60dd7d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ae1b0b3b81d634655283512389a60dd7d" kindref="member">TebVisualization::publishPathContainer</ref>(BidirIter<sp/>first,<sp/>BidirIter<sp/>last,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>ns)<sp/>{</highlight></codeline>
+<codeline lineno="580"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1TebVisualization_1a183b88c2bd0b99715510f26e1ce4a9c5" kindref="member">printErrorWhenNotInitialized</ref>())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"></highlight></codeline>
+<codeline lineno="582"><highlight class="normal"><sp/><sp/>visualization_msgs::msg::Marker<sp/>marker;</highlight></codeline>
+<codeline lineno="583"><highlight class="normal"><sp/><sp/>marker.header.frame_id<sp/>=<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1a4a6a92c409f2303be7d7a6639f9ffd64" kindref="member">cfg_</ref>-&gt;map_frame;</highlight></codeline>
+<codeline lineno="584"><highlight class="normal"><sp/><sp/>marker.header.stamp<sp/>=<sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1aff8b0e1edb2fe692d3a907998ba722e1" kindref="member">node_</ref>-&gt;now();</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"><sp/><sp/>marker.ns<sp/>=<sp/>ns;</highlight></codeline>
+<codeline lineno="586"><highlight class="normal"><sp/><sp/>marker.id<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="587"><highlight class="normal"><sp/><sp/>marker.type<sp/>=<sp/>visualization_msgs::msg::Marker::LINE_LIST;</highlight></codeline>
+<codeline lineno="588"><highlight class="normal"><sp/><sp/>marker.action<sp/>=<sp/>visualization_msgs::msg::Marker::ADD;</highlight></codeline>
+<codeline lineno="589"><highlight class="normal"></highlight></codeline>
+<codeline lineno="590"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>PathType<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::iterator_traits&lt;BidirIter&gt;::value_type;<sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>type<sp/>of<sp/>the<sp/>path<sp/>(point<sp/>container)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="591"><highlight class="normal"></highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>through<sp/>path<sp/>container</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(first<sp/>!=<sp/>last)<sp/>{</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>iterate<sp/>single<sp/>path<sp/>points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="595"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>PathType::const_iterator<sp/>it_point;</highlight></codeline>
+<codeline lineno="596"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>PathType::const_iterator<sp/>end_point;</highlight></codeline>
+<codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(it_point<sp/>=<sp/>first-&gt;begin(),<sp/>end_point<sp/>=<sp/>boost::prior(first-&gt;end());<sp/>it_point<sp/>!=<sp/>end_point;<sp/>++it_point)<sp/>{</highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref><sp/>point_start;</highlight></codeline>
+<codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>point_start.x<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a2109332af478b073ef8713bd5c8d3710" kindref="member">get_const_reference</ref>(*it_point).x();</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>point_start.y<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a2109332af478b073ef8713bd5c8d3710" kindref="member">get_const_reference</ref>(*it_point).y();</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>point_start.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker.points.push_back(point_start);</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight></codeline>
+<codeline lineno="604"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref><sp/>point_end;</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>point_end.x<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a2109332af478b073ef8713bd5c8d3710" kindref="member">get_const_reference</ref>(*boost::next(it_point)).x();</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>point_end.y<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a2109332af478b073ef8713bd5c8d3710" kindref="member">get_const_reference</ref>(*boost::next(it_point)).y();</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>point_end.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker.points.push_back(point_end);</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="610"><highlight class="normal"><sp/><sp/><sp/><sp/>++first;</highlight></codeline>
+<codeline lineno="611"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"><sp/><sp/>marker.scale.x<sp/>=<sp/>0.01;</highlight></codeline>
+<codeline lineno="613"><highlight class="normal"><sp/><sp/>marker.color.a<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"><sp/><sp/>marker.color.r<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="615"><highlight class="normal"><sp/><sp/>marker.color.g<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="616"><highlight class="normal"><sp/><sp/>marker.color.b<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="617"><highlight class="normal"></highlight></codeline>
+<codeline lineno="618"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1TebVisualization_1ae92f830d99b53365a9125545c7374cac" kindref="member">teb_marker_pub_</ref>-&gt;publish(marker);</highlight></codeline>
+<codeline lineno="619"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"></highlight></codeline>
+<codeline lineno="621"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hateb_local_planner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="622"><highlight class="normal"></highlight></codeline>
+<codeline lineno="623"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>VISUALIZATION_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp"/>
+  </compounddef>
+</doxygen>

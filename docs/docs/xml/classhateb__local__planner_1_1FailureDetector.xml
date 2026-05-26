@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1FailureDetector" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::FailureDetector</compoundname>
+    <includes refid="recovery__behaviors_8h" local="no">recovery_behaviors.h</includes>
+    <innerclass refid="structhateb__local__planner_1_1FailureDetector_1_1VelMeasurement" prot="protected">hateb_local_planner::FailureDetector::VelMeasurement</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1FailureDetector_1a91af318e44eb3143ca3a0de91ae1d67a" prot="private" static="no" mutable="no">
+        <type>boost::circular_buffer&lt; <ref refid="structhateb__local__planner_1_1FailureDetector_1_1VelMeasurement" kindref="compound">VelMeasurement</ref> &gt;</type>
+        <definition>boost::circular_buffer&lt;VelMeasurement&gt; hateb_local_planner::FailureDetector::buffer_</definition>
+        <argsstring></argsstring>
+        <name>buffer_</name>
+        <briefdescription>
+<para>Circular buffer to store the last measurements. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1FailureDetector_1a5aa234fe397d92b44d2b3315a18201f3" kindref="member">setBufferLength</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="121" column="26" bodyfile="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1FailureDetector_1af3edca7b777154883f021245c6522277" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::FailureDetector::oscillating_</definition>
+        <argsstring></argsstring>
+        <name>oscillating_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Current state: true if robot is oscillating. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="122" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1FailureDetector_1abffe73939cfb487a96c3908569d0f12d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::FailureDetector::FailureDetector</definition>
+        <argsstring>()=default</argsstring>
+        <name>FailureDetector</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="63" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1FailureDetector_1a0f642e879016d0727e2b64c9d0b4f153" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::FailureDetector::~FailureDetector</definition>
+        <argsstring>()=default</argsstring>
+        <name>~FailureDetector</name>
+        <briefdescription>
+<para>destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="68" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1FailureDetector_1a5aa234fe397d92b44d2b3315a18201f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::FailureDetector::setBufferLength</definition>
+        <argsstring>(int length)</argsstring>
+        <name>setBufferLength</name>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Set buffer length (measurement history) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of measurements to be kept </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="74" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1FailureDetector_1a0eacfd29e134bbb95f486ea74cd046fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::FailureDetector::update</definition>
+        <argsstring>(const geometry_msgs::msg::Twist &amp;twist, double v_max, double v_backwards_max, double omega_max, double v_eps, double omega_eps)</argsstring>
+        <name>update</name>
+        <param>
+          <type>const geometry_msgs::msg::Twist &amp;</type>
+          <declname>twist</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v_max</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v_backwards_max</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>omega_max</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v_eps</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>omega_eps</declname>
+        </param>
+        <briefdescription>
+<para>Add a new twist measurement to the internal buffer and compute a new decision. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>twist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>geometry_msgs::msg::Twist velocity information </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum forward translational velocity </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_backwards_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum backward translational velocity </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>omega_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum angular velocity </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_eps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for the average normalized linear velocity in (0,1) that must not be exceded (e.g. 0.1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>omega_eps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for the average normalized angular velocity in (0,1) that must not be exceded (e.g. 0.1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="85" column="8" bodyfile="hateb_local_planner/src/recovery_behaviors.cpp" bodystart="46" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1FailureDetector_1ad4e41d460c9792324f7887d019a978c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::FailureDetector::isOscillating</definition>
+        <argsstring>() const</argsstring>
+        <name>isOscillating</name>
+        <briefdescription>
+<para>Check if the robot got stucked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This call does not compute the actual decision, since it is computed within each <ref refid="classhateb__local__planner_1_1FailureDetector_1a0eacfd29e134bbb95f486ea74cd046fc" kindref="member">update()</ref> invocation. <simplesect kind="return"><para>true if the robot got stucked, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="94" column="8" bodyfile="hateb_local_planner/src/recovery_behaviors.cpp" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1FailureDetector_1af4b9660b75ee24276a1cfbc3fa7dcc6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::FailureDetector::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Clear the current internal state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This call also resets the internal buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="101" column="8" bodyfile="hateb_local_planner/src/recovery_behaviors.cpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1FailureDetector_1ad5f2908e4978f72c4380d881d916dede" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::FailureDetector::detect</definition>
+        <argsstring>(double v_eps, double omega_eps)</argsstring>
+        <name>detect</name>
+        <param>
+          <type>double</type>
+          <declname>v_eps</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>omega_eps</declname>
+        </param>
+        <briefdescription>
+<para>Detect if the robot got stucked based on the current buffer content. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Afterwards the status might be checked using gotStucked(); <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v_eps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for the average normalized linear velocity in (0,1) that must not be exceded (e.g. 0.1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>omega_eps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for the average normalized angular velocity in (0,1) that must not be exceded (e.g. 0.1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the robot got stucked, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="118" column="8" bodyfile="hateb_local_planner/src/recovery_behaviors.cpp" bodystart="77" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class implements methods in order to detect if the robot got stucked or is oscillating. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The StuckDetector analyzes the last N commanded velocities in order to detect whether the robot might got stucked or oscillates between left/right/forward/backwards motions. </para>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="58" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" bodystart="58" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1FailureDetector_1a91af318e44eb3143ca3a0de91ae1d67a" prot="private" virt="non-virtual"><scope>hateb_local_planner::FailureDetector</scope><name>buffer_</name></member>
+      <member refid="classhateb__local__planner_1_1FailureDetector_1af4b9660b75ee24276a1cfbc3fa7dcc6f" prot="public" virt="non-virtual"><scope>hateb_local_planner::FailureDetector</scope><name>clear</name></member>
+      <member refid="classhateb__local__planner_1_1FailureDetector_1ad5f2908e4978f72c4380d881d916dede" prot="protected" virt="non-virtual"><scope>hateb_local_planner::FailureDetector</scope><name>detect</name></member>
+      <member refid="classhateb__local__planner_1_1FailureDetector_1abffe73939cfb487a96c3908569d0f12d" prot="public" virt="non-virtual"><scope>hateb_local_planner::FailureDetector</scope><name>FailureDetector</name></member>
+      <member refid="classhateb__local__planner_1_1FailureDetector_1ad4e41d460c9792324f7887d019a978c8" prot="public" virt="non-virtual"><scope>hateb_local_planner::FailureDetector</scope><name>isOscillating</name></member>
+      <member refid="classhateb__local__planner_1_1FailureDetector_1af3edca7b777154883f021245c6522277" prot="private" virt="non-virtual"><scope>hateb_local_planner::FailureDetector</scope><name>oscillating_</name></member>
+      <member refid="classhateb__local__planner_1_1FailureDetector_1a5aa234fe397d92b44d2b3315a18201f3" prot="public" virt="non-virtual"><scope>hateb_local_planner::FailureDetector</scope><name>setBufferLength</name></member>
+      <member refid="classhateb__local__planner_1_1FailureDetector_1a0eacfd29e134bbb95f486ea74cd046fc" prot="public" virt="non-virtual"><scope>hateb_local_planner::FailureDetector</scope><name>update</name></member>
+      <member refid="classhateb__local__planner_1_1FailureDetector_1a0f642e879016d0727e2b64c9d0b4f153" prot="public" virt="non-virtual"><scope>hateb_local_planner::FailureDetector</scope><name>~FailureDetector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classBlobDetector" kind="class" language="C++" prot="public">
+    <compoundname>BlobDetector</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">cv::SimpleBlobDetector</basecompoundref>
+    <includes refid="blob__detector_8h" local="no">blob_detector.h</includes>
+    <innerclass refid="structBlobDetector_1_1Center" prot="protected">BlobDetector::Center</innerclass>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classBlobDetector_1ab0391d8ad851963c910d488c81ca49f6" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; cv::Point &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;cv::Point&gt; &gt; BlobDetector::contours_</definition>
+        <argsstring></argsstring>
+        <name>contours_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="106" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBlobDetector_1a9ea09a8c22d390a858c8d8e8c5573837" prot="protected" static="no" mutable="no">
+        <type>Params</type>
+        <definition>Params BlobDetector::params_</definition>
+        <argsstring></argsstring>
+        <name>params_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="108" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBlobDetector_1a7236b44e5d1d7429c271d90d19caaaf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BlobDetector::BlobDetector</definition>
+        <argsstring>(const cv::SimpleBlobDetector::Params &amp;parameters=cv::SimpleBlobDetector::Params())</argsstring>
+        <name>BlobDetector</name>
+        <param>
+          <type>const cv::SimpleBlobDetector::Params &amp;</type>
+          <declname>parameters</declname>
+          <defval>cv::SimpleBlobDetector::Params()</defval>
+        </param>
+        <briefdescription>
+<para>Default constructor which optionally accepts custom parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="64" column="3" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/blob_detector.cpp" bodystart="5" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classBlobDetector_1a1aec59fca3c1e29fe805c493fd047ea5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BlobDetector::detect</definition>
+        <argsstring>(const cv::Mat &amp;image, std::vector&lt; cv::KeyPoint &gt; &amp;keypoints, const cv::Mat &amp;mask=cv::Mat())</argsstring>
+        <name>detect</name>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; cv::KeyPoint &gt; &amp;</type>
+          <declname>keypoints</declname>
+        </param>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>mask</declname>
+          <defval>cv::Mat()</defval>
+        </param>
+        <briefdescription>
+<para>Detects keypoints in an image and extracts contours. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In contrast to the original detect method, this extended version also extracts contours. Contours can be accessed by <ref refid="classBlobDetector_1ac5475d5355100020dd3d7ac2c3bb34b3" kindref="member">getContours()</ref> after invoking this method.</para>
+<para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>The mask option is currently not implemented.</para>
+</xrefdescription></xrefsect></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>image </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keypoints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The detected keypoints. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mask specifying where to look for keypoints (optional). It must be a 8-bit integer matrix with non-zero values in the region of interest. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="83" column="16" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/blob_detector.cpp" bodystart="13" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classBlobDetector_1ac5475d5355100020dd3d7ac2c3bb34b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; std::vector&lt; cv::Point &gt; &gt; &amp;</type>
+        <definition>const std::vector&lt;std::vector&lt;cv::Point&gt; &gt;&amp; BlobDetector::getContours</definition>
+        <argsstring>()</argsstring>
+        <name>getContours</name>
+        <briefdescription>
+<para>Access contours extracted during detection stage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Read-only reference to the contours set of the previous <ref refid="classBlobDetector_1a1aec59fca3c1e29fe805c493fd047ea5" kindref="member">detect()</ref> run </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="90" column="21" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classBlobDetector_1a8618e0dc069886d6114c4dc18a750b94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BlobDetector::updateParameters</definition>
+        <argsstring>(const cv::SimpleBlobDetector::Params &amp;parameters)</argsstring>
+        <name>updateParameters</name>
+        <param>
+          <type>const cv::SimpleBlobDetector::Params &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Update internal parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="93" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/blob_detector.cpp" bodystart="190" bodyend="193"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classBlobDetector_1a24a460a3d55c29303effa64837fa9b58" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cv::Ptr&lt; <ref refid="classBlobDetector" kindref="compound">BlobDetector</ref> &gt;</type>
+        <definition>cv::Ptr&lt; BlobDetector &gt; BlobDetector::create</definition>
+        <argsstring>(const BlobDetector::Params &amp;params)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const BlobDetector::Params &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Create shared instance of the blob detector with given parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="67" column="18" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/blob_detector.cpp" bodystart="7" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classBlobDetector_1a68666938d1c9e6018abf6ea83b7d23f2" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BlobDetector::findBlobs</definition>
+        <argsstring>(const cv::Mat &amp;image, const cv::Mat &amp;binary_image, std::vector&lt; Center &gt; &amp;centers, std::vector&lt; std::vector&lt; cv::Point &gt;&gt; &amp;cur_contours) const</argsstring>
+        <name>findBlobs</name>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>binary_image</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structBlobDetector_1_1Center" kindref="compound">Center</ref> &gt; &amp;</type>
+          <declname>centers</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; cv::Point &gt;&gt; &amp;</type>
+          <declname>cur_contours</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="103" column="16" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/blob_detector.cpp" bodystart="93" bodyend="188"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Detect blobs in image (specialized for dynamic obstacles in the costmap) </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is based on OpenCV&apos;s blob detector cv::SimpleBlobDetector. It has been modified and specialized for dynamic obstacle tracking in the costmap: -&gt; The modified version also returns contours of the blob.</para>
+<para>See <ulink url="http://docs.opencv.org/trunk/d0/d7a/classcv_1_1SimpleBlobDetector.html">http://docs.opencv.org/trunk/d0/d7a/classcv_1_1SimpleBlobDetector.html</ulink> for the original class. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BlobDetector</label>
+        <link refid="classBlobDetector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cv::SimpleBlobDetector</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BlobDetector</label>
+        <link refid="classBlobDetector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cv::SimpleBlobDetector</label>
+      </node>
+    </collaborationgraph>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="60" column="1" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" bodystart="61" bodyend="109"/>
+    <listofallmembers>
+      <member refid="classBlobDetector_1a7236b44e5d1d7429c271d90d19caaaf1" prot="public" virt="non-virtual"><scope>BlobDetector</scope><name>BlobDetector</name></member>
+      <member refid="classBlobDetector_1ab0391d8ad851963c910d488c81ca49f6" prot="protected" virt="non-virtual"><scope>BlobDetector</scope><name>contours_</name></member>
+      <member refid="classBlobDetector_1a24a460a3d55c29303effa64837fa9b58" prot="public" virt="non-virtual"><scope>BlobDetector</scope><name>create</name></member>
+      <member refid="classBlobDetector_1a1aec59fca3c1e29fe805c493fd047ea5" prot="public" virt="virtual"><scope>BlobDetector</scope><name>detect</name></member>
+      <member refid="classBlobDetector_1a68666938d1c9e6018abf6ea83b7d23f2" prot="protected" virt="virtual"><scope>BlobDetector</scope><name>findBlobs</name></member>
+      <member refid="classBlobDetector_1ac5475d5355100020dd3d7ac2c3bb34b3" prot="public" virt="non-virtual"><scope>BlobDetector</scope><name>getContours</name></member>
+      <member refid="classBlobDetector_1a9ea09a8c22d390a858c8d8e8c5573837" prot="protected" virt="non-virtual"><scope>BlobDetector</scope><name>params_</name></member>
+      <member refid="classBlobDetector_1a8618e0dc069886d6114c4dc18a750b94" prot="public" virt="non-virtual"><scope>BlobDetector</scope><name>updateParameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

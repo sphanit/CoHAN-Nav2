@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classagents_1_1PredictGoalROS" kind="class" language="C++" prot="public">
+    <compoundname>agents::PredictGoalROS</compoundname>
+    <includes refid="predict__goal__ros_8hpp" local="no">predict_goal_ros.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classagents_1_1PredictGoalROS_1ab6b5a298a72015e72ad9d88a4c8b7bce" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; cohan_msgs::msg::TrackedAgents &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;cohan_msgs::msg::TrackedAgents&gt;::SharedPtr agents::PredictGoalROS::agents_sub_</definition>
+        <argsstring></argsstring>
+        <name>agents_sub_</name>
+        <briefdescription>
+<para>Subscriber for tracked agents updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="85" column="36" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1PredictGoalROS_1a501e7f7de28f27cb130efae884aaf9fe" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; agent_path_prediction::msg::PredictedGoals &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;agent_path_prediction::msg::PredictedGoals&gt;::SharedPtr agents::PredictGoalROS::goal_pub_</definition>
+        <argsstring></argsstring>
+        <name>goal_pub_</name>
+        <briefdescription>
+<para>Publisher for predicted goals. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="86" column="33" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1PredictGoalROS_1ab96ad9139ef5922ee0042c6d8105009b" prot="private" static="no" mutable="no">
+        <type><ref refid="classagents_1_1BayesianGoalPrediction" kindref="compound">agents::BayesianGoalPrediction</ref></type>
+        <definition>agents::BayesianGoalPrediction agents::PredictGoalROS::predictor_</definition>
+        <argsstring></argsstring>
+        <name>predictor_</name>
+        <briefdescription>
+<para>Instance of the Bayesian goal prediction algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="89" column="34" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1PredictGoalROS_1a4f176eca70c34256d1e5d5a7229f5065" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, Eigen::Vector2d &gt;</type>
+        <definition>std::map&lt;std::string, Eigen::Vector2d&gt; agents::PredictGoalROS::goals_</definition>
+        <argsstring></argsstring>
+        <name>goals_</name>
+        <briefdescription>
+<para>Map of goal names to their positions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="92" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1PredictGoalROS_1aedc938f4e507fa4c5b3b088ed9977bd5" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::string &gt;</type>
+        <definition>std::map&lt;int, std::string&gt; agents::PredictGoalROS::agent_goal_predicts_</definition>
+        <argsstring></argsstring>
+        <name>agent_goal_predicts_</name>
+        <briefdescription>
+<para>Map of agent IDs to their predicted goals. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="93" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1PredictGoalROS_1ad6c43b7c6b94133825e30d3da4b7cded" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int agents::PredictGoalROS::window_size_</definition>
+        <argsstring></argsstring>
+        <name>window_size_</name>
+        <briefdescription>
+<para>Size of the sliding window used for predictions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="96" column="7" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1PredictGoalROS_1a2ed803b4388665427692d4ea8194e0d6" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; rclcpp::Node &gt;</type>
+        <definition>std::shared_ptr&lt;rclcpp::Node&gt; agents::PredictGoalROS::node_</definition>
+        <argsstring></argsstring>
+        <name>node_</name>
+        <briefdescription>
+<para>ROS2 node handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="98" column="19" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1PredictGoalROS_1a929fa800d4407a3ad032956cd2836520" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classagents_1_1AgentPathPredictConfig" kindref="compound">AgentPathPredictConfig</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;AgentPathPredictConfig&gt; agents::PredictGoalROS::cfg_</definition>
+        <argsstring></argsstring>
+        <name>cfg_</name>
+        <briefdescription>
+<para>Configuration parameters for agent path prediction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="99" column="19" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1PredictGoalROS_1a65b1bb4b8ad2ecdad4b16d292bbf7841" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::PredictGoalROS::tracked_agents_sub_topic_</definition>
+        <argsstring></argsstring>
+        <name>tracked_agents_sub_topic_</name>
+        <briefdescription>
+<para>Topic name for subscribing to tracked agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="100" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1PredictGoalROS_1a8a7198ef45914bd749c083cc3a768347" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::PredictGoalROS::ns_</definition>
+        <argsstring></argsstring>
+        <name>ns_</name>
+        <briefdescription>
+<para>Namespace for the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="101" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classagents_1_1PredictGoalROS_1a86b4a6c196e68981a662ca4fa3c31dea" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>agents::PredictGoalROS::PredictGoalROS</definition>
+        <argsstring>(std::shared_ptr&lt; rclcpp::Node &gt; node, std::shared_ptr&lt; AgentPathPredictConfig &gt; cfg)</argsstring>
+        <name>PredictGoalROS</name>
+        <param>
+          <type>std::shared_ptr&lt; rclcpp::Node &gt;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classagents_1_1AgentPathPredictConfig" kindref="compound">AgentPathPredictConfig</ref> &gt;</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+<para>Default constructor, sets node handle and config pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the ROS2 node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the <ref refid="classagents_1_1AgentPathPredictConfig" kindref="compound">AgentPathPredictConfig</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="55" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1PredictGoalROS_1ab4db56f91db3acf3874edb065a72a303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::PredictGoalROS::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+<para>Initializes the ROS node, subscribers, and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="63" column="8" bodyfile="agent_path_prediction/src/predict_goal_ros.cpp" bodystart="31" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1PredictGoalROS_1a18a1a8a0b7e13f1c14567f9431382b8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>agents::PredictGoalROS::~PredictGoalROS</definition>
+        <argsstring>()=default</argsstring>
+        <name>~PredictGoalROS</name>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="68" column="3"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classagents_1_1PredictGoalROS_1ae5b3d019459c537fecf33166ba182379" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::PredictGoalROS::trackedAgentsCB</definition>
+        <argsstring>(const cohan_msgs::msg::TrackedAgents::SharedPtr msg)</argsstring>
+        <name>trackedAgentsCB</name>
+        <param>
+          <type>const cohan_msgs::msg::TrackedAgents::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for tracked agents updates. This method processes incoming tracked agents data and updates the internal state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message containing tracked agents data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="75" column="8" bodyfile="agent_path_prediction/src/predict_goal_ros.cpp" bodystart="54" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1PredictGoalROS_1a5dba384076d3792d1917a1e54dcd8839" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool agents::PredictGoalROS::loadGoals</definition>
+        <argsstring>(const std::string &amp;file)</argsstring>
+        <name>loadGoals</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Load goal positions from a YAML file. This method reads goal positions from the specified YAML file and populates the goals map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the YAML file containing goals </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if goals were loaded successfully, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="82" column="8" bodyfile="agent_path_prediction/src/predict_goal_ros.cpp" bodystart="92" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ROS wrapper for the Bayesian goal prediction system. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>agents::PredictGoalROS</label>
+        <link refid="classagents_1_1PredictGoalROS"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>predictor_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>agents::BayesianGoalPrediction</label>
+        <link refid="classagents_1_1BayesianGoalPrediction"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>nd_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>agents::Gaussian</label>
+        <link refid="classagents_1_1Gaussian"/>
+      </node>
+    </collaborationgraph>
+    <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" line="48" column="1" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.hpp" bodystart="48" bodyend="102"/>
+    <listofallmembers>
+      <member refid="classagents_1_1PredictGoalROS_1aedc938f4e507fa4c5b3b088ed9977bd5" prot="private" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>agent_goal_predicts_</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1ab6b5a298a72015e72ad9d88a4c8b7bce" prot="private" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>agents_sub_</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1a929fa800d4407a3ad032956cd2836520" prot="private" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>cfg_</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1a501e7f7de28f27cb130efae884aaf9fe" prot="private" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>goal_pub_</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1a4f176eca70c34256d1e5d5a7229f5065" prot="private" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>goals_</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1ab4db56f91db3acf3874edb065a72a303" prot="public" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>initialize</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1a5dba384076d3792d1917a1e54dcd8839" prot="private" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>loadGoals</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1a2ed803b4388665427692d4ea8194e0d6" prot="private" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>node_</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1a8a7198ef45914bd749c083cc3a768347" prot="private" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>ns_</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1a86b4a6c196e68981a662ca4fa3c31dea" prot="public" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>PredictGoalROS</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1ab96ad9139ef5922ee0042c6d8105009b" prot="private" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>predictor_</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1a65b1bb4b8ad2ecdad4b16d292bbf7841" prot="private" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>tracked_agents_sub_topic_</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1ae5b3d019459c537fecf33166ba182379" prot="private" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>trackedAgentsCB</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1ad6c43b7c6b94133825e30d3da4b7cded" prot="private" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>window_size_</name></member>
+      <member refid="classagents_1_1PredictGoalROS_1a18a1a8a0b7e13f1c14567f9431382b8e" prot="public" virt="non-virtual"><scope>agents::PredictGoalROS</scope><name>~PredictGoalROS</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

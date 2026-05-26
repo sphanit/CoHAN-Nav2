@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="predict__goal_8hpp" kind="file" language="C++">
+    <compoundname>predict_goal.hpp</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">eigen3/Eigen/Core</includes>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="agent__path__prediction_8hpp" local="no">agent_path_prediction.hpp</includedby>
+    <includedby refid="predict__goal__ros_8hpp" local="no">predict_goal_ros.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="1">
+        <label>predict_goal.hpp</label>
+        <link refid="predict__goal_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>utility</label>
+      </node>
+      <node id="3">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>agent_path_prediction.cpp</label>
+        <link refid="agent__path__prediction_8cpp"/>
+      </node>
+      <node id="2">
+        <label>agent_path_prediction.hpp</label>
+        <link refid="agent__path__prediction_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>hateb_local_planner_ros.cpp</label>
+        <link refid="hateb__local__planner__ros_8cpp"/>
+      </node>
+      <node id="1">
+        <label>predict_goal.hpp</label>
+        <link refid="predict__goal_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>predict_goal_ros.hpp</label>
+        <link refid="predict__goal__ros_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>predict_goal_ros.cpp</label>
+        <link refid="predict__goal__ros_8cpp"/>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner_ros.h</label>
+        <link refid="hateb__local__planner__ros_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classagents_1_1Gaussian" prot="public">agents::Gaussian</innerclass>
+    <innerclass refid="classagents_1_1BayesianGoalPrediction" prot="public">agents::BayesianGoalPrediction</innerclass>
+    <innernamespace refid="namespaceagents">agents</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="predict__goal_8hpp_1a1b0fda8ba947077492614595b1371c99" prot="public" static="no">
+        <name>COV</name>
+        <initializer>0.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="35" column="23" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(MIT<sp/>License)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2020-2025<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PREDICT_GOAL_HH_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PREDICT_GOAL_HH_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;eigen3/Eigen/Core&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="predict__goal_8hpp_1a1b0fda8ba947077492614595b1371c99" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COV<sp/>0.2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceagents" kindref="compound">agents</ref><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classagents_1_1Gaussian" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classagents_1_1Gaussian" kindref="compound">Gaussian</ref><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49" refid="classagents_1_1Gaussian_1ad81ec7369414c45daf181faebf42246d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classagents_1_1Gaussian_1ad81ec7369414c45daf181faebf42246d" kindref="member">Gaussian</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mean,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cov)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classagents_1_1Gaussian_1ada1f8aa4e47bbae656424a31321ae505" kindref="member">mean_</ref><sp/>=<sp/>mean;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classagents_1_1Gaussian_1af35d30c148ccfa781f28924838c24cbd" kindref="member">cov_</ref><sp/>=<sp/>cov;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classagents_1_1Gaussian_1a66476bf7c62c0a2e608274a805e0fc95" kindref="member">inv_cov_</ref><sp/>=<sp/>1.0<sp/>/<sp/>cov;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classagents_1_1Gaussian_1a783961a3ae7f0ca3ff09b1856f3be546" kindref="member">norm_const_</ref><sp/>=<sp/>1.0<sp/>/<sp/>std::sqrt(2<sp/>*<sp/><ref refid="hateb__config_8hpp_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref><sp/>*<sp/>cov);<sp/><sp/></highlight><highlight class="comment">//<sp/>Normalizing<sp/>constant</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classagents_1_1Gaussian_1a366f2f8a4be0df5b6b902f26a0148260" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1Gaussian_1a366f2f8a4be0df5b6b902f26a0148260" kindref="member">pdf</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>diff<sp/>=<sp/>x<sp/>-<sp/><ref refid="classagents_1_1Gaussian_1ada1f8aa4e47bbae656424a31321ae505" kindref="member">mean_</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1Gaussian_1a783961a3ae7f0ca3ff09b1856f3be546" kindref="member">norm_const_</ref><sp/>*<sp/>std::exp(-0.5<sp/>*<sp/>diff<sp/>*<sp/>diff<sp/>*<sp/><ref refid="classagents_1_1Gaussian_1a66476bf7c62c0a2e608274a805e0fc95" kindref="member">inv_cov_</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67" refid="classagents_1_1Gaussian_1ada1f8aa4e47bbae656424a31321ae505" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1Gaussian_1ada1f8aa4e47bbae656424a31321ae505" kindref="member">mean_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mean<sp/>of<sp/>the<sp/>Gaussian<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classagents_1_1Gaussian_1af35d30c148ccfa781f28924838c24cbd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1Gaussian_1af35d30c148ccfa781f28924838c24cbd" kindref="member">cov_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Covariance<sp/>of<sp/>the<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classagents_1_1Gaussian_1a66476bf7c62c0a2e608274a805e0fc95" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1Gaussian_1a66476bf7c62c0a2e608274a805e0fc95" kindref="member">inv_cov_</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inverse<sp/>of<sp/>covariance<sp/>for<sp/>faster<sp/>computation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classagents_1_1Gaussian_1a783961a3ae7f0ca3ff09b1856f3be546" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1Gaussian_1a783961a3ae7f0ca3ff09b1856f3be546" kindref="member">norm_const_</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>Normalization<sp/>constant<sp/>for<sp/>PDF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classagents_1_1BayesianGoalPrediction" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classagents_1_1BayesianGoalPrediction" kindref="compound">BayesianGoalPrediction</ref><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="78" refid="classagents_1_1BayesianGoalPrediction_1a2e6f78552d73bfc207d75877bee93b1e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a2e6f78552d73bfc207d75877bee93b1e" kindref="member">Trajectory</ref><sp/>=<sp/>std::vector&lt;Eigen::Vector2d&gt;;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classagents_1_1BayesianGoalPrediction_1af2d9c598e8ae4e4625321d41d3be8c74" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1af2d9c598e8ae4e4625321d41d3be8c74" kindref="member">BayesianGoalPrediction</ref>()<sp/>:<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1ad5520b219332a5da061c37140c922c29" kindref="member">nd_</ref>(0,<sp/><ref refid="predict__goal_8hpp_1a1b0fda8ba947077492614595b1371c99" kindref="member">COV</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classagents_1_1BayesianGoalPrediction_1a8e6cf4bfedee186b6128c83e1499aa93" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a8e6cf4bfedee186b6128c83e1499aa93" kindref="member">~BayesianGoalPrediction</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classagents_1_1BayesianGoalPrediction_1a825aa3dc7367c470f3011061f35e1d00" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a825aa3dc7367c470f3011061f35e1d00" kindref="member">initialize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>Eigen::Vector2d&gt;<sp/>&amp;goals,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>window_size)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;goal<sp/>:<sp/>goals)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1abb9f3d90b8afaa46674624f50139ab55" kindref="member">goal_names_</ref>.push_back(goal.first);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a0ef4c8ea79a85843d3b46194d545fe23" kindref="member">goals_</ref>.push_back(goal.second);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a8f394e49041a2ec75a3456bfbd7606f8" kindref="member">window_size_</ref><sp/>=<sp/>window_size;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classagents_1_1BayesianGoalPrediction_1ae6ce341f459f073f44fc8daafe4856fb" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1ae6ce341f459f073f44fc8daafe4856fb" kindref="member">predictGoal</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>Eigen::Vector2d<sp/>&amp;xy)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>goal<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;None&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1ae5bb7f8d62d99f01b4cba3897fb91b39" kindref="member">addPosition</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>xy);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classagents_1_1BayesianGoalPrediction_1ac965a785b6e56d3ec7a620af1df1b102" kindref="member">agents_trajs_</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].size()<sp/>&lt;<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a8f394e49041a2ec75a3456bfbd7606f8" kindref="member">window_size_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>goal;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a18d606a44b2cab66b9259e0ba3fd2b2a" kindref="member">getProbabilities</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_prob<sp/>=<sp/>std::max_element(<ref refid="classagents_1_1BayesianGoalPrediction_1a276756764ddfcec9b1ae2a000e76716f" kindref="member">agent_probs_</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].begin(),<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a276756764ddfcec9b1ae2a000e76716f" kindref="member">agent_probs_</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].end())<sp/>-<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a276756764ddfcec9b1ae2a000e76716f" kindref="member">agent_probs_</ref>[id].begin();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>goal<sp/>=<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1abb9f3d90b8afaa46674624f50139ab55" kindref="member">goal_names_</ref>[max_prob];</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>goal;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="130" refid="classagents_1_1BayesianGoalPrediction_1ae5bb7f8d62d99f01b4cba3897fb91b39" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1ae5bb7f8d62d99f01b4cba3897fb91b39" kindref="member">addPosition</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>Eigen::Vector2d<sp/>&amp;xy)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classagents_1_1BayesianGoalPrediction_1ac965a785b6e56d3ec7a620af1df1b102" kindref="member">agents_trajs_</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].size()<sp/>&gt;<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a8f394e49041a2ec75a3456bfbd7606f8" kindref="member">window_size_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1ac965a785b6e56d3ec7a620af1df1b102" kindref="member">agents_trajs_</ref>[id].erase(<ref refid="classagents_1_1BayesianGoalPrediction_1ac965a785b6e56d3ec7a620af1df1b102" kindref="member">agents_trajs_</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].begin());</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1ac965a785b6e56d3ec7a620af1df1b102" kindref="member">agents_trajs_</ref>[id].push_back(xy);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="classagents_1_1BayesianGoalPrediction_1a18d606a44b2cab66b9259e0ba3fd2b2a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a18d606a44b2cab66b9259e0ba3fd2b2a" kindref="member">getProbabilities</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>probs;<sp/><sp/></highlight><highlight class="comment">//<sp/>Temporary<sp/>storage<sp/>for<sp/>probabilities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>dists;<sp/><sp/></highlight><highlight class="comment">//<sp/>Storage<sp/>for<sp/>distances<sp/>to<sp/>goals</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classagents_1_1BayesianGoalPrediction_1ace62112d5d93296c1eee7a3baf5b9d5a" kindref="member">goal_priors_</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].empty())<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prior<sp/>=<sp/>1.0<sp/>/<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classagents_1_1BayesianGoalPrediction_1a0ef4c8ea79a85843d3b46194d545fe23" kindref="member">goals_</ref>.size());</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a0ef4c8ea79a85843d3b46194d545fe23" kindref="member">goals_</ref>.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1ace62112d5d93296c1eee7a3baf5b9d5a" kindref="member">goal_priors_</ref>[id].push_back(prior);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>trajectory<sp/>=<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1ac965a785b6e56d3ec7a620af1df1b102" kindref="member">agents_trajs_</ref>[id];</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>goal_id<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>probs_sum<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>still<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;goal<sp/>:<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a0ef4c8ea79a85843d3b46194d545fe23" kindref="member">goals_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>probability<sp/>=<sp/>1.0<sp/>/<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a0ef4c8ea79a85843d3b46194d545fe23" kindref="member">goals_</ref>.size();</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>trajectory.size();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>heading<sp/>=<sp/>trajectory[i]<sp/>-<sp/>trajectory[i<sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(heading.norm()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>still<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>goal_vec<sp/>=<sp/>goal<sp/>-<sp/>trajectory[i];</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>n<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dists.push_back(goal_vec.norm());</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>phi<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(heading.norm()<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>phi<sp/>=<sp/>std::acos(heading.dot(goal_vec)<sp/>/<sp/>(heading.norm()<sp/>*<sp/>goal_vec.norm()));</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>g<sp/>=<sp/>std::exp((i<sp/>-<sp/>n)<sp/>/<sp/>0.5);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>probability<sp/>*=<sp/>std::pow(<ref refid="classagents_1_1BayesianGoalPrediction_1ad5520b219332a5da061c37140c922c29" kindref="member">nd_</ref>.<ref refid="classagents_1_1Gaussian_1a366f2f8a4be0df5b6b902f26a0148260" kindref="member">pdf</ref>(phi),<sp/>g);<sp/><sp/></highlight><highlight class="comment">//<sp/>Combined<sp/>proability<sp/>for<sp/>the<sp/>entire<sp/>trajectory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!still)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>goal_probability<sp/>=<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1ace62112d5d93296c1eee7a3baf5b9d5a" kindref="member">goal_priors_</ref>[id][goal_id];</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal_probability<sp/>*=<sp/>probability;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>probs_sum<sp/>+=<sp/>goal_probability;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>probs.push_back(goal_probability);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>goal_id++;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!still)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;prob<sp/>:<sp/>probs)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prob<sp/>=<sp/>prob<sp/>/<sp/>probs_sum;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prior<sp/>=<sp/>prob;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a276756764ddfcec9b1ae2a000e76716f" kindref="member">agent_probs_</ref>[id]<sp/>=<sp/>probs;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="classagents_1_1BayesianGoalPrediction_1ad5520b219332a5da061c37140c922c29" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classagents_1_1Gaussian" kindref="compound">Gaussian</ref><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1ad5520b219332a5da061c37140c922c29" kindref="member">nd_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202" refid="classagents_1_1BayesianGoalPrediction_1a0ef4c8ea79a85843d3b46194d545fe23" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Eigen::Vector2d&gt;<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a0ef4c8ea79a85843d3b46194d545fe23" kindref="member">goals_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="203" refid="classagents_1_1BayesianGoalPrediction_1abb9f3d90b8afaa46674624f50139ab55" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1abb9f3d90b8afaa46674624f50139ab55" kindref="member">goal_names_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="204" refid="classagents_1_1BayesianGoalPrediction_1ac965a785b6e56d3ec7a620af1df1b102" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;int,<sp/>Trajectory&gt;<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1ac965a785b6e56d3ec7a620af1df1b102" kindref="member">agents_trajs_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205" refid="classagents_1_1BayesianGoalPrediction_1ace62112d5d93296c1eee7a3baf5b9d5a" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;int,<sp/>std::vector&lt;double&gt;&gt;<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1ace62112d5d93296c1eee7a3baf5b9d5a" kindref="member">goal_priors_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="206" refid="classagents_1_1BayesianGoalPrediction_1a276756764ddfcec9b1ae2a000e76716f" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;int,<sp/>std::vector&lt;double&gt;&gt;<sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a276756764ddfcec9b1ae2a000e76716f" kindref="member">agent_probs_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="207" refid="classagents_1_1BayesianGoalPrediction_1a8f394e49041a2ec75a3456bfbd7606f8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1BayesianGoalPrediction_1a8f394e49041a2ec75a3456bfbd7606f8" kindref="member">window_size_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>agents</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp"/>
+  </compounddef>
+</doxygen>

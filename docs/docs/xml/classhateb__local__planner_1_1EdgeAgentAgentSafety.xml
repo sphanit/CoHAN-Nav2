@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgeAgentAgentSafety" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgeAgentAgentSafety</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebBinaryEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;</basecompoundref>
+    <includes refid="edge__agent__agent__safety_8h" local="no">edge_agent_agent_safety.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeAgentAgentSafety_1aad47d0fcf0a01457e982db85e05de707" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeAgentAgentSafety::EdgeAgentAgentSafety</definition>
+        <argsstring>()</argsstring>
+        <name>EdgeAgentAgentSafety</name>
+        <briefdescription>
+<para>Construct edge and set measurement to zero (unused). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_agent_safety.h" line="58" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_agent_safety.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeAgentAgentSafety_1a79b3fed9ae67fbf18c9337aaaf1dd388" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeAgentAgentSafety::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Compute the error / cost for the edge. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the external distance between two agent poses, subtracts twice the agent radius, and applies a quadratic penalty if the result is below the minimum allowed agent-agent distance.</para>
+<para>The error is stored in _error[0]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_agent_safety.h" line="68" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_agent_safety.h" bodystart="68" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Edge defining a safety constraint between two agent poses (e.g., humans) in the optimization graph. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This edge penalizes configurations where two agents come closer than a specified minimum distance. The cost is computed as a quadratic penalty if the distance between the agents (minus their radii) is less than cfg_-&gt;hateb.min_agent_agent_dist. The edge is used to enforce social distancing between agents.</para>
+<para>Inherits from <ref refid="classhateb__local__planner_1_1BaseTebBinaryEdge" kindref="compound">BaseTebBinaryEdge&lt;1, double, VertexPose, VertexPose&gt;</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebBinaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseBinaryEdge&lt; D, double , VertexPose , VertexPose  &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeAgentAgentSafety</label>
+        <link refid="classhateb__local__planner_1_1EdgeAgentAgentSafety"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebBinaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseBinaryEdge&lt; D, double , VertexPose , VertexPose  &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeAgentAgentSafety</label>
+        <link refid="classhateb__local__planner_1_1EdgeAgentAgentSafety"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_agent_safety.h" line="53" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_agent_safety.h" bodystart="53" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1af5ba7be337a1f51e8f000255ffd40e71" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentAgentSafety</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeAgentAgentSafety_1a79b3fed9ae67fbf18c9337aaaf1dd388" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentAgentSafety</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeAgentAgentSafety_1aad47d0fcf0a01457e982db85e05de707" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentAgentSafety</scope><name>EdgeAgentAgentSafety</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a0c0f4853fd8744194a18775226f9b731" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentAgentSafety</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a0b775d38f7afb0f63f9156ed241fbe25" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeAgentAgentSafety</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1abc6ae7a9e1fd02416a4a94cbb785ba19" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentAgentSafety</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a85a24cf969c90917f50cb057173527ca" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeAgentAgentSafety</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

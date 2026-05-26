@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="costmap__to__dynamic__obstacles_8h" kind="file" language="C++">
+    <compoundname>costmap_to_dynamic_obstacles.h</compoundname>
+    <includes refid="costmap__converter__interface_8h" local="no">costmap_converter/costmap_converter_interface.h</includes>
+    <includes local="no">nav_msgs/msg/odometry.hpp</includes>
+    <includes local="no">pluginlib/class_loader.hpp</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">cv_bridge/cv_bridge.h</includes>
+    <includes local="no">opencv2/features2d/features2d.hpp</includes>
+    <includes local="no">opencv2/video/tracking.hpp</includes>
+    <includes refid="Ctracker_8h" local="no">costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h</includes>
+    <includes refid="background__subtractor_8h" local="no">costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h</includes>
+    <includes refid="blob__detector_8h" local="no">costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h</includes>
+    <includes local="no">memory</includes>
+    <includedby refid="costmap__to__dynamic__obstacles_8cpp" local="no">costmap_to_dynamic_obstacles.cpp</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>geometry_msgs/msg/polygon.hpp</label>
+      </node>
+      <node id="17">
+        <label>Kalman.h</label>
+        <link refid="Kalman_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>limits</label>
+      </node>
+      <node id="15">
+        <label>opencv2/video/tracking.hpp</label>
+      </node>
+      <node id="26">
+        <label>costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h</label>
+        <link refid="background__subtractor_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h</label>
+        <link refid="blob__detector_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>nav_msgs/msg/odometry.hpp</label>
+      </node>
+      <node id="7">
+        <label>nav2_costmap_2d/costmap_2d.hpp</label>
+      </node>
+      <node id="16">
+        <label>costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h</label>
+        <link refid="Ctracker_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="13">
+        <label>cv_bridge/cv_bridge.h</label>
+      </node>
+      <node id="5">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="14">
+        <label>opencv2/features2d/features2d.hpp</label>
+      </node>
+      <node id="8">
+        <label>nav2_costmap_2d/costmap_2d_ros.hpp</label>
+      </node>
+      <node id="1">
+        <label>costmap_to_dynamic_obstacles.h</label>
+        <link refid="costmap__to__dynamic__obstacles_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>costmap_converter/costmap_converter_interface.h</label>
+        <link refid="costmap__converter__interface_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>vector</label>
+      </node>
+      <node id="20">
+        <label>HungarianAlg.h</label>
+        <link refid="HungarianAlg_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>array</label>
+      </node>
+      <node id="24">
+        <label>time.h</label>
+      </node>
+      <node id="10">
+        <label>costmap_converter_msgs/msg/obstacle_array_msg.hpp</label>
+      </node>
+      <node id="22">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>mutex</label>
+      </node>
+      <node id="12">
+        <label>pluginlib/class_loader.hpp</label>
+      </node>
+      <node id="6">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="18">
+        <label>defines.h</label>
+        <link refid="defines_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>costmap_to_dynamic_obstacles.h</label>
+        <link refid="costmap__to__dynamic__obstacles_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>costmap_to_dynamic_obstacles.cpp</label>
+        <link refid="costmap__to__dynamic__obstacles_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classcostmap__converter_1_1CostmapToDynamicObstacles" prot="public">costmap_converter::CostmapToDynamicObstacles</innerclass>
+    <innernamespace refid="namespacecostmap__converter">costmap_converter</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(BSD<sp/>License)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2017</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>TU<sp/>Dortmund<sp/>-<sp/>Institute<sp/>of<sp/>Control<sp/>Theory<sp/>and<sp/>Systems<sp/>Engineering.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>copyright<sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>disclaimer<sp/>in<sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>institute<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>Notes:</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>The<sp/>following<sp/>code<sp/>makes<sp/>use<sp/>of<sp/>the<sp/>OpenCV<sp/>library.</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>OpenCV<sp/>is<sp/>licensed<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>3-clause<sp/>BSD<sp/>License.</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/>Authors:<sp/>Franz<sp/>Albers,<sp/>Christoph<sp/>Rösmann</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COSTMAP_TO_DYNAMIC_OBSTACLES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COSTMAP_TO_DYNAMIC_OBSTACLES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ROS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="costmap__converter__interface_8h" kindref="compound">costmap_converter/costmap_converter_interface.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav_msgs/msg/odometry.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pluginlib/class_loader.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp/rclcpp.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OpenCV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cv_bridge/cv_bridge.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;opencv2/features2d/features2d.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;opencv2/video/tracking.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/>dynamic<sp/>reconfigure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&lt;costmap_converter/CostmapToDynamicObstaclesConfig.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&lt;dynamic_reconfigure/server.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Own<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Ctracker_8h" kindref="compound">costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="background__subtractor_8h" kindref="compound">costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="blob__detector_8h" kindref="compound">costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecostmap__converter" kindref="compound">costmap_converter</ref><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classcostmap__converter_1_1CostmapToDynamicObstacles" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles" kindref="compound">CostmapToDynamicObstacles</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles" kindref="compound">BaseCostmapToDynamicObstacles</ref></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a6d9b6be74490be79f24584f2fe81a8c7" kindref="member">CostmapToDynamicObstacles</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a0e04a18d581e460f4a7cb56eb286404a" kindref="member">~CostmapToDynamicObstacles</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a06ef33a6560775a8d7b64cede42bcbc0" kindref="member">initialize</ref>(rclcpp::Node::SharedPtr<sp/>nh);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a8c0091b41c351d40451195f6f56a365f" kindref="member">compute</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1aefc720229ab91e51995904ba4de27ea9" kindref="member">setCostmap2D</ref>(nav2_costmap_2d::Costmap2D*<sp/>costmap);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a8185f7459c1ef690adcaa4184fbbb183" kindref="member">updateCostmap2D</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><ref refid="namespacecostmap__converter_1a3e9948c22dfceca87d2a7cc59c62fc97" kindref="member">ObstacleArrayConstPtr</ref><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1aea474a66f2b23002e1390b2e156d3255" kindref="member">getObstacles</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a610ef9b8c4bb18fedce04eeabf666198" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a610ef9b8c4bb18fedce04eeabf666198" kindref="member">setOdomTopic</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>odom_topic)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a74c3fd02fe92746b0ad807bbb132d466" kindref="member">odom_topic_</ref><sp/>=<sp/>odom_topic;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a7e325eac22dc6f36d9d1b23aa3919bb2" kindref="member">visualize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cv::Mat&amp;<sp/>image);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a559e0bd1e917ad8ea215bbaab7aa7e8b" kindref="member">getEstimatedVelocityOfObject</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a717439d17250ca6be69644913894c9cd" kindref="member">getContour</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx,<sp/>std::vector&lt;Point_t&gt;&amp;<sp/>contour);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a424cda0d40055d322c45e6731ee74f3f" kindref="member">updateObstacleContainer</ref>(<ref refid="namespacecostmap__converter_1a360c95f0cb141a3f43667649add6d4aa" kindref="member">ObstacleArrayPtr</ref><sp/>obstacles);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="172" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a4692c030693fbf52347a30fb37bd43c3" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a4692c030693fbf52347a30fb37bd43c3" kindref="member">mutex_</ref>;</highlight></codeline>
+<codeline lineno="173" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a52855853dfba8a48750a575bd0fc7405" refkind="member"><highlight class="normal"><sp/><sp/>nav2_costmap_2d::Costmap2D*<sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a52855853dfba8a48750a575bd0fc7405" kindref="member">costmap_</ref>;</highlight></codeline>
+<codeline lineno="174" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a36e0900de0880c612bde432de8f652b8" refkind="member"><highlight class="normal"><sp/><sp/>cv::Mat<sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a36e0900de0880c612bde432de8f652b8" kindref="member">costmap_mat_</ref>;</highlight></codeline>
+<codeline lineno="175" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a203c812514e780086eba3ed00d02c7f1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacecostmap__converter_1a360c95f0cb141a3f43667649add6d4aa" kindref="member">ObstacleArrayPtr</ref><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a203c812514e780086eba3ed00d02c7f1" kindref="member">obstacles_</ref>;</highlight></codeline>
+<codeline lineno="176" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a94be2cd70c9efc8fb1eb4cc35925b74f" refkind="member"><highlight class="normal"><sp/><sp/>cv::Mat<sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a94be2cd70c9efc8fb1eb4cc35925b74f" kindref="member">fg_mask_</ref>;</highlight></codeline>
+<codeline lineno="177" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1aca5130e791be793f7cf71f0c857def59" refkind="member"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;BackgroundSubtractor&gt;<sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1aca5130e791be793f7cf71f0c857def59" kindref="member">bg_sub_</ref>;</highlight></codeline>
+<codeline lineno="178" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1af7fa14ac0f092568d3d293472958b1fe" refkind="member"><highlight class="normal"><sp/><sp/>cv::Ptr&lt;BlobDetector&gt;<sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1af7fa14ac0f092568d3d293472958b1fe" kindref="member">blob_det_</ref>;</highlight></codeline>
+<codeline lineno="179" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a486703a40f3abd33a66b27df5716a76c" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;cv::KeyPoint&gt;<sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a486703a40f3abd33a66b27df5716a76c" kindref="member">keypoints_</ref>;</highlight></codeline>
+<codeline lineno="180" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1ac6434e99f2e84abfcbc5d3aad5c72c61" refkind="member"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;CTracker&gt;<sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1ac6434e99f2e84abfcbc5d3aad5c72c61" kindref="member">tracker_</ref>;</highlight></codeline>
+<codeline lineno="181" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a38471f9337dfdf2c99710e25c3176f05" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr<sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a38471f9337dfdf2c99710e25c3176f05" kindref="member">odom_sub_</ref>;</highlight></codeline>
+<codeline lineno="182" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1af05f34f3d2bdbafd91d802caeabf9ac9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1af05f34f3d2bdbafd91d802caeabf9ac9" kindref="member">ego_vel_</ref>;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a74c3fd02fe92746b0ad807bbb132d466" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a74c3fd02fe92746b0ad807bbb132d466" kindref="member">odom_topic_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/odom&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185" refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a2a3c6697198cb13de3652ffc57452d8a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a2a3c6697198cb13de3652ffc57452d8a" kindref="member">publish_static_obstacles_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>dynamic_reconfigure::Server&lt;CostmapToDynamicObstaclesConfig&gt;*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>dynamic_recfg_;<sp/>//!&lt;<sp/>Dynamic<sp/>reconfigure<sp/>server<sp/>to<sp/>allow<sp/>config</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//!<sp/>modifications<sp/>at<sp/>runtime</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1ab12093e78ddc3d9e9a12b8fb7e1ca328" kindref="member">odomCallback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nav_msgs::msg::Odometry::ConstSharedPtr<sp/>msg);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>void<sp/>reconfigureCB(CostmapToDynamicObstaclesConfig<sp/>&amp;config,<sp/>uint32_t<sp/>level);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>costmap_converter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>COSTMAP_TO_DYNAMIC_OBSTACLES_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h"/>
+  </compounddef>
+</doxygen>

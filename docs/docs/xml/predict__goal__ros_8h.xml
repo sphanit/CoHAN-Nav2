@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="predict__goal__ros_8h" kind="file" language="C++">
+    <compoundname>predict_goal_ros.h</compoundname>
+    <includes local="no">agent_path_prediction/PredictedGoal.h</includes>
+    <includes local="no">agent_path_prediction/PredictedGoals.h</includes>
+    <includes refid="predict__goal_8h" local="no">agent_path_prediction/predict_goal.h</includes>
+    <includes local="no">cohan_msgs/TrackedAgent.h</includes>
+    <includes local="no">cohan_msgs/TrackedAgents.h</includes>
+    <includes local="no">cohan_msgs/TrackedSegmentType.h</includes>
+    <includes local="no">geometry_msgs/PoseArray.h</includes>
+    <includes local="no">ros/ros.h</includes>
+    <includes local="no">yaml-cpp/yaml.h</includes>
+    <includedby refid="agent__path__prediction_8cpp" local="no">agent_path_prediction.cpp</includedby>
+    <includedby refid="predict__goal__ros_8cpp" local="no">predict_goal_ros.cpp</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>cohan_msgs/TrackedAgent.h</label>
+      </node>
+      <node id="14">
+        <label>geometry_msgs/PoseArray.h</label>
+      </node>
+      <node id="3">
+        <label>agent_path_prediction/PredictedGoals.h</label>
+      </node>
+      <node id="13">
+        <label>cohan_msgs/TrackedSegmentType.h</label>
+      </node>
+      <node id="2">
+        <label>agent_path_prediction/PredictedGoal.h</label>
+      </node>
+      <node id="12">
+        <label>cohan_msgs/TrackedAgents.h</label>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>agent_path_prediction/predict_goal.h</label>
+        <link refid="predict__goal_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>utility</label>
+      </node>
+      <node id="15">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="1">
+        <label>predict_goal_ros.h</label>
+        <link refid="predict__goal__ros_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>agent_path_prediction.cpp</label>
+        <link refid="agent__path__prediction_8cpp"/>
+      </node>
+      <node id="3">
+        <label>predict_goal_ros.cpp</label>
+        <link refid="predict__goal__ros_8cpp"/>
+      </node>
+      <node id="1">
+        <label>predict_goal_ros.h</label>
+        <link refid="predict__goal__ros_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classagents_1_1PredictGoalROS" prot="public">agents::PredictGoalROS</innerclass>
+    <innernamespace refid="namespaceagents">agents</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(BSD<sp/>License)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2025<sp/>LAAS/CNRS</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>copyright<sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>disclaimer<sp/>in<sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>institute<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/><sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;agent_path_prediction/PredictedGoal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;agent_path_prediction/PredictedGoals.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="predict__goal_8h" kindref="compound">agent_path_prediction/predict_goal.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/TrackedAgent.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/TrackedAgents.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/TrackedSegmentType.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/PoseArray.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ros/ros.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;yaml-cpp/yaml.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceagents" kindref="compound">agents</ref><sp/>{</highlight></codeline>
+<codeline lineno="52" refid="classagents_1_1PredictGoalROS" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classagents_1_1PredictGoalROS" kindref="compound">PredictGoalROS</ref><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="classagents_1_1PredictGoalROS_1a30d29827d7d6c2095e72e630f6e35102" kindref="member">PredictGoalROS</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classagents_1_1PredictGoalROS_1a18a1a8a0b7e13f1c14567f9431382b8e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classagents_1_1PredictGoalROS_1a18a1a8a0b7e13f1c14567f9431382b8e" kindref="member">~PredictGoalROS</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1PredictGoalROS_1a349665278441e34173f6fbe982e16460" kindref="member">trackedAgentsCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cohan_msgs::TrackedAgents::ConstPtr&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1PredictGoalROS_1a5dba384076d3792d1917a1e54dcd8839" kindref="member">loadGoals</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>file);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Internal<sp/>Methods</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1PredictGoalROS_1aeb1405942c953193ec9ccbffa3c17117" kindref="member">loadRosParamFromNodeHandle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ros::NodeHandle&amp;<sp/>private_nh);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classagents_1_1PredictGoalROS_1a35f7f84fc103593a9e34b33dae8de146" refkind="member"><highlight class="normal"><sp/><sp/>ros::Subscriber<sp/><ref refid="classagents_1_1PredictGoalROS_1a35f7f84fc103593a9e34b33dae8de146" kindref="member">agents_sub_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="classagents_1_1PredictGoalROS_1a98e2194e92cfcd0f9448de4b772fca9a" refkind="member"><highlight class="normal"><sp/><sp/>ros::Publisher<sp/><ref refid="classagents_1_1PredictGoalROS_1a98e2194e92cfcd0f9448de4b772fca9a" kindref="member">goal_pub_</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Core<sp/>components</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classagents_1_1PredictGoalROS_1ab96ad9139ef5922ee0042c6d8105009b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classagents_1_1BayesianGoalPrediction" kindref="compound">agents::BayesianGoalPrediction</ref><sp/><ref refid="classagents_1_1PredictGoalROS_1ab96ad9139ef5922ee0042c6d8105009b" kindref="member">predictor_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Data<sp/>storage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classagents_1_1PredictGoalROS_1a4f176eca70c34256d1e5d5a7229f5065" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,<sp/>Eigen::Vector2d&gt;<sp/><ref refid="classagents_1_1PredictGoalROS_1a4f176eca70c34256d1e5d5a7229f5065" kindref="member">goals_</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94" refid="classagents_1_1PredictGoalROS_1aedc938f4e507fa4c5b3b088ed9977bd5" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;int,<sp/>std::string&gt;<sp/><ref refid="classagents_1_1PredictGoalROS_1aedc938f4e507fa4c5b3b088ed9977bd5" kindref="member">agent_goal_predicts_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classagents_1_1PredictGoalROS_1ad6c43b7c6b94133825e30d3da4b7cded" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1PredictGoalROS_1ad6c43b7c6b94133825e30d3da4b7cded" kindref="member">window_size_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classagents_1_1PredictGoalROS_1a927fbf61043549810e19b38de7b4ddfd" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classagents_1_1PredictGoalROS_1a65b1bb4b8ad2ecdad4b16d292bbf7841" kindref="member">tracked_agents_sub_topic_</ref>,<sp/><ref refid="classagents_1_1PredictGoalROS_1a927fbf61043549810e19b38de7b4ddfd" kindref="member">predicted_goal_topic_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="100" refid="classagents_1_1PredictGoalROS_1a8a7198ef45914bd749c083cc3a768347" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classagents_1_1PredictGoalROS_1a8a7198ef45914bd749c083cc3a768347" kindref="member">ns_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101" refid="classagents_1_1PredictGoalROS_1aac29d0622fc1bf274e544f13e146871f" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classagents_1_1PredictGoalROS_1aac29d0622fc1bf274e544f13e146871f" kindref="member">goals_file_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>agents</highlight></codeline>
+    </programlisting>
+    <location file="agent_path_prediction/include/agent_path_prediction/predict_goal_ros.h"/>
+  </compounddef>
+</doxygen>

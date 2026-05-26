@@ -1,0 +1,834 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1CircularObstacle" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::CircularObstacle</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1Obstacle" prot="public" virt="non-virtual">hateb_local_planner::Obstacle</basecompoundref>
+    <includes refid="obstacles_8h" local="no">obstacles.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1CircularObstacle_1ad5b8ddb66a223cf532b212e39de8754d" prot="protected" static="no" mutable="no">
+        <type>Eigen::Vector2d</type>
+        <definition>Eigen::Vector2d hateb_local_planner::CircularObstacle::pos_</definition>
+        <argsstring></argsstring>
+        <name>pos_</name>
+        <briefdescription>
+<para>Store the center position of the <ref refid="classhateb__local__planner_1_1CircularObstacle" kindref="compound">CircularObstacle</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="486" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="486" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1CircularObstacle_1adedb198019942cd2fbd0389512c91fb1" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::CircularObstacle::radius_</definition>
+        <argsstring></argsstring>
+        <name>radius_</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Radius of the obstacle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="487" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="487" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a00f50bf65cf08250b50fa5a0ea6c0318" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::CircularObstacle::CircularObstacle</definition>
+        <argsstring>()</argsstring>
+        <name>CircularObstacle</name>
+        <briefdescription>
+<para>Default constructor of the circular obstacle class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="388" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="388" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1af2efd02ccd06d8bb3fe58b3a49d3338f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::CircularObstacle::CircularObstacle</definition>
+        <argsstring>(const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;position, double radius)</argsstring>
+        <name>CircularObstacle</name>
+        <param>
+          <type>const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+<para>Construct <ref refid="classhateb__local__planner_1_1CircularObstacle" kindref="compound">CircularObstacle</ref> using a 2d center position vector and radius. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d position that defines the current obstacle position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>radius of the obstacle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="395" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="395" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a2d7e9c7d4ff804095a1c3f379740aa93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::CircularObstacle::CircularObstacle</definition>
+        <argsstring>(double x, double y, double radius)</argsstring>
+        <name>CircularObstacle</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+<para>Construct <ref refid="classhateb__local__planner_1_1CircularObstacle" kindref="compound">CircularObstacle</ref> using x- and y-center-coordinates and radius. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>radius of the obstacle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="403" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="403" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a8d07c6c4b981c66c8985fcb2039f65cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::CircularObstacle::checkCollision</definition>
+        <argsstring>(const Eigen::Vector2d &amp;point, double min_dist) const override</argsstring>
+        <name>checkCollision</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1adb830893b528f4497e64aaa208d2d25f">checkCollision</reimplements>
+        <param>
+          <type>const Eigen::Vector2d &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>min_dist</declname>
+        </param>
+        <briefdescription>
+<para>Check if a given point collides with the obstacle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D reference position that should be checked </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum distance allowed to the obstacle to be collision free </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if position is inside the region of the obstacle or if the minimum distance is lower than min_dist </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="406" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="406" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a5a4924bb4cac2ddd9abf56ff5f0df310" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::CircularObstacle::checkLineIntersection</definition>
+        <argsstring>(const Eigen::Vector2d &amp;line_start, const Eigen::Vector2d &amp;line_end, double min_dist=0) const override</argsstring>
+        <name>checkLineIntersection</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1ae75ac3277ce87e0e6886b6ee278ae4c9">checkLineIntersection</reimplements>
+        <param>
+          <type>const Eigen::Vector2d &amp;</type>
+          <declname>line_start</declname>
+        </param>
+        <param>
+          <type>const Eigen::Vector2d &amp;</type>
+          <declname>line_end</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>min_dist</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Check if a given line segment between two points intersects with the obstacle (and additionally keeps a safty distance <computeroutput>min_dist</computeroutput>) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D point for the end of the reference line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D point for the end of the reference line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum distance allowed to the obstacle to be collision/intersection free </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if given line intersects the region of the obstacle or if the minimum distance is lower than min_dist </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="409" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="409" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1af714cb2cdf7c3696de8313c6c4ac3b3e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::CircularObstacle::getMinimumDistance</definition>
+        <argsstring>(const Eigen::Vector2d &amp;position) const override</argsstring>
+        <name>getMinimumDistance</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1a7fbc6d91807721ecf7bf0d3545215d7e">getMinimumDistance</reimplements>
+        <param>
+          <type>const Eigen::Vector2d &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Get the minimum euclidean distance to the obstacle (point as reference) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d reference position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The nearest possible distance to the obstacle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="434" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="434" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a4215cf7bb77b91f092b136b4d357809c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::CircularObstacle::getMinimumDistance</definition>
+        <argsstring>(const Eigen::Vector2d &amp;line_start, const Eigen::Vector2d &amp;line_end) const override</argsstring>
+        <name>getMinimumDistance</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1a0171d2258c8a5802a285a0e10493f70f">getMinimumDistance</reimplements>
+        <param>
+          <type>const Eigen::Vector2d &amp;</type>
+          <declname>line_start</declname>
+        </param>
+        <param>
+          <type>const Eigen::Vector2d &amp;</type>
+          <declname>line_end</declname>
+        </param>
+        <briefdescription>
+<para>Get the minimum euclidean distance to the obstacle (line as reference) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d position of the begin of the reference line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d position of the end of the reference line </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The nearest possible distance to the obstacle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="437" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="437" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a7d140ef93b5e016f61cddac50fe23879" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::CircularObstacle::getMinimumDistance</definition>
+        <argsstring>(const Point2dContainer &amp;polygon) const override</argsstring>
+        <name>getMinimumDistance</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1a17efb3c82dd851ca791293f839f738af">getMinimumDistance</reimplements>
+        <param>
+          <type>const <ref refid="namespacehateb__local__planner_1aada6c9abcaa246f092095786ca9bf598" kindref="member">Point2dContainer</ref> &amp;</type>
+          <declname>polygon</declname>
+        </param>
+        <briefdescription>
+<para>Get the minimum euclidean distance to the obstacle (polygon as reference) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>polygon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vertices (2D points) describing a closed polygon </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The nearest possible distance to the obstacle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="440" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="440" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a9a8394c65ac93ce789ebb4534ac3d2b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>Eigen::Vector2d</type>
+        <definition>Eigen::Vector2d hateb_local_planner::CircularObstacle::getClosestPoint</definition>
+        <argsstring>(const Eigen::Vector2d &amp;position) const override</argsstring>
+        <name>getClosestPoint</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1a3c5f4b2d64c073f88acd7f07b0f3f892">getClosestPoint</reimplements>
+        <param>
+          <type>const Eigen::Vector2d &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Get the closest point on the boundary of the obstacle w.r.t. a specified reference position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference 2d position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>closest point on the obstacle boundary </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="443" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="443" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1aa17eef1135001604127b2ad4e372b59e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::CircularObstacle::getMinimumSpatioTemporalDistance</definition>
+        <argsstring>(const Eigen::Vector2d &amp;position, double t) const override</argsstring>
+        <name>getMinimumSpatioTemporalDistance</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1a5823384ad8772f10a996c1ff95b6c1c2">getMinimumSpatioTemporalDistance</reimplements>
+        <param>
+          <type>const Eigen::Vector2d &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (point as reference) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d reference position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time, for which the minimum distance to the obstacle is estimated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The nearest possible distance to the obstacle at time t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="446" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="446" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a1d83ddadd32a5bb152c37b2772b8f53f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::CircularObstacle::getMinimumSpatioTemporalDistance</definition>
+        <argsstring>(const Eigen::Vector2d &amp;line_start, const Eigen::Vector2d &amp;line_end, double t) const override</argsstring>
+        <name>getMinimumSpatioTemporalDistance</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1abee2e494d966a29d0fc702e8e05f7d0c">getMinimumSpatioTemporalDistance</reimplements>
+        <param>
+          <type>const Eigen::Vector2d &amp;</type>
+          <declname>line_start</declname>
+        </param>
+        <param>
+          <type>const Eigen::Vector2d &amp;</type>
+          <declname>line_end</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (line as reference) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d position of the begin of the reference line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d position of the end of the reference line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time, for which the minimum distance to the obstacle is estimated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The nearest possible distance to the obstacle at time t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="449" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="449" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a8b3a85f579c9a30634fba14c5a1e36f3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::CircularObstacle::getMinimumSpatioTemporalDistance</definition>
+        <argsstring>(const Point2dContainer &amp;polygon, double t) const override</argsstring>
+        <name>getMinimumSpatioTemporalDistance</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1ab58503d35f43e72ba48c7fb99209dddd">getMinimumSpatioTemporalDistance</reimplements>
+        <param>
+          <type>const <ref refid="namespacehateb__local__planner_1aada6c9abcaa246f092095786ca9bf598" kindref="member">Point2dContainer</ref> &amp;</type>
+          <declname>polygon</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (polygon as reference) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>polygon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vertices (2D points) describing a closed polygon </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time, for which the minimum distance to the obstacle is estimated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The nearest possible distance to the obstacle at time t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="454" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="454" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1ac4a12b0492daa57a2aadfb381924671a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::CircularObstacle::predictCentroidConstantVelocity</definition>
+        <argsstring>(double t, Eigen::Ref&lt; Eigen::Vector2d &gt; position) const override</argsstring>
+        <name>predictCentroidConstantVelocity</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1ad2f78dc815bba56a5a887b5584a95995">predictCentroidConstantVelocity</reimplements>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>Eigen::Ref&lt; Eigen::Vector2d &gt;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Predict position of the centroid assuming a constant velocity model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time in seconds for the prediction (t&gt;=0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>predicted 2d position of the centroid </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="457" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="457" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a0a029d82c1bfdd33a260002a1995f5e4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const Eigen::Vector2d &amp;</type>
+        <definition>const Eigen::Vector2d&amp; hateb_local_planner::CircularObstacle::getCentroid</definition>
+        <argsstring>() const override</argsstring>
+        <name>getCentroid</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1a5c68d148062159714a51d3ed808eb0ac">getCentroid</reimplements>
+        <briefdescription>
+<para>Get centroid coordinates of the obstacle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Eigen::Vector2d containing the centroid </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="460" column="25" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="460" bodyend="460"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a3049d47b9084ca57814949f5a9c40eb5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>std::complex&lt;double&gt; hateb_local_planner::CircularObstacle::getCentroidCplx</definition>
+        <argsstring>() const override</argsstring>
+        <name>getCentroidCplx</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1a0a0d0832da9806649e6d5a1f4134e3b7">getCentroidCplx</reimplements>
+        <briefdescription>
+<para>Get centroid coordinates of the obstacle as complex number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::complex containing the centroid coordinate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="463" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="463" bodyend="463"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a7cbac98fd7eb24abf698374fd1ab01c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Eigen::Vector2d &amp;</type>
+        <definition>const Eigen::Vector2d&amp; hateb_local_planner::CircularObstacle::position</definition>
+        <argsstring>() const</argsstring>
+        <name>position</name>
+        <briefdescription>
+<para>Return the current position of the obstacle (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="466" column="25" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="466" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a4db1ee4ee4e19dad681aa5c85803babc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Eigen::Vector2d &amp;</type>
+        <definition>Eigen::Vector2d&amp; hateb_local_planner::CircularObstacle::position</definition>
+        <argsstring>()</argsstring>
+        <name>position</name>
+        <briefdescription>
+<para>Return the current position of the obstacle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="467" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="467" bodyend="466"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1af15daa0dc791973370ccb81bf406f0b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; hateb_local_planner::CircularObstacle::x</definition>
+        <argsstring>()</argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>Return the current x-coordinate of the obstacle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="468" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="468" bodyend="467"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1ac61549f6cb1189514617620e9b518877" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; hateb_local_planner::CircularObstacle::x</definition>
+        <argsstring>() const</argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>Return the current y-coordinate of the obstacle (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="469" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="469" bodyend="468"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1adf7884356b07042411e5f9b6387e5a37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; hateb_local_planner::CircularObstacle::y</definition>
+        <argsstring>()</argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Return the current x-coordinate of the obstacle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="470" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="470" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a946b3bd28a8666e868d39ee3c229c1c0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; hateb_local_planner::CircularObstacle::y</definition>
+        <argsstring>() const</argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Return the current y-coordinate of the obstacle (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="471" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="471" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1ab4f803620790fa5fbf16d6c5ac1d48b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; hateb_local_planner::CircularObstacle::radius</definition>
+        <argsstring>()</argsstring>
+        <name>radius</name>
+        <briefdescription>
+<para>Return the current radius of the obstacle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="472" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="472" bodyend="471"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a581e9ce0a99e94fe7a6acdf617e874e6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; hateb_local_planner::CircularObstacle::radius</definition>
+        <argsstring>() const</argsstring>
+        <name>radius</name>
+        <briefdescription>
+<para>Return the current radius of the obstacle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="473" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="473" bodyend="472"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a668ac6f989c739a689ffc6e5ebc8a9c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::CircularObstacle::toPolygonMsg</definition>
+        <argsstring>(geometry_msgs::msg::Polygon &amp;polygon) override</argsstring>
+        <name>toPolygonMsg</name>
+        <reimplements refid="classhateb__local__planner_1_1Obstacle_1a6000c364f5b047603f3aebdbf04176d8">toPolygonMsg</reimplements>
+        <param>
+          <type>geometry_msgs::msg::Polygon &amp;</type>
+          <declname>polygon</declname>
+        </param>
+        <briefdescription>
+<para>Convert the obstacle to a polygon message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert the obstacle to a corresponding polygon msg. Point obstacles have one vertex, lines have two vertices and polygons might are implictly closed such that the start vertex must not be repeated. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">polygon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the polygon message </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="476" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="476" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1CircularObstacle_1a67af71dac7f1bdeb34a756f1299e9e77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::CircularObstacle::setCentroid</definition>
+        <argsstring>(double x, double y)</argsstring>
+        <name>setCentroid</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="490" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="490" bodyend="493"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implements a 2D circular obstacle (point obstacle plus radius) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hateb_local_planner::CircularObstacle</label>
+        <link refid="classhateb__local__planner_1_1CircularObstacle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner::Obstacle</label>
+        <link refid="classhateb__local__planner_1_1Obstacle"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hateb_local_planner::CircularObstacle</label>
+        <link refid="classhateb__local__planner_1_1CircularObstacle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner::Obstacle</label>
+        <link refid="classhateb__local__planner_1_1Obstacle"/>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/obstacles.h" line="383" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/obstacles.h" bodystart="383" bodyend="496"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1Obstacle_1afbd1eb180519b1c034ad99012052dde3" prot="protected" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>centroid_velocity_</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a8d07c6c4b981c66c8985fcb2039f65cd" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>checkCollision</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a5a4924bb4cac2ddd9abf56ff5f0df310" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>checkLineIntersection</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a00f50bf65cf08250b50fa5a0ea6c0318" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>CircularObstacle</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1af2efd02ccd06d8bb3fe58b3a49d3338f" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>CircularObstacle</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a2d7e9c7d4ff804095a1c3f379740aa93" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>CircularObstacle</name></member>
+      <member refid="classhateb__local__planner_1_1Obstacle_1acdfb0788d21baee220600b1e3ebc32c4" prot="protected" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>dynamic_</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a0a029d82c1bfdd33a260002a1995f5e4" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>getCentroid</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a3049d47b9084ca57814949f5a9c40eb5" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>getCentroidCplx</name></member>
+      <member refid="classhateb__local__planner_1_1Obstacle_1aacb584daa9d0a2c89aaf3bdf50d679dc" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>getCentroidVelocity</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a9a8394c65ac93ce789ebb4534ac3d2b6" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>getClosestPoint</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1af714cb2cdf7c3696de8313c6c4ac3b3e" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>getMinimumDistance</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a4215cf7bb77b91f092b136b4d357809c" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>getMinimumDistance</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a7d140ef93b5e016f61cddac50fe23879" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>getMinimumDistance</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1aa17eef1135001604127b2ad4e372b59e" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>getMinimumSpatioTemporalDistance</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a1d83ddadd32a5bb152c37b2772b8f53f" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>getMinimumSpatioTemporalDistance</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a8b3a85f579c9a30634fba14c5a1e36f3" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>getMinimumSpatioTemporalDistance</name></member>
+      <member refid="classhateb__local__planner_1_1Obstacle_1a2cac9cad218278cfa1f11b7345f24624" prot="protected" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>human_</name></member>
+      <member refid="classhateb__local__planner_1_1Obstacle_1a16a676db30495218f7feab593b59b8ad" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>isDynamic</name></member>
+      <member refid="classhateb__local__planner_1_1Obstacle_1ae337b4f2f70248cb4450d95d6e88a669" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>isHuman</name></member>
+      <member refid="classhateb__local__planner_1_1Obstacle_1afdba0c06271d9ad57547650b82f10c3e" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>Obstacle</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1ad5b8ddb66a223cf532b212e39de8754d" prot="protected" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>pos_</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a7cbac98fd7eb24abf698374fd1ab01c3" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>position</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a4db1ee4ee4e19dad681aa5c85803babc" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>position</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1ac4a12b0492daa57a2aadfb381924671a" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>predictCentroidConstantVelocity</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1ab4f803620790fa5fbf16d6c5ac1d48b1" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>radius</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a581e9ce0a99e94fe7a6acdf617e874e6" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>radius</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1adedb198019942cd2fbd0389512c91fb1" prot="protected" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>radius_</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a67af71dac7f1bdeb34a756f1299e9e77" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>setCentroid</name></member>
+      <member refid="classhateb__local__planner_1_1Obstacle_1a0a51ecc56df3aef6ed291e24cf3dfd2c" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>setCentroidVelocity</name></member>
+      <member refid="classhateb__local__planner_1_1Obstacle_1a79d62e4161cf57cdb8e0b04ab65e4b7d" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>setCentroidVelocity</name></member>
+      <member refid="classhateb__local__planner_1_1Obstacle_1ac52c6aa7c02b14ffddf2c9e84b90ea33" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>setCentroidVelocity</name></member>
+      <member refid="classhateb__local__planner_1_1Obstacle_1aec2259a8f61ff463e6ce168578486b4b" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>setHuman</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a668ac6f989c739a689ffc6e5ebc8a9c3" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>toPolygonMsg</name></member>
+      <member refid="classhateb__local__planner_1_1Obstacle_1a68d4359c0b4a58ab4723223a4c76c1d9" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>toTwistWithCovarianceMsg</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1af15daa0dc791973370ccb81bf406f0b7" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>x</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1ac61549f6cb1189514617620e9b518877" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>x</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1adf7884356b07042411e5f9b6387e5a37" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>y</name></member>
+      <member refid="classhateb__local__planner_1_1CircularObstacle_1a946b3bd28a8666e868d39ee3c229c1c0" prot="public" virt="non-virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>y</name></member>
+      <member refid="classhateb__local__planner_1_1Obstacle_1a1a01b732948c4d7478da12cc7335594d" prot="public" virt="virtual"><scope>hateb_local_planner::CircularObstacle</scope><name>~Obstacle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

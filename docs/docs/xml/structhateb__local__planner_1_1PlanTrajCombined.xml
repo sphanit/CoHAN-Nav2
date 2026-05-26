@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhateb__local__planner_1_1PlanTrajCombined" kind="struct" language="C++" prot="public">
+    <compoundname>hateb_local_planner::PlanTrajCombined</compoundname>
+    <includes refid="visualization_8hpp" local="no">visualization.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhateb__local__planner_1_1PlanTrajCombined_1a28700899c4ed86f6c17f101a13b3642b" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; geometry_msgs::msg::PoseStamped &gt;</type>
+        <definition>std::vector&lt;geometry_msgs::msg::PoseStamped&gt; hateb_local_planner::PlanTrajCombined::plan_before</definition>
+        <argsstring></argsstring>
+        <name>plan_before</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="121" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1PlanTrajCombined_1a4b78fc5af4b788aec7df639cd8c0e11c" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; cohan_msgs::msg::TrajectoryPoint &gt;</type>
+        <definition>std::vector&lt;cohan_msgs::msg::TrajectoryPoint&gt; hateb_local_planner::PlanTrajCombined::optimized_trajectory</definition>
+        <argsstring></argsstring>
+        <name>optimized_trajectory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="122" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1PlanTrajCombined_1a8f352454dc26bda11396ecd71e9c218a" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; geometry_msgs::msg::PoseStamped &gt;</type>
+        <definition>std::vector&lt;geometry_msgs::msg::PoseStamped&gt; hateb_local_planner::PlanTrajCombined::plan_after</definition>
+        <argsstring></argsstring>
+        <name>plan_after</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="123" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="120" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="120" bodyend="124"/>
+    <listofallmembers>
+      <member refid="structhateb__local__planner_1_1PlanTrajCombined_1a4b78fc5af4b788aec7df639cd8c0e11c" prot="public" virt="non-virtual"><scope>hateb_local_planner::PlanTrajCombined</scope><name>optimized_trajectory</name></member>
+      <member refid="structhateb__local__planner_1_1PlanTrajCombined_1a8f352454dc26bda11396ecd71e9c218a" prot="public" virt="non-virtual"><scope>hateb_local_planner::PlanTrajCombined</scope><name>plan_after</name></member>
+      <member refid="structhateb__local__planner_1_1PlanTrajCombined_1a28700899c4ed86f6c17f101a13b3642b" prot="public" virt="non-virtual"><scope>hateb_local_planner::PlanTrajCombined</scope><name>plan_before</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

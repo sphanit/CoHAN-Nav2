@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_48e9b71d7d854c440544f450c3726af6" kind="dir">
+    <compoundname>action</compoundname>
+    <innerfile refid="set__mode_8h">set_mode.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/"/>
+  </compounddef>
+</doxygen>

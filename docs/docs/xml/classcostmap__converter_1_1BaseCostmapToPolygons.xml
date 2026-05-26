@@ -1,0 +1,511 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcostmap__converter_1_1BaseCostmapToPolygons" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>costmap_converter::BaseCostmapToPolygons</compoundname>
+    <derivedcompoundref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles" prot="public" virt="non-virtual">costmap_converter::BaseCostmapToDynamicObstacles</derivedcompoundref>
+    <derivedcompoundref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH" prot="public" virt="non-virtual">costmap_converter::CostmapToPolygonsDBSMCCH</derivedcompoundref>
+    <includes refid="costmap__converter__interface_8h" local="no">costmap_converter_interface.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a947fc00b05f6ac5f478afb9ce6c67a06" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr costmap_converter::BaseCostmapToPolygons::worker_timer_</definition>
+        <argsstring></argsstring>
+        <name>worker_timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="276" column="32" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" prot="private" static="no" mutable="no">
+        <type>rclcpp::Node::SharedPtr</type>
+        <definition>rclcpp::Node::SharedPtr costmap_converter::BaseCostmapToPolygons::nh_</definition>
+        <argsstring></argsstring>
+        <name>nh_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="277" column="27" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" prot="private" static="no" mutable="no">
+        <type>std::thread *</type>
+        <definition>std::thread* costmap_converter::BaseCostmapToPolygons::spin_thread_</definition>
+        <argsstring></argsstring>
+        <name>spin_thread_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="278" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a78896f9e23abc564acb1d27cd4f38aac" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex costmap_converter::BaseCostmapToPolygons::terminate_mutex_</definition>
+        <argsstring></argsstring>
+        <name>terminate_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="279" column="14" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool costmap_converter::BaseCostmapToPolygons::need_to_terminate_</definition>
+        <argsstring></argsstring>
+        <name>need_to_terminate_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="280" column="8" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a687f79218c610912cd29f0f288a26fb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void costmap_converter::BaseCostmapToPolygons::initialize</definition>
+        <argsstring>(rclcpp::Node::SharedPtr nh)</argsstring>
+        <name>initialize</name>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a06ef33a6560775a8d7b64cede42bcbc0">initialize</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToLinesDBSMCCH_1a7404736600321b75819415875e388bbd">initialize</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToLinesDBSRANSAC_1afdf60cb8adbc4006ccba4752cf6e7b5b">initialize</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1ae207ee8646c2ce596f89424f3d85d238">initialize</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a94c56aed99894b24f21d066bd2f3d8df">initialize</reimplementedby>
+        <param>
+          <type>rclcpp::Node::SharedPtr</type>
+          <declname>nh</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nodehandle that defines the namespace for parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="87" column="18" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a3bee32afc15401220df123bce1a87921" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual costmap_converter::BaseCostmapToPolygons::~BaseCostmapToPolygons</definition>
+        <argsstring>()</argsstring>
+        <name>~BaseCostmapToPolygons</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="94" column="13" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1ac98d1254a59d142285db6662dbc5af47" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void costmap_converter::BaseCostmapToPolygons::setCostmap2D</definition>
+        <argsstring>(nav2_costmap_2d::Costmap2D *costmap)=0</argsstring>
+        <name>setCostmap2D</name>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1aefc720229ab91e51995904ba4de27ea9">setCostmap2D</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a5fa67041d5b91feed40135939ef871e7">setCostmap2D</reimplementedby>
+        <param>
+          <type>nav2_costmap_2d::Costmap2D *</type>
+          <declname>costmap</declname>
+        </param>
+        <briefdescription>
+<para>Pass a pointer to the costap to the plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>The plugin should handle the costmap&apos;s mutex locking. </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a83f5e0c6c9954c6cf54a25e4f0de5b6c" kindref="member">updateCostmap2D</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>costmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the costmap2d source </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="106" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a83f5e0c6c9954c6cf54a25e4f0de5b6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void costmap_converter::BaseCostmapToPolygons::updateCostmap2D</definition>
+        <argsstring>()=0</argsstring>
+        <name>updateCostmap2D</name>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a8185f7459c1ef690adcaa4184fbbb183">updateCostmap2D</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a9d91a27cb2afd17d5dc2226214ccb57a">updateCostmap2D</reimplementedby>
+        <briefdescription>
+<para>Get updated data from the previously set Costmap2D. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>The plugin should handle the costmap&apos;s mutex locking. </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ac98d1254a59d142285db6662dbc5af47" kindref="member">setCostmap2D</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="113" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1abec3dc10bc44341b73d5fc4e635be01f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void costmap_converter::BaseCostmapToPolygons::compute</definition>
+        <argsstring>()=0</argsstring>
+        <name>compute</name>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a8c0091b41c351d40451195f6f56a365f">compute</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToLinesDBSMCCH_1a33a0f5d93fafe8e7c600e3a99930bf65">compute</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToLinesDBSRANSAC_1a94d4cfa3d781fd9cca2ad73d26d93d0a">compute</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1ae063f12674d979b18e63d92c27deac33">compute</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1ad63be1baa7d62a7e72bd4da346574f28">compute</reimplementedby>
+        <briefdescription>
+<para>This method performs the actual work (conversion of the costmap to polygons) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="118" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a8e68cedfe4acd986b555edbcf5fe6d44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacecostmap__converter_1a6063889d67ef296ddfd08f08d5df4a5b" kindref="member">PolygonContainerConstPtr</ref></type>
+        <definition>virtual PolygonContainerConstPtr costmap_converter::BaseCostmapToPolygons::getPolygons</definition>
+        <argsstring>()</argsstring>
+        <name>getPolygons</name>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aa6d70bea1ba80d5ad84c221846e9ea62">getPolygons</reimplementedby>
+        <briefdescription>
+<para>Get a shared instance of the current polygon container. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If this method is not implemented by any subclass (plugin) the returned shared pointer is empty. <simplesect kind="remark"><para>If <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1abec3dc10bc44341b73d5fc4e635be01f" kindref="member">compute()</ref> or <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" kindref="member">startWorker()</ref> has not been called before, this method returns an empty instance! </para>
+</simplesect>
+<simplesect kind="warning"><para>The underlying plugin must ensure that this method is thread safe. </para>
+</simplesect>
+<simplesect kind="return"><para>Shared instance of the current polygon container </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="129" column="38" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="129" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a568d60474400d08a40218d0674b46fed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacecostmap__converter_1a3e9948c22dfceca87d2a7cc59c62fc97" kindref="member">ObstacleArrayConstPtr</ref></type>
+        <definition>virtual ObstacleArrayConstPtr costmap_converter::BaseCostmapToPolygons::getObstacles</definition>
+        <argsstring>()</argsstring>
+        <name>getObstacles</name>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1aea474a66f2b23002e1390b2e156d3255">getObstacles</reimplementedby>
+        <briefdescription>
+<para>Get a shared instance of the current obstacle container If this method is not overwritten by the underlying plugin, the obstacle container just imports <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a8e68cedfe4acd986b555edbcf5fe6d44" kindref="member">getPolygons()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>If <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1abec3dc10bc44341b73d5fc4e635be01f" kindref="member">compute()</ref> or <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" kindref="member">startWorker()</ref> has not been called before, this method returns an empty instance! </para>
+</simplesect>
+<simplesect kind="warning"><para>The underlying plugin must ensure that this method is thread safe. </para>
+</simplesect>
+<simplesect kind="return"><para>Shared instance of the current obstacle container </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a8e68cedfe4acd986b555edbcf5fe6d44" kindref="member">getPolygons</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="139" column="35" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="139" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1ae2913087d659654c55f5869397f8e2c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void costmap_converter::BaseCostmapToPolygons::setOdomTopic</definition>
+        <argsstring>(const std::string &amp;odom_topic)</argsstring>
+        <name>setOdomTopic</name>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a610ef9b8c4bb18fedce04eeabf666198">setOdomTopic</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>odom_topic</declname>
+        </param>
+        <briefdescription>
+<para>Set name of robot&apos;s odometry topic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Some plugins might require odometry information to compensate the robot&apos;s ego motion <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>odom_topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>topic name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="161" column="18" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="161" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a5f42b7263fcfdde112b09c73429e55be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool costmap_converter::BaseCostmapToPolygons::stackedCostmapConversion</definition>
+        <argsstring>()</argsstring>
+        <name>stackedCostmapConversion</name>
+        <reimplementedby refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a314f921603fc71c47bb1666de9a577f5">stackedCostmapConversion</reimplementedby>
+        <briefdescription>
+<para>Determines whether an additional plugin for subsequent costmap conversion is specified. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>false, since all plugins for static costmap conversion are independent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="168" column="18" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="168" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::BaseCostmapToPolygons::startWorker</definition>
+        <argsstring>(rclcpp::Rate::SharedPtr rate, nav2_costmap_2d::Costmap2D *costmap, bool spin_thread=false)</argsstring>
+        <name>startWorker</name>
+        <param>
+          <type>rclcpp::Rate::SharedPtr</type>
+          <declname>rate</declname>
+        </param>
+        <param>
+          <type>nav2_costmap_2d::Costmap2D *</type>
+          <declname>costmap</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>spin_thread</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Instantiate a worker that repeatedly coverts the most recent costmap to polygons. The worker is implemented as a timer event that is invoked at a specific <computeroutput>rate</computeroutput>. The passed <computeroutput>costmap</computeroutput> pointer must be valid at the complete time and must be lockable. By specifying the argument <computeroutput>spin_thread</computeroutput> the timer event is invoked in a separate thread and callback queue or otherwise it is called from the global callback queue (of the node in which the plugin is used). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rate that specifies how often the costmap should be updated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>costmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the underlying costmap (must be valid and lockable as long as the worker is active </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spin_thread</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>,the timer is invoked in a separate thread, otherwise in the default callback queue) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="181" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="181" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a7e5b367499223999167be752208eb59f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::BaseCostmapToPolygons::stopWorker</definition>
+        <argsstring>()</argsstring>
+        <name>stopWorker</name>
+        <briefdescription>
+<para>Stop the worker that repeatedly converts the costmap to polygons. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="217" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="217" bodyend="229"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1aed9851c00b8d93e88bb8ee79b95a23d9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>costmap_converter::BaseCostmapToPolygons::BaseCostmapToPolygons</definition>
+        <argsstring>()</argsstring>
+        <name>BaseCostmapToPolygons</name>
+        <briefdescription>
+<para>Protected constructor that should be called by subclasses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="236" column="5" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="236" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1aa39c0f13e7ad5bddade4cfc86324abb3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::BaseCostmapToPolygons::spinThread</definition>
+        <argsstring>()</argsstring>
+        <name>spinThread</name>
+        <briefdescription>
+<para>Blocking method that checks for new timer events (active if <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" kindref="member">startWorker()</ref> is called with spin_thread enabled) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="243" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="243" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a98ab2ab132530d153084db2d9249b75d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::BaseCostmapToPolygons::workerCallback</definition>
+        <argsstring>()</argsstring>
+        <name>workerCallback</name>
+        <briefdescription>
+<para>The callback of the worker that performs the actual work (updating the costmap and converting it to polygons) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="259" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="259" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1a5c9d89e344e9592ab66fd4eae4e3c495" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>rclcpp::Logger</type>
+        <definition>rclcpp::Logger costmap_converter::BaseCostmapToPolygons::getLogger</definition>
+        <argsstring>() const</argsstring>
+        <name>getLogger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="265" column="20" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="265" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToPolygons_1adde51e27138497c972070f585485d920" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time costmap_converter::BaseCostmapToPolygons::now</definition>
+        <argsstring>() const</argsstring>
+        <name>now</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="270" column="18" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="270" bodyend="273"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This abstract class defines the interface for plugins that convert the costmap into polygon types. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Plugins must accept a nav2_costmap_2d::Costmap2D datatype as information source. The interface provides two different use cases:<orderedlist>
+<listitem><para>Manual call to conversion routines: <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ac98d1254a59d142285db6662dbc5af47" kindref="member">setCostmap2D()</ref>, <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1abec3dc10bc44341b73d5fc4e635be01f" kindref="member">compute()</ref> and <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a8e68cedfe4acd986b555edbcf5fe6d44" kindref="member">getPolygons()</ref> (in subsequent calls <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ac98d1254a59d142285db6662dbc5af47" kindref="member">setCostmap2D()</ref> can be substituted by <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a83f5e0c6c9954c6cf54a25e4f0de5b6c" kindref="member">updateCostmap2D()</ref>)</para>
+</listitem><listitem><para>Repeatedly process costmap with a specific rate (<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" kindref="member">startWorker()</ref> and <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a7e5b367499223999167be752208eb59f" kindref="member">stopWorker()</ref>): Make sure that the costmap is valid while the worker is active (you can specify your own spinner or activate a threaded spinner). Costmaps can be obtained by invoking <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a8e68cedfe4acd986b555edbcf5fe6d44" kindref="member">getPolygons()</ref>. </para>
+</listitem></orderedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>costmap_converter::CostmapToLinesDBSRANSAC</label>
+        <link refid="classcostmap__converter_1_1CostmapToLinesDBSRANSAC"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>costmap_converter::CostmapToLinesDBSMCCH</label>
+        <link refid="classcostmap__converter_1_1CostmapToLinesDBSMCCH"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>costmap_converter::BaseCostmapToPolygons</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToPolygons"/>
+      </node>
+      <node id="2">
+        <label>costmap_converter::BaseCostmapToDynamicObstacles</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>costmap_converter::CostmapToPolygonsDBSMCCH</label>
+        <link refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>costmap_converter::CostmapToDynamicObstacles</label>
+        <link refid="classcostmap__converter_1_1CostmapToDynamicObstacles"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>CostmapToPolygons</label>
+        <link refid="classCostmapToPolygons"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>costmap_converter::CostmapToPolygonsDBSConcaveHull</label>
+        <link refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="79" column="1" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="80" bodyend="281"/>
+    <listofallmembers>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aed9851c00b8d93e88bb8ee79b95a23d9" prot="protected" virt="non-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>BaseCostmapToPolygons</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1abec3dc10bc44341b73d5fc4e635be01f" prot="public" virt="pure-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>compute</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5c9d89e344e9592ab66fd4eae4e3c495" prot="protected" virt="non-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>getLogger</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a568d60474400d08a40218d0674b46fed" prot="public" virt="virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>getObstacles</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a8e68cedfe4acd986b555edbcf5fe6d44" prot="public" virt="virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>getPolygons</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a687f79218c610912cd29f0f288a26fb9" prot="public" virt="virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>initialize</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" prot="private" virt="non-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>need_to_terminate_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" prot="private" virt="non-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>nh_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1adde51e27138497c972070f585485d920" prot="protected" virt="non-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>now</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ac98d1254a59d142285db6662dbc5af47" prot="public" virt="pure-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>setCostmap2D</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ae2913087d659654c55f5869397f8e2c5" prot="public" virt="virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>setOdomTopic</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" prot="private" virt="non-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>spin_thread_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa39c0f13e7ad5bddade4cfc86324abb3" prot="protected" virt="non-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>spinThread</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5f42b7263fcfdde112b09c73429e55be" prot="public" virt="virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>stackedCostmapConversion</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" prot="public" virt="non-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>startWorker</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a7e5b367499223999167be752208eb59f" prot="public" virt="non-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>stopWorker</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a78896f9e23abc564acb1d27cd4f38aac" prot="private" virt="non-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>terminate_mutex_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a83f5e0c6c9954c6cf54a25e4f0de5b6c" prot="public" virt="pure-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>updateCostmap2D</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a947fc00b05f6ac5f478afb9ce6c67a06" prot="private" virt="non-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>worker_timer_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a98ab2ab132530d153084db2d9249b75d" prot="protected" virt="non-virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>workerCallback</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a3bee32afc15401220df123bce1a87921" prot="public" virt="virtual"><scope>costmap_converter::BaseCostmapToPolygons</scope><name>~BaseCostmapToPolygons</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

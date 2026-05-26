@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1IsGoalReached" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::IsGoalReached</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BT::ConditionNode</basecompoundref>
+    <includes refid="is__goal__reached_8h" local="no">is_goal_reached.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1IsGoalReached_1a3b4da9329d716769c96a1548c1d76861" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber hateb_local_planner::IsGoalReached::goal_sub_</definition>
+        <argsstring></argsstring>
+        <name>goal_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="112" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1IsGoalReached_1a2eea16f0be9a402551c24f18e8393cce" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber hateb_local_planner::IsGoalReached::status_sub_</definition>
+        <argsstring></argsstring>
+        <name>status_sub_</name>
+        <briefdescription>
+<para>Subscribers for goal and status updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="112" column="29" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1IsGoalReached_1a61f3af8d0a4da78c98a94bb2975abc54" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::IsGoalReached::goal_reached_</definition>
+        <argsstring></argsstring>
+        <name>goal_reached_</name>
+        <briefdescription>
+<para>Flag indicating if goal is reached. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="113" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1IsGoalReached_1a1b353d85a81ab2116984e5cce5c9e54a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::IsGoalReached::updated_</definition>
+        <argsstring></argsstring>
+        <name>updated_</name>
+        <briefdescription>
+<para>Flag indicating if goal was updated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="114" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1IsGoalReached_1ae6b1e284e164457ee00923092bafce55" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::Pose</type>
+        <definition>geometry_msgs::Pose hateb_local_planner::IsGoalReached::goal_</definition>
+        <argsstring></argsstring>
+        <name>goal_</name>
+        <briefdescription>
+<para>Current navigation goal pose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="117" column="23" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1IsGoalReached_1a90fa55968472ac7746d07ab190e4fc73" prot="private" static="no" mutable="no">
+        <type>agent_path_prediction::AgentsInfo</type>
+        <definition>agent_path_prediction::AgentsInfo hateb_local_planner::IsGoalReached::agents_info_</definition>
+        <argsstring></argsstring>
+        <name>agents_info_</name>
+        <briefdescription>
+<para>Information about agents in the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="118" column="37" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1IsGoalReached_1a2c25f0d3ca39e6c2d8e3c0c75d2f3559" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::IsGoalReached::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="120" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalReached_1a9e2bab5448c7d415b24fa52d973f536e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::IsGoalReached::IsGoalReached</definition>
+        <argsstring>(const std::string &amp;condition_name, const BT::NodeConfiguration &amp;conf)</argsstring>
+        <name>IsGoalReached</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>condition_name</declname>
+        </param>
+        <param>
+          <type>const BT::NodeConfiguration &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with condition name and configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>condition_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the condition node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration for the behavior tree node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="66" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/is_goal_reached.cpp" bodystart="5" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalReached_1a2f5771a5bc8f9cc5ce8f5f228748f802" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::IsGoalReached::IsGoalReached</definition>
+        <argsstring>()=delete</argsstring>
+        <name>IsGoalReached</name>
+        <briefdescription>
+<para>Deleted default constructor to enforce proper initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="71" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalReached_1a0e78ab82771786384550eb4c3156a29e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::IsGoalReached::~IsGoalReached</definition>
+        <argsstring>() override</argsstring>
+        <name>~IsGoalReached</name>
+        <briefdescription>
+<para>Virtual destructor for cleanup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="76" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/is_goal_reached.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalReached_1ae5207bbb703019e6581a60bfacc03fd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::IsGoalReached::goalReceivedCB</definition>
+        <argsstring>(const move_base_msgs::MoveBaseActionGoal &amp;goal_msg)</argsstring>
+        <name>goalReceivedCB</name>
+        <param>
+          <type>const move_base_msgs::MoveBaseActionGoal &amp;</type>
+          <declname>goal_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for receiving new navigation goals. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>goal_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message containing the new goal pose </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="82" column="8" bodyfile="hateb_local_planner/src/behavior_tree/condition/is_goal_reached.cpp" bodystart="20" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalReached_1ad23301e190679ffb057c915f065bb3d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::IsGoalReached::resultCB</definition>
+        <argsstring>(const move_base_msgs::MoveBaseActionResult &amp;result_msg)</argsstring>
+        <name>resultCB</name>
+        <param>
+          <type>const move_base_msgs::MoveBaseActionResult &amp;</type>
+          <declname>result_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for receiving goal status updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>result_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message containing the goal status result </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="88" column="8" bodyfile="hateb_local_planner/src/behavior_tree/condition/is_goal_reached.cpp" bodystart="35" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalReached_1a320665e966353807fd350b55a6dacb3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BT::NodeStatus</type>
+        <definition>BT::NodeStatus hateb_local_planner::IsGoalReached::tick</definition>
+        <argsstring>() override</argsstring>
+        <name>tick</name>
+        <briefdescription>
+<para>Method called to evaluate if goal is reached. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>SUCCESS if goal is reached or updated, FAILURE if still in progress </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="94" column="18" bodyfile="hateb_local_planner/src/behavior_tree/condition/is_goal_reached.cpp" bodystart="42" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalReached_1ad5bafad0ddb2e2a68a669918b62b6d4e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BT::PortsList</type>
+        <definition>static BT::PortsList hateb_local_planner::IsGoalReached::providedPorts</definition>
+        <argsstring>()</argsstring>
+        <name>providedPorts</name>
+        <briefdescription>
+<para>Defines input and output ports for condition evaluation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ports list containing agents_info as input and nav_goal as output </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="100" column="24" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" bodystart="100" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalReached_1aab2863373e72c62271269e1d4b5ffa49" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::IsGoalReached::goalReachedCheck</definition>
+        <argsstring>()</argsstring>
+        <name>goalReachedCheck</name>
+        <briefdescription>
+<para>Helper method to check if robot has reached goal position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if robot is at goal position and orientation, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="110" column="8" bodyfile="hateb_local_planner/src/behavior_tree/condition/is_goal_reached.cpp" bodystart="62" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class implementing a condition node for checking if navigation goal is reached. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class monitors the robot&apos;s position relative to the navigation goal and provides functionality to determine when the goal has been successfully reached. It inherits from BT::ConditionNode to integrate with the behavior tree framework. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::IsGoalReached</label>
+        <link refid="classhateb__local__planner_1_1IsGoalReached"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::IsGoalReached</label>
+        <link refid="classhateb__local__planner_1_1IsGoalReached"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" line="59" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_reached.h" bodystart="59" bodyend="121"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1a90fa55968472ac7746d07ab190e4fc73" prot="private" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>agents_info_</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1ae6b1e284e164457ee00923092bafce55" prot="private" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>goal_</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1a61f3af8d0a4da78c98a94bb2975abc54" prot="private" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>goal_reached_</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1a3b4da9329d716769c96a1548c1d76861" prot="private" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>goal_sub_</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1aab2863373e72c62271269e1d4b5ffa49" prot="private" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>goalReachedCheck</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1ae5207bbb703019e6581a60bfacc03fd1" prot="public" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>goalReceivedCB</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1a9e2bab5448c7d415b24fa52d973f536e" prot="public" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>IsGoalReached</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1a2f5771a5bc8f9cc5ce8f5f228748f802" prot="public" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>IsGoalReached</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1a2c25f0d3ca39e6c2d8e3c0c75d2f3559" prot="private" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>name_</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1ad5bafad0ddb2e2a68a669918b62b6d4e" prot="public" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>providedPorts</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1ad23301e190679ffb057c915f065bb3d3" prot="public" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>resultCB</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1a2eea16f0be9a402551c24f18e8393cce" prot="private" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>status_sub_</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1a320665e966353807fd350b55a6dacb3c" prot="public" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>tick</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1a1b353d85a81ab2116984e5cce5c9e54a" prot="private" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>updated_</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalReached_1a0e78ab82771786384550eb4c3156a29e" prot="public" virt="non-virtual"><scope>hateb_local_planner::IsGoalReached</scope><name>~IsGoalReached</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,4 @@
+<map id="hateb_local_planner::PolygonObstacle" name="hateb_local_planner::PolygonObstacle">
+<area shape="rect" id="node1" title="Implements a polygon obstacle with an arbitrary number of vertices." alt="" coords="5,95,159,136"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1Obstacle.html" title="Abstract class that defines the interface for modelling obstacles." alt="" coords="5,5,159,47"/>
+</map>

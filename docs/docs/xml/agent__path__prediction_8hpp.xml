@@ -1,0 +1,604 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="agent__path__prediction_8hpp" kind="file" language="C++">
+    <compoundname>agent_path_prediction.hpp</compoundname>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes refid="parameters_8hpp" local="no">ros2_helpers/parameters.hpp</includes>
+    <includes refid="utils_8hpp" local="no">ros2_helpers/utils.hpp</includes>
+    <includes local="no">tf2/convert.h</includes>
+    <includes local="no">tf2/time.h</includes>
+    <includes local="no">tf2/utils.h</includes>
+    <includes local="no">tf2_ros/buffer.h</includes>
+    <includes local="no">tf2_ros/transform_listener.h</includes>
+    <includes refid="agent__path__prediction__config_8hpp" local="no">agent_path_prediction/agent_path_prediction_config.hpp</includes>
+    <includes refid="predict__goal_8hpp" local="no">agent_path_prediction/predict_goal.hpp</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">tf2/LinearMath/Quaternion.h</includes>
+    <includes local="no">tf2/LinearMath/Transform.h</includes>
+    <includes local="no">tf2/LinearMath/Vector3.h</includes>
+    <includes local="no">agent_path_prediction/msg/predicted_goals.hpp</includes>
+    <includes local="no">cohan_msgs/msg/agent_path_array.hpp</includes>
+    <includes local="no">cohan_msgs/msg/tracked_agents.hpp</includes>
+    <includes local="no">cohan_msgs/msg/tracked_segment_type.hpp</includes>
+    <includes local="no">geometry_msgs/msg/pose.hpp</includes>
+    <includes local="no">geometry_msgs/msg/pose_stamped.hpp</includes>
+    <includes local="no">geometry_msgs/msg/twist_with_covariance.hpp</includes>
+    <includes local="no">nav_msgs/msg/path.hpp</includes>
+    <includes local="no">tf2_geometry_msgs/tf2_geometry_msgs.hpp</includes>
+    <includes local="no">visualization_msgs/msg/marker_array.hpp</includes>
+    <includes local="no">agent_path_prediction/srv/agent_goal.hpp</includes>
+    <includes local="no">agent_path_prediction/srv/agent_pose_predict.hpp</includes>
+    <includes local="no">std_srvs/srv/empty.hpp</includes>
+    <includes local="no">std_srvs/srv/set_bool.hpp</includes>
+    <includes local="no">std_srvs/srv/trigger.hpp</includes>
+    <includes local="no">nav2_msgs/action/compute_path_to_pose.hpp</includes>
+    <includes local="no">rclcpp_action/rclcpp_action.hpp</includes>
+    <includedby refid="agent__path__prediction_8cpp" local="no">agent_path_prediction.cpp</includedby>
+    <includedby refid="hateb__local__planner__ros_8h" local="no">hateb_local_planner_ros.h</includedby>
+    <incdepgraph>
+      <node id="42">
+        <label>std_srvs/srv/set_bool.hpp</label>
+      </node>
+      <node id="12">
+        <label>ros2_helpers/utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>cohan_msgs/msg/tracked_agents.hpp</label>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="35">
+        <label>geometry_msgs/msg/pose_stamped.hpp</label>
+      </node>
+      <node id="30">
+        <label>tf2/LinearMath/Transform.h</label>
+      </node>
+      <node id="3">
+        <label>ros2_helpers/parameters.hpp</label>
+        <link refid="parameters_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>agent_path_prediction.hpp</label>
+        <link refid="agent__path__prediction_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>geometry_msgs/msg/pose.hpp</label>
+      </node>
+      <node id="45">
+        <label>rclcpp_action/rclcpp_action.hpp</label>
+      </node>
+      <node id="21">
+        <label>cmath</label>
+      </node>
+      <node id="37">
+        <label>nav_msgs/msg/path.hpp</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="25">
+        <label>map</label>
+      </node>
+      <node id="16">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="36">
+        <label>geometry_msgs/msg/twist_with_covariance.hpp</label>
+      </node>
+      <node id="14">
+        <label>tf2/convert.h</label>
+      </node>
+      <node id="2">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="31">
+        <label>agent_path_prediction/msg/predicted_goals.hpp</label>
+      </node>
+      <node id="23">
+        <label>agent_path_prediction/predict_goal.hpp</label>
+        <link refid="predict__goal_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>cohan_msgs/msg/agent_path_array.hpp</label>
+      </node>
+      <node id="20">
+        <label>agent_path_prediction/agent_path_prediction_config.hpp</label>
+        <link refid="agent__path__prediction__config_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>std_srvs/srv/trigger.hpp</label>
+      </node>
+      <node id="22">
+        <label>cohan_msgs/msg/tracked_segment_type.hpp</label>
+      </node>
+      <node id="7">
+        <label>rcl_interfaces/msg/parameter_descriptor.hpp</label>
+      </node>
+      <node id="15">
+        <label>tf2/time.h</label>
+      </node>
+      <node id="13">
+        <label>tf2/LinearMath/Vector3.h</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>rcl_interfaces/msg/integer_range.hpp</label>
+      </node>
+      <node id="26">
+        <label>utility</label>
+      </node>
+      <node id="44">
+        <label>nav2_msgs/action/compute_path_to_pose.hpp</label>
+      </node>
+      <node id="19">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="10">
+        <label>unordered_map</label>
+      </node>
+      <node id="29">
+        <label>tf2/LinearMath/Quaternion.h</label>
+      </node>
+      <node id="38">
+        <label>visualization_msgs/msg/marker_array.hpp</label>
+      </node>
+      <node id="18">
+        <label>tf2_ros/transform_listener.h</label>
+      </node>
+      <node id="27">
+        <label>chrono</label>
+      </node>
+      <node id="24">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="17">
+        <label>tf2_ros/buffer.h</label>
+      </node>
+      <node id="41">
+        <label>std_srvs/srv/empty.hpp</label>
+      </node>
+      <node id="40">
+        <label>agent_path_prediction/srv/agent_pose_predict.hpp</label>
+      </node>
+      <node id="8">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="28">
+        <label>memory</label>
+      </node>
+      <node id="5">
+        <label>rcl_interfaces/msg/floating_point_range.hpp</label>
+      </node>
+      <node id="39">
+        <label>agent_path_prediction/srv/agent_goal.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>agent_path_prediction.cpp</label>
+        <link refid="agent__path__prediction_8cpp"/>
+      </node>
+      <node id="1">
+        <label>agent_path_prediction.hpp</label>
+        <link refid="agent__path__prediction_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner_ros.cpp</label>
+        <link refid="hateb__local__planner__ros_8cpp"/>
+      </node>
+      <node id="3">
+        <label>hateb_local_planner_ros.h</label>
+        <link refid="hateb__local__planner__ros_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classagents_1_1AgentPathPrediction" prot="public">agents::AgentPathPrediction</innerclass>
+    <innerclass refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel" prot="private">agents::AgentPathPrediction::AgentPathVel</innerclass>
+    <innerclass refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel" prot="private">agents::AgentPathPrediction::AgentStartPoseVel</innerclass>
+    <innernamespace refid="namespaceagents">agents</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="agent__path__prediction_8hpp_1af331ec1c592c921393cc8e9e1b75c33f" prot="public" static="no">
+        <name>ANG_VEL_EPS</name>
+        <initializer>0.001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="78" column="9" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent__path__prediction_8hpp_1af894f6c65704c92b68ed56dadb9afd02" prot="public" static="no">
+        <name>MAX_AGENT_MARKERS</name>
+        <initializer>1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="79" column="9" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent__path__prediction_8hpp_1a16e1bbd9c734c79d0a08824bf14036f7" prot="public" static="no">
+        <name>MIN_MARKER_LIFETIME</name>
+        <initializer>1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="80" column="9" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent__path__prediction_8hpp_1a33f9de4ddabe0c954c7be6d7d593e00e" prot="public" static="no">
+        <name>MINIMUM_COVARIANCE_MARKERS</name>
+        <initializer>0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="81" column="9" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent__path__prediction_8hpp_1a70d5ea5ea8c43ed32d3d28e41567b81e" prot="public" static="no">
+        <name>RECALC_DIST</name>
+        <initializer>0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="82" column="9" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent__path__prediction_8hpp_1a8cc8d559acdd2f74085b20977182d5b7" prot="public" static="no">
+        <name>NODE_NAME</name>
+        <initializer>&quot;agent_path_prediction&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="83" column="9" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(MIT<sp/>License)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2020-2025<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>AGENT_PATH_PREDICTION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_PATH_PREDICTION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ROS2<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp/rclcpp.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="parameters_8hpp" kindref="compound">ros2_helpers/parameters.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="utils_8hpp" kindref="compound">ros2_helpers/utils.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>TF2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/convert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/utils.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_ros/buffer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_ros/transform_listener.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Local<sp/>and<sp/>generic<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="agent__path__prediction__config_8hpp" kindref="compound">agent_path_prediction/agent_path_prediction_config.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="predict__goal_8hpp" kindref="compound">agent_path_prediction/predict_goal.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Messages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/LinearMath/Quaternion.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/LinearMath/Transform.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/LinearMath/Vector3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;agent_path_prediction/msg/predicted_goals.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/agent_path_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/tracked_agents.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/tracked_segment_type.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/msg/pose.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/msg/pose_stamped.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/msg/twist_with_covariance.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav_msgs/msg/path.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;visualization_msgs/msg/marker_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Services</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;agent_path_prediction/srv/agent_goal.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;agent_path_prediction/srv/agent_pose_predict.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;std_srvs/srv/empty.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;std_srvs/srv/set_bool.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;std_srvs/srv/trigger.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Actions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav2_msgs/action/compute_path_to_pose.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp_action/rclcpp_action.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Internal<sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="agent__path__prediction_8hpp_1af331ec1c592c921393cc8e9e1b75c33f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANG_VEL_EPS<sp/>0.001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="agent__path__prediction_8hpp_1af894f6c65704c92b68ed56dadb9afd02" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_AGENT_MARKERS<sp/>1000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="agent__path__prediction_8hpp_1a16e1bbd9c734c79d0a08824bf14036f7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MIN_MARKER_LIFETIME<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="agent__path__prediction_8hpp_1a33f9de4ddabe0c954c7be6d7d593e00e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MINIMUM_COVARIANCE_MARKERS<sp/>0.1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="agent__path__prediction_8hpp_1a70d5ea5ea8c43ed32d3d28e41567b81e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RECALC_DIST<sp/>0.5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="agent__path__prediction_8hpp_1a8cc8d559acdd2f74085b20977182d5b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NODE_NAME<sp/>&quot;agent_path_prediction&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="namespaceagents" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceagents" kindref="compound">agents</ref><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Pattern<sp/>1<sp/>of<sp/>ROS2<sp/>Nodes<sp/>--&gt;<sp/>Inherit<sp/>from<sp/>rclcpp::Node<sp/>(Good<sp/>for<sp/>Standalone<sp/>nodes)</highlight></codeline>
+<codeline lineno="90" refid="classagents_1_1AgentPathPrediction" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classagents_1_1AgentPathPrediction" kindref="compound">AgentPathPrediction</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="94" refid="classagents_1_1AgentPathPrediction_1afc77310ca34eab027d8c83a35977e188" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classagents_1_1AgentPathPrediction_1afc77310ca34eab027d8c83a35977e188" kindref="member">AgentPathPrediction</ref>()<sp/>:<sp/>Node(<ref refid="agent__path__prediction_8hpp_1a8cc8d559acdd2f74085b20977182d5b7" kindref="member">NODE_NAME</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="classagents_1_1AgentPathPrediction_1afafee2e99135310d643643e05e81841c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classagents_1_1AgentPathPrediction_1afafee2e99135310d643643e05e81841c" kindref="member">~AgentPathPrediction</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1abf79deb87acd0d6ddc422cd41c8b1f12" kindref="member">initialize</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS2<sp/>node<sp/>and<sp/>helpers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classagents_1_1AgentPathPrediction_1a7588173c287ac2b1594bfeeeab305b12" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;AgentPathPredictConfig&gt;<sp/><ref refid="classagents_1_1AgentPathPrediction_1a7588173c287ac2b1594bfeeeab305b12" kindref="member">cfg_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Structs</highlight></codeline>
+<codeline lineno="111" refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel" refkind="compound"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel" kindref="compound">AgentPathVel</ref><sp/>{</highlight></codeline>
+<codeline lineno="112" refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel_1a2ca4c529844b33fb8a6147bd41eae4ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel_1a2ca4c529844b33fb8a6147bd41eae4ba" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Agent<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel_1af283f0bc54c2416e4c200e5f3486e299" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>nav_msgs::msg::Path<sp/><ref refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel_1af283f0bc54c2416e4c200e5f3486e299" kindref="member">path</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Predicted<sp/>path<sp/>for<sp/>the<sp/>agent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel_1a04ad28169671132ec03860955523844b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry_msgs::msg::TwistWithCovariance<sp/><ref refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel_1a04ad28169671132ec03860955523844b" kindref="member">start_vel</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>Initial<sp/>velocity<sp/>of<sp/>the<sp/>agent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel" kindref="compound">AgentStartPoseVel</ref><sp/>{</highlight></codeline>
+<codeline lineno="121" refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel_1a2c11309c5930941f485fce6876f4716e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel_1a2c11309c5930941f485fce6876f4716e" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Agent<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel_1ad94a1b1db939546c53ec4eed5696563e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry_msgs::msg::PoseStamped<sp/><ref refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel_1ad94a1b1db939546c53ec4eed5696563e" kindref="member">pose</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initial<sp/>pose<sp/>of<sp/>the<sp/>agent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel_1abbc44db94d90075389c951d0b845702a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry_msgs::msg::TwistWithCovariance<sp/><ref refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel_1abbc44db94d90075389c951d0b845702a" kindref="member">vel</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>Initial<sp/>velocity<sp/>of<sp/>the<sp/>agent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS2<sp/>Action<sp/>Clients</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="classagents_1_1AgentPathPrediction_1a5a42717987bb25bca66ebd744ebaa5d9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a5a42717987bb25bca66ebd744ebaa5d9" kindref="member">ComputePathToPose</ref><sp/>=<sp/>nav2_msgs::action::ComputePathToPose;</highlight></codeline>
+<codeline lineno="128" refid="classagents_1_1AgentPathPrediction_1a4c3f64fb7a5510b1dfa9e7b5415da40f" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp_action::Client&lt;ComputePathToPose&gt;::SharedPtr<sp/><ref refid="classagents_1_1AgentPathPrediction_1a4c3f64fb7a5510b1dfa9e7b5415da40f" kindref="member">get_plan_client_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129" refid="classagents_1_1AgentPathPrediction_1a78187931fd5400e13530165ef63f9645" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a78187931fd5400e13530165ef63f9645" kindref="member">GoalHandleComputePathToPose</ref><sp/>=<sp/>rclcpp_action::ClientGoalHandle&lt;ComputePathToPose&gt;;<sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Action<sp/>Goal<sp/>Handlers</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a74ff82535eb6cf1f8d0aeb923585ca6b" kindref="member">sendActionGoal</ref>(ComputePathToPose::Goal<sp/>goal_msg);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a88251ce4eb1448a5fb8165c50104482d" kindref="member">goalResponseCB</ref>(GoalHandleComputePathToPose::SharedPtr<sp/>goal_handle);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a6d99ea64a411b5ca176e0178654ba069" kindref="member">resultCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GoalHandleComputePathToPose::WrappedResult&amp;<sp/>result);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="classagents_1_1AgentPathPrediction_1af2d9fd4c078f684731720918e3e4d117" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1af2d9fd4c078f684731720918e3e4d117" kindref="member">isPlanningDone</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1ab9ca3423081a010edf11ccd365689b44" kindref="member">planning_done_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>subscriber<sp/>callbacks</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a6a1beceb1803aa147c22c2d397912a03" kindref="member">trackedAgentsCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cohan_msgs::msg::TrackedAgents::SharedPtr<sp/>tracked_agents);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1ab5a2f68132307b7e546444ffcc2de408" kindref="member">externalPathsCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cohan_msgs::msg::AgentPathArray::SharedPtr<sp/>external_paths);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1ab75dd4ce85f5dd05273db220edbbfa09" kindref="member">predictedGoalCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>agent_path_prediction::msg::PredictedGoals::SharedPtr<sp/>predicted_goal);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Service<sp/>callbacks</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a61baafef3ba3d6b7c4777cfe613fa2ce" kindref="member">predictAgents</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentPosePredict::Request&gt;<sp/>req,<sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentPosePredict::Response&gt;<sp/>res);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1af02fc9e6b0fe4a38c0892625101ed421" kindref="member">predictAgentsVelObs</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentPosePredict::Request&gt;<sp/>req,<sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentPosePredict::Response&gt;<sp/>res)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a0188ab479042630a68d3668ce21816df" kindref="member">predictAgentsExternal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentPosePredict::Request&gt;<sp/>req,<sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentPosePredict::Response&gt;<sp/>res);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a0fa7eae9ba7fcbef9eb31d6287e5fdd4" kindref="member">predictAgentsBehind</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentPosePredict::Request&gt;<sp/>req,<sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentPosePredict::Response&gt;<sp/>res);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a9dafec387c772af21529feccc95f286f" kindref="member">predictAgentsGoal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentPosePredict::Request&gt;<sp/>req,<sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentPosePredict::Response&gt;<sp/>res);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a412a07cf494f120bcc1b2bfc01474ab7" kindref="member">predictAgentsFromPaths</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentPosePredict::Request&gt;<sp/>req,<sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentPosePredict::Response&gt;<sp/>res);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a00ba3027167fb06b7599a523864f3835" kindref="member">resetPredictionSrvs</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::Empty::Request&gt;<sp/>req,<sp/>std::shared_ptr&lt;std_srvs::srv::Empty::Response&gt;<sp/>res);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a9695da6ef8b4d9f03c7866c52b09e566" kindref="member">setGoal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentGoal::Request&gt;<sp/>req,<sp/>std::shared_ptr&lt;agent_path_prediction::srv::AgentGoal::Response&gt;<sp/>res);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>nav_msgs::msg::Path<sp/><ref refid="classagents_1_1AgentPathPrediction_1a9d5cdbae993b87d0da7fb1c467a548fc" kindref="member">setFixedPath</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::PoseStamped&amp;<sp/>start_pose);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a29bd81ad46200e617f5037ffd47bc53c" kindref="member">prunePath</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>begin_index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::Pose&amp;<sp/>pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;geometry_msgs::msg::PoseWithCovarianceStamped&gt;&amp;<sp/>path);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1ac2886019b7f953e2c03de8ace84b3b71" kindref="member">transformPoseTwist</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cohan_msgs::msg::TrackedAgents&amp;<sp/>tracked_agents,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t&amp;<sp/>agent_id,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>to_frame,<sp/>geometry_msgs::msg::PoseStamped&amp;<sp/>pose,</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>geometry_msgs::msg::TwistStamped&amp;<sp/>twist)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="classagents_1_1AgentPathPrediction_1a08bce64794ffbf8b285543de5f7b8a6a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1a08bce64794ffbf8b285543de5f7b8a6a" kindref="member">checkdist</ref>(geometry_msgs::msg::Pose<sp/>agent,<sp/>geometry_msgs::msg::Pose<sp/>robot)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::hypot(agent.position.x<sp/>-<sp/>robot.position.x,<sp/>agent.position.y<sp/>-<sp/>robot.position.y);<sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS2<sp/>message<sp/>handlers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="classagents_1_1AgentPathPrediction_1aa79e1043ef2fa80bdbf0b82e0d1257c9" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt;::SharedPtr<sp/><ref refid="classagents_1_1AgentPathPrediction_1aa79e1043ef2fa80bdbf0b82e0d1257c9" kindref="member">predicted_agents_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="271" refid="classagents_1_1AgentPathPrediction_1ae2d4e0e76d66d9a0c7beb9c142f8afd1" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;geometry_msgs::msg::PoseStamped&gt;::SharedPtr<sp/><ref refid="classagents_1_1AgentPathPrediction_1ae2d4e0e76d66d9a0c7beb9c142f8afd1" kindref="member">front_pose_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="272" refid="classagents_1_1AgentPathPrediction_1a3ce50a1c8acfda4e2e56fc86c3cb1636" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;cohan_msgs::msg::TrackedAgents&gt;::SharedPtr<sp/><ref refid="classagents_1_1AgentPathPrediction_1a3ce50a1c8acfda4e2e56fc86c3cb1636" kindref="member">tracked_agents_sub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="273" refid="classagents_1_1AgentPathPrediction_1a1b4580ddc7e9c9c461a1e0d5f6fc2281" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;cohan_msgs::msg::AgentPathArray&gt;::SharedPtr<sp/><ref refid="classagents_1_1AgentPathPrediction_1a1b4580ddc7e9c9c461a1e0d5f6fc2281" kindref="member">external_paths_sub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="274" refid="classagents_1_1AgentPathPrediction_1ae0e199e0fcd7feac7ce6302a59623afa" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;agent_path_prediction::msg::PredictedGoals&gt;::SharedPtr<sp/><ref refid="classagents_1_1AgentPathPrediction_1ae0e199e0fcd7feac7ce6302a59623afa" kindref="member">predicted_goal_sub_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS2<sp/>Services</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="classagents_1_1AgentPathPrediction_1a196cef60d98065545bf3062f861dedb4" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Service&lt;agent_path_prediction::srv::AgentPosePredict&gt;::SharedPtr<sp/><ref refid="classagents_1_1AgentPathPrediction_1a196cef60d98065545bf3062f861dedb4" kindref="member">predict_agents_server_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="278" refid="classagents_1_1AgentPathPrediction_1a48512aa97aed121f07a6e84c1d055f8c" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Service&lt;agent_path_prediction::srv::AgentGoal&gt;::SharedPtr<sp/><ref refid="classagents_1_1AgentPathPrediction_1a48512aa97aed121f07a6e84c1d055f8c" kindref="member">set_goal_srv_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="279" refid="classagents_1_1AgentPathPrediction_1af271444583773e730cbde7199d93d3d9" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Service&lt;std_srvs::srv::Empty&gt;::SharedPtr<sp/><ref refid="classagents_1_1AgentPathPrediction_1af271444583773e730cbde7199d93d3d9" kindref="member">reset_prediction_services_server_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Transform<sp/>listener</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="classagents_1_1AgentPathPrediction_1a62c9d02761ad6538cd7eb78fbcacdc17" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;tf2_ros::Buffer&gt;<sp/><ref refid="classagents_1_1AgentPathPrediction_1a62c9d02761ad6538cd7eb78fbcacdc17" kindref="member">tf_buffer_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="283" refid="classagents_1_1AgentPathPrediction_1a3e928ad5f50f8bcce02c383b857a4a3c" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;tf2_ros::TransformListener&gt;<sp/><ref refid="classagents_1_1AgentPathPrediction_1a3e928ad5f50f8bcce02c383b857a4a3c" kindref="member">tf_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Internal<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="classagents_1_1AgentPathPrediction_1ad536f25bbcae3f7b162e3e3c1180cd98" refkind="member"><highlight class="normal"><sp/><sp/>cohan_msgs::msg::TrackedAgents<sp/><ref refid="classagents_1_1AgentPathPrediction_1ad536f25bbcae3f7b162e3e3c1180cd98" kindref="member">tracked_agents_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="287" refid="classagents_1_1AgentPathPrediction_1a7c493790bd80d543a7741840430b10e3" refkind="member"><highlight class="normal"><sp/><sp/>cohan_msgs::msg::AgentPathArray<sp/><ref refid="classagents_1_1AgentPathPrediction_1a7c493790bd80d543a7741840430b10e3" kindref="member">external_paths_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="288" refid="classagents_1_1AgentPathPrediction_1a7a8f342a6cf6fc2b53424abef927e49a" refkind="member"><highlight class="normal"><sp/><sp/>agent_path_prediction::msg::PredictedGoals<sp/><ref refid="classagents_1_1AgentPathPrediction_1a7a8f342a6cf6fc2b53424abef927e49a" kindref="member">predicted_goals_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="289" refid="classagents_1_1AgentPathPrediction_1aef6127c02480e0a649682d5c2ecb2efc" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;agent_path_prediction::msg::AgentPose&gt;<sp/><ref refid="classagents_1_1AgentPathPrediction_1aef6127c02480e0a649682d5c2ecb2efc" kindref="member">external_goals_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="290" refid="classagents_1_1AgentPathPrediction_1a00d24ac50f4b80361f95c43c2fb38b66" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;AgentPathVel&gt;<sp/><ref refid="classagents_1_1AgentPathPrediction_1a00d24ac50f4b80361f95c43c2fb38b66" kindref="member">path_vels_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="291" refid="classagents_1_1AgentPathPrediction_1a46d3187082c971c29b328168a05de302" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="classagents_1_1AgentPathPrediction_1a46d3187082c971c29b328168a05de302" kindref="member">path_vels_pos_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="292" refid="classagents_1_1AgentPathPrediction_1aad8b6d7f58ad9e5a13a4a948866269e6" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;agent_path_prediction::msg::PredictedPoses&gt;<sp/><ref refid="classagents_1_1AgentPathPrediction_1aad8b6d7f58ad9e5a13a4a948866269e6" kindref="member">last_predicted_poses_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="293" refid="classagents_1_1AgentPathPrediction_1ab01e01bbeef567abd29b7fc3cd6641d4" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;uint64_t,<sp/>size_t&gt;<sp/><ref refid="classagents_1_1AgentPathPrediction_1ab01e01bbeef567abd29b7fc3cd6641d4" kindref="member">last_prune_indices_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="294" refid="classagents_1_1AgentPathPrediction_1a983b614e8b93ca742840cadb933c96e7" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;uint64_t,<sp/>int&gt;<sp/><ref refid="classagents_1_1AgentPathPrediction_1a983b614e8b93ca742840cadb933c96e7" kindref="member">last_markers_size_map_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="295" refid="classagents_1_1AgentPathPrediction_1ae24ee9712f7257e4a73934c830cf48fe" refkind="member"><highlight class="normal"><sp/><sp/>visualization_msgs::msg::MarkerArray<sp/><ref refid="classagents_1_1AgentPathPrediction_1ae24ee9712f7257e4a73934c830cf48fe" kindref="member">predicted_agents_markers_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="296" refid="classagents_1_1AgentPathPrediction_1aa622c90bab0162345496d6fd2a0b940e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1aa622c90bab0162345496d6fd2a0b940e" kindref="member">check_path_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="297" refid="classagents_1_1AgentPathPrediction_1a96786bf5f15d2267b3d2e0174726846d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1aa9a691a634bc23253152db5c41c99776" kindref="member">showing_markers_</ref>,<sp/><ref refid="classagents_1_1AgentPathPrediction_1a7bccec7ac9341244d43cac64b79e9470" kindref="member">got_new_agent_paths_</ref>,<sp/><ref refid="classagents_1_1AgentPathPrediction_1a96786bf5f15d2267b3d2e0174726846d" kindref="member">got_external_goal_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="298" refid="classagents_1_1AgentPathPrediction_1a138ed6977ea1887a445d6b84a0c0fe63" refkind="member"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::Transform<sp/><ref refid="classagents_1_1AgentPathPrediction_1a138ed6977ea1887a445d6b84a0c0fe63" kindref="member">behind_pose_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="299" refid="classagents_1_1AgentPathPrediction_1aed35715dd7ddc625f7b84fffbdaab39c" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classagents_1_1AgentPathPrediction_1aed35715dd7ddc625f7b84fffbdaab39c" kindref="member">tracked_agents_sub_topic_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="300" refid="classagents_1_1AgentPathPrediction_1a9d10d00a04ab902e039a7e604ad4d081" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classagents_1_1AgentPathPrediction_1a9d10d00a04ab902e039a7e604ad4d081" kindref="member">get_plan_srv_name_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="301" refid="classagents_1_1AgentPathPrediction_1a6d79011b10a83cf459f420c4dccc9970" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classagents_1_1AgentPathPrediction_1a6d79011b10a83cf459f420c4dccc9970" kindref="member">ns_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="302" refid="classagents_1_1AgentPathPrediction_1ab9ca3423081a010edf11ccd365689b44" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classagents_1_1AgentPathPrediction_1ab9ca3423081a010edf11ccd365689b44" kindref="member">planning_done_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="303" refid="classagents_1_1AgentPathPrediction_1a796ccddf27e97c3b1079f2d2019641b3" refkind="member"><highlight class="normal"><sp/><sp/>nav_msgs::msg::Path<sp/><ref refid="classagents_1_1AgentPathPrediction_1a796ccddf27e97c3b1079f2d2019641b3" kindref="member">planned_path_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="304" refid="classagents_1_1AgentPathPrediction_1a7fa0a26f0c91e7838974fbf893e74e98" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Node::SharedPtr<sp/><ref refid="classagents_1_1AgentPathPrediction_1a7fa0a26f0c91e7838974fbf893e74e98" kindref="member">client_node_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="305" refid="classagents_1_1AgentPathPrediction_1a763bc7a192765a3b478ed3fd1e68e489" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;rclcpp::executors::SingleThreadedExecutor&gt;<sp/><ref refid="classagents_1_1AgentPathPrediction_1a763bc7a192765a3b478ed3fd1e68e489" kindref="member">client_executor_</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="306"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>agents</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>AGENT_PATH_PREDICTION_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp"/>
+  </compounddef>
+</doxygen>

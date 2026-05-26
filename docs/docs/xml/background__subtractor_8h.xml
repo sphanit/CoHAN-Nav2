@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="background__subtractor_8h" kind="file" language="C++">
+    <compoundname>background_subtractor.h</compoundname>
+    <includes local="no">cv_bridge/cv_bridge.h</includes>
+    <includedby refid="costmap__to__dynamic__obstacles_8h" local="no">costmap_to_dynamic_obstacles.h</includedby>
+    <includedby refid="background__subtractor_8cpp" local="no">background_subtractor.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>background_subtractor.h</label>
+        <link refid="background__subtractor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cv_bridge/cv_bridge.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>background_subtractor.h</label>
+        <link refid="background__subtractor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>costmap_to_dynamic_obstacles.h</label>
+        <link refid="costmap__to__dynamic__obstacles_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>background_subtractor.cpp</label>
+        <link refid="background__subtractor_8cpp"/>
+      </node>
+      <node id="3">
+        <label>costmap_to_dynamic_obstacles.cpp</label>
+        <link refid="costmap__to__dynamic__obstacles_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classBackgroundSubtractor" prot="public">BackgroundSubtractor</innerclass>
+    <innerclass refid="structBackgroundSubtractor_1_1Params" prot="public">BackgroundSubtractor::Params</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(BSD<sp/>License)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2017</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>TU<sp/>Dortmund<sp/>-<sp/>Institute<sp/>of<sp/>Control<sp/>Theory<sp/>and<sp/>Systems<sp/>Engineering.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>copyright<sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>disclaimer<sp/>in<sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>institute<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>Notes:</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>The<sp/>following<sp/>code<sp/>makes<sp/>use<sp/>of<sp/>the<sp/>OpenCV<sp/>library.</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>OpenCV<sp/>is<sp/>licensed<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>3-clause<sp/>BSD<sp/>License.</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/>Authors:<sp/>Franz<sp/>Albers,<sp/>Christoph<sp/>Rösmann</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BACKGROUNDSUBTRACTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BACKGROUNDSUBTRACTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cv_bridge/cv_bridge.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classBackgroundSubtractor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classBackgroundSubtractor" kindref="compound">BackgroundSubtractor</ref></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60" refid="structBackgroundSubtractor_1_1Params" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structBackgroundSubtractor_1_1Params" kindref="compound">Params</ref></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62" refid="structBackgroundSubtractor_1_1Params_1a1d1113f5cff564078a7995fd410fb1ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structBackgroundSubtractor_1_1Params_1a1d1113f5cff564078a7995fd410fb1ec" kindref="member">alpha_slow</ref>;<sp/></highlight></codeline>
+<codeline lineno="63" refid="structBackgroundSubtractor_1_1Params_1af4253c1a5b2bd54a85da4ca41a098a75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structBackgroundSubtractor_1_1Params_1af4253c1a5b2bd54a85da4ca41a098a75" kindref="member">alpha_fast</ref>;<sp/></highlight></codeline>
+<codeline lineno="64" refid="structBackgroundSubtractor_1_1Params_1a8a8bf5bf651cb3a98f131f28b3031a01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structBackgroundSubtractor_1_1Params_1a8a8bf5bf651cb3a98f131f28b3031a01" kindref="member">beta</ref>;</highlight></codeline>
+<codeline lineno="65" refid="structBackgroundSubtractor_1_1Params_1a624a677a9ee96a6be5f4ba7ad0196cc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structBackgroundSubtractor_1_1Params_1a624a677a9ee96a6be5f4ba7ad0196cc3" kindref="member">min_sep_between_fast_and_slow_filter</ref>;</highlight></codeline>
+<codeline lineno="66" refid="structBackgroundSubtractor_1_1Params_1aa8ca2089caab93a92d2eba61df6d1f75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structBackgroundSubtractor_1_1Params_1aa8ca2089caab93a92d2eba61df6d1f75" kindref="member">min_occupancy_probability</ref>;</highlight></codeline>
+<codeline lineno="67" refid="structBackgroundSubtractor_1_1Params_1aac98f78474b50cd78232f6075f75a4ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structBackgroundSubtractor_1_1Params_1aac98f78474b50cd78232f6075f75a4ec" kindref="member">max_occupancy_neighbors</ref>;</highlight></codeline>
+<codeline lineno="68" refid="structBackgroundSubtractor_1_1Params_1a1c80041afeee543e7a47eb0488d88778" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structBackgroundSubtractor_1_1Params_1a1c80041afeee543e7a47eb0488d88778" kindref="member">morph_size</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><ref refid="classBackgroundSubtractor_1ab0d0a02da5eeedc86cfc89f57e6e3db8" kindref="member">BackgroundSubtractor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structBackgroundSubtractor_1_1Params" kindref="compound">Params</ref>&amp;<sp/><ref refid="namespaceparameters" kindref="compound">parameters</ref>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBackgroundSubtractor_1a085944b991b9f7bad17ff89b37b2a073" kindref="member">apply</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cv::Mat&amp;<sp/>image,<sp/>cv::Mat&amp;<sp/>fg_mask,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shift_x<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shift_y<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBackgroundSubtractor_1a7cb3ea6295bbdf9bd8696e2fb211b02b" kindref="member">visualize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cv::Mat&amp;<sp/>image);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classBackgroundSubtractor_1ae6df09eb6aadd1fbee09933049d59678" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBackgroundSubtractor_1ae6df09eb6aadd1fbee09933049d59678" kindref="member">writeMatToYAML</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;cv::Mat&gt;&amp;<sp/>mat_vec);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBackgroundSubtractor_1a090063cdc2e7197b4f9079447695a008" kindref="member">updateParameters</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structBackgroundSubtractor_1_1Params" kindref="compound">Params</ref>&amp;<sp/><ref refid="namespaceparameters" kindref="compound">parameters</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBackgroundSubtractor_1abfe1bdbdcf8f47945ccaf410fea2b41e" kindref="member">transformToCurrentFrame</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shift_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shift_y);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classBackgroundSubtractor_1a0f21a90da57f94157ccb811eb393353c" refkind="member"><highlight class="normal"><sp/><sp/>cv::Mat<sp/><ref refid="classBackgroundSubtractor_1a0f21a90da57f94157ccb811eb393353c" kindref="member">occupancy_grid_fast_</ref>;</highlight></codeline>
+<codeline lineno="106" refid="classBackgroundSubtractor_1aacd1226edca45723a206ac77e2322797" refkind="member"><highlight class="normal"><sp/><sp/>cv::Mat<sp/><ref refid="classBackgroundSubtractor_1aacd1226edca45723a206ac77e2322797" kindref="member">occupancy_grid_slow_</ref>;</highlight></codeline>
+<codeline lineno="107" refid="classBackgroundSubtractor_1a4e35538ea851d9d38ab8f331c245ba3a" refkind="member"><highlight class="normal"><sp/><sp/>cv::Mat<sp/><ref refid="classBackgroundSubtractor_1a4e35538ea851d9d38ab8f331c245ba3a" kindref="member">current_frame_</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classBackgroundSubtractor_1a26ef85af7e1fb3a9ba8d4908a1c9617e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classBackgroundSubtractor_1a26ef85af7e1fb3a9ba8d4908a1c9617e" kindref="member">previous_shift_x_</ref>;</highlight></codeline>
+<codeline lineno="110" refid="classBackgroundSubtractor_1aebffcab522ebeee2aa2f5d3a46405d1e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classBackgroundSubtractor_1aebffcab522ebeee2aa2f5d3a46405d1e" kindref="member">previous_shift_y_</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classBackgroundSubtractor_1af48e414ad669221f96612364c1757820" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structBackgroundSubtractor_1_1Params" kindref="compound">Params</ref><sp/><ref refid="classBackgroundSubtractor_1af48e414ad669221f96612364c1757820" kindref="member">params_</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>BACKGROUNDSUBTRACTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,6 @@
+<map id="hateb_local_planner::EdgeAgentRobotSafety" name="hateb_local_planner::EdgeAgentRobotSafety">
+<area shape="rect" id="node1" title="Edge defining a safety constraint between a robot and an agent (e.g., human) in the optimization grap..." alt="" coords="504,83,684,124"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebBinaryEdge.html" title=" " alt="" coords="239,5,421,76"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,13,189,69"/>
+<area shape="rect" id="node4" href="$classhateb__local__planner_1_1Obstacle.html" title="Abstract class that defines the interface for modelling obstacles." alt="" coords="253,100,407,141"/>
+</map>

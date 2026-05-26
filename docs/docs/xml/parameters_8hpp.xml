@@ -1,0 +1,734 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="parameters_8hpp" kind="file" language="C++">
+    <compoundname>parameters.hpp</compoundname>
+    <includes local="no">functional</includes>
+    <includes local="no">rcl_interfaces/msg/floating_point_range.hpp</includes>
+    <includes local="no">rcl_interfaces/msg/integer_range.hpp</includes>
+    <includes local="no">rcl_interfaces/msg/parameter_descriptor.hpp</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">rclcpp_lifecycle/lifecycle_node.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="agent__path__prediction_8hpp" local="no">agent_path_prediction.hpp</includedby>
+    <includedby refid="agent__path__prediction__config_8hpp" local="no">agent_path_prediction_config.hpp</includedby>
+    <includedby refid="predict__goal__ros_8hpp" local="no">predict_goal_ros.hpp</includedby>
+    <includedby refid="agent__layer__config_8hpp" local="no">agent_layer_config.hpp</includedby>
+    <includedby refid="agents__class_8hpp" local="no">agents_class.hpp</includedby>
+    <includedby refid="hateb__config_8hpp" local="no">hateb_config.hpp</includedby>
+    <includedby refid="invisible__humans__config_8hpp" local="no">invisible_humans_config.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>functional</label>
+      </node>
+      <node id="1">
+        <label>parameters.hpp</label>
+        <link refid="parameters_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="5">
+        <label>rcl_interfaces/msg/parameter_descriptor.hpp</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>rcl_interfaces/msg/integer_range.hpp</label>
+      </node>
+      <node id="9">
+        <label>unordered_map</label>
+      </node>
+      <node id="7">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="3">
+        <label>rcl_interfaces/msg/floating_point_range.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>agent_path_prediction.cpp</label>
+        <link refid="agent__path__prediction_8cpp"/>
+      </node>
+      <node id="25">
+        <label>vel_obs_exit_condition.h</label>
+        <link refid="vel__obs__exit__condition_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>edge_obstacle.h</label>
+        <link refid="edge__obstacle_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>edge_agent_robot_rel_velocity.h</label>
+        <link refid="edge__agent__robot__rel__velocity_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>passthrough_condition.cpp</label>
+        <link refid="passthrough__condition_8cpp"/>
+      </node>
+      <node id="9">
+        <label>agent_layer_config.hpp</label>
+        <link refid="agent__layer__config_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>agents_class.cpp</label>
+        <link refid="agents__class_8cpp"/>
+      </node>
+      <node id="1">
+        <label>parameters.hpp</label>
+        <link refid="parameters_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>edge_velocity.h</label>
+        <link refid="edge__velocity_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>vel_obs_exit_condition.cpp</label>
+        <link refid="vel__obs__exit__condition_8cpp"/>
+      </node>
+      <node id="33">
+        <label>visualization.cpp</label>
+        <link refid="visualization_8cpp"/>
+      </node>
+      <node id="2">
+        <label>agent_path_prediction.hpp</label>
+        <link refid="agent__path__prediction_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>single_band_exit_condition.h</label>
+        <link refid="single__band__exit__condition_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>hateb_local_planner_ros.cpp</label>
+        <link refid="hateb__local__planner__ros_8cpp"/>
+      </node>
+      <node id="29">
+        <label>base_teb_edges.h</label>
+        <link refid="base__teb__edges_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>agent_layer.hpp</label>
+        <link refid="agent__layer_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>agents_class.hpp</label>
+        <link refid="agents__class_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>invisible_humans_config.hpp</label>
+        <link refid="invisible__humans__config_8hpp"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>agent_visibility_layer.cpp</label>
+        <link refid="agent__visibility__layer_8cpp"/>
+      </node>
+      <node id="11">
+        <label>agent_visibility_layer.hpp</label>
+        <link refid="agent__visibility__layer_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>edge_shortest_path.h</label>
+        <link refid="edge__shortest__path_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>invisible_humans_detection.hpp</label>
+        <link refid="invisible__humans__detection_8hpp"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>edge_invisible_human.h</label>
+        <link refid="edge__invisible__human_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>edge_dynamic_obstacle.h</label>
+        <link refid="edge__dynamic__obstacle_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>dual_band_exit_condition.h</label>
+        <link refid="dual__band__exit__condition_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>edge_agent_robot_visibility.h</label>
+        <link refid="edge__agent__robot__visibility_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>passthrough_condition.h</label>
+        <link refid="passthrough__condition_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>agent_layer.cpp</label>
+        <link refid="agent__layer_8cpp"/>
+      </node>
+      <node id="52">
+        <label>invisible_humans_detection.cpp</label>
+        <link refid="invisible__humans__detection_8cpp"/>
+      </node>
+      <node id="28">
+        <label>hateb_config.hpp</label>
+        <link refid="hateb__config_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>predict_goal_ros.hpp</label>
+        <link refid="predict__goal__ros_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>agent_path_prediction_config.hpp</label>
+        <link refid="agent__path__prediction__config_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>edge_via_point.h</label>
+        <link refid="edge__via__point_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>static_agent_layer.cpp</label>
+        <link refid="static__agent__layer_8cpp"/>
+      </node>
+      <node id="8">
+        <label>predict_goal_ros.cpp</label>
+        <link refid="predict__goal__ros_8cpp"/>
+      </node>
+      <node id="13">
+        <label>static_agent_layer.hpp</label>
+        <link refid="static__agent__layer_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>edge_kinematics.h</label>
+        <link refid="edge__kinematics_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>dual_band_exit_condition.cpp</label>
+        <link refid="dual__band__exit__condition_8cpp"/>
+      </node>
+      <node id="18">
+        <label>mode_switch.h</label>
+        <link refid="mode__switch_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>edge_agent_agent_safety.h</label>
+        <link refid="edge__agent__agent__safety_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>single_band_exit_condition.cpp</label>
+        <link refid="single__band__exit__condition_8cpp"/>
+      </node>
+      <node id="49">
+        <label>hateb_config.cpp</label>
+        <link refid="hateb__config_8cpp"/>
+      </node>
+      <node id="19">
+        <label>mode_switch.cpp</label>
+        <link refid="mode__switch_8cpp"/>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner_ros.h</label>
+        <link refid="hateb__local__planner__ros_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>edge_static_agent_visibility.h</label>
+        <link refid="edge__static__agent__visibility_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>optimal_planner.h</label>
+        <link refid="optimal__planner_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>edge_agent_robot_safety.h</label>
+        <link refid="edge__agent__robot__safety_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>edge_time_optimal.h</label>
+        <link refid="edge__time__optimal_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>optimal_planner.cpp</label>
+        <link refid="optimal__planner_8cpp"/>
+      </node>
+      <node id="48">
+        <label>visualization.hpp</label>
+        <link refid="visualization_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>edge_acceleration.h</label>
+        <link refid="edge__acceleration_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>edge_prefer_rotdir.h</label>
+        <link refid="edge__prefer__rotdir_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classparameters_1_1ParameterHelper" prot="public">parameters::ParameterHelper</innerclass>
+    <innernamespace refid="namespaceparameters">parameters</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(MIT<sp/>License)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2020-2025<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PARAMETERS_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARAMETERS_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rcl_interfaces/msg/floating_point_range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rcl_interfaces/msg/integer_range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rcl_interfaces/msg/parameter_descriptor.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp/rclcpp.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp_lifecycle/lifecycle_node.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="namespaceparameters" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceparameters" kindref="compound">parameters</ref><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classparameters_1_1ParameterHelper" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classparameters_1_1ParameterHelper" kindref="compound">ParameterHelper</ref><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="85" refid="classparameters_1_1ParameterHelper_1a485c5f86c265b885711ebe42bd5fff47" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a485c5f86c265b885711ebe42bd5fff47" kindref="member">ParameterHelper</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classparameters_1_1ParameterHelper_1abb75497aaf65e971e7d10613f89c9e6c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1abb75497aaf65e971e7d10613f89c9e6c" kindref="member">initialize</ref>(rclcpp::Node::SharedPtr<sp/>node)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classparameters_1_1ParameterHelper_1a972dabb897e84ce11ba275a7388e2cfe" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a972dabb897e84ce11ba275a7388e2cfe" kindref="member">initialize</ref>(rclcpp_lifecycle::LifecycleNode::SharedPtr<sp/>node)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classparameters_1_1ParameterHelper_1ab989a118851c1de4d04fa0de4728f045" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1ab989a118851c1de4d04fa0de4728f045" kindref="member">declareFloatParam</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>default_value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>description,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>step<sp/>=<sp/>0.001)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>rcl_interfaces::msg::ParameterDescriptor<sp/>descriptor;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor.description<sp/>=<sp/>description;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>rcl_interfaces::msg::FloatingPointRange<sp/>range;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>range.from_value<sp/>=<sp/>min;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>range.to_value<sp/>=<sp/>max;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>range.step<sp/>=<sp/>step;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor.floating_point_range.push_back(range);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;declare_parameter(name,<sp/>default_value,<sp/>descriptor);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;declare_parameter(name,<sp/>default_value,<sp/>descriptor);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="classparameters_1_1ParameterHelper_1ac4d4f70483692f058c39c1280a01b202" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1ac4d4f70483692f058c39c1280a01b202" kindref="member">declareIntParam</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/>int64_t<sp/>default_value,<sp/>int64_t<sp/>min,<sp/>int64_t<sp/>max,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>description,<sp/>int64_t<sp/>step<sp/>=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>rcl_interfaces::msg::ParameterDescriptor<sp/>descriptor;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor.description<sp/>=<sp/>description;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>rcl_interfaces::msg::IntegerRange<sp/>range;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>range.from_value<sp/>=<sp/>min;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>range.to_value<sp/>=<sp/>max;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>range.step<sp/>=<sp/>step;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor.integer_range.push_back(range);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;declare_parameter(name,<sp/>default_value,<sp/>descriptor);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;declare_parameter(name,<sp/>default_value,<sp/>descriptor);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="classparameters_1_1ParameterHelper_1a3ae98197943088c8ee6e2c421f199c09" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a3ae98197943088c8ee6e2c421f199c09" kindref="member">declareBoolParam</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>default_value,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>description)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>rcl_interfaces::msg::ParameterDescriptor<sp/>descriptor;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor.description<sp/>=<sp/>description;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;declare_parameter(name,<sp/>default_value,<sp/>descriptor);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;declare_parameter(name,<sp/>default_value,<sp/>descriptor);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="classparameters_1_1ParameterHelper_1a91553a822970c4da9e87a452f501d299" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a91553a822970c4da9e87a452f501d299" kindref="member">declareStringParam</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>default_value,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>description)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>rcl_interfaces::msg::ParameterDescriptor<sp/>descriptor;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor.description<sp/>=<sp/>description;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;declare_parameter(name,<sp/>default_value,<sp/>descriptor);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;declare_parameter(name,<sp/>default_value,<sp/>descriptor);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="classparameters_1_1ParameterHelper_1aaa55665c070adb3fd244d28454f8b6d0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1aaa55665c070adb3fd244d28454f8b6d0" kindref="member">bindFloatParam</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>variable,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>description,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>step<sp/>=<sp/>0.001)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1ab989a118851c1de4d04fa0de4728f045" kindref="member">declareFloatParam</ref>(name,<sp/>variable,<sp/>min,<sp/>max,<sp/>description,<sp/>step);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>the<sp/>binding<sp/>for<sp/>automatic<sp/>updates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a548743a86b46463fe3362ff20cc74175" kindref="member">param_bindings_</ref>[name]<sp/>=<sp/>[&amp;variable](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Parameter&amp;<sp/>param)<sp/>{<sp/>variable<sp/>=<sp/>param.as_double();<sp/>};</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="classparameters_1_1ParameterHelper_1a9bab75fcd38c5af808a98ffa042f86c1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a9bab75fcd38c5af808a98ffa042f86c1" kindref="member">bindIntParam</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>variable,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>description,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>step<sp/>=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1ac4d4f70483692f058c39c1280a01b202" kindref="member">declareIntParam</ref>(name,<sp/>variable,<sp/>min,<sp/>max,<sp/>description,<sp/>step);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>the<sp/>binding<sp/>for<sp/>automatic<sp/>updates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a548743a86b46463fe3362ff20cc74175" kindref="member">param_bindings_</ref>[name]<sp/>=<sp/>[&amp;variable](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Parameter&amp;<sp/>param)<sp/>{<sp/>variable<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(param.as_int());<sp/>};</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="classparameters_1_1ParameterHelper_1a2c177f4567e5c37b2456787a1f0a2da4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a2c177f4567e5c37b2456787a1f0a2da4" kindref="member">bindBoolParam</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/>variable,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>description)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a3ae98197943088c8ee6e2c421f199c09" kindref="member">declareBoolParam</ref>(name,<sp/>variable,<sp/>description);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>the<sp/>binding<sp/>for<sp/>automatic<sp/>updates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a548743a86b46463fe3362ff20cc74175" kindref="member">param_bindings_</ref>[name]<sp/>=<sp/>[&amp;variable](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Parameter&amp;<sp/>param)<sp/>{<sp/>variable<sp/>=<sp/>param.as_bool();<sp/>};</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="classparameters_1_1ParameterHelper_1a79d5f3143e3b48047bb494c0b13f253e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a79d5f3143e3b48047bb494c0b13f253e" kindref="member">bindStringParam</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/>std::string&amp;<sp/>variable,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>description)<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a91553a822970c4da9e87a452f501d299" kindref="member">declareStringParam</ref>(name,<sp/>variable,<sp/>description);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>the<sp/>binding<sp/>for<sp/>automatic<sp/>updates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a548743a86b46463fe3362ff20cc74175" kindref="member">param_bindings_</ref>[name]<sp/>=<sp/>[&amp;variable](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Parameter&amp;<sp/>param)<sp/>{<sp/>variable<sp/>=<sp/>param.as_string();<sp/>};</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="classparameters_1_1ParameterHelper_1a9a51940d15ac8b41ecaca399de2269bf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a9a51940d15ac8b41ecaca399de2269bf" kindref="member">bindFloatVectorParam</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/>std::vector&lt;double&gt;&amp;<sp/>variable,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>description)<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>rcl_interfaces::msg::ParameterDescriptor<sp/>descriptor;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor.description<sp/>=<sp/>description;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;declare_parameter(name,<sp/>variable,<sp/>descriptor);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;declare_parameter(name,<sp/>variable,<sp/>descriptor);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>the<sp/>binding<sp/>for<sp/>automatic<sp/>updates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a548743a86b46463fe3362ff20cc74175" kindref="member">param_bindings_</ref>[name]<sp/>=<sp/>[&amp;variable](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Parameter&amp;<sp/>param)<sp/>{<sp/>variable<sp/>=<sp/>param.as_double_array();<sp/>};</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264" refid="classparameters_1_1ParameterHelper_1a39baf91c634c0eda52d6be9992ade42f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a39baf91c634c0eda52d6be9992ade42f" kindref="member">loadBoundParameters</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>[name,<sp/>updater]<sp/>:<sp/><ref refid="classparameters_1_1ParameterHelper_1a548743a86b46463fe3362ff20cc74175" kindref="member">param_bindings_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rclcpp::Parameter<sp/>param;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param<sp/>=<sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;get_parameter(name);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param<sp/>=<sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;get_parameter(name);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updater(param);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::exception&amp;<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>logger<sp/>=<sp/><ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref><sp/>?<sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;get_logger()<sp/>:<sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;get_logger();</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(logger,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>load<sp/>bound<sp/>parameter<sp/>&apos;%s&apos;:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>name.c_str(),<sp/>e.what());</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285" refid="classparameters_1_1ParameterHelper_1a7c46052de452247a5f9c236ee3b616b0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a7c46052de452247a5f9c236ee3b616b0" kindref="member">setupParameterCallback</ref>(std::function&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;rclcpp::Parameter&gt;&amp;)&gt;<sp/>custom_callback<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>callback<sp/>=<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>custom_callback](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;rclcpp::Parameter&gt;&amp;<sp/>params)<sp/>-&gt;<sp/>rcl_interfaces::msg::SetParametersResult<sp/>{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rcl_interfaces::msg::SetParametersResult<sp/>result;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result.successful<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>logger<sp/>=<sp/><ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref><sp/>?<sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;get_logger()<sp/>:<sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;get_logger();</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>update<sp/>all<sp/>bound<sp/>parameters<sp/>automatically</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>param<sp/>:<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(logger,<sp/></highlight><highlight class="stringliteral">&quot;Parameter<sp/>&apos;%s&apos;<sp/>changed<sp/>to:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>param.get_name().c_str(),<sp/>param.value_to_string().c_str());</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>this<sp/>parameter<sp/>has<sp/>a<sp/>binding</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/><ref refid="classparameters_1_1ParameterHelper_1a548743a86b46463fe3362ff20cc74175" kindref="member">param_bindings_</ref>.find(param.get_name());</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/><ref refid="classparameters_1_1ParameterHelper_1a548743a86b46463fe3362ff20cc74175" kindref="member">param_bindings_</ref>.end())<sp/>{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it-&gt;second(param);<sp/><sp/></highlight><highlight class="comment">//<sp/>Execute<sp/>the<sp/>binding<sp/>to<sp/>update<sp/>the<sp/>variable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::exception&amp;<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_ERROR(logger,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>update<sp/>bound<sp/>parameter<sp/>&apos;%s&apos;:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>param.get_name().c_str(),<sp/>e.what());</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.successful<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.reason<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>update<sp/>bound<sp/>parameter:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::string(e.what());</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>custom<sp/>callback<sp/>is<sp/>provided,<sp/>use<sp/>it<sp/>for<sp/>additional<sp/>validation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(custom_callback)<sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.successful<sp/>=<sp/>custom_callback(params);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!result.successful)<sp/>{</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.reason<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Custom<sp/>parameter<sp/>validation<sp/>failed&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>the<sp/>callback<sp/>handle<sp/>to<sp/>keep<sp/>it<sp/>alive</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a47e2f9332fc0e09819ac59e48d6481bb" kindref="member">param_callback_handle_lifecycle_</ref><sp/>=<sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;add_on_set_parameters_callback(callback);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classparameters_1_1ParameterHelper_1a1ca07e0160baed587a187da30d784739" kindref="member">param_callback_handle_</ref><sp/>=<sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;add_on_set_parameters_callback(callback);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="336" refid="classparameters_1_1ParameterHelper_1a60f8d0c57c78b4c1c3e44496dfda74a4" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/><ref refid="classparameters_1_1ParameterHelper_1a60f8d0c57c78b4c1c3e44496dfda74a4" kindref="member">getParam</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>default_value)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;get_parameter(name).get_value&lt;T&gt;();</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;get_parameter(name).get_value&lt;T&gt;();</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::exception&amp;<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>logger<sp/>=<sp/><ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref><sp/>?<sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;get_logger()<sp/>:<sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;get_logger();</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(logger,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>get<sp/>parameter<sp/>&apos;%s&apos;:<sp/>%s.<sp/>Using<sp/>default<sp/>value.&quot;</highlight><highlight class="normal">,<sp/>name.c_str(),<sp/>e.what());</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>default_value;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="357" refid="classparameters_1_1ParameterHelper_1a33fc2ae56f7597f90d621cb826b6763b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a33fc2ae56f7597f90d621cb826b6763b" kindref="member">setParam</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rcl_interfaces::msg::SetParametersResult<sp/>result;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;set_parameter(rclcpp::Parameter(name,<sp/>value));</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;set_parameter(rclcpp::Parameter(name,<sp/>value));</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result.successful;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::exception&amp;<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>logger<sp/>=<sp/><ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref><sp/>?<sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>-&gt;get_logger()<sp/>:<sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>-&gt;get_logger();</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_ERROR(logger,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>set<sp/>parameter<sp/>&apos;%s&apos;:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>name.c_str(),<sp/>e.what());</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="374" refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Node::SharedPtr<sp/><ref refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" kindref="member">node_</ref>;</highlight></codeline>
+<codeline lineno="375" refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp_lifecycle::LifecycleNode::SharedPtr<sp/><ref refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" kindref="member">lifecycle_node_</ref>;</highlight></codeline>
+<codeline lineno="376" refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" kindref="member">is_lifecycle_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="377" refid="classparameters_1_1ParameterHelper_1a1ca07e0160baed587a187da30d784739" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr<sp/><ref refid="classparameters_1_1ParameterHelper_1a1ca07e0160baed587a187da30d784739" kindref="member">param_callback_handle_</ref>;</highlight></codeline>
+<codeline lineno="378" refid="classparameters_1_1ParameterHelper_1a47e2f9332fc0e09819ac59e48d6481bb" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp_lifecycle::LifecycleNode::OnSetParametersCallbackHandle::SharedPtr<sp/><ref refid="classparameters_1_1ParameterHelper_1a47e2f9332fc0e09819ac59e48d6481bb" kindref="member">param_callback_handle_lifecycle_</ref>;</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Storage<sp/>for<sp/>parameter<sp/>bindings<sp/>(parameter<sp/>name<sp/>-&gt;<sp/>update<sp/>function)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381" refid="classparameters_1_1ParameterHelper_1a548743a86b46463fe3362ff20cc74175" refkind="member"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;std::string,<sp/>std::function&lt;void(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Parameter&amp;)&gt;&gt;<sp/><ref refid="classparameters_1_1ParameterHelper_1a548743a86b46463fe3362ff20cc74175" kindref="member">param_bindings_</ref>;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PARAMETERS_HPP_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ros2_helpers/include/ros2_helpers/parameters.hpp"/>
+  </compounddef>
+</doxygen>

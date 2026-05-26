@@ -1,0 +1,619 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcostmap__converter_1_1CostmapToDynamicObstacles" kind="class" language="C++" prot="public">
+    <compoundname>costmap_converter::CostmapToDynamicObstacles</compoundname>
+    <basecompoundref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles" prot="public" virt="non-virtual">costmap_converter::BaseCostmapToDynamicObstacles</basecompoundref>
+    <includes refid="costmap__to__dynamic__obstacles_8h" local="no">costmap_to_dynamic_obstacles.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a4692c030693fbf52347a30fb37bd43c3" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex costmap_converter::CostmapToDynamicObstacles::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="172" column="14" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a52855853dfba8a48750a575bd0fc7405" prot="private" static="no" mutable="no">
+        <type>nav2_costmap_2d::Costmap2D *</type>
+        <definition>nav2_costmap_2d::Costmap2D* costmap_converter::CostmapToDynamicObstacles::costmap_</definition>
+        <argsstring></argsstring>
+        <name>costmap_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="173" column="30" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a36e0900de0880c612bde432de8f652b8" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat costmap_converter::CostmapToDynamicObstacles::costmap_mat_</definition>
+        <argsstring></argsstring>
+        <name>costmap_mat_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="174" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a203c812514e780086eba3ed00d02c7f1" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacecostmap__converter_1a360c95f0cb141a3f43667649add6d4aa" kindref="member">ObstacleArrayPtr</ref></type>
+        <definition>ObstacleArrayPtr costmap_converter::CostmapToDynamicObstacles::obstacles_</definition>
+        <argsstring></argsstring>
+        <name>obstacles_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="175" column="20" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a94be2cd70c9efc8fb1eb4cc35925b74f" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat costmap_converter::CostmapToDynamicObstacles::fg_mask_</definition>
+        <argsstring></argsstring>
+        <name>fg_mask_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="176" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1aca5130e791be793f7cf71f0c857def59" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classBackgroundSubtractor" kindref="compound">BackgroundSubtractor</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;BackgroundSubtractor&gt; costmap_converter::CostmapToDynamicObstacles::bg_sub_</definition>
+        <argsstring></argsstring>
+        <name>bg_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="177" column="19" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1af7fa14ac0f092568d3d293472958b1fe" prot="private" static="no" mutable="no">
+        <type>cv::Ptr&lt; <ref refid="classBlobDetector" kindref="compound">BlobDetector</ref> &gt;</type>
+        <definition>cv::Ptr&lt;BlobDetector&gt; costmap_converter::CostmapToDynamicObstacles::blob_det_</definition>
+        <argsstring></argsstring>
+        <name>blob_det_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="178" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a486703a40f3abd33a66b27df5716a76c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::KeyPoint &gt;</type>
+        <definition>std::vector&lt;cv::KeyPoint&gt; costmap_converter::CostmapToDynamicObstacles::keypoints_</definition>
+        <argsstring></argsstring>
+        <name>keypoints_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="179" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1ac6434e99f2e84abfcbc5d3aad5c72c61" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classCTracker" kindref="compound">CTracker</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;CTracker&gt; costmap_converter::CostmapToDynamicObstacles::tracker_</definition>
+        <argsstring></argsstring>
+        <name>tracker_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="180" column="19" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a38471f9337dfdf2c99710e25c3176f05" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr costmap_converter::CostmapToDynamicObstacles::odom_sub_</definition>
+        <argsstring></argsstring>
+        <name>odom_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="181" column="36" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1af05f34f3d2bdbafd91d802caeabf9ac9" prot="private" static="no" mutable="no">
+        <type><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref></type>
+        <definition>Point_t costmap_converter::CostmapToDynamicObstacles::ego_vel_</definition>
+        <argsstring></argsstring>
+        <name>ego_vel_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="182" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a74c3fd02fe92746b0ad807bbb132d466" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string costmap_converter::CostmapToDynamicObstacles::odom_topic_</definition>
+        <argsstring></argsstring>
+        <name>odom_topic_</name>
+        <initializer>= &quot;/odom&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="184" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a2a3c6697198cb13de3652ffc57452d8a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool costmap_converter::CostmapToDynamicObstacles::publish_static_obstacles_</definition>
+        <argsstring></argsstring>
+        <name>publish_static_obstacles_</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="185" column="8" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a6d9b6be74490be79f24584f2fe81a8c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>costmap_converter::CostmapToDynamicObstacles::CostmapToDynamicObstacles</definition>
+        <argsstring>()</argsstring>
+        <name>CostmapToDynamicObstacles</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="83" column="3" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.cpp" bodystart="13" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a0e04a18d581e460f4a7cb56eb286404a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>costmap_converter::CostmapToDynamicObstacles::~CostmapToDynamicObstacles</definition>
+        <argsstring>()</argsstring>
+        <name>~CostmapToDynamicObstacles</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="88" column="11" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.cpp" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a06ef33a6560775a8d7b64cede42bcbc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToDynamicObstacles::initialize</definition>
+        <argsstring>(rclcpp::Node::SharedPtr nh)</argsstring>
+        <name>initialize</name>
+        <reimplements refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a687f79218c610912cd29f0f288a26fb9">initialize</reimplements>
+        <param>
+          <type>rclcpp::Node::SharedPtr</type>
+          <declname>nh</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nodehandle that defines the namespace for parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="94" column="16" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.cpp" bodystart="26" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a8c0091b41c351d40451195f6f56a365f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToDynamicObstacles::compute</definition>
+        <argsstring>()</argsstring>
+        <name>compute</name>
+        <reimplements refid="classcostmap__converter_1_1BaseCostmapToPolygons_1abec3dc10bc44341b73d5fc4e635be01f">compute</reimplements>
+        <briefdescription>
+<para>This method performs the actual work (conversion of the costmap to obstacles) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="100" column="16" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.cpp" bodystart="151" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1aefc720229ab91e51995904ba4de27ea9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToDynamicObstacles::setCostmap2D</definition>
+        <argsstring>(nav2_costmap_2d::Costmap2D *costmap)</argsstring>
+        <name>setCostmap2D</name>
+        <reimplements refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ac98d1254a59d142285db6662dbc5af47">setCostmap2D</reimplements>
+        <param>
+          <type>nav2_costmap_2d::Costmap2D *</type>
+          <declname>costmap</declname>
+        </param>
+        <briefdescription>
+<para>Pass a pointer to the costmap to the plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a8185f7459c1ef690adcaa4184fbbb183" kindref="member">updateCostmap2D</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>costmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the costmap2d source </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="107" column="16" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.cpp" bodystart="341" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a8185f7459c1ef690adcaa4184fbbb183" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToDynamicObstacles::updateCostmap2D</definition>
+        <argsstring>()</argsstring>
+        <name>updateCostmap2D</name>
+        <reimplements refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a83f5e0c6c9954c6cf54a25e4f0de5b6c">updateCostmap2D</reimplements>
+        <briefdescription>
+<para>Get updated data from the previously set Costmap2D. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1aefc720229ab91e51995904ba4de27ea9" kindref="member">setCostmap2D</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="113" column="16" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.cpp" bodystart="351" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1aea474a66f2b23002e1390b2e156d3255" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacecostmap__converter_1a3e9948c22dfceca87d2a7cc59c62fc97" kindref="member">ObstacleArrayConstPtr</ref></type>
+        <definition>ObstacleArrayConstPtr costmap_converter::CostmapToDynamicObstacles::getObstacles</definition>
+        <argsstring>()</argsstring>
+        <name>getObstacles</name>
+        <reimplements refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a568d60474400d08a40218d0674b46fed">getObstacles</reimplements>
+        <briefdescription>
+<para>Get a shared instance of the current obstacle container. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>If <ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a8c0091b41c351d40451195f6f56a365f" kindref="member">compute()</ref> or <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" kindref="member">startWorker()</ref> has not been called before, this method returns an empty instance! </para>
+</simplesect>
+<simplesect kind="return"><para>Shared instance of the current obstacle container </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="121" column="25" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.cpp" bodystart="367" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a610ef9b8c4bb18fedce04eeabf666198" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void costmap_converter::CostmapToDynamicObstacles::setOdomTopic</definition>
+        <argsstring>(const std::string &amp;odom_topic)</argsstring>
+        <name>setOdomTopic</name>
+        <reimplements refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ae2913087d659654c55f5869397f8e2c5">setOdomTopic</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>odom_topic</declname>
+        </param>
+        <briefdescription>
+<para>Set name of robot&apos;s odometry topic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>The method must be called before <ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a06ef33a6560775a8d7b64cede42bcbc0" kindref="member">initialize()</ref></para>
+</simplesect>
+Some plugins might require odometry information to compensate the robot&apos;s ego motion <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>odom_topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>topic name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="132" column="16" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a7e325eac22dc6f36d9d1b23aa3919bb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToDynamicObstacles::visualize</definition>
+        <argsstring>(const std::string &amp;name, const cv::Mat &amp;image)</argsstring>
+        <name>visualize</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+<para>OpenCV Visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id/name of the opencv window </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image to be visualized </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="142" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.cpp" bodystart="479" bodyend="488"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a559e0bd1e917ad8ea215bbaab7aa7e8b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref></type>
+        <definition>Point_t costmap_converter::CostmapToDynamicObstacles::getEstimatedVelocityOfObject</definition>
+        <argsstring>(unsigned int idx)</argsstring>
+        <name>getEstimatedVelocityOfObject</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Converts the estimated velocity of a tracked object to m/s and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the tracked object in the tracker </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Point_t, which represents velocity in [m/s] of object(idx) in x,y,z coordinates </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="152" column="11" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.cpp" bodystart="379" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a717439d17250ca6be69644913894c9cd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToDynamicObstacles::getContour</definition>
+        <argsstring>(unsigned int idx, std::vector&lt; Point_t &gt; &amp;contour)</argsstring>
+        <name>getContour</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref> &gt; &amp;</type>
+          <declname>contour</declname>
+        </param>
+        <briefdescription>
+<para>Gets the last observed contour of a object and converts it from [px] to [m]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the tracked object in the tracker </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">contour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of Point_t, which represents the last observed contour in [m] in x,y,z coordinates </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="161" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.cpp" bodystart="458" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1a424cda0d40055d322c45e6731ee74f3f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToDynamicObstacles::updateObstacleContainer</definition>
+        <argsstring>(ObstacleArrayPtr obstacles)</argsstring>
+        <name>updateObstacleContainer</name>
+        <param>
+          <type><ref refid="namespacecostmap__converter_1a360c95f0cb141a3f43667649add6d4aa" kindref="member">ObstacleArrayPtr</ref></type>
+          <declname>obstacles</declname>
+        </param>
+        <briefdescription>
+<para>Thread-safe update of the internal obstacle container (that is shared using <ref refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1aea474a66f2b23002e1390b2e156d3255" kindref="member">getObstacles()</ref> from outside this class) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obstacles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Updated obstacle container </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="169" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.cpp" bodystart="373" bodyend="377"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToDynamicObstacles_1ab12093e78ddc3d9e9a12b8fb7e1ca328" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToDynamicObstacles::odomCallback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::ConstSharedPtr msg)</argsstring>
+        <name>odomCallback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::ConstSharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for the odometry messages of the observing robot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to convert the velocity of obstacles to the /map frame. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Pointer to the nav_msgs::Odometry of the observing robot </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="197" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.cpp" bodystart="389" bodyend="408"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class converts the costmap_2d into dynamic obstacles. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Static obstacles are treated as point obstacles. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>costmap_converter::BaseCostmapToPolygons</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToPolygons"/>
+      </node>
+      <node id="2">
+        <label>costmap_converter::BaseCostmapToDynamicObstacles</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>costmap_converter::CostmapToDynamicObstacles</label>
+        <link refid="classcostmap__converter_1_1CostmapToDynamicObstacles"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>costmap_converter::BaseCostmapToPolygons</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToPolygons"/>
+      </node>
+      <node id="2">
+        <label>costmap_converter::BaseCostmapToDynamicObstacles</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>costmap_converter::CostmapToDynamicObstacles</label>
+        <link refid="classcostmap__converter_1_1CostmapToDynamicObstacles"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" line="77" column="1" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h" bodystart="78" bodyend="208"/>
+    <listofallmembers>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1af9c4d3851bea551a15e344ffc72724c5" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>BaseCostmapToDynamicObstacles</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aed9851c00b8d93e88bb8ee79b95a23d9" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>BaseCostmapToPolygons</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1aca5130e791be793f7cf71f0c857def59" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>bg_sub_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1af7fa14ac0f092568d3d293472958b1fe" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>blob_det_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a8c0091b41c351d40451195f6f56a365f" prot="public" virt="virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>compute</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a10dba078631ef120ec585e46fb1ae690" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>convertStaticObstacles</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a52855853dfba8a48750a575bd0fc7405" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>costmap_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a36e0900de0880c612bde432de8f652b8" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>costmap_mat_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a6d9b6be74490be79f24584f2fe81a8c7" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>CostmapToDynamicObstacles</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1af05f34f3d2bdbafd91d802caeabf9ac9" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>ego_vel_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a94be2cd70c9efc8fb1eb4cc35925b74f" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>fg_mask_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a717439d17250ca6be69644913894c9cd" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>getContour</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a559e0bd1e917ad8ea215bbaab7aa7e8b" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>getEstimatedVelocityOfObject</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5c9d89e344e9592ab66fd4eae4e3c495" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>getLogger</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1aea474a66f2b23002e1390b2e156d3255" prot="public" virt="virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>getObstacles</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a8e68cedfe4acd986b555edbcf5fe6d44" prot="public" virt="virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>getPolygons</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a506653e4f553b784d2784e7aef02bd7e" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>getStaticPolygons</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a06ef33a6560775a8d7b64cede42bcbc0" prot="public" virt="virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>initialize</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a486703a40f3abd33a66b27df5716a76c" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>keypoints_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a3901dbaab92d4ebd54ee866166804256" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>loadStaticCostmapConverterPlugin</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a4692c030693fbf52347a30fb37bd43c3" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>mutex_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>need_to_terminate_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>nh_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1adde51e27138497c972070f585485d920" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>now</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a203c812514e780086eba3ed00d02c7f1" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>obstacles_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a38471f9337dfdf2c99710e25c3176f05" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>odom_sub_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a74c3fd02fe92746b0ad807bbb132d466" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>odom_topic_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1ab12093e78ddc3d9e9a12b8fb7e1ca328" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>odomCallback</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a2a3c6697198cb13de3652ffc57452d8a" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>publish_static_obstacles_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1aefc720229ab91e51995904ba4de27ea9" prot="public" virt="virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>setCostmap2D</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a610ef9b8c4bb18fedce04eeabf666198" prot="public" virt="virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>setOdomTopic</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a8597c36aa440d9e3672edbde5fd1cf12" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>setStaticCostmap</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1ac88e29904958d1135070859486cbfab6" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>setStaticCostmapConverterPlugin</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>spin_thread_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa39c0f13e7ad5bddade4cfc86324abb3" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>spinThread</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a314f921603fc71c47bb1666de9a577f5" prot="public" virt="virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>stackedCostmapConversion</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>startWorker</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a12bd9e3124a58770643eeee63e7532ab" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>static_converter_loader_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>static_costmap_converter_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a7e5b367499223999167be752208eb59f" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>stopWorker</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a78896f9e23abc564acb1d27cd4f38aac" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>terminate_mutex_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1ac6434e99f2e84abfcbc5d3aad5c72c61" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>tracker_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a8185f7459c1ef690adcaa4184fbbb183" prot="public" virt="virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>updateCostmap2D</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a424cda0d40055d322c45e6731ee74f3f" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>updateObstacleContainer</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a7e325eac22dc6f36d9d1b23aa3919bb2" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>visualize</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a947fc00b05f6ac5f478afb9ce6c67a06" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>worker_timer_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a98ab2ab132530d153084db2d9249b75d" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>workerCallback</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a3bee32afc15401220df123bce1a87921" prot="public" virt="virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>~BaseCostmapToPolygons</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToDynamicObstacles_1a0e04a18d581e460f4a7cb56eb286404a" prot="public" virt="virtual"><scope>costmap_converter::CostmapToDynamicObstacles</scope><name>~CostmapToDynamicObstacles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

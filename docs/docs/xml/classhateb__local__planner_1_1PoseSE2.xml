@@ -1,0 +1,931 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1PoseSE2" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::PoseSE2</compoundname>
+    <includes refid="pose__se2_8h" local="no">pose_se2.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Construct PoseSE2 instances</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1ab2beb866bbbecea92257d3495bcaf246" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::PoseSE2::PoseSE2</definition>
+        <argsstring>()</argsstring>
+        <name>PoseSE2</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="68" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a2cb6143e00b4289aff2176ffcab86a88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::PoseSE2::PoseSE2</definition>
+        <argsstring>(const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;position, double theta)</argsstring>
+        <name>PoseSE2</name>
+        <param>
+          <type>const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+<para>Construct pose given a position vector and an angle theta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D position vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle given in rad </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="75" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1ac6050ed193f8adfc596aeb04d6bf789f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::PoseSE2::PoseSE2</definition>
+        <argsstring>(double x, double y, double theta)</argsstring>
+        <name>PoseSE2</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+<para>Construct pose using single components x, y, and the yaw angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yaw angle in rad </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="86" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a12eda61fb99f6fd67d988c4e19251b51" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::PoseSE2::PoseSE2</definition>
+        <argsstring>(const geometry_msgs::msg::Pose &amp;pose)</argsstring>
+        <name>PoseSE2</name>
+        <param>
+          <type>const geometry_msgs::msg::Pose &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <briefdescription>
+<para>Construct pose using a geometry_msgs::Pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>geometry_msgs::Pose object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="96" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="96" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a48e2c5341c054a1e44c52a3f36258d84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::PoseSE2::PoseSE2</definition>
+        <argsstring>(const PoseSE2 &amp;pose)</argsstring>
+        <name>PoseSE2</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="106" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="106" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Access and modify values</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1abbe2946db8fad126b7762b5bc2ffb537" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Eigen::Vector2d &amp;</type>
+        <definition>Eigen::Vector2d&amp; hateb_local_planner::PoseSE2::position</definition>
+        <argsstring>()</argsstring>
+        <name>position</name>
+        <briefdescription>
+<para>Access the 2D position part. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>estimate </para>
+</simplesect>
+<simplesect kind="return"><para>reference to the 2D position part </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="126" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="126" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1acded92644006dbcb6c6af26dce52d525" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Eigen::Vector2d &amp;</type>
+        <definition>const Eigen::Vector2d&amp; hateb_local_planner::PoseSE2::position</definition>
+        <argsstring>() const</argsstring>
+        <name>position</name>
+        <briefdescription>
+<para>Access the 2D position part (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>estimate </para>
+</simplesect>
+<simplesect kind="return"><para>const reference to the 2D position part </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="133" column="25" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="133" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a99d2afaf99bdfff1075be7cfe8771169" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; hateb_local_planner::PoseSE2::x</definition>
+        <argsstring>()</argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>Access the x-coordinate the pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>reference to the x-coordinate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="139" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="139" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1aa545f58b57097c8cd3e9e3e8195c8721" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; hateb_local_planner::PoseSE2::x</definition>
+        <argsstring>() const</argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>Access the x-coordinate the pose (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the x-coordinate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="145" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1adb4b866a4f3ec291adf26f60b420344e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; hateb_local_planner::PoseSE2::y</definition>
+        <argsstring>()</argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Access the y-coordinate the pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>reference to the y-coordinate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="151" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a21633eb2abfbdf4ca85df52fc3f90079" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; hateb_local_planner::PoseSE2::y</definition>
+        <argsstring>() const</argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Access the y-coordinate the pose (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the y-coordinate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="157" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="157" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a9745f5e8d91068a96152bb66b4569466" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; hateb_local_planner::PoseSE2::theta</definition>
+        <argsstring>()</argsstring>
+        <name>theta</name>
+        <briefdescription>
+<para>Access the orientation part (yaw angle) of the pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>reference to the yaw angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="163" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="163" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a5df3cb1b56aa36da64b949d07b28590b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; hateb_local_planner::PoseSE2::theta</definition>
+        <argsstring>() const</argsstring>
+        <name>theta</name>
+        <briefdescription>
+<para>Access the orientation part (yaw angle) of the pose (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the yaw angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="169" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="169" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a8d1cfc7888f317b09e50d8f8a326ea01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::PoseSE2::setZero</definition>
+        <argsstring>()</argsstring>
+        <name>setZero</name>
+        <briefdescription>
+<para>Set pose to [0,0,0]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="174" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="174" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a49c5b9bc4d664e46df056cd63682d53a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::PoseSE2::toPoseMsg</definition>
+        <argsstring>(geometry_msgs::msg::Pose &amp;pose) const</argsstring>
+        <name>toPoseMsg</name>
+        <param>
+          <type>geometry_msgs::msg::Pose &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <briefdescription>
+<para>Convert <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> to a geometry_msgs::Pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pose message </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="183" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="183" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a4fe1aba76e94d618fdde90d74a803dda" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Eigen::Vector2d</type>
+        <definition>Eigen::Vector2d hateb_local_planner::PoseSE2::orientationUnitVec</definition>
+        <argsstring>() const</argsstring>
+        <name>orientationUnitVec</name>
+        <briefdescription>
+<para>Return the unit vector of the current orientation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[cos(theta), sin(theta))]^T </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="196" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="196" bodyend="196"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Arithmetic operations for which operators are not always reasonable</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a68a45affe0ca347e1209931e9e815b4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::PoseSE2::scale</definition>
+        <argsstring>(double factor)</argsstring>
+        <name>scale</name>
+        <param>
+          <type>double</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+<para>Scale all SE2 components (x,y,theta) and normalize theta afterwards to [-pi, pi]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>factor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scale factor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="209" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="209" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1aca9458a22d12bdf43ec145c7a02d677e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::PoseSE2::plus</definition>
+        <argsstring>(const double *pose_as_array)</argsstring>
+        <name>plus</name>
+        <param>
+          <type>const double *</type>
+          <declname>pose_as_array</declname>
+        </param>
+        <briefdescription>
+<para>Increment the pose by adding a double[3] array The angle is normalized afterwards. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose_as_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3D double array [x, y, theta] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="219" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="219" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a61963b1c44530ad051a65b1a45e98b9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::PoseSE2::averageInPlace</definition>
+        <argsstring>(const PoseSE2 &amp;pose1, const PoseSE2 &amp;pose2)</argsstring>
+        <name>averageInPlace</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>pose1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>pose2</declname>
+        </param>
+        <briefdescription>
+<para>Get the mean / average of two poses and store it in the caller class For the position part: 0.5*(x1+x2) For the angle: take the angle of the mean direction vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first pose to consider </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pose2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second pose to consider </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="232" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="232" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1ae7d75e6f0b83f6e16c737af3432cb1bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::PoseSE2::rotateGlobal</definition>
+        <argsstring>(double angle, bool adjust_theta=true)</argsstring>
+        <name>rotateGlobal</name>
+        <param>
+          <type>double</type>
+          <declname>angle</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>adjust_theta</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Rotate pose globally. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute [pose_x, pose_y] = Rot(<computeroutput>angle</computeroutput>) * [pose_x, pose_y]. if <computeroutput>adjust_theta</computeroutput>, pose_theta is also rotated by <computeroutput>angle</computeroutput> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the angle defining the 2d rotation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>adjust_theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, the orientation theta is also rotated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="255" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="255" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a50ff3bf8419e65c4589af65715a5efdb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref></type>
+        <definition>static PoseSE2 hateb_local_planner::PoseSE2::average</definition>
+        <argsstring>(const PoseSE2 &amp;pose1, const PoseSE2 &amp;pose2)</argsstring>
+        <name>average</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>pose1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>pose2</declname>
+        </param>
+        <briefdescription>
+<para>Get the mean / average of two poses and return the result (static) For the position part: 0.5*(x1+x2) For the angle: take the angle of the mean direction vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first pose to consider </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pose2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second pose to consider </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mean / average of <computeroutput>pose1</computeroutput> and <computeroutput>pose2</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="245" column="18" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="245" bodyend="245"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Operator overloads / Allow some arithmetic operations</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a958542a91b9e69709a38ab49d00cf200" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+        <definition>PoseSE2&amp; hateb_local_planner::PoseSE2::operator=</definition>
+        <argsstring>(const PoseSE2 &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Asignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="272" column="11" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="272" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a5ecd5e51151f87a992d685cff00ec8fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+        <definition>PoseSE2&amp; hateb_local_planner::PoseSE2::operator+=</definition>
+        <argsstring>(const PoseSE2 &amp;rhs)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Compound assignment operator (addition) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>addend </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="284" column="11" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="284" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1a16f2475d4a9d1c9d33e63eabf0a86b88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+        <definition>PoseSE2&amp; hateb_local_planner::PoseSE2::operator-=</definition>
+        <argsstring>(const PoseSE2 &amp;rhs)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Compound assignment operator (subtraction) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to subtract </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="301" column="11" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="301" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="friend" id="classhateb__local__planner_1_1PoseSE2_1ad2feff1efe471ef77a28a95463ccfd21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref></type>
+        <definition>PoseSE2 operator+</definition>
+        <argsstring>(PoseSE2 lhs, const PoseSE2 &amp;rhs)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref></type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Arithmetic operator overload for additions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First addend </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second addend </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="295" column="18" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="295" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="friend" id="classhateb__local__planner_1_1PoseSE2_1aa796492e15f987b1968b2baf8ac677a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref></type>
+        <definition>PoseSE2 operator-</definition>
+        <argsstring>(PoseSE2 lhs, const PoseSE2 &amp;rhs)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref></type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Arithmetic operator overload for subtractions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First term </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second term </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="312" column="18" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="312" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="friend" id="classhateb__local__planner_1_1PoseSE2_1a8a35a58b7adbc796b3de8eabd2b47323" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref></type>
+        <definition>PoseSE2 operator*</definition>
+        <argsstring>(PoseSE2 pose, double scalar)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref></type>
+          <declname>pose</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+<para>Multiply pose with scalar and return copy without normalizing theta This operator is useful for calculating velocities ... </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pose to scale </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>factor to multiply with </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>theta is not normalized after multiplying </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="321" column="18" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="321" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="friend" id="classhateb__local__planner_1_1PoseSE2_1adc5f91393ae2f50311bb6a950fc4bf98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref></type>
+        <definition>PoseSE2 operator*</definition>
+        <argsstring>(double scalar, PoseSE2 pose)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>double</type>
+          <declname>scalar</declname>
+        </param>
+        <param>
+          <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref></type>
+          <declname>pose</declname>
+        </param>
+        <briefdescription>
+<para>Multiply pose with scalar and return copy without normalizing theta This operator is useful for calculating velocities ... </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>factor to multiply with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pose to scale </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>theta is not normalized after multiplying </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="334" column="18" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="334" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="friend" id="classhateb__local__planner_1_1PoseSE2_1a2c487bf5a6b472f7109a1cd12300e653" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;stream, const PoseSE2 &amp;pose)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <briefdescription>
+<para>Output stream operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to be used </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="345" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="345" bodyend="348"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1PoseSE2_1a225aa4607eae5c99a40e4d6b5ebc08ce" prot="private" static="no" mutable="no">
+        <type>Eigen::Vector2d</type>
+        <definition>Eigen::Vector2d hateb_local_planner::PoseSE2::position_</definition>
+        <argsstring></argsstring>
+        <name>position_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="353" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1PoseSE2_1acac297aae0a3ee9e945ccb56dd668a4e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::PoseSE2::theta_</definition>
+        <argsstring></argsstring>
+        <name>theta_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="354" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1PoseSE2_1af80acf3973984a57588cb4d862eb2392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::PoseSE2::~PoseSE2</definition>
+        <argsstring>()=default</argsstring>
+        <name>~PoseSE2</name>
+        <briefdescription>
+<para>Destructs the <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="116" column="3"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class implements a pose in the domain SE2: <formula id="33">$ \mathbb{R}^2 \times S^1 $</formula> The pose consist of the position x and y and an orientation given as angle theta [-pi, pi]. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/pose_se2.h" line="60" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/pose_se2.h" bodystart="60" bodyend="358"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a50ff3bf8419e65c4589af65715a5efdb" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>average</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a61963b1c44530ad051a65b1a45e98b9b" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>averageInPlace</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a8a35a58b7adbc796b3de8eabd2b47323" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>operator*</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1adc5f91393ae2f50311bb6a950fc4bf98" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>operator*</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1ad2feff1efe471ef77a28a95463ccfd21" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>operator+</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a5ecd5e51151f87a992d685cff00ec8fc" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>operator+=</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1aa796492e15f987b1968b2baf8ac677a0" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>operator-</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a16f2475d4a9d1c9d33e63eabf0a86b88" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>operator-=</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a2c487bf5a6b472f7109a1cd12300e653" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a958542a91b9e69709a38ab49d00cf200" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>operator=</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a4fe1aba76e94d618fdde90d74a803dda" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>orientationUnitVec</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1aca9458a22d12bdf43ec145c7a02d677e" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>plus</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1ab2beb866bbbecea92257d3495bcaf246" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>PoseSE2</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a2cb6143e00b4289aff2176ffcab86a88" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>PoseSE2</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1ac6050ed193f8adfc596aeb04d6bf789f" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>PoseSE2</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a12eda61fb99f6fd67d988c4e19251b51" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>PoseSE2</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a48e2c5341c054a1e44c52a3f36258d84" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>PoseSE2</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1abbe2946db8fad126b7762b5bc2ffb537" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>position</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1acded92644006dbcb6c6af26dce52d525" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>position</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a225aa4607eae5c99a40e4d6b5ebc08ce" prot="private" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>position_</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1ae7d75e6f0b83f6e16c737af3432cb1bc" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>rotateGlobal</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a68a45affe0ca347e1209931e9e815b4c" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>scale</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a8d1cfc7888f317b09e50d8f8a326ea01" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>setZero</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a9745f5e8d91068a96152bb66b4569466" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>theta</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a5df3cb1b56aa36da64b949d07b28590b" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>theta</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1acac297aae0a3ee9e945ccb56dd668a4e" prot="private" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>theta_</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a49c5b9bc4d664e46df056cd63682d53a" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>toPoseMsg</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a99d2afaf99bdfff1075be7cfe8771169" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>x</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1aa545f58b57097c8cd3e9e3e8195c8721" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>x</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1adb4b866a4f3ec291adf26f60b420344e" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>y</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1a21633eb2abfbdf4ca85df52fc3f90079" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>y</name></member>
+      <member refid="classhateb__local__planner_1_1PoseSE2_1af80acf3973984a57588cb4d862eb2392" prot="public" virt="non-virtual"><scope>hateb_local_planner::PoseSE2</scope><name>~PoseSE2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

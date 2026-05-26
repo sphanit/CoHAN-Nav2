@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classinvisible__humans__detection_1_1InvisibleHumansConfig" kind="class" language="C++" prot="public">
+    <compoundname>invisible_humans_detection::InvisibleHumansConfig</compoundname>
+    <includes refid="invisible__humans__config_8hpp" local="no">invisible_humans_config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a93bf65ebb62d6011724a9e23251fd9f2" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string invisible_humans_detection::InvisibleHumansConfig::ns</definition>
+        <argsstring></argsstring>
+        <name>ns</name>
+        <briefdescription>
+<para>Namespace for the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="77" column="15" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a3affb37deb23d4810c59e26c12464b6c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int invisible_humans_detection::InvisibleHumansConfig::samples</definition>
+        <argsstring></argsstring>
+        <name>samples</name>
+        <briefdescription>
+<para>Number of samples for scanning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="78" column="7" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a4ebb693a6867136ed5505ff6c18af64e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::InvisibleHumansConfig::range_min</definition>
+        <argsstring></argsstring>
+        <name>range_min</name>
+        <briefdescription>
+<para>Minimum range for scanning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="79" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a35a792bb4d7326026afc62de74e97d47" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::InvisibleHumansConfig::range_max</definition>
+        <argsstring></argsstring>
+        <name>range_max</name>
+        <briefdescription>
+<para>Maximum range for scanning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="80" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a1e71bc36d5d5bfa1793265b27a5397af" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::InvisibleHumansConfig::angle_min</definition>
+        <argsstring></argsstring>
+        <name>angle_min</name>
+        <briefdescription>
+<para>Minimum angle for scanning (radians) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="81" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a24c26b664d48dbe254bd49f4a6c3e390" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::InvisibleHumansConfig::angle_max</definition>
+        <argsstring></argsstring>
+        <name>angle_max</name>
+        <briefdescription>
+<para>Maximum angle for scanning (radians) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="82" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a5bd360192433b4315f37ae8c09c41a89" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int invisible_humans_detection::InvisibleHumansConfig::scan_resolution</definition>
+        <argsstring></argsstring>
+        <name>scan_resolution</name>
+        <briefdescription>
+<para>Resolution of the scan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="83" column="7" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1ac14e965ac1ce573a4438a5a11eb698b3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool invisible_humans_detection::InvisibleHumansConfig::publish_scan</definition>
+        <argsstring></argsstring>
+        <name>publish_scan</name>
+        <briefdescription>
+<para>Flag to indicate whether to publish scan data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="84" column="8" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1af5d2b48a6a297ae56cf6035dfacc372b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::InvisibleHumansConfig::human_radius</definition>
+        <argsstring></argsstring>
+        <name>human_radius</name>
+        <briefdescription>
+<para>Radius of a human for detection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="85" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" prot="private" static="no" mutable="no">
+        <type><ref refid="classparameters_1_1ParameterHelper" kindref="compound">parameters::ParameterHelper</ref></type>
+        <definition>parameters::ParameterHelper invisible_humans_detection::InvisibleHumansConfig::param_helper_</definition>
+        <argsstring></argsstring>
+        <name>param_helper_</name>
+        <briefdescription>
+<para>Parameter helper for managing ROS2 parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="115" column="31" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a1600e743bec087901f94861c136e5d11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>invisible_humans_detection::InvisibleHumansConfig::InvisibleHumansConfig</definition>
+        <argsstring>()=default</argsstring>
+        <name>InvisibleHumansConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="47" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a2cd8a440935c458a75b78c0d679c2007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>invisible_humans_detection::InvisibleHumansConfig::~InvisibleHumansConfig</definition>
+        <argsstring>()=default</argsstring>
+        <name>~InvisibleHumansConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="48" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a113fffb5f1c9aed5d2c2fde918567186" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void invisible_humans_detection::InvisibleHumansConfig::initialize</definition>
+        <argsstring>(rclcpp::Node::SharedPtr node)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>rclcpp::Node::SharedPtr</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the parameter helper for this config. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="53" column="8" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a8c7a8d71de10195852d8ee2eb0ec3c32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void invisible_humans_detection::InvisibleHumansConfig::setupParameterCallback</definition>
+        <argsstring>()</argsstring>
+        <name>setupParameterCallback</name>
+        <briefdescription>
+<para>Sets up parameter declarations and callback for parameter updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="61" column="8" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="61" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a55ef39e7b11ec3656f15427db1b60088" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void invisible_humans_detection::InvisibleHumansConfig::bindParameters</definition>
+        <argsstring>()</argsstring>
+        <name>bindParameters</name>
+        <briefdescription>
+<para>Binds all configuration variables to parameters for auto-update. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="91" column="8" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="91" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>invisible_humans_detection::InvisibleHumansConfig</label>
+        <link refid="classinvisible__humans__detection_1_1InvisibleHumansConfig"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>param_helper_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>parameters::ParameterHelper</label>
+        <link refid="classparameters_1_1ParameterHelper"/>
+      </node>
+    </collaborationgraph>
+    <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="45" column="1" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="45" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a24c26b664d48dbe254bd49f4a6c3e390" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>angle_max</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a1e71bc36d5d5bfa1793265b27a5397af" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>angle_min</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a55ef39e7b11ec3656f15427db1b60088" prot="private" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>bindParameters</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1af5d2b48a6a297ae56cf6035dfacc372b" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>human_radius</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a113fffb5f1c9aed5d2c2fde918567186" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>initialize</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a1600e743bec087901f94861c136e5d11" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>InvisibleHumansConfig</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a93bf65ebb62d6011724a9e23251fd9f2" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>ns</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" prot="private" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>param_helper_</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1ac14e965ac1ce573a4438a5a11eb698b3" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>publish_scan</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a35a792bb4d7326026afc62de74e97d47" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>range_max</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a4ebb693a6867136ed5505ff6c18af64e" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>range_min</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a3affb37deb23d4810c59e26c12464b6c" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>samples</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a5bd360192433b4315f37ae8c09c41a89" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>scan_resolution</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a8c7a8d71de10195852d8ee2eb0ec3c32" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>setupParameterCallback</name></member>
+      <member refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a2cd8a440935c458a75b78c0d679c2007" prot="public" virt="non-virtual"><scope>invisible_humans_detection::InvisibleHumansConfig</scope><name>~InvisibleHumansConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

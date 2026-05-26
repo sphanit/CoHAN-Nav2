@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_e07473fcfd17dd1ea80787646940ad86" kind="dir">
+    <compoundname>include</compoundname>
+    <innerdir refid="dir_b299645c5bac397bf09e80918e071f0e">hateb_local_planner</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/"/>
+  </compounddef>
+</doxygen>

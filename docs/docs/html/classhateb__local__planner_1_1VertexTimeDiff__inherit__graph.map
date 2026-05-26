@@ -1,0 +1,4 @@
+<map id="hateb_local_planner::VertexTimeDiff" name="hateb_local_planner::VertexTimeDiff">
+<area shape="rect" id="node1" title="This class stores and wraps a time difference &#160;into a vertex that can be optimized via g2o." alt="" coords="6,95,159,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,160,47"/>
+</map>

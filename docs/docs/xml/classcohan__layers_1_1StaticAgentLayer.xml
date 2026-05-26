@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcohan__layers_1_1StaticAgentLayer" kind="class" language="C++" prot="public">
+    <compoundname>cohan_layers::StaticAgentLayer</compoundname>
+    <basecompoundref refid="classcohan__layers_1_1AgentLayer" prot="public" virt="non-virtual">cohan_layers::AgentLayer</basecompoundref>
+    <includes refid="static__agent__layer_8hpp" local="no">static_agent_layer.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcohan__layers_1_1StaticAgentLayer_1a5283686d4b31125f627f4dcf332f0ff2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cohan_layers::StaticAgentLayer::StaticAgentLayer</definition>
+        <argsstring>()</argsstring>
+        <name>StaticAgentLayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/static_agent_layer.hpp" line="37" column="3" bodyfile="cohan_layers/include/cohan_layers/static_agent_layer.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1StaticAgentLayer_1af3ffd7c9d2053b34272da876409e748c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cohan_layers::StaticAgentLayer::onInitialize</definition>
+        <argsstring>() override</argsstring>
+        <name>onInitialize</name>
+        <briefdescription>
+<para>Initializes the <ref refid="classcohan__layers_1_1StaticAgentLayer" kindref="compound">StaticAgentLayer</ref> and sets up ROS communication. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/static_agent_layer.hpp" line="42" column="8" bodyfile="cohan_layers/src/static_agent_layer.cpp" bodystart="35" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1StaticAgentLayer_1a123392f39c7d8ef6054a330b949c558c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void cohan_layers::StaticAgentLayer::updateBoundsFromAgents</definition>
+        <argsstring>(double *min_x, double *min_y, double *max_x, double *max_y) override</argsstring>
+        <name>updateBoundsFromAgents</name>
+        <reimplements refid="classcohan__layers_1_1AgentLayer_1a2cd68deeadaae0160ac6aee736d92e37">updateBoundsFromAgents</reimplements>
+        <param>
+          <type>double *</type>
+          <declname>min_x</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>min_y</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>max_x</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>max_y</declname>
+        </param>
+        <briefdescription>
+<para>Updates the bounds of the costmap based on static agent positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum x-coordinate of the bounds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum y-coordinate of the bounds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum x-coordinate of the bounds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum y-coordinate of the bounds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/static_agent_layer.hpp" line="51" column="8" bodyfile="cohan_layers/src/static_agent_layer.cpp" bodystart="44" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1StaticAgentLayer_1a1d4219f6d7bdc4e9425bc6dbd4789941" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void cohan_layers::StaticAgentLayer::updateCosts</definition>
+        <argsstring>(nav2_costmap_2d::Costmap2D &amp;master_grid, int min_i, int min_j, int max_i, int max_j) override</argsstring>
+        <name>updateCosts</name>
+        <reimplements refid="classcohan__layers_1_1AgentLayer_1afae88fa93e40653f1cc1e5d963ff6d55">updateCosts</reimplements>
+        <param>
+          <type>nav2_costmap_2d::Costmap2D &amp;</type>
+          <declname>master_grid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_j</declname>
+        </param>
+        <briefdescription>
+<para>Updates the costmap with static agent information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>master_grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the master costmap grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum i-index of the grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum j-index of the grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum i-index of the grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum j-index of the grid </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/static_agent_layer.hpp" line="61" column="8" bodyfile="cohan_layers/src/static_agent_layer.cpp" bodystart="53" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1StaticAgentLayer_1a42850f94667ef06cc30e21a1e3a3679a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cohan_layers::StaticAgentLayer::matchSize</definition>
+        <argsstring>() override</argsstring>
+        <name>matchSize</name>
+        <briefdescription>
+<para>Match the size of the master costmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/static_agent_layer.hpp" line="66" column="8" bodyfile="cohan_layers/include/cohan_layers/static_agent_layer.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1StaticAgentLayer_1a3fff299f22787fcb2394018e8a7a7e6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cohan_layers::StaticAgentLayer::reset</definition>
+        <argsstring>() override</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Reset the layer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/static_agent_layer.hpp" line="71" column="8" bodyfile="cohan_layers/include/cohan_layers/static_agent_layer.hpp" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1StaticAgentLayer_1a35e9faca58fdff5cec773ac66f01e983" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cohan_layers::StaticAgentLayer::isClearable</definition>
+        <argsstring>() override</argsstring>
+        <name>isClearable</name>
+        <briefdescription>
+<para>Check if this layer can be cleared. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if clearable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/static_agent_layer.hpp" line="77" column="8" bodyfile="cohan_layers/include/cohan_layers/static_agent_layer.hpp" bodystart="77" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>cohan_layers::StaticAgentLayer</label>
+        <link refid="classcohan__layers_1_1StaticAgentLayer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cohan_layers::AgentLayer</label>
+        <link refid="classcohan__layers_1_1AgentLayer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nav2_costmap_2d::Layer</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>cohan_layers::StaticAgentLayer</label>
+        <link refid="classcohan__layers_1_1StaticAgentLayer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cohan_layers::AgentLayer</label>
+        <link refid="classcohan__layers_1_1AgentLayer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nav2_costmap_2d::Layer</label>
+      </node>
+    </collaborationgraph>
+    <location file="cohan_layers/include/cohan_layers/static_agent_layer.hpp" line="35" column="1" bodyfile="cohan_layers/include/cohan_layers/static_agent_layer.hpp" bodystart="35" bodyend="78"/>
+    <listofallmembers>
+      <member refid="classcohan__layers_1_1AgentLayer_1a23e098bc72c0c79470d4493fe59f1572" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>agent_radius_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1afdd328a134b53a8758ebc49c60829b14" prot="public" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>AgentLayer</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a801140ab6adf55a9a460ab3c466011a1" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>agents_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1add2698b05d148a7d2418c57a7550325d" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>agents_states_sub_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a8fdfce94f480552f6ff035745095e674" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>agents_states_sub_topic_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1ac61a654deccf27a05a7c11ec18d1dc22" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>agents_sub_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1afd4966609f1fc8a0e451aa47a2fb9110" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>agentsCB</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a5fc416e8a57ea57f34927756eb6c74c2" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>amplitude_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1ad07097f84ac670bd4d4bba875a315621" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>cfg_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a8763d4746e35c183bb3a1792d542aeca" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>covar_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a7da870ee93930677a69874e1d0fa32f4" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>cutoff_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a358ed2716ba140c39dd85357bbf54b40" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>first_time_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1af272dd866db7d3befefccdbd5e39a0dd" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>Gaussian2D</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a8994a864b6896d2726adaada5af5257e" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>Gaussian2D_skewed</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a5ae292ea204553aff2857ac4f84889c4" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>Guassian1D</name></member>
+      <member refid="classcohan__layers_1_1StaticAgentLayer_1a35e9faca58fdff5cec773ac66f01e983" prot="public" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>isClearable</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a6fb9d22b880b9479d842b3cc5fb38fb4" prot="public" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>isDiscretized</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1af90964373c6d6be5f4f6593d7537d5cb" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>last_max_x_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a455b625eb20bc1c98500dbdb0228d176" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>last_max_y_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1ac7bdd6029e6c3c088e8dc6b0eefc2395" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>last_min_x_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a92f24d94dd0b1283b35384438a9368da" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>last_min_y_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a21378dde41af0a46972350407c497e37" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>last_time_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a92d77be1142c0f79d570444e4b76c4bf" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>lock_</name></member>
+      <member refid="classcohan__layers_1_1StaticAgentLayer_1a42850f94667ef06cc30e21a1e3a3679a" prot="public" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>matchSize</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a4a1311ca24a93859ac1f536bb46a1845" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>ns_</name></member>
+      <member refid="classcohan__layers_1_1StaticAgentLayer_1af3ffd7c9d2053b34272da876409e748c" prot="public" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>onInitialize</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a8838ac8e005d47f70003b51745d77065" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>radius_</name></member>
+      <member refid="classcohan__layers_1_1StaticAgentLayer_1a3fff299f22787fcb2394018e8a7a7e6b" prot="public" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>reset</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a8892ad59c63a48ad948bdf5f79a91ca2" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>reset_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a477bdf069b1d186f3d5fc1fcfae7757b" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>robot_radius_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a0b31b0736d9ab8c8d2ac46458f530463" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>shutdown_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1ab8fac895e69546f9a59512a9bc46f8c1" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>shutdownCB</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a9277b94d9450bf969edaf84c8beb408c" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>states_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a1c19517f8a6216348e87ba227c2d08a2" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>statesCB</name></member>
+      <member refid="classcohan__layers_1_1StaticAgentLayer_1a5283686d4b31125f627f4dcf332f0ff2" prot="public" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>StaticAgentLayer</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1ac9ee0829d62d918b3916e22663f74a69" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>stopmap_srv_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1aba00f5021c8077f6c9a3d50c2a72611f" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>tracked_agents_sub_topic_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a1b9df0ba8009c991432124692fbf37ed" prot="protected" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>transformed_agents_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1afecded3910ae8f847b22a2818b6d33f0" prot="public" virt="non-virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>updateBounds</name></member>
+      <member refid="classcohan__layers_1_1StaticAgentLayer_1a123392f39c7d8ef6054a330b949c558c" prot="public" virt="virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>updateBoundsFromAgents</name></member>
+      <member refid="classcohan__layers_1_1StaticAgentLayer_1a1d4219f6d7bdc4e9425bc6dbd4789941" prot="public" virt="virtual"><scope>cohan_layers::StaticAgentLayer</scope><name>updateCosts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgeAccelerationHolonomic" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgeAccelerationHolonomic</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebMultiEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebMultiEdge&lt; 3, double &gt;</basecompoundref>
+    <includes refid="edge__acceleration_8h" local="no">edge_acceleration.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeAccelerationHolonomic_1ad2a720309d3beaa7b66bfe2ebfd4d683" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeAccelerationHolonomic::EdgeAccelerationHolonomic</definition>
+        <argsstring>()</argsstring>
+        <name>EdgeAccelerationHolonomic</name>
+        <briefdescription>
+<para>Construct edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_acceleration.h" line="427" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_acceleration.h" bodystart="427" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeAccelerationHolonomic_1a9431d1e089346b4ff7e30ff3b529f105" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeAccelerationHolonomic::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Actual cost function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_acceleration.h" line="432" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_acceleration.h" bodystart="432" bodyend="479"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Edge defining the cost function for limiting the translational and rotational acceleration. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The edge depends on five vertices <formula id="0">$ \mathbf{s}_i, \mathbf{s}_{ip1}, \mathbf{s}_{ip2}, \Delta T_i, \Delta T_{ip1} $</formula> and minimizes: <formula id="4">$ \min \textrm{penaltyInterval}( [ax, ay, omegadot } ]^T ) \cdot weight $</formula>. <linebreak/>
+<emphasis>ax</emphasis> is calculated using the difference quotient (twice) and the x position parts of all three poses <linebreak/>
+<emphasis>ay</emphasis> is calculated using the difference quotient (twice) and the y position parts of all three poses <linebreak/>
+<emphasis>omegadot</emphasis> is calculated using the difference quotient of the yaw angles followed by a normalization to [-pi, pi]. <linebreak/>
+<emphasis>weight</emphasis> can be set using setInformation() <linebreak/>
+<emphasis>penaltyInterval</emphasis> denotes the penalty function, see <ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval()</ref> <linebreak/>
+The dimension of the error / cost vector is 3: the first component represents the translational acceleration (x-dir), the second one the strafing acceleration and the third one the rotational acceleration. <simplesect kind="see"><para>TebOptimalPlanner::AddEdgesAcceleration </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicStart" kindref="compound">EdgeAccelerationHolonomicStart</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicGoal" kindref="compound">EdgeAccelerationHolonomicGoal</ref> </para>
+</simplesect>
+<simplesect kind="remark"><para>Do not forget to call <ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1ae126de1d25032cf83de82823cdcf74bc" kindref="member">setHATebConfig()</ref> </para>
+</simplesect>
+<simplesect kind="remark"><para>Refer to EdgeAccelerationHolonomicStart() and EdgeAccelerationHolonomicGoal() for defining boundary values! </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebMultiEdge&lt; 3, double &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebMultiEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseMultiEdge&lt; D, double &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeAccelerationHolonomic</label>
+        <link refid="classhateb__local__planner_1_1EdgeAccelerationHolonomic"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebMultiEdge&lt; 3, double &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebMultiEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseMultiEdge&lt; D, double &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeAccelerationHolonomic</label>
+        <link refid="classhateb__local__planner_1_1EdgeAccelerationHolonomic"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_acceleration.h" line="422" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_acceleration.h" bodystart="422" bodyend="483"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeAccelerationHolonomic</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeAccelerationHolonomic_1a9431d1e089346b4ff7e30ff3b529f105" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAccelerationHolonomic</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeAccelerationHolonomic_1ad2a720309d3beaa7b66bfe2ebfd4d683" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAccelerationHolonomic</scope><name>EdgeAccelerationHolonomic</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a3783b6cfd9f8666ecb000b07c25758f4" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAccelerationHolonomic</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a77ae43578b59d5ac54ffe9d50a859255" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeAccelerationHolonomic</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a57f2fb741d0ded5f4491d4602919c5a3" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeAccelerationHolonomic</scope><name>resize</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1ae126de1d25032cf83de82823cdcf74bc" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAccelerationHolonomic</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1af763878f2200a5cf70b3b7d6c5a86b78" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeAccelerationHolonomic</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

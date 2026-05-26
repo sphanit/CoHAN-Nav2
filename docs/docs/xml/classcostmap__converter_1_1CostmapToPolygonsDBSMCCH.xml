@@ -1,0 +1,931 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH" kind="class" language="C++" prot="public">
+    <compoundname>costmap_converter::CostmapToPolygonsDBSMCCH</compoundname>
+    <basecompoundref refid="classcostmap__converter_1_1BaseCostmapToPolygons" prot="public" virt="non-virtual">costmap_converter::BaseCostmapToPolygons</basecompoundref>
+    <derivedcompoundref refid="classCostmapToPolygons" prot="public" virt="non-virtual">CostmapToPolygons</derivedcompoundref>
+    <derivedcompoundref refid="classcostmap__converter_1_1CostmapToLinesDBSMCCH" prot="public" virt="non-virtual">costmap_converter::CostmapToLinesDBSMCCH</derivedcompoundref>
+    <derivedcompoundref refid="classcostmap__converter_1_1CostmapToLinesDBSRANSAC" prot="public" virt="non-virtual">costmap_converter::CostmapToLinesDBSRANSAC</derivedcompoundref>
+    <derivedcompoundref refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull" prot="public" virt="non-virtual">costmap_converter::CostmapToPolygonsDBSConcaveHull</derivedcompoundref>
+    <includes refid="costmap__to__polygons_8h" local="no">costmap_to_polygons.h</includes>
+    <innerclass refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" prot="public">costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint</innerclass>
+    <innerclass refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters" prot="public">costmap_converter::CostmapToPolygonsDBSMCCH::Parameters</innerclass>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1af086dcaa5d4d7196a94552105bc9b868" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" kindref="compound">KeyPoint</ref> &gt;</type>
+        <definition>std::vector&lt;KeyPoint&gt; costmap_converter::CostmapToPolygonsDBSMCCH::occupied_cells_</definition>
+        <argsstring></argsstring>
+        <name>occupied_cells_</name>
+        <briefdescription>
+<para>List of occupied cells in the current map (updated by <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a9d91a27cb2afd17d5dc2226214ccb57a" kindref="member">updateCostmap2D()</ref>) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="274" column="16" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a1492bab030a0fe2236a9f531d8178b86" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; int &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;int&gt; &gt; costmap_converter::CostmapToPolygonsDBSMCCH::neighbor_lookup_</definition>
+        <argsstring></argsstring>
+        <name>neighbor_lookup_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="276" column="17" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a9933aaeb5d7249fe8d4f466771fb677f" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int costmap_converter::CostmapToPolygonsDBSMCCH::neighbor_size_x_</definition>
+        <argsstring></argsstring>
+        <name>neighbor_size_x_</name>
+        <briefdescription>
+<para>array of cells for neighbor lookup </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="277" column="9" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a71e2a22cfd9b4a35129dab677980e12b" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int costmap_converter::CostmapToPolygonsDBSMCCH::neighbor_size_y_</definition>
+        <argsstring></argsstring>
+        <name>neighbor_size_y_</name>
+        <briefdescription>
+<para>size of the neighbour lookup in x (number of cells) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="278" column="9" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a68009a61efee912fa6f53c88216d2a28" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double costmap_converter::CostmapToPolygonsDBSMCCH::offset_x_</definition>
+        <argsstring></argsstring>
+        <name>offset_x_</name>
+        <briefdescription>
+<para>size of the neighbour lookup in y (number of cells) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="279" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a40315680a42482e8a81367f802c73545" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double costmap_converter::CostmapToPolygonsDBSMCCH::offset_y_</definition>
+        <argsstring></argsstring>
+        <name>offset_y_</name>
+        <briefdescription>
+<para>offset [meters] in x for the lookup grid </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="280" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aacda867bb50b071838a331f98527559c" prot="protected" static="no" mutable="no">
+        <type><ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters" kindref="compound">Parameters</ref></type>
+        <definition>Parameters costmap_converter::CostmapToPolygonsDBSMCCH::parameter_</definition>
+        <argsstring></argsstring>
+        <name>parameter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="307" column="16" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a80a194d849ba7beb3f455fee560e5b42" prot="protected" static="no" mutable="no">
+        <type><ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters" kindref="compound">Parameters</ref></type>
+        <definition>Parameters costmap_converter::CostmapToPolygonsDBSMCCH::parameter_buffered_</definition>
+        <argsstring></argsstring>
+        <name>parameter_buffered_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="308" column="16" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a16059ce6e3feee91468cafea313a309e" prot="protected" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex costmap_converter::CostmapToPolygonsDBSMCCH::parameter_mutex_</definition>
+        <argsstring></argsstring>
+        <name>parameter_mutex_</name>
+        <briefdescription>
+<para>Mutex that keeps track about the ownership of the shared polygon instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="309" column="16" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aea2f70c684881627d2bd639e8cd5ce0c" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacecostmap__converter_1a031147f2cb53ae68f7647b96868516dd" kindref="member">PolygonContainerPtr</ref></type>
+        <definition>PolygonContainerPtr costmap_converter::CostmapToPolygonsDBSMCCH::polygons_</definition>
+        <argsstring></argsstring>
+        <name>polygons_</name>
+        <briefdescription>
+<para>Callback for the dynamic_reconfigure node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This callback allows to modify parameters dynamically at runtime without restarting the node <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the dynamic reconfigure config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dynamic reconfigure level Current shared container of polygons </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="323" column="25" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1ab4f8c71312e9ef9b91e51529b9efce7a" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex costmap_converter::CostmapToPolygonsDBSMCCH::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+<para>Mutex that keeps track about the ownership of the shared polygon instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="324" column="16" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a7ddd3d9198c7ec0b2145d35ea2cfc3a8" prot="private" static="no" mutable="no">
+        <type>nav2_costmap_2d::Costmap2D *</type>
+        <definition>nav2_costmap_2d::Costmap2D* costmap_converter::CostmapToPolygonsDBSMCCH::costmap_</definition>
+        <argsstring></argsstring>
+        <name>costmap_</name>
+        <briefdescription>
+<para>Pointer to the costmap2d. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="328" column="32" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aa221aa769dc1d82db848a47fddfe6b51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>costmap_converter::CostmapToPolygonsDBSMCCH::CostmapToPolygonsDBSMCCH</definition>
+        <argsstring>()</argsstring>
+        <name>CostmapToPolygonsDBSMCCH</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="120" column="5" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="105" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a392a0ee3cd02afe0185853f90b539161" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>costmap_converter::CostmapToPolygonsDBSMCCH::~CostmapToPolygonsDBSMCCH</definition>
+        <argsstring>()</argsstring>
+        <name>~CostmapToPolygonsDBSMCCH</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="125" column="13" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="113" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a94c56aed99894b24f21d066bd2f3d8df" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::initialize</definition>
+        <argsstring>(rclcpp::Node::SharedPtr nh) override</argsstring>
+        <name>initialize</name>
+        <reimplements refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a687f79218c610912cd29f0f288a26fb9">initialize</reimplements>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToLinesDBSMCCH_1a7404736600321b75819415875e388bbd">initialize</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToLinesDBSRANSAC_1afdf60cb8adbc4006ccba4752cf6e7b5b">initialize</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1ae207ee8646c2ce596f89424f3d85d238">initialize</reimplementedby>
+        <param>
+          <type>rclcpp::Node::SharedPtr</type>
+          <declname>nh</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nodehandle that defines the namespace for parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="131" column="18" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="119" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1ae063f12674d979b18e63d92c27deac33" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::compute</definition>
+        <argsstring>()</argsstring>
+        <name>compute</name>
+        <reimplements refid="classcostmap__converter_1_1BaseCostmapToPolygons_1abec3dc10bc44341b73d5fc4e635be01f">compute</reimplements>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToLinesDBSMCCH_1a33a0f5d93fafe8e7c600e3a99930bf65">compute</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToLinesDBSRANSAC_1a94d4cfa3d781fd9cca2ad73d26d93d0a">compute</reimplementedby>
+        <reimplementedby refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1ad63be1baa7d62a7e72bd4da346574f28">compute</reimplementedby>
+        <briefdescription>
+<para>This method performs the actual work (conversion of the costmap to polygons) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="136" column="18" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="146" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a5fa67041d5b91feed40135939ef871e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::setCostmap2D</definition>
+        <argsstring>(nav2_costmap_2d::Costmap2D *costmap)</argsstring>
+        <name>setCostmap2D</name>
+        <reimplements refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ac98d1254a59d142285db6662dbc5af47">setCostmap2D</reimplements>
+        <param>
+          <type>nav2_costmap_2d::Costmap2D *</type>
+          <declname>costmap</declname>
+        </param>
+        <briefdescription>
+<para>Pass a pointer to the costap to the plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a9d91a27cb2afd17d5dc2226214ccb57a" kindref="member">updateCostmap2D</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>costmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the costmap2d source </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="143" column="18" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="176" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a9d91a27cb2afd17d5dc2226214ccb57a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::updateCostmap2D</definition>
+        <argsstring>()</argsstring>
+        <name>updateCostmap2D</name>
+        <reimplements refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a83f5e0c6c9954c6cf54a25e4f0de5b6c">updateCostmap2D</reimplements>
+        <briefdescription>
+<para>Get updated data from the previously set Costmap2D. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a5fa67041d5b91feed40135939ef871e7" kindref="member">setCostmap2D</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="149" column="18" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="186" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aa6d70bea1ba80d5ad84c221846e9ea62" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacecostmap__converter_1a6063889d67ef296ddfd08f08d5df4a5b" kindref="member">PolygonContainerConstPtr</ref></type>
+        <definition>PolygonContainerConstPtr costmap_converter::CostmapToPolygonsDBSMCCH::getPolygons</definition>
+        <argsstring>()</argsstring>
+        <name>getPolygons</name>
+        <reimplements refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a8e68cedfe4acd986b555edbcf5fe6d44">getPolygons</reimplements>
+        <briefdescription>
+<para>Get a shared instance of the current polygon container. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>If <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1ae063f12674d979b18e63d92c27deac33" kindref="member">compute()</ref> or <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" kindref="member">startWorker()</ref> has not been called before, this method returns an empty instance! </para>
+</simplesect>
+<simplesect kind="return"><para>Shared instance of the current polygon container </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="172" column="30" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="493" bodyend="498"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a5e8c8e163ac3dddead2693ec59d1fa7f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Point</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void costmap_converter::CostmapToPolygonsDBSMCCH::convertPointToPolygon</definition>
+        <argsstring>(const Point &amp;point, geometry_msgs::msg::Polygon &amp;polygon)</argsstring>
+        <name>convertPointToPolygon</name>
+        <param>
+          <type>const Point &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::Polygon &amp;</type>
+          <declname>polygon</declname>
+        </param>
+        <briefdescription>
+<para>Convert a generi point type to a geometry_msgs::msg::Polygon. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">polygon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>already instantiated polygon that will be filled with a single point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic point type that should provide (writable) x and y member fiels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="159" column="17" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="159" bodyend="165"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a0cd5aaaba9344ff25b5c3feb6faa534c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::dbScan</definition>
+        <argsstring>(std::vector&lt; std::vector&lt; KeyPoint &gt; &gt; &amp;clusters)</argsstring>
+        <name>dbScan</name>
+        <param>
+          <type>std::vector&lt; std::vector&lt; <ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" kindref="compound">KeyPoint</ref> &gt; &gt; &amp;</type>
+          <declname>clusters</declname>
+        </param>
+        <briefdescription>
+<para>DBSCAN algorithm for clustering. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clusters in the costmap are collected using the DBSCAN Algorithm (<ulink url="https://en.wikipedia.org/wiki/DBSCAN">https://en.wikipedia.org/wiki/DBSCAN</ulink>) Reference: Ester, Martin; Kriegel, Hans-Peter; Sander, Jörg; Xu, Xiaowei, A density-based algorithm for discovering clusters in large spatial databases with noise. Proceedings of the Second International Conference on Knowledge Discovery and Data Mining. AAAI Press. 1996. pp. 226–231. ISBN 1-57735-004-9.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">clusters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>clusters will added to this output-argument (a sequence of keypoints for each cluster) the first cluster (clusters[0]) will contain all noise points (that does not fulfil the min_pts condition </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="189" column="10" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="235" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a30c9e455820f8193735362f325e0de60" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::regionQuery</definition>
+        <argsstring>(int curr_index, std::vector&lt; int &gt; &amp;neighbor_indices)</argsstring>
+        <name>regionQuery</name>
+        <param>
+          <type>int</type>
+          <declname>curr_index</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt; &amp;</type>
+          <declname>neighbor_indices</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for dbScan to search for neighboring points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>curr_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index to the current item in <computeroutput>occupied_cells</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">neighbor_indices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of neighbors (indices of <computeroutput>occupied</computeroutput> cells) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="197" column="10" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="290" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a4fb264f67eb63e68e8d5183f1f0ca4ad" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::addPoint</definition>
+        <argsstring>(double x, double y)</argsstring>
+        <name>addPoint</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>helper function for adding a point to the lookup data structures </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="202" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="202" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a59b986ce31bf6723a8f2a181143d8bdf" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::convexHull</definition>
+        <argsstring>(std::vector&lt; KeyPoint &gt; &amp;cluster, geometry_msgs::msg::Polygon &amp;polygon)</argsstring>
+        <name>convexHull</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" kindref="compound">KeyPoint</ref> &gt; &amp;</type>
+          <declname>cluster</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::Polygon &amp;</type>
+          <declname>polygon</declname>
+        </param>
+        <briefdescription>
+<para>Compute the convex hull for a single cluster (monotone chain algorithm) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clusters are converted into convex polgons using the monotone chain algorithm aka Andrew&apos;s algorithm: C++ implementation example: <ulink url="http://www.algorithmist.com/index.php/Monotone_Chain_Convex_Hull">http://www.algorithmist.com/index.php/Monotone_Chain_Convex_Hull</ulink> ( GNU Free Documentation License 1.2 ) Reference: A. M. Andrew, &quot;Another Efficient Algorithm for Convex Hulls in Two Dimensions&quot;, Info. Proc. Letters 9, 216-219 (1979). <simplesect kind="remark"><para>The algorithm seems to cut edges, thus we give a try to <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a25bede95689564c58620c8dcbe860023" kindref="member">convexHull2()</ref>. </para>
+</simplesect>
+<xrefsect id="todo_1_todo000002"><xreftitle>Todo</xreftitle><xrefdescription><para>Evaluate and figure out whether <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a59b986ce31bf6723a8f2a181143d8bdf" kindref="member">convexHull()</ref> or <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a25bede95689564c58620c8dcbe860023" kindref="member">convexHull2()</ref> is better suited (performance, quality, ...) </para>
+</xrefdescription></xrefsect><simplesect kind="remark"><para>The last point is the same as the first one </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cluster</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of keypoints that should be converted into a polygon </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">polygon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the resulting convex polygon </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="225" column="10" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="327" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a25bede95689564c58620c8dcbe860023" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::convexHull2</definition>
+        <argsstring>(std::vector&lt; KeyPoint &gt; &amp;cluster, geometry_msgs::msg::Polygon &amp;polygon)</argsstring>
+        <name>convexHull2</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" kindref="compound">KeyPoint</ref> &gt; &amp;</type>
+          <declname>cluster</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::Polygon &amp;</type>
+          <declname>polygon</declname>
+        </param>
+        <briefdescription>
+<para>Compute the convex hull for a single cluster. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clusters are converted into convex polgons using an algorithm provided here: <ulink url="https://bitbucket.org/vostreltsov/concave-hull/overview">https://bitbucket.org/vostreltsov/concave-hull/overview</ulink> The convex hull algorithm is part of the concave hull algorithm. The license is WTFPL 2.0 and permits any usage.</para>
+<para><simplesect kind="remark"><para>The last point is the same as the first one </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cluster</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of keypoints that should be converted into a polygon </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">polygon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the resulting convex polygon </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000003"><xreftitle>Todo</xreftitle><xrefdescription><para>Evaluate and figure out whether <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a59b986ce31bf6723a8f2a181143d8bdf" kindref="member">convexHull()</ref> or <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a25bede95689564c58620c8dcbe860023" kindref="member">convexHull2()</ref> is better suited (performance, quality, ...) </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="240" column="10" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="371" bodyend="467"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a96099731e6f2906716bb3f0c5411a389" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::simplifyPolygon</definition>
+        <argsstring>(geometry_msgs::msg::Polygon &amp;polygon)</argsstring>
+        <name>simplifyPolygon</name>
+        <param>
+          <type>geometry_msgs::msg::Polygon &amp;</type>
+          <declname>polygon</declname>
+        </param>
+        <briefdescription>
+<para>Simplify a polygon by removing points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>We apply the Douglas-Peucker Algorithm to simplify the edges of the polygon. Internally, the parameter min_keypoint_separation is used for deciding whether a point is considered close to an edge and to be merged into the line. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="249" column="10" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="469" bodyend="484"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aaeed7c6af5b0b8420f0988d6213c3f61" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename P1</type>
+          </param>
+          <param>
+            <type>typename P2</type>
+          </param>
+          <param>
+            <type>typename P3</type>
+          </param>
+        </templateparamlist>
+        <type>long double</type>
+        <definition>long double costmap_converter::CostmapToPolygonsDBSMCCH::cross</definition>
+        <argsstring>(const P1 &amp;O, const P2 &amp;A, const P3 &amp;B)</argsstring>
+        <name>cross</name>
+        <param>
+          <type>const P1 &amp;</type>
+          <declname>O</declname>
+        </param>
+        <param>
+          <type>const P2 &amp;</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>const P3 &amp;</type>
+          <declname>B</declname>
+        </param>
+        <briefdescription>
+<para>2D Cross product of two vectors defined by two points and a common origin </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>O</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Origin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>B</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>P1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D Point type with x and y member fields </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>P2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D Point type with x and y member fields </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>P3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D Point type with x and y member fields </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="261" column="17" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a8a09ea3e7b78271f0b9f1f7e13933479" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::updatePolygonContainer</definition>
+        <argsstring>(PolygonContainerPtr polygons)</argsstring>
+        <name>updatePolygonContainer</name>
+        <param>
+          <type><ref refid="namespacecostmap__converter_1a031147f2cb53ae68f7647b96868516dd" kindref="member">PolygonContainerPtr</ref></type>
+          <declname>polygons</declname>
+        </param>
+        <briefdescription>
+<para>Thread-safe update of the internal polygon container (that is shared using <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aa6d70bea1ba80d5ad84c221846e9ea62" kindref="member">getPolygons()</ref> from outside this class) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>polygons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Updated polygon container </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="271" column="9" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="486" bodyend="490"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a55d233727263d3f89d007f9fb8754744" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int costmap_converter::CostmapToPolygonsDBSMCCH::neighborCellsToIndex</definition>
+        <argsstring>(int cx, int cy)</argsstring>
+        <name>neighborCellsToIndex</name>
+        <param>
+          <type>int</type>
+          <declname>cx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cy</declname>
+        </param>
+        <briefdescription>
+<para>offset [meters] in y for the lookup grid </para>
+        </briefdescription>
+        <detaileddescription>
+<para>convert a 2d cell coordinate into the 1D index of the array <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the x index of the cell </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the y index of the cell </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="287" column="9" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="287" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a44c350a82dd0b45084b05701e3094caf" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::pointToNeighborCells</definition>
+        <argsstring>(const KeyPoint &amp;kp, int &amp;cx, int &amp;cy)</argsstring>
+        <name>pointToNeighborCells</name>
+        <param>
+          <type>const <ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" kindref="compound">KeyPoint</ref> &amp;</type>
+          <declname>kp</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>cx</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>cy</declname>
+        </param>
+        <briefdescription>
+<para>compute the cell indices of a keypoint </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>key point given in world coordinates [m, m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output cell index in x direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output cell index in y direction </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="300" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="300" bodyend="304"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class converts the costmap_2d into a set of convex polygons (and points) </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The conversion is performed in two stages:<orderedlist>
+<listitem><para>Clusters in the costmap are collected using the DBSCAN Algorithm (<ulink url="https://en.wikipedia.org/wiki/DBSCAN">https://en.wikipedia.org/wiki/DBSCAN</ulink>) Reference: Ester, Martin; Kriegel, Hans-Peter; Sander, Jörg; Xu, Xiaowei, A density-based algorithm for discovering clusters in large spatial databases with noise. Proceedings of the Second International Conference on Knowledge Discovery and Data Mining. AAAI Press. 1996. pp. 226–231. ISBN 1-57735-004-9.</para>
+</listitem><listitem><para>In the subsequent stage, clusters are converted into convex polgons using the monotone chain algorithm aka Andrew&apos;s algorithm: C++ implementation example: <ulink url="http://www.algorithmist.com/index.php/Monotone_Chain_Convex_Hull">http://www.algorithmist.com/index.php/Monotone_Chain_Convex_Hull</ulink> ( GNU Free Documentation License 1.2 ) Reference: A. M. Andrew, &quot;Another Efficient Algorithm for Convex Hulls in Two Dimensions&quot;, Info. Proc. Letters 9, 216-219 (1979).</para>
+</listitem></orderedlist>
+</para>
+<para>All single points that do not define a cluster (noise) are also treated as polygon (represented as a single vertex) </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>costmap_converter::CostmapToLinesDBSRANSAC</label>
+        <link refid="classcostmap__converter_1_1CostmapToLinesDBSRANSAC"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>costmap_converter::CostmapToLinesDBSMCCH</label>
+        <link refid="classcostmap__converter_1_1CostmapToLinesDBSMCCH"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>costmap_converter::BaseCostmapToPolygons</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToPolygons"/>
+      </node>
+      <node id="1">
+        <label>costmap_converter::CostmapToPolygonsDBSMCCH</label>
+        <link refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CostmapToPolygons</label>
+        <link refid="classCostmapToPolygons"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>costmap_converter::CostmapToPolygonsDBSConcaveHull</label>
+        <link refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>costmap_converter::CostmapToPolygonsDBSMCCH::Parameters</label>
+        <link refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters"/>
+      </node>
+      <node id="2">
+        <label>costmap_converter::BaseCostmapToPolygons</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToPolygons"/>
+      </node>
+      <node id="1">
+        <label>costmap_converter::CostmapToPolygonsDBSMCCH</label>
+        <link refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>parameter_</edgelabel>
+          <edgelabel>parameter_buffered_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="78" column="1" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="79" bodyend="330"/>
+    <listofallmembers>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a4fb264f67eb63e68e8d5183f1f0ca4ad" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>addPoint</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aed9851c00b8d93e88bb8ee79b95a23d9" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>BaseCostmapToPolygons</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1ae063f12674d979b18e63d92c27deac33" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>compute</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a5e8c8e163ac3dddead2693ec59d1fa7f" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>convertPointToPolygon</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a59b986ce31bf6723a8f2a181143d8bdf" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>convexHull</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a25bede95689564c58620c8dcbe860023" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>convexHull2</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a7ddd3d9198c7ec0b2145d35ea2cfc3a8" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>costmap_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aa221aa769dc1d82db848a47fddfe6b51" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>CostmapToPolygonsDBSMCCH</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aaeed7c6af5b0b8420f0988d6213c3f61" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>cross</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a0cd5aaaba9344ff25b5c3feb6faa534c" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>dbScan</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5c9d89e344e9592ab66fd4eae4e3c495" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>getLogger</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a568d60474400d08a40218d0674b46fed" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>getObstacles</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aa6d70bea1ba80d5ad84c221846e9ea62" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>getPolygons</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a94c56aed99894b24f21d066bd2f3d8df" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>initialize</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1ab4f8c71312e9ef9b91e51529b9efce7a" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>mutex_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>need_to_terminate_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a1492bab030a0fe2236a9f531d8178b86" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>neighbor_lookup_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a9933aaeb5d7249fe8d4f466771fb677f" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>neighbor_size_x_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a71e2a22cfd9b4a35129dab677980e12b" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>neighbor_size_y_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a55d233727263d3f89d007f9fb8754744" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>neighborCellsToIndex</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>nh_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1adde51e27138497c972070f585485d920" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>now</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1af086dcaa5d4d7196a94552105bc9b868" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>occupied_cells_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a68009a61efee912fa6f53c88216d2a28" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>offset_x_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a40315680a42482e8a81367f802c73545" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>offset_y_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aacda867bb50b071838a331f98527559c" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>parameter_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a80a194d849ba7beb3f455fee560e5b42" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>parameter_buffered_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a16059ce6e3feee91468cafea313a309e" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>parameter_mutex_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a44c350a82dd0b45084b05701e3094caf" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>pointToNeighborCells</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aea2f70c684881627d2bd639e8cd5ce0c" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>polygons_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a30c9e455820f8193735362f325e0de60" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>regionQuery</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a5fa67041d5b91feed40135939ef871e7" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>setCostmap2D</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ae2913087d659654c55f5869397f8e2c5" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>setOdomTopic</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a96099731e6f2906716bb3f0c5411a389" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>simplifyPolygon</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>spin_thread_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa39c0f13e7ad5bddade4cfc86324abb3" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>spinThread</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5f42b7263fcfdde112b09c73429e55be" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>stackedCostmapConversion</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>startWorker</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a7e5b367499223999167be752208eb59f" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>stopWorker</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a78896f9e23abc564acb1d27cd4f38aac" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>terminate_mutex_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a9d91a27cb2afd17d5dc2226214ccb57a" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>updateCostmap2D</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a8a09ea3e7b78271f0b9f1f7e13933479" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>updatePolygonContainer</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a947fc00b05f6ac5f478afb9ce6c67a06" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>worker_timer_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a98ab2ab132530d153084db2d9249b75d" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>workerCallback</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a3bee32afc15401220df123bce1a87921" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>~BaseCostmapToPolygons</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a392a0ee3cd02afe0185853f90b539161" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH</scope><name>~CostmapToPolygonsDBSMCCH</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgeShortestPath" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgeShortestPath</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebBinaryEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;</basecompoundref>
+    <includes refid="edge__shortest__path_8h" local="no">edge_shortest_path.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeShortestPath_1a8d54763068c362895c0d6a7b0f9b279c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeShortestPath::EdgeShortestPath</definition>
+        <argsstring>()</argsstring>
+        <name>EdgeShortestPath</name>
+        <briefdescription>
+<para>Construct edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_shortest_path.h" line="65" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_shortest_path.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeShortestPath_1ae22443a815c095e6444bbf6dc7f7c5a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeShortestPath::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Actual cost function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_shortest_path.h" line="70" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_shortest_path.h" bodystart="70" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Edge defining the cost function for minimizing the Euclidean distance between two consectuive poses. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para>TebOptimalPlanner::AddEdgesShortestPath </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebBinaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseBinaryEdge&lt; D, double , VertexPose , VertexPose  &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeShortestPath</label>
+        <link refid="classhateb__local__planner_1_1EdgeShortestPath"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebBinaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseBinaryEdge&lt; D, double , VertexPose , VertexPose  &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeShortestPath</label>
+        <link refid="classhateb__local__planner_1_1EdgeShortestPath"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_shortest_path.h" line="60" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_shortest_path.h" bodystart="60" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1af5ba7be337a1f51e8f000255ffd40e71" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeShortestPath</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeShortestPath_1ae22443a815c095e6444bbf6dc7f7c5a6" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeShortestPath</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeShortestPath_1a8d54763068c362895c0d6a7b0f9b279c" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeShortestPath</scope><name>EdgeShortestPath</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a0c0f4853fd8744194a18775226f9b731" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeShortestPath</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a0b775d38f7afb0f63f9156ed241fbe25" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeShortestPath</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1abc6ae7a9e1fd02416a4a94cbb785ba19" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeShortestPath</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a85a24cf969c90917f50cb057173527ca" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeShortestPath</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

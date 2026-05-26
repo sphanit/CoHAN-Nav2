@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="agent__layer_8hpp" kind="file" language="C++">
+    <compoundname>agent_layer.hpp</compoundname>
+    <includes local="no">tf2/utils.h</includes>
+    <includes local="no">agent_path_prediction/msg/agents_info.hpp</includes>
+    <includes refid="agent__layer__config_8hpp" local="no">cohan_layers/agent_layer_config.hpp</includes>
+    <includes local="no">cohan_msgs/msg/state_array.hpp</includes>
+    <includes local="no">cohan_msgs/msg/tracked_agents.hpp</includes>
+    <includes local="no">cohan_msgs/msg/tracked_segment_type.hpp</includes>
+    <includes local="no">map</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">nav2_costmap_2d/layer.hpp</includes>
+    <includes local="no">nav2_costmap_2d/layered_costmap.hpp</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">std_srvs/srv/set_bool.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">tf2_geometry_msgs/tf2_geometry_msgs.hpp</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="agent__visibility__layer_8hpp" local="no">agent_visibility_layer.hpp</includedby>
+    <includedby refid="static__agent__layer_8hpp" local="no">static_agent_layer.hpp</includedby>
+    <includedby refid="agent__layer_8cpp" local="no">agent_layer.cpp</includedby>
+    <incdepgraph>
+      <node id="23">
+        <label>nav2_costmap_2d/layered_costmap.hpp</label>
+      </node>
+      <node id="24">
+        <label>std_srvs/srv/set_bool.hpp</label>
+      </node>
+      <node id="17">
+        <label>cohan_msgs/msg/tracked_agents.hpp</label>
+      </node>
+      <node id="16">
+        <label>cohan_msgs/msg/state_array.hpp</label>
+      </node>
+      <node id="8">
+        <label>functional</label>
+      </node>
+      <node id="4">
+        <label>cohan_layers/agent_layer_config.hpp</label>
+        <link refid="agent__layer__config_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ros2_helpers/parameters.hpp</label>
+        <link refid="parameters_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>agent_path_prediction/msg/agents_info.hpp</label>
+      </node>
+      <node id="22">
+        <label>nav2_costmap_2d/layer.hpp</label>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="1">
+        <label>agent_layer.hpp</label>
+        <link refid="agent__layer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>string</label>
+      </node>
+      <node id="19">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="12">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="18">
+        <label>cohan_msgs/msg/tracked_segment_type.hpp</label>
+      </node>
+      <node id="11">
+        <label>rcl_interfaces/msg/parameter_descriptor.hpp</label>
+      </node>
+      <node id="15">
+        <label>vector</label>
+      </node>
+      <node id="10">
+        <label>rcl_interfaces/msg/integer_range.hpp</label>
+      </node>
+      <node id="25">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="14">
+        <label>unordered_map</label>
+      </node>
+      <node id="21">
+        <label>mutex</label>
+      </node>
+      <node id="6">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="20">
+        <label>memory</label>
+      </node>
+      <node id="9">
+        <label>rcl_interfaces/msg/floating_point_range.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>agent_layer.hpp</label>
+        <link refid="agent__layer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>agent_visibility_layer.cpp</label>
+        <link refid="agent__visibility__layer_8cpp"/>
+      </node>
+      <node id="2">
+        <label>agent_visibility_layer.hpp</label>
+        <link refid="agent__visibility__layer_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>agent_layer.cpp</label>
+        <link refid="agent__layer_8cpp"/>
+      </node>
+      <node id="5">
+        <label>static_agent_layer.cpp</label>
+        <link refid="static__agent__layer_8cpp"/>
+      </node>
+      <node id="4">
+        <label>static_agent_layer.hpp</label>
+        <link refid="static__agent__layer_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classcohan__layers_1_1AgentLayer" prot="public">cohan_layers::AgentLayer</innerclass>
+    <innerclass refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel" prot="protected">cohan_layers::AgentLayer::AgentPoseVel</innerclass>
+    <innernamespace refid="namespacecohan__layers">cohan_layers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(MIT<sp/>License)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2020-2025<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>AGENT_LAYER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_LAYER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/utils.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;agent_path_prediction/msg/agents_info.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="agent__layer__config_8hpp" kindref="compound">cohan_layers/agent_layer_config.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/state_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/tracked_agents.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/tracked_segment_type.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav2_costmap_2d/layer.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav2_costmap_2d/layered_costmap.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp/rclcpp.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;std_srvs/srv/set_bool.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="namespacecohan__layers" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecohan__layers" kindref="compound">cohan_layers</ref><sp/>{</highlight></codeline>
+<codeline lineno="48" refid="classcohan__layers_1_1AgentLayer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcohan__layers_1_1AgentLayer" kindref="compound">AgentLayer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>nav2_costmap_2d::Layer<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50" refid="classcohan__layers_1_1AgentLayer_1afdd328a134b53a8758ebc49c60829b14" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayer_1afdd328a134b53a8758ebc49c60829b14" kindref="member">AgentLayer</ref>()<sp/>{<sp/>layered_costmap_<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1a1af29e63306b94ae450c66916c2d364c" kindref="member">onInitialize</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1afecded3910ae8f847b22a2818b6d33f0" kindref="member">updateBounds</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>origin_x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>origin_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>origin_yaw,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>min_x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>min_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>max_x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>max_y)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classcohan__layers_1_1AgentLayer_1afae88fa93e40653f1cc1e5d963ff6d55" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1afae88fa93e40653f1cc1e5d963ff6d55" kindref="member">updateCosts</ref>(nav2_costmap_2d::Costmap2D&amp;<sp/>master_grid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min_i,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min_j,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_i,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_j)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classcohan__layers_1_1AgentLayer_1a2cd68deeadaae0160ac6aee736d92e37" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1a2cd68deeadaae0160ac6aee736d92e37" kindref="member">updateBoundsFromAgents</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>min_x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>min_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>max_x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>max_y)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classcohan__layers_1_1AgentLayer_1a6fb9d22b880b9479d842b3cc5fb38fb4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1a6fb9d22b880b9479d842b3cc5fb38fb4" kindref="member">isDiscretized</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="95" refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel" kindref="compound">AgentPoseVel</ref><sp/>{</highlight></codeline>
+<codeline lineno="96" refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1accbd201e11ad255b88069c7cdbe8ecf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1accbd201e11ad255b88069c7cdbe8ecf6" kindref="member">track_id</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a8fe631617b2f0ed56f81b90939d0fe71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a8fe631617b2f0ed56f81b90939d0fe71" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98" refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a2ee76c0dcdaf9c4c4c9291279c1fdfaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a2ee76c0dcdaf9c4c4c9291279c1fdfaa" kindref="member">state</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99" refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a55031d6589ae289874a8af4290821d26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std_msgs::msg::Header<sp/><ref refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a55031d6589ae289874a8af4290821d26" kindref="member">header</ref>;</highlight></codeline>
+<codeline lineno="100" refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a421b083f8a70ad3d1929c9f8553ef985" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry_msgs::msg::Pose<sp/><ref refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a421b083f8a70ad3d1929c9f8553ef985" kindref="member">pose</ref>;</highlight></codeline>
+<codeline lineno="101" refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a3d1f600b5ab07614c39a56b9df2f77c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry_msgs::msg::Twist<sp/><ref refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a3d1f600b5ab07614c39a56b9df2f77c5" kindref="member">velocity</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1afd4966609f1fc8a0e451aa47a2fb9110" kindref="member">agentsCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cohan_msgs::msg::TrackedAgents::SharedPtr<sp/><ref refid="namespaceagents" kindref="compound">agents</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1a1c19517f8a6216348e87ba227c2d08a2" kindref="member">statesCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>agent_path_prediction::msg::AgentsInfo::SharedPtr<sp/>agents_info);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1ab8fac895e69546f9a59512a9bc46f8c1" kindref="member">shutdownCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Request&gt;<sp/>req,<sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Response&gt;<sp/>res);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="classcohan__layers_1_1AgentLayer_1a5ae292ea204553aff2857ac4f84889c4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1a5ae292ea204553aff2857ac4f84889c4" kindref="member">Guassian1D</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>A,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>varx)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/>x<sp/>-<sp/>x0;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>A<sp/>*<sp/>exp(-pow(dx,<sp/>2.0)<sp/>/<sp/>(2.0<sp/>*<sp/>varx));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="classcohan__layers_1_1AgentLayer_1af272dd866db7d3befefccdbd5e39a0dd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1af272dd866db7d3befefccdbd5e39a0dd" kindref="member">Gaussian2D</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>A,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>varx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vary)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/>x<sp/>-<sp/>x0;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dy<sp/>=<sp/>y<sp/>-<sp/>y0;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>sqrt((dx<sp/>*<sp/>dx)<sp/>+<sp/>(dy<sp/>*<sp/>dy));</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>theta<sp/>=<sp/>atan2(dy,<sp/>dx);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xx<sp/>=<sp/>d<sp/>*<sp/>cos(theta);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yy<sp/>=<sp/>d<sp/>*<sp/>sin(theta);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>A<sp/>/<sp/>std::max(d,<sp/>1.0)<sp/>*<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a5ae292ea204553aff2857ac4f84889c4" kindref="member">Guassian1D</ref>(xx,<sp/>0.0,<sp/>1.0,<sp/>varx)<sp/>*<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a5ae292ea204553aff2857ac4f84889c4" kindref="member">Guassian1D</ref>(yy,<sp/>0.0,<sp/>1.0,<sp/>vary);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="classcohan__layers_1_1AgentLayer_1a8994a864b6896d2726adaada5af5257e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1a8994a864b6896d2726adaada5af5257e" kindref="member">Gaussian2D_skewed</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>A,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>varx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vary,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>skew_ang)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/>x<sp/>-<sp/>x0;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dy<sp/>=<sp/>y<sp/>-<sp/>y0;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>sqrt((dx<sp/>*<sp/>dx)<sp/>+<sp/>(dy<sp/>*<sp/>dy));</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>theta<sp/>=<sp/>atan2(dy,<sp/>dx);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xx<sp/>=<sp/>d<sp/>*<sp/>cos(theta<sp/>-<sp/>skew_ang);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yy<sp/>=<sp/>d<sp/>*<sp/>sin(theta<sp/>-<sp/>skew_ang);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>A<sp/>/<sp/>std::max(d,<sp/>1.0)<sp/>*<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a5ae292ea204553aff2857ac4f84889c4" kindref="member">Guassian1D</ref>(xx,<sp/>0.0,<sp/>1.0,<sp/>varx)<sp/>*<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a5ae292ea204553aff2857ac4f84889c4" kindref="member">Guassian1D</ref>(yy,<sp/>0.0,<sp/>1.0,<sp/>vary);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="classcohan__layers_1_1AgentLayer_1ac61a654deccf27a05a7c11ec18d1dc22" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;cohan_msgs::msg::TrackedAgents&gt;::SharedPtr<sp/><ref refid="classcohan__layers_1_1AgentLayer_1ac61a654deccf27a05a7c11ec18d1dc22" kindref="member">agents_sub_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="182" refid="classcohan__layers_1_1AgentLayer_1add2698b05d148a7d2418c57a7550325d" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;agent_path_prediction::msg::AgentsInfo&gt;::SharedPtr<sp/><ref refid="classcohan__layers_1_1AgentLayer_1add2698b05d148a7d2418c57a7550325d" kindref="member">agents_states_sub_</ref>;</highlight></codeline>
+<codeline lineno="183" refid="classcohan__layers_1_1AgentLayer_1ac9ee0829d62d918b3916e22663f74a69" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Service&lt;std_srvs::srv::SetBool&gt;::SharedPtr<sp/><ref refid="classcohan__layers_1_1AgentLayer_1ac9ee0829d62d918b3916e22663f74a69" kindref="member">stopmap_srv_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="classcohan__layers_1_1AgentLayer_1a801140ab6adf55a9a460ab3c466011a1" refkind="member"><highlight class="normal"><sp/><sp/>cohan_msgs::msg::TrackedAgents<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a801140ab6adf55a9a460ab3c466011a1" kindref="member">agents_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185" refid="classcohan__layers_1_1AgentLayer_1a9277b94d9450bf969edaf84c8beb408c" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;int,<sp/>int&gt;<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a9277b94d9450bf969edaf84c8beb408c" kindref="member">states_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186" refid="classcohan__layers_1_1AgentLayer_1a1b9df0ba8009c991432124692fbf37ed" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;AgentPoseVel&gt;<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a1b9df0ba8009c991432124692fbf37ed" kindref="member">transformed_agents_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187" refid="classcohan__layers_1_1AgentLayer_1a92d77be1142c0f79d570444e4b76c4bf" refkind="member"><highlight class="normal"><sp/><sp/>std::recursive_mutex<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a92d77be1142c0f79d570444e4b76c4bf" kindref="member">lock_</ref>;</highlight></codeline>
+<codeline lineno="188" refid="classcohan__layers_1_1AgentLayer_1a358ed2716ba140c39dd85357bbf54b40" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1a358ed2716ba140c39dd85357bbf54b40" kindref="member">first_time_</ref>,<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a8892ad59c63a48ad948bdf5f79a91ca2" kindref="member">reset_</ref>,<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a0b31b0736d9ab8c8d2ac46458f530463" kindref="member">shutdown_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189" refid="classcohan__layers_1_1AgentLayer_1a21378dde41af0a46972350407c497e37" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Time<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a21378dde41af0a46972350407c497e37" kindref="member">last_time_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="190" refid="classcohan__layers_1_1AgentLayer_1af90964373c6d6be5f4f6593d7537d5cb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1ac7bdd6029e6c3c088e8dc6b0eefc2395" kindref="member">last_min_x_</ref>,<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a92f24d94dd0b1283b35384438a9368da" kindref="member">last_min_y_</ref>,<sp/><ref refid="classcohan__layers_1_1AgentLayer_1af90964373c6d6be5f4f6593d7537d5cb" kindref="member">last_max_x_</ref>,<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a455b625eb20bc1c98500dbdb0228d176" kindref="member">last_max_y_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>which<sp/>ones<sp/>can<sp/>be<sp/>removed<sp/>later</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="classcohan__layers_1_1AgentLayer_1a5fc416e8a57ea57f34927756eb6c74c2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1a8838ac8e005d47f70003b51745d77065" kindref="member">radius_</ref>,<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a5fc416e8a57ea57f34927756eb6c74c2" kindref="member">amplitude_</ref>,<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a8763d4746e35c183bb3a1792d542aeca" kindref="member">covar_</ref>,<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a7da870ee93930677a69874e1d0fa32f4" kindref="member">cutoff_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194" refid="classcohan__layers_1_1AgentLayer_1a23e098bc72c0c79470d4493fe59f1572" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayer_1a477bdf069b1d186f3d5fc1fcfae7757b" kindref="member">robot_radius_</ref>,<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a23e098bc72c0c79470d4493fe59f1572" kindref="member">agent_radius_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195" refid="classcohan__layers_1_1AgentLayer_1a8fdfce94f480552f6ff035745095e674" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a4a1311ca24a93859ac1f536bb46a1845" kindref="member">ns_</ref>,<sp/><ref refid="classcohan__layers_1_1AgentLayer_1aba00f5021c8077f6c9a3d50c2a72611f" kindref="member">tracked_agents_sub_topic_</ref>,<sp/><ref refid="classcohan__layers_1_1AgentLayer_1a8fdfce94f480552f6ff035745095e674" kindref="member">agents_states_sub_topic_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="196" refid="classcohan__layers_1_1AgentLayer_1ad07097f84ac670bd4d4bba875a315621" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;AgentLayerConfig&gt;<sp/><ref refid="classcohan__layers_1_1AgentLayer_1ad07097f84ac670bd4d4bba875a315621" kindref="member">cfg_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cohan_layers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>AGENT_LAYERS_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="cohan_layers/include/cohan_layers/agent_layer.hpp"/>
+  </compounddef>
+</doxygen>

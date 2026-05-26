@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters" kind="struct" language="C++" prot="public">
+    <compoundname>costmap_converter::CostmapToPolygonsDBSMCCH::Parameters</compoundname>
+    <includes refid="costmap__to__polygons_8h" local="no">costmap_to_polygons.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1af298a1d0f7fbd95cd3fab66e366ef520" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double costmap_converter::CostmapToPolygonsDBSMCCH::Parameters::max_distance_</definition>
+        <argsstring></argsstring>
+        <name>max_distance_</name>
+        <briefdescription>
+<para>Parameter for DB_Scan, maximum distance to neighbors [m]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="109" column="14" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1a28994597f67d1be4d306d99f2a7f1fb1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int costmap_converter::CostmapToPolygonsDBSMCCH::Parameters::min_pts_</definition>
+        <argsstring></argsstring>
+        <name>min_pts_</name>
+        <briefdescription>
+<para>Parameter for DB_Scan: minimum number of points that define a cluster. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="110" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1a9a03568b3a66137442998a5e74e304a3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int costmap_converter::CostmapToPolygonsDBSMCCH::Parameters::max_pts_</definition>
+        <argsstring></argsstring>
+        <name>max_pts_</name>
+        <briefdescription>
+<para>Parameter for DB_Scan: maximum number of points that define a cluster (to avoid large L- and U-shapes) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="111" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1a099e0aab9fc720377ca17d1de8e7b1a1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double costmap_converter::CostmapToPolygonsDBSMCCH::Parameters::min_keypoint_separation_</definition>
+        <argsstring></argsstring>
+        <name>min_keypoint_separation_</name>
+        <briefdescription>
+<para>Clear keypoints of the convex polygon that are close to each other [distance in meters] (0: keep all) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="114" column="14" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1adecd28e8c5e85ba4cc6f1288324c6994" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>costmap_converter::CostmapToPolygonsDBSMCCH::Parameters::Parameters</definition>
+        <argsstring>()</argsstring>
+        <name>Parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="107" column="7" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines the parameters of the algorithm. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="105" column="5" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="106" bodyend="115"/>
+    <listofallmembers>
+      <member refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1af298a1d0f7fbd95cd3fab66e366ef520" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH::Parameters</scope><name>max_distance_</name></member>
+      <member refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1a9a03568b3a66137442998a5e74e304a3" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH::Parameters</scope><name>max_pts_</name></member>
+      <member refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1a099e0aab9fc720377ca17d1de8e7b1a1" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH::Parameters</scope><name>min_keypoint_separation_</name></member>
+      <member refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1a28994597f67d1be4d306d99f2a7f1fb1" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH::Parameters</scope><name>min_pts_</name></member>
+      <member refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1adecd28e8c5e85ba4cc6f1288324c6994" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH::Parameters</scope><name>Parameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

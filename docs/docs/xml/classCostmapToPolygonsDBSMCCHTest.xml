@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classCostmapToPolygonsDBSMCCHTest" kind="class" language="C++" prot="public">
+    <compoundname>CostmapToPolygonsDBSMCCHTest</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">testing::Test</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" prot="protected" static="no" mutable="no">
+        <type><ref refid="classCostmapToPolygons" kindref="compound">CostmapToPolygons</ref></type>
+        <definition>CostmapToPolygons CostmapToPolygonsDBSMCCHTest::costmap_to_polygons</definition>
+        <argsstring></argsstring>
+        <name>costmap_to_polygons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/test/costmap_polygons.cpp" line="98" column="23" bodyfile="costmap_converter/costmap_converter/test/costmap_polygons.cpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCostmapToPolygonsDBSMCCHTest_1a67e11d0fad4aabd80fbcc1e27a806c6f" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; nav2_costmap_2d::Costmap2D &gt;</type>
+        <definition>std::shared_ptr&lt;nav2_costmap_2d::Costmap2D&gt; CostmapToPolygonsDBSMCCHTest::costmap</definition>
+        <argsstring></argsstring>
+        <name>costmap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/test/costmap_polygons.cpp" line="99" column="21" bodyfile="costmap_converter/costmap_converter/test/costmap_polygons.cpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classCostmapToPolygonsDBSMCCHTest_1a989567990c48098f87d5b36182a364cb" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CostmapToPolygonsDBSMCCHTest::SetUp</definition>
+        <argsstring>() override</argsstring>
+        <name>SetUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/test/costmap_polygons.cpp" line="34" column="10" bodyfile="costmap_converter/costmap_converter/test/costmap_polygons.cpp" bodystart="34" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classCostmapToPolygonsDBSMCCHTest_1a819645f6ec9f5c2d27bbbf82a9b0aa7f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CostmapToPolygonsDBSMCCHTest::regionQueryTrivial</definition>
+        <argsstring>(int curr_index, std::vector&lt; int &gt; &amp;neighbor_indices)</argsstring>
+        <name>regionQueryTrivial</name>
+        <param>
+          <type>int</type>
+          <declname>curr_index</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt; &amp;</type>
+          <declname>neighbor_indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/test/costmap_polygons.cpp" line="81" column="10" bodyfile="costmap_converter/costmap_converter/test/costmap_polygons.cpp" bodystart="81" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>testing::Test</label>
+      </node>
+      <node id="1">
+        <label>CostmapToPolygonsDBSMCCHTest</label>
+        <link refid="classCostmapToPolygonsDBSMCCHTest"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>costmap_converter::CostmapToPolygonsDBSMCCH::Parameters</label>
+        <link refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters"/>
+      </node>
+      <node id="2">
+        <label>testing::Test</label>
+      </node>
+      <node id="5">
+        <label>costmap_converter::BaseCostmapToPolygons</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToPolygons"/>
+      </node>
+      <node id="1">
+        <label>CostmapToPolygonsDBSMCCHTest</label>
+        <link refid="classCostmapToPolygonsDBSMCCHTest"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>costmap_to_polygons</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>costmap_converter::CostmapToPolygonsDBSMCCH</label>
+        <link refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>parameter_</edgelabel>
+          <edgelabel>parameter_buffered_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CostmapToPolygons</label>
+        <link refid="classCostmapToPolygons"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="costmap_converter/costmap_converter/test/costmap_polygons.cpp" line="31" column="1" bodyfile="costmap_converter/costmap_converter/test/costmap_polygons.cpp" bodystart="32" bodyend="100"/>
+    <listofallmembers>
+      <member refid="classCostmapToPolygonsDBSMCCHTest_1a67e11d0fad4aabd80fbcc1e27a806c6f" prot="protected" virt="non-virtual"><scope>CostmapToPolygonsDBSMCCHTest</scope><name>costmap</name></member>
+      <member refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" prot="protected" virt="non-virtual"><scope>CostmapToPolygonsDBSMCCHTest</scope><name>costmap_to_polygons</name></member>
+      <member refid="classCostmapToPolygonsDBSMCCHTest_1a819645f6ec9f5c2d27bbbf82a9b0aa7f" prot="protected" virt="non-virtual"><scope>CostmapToPolygonsDBSMCCHTest</scope><name>regionQueryTrivial</name></member>
+      <member refid="classCostmapToPolygonsDBSMCCHTest_1a989567990c48098f87d5b36182a364cb" prot="protected" virt="non-virtual"><scope>CostmapToPolygonsDBSMCCHTest</scope><name>SetUp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

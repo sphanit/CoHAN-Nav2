@@ -1,0 +1,5 @@
+<map id="hateb_local_planner::EdgeDynamicObstacle" name="hateb_local_planner::EdgeDynamicObstacle">
+<area shape="rect" id="node1" title="Edge defining the cost function for keeping a distance from dynamic (moving) obstacles." alt="" coords="5,228,183,269"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebUnaryEdge.html" title=" " alt="" coords="11,109,177,180"/>
+<area shape="rect" id="node3" title=" " alt="" coords="15,5,173,61"/>
+</map>

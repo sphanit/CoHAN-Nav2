@@ -1,0 +1,668 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="agents__class_8hpp" kind="file" language="C++">
+    <compoundname>agents_class.hpp</compoundname>
+    <includes refid="hateb__config_8hpp" local="no">hateb_local_planner/hateb_config.hpp</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes refid="parameters_8hpp" local="no">ros2_helpers/parameters.hpp</includes>
+    <includes local="no">tf2/convert.h</includes>
+    <includes local="no">tf2/utils.h</includes>
+    <includes local="no">tf2_ros/buffer.h</includes>
+    <includes local="no">tf2_ros/transform_listener.h</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">nav2_costmap_2d/costmap_2d_ros.hpp</includes>
+    <includes local="no">agent_path_prediction/msg/agents_info.hpp</includes>
+    <includes local="no">cohan_msgs/msg/agent_path_array.hpp</includes>
+    <includes local="no">cohan_msgs/msg/agent_trajectory.hpp</includes>
+    <includes local="no">cohan_msgs/msg/agent_trajectory_array.hpp</includes>
+    <includes local="no">cohan_msgs/msg/state_array.hpp</includes>
+    <includes local="no">cohan_msgs/msg/tracked_agents.hpp</includes>
+    <includes local="no">cohan_msgs/msg/tracked_segment_type.hpp</includes>
+    <includes local="no">geometry_msgs/msg/pose.hpp</includes>
+    <includes local="no">geometry_msgs/msg/pose2_d.hpp</includes>
+    <includes local="no">Eigen/Core</includes>
+    <includes local="no">map</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">thread</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="dual__band__exit__condition_8h" local="no">dual_band_exit_condition.h</includedby>
+    <includedby refid="passthrough__condition_8h" local="no">passthrough_condition.h</includedby>
+    <includedby refid="single__band__exit__condition_8h" local="no">single_band_exit_condition.h</includedby>
+    <includedby refid="vel__obs__exit__condition_8h" local="no">vel_obs_exit_condition.h</includedby>
+    <includedby refid="hateb__local__planner__ros_8h" local="no">hateb_local_planner_ros.h</includedby>
+    <includedby refid="mode__switch_8h" local="no">mode_switch.h</includedby>
+    <includedby refid="agents__class_8cpp" local="no">agents_class.cpp</includedby>
+    <incdepgraph>
+      <node id="14">
+        <label>boost/pointer_cast.hpp</label>
+      </node>
+      <node id="47">
+        <label>cohan_msgs/msg/tracked_agents.hpp</label>
+      </node>
+      <node id="46">
+        <label>cohan_msgs/msg/state_array.hpp</label>
+      </node>
+      <node id="30">
+        <label>functional</label>
+      </node>
+      <node id="15">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="17">
+        <label>geometry_msgs/msg/polygon.hpp</label>
+      </node>
+      <node id="29">
+        <label>ros2_helpers/parameters.hpp</label>
+        <link refid="parameters_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>cstdint</label>
+      </node>
+      <node id="3">
+        <label>hateb_local_planner/footprint_model.h</label>
+        <link refid="footprint__model_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>agent_path_prediction/msg/agents_info.hpp</label>
+      </node>
+      <node id="12">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="24">
+        <label>geometry_msgs/msg/pose.hpp</label>
+      </node>
+      <node id="7">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="1">
+        <label>agents_class.hpp</label>
+        <link refid="agents__class_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>string</label>
+      </node>
+      <node id="26">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="50">
+        <label>map</label>
+      </node>
+      <node id="23">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="19">
+        <label>geometry_msgs/msg/twist_with_covariance.hpp</label>
+      </node>
+      <node id="37">
+        <label>tf2/convert.h</label>
+      </node>
+      <node id="28">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="6">
+        <label>hateb_local_planner/misc.h</label>
+        <link refid="hateb__local__planner_2include_2hateb__local__planner_2misc_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>nav2_costmap_2d/costmap_2d_ros.hpp</label>
+      </node>
+      <node id="13">
+        <label>Eigen/StdVector</label>
+      </node>
+      <node id="18">
+        <label>geometry_msgs/msg/quaternion_stamped.hpp</label>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner/hateb_config.hpp</label>
+        <link refid="hateb__config_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>cohan_msgs/msg/agent_path_array.hpp</label>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner/obstacles.h</label>
+        <link refid="obstacles_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>cohan_msgs/msg/tracked_segment_type.hpp</label>
+      </node>
+      <node id="33">
+        <label>rcl_interfaces/msg/parameter_descriptor.hpp</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="32">
+        <label>rcl_interfaces/msg/integer_range.hpp</label>
+      </node>
+      <node id="20">
+        <label>utility</label>
+      </node>
+      <node id="9">
+        <label>boost/utility.hpp</label>
+      </node>
+      <node id="25">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="36">
+        <label>unordered_map</label>
+      </node>
+      <node id="27">
+        <label>mutex</label>
+      </node>
+      <node id="39">
+        <label>tf2_ros/transform_listener.h</label>
+      </node>
+      <node id="21">
+        <label>hateb_local_planner/pose_se2.h</label>
+        <link refid="pose__se2_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>g2o/stuff/misc.h</label>
+      </node>
+      <node id="52">
+        <label>thread</label>
+      </node>
+      <node id="44">
+        <label>cohan_msgs/msg/agent_trajectory.hpp</label>
+      </node>
+      <node id="49">
+        <label>geometry_msgs/msg/pose2_d.hpp</label>
+      </node>
+      <node id="38">
+        <label>tf2_ros/buffer.h</label>
+      </node>
+      <node id="16">
+        <label>complex</label>
+      </node>
+      <node id="11">
+        <label>algorithm</label>
+      </node>
+      <node id="5">
+        <label>hateb_local_planner/distance_calculations.h</label>
+        <link refid="distance__calculations_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="51">
+        <label>memory</label>
+      </node>
+      <node id="8">
+        <label>boost/type_traits.hpp</label>
+      </node>
+      <node id="45">
+        <label>cohan_msgs/msg/agent_trajectory_array.hpp</label>
+      </node>
+      <node id="31">
+        <label>rcl_interfaces/msg/floating_point_range.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12">
+        <label>vel_obs_exit_condition.h</label>
+        <link refid="vel__obs__exit__condition_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>passthrough_condition.cpp</label>
+        <link refid="passthrough__condition_8cpp"/>
+      </node>
+      <node id="14">
+        <label>agents_class.cpp</label>
+        <link refid="agents__class_8cpp"/>
+      </node>
+      <node id="13">
+        <label>vel_obs_exit_condition.cpp</label>
+        <link refid="vel__obs__exit__condition_8cpp"/>
+      </node>
+      <node id="10">
+        <label>single_band_exit_condition.h</label>
+        <link refid="single__band__exit__condition_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>hateb_local_planner_ros.cpp</label>
+        <link refid="hateb__local__planner__ros_8cpp"/>
+      </node>
+      <node id="1">
+        <label>agents_class.hpp</label>
+        <link refid="agents__class_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dual_band_exit_condition.h</label>
+        <link refid="dual__band__exit__condition_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>passthrough_condition.h</label>
+        <link refid="passthrough__condition_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dual_band_exit_condition.cpp</label>
+        <link refid="dual__band__exit__condition_8cpp"/>
+      </node>
+      <node id="3">
+        <label>mode_switch.h</label>
+        <link refid="mode__switch_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>single_band_exit_condition.cpp</label>
+        <link refid="single__band__exit__condition_8cpp"/>
+      </node>
+      <node id="6">
+        <label>mode_switch.cpp</label>
+        <link refid="mode__switch_8cpp"/>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner_ros.h</label>
+        <link refid="hateb__local__planner__ros_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhateb__local__planner_1_1Agents" prot="public">hateb_local_planner::Agents</innerclass>
+    <innernamespace refid="namespacehateb__local__planner">hateb_local_planner</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="agents__class_8hpp_1afcae8c2a5021b396c0a659ee6dea0466" prot="public" static="no">
+        <name>CALC_EPS</name>
+        <initializer>0.0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="67" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agents__class_8hpp_1aca429eece4b2ed55d2f38a84031ca6b5" prot="public" static="no">
+        <name>COST_MIN</name>
+        <initializer>250</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="68" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agents__class_8hpp_1afe3f51fbc354670e6c61f8e6f9c9b949" prot="public" static="no">
+        <name>COST_OBS</name>
+        <initializer>255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="69" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agents__class_8hpp_1aee924ef71b44dac1501d13e25ac2743f" prot="public" static="no">
+        <name>MAX_PTS</name>
+        <initializer>1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="70" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agents__class_8hpp_1ad575de5af7bcfae345fddc8d769e560a" prot="public" static="no">
+        <name>MIN_PTS</name>
+        <initializer>100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="71" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agents__class_8hpp_1ae24ae7fb28a32df195a4ae13f734c26c" prot="public" static="no">
+        <name>AGENT_NUM_TH</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="72" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agents__class_8hpp_1a191e5a424a0b478c977515d5694610a8" prot="public" static="no">
+        <name>DEFAULT_AGENT_SEGMENT</name>
+        <initializer>cohan_msgs::msg::TrackedSegmentType::TORSO</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="73" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(MIT<sp/>License)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2020-2025<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>AGENTS_HH_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENTS_HH_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ROS2<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;hateb_local_planner/agents_config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="hateb__config_8hpp" kindref="compound">hateb_local_planner/hateb_config.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp/rclcpp.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="parameters_8hpp" kindref="compound">ros2_helpers/parameters.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TF2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/convert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/utils.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_ros/buffer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_ros/transform_listener.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>COSTMAP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav2_costmap_2d/costmap_2d_ros.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MSGS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;agent_path_prediction/msg/agents_info.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/agent_path_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/agent_trajectory.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/agent_trajectory_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/state_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/tracked_agents.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/tracked_segment_type.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/msg/pose.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/msg/pose2_d.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OTHERS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Core&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="agents__class_8hpp_1afcae8c2a5021b396c0a659ee6dea0466" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CALC_EPS<sp/>0.0001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="agents__class_8hpp_1aca429eece4b2ed55d2f38a84031ca6b5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COST_MIN<sp/>250</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="agents__class_8hpp_1afe3f51fbc354670e6c61f8e6f9c9b949" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COST_OBS<sp/>255</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="agents__class_8hpp_1aee924ef71b44dac1501d13e25ac2743f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_PTS<sp/>1000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="agents__class_8hpp_1ad575de5af7bcfae345fddc8d769e560a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MIN_PTS<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="agents__class_8hpp_1ae24ae7fb28a32df195a4ae13f734c26c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_NUM_TH<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="agents__class_8hpp_1a191e5a424a0b478c977515d5694610a8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_AGENT_SEGMENT<sp/>cohan_msgs::msg::TrackedSegmentType::TORSO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="namespacehateb__local__planner" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehateb__local__planner" kindref="compound">hateb_local_planner</ref><sp/>{</highlight></codeline>
+<codeline lineno="79" refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454" kindref="member">AgentState</ref><sp/>{<sp/><ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454aaccaa0493f6416b8b69dd71482e2ba6d" kindref="member">NO_STATE</ref>,<sp/><ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454a29f5ff78c3ba93fedf00218fd39b372d" kindref="member">STATIC</ref>,<sp/><ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454a02eb311f53770ca50601cf112f3459a7" kindref="member">MOVING</ref>,<sp/><ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454ae84cc3a276f301c489371c5ddf9ebb04" kindref="member">STOPPED</ref>,<sp/><ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454ac457db81a66a3c393456b94c1a769e81" kindref="member">BLOCKED</ref><sp/>};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Pattern<sp/>2<sp/>of<sp/>ROS2<sp/>Nodes<sp/>--&gt;<sp/>Use<sp/>a<sp/>private<sp/>node<sp/>instance<sp/>that<sp/>can<sp/>be<sp/>obtained<sp/>from<sp/>another<sp/>node</highlight></codeline>
+<codeline lineno="85" refid="classhateb__local__planner_1_1Agents" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1Agents" kindref="compound">Agents</ref><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Agents_1a969c12243d50fc6d770a081ab4ec326a" kindref="member">Agents</ref>(rclcpp_lifecycle::LifecycleNode::SharedPtr<sp/>node,<sp/>std::shared_ptr&lt;tf2_ros::Buffer&gt;<sp/>tf,<sp/>std::shared_ptr&lt;nav2_costmap_2d::Costmap2DROS&gt;<sp/>costmap_ros,<sp/>std::shared_ptr&lt;HATebConfig&gt;<sp/>cfg);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="classhateb__local__planner_1_1Agents_1a77e5e8586f64fa2d71c446b6511500d5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Agents_1a77e5e8586f64fa2d71c446b6511500d5" kindref="member">~Agents</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rclcpp::shutdown();<sp/><sp/>//<sp/>Stop<sp/>spinning</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(spin_thread_.joinable())<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>spin_thread_.join();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classhateb__local__planner_1_1Agents_1a9fdfdd9c850c30d3e3ac83c39e134120" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1a9fdfdd9c850c30d3e3ac83c39e134120" kindref="member">setState</ref>(<ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454" kindref="member">AgentState</ref><sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Agents_1ad9710df28f34920a049ac08f0dd0ae96" kindref="member">agents_states_</ref>[id]<sp/>=<sp/>state;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state<sp/>==<sp/><ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454ac457db81a66a3c393456b94c1a769e81" kindref="member">AgentState::BLOCKED</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Agents_1a5f0d5f2bbab7a6762c8a42d7e97d28aa" kindref="member">stuck_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Agents_1a027a6507f4ab7c06c106dadccece011c" kindref="member">stuck_agent_id_</ref><sp/>=<sp/>id;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1a369325fbf7f769ee9c64e4f569e0332f" kindref="member">resetAgents</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="classhateb__local__planner_1_1Agents_1ae56197f4b983b0622d2b680762492033" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1ae56197f4b983b0622d2b680762492033" kindref="member">isAgentStuck</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1a5f0d5f2bbab7a6762c8a42d7e97d28aa" kindref="member">stuck_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="classhateb__local__planner_1_1Agents_1a119c76366e838a099eeb5abbd29f93ec" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1a119c76366e838a099eeb5abbd29f93ec" kindref="member">resetStuckAgent</ref>()<sp/>{<sp/><ref refid="classhateb__local__planner_1_1Agents_1a027a6507f4ab7c06c106dadccece011c" kindref="member">stuck_agent_id_</ref><sp/>=<sp/>-1;<sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="classhateb__local__planner_1_1Agents_1a654d82dcbcdd1395894a65e05b924326" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;int,<sp/>geometry_msgs::msg::Pose&gt;<sp/><ref refid="classhateb__local__planner_1_1Agents_1a654d82dcbcdd1395894a65e05b924326" kindref="member">getAgents</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1a2390156dbb5be300a417acaef94f50bc" kindref="member">agents_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="classhateb__local__planner_1_1Agents_1a6a91df653760c0f5938c236d62c475f2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454" kindref="member">AgentState</ref><sp/><ref refid="classhateb__local__planner_1_1Agents_1a6a91df653760c0f5938c236d62c475f2" kindref="member">agentState</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1ad9710df28f34920a049ac08f0dd0ae96" kindref="member">agents_states_</ref>[id];<sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="classhateb__local__planner_1_1Agents_1a530b6f69a77c3ed7ec3568338217554d" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;int,<sp/>double&gt;<sp/><ref refid="classhateb__local__planner_1_1Agents_1a530b6f69a77c3ed7ec3568338217554d" kindref="member">getNominalVels</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1a58a20a40cca043ad6158bb84c6742f3b" kindref="member">agent_nominal_vels_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Callbacks</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1ac34148646aacd39c630a6427f93d563c" kindref="member">trackedAgentsCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cohan_msgs::msg::TrackedAgents::SharedPtr<sp/>tracked_agents);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Methods</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="classhateb__local__planner_1_1Agents_1ab59f9bf9db870900ffbeaeec0913a81b" kindref="member">filterVisibleAgents</ref>(std::map&lt;int,<sp/>geometry_msgs::msg::Pose&gt;<sp/>tr_agents,<sp/>std::vector&lt;int&gt;<sp/>sorted_ids,<sp/>std::map&lt;int,<sp/>double&gt;<sp/>agents_radii,<sp/>geometry_msgs::msg::Pose2D<sp/>robot_pose);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Agent<sp/>State<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="classhateb__local__planner_1_1Agents_1a686e924d6603e83fda00fe87889dc2ca" refkind="member"><highlight class="normal"><sp/><sp/>cohan_msgs::msg::TrackedAgents::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1Agents_1a686e924d6603e83fda00fe87889dc2ca" kindref="member">tracked_agents_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174" refid="classhateb__local__planner_1_1Agents_1a2390156dbb5be300a417acaef94f50bc" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;int,<sp/>geometry_msgs::msg::Pose&gt;<sp/><ref refid="classhateb__local__planner_1_1Agents_1a2390156dbb5be300a417acaef94f50bc" kindref="member">agents_</ref>,<sp/><ref refid="classhateb__local__planner_1_1Agents_1afc666a3e5a9fee33e7702eec9ed9ac44" kindref="member">prev_agents_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="175" refid="classhateb__local__planner_1_1Agents_1a2739db788571639e7f93eaf83844e948" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;int,<sp/>bool&gt;<sp/><ref refid="classhateb__local__planner_1_1Agents_1a2739db788571639e7f93eaf83844e948" kindref="member">agent_still_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="176" refid="classhateb__local__planner_1_1Agents_1ad8b2f9f6976f57a201854b0c7eb3b3dd" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;int,<sp/>std::vector&lt;double&gt;&gt;<sp/><ref refid="classhateb__local__planner_1_1Agents_1ad8b2f9f6976f57a201854b0c7eb3b3dd" kindref="member">agent_vels_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="177" refid="classhateb__local__planner_1_1Agents_1a58a20a40cca043ad6158bb84c6742f3b" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;int,<sp/>double&gt;<sp/><ref refid="classhateb__local__planner_1_1Agents_1a58a20a40cca043ad6158bb84c6742f3b" kindref="member">agent_nominal_vels_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="178" refid="classhateb__local__planner_1_1Agents_1ad9710df28f34920a049ac08f0dd0ae96" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;int,<sp/>AgentState&gt;<sp/><ref refid="classhateb__local__planner_1_1Agents_1ad9710df28f34920a049ac08f0dd0ae96" kindref="member">agents_states_</ref>,<sp/><ref refid="classhateb__local__planner_1_1Agents_1abbb6f0f00bcaacb03166f91f354b361d" kindref="member">prev_agents_states_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="179" refid="classhateb__local__planner_1_1Agents_1ac25e8dbd09f94b36a050518ad74f556d" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="classhateb__local__planner_1_1Agents_1ac25e8dbd09f94b36a050518ad74f556d" kindref="member">visible_agent_ids_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Configuration<sp/>and<sp/>Status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="classhateb__local__planner_1_1Agents_1a6ef179ab3d73cf471d8c327ee10c66b6" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classhateb__local__planner_1_1Agents_1a6ef179ab3d73cf471d8c327ee10c66b6" kindref="member">tracked_agents_sub_topic_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="183" refid="classhateb__local__planner_1_1Agents_1ae8f04b33ee6c58c70882c03ab917228d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1ae8f04b33ee6c58c70882c03ab917228d" kindref="member">initialized_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="classhateb__local__planner_1_1Agents_1a5f0d5f2bbab7a6762c8a42d7e97d28aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1a5f0d5f2bbab7a6762c8a42d7e97d28aa" kindref="member">stuck_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185" refid="classhateb__local__planner_1_1Agents_1a027a6507f4ab7c06c106dadccece011c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1a027a6507f4ab7c06c106dadccece011c" kindref="member">stuck_agent_id_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="classhateb__local__planner_1_1Agents_1a06ef2116d40d612479c8b6b9ed8c6b0c" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp_lifecycle::LifecycleNode::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1Agents_1a06ef2116d40d612479c8b6b9ed8c6b0c" kindref="member">node_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189" refid="classhateb__local__planner_1_1Agents_1a79c37fe0b2b727cbffae8e67f045c369" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classparameters_1_1ParameterHelper" kindref="compound">parameters::ParameterHelper</ref><sp/><ref refid="classhateb__local__planner_1_1Agents_1a79c37fe0b2b727cbffae8e67f045c369" kindref="member">param_helper_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="190" refid="classhateb__local__planner_1_1Agents_1af5a244d07b9be46ff9fa88388e821f94" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;agent_path_prediction::msg::AgentsInfo&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1Agents_1af5a244d07b9be46ff9fa88388e821f94" kindref="member">agents_info_pub_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="191" refid="classhateb__local__planner_1_1Agents_1a43e6a1b3ea7bbe60cf74a66802509a98" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;cohan_msgs::msg::TrackedAgents&gt;::SharedPtr<sp/><ref refid="classhateb__local__planner_1_1Agents_1a43e6a1b3ea7bbe60cf74a66802509a98" kindref="member">tracked_agents_sub_</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192" refid="classhateb__local__planner_1_1Agents_1ae1307edfe061fd1b7e89177b42cf6ff2" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;tf2_ros::Buffer&gt;<sp/><ref refid="classhateb__local__planner_1_1Agents_1ae1307edfe061fd1b7e89177b42cf6ff2" kindref="member">tf_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193" refid="classhateb__local__planner_1_1Agents_1aaab29138ac693b4c37b4646d597fe5ad" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;nav2_costmap_2d::Costmap2DROS&gt;<sp/><ref refid="classhateb__local__planner_1_1Agents_1aaab29138ac693b4c37b4646d597fe5ad" kindref="member">costmap_ros_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194" refid="classhateb__local__planner_1_1Agents_1abc9cb7e14a8a1ad313106fd5fb49b0a3" refkind="member"><highlight class="normal"><sp/><sp/>nav2_costmap_2d::Costmap2D*<sp/><ref refid="classhateb__local__planner_1_1Agents_1abc9cb7e14a8a1ad313106fd5fb49b0a3" kindref="member">costmap_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195" refid="classhateb__local__planner_1_1Agents_1ab5711d97468ae028798e06c4a313dc3b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1ab5711d97468ae028798e06c4a313dc3b" kindref="member">inflation_radius_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="196" refid="classhateb__local__planner_1_1Agents_1ab5acc47f6498920b7ec9085acdbff912" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classhateb__local__planner_1_1Agents_1ab5acc47f6498920b7ec9085acdbff912" kindref="member">ns_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197" refid="classhateb__local__planner_1_1Agents_1a92d7b4605a02a25b253f01c8047a1b68" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classhateb__local__planner_1_1Agents_1a92d7b4605a02a25b253f01c8047a1b68" kindref="member">map_frame_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="198" refid="classhateb__local__planner_1_1Agents_1a97a44f1de0e8baf4878349fe4c276dc2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Agents_1a97a44f1de0e8baf4878349fe4c276dc2" kindref="member">planning_mode_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199" refid="classhateb__local__planner_1_1Agents_1a792d2cfb8e7ca342b9146730de7c5438" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;HATebConfig&gt;<sp/><ref refid="classhateb__local__planner_1_1Agents_1a792d2cfb8e7ca342b9146730de7c5438" kindref="member">cfg_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="200"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hateb_local_planner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp"/>
+  </compounddef>
+</doxygen>

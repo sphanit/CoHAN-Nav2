@@ -1,0 +1,2767 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1HATebOptimalPlanner" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::HATebOptimalPlanner</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1PlannerInterface" prot="public" virt="non-virtual">hateb_local_planner::PlannerInterface</basecompoundref>
+    <includes refid="optimal__planner_8h" local="no">optimal_planner.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Hyper-Graph creation and optimization</header>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a67449bdd3d18c95090df8848ace72257" prot="protected" static="no" mutable="no">
+        <type>rclcpp_lifecycle::LifecycleNode::SharedPtr</type>
+        <definition>rclcpp_lifecycle::LifecycleNode::SharedPtr hateb_local_planner::HATebOptimalPlanner::node_</definition>
+        <argsstring></argsstring>
+        <name>node_</name>
+        <briefdescription>
+<para>Shared pointer to lifecycle node for ROS2 operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="810" column="46" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="810" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a04b132becc2fdc73fffa0e1cec7c2ba9" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> *</type>
+        <definition>const HATebConfig* hateb_local_planner::HATebOptimalPlanner::cfg_</definition>
+        <argsstring></argsstring>
+        <name>cfg_</name>
+        <briefdescription>
+<para>Config class that stores and manages all related parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="811" column="21" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="811" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a2c4f01807b35c3c4a9bb2867ef5db7b0" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacehateb__local__planner_1aa2fd52c70b6b2295dc138647919ea794" kindref="member">ObstContainer</ref> *</type>
+        <definition>ObstContainer* hateb_local_planner::HATebOptimalPlanner::obstacles_</definition>
+        <argsstring></argsstring>
+        <name>obstacles_</name>
+        <briefdescription>
+<para>Store obstacles that are relevant for planning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="812" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="812" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a0bd9fdbca661e59f886e4ef68988e2df" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="namespacehateb__local__planner_1aa1464081de429166488fe52d38f977c6" kindref="member">ViaPointContainer</ref> *</type>
+        <definition>const ViaPointContainer* hateb_local_planner::HATebOptimalPlanner::via_points_</definition>
+        <argsstring></argsstring>
+        <name>via_points_</name>
+        <briefdescription>
+<para>Store via points for planning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="813" column="27" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="813" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a4f6d86ca0956341fbca032e4b318c282" prot="protected" static="no" mutable="no">
+        <type>const std::map&lt; uint64_t, <ref refid="namespacehateb__local__planner_1aa1464081de429166488fe52d38f977c6" kindref="member">ViaPointContainer</ref> &gt; *</type>
+        <definition>const std::map&lt;uint64_t, ViaPointContainer&gt;* hateb_local_planner::HATebOptimalPlanner::agents_via_points_map_</definition>
+        <argsstring></argsstring>
+        <name>agents_via_points_map_</name>
+        <briefdescription>
+<para>Store via points for multiple agents, where each agent is identified by a unique ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="814" column="18" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="814" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a65728043d6fbd342fa52e105fc84cc54" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacehateb__local__planner_1a3106e664caee6d9f224ff0b25fb131f0" kindref="member">TebVisualizationPtr</ref></type>
+        <definition>TebVisualizationPtr hateb_local_planner::HATebOptimalPlanner::visualization_</definition>
+        <argsstring></argsstring>
+        <name>visualization_</name>
+        <briefdescription>
+<para>Instance of the visualization class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="817" column="23" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="817" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a7d3a7fbd57ebb83d56fbacc6bd717113" prot="protected" static="no" mutable="no">
+        <type><ref refid="classhateb__local__planner_1_1TimedElasticBand" kindref="compound">TimedElasticBand</ref></type>
+        <definition>TimedElasticBand hateb_local_planner::HATebOptimalPlanner::teb_</definition>
+        <argsstring></argsstring>
+        <name>teb_</name>
+        <briefdescription>
+<para>Actual trajectory object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="818" column="20" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="818" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1aff6c34b0707f723264f06c924cd7a644" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; uint64_t, <ref refid="classhateb__local__planner_1_1TimedElasticBand" kindref="compound">TimedElasticBand</ref> &gt;</type>
+        <definition>std::map&lt;uint64_t, TimedElasticBand&gt; hateb_local_planner::HATebOptimalPlanner::agents_tebs_map_</definition>
+        <argsstring></argsstring>
+        <name>agents_tebs_map_</name>
+        <briefdescription>
+<para>Map of TEBs of agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="819" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="819" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a90122d995194c1f2a4ca771d09f2783c" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacehateb__local__planner_1abe95adae9e2ba3cab50c815dba133141" kindref="member">FootprintModelPtr</ref></type>
+        <definition>FootprintModelPtr hateb_local_planner::HATebOptimalPlanner::robot_model_</definition>
+        <argsstring></argsstring>
+        <name>robot_model_</name>
+        <briefdescription>
+<para>Robot model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="820" column="21" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="820" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1acd1ce4b6ce3223ae4f98f70ae846a01e" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacehateb__local__planner_1acfe48bd575f55ee9148d03b363f72c0c" kindref="member">CircularFootprintPtr</ref></type>
+        <definition>CircularFootprintPtr hateb_local_planner::HATebOptimalPlanner::agent_model_</definition>
+        <argsstring></argsstring>
+        <name>agent_model_</name>
+        <briefdescription>
+<para>Agent Footprint model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="821" column="24" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="821" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a83c8f36cd452e5aa7bd527c423495ac1" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; g2o::SparseOptimizer &gt;</type>
+        <definition>std::shared_ptr&lt;g2o::SparseOptimizer&gt; hateb_local_planner::HATebOptimalPlanner::optimizer_</definition>
+        <argsstring></argsstring>
+        <name>optimizer_</name>
+        <briefdescription>
+<para>g2o optimizer for trajectory optimization </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="822" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="822" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ae4e5bc2946437d416c63553467a02bf9" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; uint64_t, std::pair&lt; bool, geometry_msgs::msg::Twist &gt; &gt;</type>
+        <definition>std::map&lt;uint64_t, std::pair&lt;bool, geometry_msgs::msg::Twist&gt; &gt; hateb_local_planner::HATebOptimalPlanner::agents_vel_start_</definition>
+        <argsstring></argsstring>
+        <name>agents_vel_start_</name>
+        <briefdescription>
+<para>Initial velocities for each agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="824" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="824" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a72752b037e5b8a1acbb7288959b4052c" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; uint64_t, std::pair&lt; bool, geometry_msgs::msg::Twist &gt; &gt;</type>
+        <definition>std::map&lt;uint64_t, std::pair&lt;bool, geometry_msgs::msg::Twist&gt; &gt; hateb_local_planner::HATebOptimalPlanner::agents_vel_goal_</definition>
+        <argsstring></argsstring>
+        <name>agents_vel_goal_</name>
+        <briefdescription>
+<para>Goal velocities for each agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="825" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="825" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ab2c318cd69ef57cd8c6e1fecb90315ae" prot="protected" static="no" mutable="no">
+        <type>std::pair&lt; bool, geometry_msgs::msg::Twist &gt;</type>
+        <definition>std::pair&lt;bool, geometry_msgs::msg::Twist&gt; hateb_local_planner::HATebOptimalPlanner::vel_start_</definition>
+        <argsstring></argsstring>
+        <name>vel_start_</name>
+        <briefdescription>
+<para>Store the initial velocity at the start pose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="826" column="13" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="826" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ae315984e6ad7c376df0ea90926ed4e7f" prot="protected" static="no" mutable="no">
+        <type>std::pair&lt; bool, geometry_msgs::msg::Twist &gt;</type>
+        <definition>std::pair&lt;bool, geometry_msgs::msg::Twist&gt; hateb_local_planner::HATebOptimalPlanner::vel_goal_</definition>
+        <argsstring></argsstring>
+        <name>vel_goal_</name>
+        <briefdescription>
+<para>Store the final velocity at the goal pose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="827" column="13" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="827" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a0d4cf29024ce008da526728788ad1976" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; geometry_msgs::msg::Pose &gt;</type>
+        <definition>std::vector&lt;geometry_msgs::msg::Pose&gt; hateb_local_planner::HATebOptimalPlanner::static_agents_</definition>
+        <argsstring></argsstring>
+        <name>static_agents_</name>
+        <briefdescription>
+<para>Store poses of static agents in the environment that do not move but need consideration for visibility and safety. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="828" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="828" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a4243d25c0e5d1dc99876b657d6e9794c" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebOptimalPlanner::initialized_</definition>
+        <argsstring></argsstring>
+        <name>initialized_</name>
+        <briefdescription>
+<para>Keeps track about the correct initialization of this class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="829" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="829" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a916717d89dfda942f8b90dc14b4c34fd" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebOptimalPlanner::optimized_</definition>
+        <argsstring></argsstring>
+        <name>optimized_</name>
+        <briefdescription>
+<para>This variable is <computeroutput>true</computeroutput> as long as the last optimization has been completed successful. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="830" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="830" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a7afb6ae1a80b43f3d3a0084fc0e1b331" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hateb_local_planner::HATebOptimalPlanner::isMode_</definition>
+        <argsstring></argsstring>
+        <name>isMode_</name>
+        <briefdescription>
+<para>Planning Mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="831" column="7" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="831" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a831a2a255fd495ac875ecb1f894c9592" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; hateb_local_planner::HATebOptimalPlanner::agent_nominal_vels_</definition>
+        <argsstring></argsstring>
+        <name>agent_nominal_vels_</name>
+        <briefdescription>
+<para>Nominal agent velocities calculated using moving average filter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="832" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="832" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a61909bbad0ba534b0ac60f9348abfbab" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebOptimalPlanner::current_agent_robot_min_dist_</definition>
+        <argsstring></argsstring>
+        <name>current_agent_robot_min_dist_</name>
+        <briefdescription>
+<para>Controls addition of edges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="833" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="833" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ab6049d355191d195690e78f44ba52a0a" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebOptimalPlanner::cost_</definition>
+        <argsstring></argsstring>
+        <name>cost_</name>
+        <briefdescription>
+<para>Store cost value of the current hyper-graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="834" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="834" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a941be197a07ee679df10662ac878c2ba" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacehateb__local__planner_1a463aa878b6972598ee87204519a60ba0" kindref="member">RotType</ref></type>
+        <definition>RotType hateb_local_planner::HATebOptimalPlanner::prefer_rotdir_</definition>
+        <argsstring></argsstring>
+        <name>prefer_rotdir_</name>
+        <briefdescription>
+<para>Store whether to prefer a specific initial rotation in optimization (might be activated in case the robot oscillates) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="835" column="11" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="835" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebOptimalPlanner::buildGraph</definition>
+        <argsstring>(double weight_multiplier=1.0)</argsstring>
+        <name>buildGraph</name>
+        <param>
+          <type>double</type>
+          <declname>weight_multiplier</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Build the hyper-graph representing the TEB optimization problem. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method creates the optimization problem according to the hyper-graph formulation. <linebreak/>
+For more details refer to the literature cited in the <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner" kindref="compound">HATebOptimalPlanner</ref> class description. <simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a6e652e17dc61ccc3afbbf27753cfe183" kindref="member">clearGraph</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight_multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify a weight multipler for selected weights in optimizeGraph This might be used for weight adapation strategies. Currently, only obstacle collision weights are considered. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput>, if the graph was created successfully, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="527" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="476" bodyend="556"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebOptimalPlanner::optimizeGraph</definition>
+        <argsstring>(int no_iterations, bool clear_after=true)</argsstring>
+        <name>optimizeGraph</name>
+        <param>
+          <type>int</type>
+          <declname>no_iterations</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>clear_after</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Optimize the previously constructed hyper-graph to deform / optimize the TEB. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method invokes the g2o framework to solve the optimization problem considering dedicated sparsity patterns. <linebreak/>
+The current implementation calls a non-constrained sparse Levenberg-Marquardt algorithm. Constraints are considered by utilizing penalty approximations. Refer to the literature cited in the <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner" kindref="compound">HATebOptimalPlanner</ref> class description. <simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a6e652e17dc61ccc3afbbf27753cfe183" kindref="member">clearGraph</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>no_iterations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of solver iterations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clear_after</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Clear the graph after optimization. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput>, if optimization terminates successfully, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="541" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="558" bodyend="593"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a6e652e17dc61ccc3afbbf27753cfe183" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::clearGraph</definition>
+        <argsstring>()</argsstring>
+        <name>clearGraph</name>
+        <briefdescription>
+<para>Clear an existing internal hyper-graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="548" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="595" bodyend="607"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a88285ad4083d865616fd147ce7c4a989" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddTEBVertices</definition>
+        <argsstring>()</argsstring>
+        <name>AddTEBVertices</name>
+        <briefdescription>
+<para>Add all relevant vertices to the hyper-graph as optimizable variables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Vertices (if unfixed) represent the variables that will be optimized. <linebreak/>
+In case of the Timed-Elastic-Band poses and time differences form the vertices of the hyper-graph. <linebreak/>
+The order of insertion of vertices (to the graph) is important for efficiency, since it affect the sparsity pattern of the underlying hessian computed for optimization. <simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="562" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="609" bodyend="642"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a363241ecbe1f6e6344cfb76ab27d110e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesVelocity</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) for limiting the translational and angular velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeVelocity" kindref="compound">EdgeVelocity</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="570" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1069" bodyend="1115"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a56464116a1efc32210f5da71de86a3a8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesVelocityForAgents</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesVelocityForAgents</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) for limiting the translational and angular velocity for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeVelocity" kindref="compound">EdgeVelocity</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="578" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1117" bodyend="1176"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a98bde77d0b7417f9485d34efaa478cc5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesAcceleration</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesAcceleration</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) for limiting the translational and angular acceleration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeAcceleration" kindref="compound">EdgeAcceleration</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeAccelerationStart" kindref="compound">EdgeAccelerationStart</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeAccelerationGoal" kindref="compound">EdgeAccelerationGoal</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="588" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1178" bodyend="1273"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a4b7070d271ab2c6dc60a68865f66c408" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesAccelerationForAgents</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesAccelerationForAgents</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) for limiting the translational and angular acceleration for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeAcceleration" kindref="compound">EdgeAcceleration</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeAccelerationStart" kindref="compound">EdgeAccelerationStart</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeAccelerationGoal" kindref="compound">EdgeAccelerationGoal</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="598" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1275" bodyend="1378"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ad88b6b939c644ffb86a860fca4f33168" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesTimeOptimal</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesTimeOptimal</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) for minimizing the transition time (resp. minimize time differences) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeTimeOptimal" kindref="compound">EdgeTimeOptimal</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="606" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1380" bodyend="1395"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a7a739255b39b04b00c3ca49baa188d7e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesTimeOptimalForAgents</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesTimeOptimalForAgents</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) for minimizing the transition time (resp. minimize time differences) for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeTimeOptimal" kindref="compound">EdgeTimeOptimal</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="614" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1397" bodyend="1417"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1acf3f641fb33b95e59b34324dac7abc06" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesShortestPath</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesShortestPath</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) for minimizing the path length. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeShortestPath" kindref="compound">EdgeShortestPath</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="622" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1419" bodyend="1435"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ae189d50a2ccfddefc7e66050867b6ff0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesObstacles</definition>
+        <argsstring>(double weight_multiplier=1.0)</argsstring>
+        <name>AddEdgesObstacles</name>
+        <param>
+          <type>double</type>
+          <declname>weight_multiplier</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Add all edges (local cost functions) related to keeping a distance from static obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>do not combine with AddEdgesInflatedObstacles </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeObstacle" kindref="compound">EdgeObstacle</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight_multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify an additional weight multipler (in addition to the the config weight) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="632" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="644" bodyend="755"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ab208a3d0c0d7bc25a1cf3b72c9ac0a90" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesObstaclesLegacy</definition>
+        <argsstring>(double weight_multiplier=1.0)</argsstring>
+        <name>AddEdgesObstaclesLegacy</name>
+        <param>
+          <type>double</type>
+          <declname>weight_multiplier</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Add all edges (local cost functions) related to keeping a distance from static obstacles (legacy association strategy) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>do not combine with AddEdgesInflatedObstacles </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeObstacle" kindref="compound">EdgeObstacle</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight_multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify an additional weight multipler (in addition to the the config weight) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="642" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="757" bodyend="841"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1aa5fc23432c461c8532ceec7c51839f41" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesObstaclesForAgents</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesObstaclesForAgents</name>
+        <briefdescription>
+<para>Add edges to the graph to maintain distance between agents and static obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds edges (cost functions) that help maintain safe distances between each agent and static obstacles in the environment. Similar to <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ae189d50a2ccfddefc7e66050867b6ff0" kindref="member">AddEdgesObstacles()</ref> but specifically handles the agent trajectories from the agents_tebs_map_. <simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeObstacle" kindref="compound">EdgeObstacle</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="654" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="844" bodyend="897"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a1793dd5538b4a4618236a63dcf7b7c63" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesViaPoints</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesViaPoints</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) related to minimizing the distance to via-points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeViaPoint" kindref="compound">EdgeViaPoint</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="662" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="986" bodyend="1026"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a0bd2440f89709983ed1118ea17dba116" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesViaPointsForAgents</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesViaPointsForAgents</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) related to minimizing the distance to via-points for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeViaPoint" kindref="compound">EdgeViaPoint</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="670" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1028" bodyend="1067"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a5a66f195ad6423591d54250ab6c6ef77" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesDynamicObstacles</definition>
+        <argsstring>(double weight_multiplier=1.0)</argsstring>
+        <name>AddEdgesDynamicObstacles</name>
+        <param>
+          <type>double</type>
+          <declname>weight_multiplier</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Add all edges (local cost functions) related to keeping a distance from dynamic (moving) obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeDynamicObstacle" kindref="compound">EdgeDynamicObstacle</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight_multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify an additional weight multipler (in addition to the the config weight) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="679" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="899" bodyend="925"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ae25ef1b28d3a16c2aaf2c04af4376e34" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesDynamicObstaclesForAgents</definition>
+        <argsstring>(double weight_multiplier=1.0)</argsstring>
+        <name>AddEdgesDynamicObstaclesForAgents</name>
+        <param>
+          <type>double</type>
+          <declname>weight_multiplier</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Add all edges (local cost functions) related to keeping a distance from dynamic (moving) obstacles in case of humans. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeDynamicObstacle" kindref="compound">EdgeDynamicObstacle</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight_multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify an additional weight multipler (in addition to the the config weight) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="688" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="956" bodyend="984"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a7c82586c302573f7ad8245443807b5d1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesInvisibleHumans</definition>
+        <argsstring>(double weight_multiplier=1.0)</argsstring>
+        <name>AddEdgesInvisibleHumans</name>
+        <param>
+          <type>double</type>
+          <declname>weight_multiplier</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Add edges to consider invisible humans in trajectory optimization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds cost function edges to handle regions where humans might be present but not directly visible to the robot&apos;s sensors. This helps create safer trajectories in areas with potential occlusions or blind spots. <simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeInvisibleHuman" kindref="compound">EdgeInvisibleHuman</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight_multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scaling factor for the invisible human cost weights </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="701" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="927" bodyend="954"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a1862d2cad46925e3414c8c0d3617b8b1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesStaticAgentVisibility</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesStaticAgentVisibility</name>
+        <briefdescription>
+<para>Add edges to consider visibility constraints for static agents. Penelizes robot for entering a human fov from behind and very closely. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeStaticAgentVisibility" kindref="compound">EdgeStaticAgentVisibility</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="710" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1665" bodyend="1683"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a32ddd728e75b020f30c2d14a9bd4a050" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesKinematicsDiffDrive</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesKinematicsDiffDrive</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) for satisfying kinematic constraints of a differential drive robot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>do not combine with <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ac820063215c9c4e32afd9138193ee842" kindref="member">AddEdgesKinematicsCarlike()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ac820063215c9c4e32afd9138193ee842" kindref="member">AddEdgesKinematicsCarlike</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="719" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1437" bodyend="1457"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a85b3081e444131d3f24c39c098cf420e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesKinematicsDiffDriveForAgents</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesKinematicsDiffDriveForAgents</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) for satisfying kinematic constraints of a differential drive agents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>do not combine with <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ac820063215c9c4e32afd9138193ee842" kindref="member">AddEdgesKinematicsCarlike()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ac820063215c9c4e32afd9138193ee842" kindref="member">AddEdgesKinematicsCarlike</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="728" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1459" bodyend="1481"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ac820063215c9c4e32afd9138193ee842" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesKinematicsCarlike</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesKinematicsCarlike</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) for satisfying kinematic constraints of a carlike robot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>do not combine with <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a32ddd728e75b020f30c2d14a9bd4a050" kindref="member">AddEdgesKinematicsDiffDrive()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a32ddd728e75b020f30c2d14a9bd4a050" kindref="member">AddEdgesKinematicsDiffDrive</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="737" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1483" bodyend="1503"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ad26492f8699b04cec5fc71163c650088" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesKinematicsCarlikeForAgents</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesKinematicsCarlikeForAgents</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) for satisfying kinematic constraints of a carlike agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>do not combine with <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a32ddd728e75b020f30c2d14a9bd4a050" kindref="member">AddEdgesKinematicsDiffDrive()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a32ddd728e75b020f30c2d14a9bd4a050" kindref="member">AddEdgesKinematicsDiffDrive</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="746" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1505" bodyend="1528"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a5f293027e17a70b490989acbbed3458e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesPreferRotDir</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesPreferRotDir</name>
+        <briefdescription>
+<para>Add all edges (local cost functions) for prefering a specifiy turning direction (by penalizing the other one) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="752" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1530" bodyend="1568"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a14a2575907e70159197d011ac6e7e042" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesAgentRobotSafety</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesAgentRobotSafety</name>
+        <briefdescription>
+<para>Add edges to maintain safety distance between agents and robot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds cost function edges that ensure a minimum safety distance is maintained between the robot and all agents during trajectory optimization. <simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeAgentRobotSafety" kindref="compound">EdgeAgentRobotSafety</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="763" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1570" bodyend="1594"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1aca7d2bd5661e17ede42ac991c8db5cf5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesAgentAgentSafety</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesAgentAgentSafety</name>
+        <briefdescription>
+<para>Add edges to maintain safety distances between different agents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds cost function edges that ensure minimum safety distances are maintained between different agents during trajectory optimization to avoid inter-agent collisions. <simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeAgentAgentSafety" kindref="compound">EdgeAgentAgentSafety</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="774" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1596" bodyend="1614"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a48c6886c19a7cab8eb32c99246643228" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesAgentRobotRelVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesAgentRobotRelVelocity</name>
+        <briefdescription>
+<para>Add edges to control relative velocities between agents and robot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds cost function edges that help the robot to exploit the existing space and robot&apos;s velocity to increase human comfort. This makes the robot reduce its velocity in constrained spaces and move farther away with maximum velocity in open spaces. <simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeAgentRobotRelVelocity" kindref="compound">EdgeAgentRobotRelVelocity</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="787" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1616" bodyend="1643"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ae05329a34cf6f91a1d75267517a9c58d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::AddEdgesAgentRobotVisibility</definition>
+        <argsstring>()</argsstring>
+        <name>AddEdgesAgentRobotVisibility</name>
+        <briefdescription>
+<para>Add edges to maintain visibility constraints between agents and robot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds cost function edges that encourage the robot to enter the human&apos;s FOV at an appropriate angle and distance, helping ensure that agents (especially humans) can see and predict the robot&apos;s movements. <simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1EdgeAgentRobotVisibility" kindref="compound">EdgeAgentRobotVisibility</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" kindref="member">buildGraph</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="799" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1645" bodyend="1663"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a149fc469d62a8d846580ab6ef0e1accc" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; g2o::SparseOptimizer &gt;</type>
+        <definition>std::shared_ptr&lt; g2o::SparseOptimizer &gt; hateb_local_planner::HATebOptimalPlanner::initOptimizer</definition>
+        <argsstring>()</argsstring>
+        <name>initOptimizer</name>
+        <briefdescription>
+<para>Initialize and configure the g2o sparse optimizer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>shared pointer to the g2o::SparseOptimizer instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="807" column="26" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="173" bodyend="191"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Plan a trajectory  &lt;br&gt;</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1aaf933e800dc904a8298455a61009fc57" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebOptimalPlanner::plan</definition>
+        <argsstring>(const std::vector&lt; geometry_msgs::msg::PoseStamped &gt; &amp;initial_plan, const geometry_msgs::msg::Twist *start_vel=nullptr, bool free_goal_vel=false, const AgentPlanVelMap *initial_agent_plan_vel_map=nullptr, hateb_local_planner::msg::OptimizationCostArray *op_costs=nullptr, double dt_ref=0.4, double dt_hyst=0.1, int Mode=0) override</argsstring>
+        <name>plan</name>
+        <reimplements refid="classhateb__local__planner_1_1PlannerInterface_1aa1b6ecf56adc56f150c7d980b853e001">plan</reimplements>
+        <param>
+          <type>const std::vector&lt; geometry_msgs::msg::PoseStamped &gt; &amp;</type>
+          <declname>initial_plan</declname>
+        </param>
+        <param>
+          <type>const geometry_msgs::msg::Twist *</type>
+          <declname>start_vel</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>free_goal_vel</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const <ref refid="namespacehateb__local__planner_1a3b4752a48696bcc63570d62786fb9736" kindref="member">AgentPlanVelMap</ref> *</type>
+          <declname>initial_agent_plan_vel_map</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>hateb_local_planner::msg::OptimizationCostArray *</type>
+          <declname>op_costs</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_ref</declname>
+          <defval>0.4</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_hyst</declname>
+          <defval>0.1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Mode</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Plan a trajectory based on an initial reference plan. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Call this method to create and optimize a trajectory that is initialized according to an initial reference plan (given as a container of poses). <linebreak/>
+The method supports hot-starting from previous solutions, if avaiable: <linebreak/>
+<itemizedlist>
+<listitem><para>If no trajectory exist yet, a new trajectory is initialized based on the initial plan, see TimedElasticBand::initTEBtoGoal</para>
+</listitem><listitem><para>If a previous solution is avaiable, update the trajectory based on the initial plan, see bool <ref refid="classhateb__local__planner_1_1TimedElasticBand_1aca5d7bbd67a53062d95690efdd76056e" kindref="member">TimedElasticBand::updateAndPruneTEB</ref></para>
+</listitem><listitem><para>Afterwards optimize the recently initialized or updated trajectory by calling <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a5a692c152e65152920ccc49f00ddde5e" kindref="member">optimizeTEB()</ref> and invoking g2o <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initial_plan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of geometry_msgs::msg::PoseStamped </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_vel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current start velocity (e.g. the velocity of the robot, only linear.x, linear.y (holonomic) and angular.z are used) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>free_goal_vel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default: false) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if planning was successful, <computeroutput>false</computeroutput> otherwise </para>
+</simplesect>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="179" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="253" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ac8355340ec1d4e0b134692caf8ecd119" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebOptimalPlanner::plan</definition>
+        <argsstring>(const PoseSE2 &amp;start, const PoseSE2 &amp;goal, const geometry_msgs::msg::Twist *start_vel=nullptr, bool free_goal_vel=false, double pre_plan_time=0.0, hateb_local_planner::msg::OptimizationCostArray *op_costs=nullptr, double dt_ref=0.4, double dt_hyst=0.1, int Mode=0) override</argsstring>
+        <name>plan</name>
+        <reimplements refid="classhateb__local__planner_1_1PlannerInterface_1a7794e02a171d46f1a0e5a0db75d849d0">plan</reimplements>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>goal</declname>
+        </param>
+        <param>
+          <type>const geometry_msgs::msg::Twist *</type>
+          <declname>start_vel</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>free_goal_vel</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>pre_plan_time</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>hateb_local_planner::msg::OptimizationCostArray *</type>
+          <declname>op_costs</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_ref</declname>
+          <defval>0.4</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_hyst</declname>
+          <defval>0.1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Mode</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Plan a trajectory between a given start and goal pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Call this method to create and optimize a trajectory that is initialized between a given start and goal pose. <linebreak/>
+The method supports hot-starting from previous solutions, if avaiable: <linebreak/>
+<itemizedlist>
+<listitem><para>If no trajectory exist yet, a new trajectory is initialized between start and goal poses <simplesect kind="see"><para>TimedElasticBand::initTEBtoGoal</para>
+</simplesect>
+</para>
+</listitem><listitem><para>If a previous solution is avaiable, update the trajectory <simplesect kind="see"><para>bool <ref refid="classhateb__local__planner_1_1TimedElasticBand_1aca5d7bbd67a53062d95690efdd76056e" kindref="member">TimedElasticBand::updateAndPruneTEB</ref></para>
+</simplesect>
+</para>
+</listitem><listitem><para>Afterwards optimize the recently initialized or updated trajectory by calling <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a5a692c152e65152920ccc49f00ddde5e" kindref="member">optimizeTEB()</ref> and invoking g2o <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> containing the start pose of the trajectory </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>goal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> containing the goal pose of the trajectory </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_vel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial velocity at the start pose (twist message containing the translational and angular velocity). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>free_goal_vel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default: false) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if planning was successful, <computeroutput>false</computeroutput> otherwise </para>
+</simplesect>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="199" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="422" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a45d33cda00a92fff9d9eac95ba719182" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebOptimalPlanner::getVelocityCommand</definition>
+        <argsstring>(double &amp;vx, double &amp;vy, double &amp;omega, int look_ahead_poses, double dt_ref) const override</argsstring>
+        <name>getVelocityCommand</name>
+        <reimplements refid="classhateb__local__planner_1_1PlannerInterface_1a358434cc932aef04ef5c058de6e9932d">getVelocityCommand</reimplements>
+        <param>
+          <type>double &amp;</type>
+          <declname>vx</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>vy</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>omega</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>look_ahead_poses</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_ref</declname>
+        </param>
+        <briefdescription>
+<para>Get the velocity command from a previously optimized plan to control the robot at the current sampling interval. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Call <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aaf933e800dc904a8298455a61009fc57" kindref="member">plan()</ref> first and check if the generated plan is feasible. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">vx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>translational velocity [m/s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">vy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>strafing velocity which can be nonzero for holonomic robots[m/s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">omega</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rotational velocity [rad/s] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if command is valid, <computeroutput>false</computeroutput> otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="210" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1769" bodyend="1800"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a5a692c152e65152920ccc49f00ddde5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebOptimalPlanner::optimizeTEB</definition>
+        <argsstring>(int iterations_innerloop, int iterations_outerloop, bool compute_cost_afterwards=true, double obst_cost_scale=1.0, double viapoint_cost_scale=1.0, bool alternative_time_cost=false, hateb_local_planner::msg::OptimizationCostArray *op_costs=nullptr, double dt_ref=0.4, double dt_hyst=0.1)</argsstring>
+        <name>optimizeTEB</name>
+        <param>
+          <type>int</type>
+          <declname>iterations_innerloop</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iterations_outerloop</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>compute_cost_afterwards</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>obst_cost_scale</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>viapoint_cost_scale</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alternative_time_cost</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>hateb_local_planner::msg::OptimizationCostArray *</type>
+          <declname>op_costs</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_ref</declname>
+          <defval>0.4</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_hyst</declname>
+          <defval>0.1</defval>
+        </param>
+        <briefdescription>
+<para>Optimize a previously initialized trajectory (actual TEB optimization loop). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>optimizeTEB implements the main optimization loop. <linebreak/>
+It consist of two nested loops:<itemizedlist>
+<listitem><para>The outer loop resizes the trajectory according to the temporal resolution by invoking <ref refid="classhateb__local__planner_1_1TimedElasticBand_1a3576adcaec45103edd7e1d0da6b97a7b" kindref="member">TimedElasticBand::autoResize()</ref>. Afterwards the internal method <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" kindref="member">optimizeGraph()</ref> is called that constitutes the innerloop.</para>
+</listitem><listitem><para>The inner loop calls the solver (g2o framework, resp. sparse Levenberg-Marquardt) and iterates a specified number of optimization calls (<computeroutput>iterations_innerloop</computeroutput>).</para>
+</listitem></itemizedlist>
+</para>
+<para>The outer loop is repeated <computeroutput>iterations_outerloop</computeroutput> times. <linebreak/>
+The ratio of inner and outer loop iterations significantly defines the contraction behavior and convergence rate of the trajectory optimization. Based on our experiences, 2-6 innerloop iterations are sufficient. <linebreak/>
+The number of outer loop iterations should be determined by considering the maximum CPU time required to match the control rate. <linebreak/>
+Optionally, the cost vector can be calculated by specifying <computeroutput>compute_cost_afterwards</computeroutput>, see <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a86e748141af6ffd711a70e64d3a9de8d" kindref="member">computeCurrentCost()</ref>. <simplesect kind="remark"><para>This method is usually called from a <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aaf933e800dc904a8298455a61009fc57" kindref="member">plan()</ref> method </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iterations_innerloop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of iterations for the actual solver loop </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iterations_outerloop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies how often the trajectory should be resized followed by the inner solver loop. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>compute_cost_afterwards</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput> Calculate the cost vector according to <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a86e748141af6ffd711a70e64d3a9de8d" kindref="member">computeCurrentCost()</ref>, the vector can be accessed afterwards using <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a14121a40a8e8961df0fffdef4145f4a2" kindref="member">getCurrentCost()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obst_cost_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify extra scaling for obstacle costs (only used if <computeroutput>compute_cost_afterwards</computeroutput> is true) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>viapoint_cost_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify extra scaling for via-point costs (only used if <computeroutput>compute_cost_afterwards</computeroutput> is true) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alternative_time_cost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replace the cost for the time optimal objective by the actual (weighted) transition time (only used if <computeroutput>compute_cost_afterwards</computeroutput> is true). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the optimization terminates successfully, <computeroutput>false</computeroutput> otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="239" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="200" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1afb0b55509c552591d8dd66e7b554dac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebOptimalPlanner::optimizeTEB</definition>
+        <argsstring>(int iterations_innerloop, int iterations_outerloop, bool compute_cost_afterwards=true, double obst_cost_scale=1.0, double viapoint_cost_scale=1.0, bool alternative_time_cost=false, hateb_local_planner::msg::OptimizationCostArray *op_costs=nullptr)</argsstring>
+        <name>optimizeTEB</name>
+        <param>
+          <type>int</type>
+          <declname>iterations_innerloop</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iterations_outerloop</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>compute_cost_afterwards</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>obst_cost_scale</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>viapoint_cost_scale</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alternative_time_cost</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>hateb_local_planner::msg::OptimizationCostArray *</type>
+          <declname>op_costs</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="242" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="193" bodyend="198"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Desired initial and final velocity</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a1253623cd73279d8e04a31431e6ae8e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::setVelocityStart</definition>
+        <argsstring>(const geometry_msgs::msg::Twist &amp;vel_start)</argsstring>
+        <name>setVelocityStart</name>
+        <param>
+          <type>const geometry_msgs::msg::Twist &amp;</type>
+          <declname>vel_start</declname>
+        </param>
+        <briefdescription>
+<para>Set the initial velocity at the trajectory&apos;s start pose (e.g. the robot&apos;s velocity) [twist overload]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>Calling this function is not neccessary if the initial velocity is passed via the <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aaf933e800dc904a8298455a61009fc57" kindref="member">plan()</ref> method </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vel_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current start velocity (e.g. the velocity of the robot, only linear.x and angular.z are used, for holonomic robots also linear.y) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="256" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="241" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a0538f3ac6a1c1c2919842e68ad664e51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::setVelocityGoal</definition>
+        <argsstring>(const geometry_msgs::msg::Twist &amp;vel_goal)</argsstring>
+        <name>setVelocityGoal</name>
+        <param>
+          <type>const geometry_msgs::msg::Twist &amp;</type>
+          <declname>vel_goal</declname>
+        </param>
+        <briefdescription>
+<para>Set the desired final velocity at the trajectory&apos;s goal pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>Call this function only if a non-zero velocity is desired and if <computeroutput>free_goal_vel</computeroutput> is set to <computeroutput>false</computeroutput> in <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aaf933e800dc904a8298455a61009fc57" kindref="member">plan()</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vel_goal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>twist message containing the translational and angular final velocity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="263" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="248" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ac1ac46ee301b91fa2ed3dc5a98b79abe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::setVelocityGoalFree</definition>
+        <argsstring>()</argsstring>
+        <name>setVelocityGoalFree</name>
+        <briefdescription>
+<para>Set the desired final velocity at the trajectory&apos;s goal pose to be the maximum velocity limit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>Calling this function is not neccessary if <computeroutput>free_goal_vel</computeroutput> is set to <computeroutput>false</computeroutput> in <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aaf933e800dc904a8298455a61009fc57" kindref="member">plan()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="269" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="269" bodyend="269"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Take obstacles into account</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1abd2577e4e34345c25ab5c052db0e7860" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::setObstVector</definition>
+        <argsstring>(ObstContainer *obst_vector)</argsstring>
+        <name>setObstVector</name>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1aa2fd52c70b6b2295dc138647919ea794" kindref="member">ObstContainer</ref> *</type>
+          <declname>obst_vector</declname>
+        </param>
+        <briefdescription>
+<para>Assign a new set of obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obst_vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to an obstacle container (can also be a nullptr) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>This method overrids the obstacle container optinally assigned in the constructor. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="281" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="281" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a4ffd8216e1e0d8dd4910bb7b7e25b0d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="namespacehateb__local__planner_1aa2fd52c70b6b2295dc138647919ea794" kindref="member">ObstContainer</ref> &amp;</type>
+        <definition>const ObstContainer&amp; hateb_local_planner::HATebOptimalPlanner::getObstVector</definition>
+        <argsstring>() const</argsstring>
+        <name>getObstVector</name>
+        <briefdescription>
+<para>Access the internal obstacle container. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Const reference to the obstacle container </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="287" column="23" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="287" bodyend="287"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Take via-points into account</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a28688e69d7df29314e6f79aba45ae29a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::setViaPoints</definition>
+        <argsstring>(const ViaPointContainer *via_points)</argsstring>
+        <name>setViaPoints</name>
+        <param>
+          <type>const <ref refid="namespacehateb__local__planner_1aa1464081de429166488fe52d38f977c6" kindref="member">ViaPointContainer</ref> *</type>
+          <declname>via_points</declname>
+        </param>
+        <briefdescription>
+<para>Assign a new set of via-points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>via_points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a via_point container (can also be a nullptr)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Any previously set container will be overwritten. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="299" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="299" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a9bd9307cd4fff3a63e77cf3ea27e8b34" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="namespacehateb__local__planner_1aa1464081de429166488fe52d38f977c6" kindref="member">ViaPointContainer</ref> &amp;</type>
+        <definition>const ViaPointContainer&amp; hateb_local_planner::HATebOptimalPlanner::getViaPoints</definition>
+        <argsstring>() const</argsstring>
+        <name>getViaPoints</name>
+        <briefdescription>
+<para>Access the internal via-point container. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Const reference to the via-point container </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="305" column="27" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="305" bodyend="305"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Visualization</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ad9d184de6eb90b09908e08b809c0da0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::setVisualization</definition>
+        <argsstring>(TebVisualizationPtr visualization)</argsstring>
+        <name>setVisualization</name>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1a3106e664caee6d9f224ff0b25fb131f0" kindref="member">TebVisualizationPtr</ref></type>
+          <declname>visualization</declname>
+        </param>
+        <briefdescription>
+<para>Register a <ref refid="classhateb__local__planner_1_1TebVisualization" kindref="compound">TebVisualization</ref> class to enable visiualization routines (e.g. publish the local plan and pose sequence) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visualization</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to a <ref refid="classhateb__local__planner_1_1TebVisualization" kindref="compound">TebVisualization</ref> instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a8a3875ec3b9ce7438b206be1f135eddf" kindref="member">visualize</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="317" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a8a3875ec3b9ce7438b206be1f135eddf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::visualize</definition>
+        <argsstring>() override</argsstring>
+        <name>visualize</name>
+        <reimplements refid="classhateb__local__planner_1_1PlannerInterface_1ad13778a54ca5746f9ec1f10bcfabb343">visualize</reimplements>
+        <briefdescription>
+<para>Publish the local plan and pose sequence via ros topics (e.g. subscribe with rviz). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Make sure to register a <ref refid="classhateb__local__planner_1_1TebVisualization" kindref="compound">TebVisualization</ref> instance before using <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ad9d184de6eb90b09908e08b809c0da0b" kindref="member">setVisualization()</ref> or an overlaoded constructor. <simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ad9d184de6eb90b09908e08b809c0da0b" kindref="member">setVisualization</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="325" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="107" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Utility methods and more</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a4796ce453bff8c7220ef872548d8415a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::clearPlanner</definition>
+        <argsstring>() override</argsstring>
+        <name>clearPlanner</name>
+        <reimplements refid="classhateb__local__planner_1_1PlannerInterface_1a325a73a30d9288b7d0d25aff9cc79bf9">clearPlanner</reimplements>
+        <briefdescription>
+<para>Reset the planner by clearing the internal graph and trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="335" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="335" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a7f526c0b7bb86bdddb1d5e6ec53a35af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::setPreferredTurningDir</definition>
+        <argsstring>(RotType dir) override</argsstring>
+        <name>setPreferredTurningDir</name>
+        <reimplements refid="classhateb__local__planner_1_1PlannerInterface_1a77c2811290d77a03dfd9f3fca759e41b">setPreferredTurningDir</reimplements>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1a463aa878b6972598ee87204519a60ba0" kindref="member">RotType</ref></type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Prefer a desired initial turning direction (by penalizing the opposing one) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A desired (initial) turning direction might be specified in case the planned trajectory oscillates between two solutions (in the same equivalence class!) with similar cost. Check the parameters in order to adjust the weight of the penalty. Initial means that the penalty is applied only to the first few poses of the trajectory. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter might be <ref refid="namespacehateb__local__planner_1a463aa878b6972598ee87204519a60ba0a811882fecd5c7618d7099ebbd39ea254" kindref="member">RotType::left</ref> (prefer left), <ref refid="namespacehateb__local__planner_1a463aa878b6972598ee87204519a60ba0a7c4f29407893c334a6cb7a87bf045c0d" kindref="member">RotType::right</ref> (prefer right) or <ref refid="namespacehateb__local__planner_1a463aa878b6972598ee87204519a60ba0a334c4a4c42fdb79d7ebc3e73b517e6f8" kindref="member">RotType::none</ref> (prefer none) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="351" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="351" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a70bf2b33af2fe42a4afd592ea804acf9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1TimedElasticBand" kindref="compound">TimedElasticBand</ref> &amp;</type>
+        <definition>TimedElasticBand&amp; hateb_local_planner::HATebOptimalPlanner::teb</definition>
+        <argsstring>()</argsstring>
+        <name>teb</name>
+        <briefdescription>
+<para>Access the internal <ref refid="classhateb__local__planner_1_1TimedElasticBand" kindref="compound">TimedElasticBand</ref> trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>In general, the underlying teb must not be modified directly. Use with care... </para>
+</simplesect>
+<simplesect kind="return"><para>reference to the teb </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="366" column="20" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="366" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ab877bd7d897b98fd4367673cf4196295" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classhateb__local__planner_1_1TimedElasticBand" kindref="compound">TimedElasticBand</ref> &amp;</type>
+        <definition>const TimedElasticBand&amp; hateb_local_planner::HATebOptimalPlanner::teb</definition>
+        <argsstring>() const</argsstring>
+        <name>teb</name>
+        <briefdescription>
+<para>Access the internal <ref refid="classhateb__local__planner_1_1TimedElasticBand" kindref="compound">TimedElasticBand</ref> trajectory (read-only). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the teb </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="372" column="26" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="372" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a3f81508ea412314c92349eac94bfa01a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; g2o::SparseOptimizer &gt;</type>
+        <definition>std::shared_ptr&lt;g2o::SparseOptimizer&gt; hateb_local_planner::HATebOptimalPlanner::optimizer</definition>
+        <argsstring>()</argsstring>
+        <name>optimizer</name>
+        <briefdescription>
+<para>Access the internal g2o optimizer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>In general, the underlying optimizer must not be modified directly. Use with care... </para>
+</simplesect>
+<simplesect kind="return"><para>const shared pointer to the g2o sparse optimizer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="379" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="379" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1aab84b24734a7c9bd9726b8a1c14ddd29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; const g2o::SparseOptimizer &gt;</type>
+        <definition>std::shared_ptr&lt;const g2o::SparseOptimizer&gt; hateb_local_planner::HATebOptimalPlanner::optimizer</definition>
+        <argsstring>() const</argsstring>
+        <name>optimizer</name>
+        <briefdescription>
+<para>Access the internal g2o optimizer (read-only). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const shared pointer to the g2o sparse optimizer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="385" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="385" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a4c1ff58192c4c12d463edef28fa201fa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebOptimalPlanner::isOptimized</definition>
+        <argsstring>() const</argsstring>
+        <name>isOptimized</name>
+        <briefdescription>
+<para>Check if last optimization was successful. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the last optimization returned without errors, otherwise <computeroutput>false</computeroutput> (also if no optimization has been called before). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="392" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="392" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a86e748141af6ffd711a70e64d3a9de8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::computeCurrentCost</definition>
+        <argsstring>(double obst_cost_scale=1.0, double viapoint_cost_scale=1.0, bool alternative_time_cost=false, hateb_local_planner::msg::OptimizationCostArray *op_costs=NULL)</argsstring>
+        <name>computeCurrentCost</name>
+        <param>
+          <type>double</type>
+          <declname>obst_cost_scale</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>viapoint_cost_scale</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alternative_time_cost</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>hateb_local_planner::msg::OptimizationCostArray *</type>
+          <declname>op_costs</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Compute the cost vector of a given optimization problen (hyper-graph must exist). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this method to obtain information about the current edge errors / costs (local cost functions). <linebreak/>
+The vector of cost values is composed according to the different edge types (time_optimal, obstacles, ...). <linebreak/>
+Refer to the method declaration for the detailed composition. <linebreak/>
+The cost for the edges that minimize time differences (<ref refid="classhateb__local__planner_1_1EdgeTimeOptimal" kindref="compound">EdgeTimeOptimal</ref>) corresponds to the sum of all single squared time differneces: <formula id="31">$ \sum_i \Delta T_i^2 $</formula>. Sometimes, the user may want to get a value that is proportional or identical to the actual trajectory transition time <formula id="32">$ \sum_i \Delta T_i $</formula>. <linebreak/>
+Set <computeroutput>alternative_time_cost</computeroutput> to true in order to get the cost calculated using the latter equation, but check the implemented definition, if the value is scaled to match the magnitude of other cost values. <simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a14121a40a8e8961df0fffdef4145f4a2" kindref="member">getCurrentCost</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a5a692c152e65152920ccc49f00ddde5e" kindref="member">optimizeTEB</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obst_cost_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify extra scaling for obstacle costs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>viapoint_cost_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify extra scaling for via points. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alternative_time_cost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replace the cost for the time optimal objective by the actual (weighted) transition time. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TebCostVec containing the cost values </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="412" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1685" bodyend="1730"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ab9b62c0b0f51fea9a1bf6e006ee8a92f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void hateb_local_planner::HATebOptimalPlanner::computeCurrentCost</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;cost, double obst_cost_scale=1.0, double viapoint_cost_scale=1.0, bool alternative_time_cost=false)</argsstring>
+        <name>computeCurrentCost</name>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>obst_cost_scale</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>viapoint_cost_scale</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alternative_time_cost</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute and return the cost of the current optimization graph (supports multiple trajectories) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">cost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current cost value for each trajectory [for a planner with just a single trajectory: size=1, vector will not be cleared] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obst_cost_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify extra scaling for obstacle costs </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>viapoint_cost_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify extra scaling for via points. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alternative_time_cost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replace the cost for the time optimal objective by the actual (weighted) transition time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="422" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="422" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a14121a40a8e8961df0fffdef4145f4a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebOptimalPlanner::getCurrentCost</definition>
+        <argsstring>() const</argsstring>
+        <name>getCurrentCost</name>
+        <briefdescription>
+<para>Access the cost vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The accumulated cost value previously calculated using computeCurrentCost or by calling optimizeTEB with enabled cost flag. <simplesect kind="return"><para>const reference to the TebCostVec. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="434" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="434" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a0972b44df1b8af799fad0b4591a5c13d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::extractVelocity</definition>
+        <argsstring>(const PoseSE2 &amp;pose1, const PoseSE2 &amp;pose2, double dt, double &amp;vx, double &amp;vy, double &amp;omega) const</argsstring>
+        <name>extractVelocity</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>pose1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>pose2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>vx</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>vy</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>omega</declname>
+        </param>
+        <briefdescription>
+<para>Extract the velocity from consecutive poses and a time difference (including strafing velocity for holonomic robots) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The velocity is extracted using finite differences. The direction of the translational velocity is also determined. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pose at time k </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pose2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>consecutive pose at time k+1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>actual time difference between k and k+1 (must be &gt;0 !!!) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">vx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>translational velocity </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">vy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>strafing velocity which can be nonzero for holonomic robots </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">omega</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rotational velocity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="448" column="15" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1732" bodyend="1767"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1aa7dee78946763bc1df12f14d21cf9175" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::getVelocityProfile</definition>
+        <argsstring>(std::vector&lt; geometry_msgs::msg::Twist &gt; &amp;velocity_profile) const</argsstring>
+        <name>getVelocityProfile</name>
+        <param>
+          <type>std::vector&lt; geometry_msgs::msg::Twist &gt; &amp;</type>
+          <declname>velocity_profile</declname>
+        </param>
+        <briefdescription>
+<para>Compute the velocity profile of the trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method computes the translational and rotational velocity for the complete planned trajectory. The first velocity is the one that is provided as initial velocity (fixed). Velocities at index k=2...end-1 are related to the transition from pose_{k-1} to pose_k. The last velocity is the final velocity (fixed). The number of Twist objects is therefore sizePoses()+1; In summary: v[0] = v_start, v[1,...end-1] = +-(pose_{k+1}-pose{k})/dt, v(end) = v_goal It can be used for evaluation and debugging purposes or for open-loop control. For computing the velocity required for controlling the robot to the next step refer to <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a45d33cda00a92fff9d9eac95ba719182" kindref="member">getVelocityCommand()</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">velocity_profile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>velocity profile will be written to this vector (after clearing any existing content) with the size=no_poses+1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="468" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1802" bodyend="1825"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a3cd51300a03e02cf1ee8908314ce7cb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>cohan_msgs::msg::Trajectory</type>
+        <definition>cohan_msgs::msg::Trajectory hateb_local_planner::HATebOptimalPlanner::getFullTrajectory</definition>
+        <argsstring>() const override</argsstring>
+        <name>getFullTrajectory</name>
+        <reimplements refid="classhateb__local__planner_1_1PlannerInterface_1a94c5dfe2281f2bc42d6909c50392959c">getFullTrajectory</reimplements>
+        <briefdescription>
+<para>Return the complete trajectory including poses, velocity profiles and temporal information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It is useful for evaluation and debugging purposes or for open-loop control. Since the velocity obtained using difference quotients is the mean velocity between consecutive poses, the velocity at each pose at time stamp k is obtained by taking the average between both velocities. The velocity of the first pose is v_start (provided initial value) and the last one is v_goal (usually zero, if free_goal_vel is off). See <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aa7dee78946763bc1df12f14d21cf9175" kindref="member">getVelocityProfile()</ref> for the list of velocities between consecutive points. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">trajectory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the resulting trajectory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="480" column="31" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1827" bodyend="1884"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a594a3e75c4d27969f790be3337b1a215" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>cohan_msgs::msg::Trajectory</type>
+        <definition>cohan_msgs::msg::Trajectory hateb_local_planner::HATebOptimalPlanner::getFullAgentTrajectory</definition>
+        <argsstring>(uint64_t agent_id) override</argsstring>
+        <name>getFullAgentTrajectory</name>
+        <reimplements refid="classhateb__local__planner_1_1PlannerInterface_1a6a71e3a4cb48bfd4c2ef94b849e8ab53">getFullAgentTrajectory</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>agent_id</declname>
+        </param>
+        <briefdescription>
+<para>Return the complete trajectory for a specific agent including poses, velocity profiles and temporal information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Similar to <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a3cd51300a03e02cf1ee8908314ce7cb2" kindref="member">getFullTrajectory()</ref> but specifically for retrieving an agent&apos;s planned trajectory. The trajectory includes pose sequence, velocity profile, and timing information useful for evaluation and debugging of agent behavior. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier of the agent whose trajectory should be retrieved </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The complete trajectory message for the specified agent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="491" column="31" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1886" bodyend="1945"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1abc499dacff66df22fba80074302ebf16" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebOptimalPlanner::isTrajectoryFeasible</definition>
+        <argsstring>(std::shared_ptr&lt; nav2_costmap_2d::FootprintCollisionChecker&lt; nav2_costmap_2d::Costmap2D * &gt;&gt; collision_checker, const std::vector&lt; geometry_msgs::msg::Point &gt; &amp;footprint_spec, double inscribed_radius=0.0, double circumscribed_radius=0.0, int look_ahead_idx=-1) override</argsstring>
+        <name>isTrajectoryFeasible</name>
+        <reimplements refid="classhateb__local__planner_1_1PlannerInterface_1af03a4f8e39d652b95168a8eb3a919ec0">isTrajectoryFeasible</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; nav2_costmap_2d::FootprintCollisionChecker&lt; nav2_costmap_2d::Costmap2D * &gt;&gt;</type>
+          <declname>collision_checker</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; geometry_msgs::msg::Point &gt; &amp;</type>
+          <declname>footprint_spec</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>inscribed_radius</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>circumscribed_radius</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>look_ahead_idx</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Check whether the planned trajectory is feasible or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method currently checks only that the trajectory, or a part of the trajectory is collision free. Obstacles are here represented as costmap instead of the internal ObstacleContainer. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>collision_checker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the collision checker associated with a costmap </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>footprint_spec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The specification of the footprint of the robot in world coordinates </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inscribed_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The radius of the inscribed circle of the robot </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>circumscribed_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The radius of the circumscribed circle of the robot </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>look_ahead_idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of poses along the trajectory that should be verified, if -1, the complete trajectory will be checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput>, if the robot footprint along the first part of the trajectory intersects with any obstacle in the costmap, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="506" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="1946" bodyend="1982"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1ae01223f77164076dcaf060fa90c03e99" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::registerG2OTypes</definition>
+        <argsstring>()</argsstring>
+        <name>registerG2OTypes</name>
+        <briefdescription>
+<para>Register the vertices and edges defined for the TEB to the g2o::Factory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This allows the user to export the internal graph to a text file for instance. Access the <ref refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a3f81508ea412314c92349eac94bfa01a" kindref="member">optimizer()</ref> for more details. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="359" column="15" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="135" bodyend="167"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1aad7a1f1335ca44873b7c9b6255212d4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::HATebOptimalPlanner::HATebOptimalPlanner</definition>
+        <argsstring>()</argsstring>
+        <name>HATebOptimalPlanner</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="126" column="3" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="49" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a3869ec3c5cdafd2bde48000f4946a068" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::HATebOptimalPlanner::HATebOptimalPlanner</definition>
+        <argsstring>(rclcpp_lifecycle::LifecycleNode::SharedPtr node, const HATebConfig &amp;cfg, ObstContainer *obstacles=nullptr, FootprintModelPtr robot_model=std::make_shared&lt; PointFootprint &gt;(), TebVisualizationPtr visual=TebVisualizationPtr(), const ViaPointContainer *via_points=nullptr, CircularFootprintPtr agent_model=std::make_shared&lt; CircularFootprint &gt;(), const std::map&lt; uint64_t, ViaPointContainer &gt; *agents_via_points_map=nullptr)</argsstring>
+        <name>HATebOptimalPlanner</name>
+        <param>
+          <type>rclcpp_lifecycle::LifecycleNode::SharedPtr</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> &amp;</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1aa2fd52c70b6b2295dc138647919ea794" kindref="member">ObstContainer</ref> *</type>
+          <declname>obstacles</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1abe95adae9e2ba3cab50c815dba133141" kindref="member">FootprintModelPtr</ref></type>
+          <declname>robot_model</declname>
+          <defval>std::make_shared&lt; <ref refid="classhateb__local__planner_1_1PointFootprint" kindref="compound">PointFootprint</ref> &gt;()</defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1a3106e664caee6d9f224ff0b25fb131f0" kindref="member">TebVisualizationPtr</ref></type>
+          <declname>visual</declname>
+          <defval><ref refid="namespacehateb__local__planner_1a3106e664caee6d9f224ff0b25fb131f0" kindref="member">TebVisualizationPtr</ref>()</defval>
+        </param>
+        <param>
+          <type>const <ref refid="namespacehateb__local__planner_1aa1464081de429166488fe52d38f977c6" kindref="member">ViaPointContainer</ref> *</type>
+          <declname>via_points</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1acfe48bd575f55ee9148d03b363f72c0c" kindref="member">CircularFootprintPtr</ref></type>
+          <declname>agent_model</declname>
+          <defval>std::make_shared&lt; <ref refid="classhateb__local__planner_1_1CircularFootprint" kindref="compound">CircularFootprint</ref> &gt;()</defval>
+        </param>
+        <param>
+          <type>const std::map&lt; uint64_t, <ref refid="namespacehateb__local__planner_1aa1464081de429166488fe52d38f977c6" kindref="member">ViaPointContainer</ref> &gt; *</type>
+          <declname>agents_via_points_map</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Construct and initialize the TEB optimal planner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the lifecycle node for ROS2 operations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Const reference to the <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> class for internal parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Container storing all relevant obstacles (see <ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>robot_model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the robot shape model used for optimization (optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the <ref refid="classhateb__local__planner_1_1TebVisualization" kindref="compound">TebVisualization</ref> class (optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>via_points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Container storing via-points (optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="137" column="12" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1a5bacdc5d816eca6f4fbb651a2e0698ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::HATebOptimalPlanner::~HATebOptimalPlanner</definition>
+        <argsstring>() override</argsstring>
+        <name>~HATebOptimalPlanner</name>
+        <briefdescription>
+<para>Destruct the optimal planner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="144" column="3" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="66" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATebOptimalPlanner_1aad82267806286eff1cc55caa3bb1beab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATebOptimalPlanner::initialize</definition>
+        <argsstring>(rclcpp_lifecycle::LifecycleNode::SharedPtr node, const HATebConfig &amp;cfg, ObstContainer *obstacles=nullptr, FootprintModelPtr robot_model=std::make_shared&lt; PointFootprint &gt;(), TebVisualizationPtr visual=TebVisualizationPtr(), const ViaPointContainer *via_points=nullptr, CircularFootprintPtr agent_model=std::make_shared&lt; CircularFootprint &gt;(), const std::map&lt; uint64_t, ViaPointContainer &gt; *agents_via_points_map=nullptr)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>rclcpp_lifecycle::LifecycleNode::SharedPtr</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> &amp;</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1aa2fd52c70b6b2295dc138647919ea794" kindref="member">ObstContainer</ref> *</type>
+          <declname>obstacles</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1abe95adae9e2ba3cab50c815dba133141" kindref="member">FootprintModelPtr</ref></type>
+          <declname>robot_model</declname>
+          <defval>std::make_shared&lt; <ref refid="classhateb__local__planner_1_1PointFootprint" kindref="compound">PointFootprint</ref> &gt;()</defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1a3106e664caee6d9f224ff0b25fb131f0" kindref="member">TebVisualizationPtr</ref></type>
+          <declname>visual</declname>
+          <defval><ref refid="namespacehateb__local__planner_1a3106e664caee6d9f224ff0b25fb131f0" kindref="member">TebVisualizationPtr</ref>()</defval>
+        </param>
+        <param>
+          <type>const <ref refid="namespacehateb__local__planner_1aa1464081de429166488fe52d38f977c6" kindref="member">ViaPointContainer</ref> *</type>
+          <declname>via_points</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1acfe48bd575f55ee9148d03b363f72c0c" kindref="member">CircularFootprintPtr</ref></type>
+          <declname>agent_model</declname>
+          <defval>std::make_shared&lt; <ref refid="classhateb__local__planner_1_1CircularFootprint" kindref="compound">CircularFootprint</ref> &gt;()</defval>
+        </param>
+        <param>
+          <type>const std::map&lt; uint64_t, <ref refid="namespacehateb__local__planner_1aa1464081de429166488fe52d38f977c6" kindref="member">ViaPointContainer</ref> &gt; *</type>
+          <declname>agents_via_points_map</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Initializes the optimal planner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the lifecycle node for ROS2 operations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Const reference to the <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> class for internal parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Container storing all relevant obstacles (see <ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>robot_model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the robot shape model used for optimization (optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the <ref refid="classhateb__local__planner_1_1TebVisualization" kindref="compound">TebVisualization</ref> class (optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>via_points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Container storing via-points (optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="155" column="8" bodyfile="hateb_local_planner/src/optimal_planner.cpp" bodystart="75" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class optimizes an internal Human Aware Timed Elastic Band trajectory using the g2o-framework. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>For an introduction and further details about the TEB optimization problem refer to:<itemizedlist>
+<listitem><para>C. Rösmann et al.: Trajectory modification considering dynamic constraints of autonomous robots, ROBOTIK, 2012.</para>
+</listitem><listitem><para>C. Rösmann et al.: Efficient trajectory optimization using a sparse model, ECMR, 2013.</para>
+</listitem><listitem><para>R. Kümmerle et al.: G2o: A general framework for graph optimization, ICRA, 2011. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hateb_local_planner::HATebOptimalPlanner</label>
+        <link refid="classhateb__local__planner_1_1HATebOptimalPlanner"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner::PlannerInterface</label>
+        <link refid="classhateb__local__planner_1_1PlannerInterface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hateb_local_planner::HATebOptimalPlanner</label>
+        <link refid="classhateb__local__planner_1_1HATebOptimalPlanner"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>cfg_</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>teb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner::PlannerInterface</label>
+        <link refid="classhateb__local__planner_1_1PlannerInterface"/>
+      </node>
+      <node id="13">
+        <label>hateb_local_planner::HATebConfig::Optimization</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization"/>
+      </node>
+      <node id="7">
+        <label>hateb_local_planner::HATebConfig::GoalTolerance</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance"/>
+      </node>
+      <node id="6">
+        <label>hateb_local_planner::HATebConfig::RobotFootprint</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint"/>
+      </node>
+      <node id="8">
+        <label>hateb_local_planner::HATebConfig::Trajectory</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Trajectory"/>
+      </node>
+      <node id="4">
+        <label>parameters::ParameterHelper</label>
+        <link refid="classparameters_1_1ParameterHelper"/>
+      </node>
+      <node id="5">
+        <label>hateb_local_planner::HATebConfig::Recovery</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Recovery"/>
+      </node>
+      <node id="14">
+        <label>hateb_local_planner::HATebConfig::Robot</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Robot"/>
+      </node>
+      <node id="11">
+        <label>hateb_local_planner::HATebConfig::Obstacles</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles"/>
+      </node>
+      <node id="16">
+        <label>hateb_local_planner::TimedElasticBand</label>
+        <link refid="classhateb__local__planner_1_1TimedElasticBand"/>
+      </node>
+      <node id="3">
+        <label>hateb_local_planner::HATebConfig</label>
+        <link refid="classhateb__local__planner_1_1HATebConfig"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>param_helper_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>recovery</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>robot_footprint</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>goal_tolerance</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>trajectory</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>bt_mode_switch</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>hateb</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>obstacles</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>agent</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>optim</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>robot</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>visualization</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>hateb_local_planner::HATebConfig::Visualization</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Visualization"/>
+      </node>
+      <node id="12">
+        <label>hateb_local_planner::HATebConfig::Agent</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Agent"/>
+      </node>
+      <node id="10">
+        <label>hateb_local_planner::HATebConfig::Hateb</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb"/>
+      </node>
+      <node id="9">
+        <label>hateb_local_planner::HATebConfig::BTModeSwitch</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch"/>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" line="121" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/optimal_planner.h" bodystart="121" bodyend="839"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a98bde77d0b7417f9485d34efaa478cc5" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesAcceleration</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a4b7070d271ab2c6dc60a68865f66c408" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesAccelerationForAgents</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aca7d2bd5661e17ede42ac991c8db5cf5" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesAgentAgentSafety</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a48c6886c19a7cab8eb32c99246643228" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesAgentRobotRelVelocity</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a14a2575907e70159197d011ac6e7e042" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesAgentRobotSafety</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ae05329a34cf6f91a1d75267517a9c58d" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesAgentRobotVisibility</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a5a66f195ad6423591d54250ab6c6ef77" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesDynamicObstacles</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ae25ef1b28d3a16c2aaf2c04af4376e34" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesDynamicObstaclesForAgents</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a7c82586c302573f7ad8245443807b5d1" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesInvisibleHumans</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ac820063215c9c4e32afd9138193ee842" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesKinematicsCarlike</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ad26492f8699b04cec5fc71163c650088" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesKinematicsCarlikeForAgents</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a32ddd728e75b020f30c2d14a9bd4a050" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesKinematicsDiffDrive</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a85b3081e444131d3f24c39c098cf420e" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesKinematicsDiffDriveForAgents</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ae189d50a2ccfddefc7e66050867b6ff0" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesObstacles</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aa5fc23432c461c8532ceec7c51839f41" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesObstaclesForAgents</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ab208a3d0c0d7bc25a1cf3b72c9ac0a90" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesObstaclesLegacy</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a5f293027e17a70b490989acbbed3458e" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesPreferRotDir</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1acf3f641fb33b95e59b34324dac7abc06" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesShortestPath</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a1862d2cad46925e3414c8c0d3617b8b1" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesStaticAgentVisibility</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ad88b6b939c644ffb86a860fca4f33168" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesTimeOptimal</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a7a739255b39b04b00c3ca49baa188d7e" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesTimeOptimalForAgents</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a363241ecbe1f6e6344cfb76ab27d110e" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesVelocity</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a56464116a1efc32210f5da71de86a3a8" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesVelocityForAgents</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a1793dd5538b4a4618236a63dcf7b7c63" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesViaPoints</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a0bd2440f89709983ed1118ea17dba116" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddEdgesViaPointsForAgents</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a88285ad4083d865616fd147ce7c4a989" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>AddTEBVertices</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1acd1ce4b6ce3223ae4f98f70ae846a01e" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>agent_model_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a831a2a255fd495ac875ecb1f894c9592" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>agent_nominal_vels_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aff6c34b0707f723264f06c924cd7a644" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>agents_tebs_map_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a72752b037e5b8a1acbb7288959b4052c" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>agents_vel_goal_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ae4e5bc2946437d416c63553467a02bf9" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>agents_vel_start_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a4f6d86ca0956341fbca032e4b318c282" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>agents_via_points_map_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a051dbfb01dde60c2536f1cc953504fa3" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>buildGraph</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a04b132becc2fdc73fffa0e1cec7c2ba9" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a6e652e17dc61ccc3afbbf27753cfe183" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>clearGraph</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a4796ce453bff8c7220ef872548d8415a" prot="public" virt="virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>clearPlanner</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a86e748141af6ffd711a70e64d3a9de8d" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>computeCurrentCost</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ab9b62c0b0f51fea9a1bf6e006ee8a92f" prot="public" virt="virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>computeCurrentCost</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1a159c88d6f69ea73631619cfe639e0212" prot="public" virt="virtual" ambiguityscope="hateb_local_planner::PlannerInterface::"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>computeCurrentCost</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ab6049d355191d195690e78f44ba52a0a" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>cost_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a61909bbad0ba534b0ac60f9348abfbab" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>current_agent_robot_min_dist_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a0972b44df1b8af799fad0b4591a5c13d" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>extractVelocity</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a14121a40a8e8961df0fffdef4145f4a2" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>getCurrentCost</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a594a3e75c4d27969f790be3337b1a215" prot="public" virt="virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>getFullAgentTrajectory</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a3cd51300a03e02cf1ee8908314ce7cb2" prot="public" virt="virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>getFullTrajectory</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a4ffd8216e1e0d8dd4910bb7b7e25b0d2" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>getObstVector</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a45d33cda00a92fff9d9eac95ba719182" prot="public" virt="virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>getVelocityCommand</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aa7dee78946763bc1df12f14d21cf9175" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>getVelocityProfile</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a9bd9307cd4fff3a63e77cf3ea27e8b34" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>getViaPoints</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aad7a1f1335ca44873b7c9b6255212d4c" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>HATebOptimalPlanner</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a3869ec3c5cdafd2bde48000f4946a068" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>HATebOptimalPlanner</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aad82267806286eff1cc55caa3bb1beab" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>initialize</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a4243d25c0e5d1dc99876b657d6e9794c" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>initialized_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a149fc469d62a8d846580ab6ef0e1accc" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>initOptimizer</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a7afb6ae1a80b43f3d3a0084fc0e1b331" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>isMode_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a4c1ff58192c4c12d463edef28fa201fa" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>isOptimized</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1abc499dacff66df22fba80074302ebf16" prot="public" virt="virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>isTrajectoryFeasible</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1abfb070f651a503cd427dd3ac1adf3490" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>local_weight_optimaltime_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a67449bdd3d18c95090df8848ace72257" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>node_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a2c4f01807b35c3c4a9bb2867ef5db7b0" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>obstacles_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a916717d89dfda942f8b90dc14b4c34fd" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>optimized_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1af2f79b7971d27187b7df5bfb942a8cf2" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>optimizeGraph</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a3f81508ea412314c92349eac94bfa01a" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>optimizer</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aab84b24734a7c9bd9726b8a1c14ddd29" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>optimizer</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a83c8f36cd452e5aa7bd527c423495ac1" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>optimizer_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a5a692c152e65152920ccc49f00ddde5e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>optimizeTEB</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1afb0b55509c552591d8dd66e7b554dac8" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>optimizeTEB</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aaf933e800dc904a8298455a61009fc57" prot="public" virt="virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>plan</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ac8355340ec1d4e0b134692caf8ecd119" prot="public" virt="virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>plan</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1ac6728ebca6d43636f825ea4f61c5da0e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>PlannerInterface</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a941be197a07ee679df10662ac878c2ba" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>prefer_rotdir_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ae01223f77164076dcaf060fa90c03e99" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>registerG2OTypes</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a90122d995194c1f2a4ca771d09f2783c" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>robot_model_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1abd2577e4e34345c25ab5c052db0e7860" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>setObstVector</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a7f526c0b7bb86bdddb1d5e6ec53a35af" prot="public" virt="virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>setPreferredTurningDir</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a0538f3ac6a1c1c2919842e68ad664e51" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>setVelocityGoal</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ac1ac46ee301b91fa2ed3dc5a98b79abe" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>setVelocityGoalFree</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a1253623cd73279d8e04a31431e6ae8e5" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>setVelocityStart</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a28688e69d7df29314e6f79aba45ae29a" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>setViaPoints</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ad9d184de6eb90b09908e08b809c0da0b" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>setVisualization</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a0d4cf29024ce008da526728788ad1976" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>static_agents_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a70bf2b33af2fe42a4afd592ea804acf9" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>teb</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ab877bd7d897b98fd4367673cf4196295" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>teb</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a7d3a7fbd57ebb83d56fbacc6bd717113" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>teb_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ae315984e6ad7c376df0ea90926ed4e7f" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>vel_goal_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ab2c318cd69ef57cd8c6e1fecb90315ae" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>vel_start_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a0bd9fdbca661e59f886e4ef68988e2df" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>via_points_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a65728043d6fbd342fa52e105fc84cc54" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>visualization_</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a8a3875ec3b9ce7438b206be1f135eddf" prot="public" virt="virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>visualize</name></member>
+      <member refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a5bacdc5d816eca6f4fbb651a2e0698ed" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>~HATebOptimalPlanner</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1a5e36c90af485d53a5d9fe1701d86714a" prot="public" virt="virtual"><scope>hateb_local_planner::HATebOptimalPlanner</scope><name>~PlannerInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

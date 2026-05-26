@@ -1,0 +1,5 @@
+<map id="hateb_local_planner::EdgeStaticAgentVisibility" name="hateb_local_planner::EdgeStaticAgentVisibility">
+<area shape="rect" id="node1" title="Edge defining a visibility constraint between a static agent and the robot in the optimization graph." alt="" coords="5,199,200,240"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebUnaryEdge.html" title=" " alt="" coords="11,95,194,151"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,200,47"/>
+</map>

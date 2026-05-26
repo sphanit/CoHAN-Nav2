@@ -1,0 +1,4 @@
+<map id="hateb_local_planner::VertexPose" name="hateb_local_planner::VertexPose">
+<area shape="rect" id="node1" title="This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized..." alt="" coords="6,95,159,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,160,47"/>
+</map>

@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="HungarianAlg_8h" kind="file" language="C++">
+    <compoundname>HungarianAlg.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">time.h</includes>
+    <includes refid="defines_8h" local="yes">defines.h</includes>
+    <includedby refid="Ctracker_8h" local="yes">Ctracker.h</includedby>
+    <includedby refid="HungarianAlg_8cpp" local="no">HungarianAlg.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>limits</label>
+      </node>
+      <node id="7">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>HungarianAlg.h</label>
+        <link refid="HungarianAlg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>defines.h</label>
+        <link refid="defines_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>Ctracker.cpp</label>
+        <link refid="Ctracker_8cpp"/>
+      </node>
+      <node id="2">
+        <label>Ctracker.h</label>
+        <link refid="Ctracker_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>HungarianAlg.cpp</label>
+        <link refid="HungarianAlg_8cpp"/>
+      </node>
+      <node id="3">
+        <label>costmap_to_dynamic_obstacles.h</label>
+        <link refid="costmap__to__dynamic__obstacles_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>HungarianAlg.h</label>
+        <link refid="HungarianAlg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>costmap_to_dynamic_obstacles.cpp</label>
+        <link refid="costmap__to__dynamic__obstacles_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classAssignmentProblemSolver" prot="public">AssignmentProblemSolver</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" prot="public" static="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>typedef std::vector&lt;int&gt; assignments_t</definition>
+        <argsstring></argsstring>
+        <name>assignments_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="12" column="21" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref> &gt;</type>
+        <definition>typedef std::vector&lt;track_t&gt; distMatrix_t</definition>
+        <argsstring></argsstring>
+        <name>distMatrix_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="13" column="21" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Based<sp/>on<sp/>https://github.com/Smorodov/Multitarget-tracker/tree/master/Tracker,<sp/>GPLv3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Refer<sp/>to<sp/>README.md<sp/>in<sp/>this<sp/>directory.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="defines_8h" kindref="compound">defines.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://community.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=hungarianAlgorithm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref>;</highlight></codeline>
+<codeline lineno="13" refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;track_t&gt;<sp/><ref refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" kindref="member">distMatrix_t</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classAssignmentProblemSolver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classAssignmentProblemSolver" kindref="compound">AssignmentProblemSolver</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Computes<sp/>the<sp/>optimal<sp/>assignment<sp/>(minimum<sp/>overall<sp/>costs)<sp/>using<sp/>Munkres<sp/>algorithm.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAssignmentProblemSolver_1a5b84a5167984db1050821926f52b5187" kindref="member">assignmentoptimal</ref>(<ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref>&amp;<sp/>assignment,<sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref>&amp;<sp/>cost,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" kindref="member">distMatrix_t</ref>&amp;<sp/>distMatrixIn,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfRows,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfColumns);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAssignmentProblemSolver_1a1aa1c05dec6aef723f5d41affc667a77" kindref="member">buildassignmentvector</ref>(<ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref>&amp;<sp/>assignment,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>starMatrix,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfRows,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfColumns);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAssignmentProblemSolver_1a978fa51f563d47dbd00c697704cf4ad9" kindref="member">computeassignmentcost</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref>&amp;<sp/>assignment,<sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref>&amp;<sp/>cost,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" kindref="member">distMatrix_t</ref>&amp;<sp/>distMatrixIn,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfRows);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAssignmentProblemSolver_1adef6ec1494dd6058fdf1373bc2c6d6eb" kindref="member">step2a</ref>(<ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref>&amp;<sp/>assignment,<sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref>*<sp/>distMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>starMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>newStarMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>primeMatrix,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>coveredColumns,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>coveredRows,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfRows,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfColumns,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>minDim);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAssignmentProblemSolver_1a069b78d89842031f7b54e0837c2bd602" kindref="member">step2b</ref>(<ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref>&amp;<sp/>assignment,<sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref>*<sp/>distMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>starMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>newStarMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>primeMatrix,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>coveredColumns,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>coveredRows,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfRows,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfColumns,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>minDim);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAssignmentProblemSolver_1acb8f0b1e8f28d57dc08704e893666ce1" kindref="member">step3</ref>(<ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref>&amp;<sp/>assignment,<sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref>*<sp/>distMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>starMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>newStarMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>primeMatrix,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>coveredColumns,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>coveredRows,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfRows,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfColumns,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>minDim);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAssignmentProblemSolver_1a6ea85d386a136effd84c00f4e2f3cd77" kindref="member">step4</ref>(<ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref>&amp;<sp/>assignment,<sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref>*<sp/>distMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>starMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>newStarMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>primeMatrix,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>coveredColumns,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>coveredRows,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfRows,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfColumns,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>minDim,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>col);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAssignmentProblemSolver_1aa1c72a5f8de7a19bd1671aabdf426179" kindref="member">step5</ref>(<ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref>&amp;<sp/>assignment,<sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref>*<sp/>distMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>starMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>newStarMatrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>primeMatrix,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>coveredColumns,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>coveredRows,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfRows,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfColumns,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>minDim);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Computes<sp/>a<sp/>suboptimal<sp/>solution.<sp/>Good<sp/>for<sp/>cases<sp/>with<sp/>many<sp/>forbidden<sp/>assignments.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAssignmentProblemSolver_1ae8fddfafc7387f3597493f02e8366883" kindref="member">assignmentsuboptimal1</ref>(<ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref>&amp;<sp/>assignment,<sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref>&amp;<sp/>cost,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" kindref="member">distMatrix_t</ref>&amp;<sp/>distMatrixIn,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfRows,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfColumns);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Computes<sp/>a<sp/>suboptimal<sp/>solution.<sp/>Good<sp/>for<sp/>cases<sp/>with<sp/>many<sp/>forbidden<sp/>assignments.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAssignmentProblemSolver_1a31277dc88cb22e07db1e52b6fe88f84f" kindref="member">assignmentsuboptimal2</ref>(<ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref>&amp;<sp/>assignment,<sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref>&amp;<sp/>cost,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" kindref="member">distMatrix_t</ref>&amp;<sp/>distMatrixIn,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfRows,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfColumns);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49" refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8" kindref="member">TMethod</ref></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51" refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75" kindref="member">optimal</ref>,</highlight></codeline>
+<codeline lineno="52" refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a226c2e4b79d0beeb342087880d97bb2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a226c2e4b79d0beeb342087880d97bb2a" kindref="member">many_forbidden_assignments</ref>,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a3329e7571829a83b21be4821df62310d" kindref="member">without_forbidden_assignments</ref></highlight></codeline>
+<codeline lineno="54" refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a3329e7571829a83b21be4821df62310d" refkind="member"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="classAssignmentProblemSolver_1a13a83a34d4a0b4da872d87c79cb9c687" kindref="member">AssignmentProblemSolver</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="classAssignmentProblemSolver_1a47317b69e3eb9b50426c427ebcf5770f" kindref="member">~AssignmentProblemSolver</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref><sp/><ref refid="classAssignmentProblemSolver_1a38198467ca647403c40be2c2bb47e177" kindref="member">Solve</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" kindref="member">distMatrix_t</ref>&amp;<sp/>distMatrixIn,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfRows,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nOfColumns,<sp/><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref>&amp;<sp/>assignment,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8" kindref="member">TMethod</ref><sp/>Method<sp/>=<sp/><ref refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75" kindref="member">optimal</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h"/>
+  </compounddef>
+</doxygen>

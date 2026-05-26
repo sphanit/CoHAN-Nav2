@@ -1,0 +1,14 @@
+.. _exhale_define_utils_8hpp_1ad9b3cad51773171081b346522ba2243f:
+
+Define RCLCPP_ERROR_STREAM_COND
+===============================
+
+- Defined in :ref:`file_ros2_helpers_include_ros2_helpers_utils.hpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: RCLCPP_ERROR_STREAM_COND
+   :project: CoHAN-Nav2

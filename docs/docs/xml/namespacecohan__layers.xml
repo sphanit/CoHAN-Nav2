@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacecohan__layers" kind="namespace" language="C++">
+    <compoundname>cohan_layers</compoundname>
+    <innerclass refid="classcohan__layers_1_1AgentLayer" prot="public">cohan_layers::AgentLayer</innerclass>
+    <innerclass refid="classcohan__layers_1_1AgentLayerConfig" prot="public">cohan_layers::AgentLayerConfig</innerclass>
+    <innerclass refid="classcohan__layers_1_1AgentVisibilityLayer" prot="public">cohan_layers::AgentVisibilityLayer</innerclass>
+    <innerclass refid="classcohan__layers_1_1StaticAgentLayer" prot="public">cohan_layers::StaticAgentLayer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="47" column="1"/>
+  </compounddef>
+</doxygen>

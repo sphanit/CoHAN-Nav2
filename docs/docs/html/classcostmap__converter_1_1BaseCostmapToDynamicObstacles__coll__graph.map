@@ -1,0 +1,4 @@
+<map id="costmap_converter::BaseCostmapToDynamicObstacles" name="costmap_converter::BaseCostmapToDynamicObstacles">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,253,136"/>
+<area shape="rect" id="node2" href="$classcostmap__converter_1_1BaseCostmapToPolygons.html" title="This abstract class defines the interface for plugins that convert the costmap into polygon types." alt="" coords="37,5,222,47"/>
+</map>

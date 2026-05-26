@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classTKalmanFilter" kind="class" language="C++" prot="public">
+    <compoundname>TKalmanFilter</compoundname>
+    <includes refid="Kalman_8h" local="no">Kalman.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classTKalmanFilter_1ae00aef3f97b64481e226693762faae55" prot="public" static="no" mutable="no">
+        <type>cv::KalmanFilter *</type>
+        <definition>cv::KalmanFilter* TKalmanFilter::kalman</definition>
+        <argsstring></argsstring>
+        <name>kalman</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" line="16" column="20" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTKalmanFilter_1ad91b52da581a105eca07adbf821eff50" prot="public" static="no" mutable="no">
+        <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref></type>
+        <definition>track_t TKalmanFilter::dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" line="17" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTKalmanFilter_1a469facc70aadc788ef9f6cadf215bf8c" prot="public" static="no" mutable="no">
+        <type><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref></type>
+        <definition>Point_t TKalmanFilter::LastPosition</definition>
+        <argsstring></argsstring>
+        <name>LastPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" line="18" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTKalmanFilter_1a9e6ecc34ba4e3c4439180f5a0eb8e249" prot="public" static="no" mutable="no">
+        <type><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref></type>
+        <definition>Point_t TKalmanFilter::LastVelocity</definition>
+        <argsstring></argsstring>
+        <name>LastVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" line="19" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTKalmanFilter_1abad97c077ca0863a5c759b2476c58ce9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TKalmanFilter::TKalmanFilter</definition>
+        <argsstring>(Point_t p, track_t deltatime=0.2)</argsstring>
+        <name>TKalmanFilter</name>
+        <param>
+          <type><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref></type>
+          <declname>deltatime</declname>
+          <defval>0.2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" line="12" column="3" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.cpp" bodystart="11" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classTKalmanFilter_1a19b5f44e8aadad2217ed3f2f370c8608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TKalmanFilter::~TKalmanFilter</definition>
+        <argsstring>()</argsstring>
+        <name>~TKalmanFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" line="13" column="3" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.cpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classTKalmanFilter_1afd9f51495142af0c610802447f0fc4bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TKalmanFilter::Prediction</definition>
+        <argsstring>()</argsstring>
+        <name>Prediction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" line="14" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.cpp" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classTKalmanFilter_1adec756af94bd680fc66ce8219faed3bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref></type>
+        <definition>Point_t TKalmanFilter::Update</definition>
+        <argsstring>(Point_t p, bool DataCorrect)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>DataCorrect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" line="15" column="11" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.cpp" bodystart="74" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" line="9" column="1" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h" bodystart="10" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classTKalmanFilter_1ad91b52da581a105eca07adbf821eff50" prot="public" virt="non-virtual"><scope>TKalmanFilter</scope><name>dt</name></member>
+      <member refid="classTKalmanFilter_1ae00aef3f97b64481e226693762faae55" prot="public" virt="non-virtual"><scope>TKalmanFilter</scope><name>kalman</name></member>
+      <member refid="classTKalmanFilter_1a469facc70aadc788ef9f6cadf215bf8c" prot="public" virt="non-virtual"><scope>TKalmanFilter</scope><name>LastPosition</name></member>
+      <member refid="classTKalmanFilter_1a9e6ecc34ba4e3c4439180f5a0eb8e249" prot="public" virt="non-virtual"><scope>TKalmanFilter</scope><name>LastVelocity</name></member>
+      <member refid="classTKalmanFilter_1afd9f51495142af0c610802447f0fc4bd" prot="public" virt="non-virtual"><scope>TKalmanFilter</scope><name>Prediction</name></member>
+      <member refid="classTKalmanFilter_1abad97c077ca0863a5c759b2476c58ce9" prot="public" virt="non-virtual"><scope>TKalmanFilter</scope><name>TKalmanFilter</name></member>
+      <member refid="classTKalmanFilter_1adec756af94bd680fc66ce8219faed3bf" prot="public" virt="non-virtual"><scope>TKalmanFilter</scope><name>Update</name></member>
+      <member refid="classTKalmanFilter_1a19b5f44e8aadad2217ed3f2f370c8608" prot="public" virt="non-virtual"><scope>TKalmanFilter</scope><name>~TKalmanFilter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

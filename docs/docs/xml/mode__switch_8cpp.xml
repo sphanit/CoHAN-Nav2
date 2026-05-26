@@ -1,0 +1,728 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mode__switch_8cpp" kind="file" language="C++">
+    <compoundname>mode_switch.cpp</compoundname>
+    <includes refid="mode__switch_8h" local="no">hateb_local_planner/mode_switch.h</includes>
+    <includes local="no">ament_index_cpp/get_package_share_directory.hpp</includes>
+    <includes local="no">filesystem</includes>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>boost/pointer_cast.hpp</label>
+      </node>
+      <node id="49">
+        <label>cohan_msgs/msg/tracked_agents.hpp</label>
+      </node>
+      <node id="69">
+        <label>hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h</label>
+        <link refid="vel__obs__exit__condition_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>cohan_msgs/msg/state_array.hpp</label>
+      </node>
+      <node id="32">
+        <label>functional</label>
+      </node>
+      <node id="17">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="19">
+        <label>geometry_msgs/msg/polygon.hpp</label>
+      </node>
+      <node id="58">
+        <label>geometry_msgs/msg/pose_stamped.hpp</label>
+      </node>
+      <node id="71">
+        <label>filesystem</label>
+      </node>
+      <node id="31">
+        <label>ros2_helpers/parameters.hpp</label>
+        <link refid="parameters_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>hateb_local_planner/footprint_model.h</label>
+        <link refid="footprint__model_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>cohan_msgs/msg/passage_type.hpp</label>
+      </node>
+      <node id="44">
+        <label>agent_path_prediction/msg/agents_info.hpp</label>
+      </node>
+      <node id="59">
+        <label>hateb_local_planner/msg/planning_mode.hpp</label>
+      </node>
+      <node id="68">
+        <label>hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h</label>
+        <link refid="single__band__exit__condition_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="66">
+        <label>hateb_local_planner/behavior_tree/condition/is_goal_updated.h</label>
+        <link refid="is__goal__updated_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>geometry_msgs/msg/pose.hpp</label>
+      </node>
+      <node id="61">
+        <label>nav_msgs/msg/path.hpp</label>
+      </node>
+      <node id="9">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="56">
+        <label>action_msgs/msg/goal_status_array.hpp</label>
+      </node>
+      <node id="3">
+        <label>hateb_local_planner/agents_class.hpp</label>
+        <link refid="agents__class_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>behaviortree_cpp_v3/bt_factory.h</label>
+      </node>
+      <node id="37">
+        <label>string</label>
+      </node>
+      <node id="60">
+        <label>nav2_msgs/action/navigate_to_pose.hpp</label>
+      </node>
+      <node id="28">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="52">
+        <label>map</label>
+      </node>
+      <node id="25">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="21">
+        <label>geometry_msgs/msg/twist_with_covariance.hpp</label>
+      </node>
+      <node id="39">
+        <label>tf2/convert.h</label>
+      </node>
+      <node id="30">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="65">
+        <label>hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h</label>
+        <link refid="dual__band__exit__condition_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>hateb_local_planner/misc.h</label>
+        <link refid="hateb__local__planner_2include_2hateb__local__planner_2misc_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>nav2_costmap_2d/costmap_2d_ros.hpp</label>
+      </node>
+      <node id="67">
+        <label>hateb_local_planner/behavior_tree/condition/passthrough_condition.h</label>
+        <link refid="passthrough__condition_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Eigen/StdVector</label>
+      </node>
+      <node id="20">
+        <label>geometry_msgs/msg/quaternion_stamped.hpp</label>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner/hateb_config.hpp</label>
+        <link refid="hateb__config_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>cohan_msgs/msg/agent_path_array.hpp</label>
+      </node>
+      <node id="6">
+        <label>hateb_local_planner/obstacles.h</label>
+        <link refid="obstacles_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>hateb_local_planner/behavior_tree/bt_core.h</label>
+        <link refid="bt__core_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>ament_index_cpp/get_package_share_directory.hpp</label>
+      </node>
+      <node id="62">
+        <label>std_srvs/srv/trigger.hpp</label>
+      </node>
+      <node id="50">
+        <label>cohan_msgs/msg/tracked_segment_type.hpp</label>
+      </node>
+      <node id="35">
+        <label>rcl_interfaces/msg/parameter_descriptor.hpp</label>
+      </node>
+      <node id="63">
+        <label>hateb_local_planner/behavior_tree/action/set_mode.h</label>
+        <link refid="set__mode_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+      <node id="34">
+        <label>rcl_interfaces/msg/integer_range.hpp</label>
+      </node>
+      <node id="22">
+        <label>utility</label>
+      </node>
+      <node id="11">
+        <label>boost/utility.hpp</label>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner/mode_switch.h</label>
+        <link refid="mode__switch_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="38">
+        <label>unordered_map</label>
+      </node>
+      <node id="1">
+        <label>mode_switch.cpp</label>
+        <link refid="mode__switch_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>mutex</label>
+      </node>
+      <node id="41">
+        <label>tf2_ros/transform_listener.h</label>
+      </node>
+      <node id="23">
+        <label>hateb_local_planner/pose_se2.h</label>
+        <link refid="pose__se2_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>g2o/stuff/misc.h</label>
+      </node>
+      <node id="54">
+        <label>thread</label>
+      </node>
+      <node id="46">
+        <label>cohan_msgs/msg/agent_trajectory.hpp</label>
+      </node>
+      <node id="51">
+        <label>geometry_msgs/msg/pose2_d.hpp</label>
+      </node>
+      <node id="40">
+        <label>tf2_ros/buffer.h</label>
+      </node>
+      <node id="18">
+        <label>complex</label>
+      </node>
+      <node id="13">
+        <label>algorithm</label>
+      </node>
+      <node id="7">
+        <label>hateb_local_planner/distance_calculations.h</label>
+        <link refid="distance__calculations_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="53">
+        <label>memory</label>
+      </node>
+      <node id="10">
+        <label>boost/type_traits.hpp</label>
+      </node>
+      <node id="47">
+        <label>cohan_msgs/msg/agent_trajectory_array.hpp</label>
+      </node>
+      <node id="33">
+        <label>rcl_interfaces/msg/floating_point_range.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehateb__local__planner">hateb_local_planner</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(MIT<sp/>License)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024-2025<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="mode__switch_8h" kindref="compound">hateb_local_planner/mode_switch.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ament_index_cpp/get_package_share_directory.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehateb__local__planner" kindref="compound">hateb_local_planner</ref><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="classhateb__local__planner_1_1ModeSwitch_1a0f977db12863b680c34f1c909ee55b43" kindref="member">ModeSwitch::ModeSwitch</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a364490ca57c1cdad3c495e1037c468ec" kindref="member">name_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ModeSwitch&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1aefd4c95fbad1f4ada3f9584441694873" kindref="member">initialized_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a8efbff053db52eb82ab03d5690e36d30" kindref="member">ModeSwitch::initialize</ref>(rclcpp_lifecycle::LifecycleNode::SharedPtr<sp/>node,<sp/>std::shared_ptr&lt;HATebConfig&gt;<sp/>cfg,<sp/>std::shared_ptr&lt;hateb_local_planner::Agents&gt;&amp;<sp/>agents_ptr)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classhateb__local__planner_1_1ModeSwitch_1aefd4c95fbad1f4ada3f9584441694873" kindref="member">initialized_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>ROS<sp/>components</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO(sphanit):<sp/>Check<sp/>if<sp/>you<sp/>need<sp/>to<sp/>make<sp/>them<sp/>configurable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" kindref="member">node_</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ae8a90f00e936c920a0bdf9f6679168bd" kindref="member">cfg_</ref><sp/>=<sp/>cfg;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>namespace<sp/>from<sp/>the<sp/>parameter<sp/>(different<sp/>from<sp/>the<sp/>cfg<sp/>server)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;ns&quot;</highlight><highlight class="normal">,<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ac34ec0926c6715623a693b1c4d35debd" kindref="member">ns_</ref>,<sp/>std::string(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Map<sp/>the<sp/>subscriptions<sp/>properly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a67e7fc50b4ec4ce156a68a89edb9888e" kindref="member">agents_info_sub_topic_</ref><sp/>=<sp/>std::string(<ref refid="classhateb__local__planner_1_1ModeSwitch_1ae8a90f00e936c920a0bdf9f6679168bd" kindref="member">cfg_</ref>-&gt;bt_mode_switch.agents_info_topic);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1adb7b165cbd810b904ecef593ca3db6d0" kindref="member">plan_sub_topic_</ref><sp/>=<sp/>std::string(<ref refid="classhateb__local__planner_1_1ModeSwitch_1ae8a90f00e936c920a0bdf9f6679168bd" kindref="member">cfg_</ref>-&gt;bt_mode_switch.plan_sub_topic);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1abaf681100237b726b69d975ec9fd23ea" kindref="member">result_sub_topic_</ref><sp/>=<sp/>std::string(<ref refid="classhateb__local__planner_1_1ModeSwitch_1ae8a90f00e936c920a0bdf9f6679168bd" kindref="member">cfg_</ref>-&gt;bt_mode_switch.result_sub_topic);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a3831e8aa883e831be5de164c63639e62" kindref="member">passage_sub_topic_</ref><sp/>=<sp/>std::string(<ref refid="classhateb__local__planner_1_1ModeSwitch_1ae8a90f00e936c920a0bdf9f6679168bd" kindref="member">cfg_</ref>-&gt;bt_mode_switch.passage_sub_topic);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classhateb__local__planner_1_1ModeSwitch_1ac34ec0926c6715623a693b1c4d35debd" kindref="member">ns_</ref>.empty())<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a67e7fc50b4ec4ce156a68a89edb9888e" kindref="member">agents_info_sub_topic_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ac34ec0926c6715623a693b1c4d35debd" kindref="member">ns_</ref><sp/>+<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a67e7fc50b4ec4ce156a68a89edb9888e" kindref="member">agents_info_sub_topic_</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1adb7b165cbd810b904ecef593ca3db6d0" kindref="member">plan_sub_topic_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ac34ec0926c6715623a693b1c4d35debd" kindref="member">ns_</ref><sp/>+<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1adb7b165cbd810b904ecef593ca3db6d0" kindref="member">plan_sub_topic_</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1abaf681100237b726b69d975ec9fd23ea" kindref="member">result_sub_topic_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ac34ec0926c6715623a693b1c4d35debd" kindref="member">ns_</ref><sp/>+<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1abaf681100237b726b69d975ec9fd23ea" kindref="member">result_sub_topic_</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a3831e8aa883e831be5de164c63639e62" kindref="member">passage_sub_topic_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ac34ec0926c6715623a693b1c4d35debd" kindref="member">ns_</ref><sp/>+<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a3831e8aa883e831be5de164c63639e62" kindref="member">passage_sub_topic_</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Subscriptions<sp/>that<sp/>help<sp/>populate<sp/>the<sp/>blackboard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a4526138b2971e3007cfd39540c2ab1d3" kindref="member">agents_info_sub_</ref><sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" kindref="member">node_</ref>-&gt;create_subscription&lt;agent_path_prediction::msg::AgentsInfo&gt;(<ref refid="classhateb__local__planner_1_1ModeSwitch_1a67e7fc50b4ec4ce156a68a89edb9888e" kindref="member">agents_info_sub_topic_</ref>,<sp/>1,<sp/>std::bind(&amp;<ref refid="classhateb__local__planner_1_1ModeSwitch_1af9f58bdb7b68a26bf671701f4840e10e" kindref="member">ModeSwitch::agentsInfoCB</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a1d70f055a6d1ffab8b02cee88212efa6" kindref="member">plan_sub_</ref><sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" kindref="member">node_</ref>-&gt;create_subscription&lt;nav_msgs::msg::Path&gt;(<ref refid="classhateb__local__planner_1_1ModeSwitch_1adb7b165cbd810b904ecef593ca3db6d0" kindref="member">plan_sub_topic_</ref>,<sp/>1,<sp/>std::bind(&amp;<ref refid="classhateb__local__planner_1_1ModeSwitch_1a8be2ca5b793f2da710e92be3e8b56243" kindref="member">ModeSwitch::planCB</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a60fdc7d0aadf6eabd5eca64c65e3d81b" kindref="member">result_sub_</ref><sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" kindref="member">node_</ref>-&gt;create_subscription&lt;action_msgs::msg::GoalStatusArray&gt;(<ref refid="classhateb__local__planner_1_1ModeSwitch_1abaf681100237b726b69d975ec9fd23ea" kindref="member">result_sub_topic_</ref>,<sp/>1,<sp/>std::bind(&amp;<ref refid="classhateb__local__planner_1_1ModeSwitch_1af2c094362571e4d36d4d1ce66b2e32f7" kindref="member">ModeSwitch::resultNavigateToPoseCB</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a12c770bc77b5df28dfb9f639ec12eaec" kindref="member">passage_detect_sub_</ref><sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" kindref="member">node_</ref>-&gt;create_subscription&lt;cohan_msgs::msg::PassageType&gt;(<ref refid="classhateb__local__planner_1_1ModeSwitch_1a3831e8aa883e831be5de164c63639e62" kindref="member">passage_sub_topic_</ref>,<sp/>1,<sp/>std::bind(&amp;<ref refid="classhateb__local__planner_1_1ModeSwitch_1a37cc2b411b9fee91473ee5b7dcdbcaab" kindref="member">ModeSwitch::passageCB</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Publishers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ad704dca9045293ec6746d70d7c38decf" kindref="member">planning_mode_pub_</ref><sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" kindref="member">node_</ref>-&gt;create_publisher&lt;hateb_local_planner::msg::PlanningMode&gt;(</highlight><highlight class="stringliteral">&quot;planning_mode&quot;</highlight><highlight class="normal">,<sp/>10);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a075d65e69586c23fd4b7a420dec8f38a" kindref="member">goal_reached_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a00801aea58ed373499e425b74d648ec6" kindref="member">goal_update_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Register<sp/>the<sp/>BT<sp/>nodes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1adaee89986120f308a98eb63c4b4b50c6" kindref="member">registerNodes</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Build<sp/>the<sp/>Behavior<sp/>Tree<sp/>from<sp/>the<sp/>XML</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>xml_path<sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ae8a90f00e936c920a0bdf9f6679168bd" kindref="member">cfg_</ref>-&gt;bt_mode_switch.bt_xml_path;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xml_path<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a17a6d4e925afade9a4ea0f7662bab72e" kindref="member">BT_ERROR</ref>(</highlight><highlight class="stringliteral">&quot;ModeSwitch&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Please<sp/>provide<sp/>the<sp/>correct<sp/>xml<sp/>to<sp/>create<sp/>the<sp/>tree!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>exit(0);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Resolve<sp/>the<sp/>XML<sp/>path<sp/>-<sp/>check<sp/>if<sp/>it&apos;s<sp/>an<sp/>absolute<sp/>path<sp/>or<sp/>a<sp/>package-relative<sp/>path</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>resolved_xml_path<sp/>=<sp/>xml_path;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(!std::filesystem::path(xml_path).is_absolute())<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Assume<sp/>it&apos;s<sp/>a<sp/>package-relative<sp/>path<sp/>like<sp/>&quot;hateb_local_planner/behavior_trees/all_modes.xml&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>package_name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;hateb_local_planner&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>package_share_dir<sp/>=<sp/>ament_index_cpp::get_package_share_directory(package_name);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>package<sp/>name<sp/>from<sp/>the<sp/>path<sp/>if<sp/>it<sp/>starts<sp/>with<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>relative_path<sp/>=<sp/>xml_path;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xml_path.find(package_name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>relative_path<sp/>=<sp/>xml_path.substr(package_name.length()<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resolved_xml_path<sp/>=<sp/>package_share_dir<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/>relative_path;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_INFO(<ref refid="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" kindref="member">node_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;Resolved<sp/>XML<sp/>path:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>resolved_xml_path.c_str());</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::exception&amp;<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_ERROR(<ref refid="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" kindref="member">node_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>resolve<sp/>XML<sp/>path:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>e.what());</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a17a6d4e925afade9a4ea0f7662bab72e" kindref="member">BT_ERROR</ref>(</highlight><highlight class="stringliteral">&quot;ModeSwitch&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>resolve<sp/>behavior<sp/>tree<sp/>XML<sp/>path!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(0);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref><sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a5b57798d071bd8bba920b10652b72d9f" kindref="member">bhv_factory_</ref>.createTreeFromFile(resolved_xml_path);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/>psg_type<sp/>=<sp/>cohan_msgs::msg::PassageType::OPEN;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>initial<sp/>Blackboard<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>ModeInfo<sp/>init_mode;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>init_mode.plan<sp/>=<sp/><ref refid="namespacehateb__local__planner_1abf9d2429f0e193ae1b58a22309f8e7fa" kindref="member">PLAN</ref>::<ref refid="namespacehateb__local__planner_1abf9d2429f0e193ae1b58a22309f8e7faa920a55168971579d99b33ecbc5a8818d" kindref="member">SINGLE_BAND</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>init_mode.predict<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a9053a9eaf358ea63f7d8f3c651376a8a" kindref="member">PREDICTION</ref>::<ref refid="namespacehateb__local__planner_1a9053a9eaf358ea63f7d8f3c651376a8aae084372d0f97f6da8cf1b9ef9fc4b28b" kindref="member">CONST_VEL</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;set(&quot;planning_mode&quot;,<sp/>init_mode);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;set(&quot;goal_update&quot;,<sp/>false);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;set(&quot;agents_ptr&quot;,<sp/>agents_ptr);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;set(&quot;passage_type&quot;,<sp/>psg_type);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;set(&quot;reset&quot;,<sp/>false);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;set(&quot;recovery&quot;,<sp/>false);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>status<sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.tickRoot();<sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>needed<sp/>to<sp/>update<sp/>all<sp/>blackboard<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1aefd4c95fbad1f4ada3f9584441694873" kindref="member">initialized_</ref><sp/>=<sp/>true;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(<ref refid="classhateb__local__planner_1_1ModeSwitch_1a364490ca57c1cdad3c495e1037c468ec" kindref="member">name_</ref>,<sp/>&quot;Behavior<sp/>Tree<sp/>initialized.&quot;)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>}<sp/>else<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1acccaf2336aa9be5441a238d1879da6b7" kindref="member">BT_WARN</ref>(<ref refid="classhateb__local__planner_1_1ModeSwitch_1a364490ca57c1cdad3c495e1037c468ec" kindref="member">name_</ref>,<sp/></highlight><highlight class="stringliteral">&quot;The<sp/>tree<sp/>is<sp/>already<sp/>initialized!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a37cc2b411b9fee91473ee5b7dcdbcaab" kindref="member">ModeSwitch::passageCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cohan_msgs::msg::PassageType::SharedPtr<sp/>passage_msg)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>passage<sp/>type<sp/>on<sp/>the<sp/>blackboard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;set(</highlight><highlight class="stringliteral">&quot;passage_type&quot;</highlight><highlight class="normal">,<sp/>passage_msg-&gt;type);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1af9f58bdb7b68a26bf671701f4840e10e" kindref="member">ModeSwitch::agentsInfoCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>agent_path_prediction::msg::AgentsInfo::SharedPtr<sp/>info_msg)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a1a08c0800483728149aa4ef8e50b24d7" kindref="member">agents_info_</ref><sp/>=<sp/>*info_msg;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>agents_info<sp/>on<sp/>the<sp/>blackboard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;set(</highlight><highlight class="stringliteral">&quot;agents_info&quot;</highlight><highlight class="normal">,<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a1a08c0800483728149aa4ef8e50b24d7" kindref="member">agents_info_</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a8be2ca5b793f2da710e92be3e8b56243" kindref="member">ModeSwitch::planCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nav_msgs::msg::Path::SharedPtr<sp/>plan_msg)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>goal<sp/>status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(<ref refid="classhateb__local__planner_1_1ModeSwitch_1a364490ca57c1cdad3c495e1037c468ec" kindref="member">name_</ref>,<sp/></highlight><highlight class="stringliteral">&quot;New<sp/>path<sp/>is<sp/>set!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>auto<sp/>goal<sp/>=<sp/>plan_msg-&gt;poses.back();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>goal_dist_change<sp/>=<sp/>std::hypot(goal.pose.position.x<sp/>-<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1af4edc6a0c5f65500feef8537f8f92c74" kindref="member">goal_</ref>.pose.position.x,<sp/>goal.pose.position.y<sp/>-<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1af4edc6a0c5f65500feef8537f8f92c74" kindref="member">goal_</ref>.pose.position.y);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>if<sp/>(goal_dist_change<sp/>&gt;<sp/>0.2)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;set(</highlight><highlight class="stringliteral">&quot;goal_update&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;set(</highlight><highlight class="stringliteral">&quot;nav_goal&quot;</highlight><highlight class="normal">,<sp/>goal);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;set(</highlight><highlight class="stringliteral">&quot;recovery&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a00801aea58ed373499e425b74d648ec6" kindref="member">goal_update_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(<ref refid="classhateb__local__planner_1_1ModeSwitch_1a364490ca57c1cdad3c495e1037c468ec" kindref="member">name_</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Goal<sp/>updated<sp/>in<sp/>blackboard.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1af4edc6a0c5f65500feef8537f8f92c74" kindref="member">goal_</ref><sp/>=<sp/>goal;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a075d65e69586c23fd4b7a420dec8f38a" kindref="member">goal_reached_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1af2c094362571e4d36d4d1ce66b2e32f7" kindref="member">ModeSwitch::resultNavigateToPoseCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>action_msgs::msg::GoalStatusArray::SharedPtr<sp/>result_msg)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>goal<sp/>status<sp/>based<sp/>on<sp/>the<sp/>status<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!result_msg-&gt;status_list.empty())<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>any<sp/>goal<sp/>has<sp/>succeeded<sp/>(status<sp/>4<sp/>=<sp/>SUCCEEDED<sp/>in<sp/>action_msgs)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>result_msg-&gt;status_list.back().status;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/>action_msgs::msg::GoalStatus::STATUS_SUCCEEDED)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a075d65e69586c23fd4b7a420dec8f38a" kindref="member">goal_reached_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">BT::NodeStatus<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1aa860dc9be20753e5b083966de64f42dd" kindref="member">ModeSwitch::tickBT</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Tick<sp/>the<sp/>tree<sp/>from<sp/>the<sp/>start</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>status<sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.tickRoot();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a4011bbbbf267c3d8f1e1e62bc13e9199" kindref="member">updateMode</ref>();</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1ModeSwitch_1a00801aea58ed373499e425b74d648ec6" kindref="member">goal_update_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;set(</highlight><highlight class="stringliteral">&quot;goal_update&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a00801aea58ed373499e425b74d648ec6" kindref="member">goal_update_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a4011bbbbf267c3d8f1e1e62bc13e9199" kindref="member">ModeSwitch::updateMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>duration)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>std::scoped_lock<sp/>lock(<ref refid="classhateb__local__planner_1_1ModeSwitch_1a16cc375474bd05bb060cfb84ff1bfb5d" kindref="member">pub_mutex_</ref>);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>PlanningMode<sp/>msg<sp/>from<sp/>the<sp/>blackboard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a9036b519c97c53bd0d63d503498a5781" kindref="member">mode_info_</ref><sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.rootBlackboard()-&gt;get&lt;ModeInfo&gt;(</highlight><highlight class="stringliteral">&quot;planning_mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(<ref refid="classhateb__local__planner_1_1ModeSwitch_1a364490ca57c1cdad3c495e1037c468ec" kindref="member">name_</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Planning<sp/>Mode:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<ref refid="classhateb__local__planner_1_1ModeSwitch_1a9036b519c97c53bd0d63d503498a5781" kindref="member">mode_info_</ref>.<ref refid="structhateb__local__planner_1_1ModeInfo_1a10f7775493e4a6f904d26d4d62ff7758" kindref="member">plan</ref>);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(<ref refid="classhateb__local__planner_1_1ModeSwitch_1a364490ca57c1cdad3c495e1037c468ec" kindref="member">name_</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Prediction<sp/>Mode:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<ref refid="classhateb__local__planner_1_1ModeSwitch_1a9036b519c97c53bd0d63d503498a5781" kindref="member">mode_info_</ref>.<ref refid="structhateb__local__planner_1_1ModeInfo_1aea93e9ebc8ca2ab3cb21eff38583d383" kindref="member">predict</ref>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ae84aca2c2506f24063a1a5f02213fcf0" kindref="member">plan_mode_</ref>.plan_mode<sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a9036b519c97c53bd0d63d503498a5781" kindref="member">mode_info_</ref>.<ref refid="structhateb__local__planner_1_1ModeInfo_1a10f7775493e4a6f904d26d4d62ff7758" kindref="member">plan</ref>;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ae84aca2c2506f24063a1a5f02213fcf0" kindref="member">plan_mode_</ref>.predict_mode<sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a9036b519c97c53bd0d63d503498a5781" kindref="member">mode_info_</ref>.<ref refid="structhateb__local__planner_1_1ModeInfo_1aea93e9ebc8ca2ab3cb21eff38583d383" kindref="member">predict</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ae84aca2c2506f24063a1a5f02213fcf0" kindref="member">plan_mode_</ref>.moving_humans<sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a1a08c0800483728149aa4ef8e50b24d7" kindref="member">agents_info_</ref>.moving;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ae84aca2c2506f24063a1a5f02213fcf0" kindref="member">plan_mode_</ref>.still_humans<sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a1a08c0800483728149aa4ef8e50b24d7" kindref="member">agents_info_</ref>.still;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO(sphanit):<sp/>Make<sp/>the<sp/>duration<sp/>configurable.<sp/>will<sp/>this<sp/>be<sp/>of<sp/>any<sp/>advantage?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Publish<sp/>the<sp/>mode<sp/>on<sp/>the<sp/>given<sp/>ROS<sp/>Topic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duration<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ad704dca9045293ec6746d70d7c38decf" kindref="member">planning_mode_pub_</ref>-&gt;publish(<ref refid="classhateb__local__planner_1_1ModeSwitch_1ae84aca2c2506f24063a1a5f02213fcf0" kindref="member">plan_mode_</ref>);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>start<sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" kindref="member">node_</ref>-&gt;now();</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>end<sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" kindref="member">node_</ref>-&gt;now();</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(((end<sp/>-<sp/>start).seconds()<sp/>&lt;<sp/>duration))<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>end<sp/>=<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" kindref="member">node_</ref>-&gt;now();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ad704dca9045293ec6746d70d7c38decf" kindref="member">planning_mode_pub_</ref>-&gt;publish(<ref refid="classhateb__local__planner_1_1ModeSwitch_1ae84aca2c2506f24063a1a5f02213fcf0" kindref="member">plan_mode_</ref>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">hateb_local_planner::msg::PlanningMode<sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ac6d5bb04ebb9457a026d343fe14b2086" kindref="member">ModeSwitch::tickAndGetMode</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Tick<sp/>the<sp/>tree<sp/>once<sp/>and<sp/>return<sp/>the<sp/>updated<sp/>planning<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1aa860dc9be20753e5b083966de64f42dd" kindref="member">tickBT</ref>();</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1ae84aca2c2506f24063a1a5f02213fcf0" kindref="member">plan_mode_</ref>;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a0dfa09b1400828f8e485091e20b73056" kindref="member">ModeSwitch::resetBT</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Halt<sp/>the<sp/>tree<sp/>and<sp/>set<sp/>goal<sp/>reached<sp/>to<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a075d65e69586c23fd4b7a420dec8f38a" kindref="member">goal_reached_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" kindref="member">bhv_tree_</ref>.haltTree();</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>printTreeStatus(bhv_tree_.rootNode());<sp/>//&lt;!<sp/>Use<sp/>this<sp/>for<sp/>debugging<sp/>Tree<sp/>status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1adaee89986120f308a98eb63c4b4b50c6" kindref="member">ModeSwitch::registerNodes</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Register<sp/>all<sp/>nodes<sp/>needed<sp/>for<sp/>the<sp/>behavior<sp/>tree</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a5b57798d071bd8bba920b10652b72d9f" kindref="member">bhv_factory_</ref>.registerNodeType&lt;<ref refid="classhateb__local__planner_1_1SetMode" kindref="compound">hateb_local_planner::SetMode</ref>&gt;(</highlight><highlight class="stringliteral">&quot;setMode&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a5b57798d071bd8bba920b10652b72d9f" kindref="member">bhv_factory_</ref>.registerNodeType&lt;<ref refid="classhateb__local__planner_1_1IsGoalUpdated" kindref="compound">hateb_local_planner::IsGoalUpdated</ref>&gt;(</highlight><highlight class="stringliteral">&quot;isGoalUpdated&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a5b57798d071bd8bba920b10652b72d9f" kindref="member">bhv_factory_</ref>.registerNodeType&lt;<ref refid="classhateb__local__planner_1_1SingleBandExitCondition" kindref="compound">hateb_local_planner::SingleBandExitCondition</ref>&gt;(</highlight><highlight class="stringliteral">&quot;singleBandExitCond&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a5b57798d071bd8bba920b10652b72d9f" kindref="member">bhv_factory_</ref>.registerNodeType&lt;<ref refid="classhateb__local__planner_1_1DualBandExitCondition" kindref="compound">hateb_local_planner::DualBandExitCondition</ref>&gt;(</highlight><highlight class="stringliteral">&quot;dualBandExitCond&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a5b57798d071bd8bba920b10652b72d9f" kindref="member">bhv_factory_</ref>.registerNodeType&lt;<ref refid="classhateb__local__planner_1_1VelObsExitCondition" kindref="compound">hateb_local_planner::VelObsExitCondition</ref>&gt;(</highlight><highlight class="stringliteral">&quot;velobsExitCond&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1ModeSwitch_1a5b57798d071bd8bba920b10652b72d9f" kindref="member">bhv_factory_</ref>.registerNodeType&lt;<ref refid="classhateb__local__planner_1_1PassThroughCondition" kindref="compound">hateb_local_planner::PassThroughCondition</ref>&gt;(</highlight><highlight class="stringliteral">&quot;passThroughCond&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hateb_local_planner</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="hateb_local_planner/src/mode_switch.cpp"/>
+  </compounddef>
+</doxygen>

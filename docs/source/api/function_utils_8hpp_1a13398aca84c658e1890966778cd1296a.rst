@@ -1,0 +1,14 @@
+.. _exhale_function_utils_8hpp_1a13398aca84c658e1890966778cd1296a:
+
+Function strip_leading_slash
+============================
+
+- Defined in :ref:`file_ros2_helpers_include_ros2_helpers_utils.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: strip_leading_slash(const std::string&)
+   :project: CoHAN-Nav2

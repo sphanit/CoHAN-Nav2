@@ -1,0 +1,446 @@
+
+.. _program_listing_file_hateb_local_planner_include_hateb_local_planner_visualization.hpp:
+
+Program Listing for File visualization.hpp
+==========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_hateb_local_planner_include_hateb_local_planner_visualization.hpp>` (``hateb_local_planner/include/hateb_local_planner/visualization.hpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*********************************************************************
+    * Majorly modified by Phani Teja Singamaneni from 2020-2025
+    * Additional changes licensed under the MIT License. See LICENSE file.
+    *
+    * Software License Agreement (BSD License)
+    *
+    *  Copyright (c) 2016,
+    *  TU Dortmund - Institute of Control Theory and Systems Engineering.
+    *  All rights reserved.
+    *
+    * Copyright (c) 2020 LAAS/CNRS
+    * All rights reserved.
+    *
+    *  Redistribution and use in source and binary forms, with or without
+    *  modification, are permitted provided that the following conditions
+    *  are met:
+    *
+    *   * Redistributions of source code must retain the above copyright
+    *     notice, this list of conditions and the following disclaimer.
+    *   * Redistributions in binary form must reproduce the above
+    *     copyright notice, this list of conditions and the following
+    *     disclaimer in the documentation and/or other materials provided
+    *     with the distribution.
+    *   * Neither the name of the institute nor the names of its
+    *     contributors may be used to endorse or promote products derived
+    *     from this software without specific prior written permission.
+    *
+    *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+    *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+    *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+    *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+    *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+    *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+    *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+    *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+    *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+    *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+    *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+    *  POSSIBILITY OF SUCH DAMAGE.
+    *
+    * Author: Christoph Rösmann
+    * Modified by: Phani Teja Singamaneni
+    *********************************************************************/
+   
+   #ifndef VISUALIZATION_H_
+   #define VISUALIZATION_H_
+   
+   // teb stuff
+   #include <hateb_local_planner/footprint_model.h>
+   
+   #include <hateb_local_planner/hateb_config.hpp>
+   #include <hateb_local_planner/timed_elastic_band.hpp>
+   
+   // ros stuff
+   #include <tf2/utils.h>
+   #include <tf2_ros/buffer.h>
+   #include <tf2_ros/transform_listener.h>
+   
+   #include <rclcpp/rclcpp.hpp>
+   #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+   
+   // boost
+   #include <boost/graph/adjacency_list.hpp>
+   #include <boost/graph/graph_traits.hpp>
+   #include <boost/utility.hpp>
+   
+   // messages
+   #include <cohan_msgs/msg/agent_path_array.hpp>
+   #include <cohan_msgs/msg/agent_time_to_goal.hpp>
+   #include <cohan_msgs/msg/agent_time_to_goal_array.hpp>
+   #include <cohan_msgs/msg/agent_trajectory_array.hpp>
+   #include <cohan_msgs/msg/crossing_info.hpp>
+   #include <cohan_msgs/msg/tracked_agents.hpp>
+   #include <cohan_msgs/msg/tracked_segment_type.hpp>
+   #include <cohan_msgs/msg/trajectory_point.hpp>
+   #include <cohan_msgs/msg/trajectory_stamped.hpp>
+   #include <geometry_msgs/msg/pose_array.hpp>
+   #include <geometry_msgs/msg/pose_stamped.hpp>
+   #include <hateb_local_planner/msg/feedback_msg.hpp>
+   #include <hateb_local_planner/visualization.hpp>
+   #include <nav_msgs/msg/odometry.hpp>
+   #include <nav_msgs/msg/path.hpp>
+   #include <std_msgs/msg/color_rgba.hpp>
+   #include <std_msgs/msg/float32.hpp>
+   #include <visualization_msgs/msg/marker.hpp>
+   #include <visualization_msgs/msg/marker_array.hpp>
+   
+   #define GLOBAL_PLAN_TOPIC "global_plan"
+   #define LOCAL_PLAN_TOPIC "local_plan"
+   #define LOCAL_TRAJ_TOPIC "local_traj"
+   #define LOCAL_PLAN_POSES_TOPIC "local_plan_poses"
+   #define LOCAL_PLAN_FP_POSES_TOPIC "local_plan_fp_poses"
+   #define AGENT_GLOBAL_PLANS_TOPIC "agents_global_plans"
+   #define AGENT_LOCAL_PLANS_TOPIC "agents_local_plans"
+   #define AGENT_LOCAL_TRAJS_TOPIC "agents_local_trajs"
+   #define AGENT_LOCAL_PLANS_POSES_TOPIC "agents_local_plans_poses"
+   #define AGENT_LOCAL_PLANS_FP_POSES_TOPIC "agents_local_plans_fp_poses"
+   #define ROBOT_FP_POSES_NS "robot_fp_poses"
+   #define AGENT_FP_POSES_NS "agents_fp_poses"
+   #define ROBOT_TRAJ_TIME_TOPIC "traj_time"
+   #define ROBOT_PATH_TIME_TOPIC "plan_time"
+   #define AGENT_TRAJS_TIME_TOPIC "agents_trajs_time"
+   #define AGENT_PATHS_TIME_TOPIC "agents_plans_time"
+   #define AGENT_MARKER_TOPIC "agent_marker"
+   #define AGENT_ARROW_TOPIC "agent_arrow"
+   #define ROBOT_NEXT_POSE_TOPIC "robot_next_pose"
+   #define AGENT_NEXT_POSE_TOPIC "agent_next_pose"
+   #define FEEDBACK_TOPIC "teb_feedback"
+   #define TEB_MARKER_TOPIC "teb_markers"
+   #define MODE_TEXT_TOPIC "mode_text"
+   #define CROSSING_POINT_TOPIC "crossing_points"
+   #define CROSSING_INFO_TOPIC "crossing_info"
+   #define TTG_TOPIC "time_to_goal"
+   #define TRACKED_AGENTS_SUB "/tracked_agents"
+   #define CLEARING_TIMER_DURATION 1.0  // seconds
+   #define DEFAULT_AGENT_SEGMENT cohan_msgs::msg::TrackedSegmentType::TORSO
+   
+   namespace hateb_local_planner {
+   
+   typedef struct {
+     std::vector<geometry_msgs::msg::PoseStamped> plan_before;
+     std::vector<cohan_msgs::msg::TrajectoryPoint> optimized_trajectory;
+     std::vector<geometry_msgs::msg::PoseStamped> plan_after;
+   } PlanTrajCombined;
+   
+   typedef struct {
+     std::vector<geometry_msgs::msg::PoseStamped> plan_before;
+     std::vector<geometry_msgs::msg::PoseStamped> plan_to_optimize;
+     std::vector<geometry_msgs::msg::PoseStamped> plan_after;
+   } PlanCombined;
+   
+   typedef struct {
+     uint64_t id;
+     std::vector<geometry_msgs::msg::PoseStamped> plan_before;
+     std::vector<cohan_msgs::msg::TrajectoryPoint> optimized_trajectory;
+     std::vector<geometry_msgs::msg::PoseStamped> plan_after;
+   } AgentPlanTrajCombined;
+   
+   typedef struct {
+     uint64_t id;
+     std::vector<geometry_msgs::msg::PoseStamped> plan_before;
+     std::vector<geometry_msgs::msg::PoseStamped> plan_to_optimize;
+     std::vector<geometry_msgs::msg::PoseStamped> plan_after;
+   } AgentPlanCombined;
+   
+   class HATebOptimalPlanner;  
+   
+   class TebVisualization {
+    public:
+     TebVisualization();
+   
+     TebVisualization(rclcpp_lifecycle::LifecycleNode::SharedPtr node, const std::shared_ptr<HATebConfig> cfg);
+   
+     void initialize(rclcpp_lifecycle::LifecycleNode::SharedPtr node, const std::shared_ptr<HATebConfig> cfg);
+   
+   
+     void publishGlobalPlan(const std::vector<geometry_msgs::msg::PoseStamped>& global_plan) const;
+   
+     void publishAgentGlobalPlans(const std::vector<AgentPlanCombined>& agents_plans) const;
+   
+     void publishLocalPlan(const std::vector<geometry_msgs::msg::PoseStamped>& local_plan) const;
+   
+     void publishTrackedAgents(cohan_msgs::msg::TrackedAgents::ConstSharedPtr agents);
+   
+     void publishLocalPlanAndPoses(const TimedElasticBand& teb, const BaseFootprintModel& robot_model, double fp_size, const std_msgs::msg::ColorRGBA& color = toColorMsg(0.5, 0.0, 0.8, 0.0));
+   
+     void publishAgentLocalPlansAndPoses(const std::map<uint64_t, TimedElasticBand>& agents_tebs_map, const BaseFootprintModel& agent_model, double fp_size,
+                                         const std_msgs::msg::ColorRGBA& color = toColorMsg(0.5, 0.0, 0.8, 0.0));
+   
+     void publishTrajectory(const PlanTrajCombined& plan_traj_combined);
+   
+     void publishAgentTrajectories(const std::vector<AgentPlanTrajCombined>& agents_plans_combined);
+   
+     void publishRobotFootprintModel(const PoseSE2& current_pose, const BaseFootprintModel& robot_model, const std::string& ns = "RobotFootprintModel",
+                                     const std_msgs::msg::ColorRGBA& color = toColorMsg(0.5, 0.0, 0.8, 0.0));
+   
+     void publishInfeasibleRobotPose(const PoseSE2& current_pose, const BaseFootprintModel& robot_model);
+   
+     void publishObstacles(const ObstContainer& obstacles) const;
+   
+     void publishViaPoints(const std::vector<Eigen::Vector2d, Eigen::aligned_allocator<Eigen::Vector2d> >& via_points, const std::string& ns = "ViaPoints") const;
+   
+     template <typename GraphType>
+     void publishGraph(const GraphType& graph, const std::string& ns_prefix = "Graph");
+   
+     template <typename BidirIter>
+     void publishPathContainer(BidirIter first, BidirIter last, const std::string& ns = "PathContainer");
+   
+     void publishTebContainer(const std::vector<std::shared_ptr<HATebOptimalPlanner> >& teb_planner, const std::string& ns = "TebContainer");
+   
+     void publishFeedbackMessage(const std::vector<std::shared_ptr<HATebOptimalPlanner> >& teb_planners, unsigned int selected_trajectory_idx, const ObstContainer& obstacles);
+   
+     void publishFeedbackMessage(const HATebOptimalPlanner& teb_planner, const ObstContainer& obstacles);
+   
+   
+     static std_msgs::msg::ColorRGBA toColorMsg(double a, double r, double g, double b);
+   
+     void publishCrossingPoses(const TimedElasticBand& teb, const std::map<uint64_t, TimedElasticBand>& agents_tebs_map);
+   
+     static void setMarkerColour(visualization_msgs::msg::Marker& marker, double itr, double n);
+   
+     void publishMode(int mode);
+   
+    protected:
+     bool printErrorWhenNotInitialized() const;
+   
+     void clearingTimerCB();
+   
+     rclcpp_lifecycle::LifecycleNode::SharedPtr node_;                                                                 
+     rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr global_plan_pub_;                                               
+     rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr local_plan_pub_;                                                
+     rclcpp::Publisher<cohan_msgs::msg::TrajectoryStamped>::SharedPtr local_traj_pub_;                                 
+     rclcpp::Publisher<cohan_msgs::msg::AgentPathArray>::SharedPtr agents_global_plans_pub_;                           
+     rclcpp::Publisher<cohan_msgs::msg::AgentPathArray>::SharedPtr agents_local_plans_pub_;                            
+     rclcpp::Publisher<cohan_msgs::msg::AgentTrajectoryArray>::SharedPtr agents_local_trajs_pub_;                      
+     rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr teb_poses_pub_, agents_tebs_poses_pub_;               
+     rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr teb_fp_poses_pub_, agents_tebs_fp_poses_pub_;  
+     rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr teb_marker_pub_;                                    
+     rclcpp::Publisher<hateb_local_planner::msg::FeedbackMsg>::SharedPtr feedback_pub_;                                
+     rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr mode_text_pub_;                                     
+     rclcpp::Publisher<cohan_msgs::msg::AgentTimeToGoal>::SharedPtr robot_traj_time_pub_;        
+     rclcpp::Publisher<cohan_msgs::msg::AgentTimeToGoal>::SharedPtr robot_path_time_pub_;        
+     rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr robot_next_pose_pub_;         
+     rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr agent_next_pose_pub_;         
+     rclcpp::Publisher<cohan_msgs::msg::AgentTimeToGoalArray>::SharedPtr agent_trajs_time_pub_;  
+     rclcpp::Publisher<cohan_msgs::msg::AgentTimeToGoalArray>::SharedPtr agent_paths_time_pub_;  
+     rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr agent_marker_pub_;       
+     rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr agent_arrow_pub_;        
+     rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr crossing_point_pub_;
+     rclcpp::Publisher<cohan_msgs::msg::CrossingInfo>::SharedPtr crossing_info_pub_;       
+     rclcpp::Subscription<cohan_msgs::msg::TrackedAgents>::SharedPtr tracked_agents_sub_;  
+     std::vector<double> vel_robot_;                                                       
+     std::vector<double> vel_agent_;                                                       
+     std::shared_ptr<tf2_ros::Buffer> tf_;                                                 // TF2 buffer for coordinate transformations
+     std::shared_ptr<tf2_ros::TransformListener> tf_listener_;                             // TF2 transform listener for coordinate transformations
+     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr ttg_pub_;                        
+     std::string ns_;                                                                      
+     std::string tracked_agents_sub_topic_;                                                
+   
+     std::shared_ptr<HATebConfig> cfg_;             
+     bool initialized_;                             
+     rclcpp::TimerBase::SharedPtr clearing_timer_;  
+   
+     bool last_publish_robot_global_plan_,          
+         last_publish_robot_local_plan_,            
+         last_publish_robot_local_plan_poses_,      
+         last_publish_robot_local_plan_fp_poses_,   
+         last_publish_agents_global_plans_,         
+         last_publish_agents_local_plans_,          
+         last_publish_agents_local_plan_poses_,     
+         last_publish_agents_local_plan_fp_poses_;  
+   
+     mutable int last_robot_fp_poses_idx_,  
+         last_agent_fp_poses_idx_;          
+   
+    public:
+     EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+   };
+   
+   using TebVisualizationPtr = std::shared_ptr<TebVisualization>;
+   
+   using TebVisualizationConstPtr = std::shared_ptr<const TebVisualization>;
+   
+   template <typename GraphType>
+   void TebVisualization::publishGraph(const GraphType& graph, const std::string& ns_prefix) {
+     if (printErrorWhenNotInitialized()) return;
+   
+     using GraphVertexIterator = typename boost::graph_traits<GraphType>::vertex_iterator;
+     using GraphEdgeIterator = typename boost::graph_traits<GraphType>::edge_iterator;
+   
+     // Visualize Edges
+     visualization_msgs::msg::Marker marker;
+     marker.header.frame_id = cfg_->map_frame;
+     marker.header.stamp = node_->now();
+     marker.ns = ns_prefix + "Edges";
+     marker.id = 0;
+   // #define TRIANGLE
+   #ifdef TRIANGLE
+     marker.type = visualization_msgs::msg::Marker::TRIANGLE_LIST;
+   #else
+     marker.type = visualization_msgs::msg::Marker::LINE_LIST;
+   #endif
+     marker.action = visualization_msgs::msg::Marker::ADD;
+   
+     GraphEdgeIterator it_edge;
+     GraphEdgeIterator end_edges;
+     for (boost::tie(it_edge, end_edges) = boost::edges(graph); it_edge != end_edges; ++it_edge) {
+   #ifdef TRIANGLE
+       geometry_msgs::msg::Point point_start1;
+       point_start1.x = graph[boost::source(*it_edge, graph)].pos[0] + 0.05;
+       point_start1.y = graph[boost::source(*it_edge, graph)].pos[1] - 0.05;
+       point_start1.z = 0;
+       marker.points.push_back(point_start1);
+       geometry_msgs::msg::Point point_start2;
+       point_start2.x = graph[boost::source(*it_edge, graph)].pos[0] - 0.05;
+       point_start2.y = graph[boost::source(*it_edge, graph)].pos[1] + 0.05;
+       point_start2.z = 0;
+       marker.points.push_back(point_start2);
+   
+   #else
+       geometry_msgs::msg::Point point_start;
+       point_start.x = graph[boost::source(*it_edge, graph)].pos[0];
+       point_start.y = graph[boost::source(*it_edge, graph)].pos[1];
+       point_start.z = 0;
+       marker.points.push_back(point_start);
+   #endif
+       geometry_msgs::msg::Point point_end;
+       point_end.x = graph[boost::target(*it_edge, graph)].pos[0];
+       point_end.y = graph[boost::target(*it_edge, graph)].pos[1];
+       point_end.z = 0;
+       marker.points.push_back(point_end);
+   
+       // add color
+       std_msgs::msg::ColorRGBA color;
+       color.a = 1.0;
+       color.r = 0;
+       color.g = 0;
+       color.b = 1;
+       marker.colors.push_back(color);
+       marker.colors.push_back(color);
+   #ifdef TRIANGLE
+       marker.colors.push_back(color);
+   #endif
+     }
+   
+   #ifdef TRIANGLE
+     marker.scale.x = 1;
+     marker.scale.y = 1;
+     marker.scale.z = 1;
+   #else
+     marker.scale.x = 0.01;
+   #endif
+     marker.color.a = 1.0;
+     marker.color.r = 0.0;
+     marker.color.g = 1.0;
+     marker.color.b = 0.0;
+   
+     // Now publish edge markers
+     teb_marker_pub_->publish(marker);
+   
+     // Visualize vertices
+     marker.header.frame_id = cfg_->map_frame;
+     marker.header.stamp = node_->now();
+     marker.ns = ns_prefix + "Vertices";
+     marker.id = 0;
+     marker.type = visualization_msgs::msg::Marker::POINTS;
+     marker.action = visualization_msgs::msg::Marker::ADD;
+   
+     GraphVertexIterator it_vert;
+     GraphVertexIterator end_vert;
+     for (boost::tie(it_vert, end_vert) = boost::vertices(graph); it_vert != end_vert; ++it_vert) {
+       geometry_msgs::msg::Point point;
+       point.x = graph[*it_vert].pos[0];
+       point.y = graph[*it_vert].pos[1];
+       point.z = 0;
+       marker.points.push_back(point);
+       // add color
+   
+       std_msgs::msg::ColorRGBA color;
+       color.a = 1.0;
+       if (it_vert == end_vert - 1) {
+         color.r = 1;
+         color.g = 0;
+         color.b = 0;
+       } else {
+         color.r = 0;
+         color.g = 1;
+         color.b = 0;
+       }
+       marker.colors.push_back(color);
+     }
+     // set first color (start vertix) to blue
+     if (!marker.colors.empty()) {
+       marker.colors.front().b = 1;
+       marker.colors.front().g = 0;
+     }
+   
+     marker.scale.x = 0.1;
+     marker.scale.y = 0.1;
+     marker.color.a = 1.0;
+     marker.color.r = 0.0;
+     marker.color.g = 1.0;
+     marker.color.b = 0.0;
+   
+     // Now publish vertex markers
+     teb_marker_pub_->publish(marker);
+   }
+   
+   template <typename BidirIter>
+   void TebVisualization::publishPathContainer(BidirIter first, BidirIter last, const std::string& ns) {
+     if (printErrorWhenNotInitialized()) return;
+   
+     visualization_msgs::msg::Marker marker;
+     marker.header.frame_id = cfg_->map_frame;
+     marker.header.stamp = node_->now();
+     marker.ns = ns;
+     marker.id = 0;
+     marker.type = visualization_msgs::msg::Marker::LINE_LIST;
+     marker.action = visualization_msgs::msg::Marker::ADD;
+   
+     using PathType = typename std::iterator_traits<BidirIter>::value_type;  // Get type of the path (point container)
+   
+     // Iterate through path container
+     while (first != last) {
+       // iterate single path points
+       typename PathType::const_iterator it_point;
+       typename PathType::const_iterator end_point;
+       for (it_point = first->begin(), end_point = boost::prior(first->end()); it_point != end_point; ++it_point) {
+         geometry_msgs::msg::Point point_start;
+         point_start.x = get_const_reference(*it_point).x();
+         point_start.y = get_const_reference(*it_point).y();
+         point_start.z = 0;
+         marker.points.push_back(point_start);
+   
+         geometry_msgs::msg::Point point_end;
+         point_end.x = get_const_reference(*boost::next(it_point)).x();
+         point_end.y = get_const_reference(*boost::next(it_point)).y();
+         point_end.z = 0;
+         marker.points.push_back(point_end);
+       }
+       ++first;
+     }
+     marker.scale.x = 0.01;
+     marker.color.a = 1.0;
+     marker.color.r = 0.0;
+     marker.color.g = 1.0;
+     marker.color.b = 0.0;
+   
+     teb_marker_pub_->publish(marker);
+   }
+   
+   }  // namespace hateb_local_planner
+   
+   #endif /* VISUALIZATION_H_ */

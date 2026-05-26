@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceagents" kind="namespace" language="C++">
+    <compoundname>agents</compoundname>
+    <innerclass refid="classagents_1_1AgentPathPrediction" prot="public">agents::AgentPathPrediction</innerclass>
+    <innerclass refid="classagents_1_1AgentPathPredictConfig" prot="public">agents::AgentPathPredictConfig</innerclass>
+    <innerclass refid="classagents_1_1Gaussian" prot="public">agents::Gaussian</innerclass>
+    <innerclass refid="classagents_1_1BayesianGoalPrediction" prot="public">agents::BayesianGoalPrediction</innerclass>
+    <innerclass refid="classagents_1_1PredictGoalROS" prot="public">agents::PredictGoalROS</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="85" column="1"/>
+  </compounddef>
+</doxygen>

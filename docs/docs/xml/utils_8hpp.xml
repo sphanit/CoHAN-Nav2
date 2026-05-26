@@ -1,0 +1,857 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="utils_8hpp" kind="file" language="C++">
+    <compoundname>utils.hpp</compoundname>
+    <includes local="no">tf2/LinearMath/Vector3.h</includes>
+    <includes local="no">tf2/convert.h</includes>
+    <includes local="no">tf2/time.h</includes>
+    <includes local="no">tf2/utils.h</includes>
+    <includes local="no">tf2_ros/buffer.h</includes>
+    <includes local="no">tf2_ros/transform_listener.h</includes>
+    <includes local="no">tf2_geometry_msgs/tf2_geometry_msgs.hpp</includes>
+    <includedby refid="agent__path__prediction_8hpp" local="no">agent_path_prediction.hpp</includedby>
+    <includedby refid="hateb__local__planner__ros_8h" local="no">hateb_local_planner_ros.h</includedby>
+    <includedby refid="optimal__planner_8h" local="no">optimal_planner.h</includedby>
+    <includedby refid="timed__elastic__band_8hpp" local="no">timed_elastic_band.hpp</includedby>
+    <includedby refid="hateb__local__planner__ros_8cpp" local="no">hateb_local_planner_ros.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="3">
+        <label>tf2/convert.h</label>
+      </node>
+      <node id="4">
+        <label>tf2/time.h</label>
+      </node>
+      <node id="2">
+        <label>tf2/LinearMath/Vector3.h</label>
+      </node>
+      <node id="8">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="7">
+        <label>tf2_ros/transform_listener.h</label>
+      </node>
+      <node id="6">
+        <label>tf2_ros/buffer.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>agent_path_prediction.cpp</label>
+        <link refid="agent__path__prediction_8cpp"/>
+      </node>
+      <node id="1">
+        <label>utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>visualization.cpp</label>
+        <link refid="visualization_8cpp"/>
+      </node>
+      <node id="2">
+        <label>agent_path_prediction.hpp</label>
+        <link refid="agent__path__prediction_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>hateb_local_planner_ros.cpp</label>
+        <link refid="hateb__local__planner__ros_8cpp"/>
+      </node>
+      <node id="11">
+        <label>timed_elastic_band.cpp</label>
+        <link refid="timed__elastic__band_8cpp"/>
+      </node>
+      <node id="9">
+        <label>timed_elastic_band.hpp</label>
+        <link refid="timed__elastic__band_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner_ros.h</label>
+        <link refid="hateb__local__planner__ros_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>optimal_planner.h</label>
+        <link refid="optimal__planner_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>optimal_planner.cpp</label>
+        <link refid="optimal__planner_8cpp"/>
+      </node>
+      <node id="10">
+        <label>visualization.hpp</label>
+        <link refid="visualization_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="utils_8hpp_1a77d8c3be30124fda1a25f0b4b82f2fe1" prot="public" static="no">
+        <name>RCLCPP_ASSERT</name>
+        <param><defname>expr</defname></param>
+        <initializer>  if (!(expr)) {                                                                      \
+    RCLCPP_FATAL(rclcpp::get_logger(&quot;rclcpp_assert&quot;), &quot;Assertion failed: %s&quot;, #expr); \
+    throw std::runtime_error(&quot;Assertion failed: &quot; #expr);                             \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="37" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1a10415cd3bf15d1228972b179881c7faa" prot="public" static="no">
+        <name>RCLCPP_ASSERT_MSG</name>
+        <param><defname>expr</defname></param>
+        <param><defname>msg</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>  if (!(expr)) {                                                           \
+    RCLCPP_FATAL(rclcpp::get_logger(&quot;rclcpp_assert&quot;), msg, ##__VA_ARGS__); \
+    throw std::runtime_error(&quot;Assertion failed: &quot; msg);                    \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="43" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1a7dda2ee207b5602682b9912805739845" prot="public" static="no">
+        <name>RCLCPP_DEBUG_COND</name>
+        <param><defname>cond</defname></param>
+        <param><defname>logger</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>  if (cond) {                                \
+    RCLCPP_DEBUG(logger, __VA_ARGS__);       \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="50" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1a9ba2ac89402a4087b81dc98d2e6af15d" prot="public" static="no">
+        <name>RCLCPP_INFO_COND</name>
+        <param><defname>cond</defname></param>
+        <param><defname>logger</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>  if (cond) {                               \
+    RCLCPP_INFO(logger, __VA_ARGS__);       \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="55" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1acb6dcf43f434360655c6f031214a3bdc" prot="public" static="no">
+        <name>RCLCPP_WARN_COND</name>
+        <param><defname>cond</defname></param>
+        <param><defname>logger</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>  if (cond) {                               \
+    RCLCPP_WARN(logger, __VA_ARGS__);       \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="60" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1a861c0dbcc7a4f9b20d0f1eb1689bcb95" prot="public" static="no">
+        <name>RCLCPP_ERROR_COND</name>
+        <param><defname>cond</defname></param>
+        <param><defname>logger</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>  if (cond) {                                \
+    RCLCPP_ERROR(logger, __VA_ARGS__);       \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="65" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1a935b655cbd8e606383720d312a46dda2" prot="public" static="no">
+        <name>RCLCPP_DEBUG_STREAM_COND</name>
+        <param><defname>cond</defname></param>
+        <param><defname>logger</defname></param>
+        <param><defname>stream_arg</defname></param>
+        <initializer>  if (cond) {                                              \
+    RCLCPP_DEBUG_STREAM(logger, stream_arg);               \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="71" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1a23b2f17c400c61870539225a7a9353c4" prot="public" static="no">
+        <name>RCLCPP_INFO_STREAM_COND</name>
+        <param><defname>cond</defname></param>
+        <param><defname>logger</defname></param>
+        <param><defname>stream_arg</defname></param>
+        <initializer>  if (cond) {                                             \
+    RCLCPP_INFO_STREAM(logger, stream_arg);               \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="76" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1aa09205a7509a4687cccca8e678afbb60" prot="public" static="no">
+        <name>RCLCPP_WARN_STREAM_COND</name>
+        <param><defname>cond</defname></param>
+        <param><defname>logger</defname></param>
+        <param><defname>stream_arg</defname></param>
+        <initializer>  if (cond) {                                             \
+    RCLCPP_WARN_STREAM(logger, stream_arg);               \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="81" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1ad9b3cad51773171081b346522ba2243f" prot="public" static="no">
+        <name>RCLCPP_ERROR_STREAM_COND</name>
+        <param><defname>cond</defname></param>
+        <param><defname>logger</defname></param>
+        <param><defname>stream_arg</defname></param>
+        <initializer>  if (cond) {                                              \
+    RCLCPP_ERROR_STREAM(logger, stream_arg);               \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="86" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1aa41a5d9968abcde2181decde5f87268a" prot="public" static="no">
+        <name>RCLCPP_DEBUG_ONCE</name>
+        <param><defname>logger</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>  do {                                   \
+    static bool __once = false;          \
+    if (!__once) {                       \
+      __once = true;                     \
+      RCLCPP_DEBUG(logger, __VA_ARGS__); \
+    }                                    \
+  } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="92" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1ac398a2db64fa466508754a6c4dc617c9" prot="public" static="no">
+        <name>RCLCPP_INFO_ONCE</name>
+        <param><defname>logger</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>  do {                                  \
+    static bool __once = false;         \
+    if (!__once) {                      \
+      __once = true;                    \
+      RCLCPP_INFO(logger, __VA_ARGS__); \
+    }                                   \
+  } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="101" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1a4230e377f358350065a84a171afd3bcc" prot="public" static="no">
+        <name>RCLCPP_WARN_ONCE</name>
+        <param><defname>logger</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>  do {                                  \
+    static bool __once = false;         \
+    if (!__once) {                      \
+      __once = true;                    \
+      RCLCPP_WARN(logger, __VA_ARGS__); \
+    }                                   \
+  } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="110" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8hpp_1ae168e15be2b6585591635d86f804edf0" prot="public" static="no">
+        <name>RCLCPP_ERROR_ONCE</name>
+        <param><defname>logger</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>  do {                                   \
+    static bool __once = false;          \
+    if (!__once) {                       \
+      __once = true;                     \
+      RCLCPP_ERROR(logger, __VA_ARGS__); \
+    }                                    \
+  } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="119" column="9" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="utils_8hpp_1a13398aca84c658e1890966778cd1296a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string strip_leading_slash</definition>
+        <argsstring>(const std::string &amp;frame_id)</argsstring>
+        <name>strip_leading_slash</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>frame_id</declname>
+        </param>
+        <briefdescription>
+<para>Strips leading slash from frame ID if present. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frame_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The frame ID string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Frame ID without leading slash </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="133" column="20" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="133" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1ad9906e6229c51b18d9c7e172a91a44d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lookupTwist</definition>
+        <argsstring>(const std::string &amp;tracking_frame, const std::string &amp;observation_frame, const std::string &amp;reference_frame, const tf2::Vector3 &amp;reference_point, const std::string &amp;reference_point_frame, const rclcpp::Time &amp;time, const rclcpp::Duration &amp;averaging_interval, geometry_msgs::msg::Twist &amp;twist, std::shared_ptr&lt; tf2_ros::Buffer &gt; tf_)</argsstring>
+        <name>lookupTwist</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>tracking_frame</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>observation_frame</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference_frame</declname>
+        </param>
+        <param>
+          <type>const tf2::Vector3 &amp;</type>
+          <declname>reference_point</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference_point_frame</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Duration &amp;</type>
+          <declname>averaging_interval</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::Twist &amp;</type>
+          <declname>twist</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; tf2_ros::Buffer &gt;</type>
+          <declname>tf_</declname>
+        </param>
+        <briefdescription>
+<para>Look up twist information between frames with custom reference point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method computes the twist (linear and angular velocity) of one frame relative to another, allowing specification of a custom reference point and frame. It performs the necessary coordinate transformations and averages the motion over the specified time interval.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tracking_frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The frame being tracked (whose motion we want to determine) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>observation_frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The frame from which we&apos;re observing </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reference_frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The frame in which the twist should be expressed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reference_point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The point about which the twist should be computed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reference_point_frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The frame in which the reference point is expressed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time at which to get the twist </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>averaging_interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time interval over which to average the twist </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">twist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resulting twist message containing linear and angular velocities </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="158" column="13" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="158" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1adffcf4274738b3e0ab62184582030a90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lookupTwist</definition>
+        <argsstring>(const std::string &amp;tracking_frame, const std::string &amp;observation_frame, const rclcpp::Time &amp;time, const rclcpp::Duration &amp;averaging_interval, geometry_msgs::msg::Twist &amp;twist, std::shared_ptr&lt; tf2_ros::Buffer &gt; tf_)</argsstring>
+        <name>lookupTwist</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>tracking_frame</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>observation_frame</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Duration &amp;</type>
+          <declname>averaging_interval</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::Twist &amp;</type>
+          <declname>twist</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; tf2_ros::Buffer &gt;</type>
+          <declname>tf_</declname>
+        </param>
+        <briefdescription>
+<para>Look up twist information between frames with default reference point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Simplified version that uses the origin of tracking_frame as the reference point and observation_frame as the reference frame. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tracking_frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The frame being tracked </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>observation_frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The frame from which we&apos;re observing </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time at which to get the twist </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>averaging_interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time interval over which to average the twist </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">twist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resulting twist message </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/utils.hpp" line="272" column="13" bodyfile="ros2_helpers/include/ros2_helpers/utils.hpp" bodystart="272" bodyend="276"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(MIT<sp/>License)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2020-2025<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>UTILS_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UTILS_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/LinearMath/Vector3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>TF2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/convert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/utils.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_ros/buffer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_ros/transform_listener.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="utils_8hpp_1a77d8c3be30124fda1a25f0b4b82f2fe1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_ASSERT(expr)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/>if<sp/>(!(expr))<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>RCLCPP_FATAL(rclcpp::get_logger(&quot;rclcpp_assert&quot;</highlight><highlight class="normal">),<sp/>&quot;Assertion<sp/>failed:<sp/>%s&quot;,<sp/>#expr);<sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>throw<sp/>std::runtime_error(&quot;Assertion<sp/>failed:<sp/>&quot;<sp/>#expr);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="utils_8hpp_1a10415cd3bf15d1228972b179881c7faa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_ASSERT_MSG(expr,<sp/>msg,<sp/>...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/>if<sp/>(!(expr))<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>RCLCPP_FATAL(rclcpp::get_logger(&quot;rclcpp_assert&quot;</highlight><highlight class="normal">),<sp/>msg,<sp/>##__VA_ARGS__);<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>throw<sp/>std::runtime_error(&quot;Assertion<sp/>failed:<sp/>&quot;<sp/>msg);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Conditional<sp/>logging<sp/>macros<sp/>(ROS2<sp/>doesn&apos;t<sp/>have<sp/>_COND<sp/>variants)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="utils_8hpp_1a7dda2ee207b5602682b9912805739845" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_DEBUG_COND(cond,<sp/>logger,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/>if<sp/>(cond)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(logger,<sp/>__VA_ARGS__);<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="utils_8hpp_1a9ba2ac89402a4087b81dc98d2e6af15d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_INFO_COND(cond,<sp/>logger,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/>if<sp/>(cond)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>RCLCPP_INFO(logger,<sp/>__VA_ARGS__);<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="utils_8hpp_1acb6dcf43f434360655c6f031214a3bdc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_WARN_COND(cond,<sp/>logger,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/>if<sp/>(cond)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>RCLCPP_WARN(logger,<sp/>__VA_ARGS__);<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="utils_8hpp_1a861c0dbcc7a4f9b20d0f1eb1689bcb95" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_ERROR_COND(cond,<sp/>logger,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/>if<sp/>(cond)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>RCLCPP_ERROR(logger,<sp/>__VA_ARGS__);<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Stream-based<sp/>conditional<sp/>logging<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="utils_8hpp_1a935b655cbd8e606383720d312a46dda2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_DEBUG_STREAM_COND(cond,<sp/>logger,<sp/>stream_arg)<sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/>if<sp/>(cond)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG_STREAM(logger,<sp/>stream_arg);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="utils_8hpp_1a23b2f17c400c61870539225a7a9353c4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_INFO_STREAM_COND(cond,<sp/>logger,<sp/>stream_arg)<sp/>\</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/>if<sp/>(cond)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>RCLCPP_INFO_STREAM(logger,<sp/>stream_arg);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="utils_8hpp_1aa09205a7509a4687cccca8e678afbb60" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_WARN_STREAM_COND(cond,<sp/>logger,<sp/>stream_arg)<sp/>\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/>if<sp/>(cond)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>RCLCPP_WARN_STREAM(logger,<sp/>stream_arg);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="utils_8hpp_1ad9b3cad51773171081b346522ba2243f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_ERROR_STREAM_COND(cond,<sp/>logger,<sp/>stream_arg)<sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/>if<sp/>(cond)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>RCLCPP_ERROR_STREAM(logger,<sp/>stream_arg);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ONCE<sp/>logging<sp/>macros<sp/>(print<sp/>message<sp/>only<sp/>once)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="utils_8hpp_1aa41a5d9968abcde2181decde5f87268a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_DEBUG_ONCE(logger,<sp/>...)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>bool<sp/>__once<sp/>=<sp/>false;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!__once)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>__once<sp/>=<sp/>true;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(logger,<sp/>__VA_ARGS__);<sp/>\</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="utils_8hpp_1ac398a2db64fa466508754a6c4dc617c9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_INFO_ONCE(logger,<sp/>...)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>bool<sp/>__once<sp/>=<sp/>false;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!__once)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>__once<sp/>=<sp/>true;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_INFO(logger,<sp/>__VA_ARGS__);<sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="utils_8hpp_1a4230e377f358350065a84a171afd3bcc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_WARN_ONCE(logger,<sp/>...)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="111"><highlight class="preprocessor"><sp/><sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>bool<sp/>__once<sp/>=<sp/>false;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="113"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!__once)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="114"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>__once<sp/>=<sp/>true;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="115"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(logger,<sp/>__VA_ARGS__);<sp/>\</highlight></codeline>
+<codeline lineno="116"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="117"><highlight class="preprocessor"><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="utils_8hpp_1ae168e15be2b6585591635d86f804edf0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCLCPP_ERROR_ONCE(logger,<sp/>...)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"><sp/><sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="121"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>bool<sp/>__once<sp/>=<sp/>false;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!__once)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="123"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>__once<sp/>=<sp/>true;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_ERROR(logger,<sp/>__VA_ARGS__);<sp/>\</highlight></codeline>
+<codeline lineno="125"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="utils_8hpp_1a13398aca84c658e1890966778cd1296a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="utils_8hpp_1a13398aca84c658e1890966778cd1296a" kindref="member">strip_leading_slash</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>frame_id)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!frame_id.empty()<sp/>&amp;&amp;<sp/>frame_id[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>frame_id.substr(1);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>frame_id;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="utils_8hpp_1ad9906e6229c51b18d9c7e172a91a44d1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="utils_8hpp_1ad9906e6229c51b18d9c7e172a91a44d1" kindref="member">lookupTwist</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>tracking_frame,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>observation_frame,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>reference_frame,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>tf2::Vector3&amp;<sp/>reference_point,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>reference_point_frame,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Time&amp;<sp/>time,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Duration&amp;<sp/>averaging_interval,<sp/>geometry_msgs::msg::Twist&amp;<sp/>twist,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;tf2_ros::Buffer&gt;<sp/>tf_)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>the<sp/>same<sp/>clock<sp/>type<sp/>as<sp/>the<sp/>provided<sp/>time<sp/>to<sp/>avoid<sp/>mixing<sp/>clock<sp/>sources</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>rcl_clock_type_t<sp/>clock_type<sp/>=<sp/>time.get_clock_type();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>rclcpp::Time<sp/>latest_time(clock_type);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>rclcpp::Time<sp/>target_time(clock_type);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>tf2::TimePoint<sp/>latest_time_tf2;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>tf2::CompactFrameID<sp/>target_id<sp/>=<sp/>tf_-&gt;_lookupFrameNumber(<ref refid="utils_8hpp_1a13398aca84c658e1890966778cd1296a" kindref="member">strip_leading_slash</ref>(tracking_frame));</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>tf2::CompactFrameID<sp/>source_id<sp/>=<sp/>tf_-&gt;_lookupFrameNumber(<ref refid="utils_8hpp_1a13398aca84c658e1890966778cd1296a" kindref="member">strip_leading_slash</ref>(observation_frame));</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>tf_-&gt;_getLatestCommonTime(source_id,<sp/>target_id,<sp/>latest_time_tf2,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>tf2::TimePoint<sp/>to<sp/>rclcpp::Time<sp/>using<sp/>the<sp/>chosen<sp/>clock<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>latest_time<sp/>=<sp/>rclcpp::Time(latest_time_tf2.time_since_epoch().count(),<sp/>clock_type);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>rclcpp::Time<sp/>zero_time(0,<sp/>0,<sp/>clock_type);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(zero_time<sp/>==<sp/>time)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>target_time<sp/>=<sp/>latest_time;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>target_time<sp/>=<sp/>time;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>rclcpp::Time<sp/>end_time<sp/>=<sp/>std::min(target_time<sp/>+<sp/>averaging_interval<sp/>*<sp/>0.5,<sp/>latest_time);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>rclcpp::Duration<sp/>small_duration<sp/>=<sp/>rclcpp::Duration::from_nanoseconds(10000);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>rclcpp::Time<sp/>min_time<sp/>=<sp/>rclcpp::Time(small_duration.nanoseconds(),<sp/>clock_type);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>rclcpp::Time<sp/>start_time<sp/>=<sp/>std::max(min_time<sp/>+<sp/>averaging_interval,<sp/>end_time)<sp/>-<sp/>averaging_interval;<sp/><sp/></highlight><highlight class="comment">//<sp/>don&apos;t<sp/>collide<sp/>with<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>rclcpp::Duration<sp/>corrected_averaging_interval<sp/>=<sp/>end_time<sp/>-<sp/>start_time;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>correct<sp/>for<sp/>the<sp/>possiblity<sp/>that<sp/>start<sp/>time<sp/>was</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>truncated<sp/>above.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::TransformStamped<sp/>start_msg;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::TransformStamped<sp/>end_msg;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>start_msg<sp/>=<sp/>tf_-&gt;lookupTransform(observation_frame,<sp/>tracking_frame,<sp/>start_time);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/>end_msg<sp/>=<sp/>tf_-&gt;lookupTransform(observation_frame,<sp/>tracking_frame,<sp/>end_time);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>tf2::Stamped&lt;tf2::Transform&gt;<sp/>start;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>tf2::Stamped&lt;tf2::Transform&gt;<sp/>end;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>tf2::fromMsg(start_msg,<sp/>start);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/>tf2::fromMsg(end_msg,<sp/>end);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>tf2::Matrix3x3<sp/>temp<sp/>=<sp/>start.getBasis().inverse()<sp/>*<sp/>end.getBasis();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/>tf2::Quaternion<sp/>quat_temp;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>temp.getRotation(quat_temp);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>tf2::Vector3<sp/>o<sp/>=<sp/>start.getBasis()<sp/>*<sp/>quat_temp.getAxis();</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ang<sp/>=<sp/>quat_temp.getAngle();</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>delta_x<sp/>=<sp/>end.getOrigin().getX()<sp/>-<sp/>start.getOrigin().getX();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>delta_y<sp/>=<sp/>end.getOrigin().getY()<sp/>-<sp/>start.getOrigin().getY();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>delta_z<sp/>=<sp/>end.getOrigin().getZ()<sp/>-<sp/>start.getOrigin().getZ();</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>tf2::Vector3<sp/>twist_vel((delta_x)<sp/>/<sp/>corrected_averaging_interval.seconds(),<sp/>(delta_y)<sp/>/<sp/>corrected_averaging_interval.seconds(),<sp/>(delta_z)<sp/>/<sp/>corrected_averaging_interval.seconds());</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/>tf2::Vector3<sp/>twist_rot<sp/>=<sp/>o<sp/>*<sp/>(ang<sp/>/<sp/>corrected_averaging_interval.seconds());</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>a<sp/>twist<sp/>w/<sp/>reference<sp/>frame<sp/>in<sp/>observation_frame<sp/><sp/>and<sp/>reference</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>point<sp/>is<sp/>in<sp/>the<sp/>tracking_frame<sp/>at<sp/>the<sp/>origin<sp/>(at<sp/>start_time)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>correct<sp/>for<sp/>the<sp/>position<sp/>of<sp/>the<sp/>reference<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>tf2::Stamped&lt;tf2::Transform&gt;<sp/>inverse;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/>tf2::fromMsg(tf_-&gt;lookupTransform(reference_frame,<sp/>tracking_frame,<sp/>target_time),<sp/>inverse);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>tf2::Vector3<sp/>out_rot<sp/>=<sp/>inverse.getBasis()<sp/>*<sp/>twist_rot;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/>tf2::Vector3<sp/>out_vel<sp/>=<sp/>inverse.getBasis()<sp/>*<sp/>twist_vel<sp/>+<sp/>inverse.getOrigin().cross(out_rot);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Rereference<sp/>the<sp/>twist<sp/>about<sp/>a<sp/>new<sp/>reference<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>by<sp/>computing<sp/>the<sp/>original<sp/>reference<sp/>point<sp/>in<sp/>the<sp/>reference<sp/>frame:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/>tf2::TimePoint<sp/>target_time_tf2(std::chrono::nanoseconds(target_time.nanoseconds()));</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/>tf2::Stamped&lt;tf2::Vector3&gt;<sp/>rp_orig(tf2::Vector3(0,<sp/>0,<sp/>0),<sp/>target_time_tf2,<sp/>tracking_frame);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::TransformStamped<sp/>reference_frame_trans;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/>tf2::fromMsg(tf_-&gt;lookupTransform(reference_frame,<sp/>rp_orig.frame_id_,<sp/>rp_orig.stamp_),<sp/>reference_frame_trans);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::PointStamped<sp/>rp_orig_msg;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>rp_orig_msg.header.stamp<sp/>=<sp/>rclcpp::Time(std::chrono::nanoseconds(rp_orig.stamp_.time_since_epoch().count()).count(),<sp/>clock_type);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/>rp_orig_msg.header.stamp<sp/>=<sp/>rclcpp::Time(rp_orig.stamp_.time_since_epoch().count(),<sp/>clock_type);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/>rp_orig_msg.header.frame_id<sp/>=<sp/>rp_orig.frame_id_;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/>rp_orig_msg.point.x<sp/>=<sp/>rp_orig.x();</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/>rp_orig_msg.point.y<sp/>=<sp/>rp_orig.y();</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/>rp_orig_msg.point.z<sp/>=<sp/>rp_orig.z();</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/>tf2::doTransform(rp_orig_msg,<sp/>rp_orig_msg,<sp/>reference_frame_trans);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>convert<sp/>the<sp/>requrested<sp/>reference<sp/>point<sp/>into<sp/>the<sp/>right<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>tf2::Stamped&lt;tf2::Vector3&gt;<sp/>rp_desired(reference_point,<sp/>target_time_tf2,<sp/>reference_point_frame);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::PointStamped<sp/>rp_desired_msg;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>rp_desired_msg.header.stamp<sp/>=<sp/>rclcpp::Time(std::chrono::nanoseconds(rp_desired.stamp_.time_since_epoch().count()).count(),<sp/>clock_type);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/>rp_desired_msg.header.stamp<sp/>=<sp/>rclcpp::Time(rp_desired.stamp_.time_since_epoch().count(),<sp/>clock_type);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>rp_desired_msg.header.frame_id<sp/>=<sp/>rp_desired.frame_id_;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>rp_desired_msg.point.x<sp/>=<sp/>rp_desired.x();</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>rp_desired_msg.point.y<sp/>=<sp/>rp_desired.y();</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/>rp_desired_msg.point.z<sp/>=<sp/>rp_desired.z();</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/>tf2::doTransform(rp_desired_msg,<sp/>rp_desired_msg,<sp/>reference_frame_trans);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>the<sp/>delta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/>tf2::Vector3<sp/>delta<sp/>=<sp/>rp_desired<sp/>-<sp/>rp_orig;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Correct<sp/>for<sp/>the<sp/>change<sp/>in<sp/>reference<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/>out_vel<sp/>=<sp/>out_vel<sp/>+<sp/>out_rot<sp/>*<sp/>delta;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>out_rot<sp/>unchanged</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>twist.linear.x<sp/>=<sp/>out_vel.x();</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/>twist.linear.y<sp/>=<sp/>out_vel.y();</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/>twist.linear.z<sp/>=<sp/>out_vel.z();</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/>twist.angular.x<sp/>=<sp/>out_rot.x();</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/>twist.angular.y<sp/>=<sp/>out_rot.y();</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/>twist.angular.z<sp/>=<sp/>out_rot.z();</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272" refid="utils_8hpp_1adffcf4274738b3e0ab62184582030a90" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="utils_8hpp_1ad9906e6229c51b18d9c7e172a91a44d1" kindref="member">lookupTwist</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>tracking_frame,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>observation_frame,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Time&amp;<sp/>time,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Duration&amp;<sp/>averaging_interval,<sp/>geometry_msgs::msg::Twist&amp;<sp/>twist,</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;tf2_ros::Buffer&gt;<sp/>tf_)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ref<sp/>point<sp/>is<sp/>origin<sp/>of<sp/>tracking_frame,<sp/>ref_frame<sp/>=<sp/>obs_frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><ref refid="utils_8hpp_1ad9906e6229c51b18d9c7e172a91a44d1" kindref="member">lookupTwist</ref>(tracking_frame,<sp/>observation_frame,<sp/>observation_frame,<sp/>tf2::Vector3(0,<sp/>0,<sp/>0),<sp/>tracking_frame,<sp/>time,<sp/>averaging_interval,<sp/>twist,<sp/>tf_);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>UTILS_HPP_</highlight></codeline>
+    </programlisting>
+    <location file="ros2_helpers/include/ros2_helpers/utils.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1HATEBGoalChecker" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::HATEBGoalChecker</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">nav2_core::GoalChecker</basecompoundref>
+    <includes refid="hateb__goal__checker_8hpp" local="no">hateb_goal_checker.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATEBGoalChecker_1a419f68dd3b8c42fa2d697be32200dc10" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATEBGoalChecker::xy_goal_tolerance_</definition>
+        <argsstring></argsstring>
+        <name>xy_goal_tolerance_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="61" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATEBGoalChecker_1ab8b427f5820913521071f46fd25a219b" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATEBGoalChecker::yaw_goal_tolerance_</definition>
+        <argsstring></argsstring>
+        <name>yaw_goal_tolerance_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="61" column="29" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATEBGoalChecker_1af6e9d33c28d140c6428a2b889282e3c6" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATEBGoalChecker::stateful_</definition>
+        <argsstring></argsstring>
+        <name>stateful_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="62" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATEBGoalChecker_1ab171a35b5bc28b11206bf9b278416791" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATEBGoalChecker::check_xy_</definition>
+        <argsstring></argsstring>
+        <name>check_xy_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="62" column="18" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATEBGoalChecker_1a1914465764a6c25a48f4561173c094e9" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATEBGoalChecker::goal_ctrl_</definition>
+        <argsstring></argsstring>
+        <name>goal_ctrl_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="63" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATEBGoalChecker_1afe99eb84b72853033516e76e50950480" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATEBGoalChecker::xy_goal_tolerance_sq_</definition>
+        <argsstring></argsstring>
+        <name>xy_goal_tolerance_sq_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="66" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATEBGoalChecker_1afafc0ebdaeefafb9b580ea7a7573bc23" prot="protected" static="no" mutable="no">
+        <type>rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr hateb_local_planner::HATEBGoalChecker::dyn_params_handler_</definition>
+        <argsstring></argsstring>
+        <name>dyn_params_handler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="68" column="69" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1HATEBGoalChecker_1a9cf9142d951ac021c19e1ee977cf6761" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::HATEBGoalChecker::plugin_name_</definition>
+        <argsstring></argsstring>
+        <name>plugin_name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="69" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATEBGoalChecker_1a50ec4756fffa3a5e175a7d717368a922" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::HATEBGoalChecker::HATEBGoalChecker</definition>
+        <argsstring>()</argsstring>
+        <name>HATEBGoalChecker</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="43" column="3" bodyfile="hateb_local_planner/src/hateb_goal_checker.cpp" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATEBGoalChecker_1af3b049f1f9e030de23c6c29f95913ae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::HATEBGoalChecker::~HATEBGoalChecker</definition>
+        <argsstring>()=default</argsstring>
+        <name>~HATEBGoalChecker</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="48" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATEBGoalChecker_1a6a8b93140cd9edd944641ddee39ac53a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATEBGoalChecker::initialize</definition>
+        <argsstring>(const rclcpp_lifecycle::LifecycleNode::WeakPtr &amp;parent, const std::string &amp;plugin_name, const std::shared_ptr&lt; nav2_costmap_2d::Costmap2DROS &gt; costmap_ros) override</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const rclcpp_lifecycle::LifecycleNode::WeakPtr &amp;</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>plugin_name</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; nav2_costmap_2d::Costmap2DROS &gt;</type>
+          <declname>costmap_ros</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="50" column="8" bodyfile="hateb_local_planner/src/hateb_goal_checker.cpp" bodystart="20" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATEBGoalChecker_1a4bcab734eb6fa1e29c8ff3d40de87ffe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATEBGoalChecker::reset</definition>
+        <argsstring>() override</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="52" column="8" bodyfile="hateb_local_planner/src/hateb_goal_checker.cpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATEBGoalChecker_1ad280c32d278a163985b69f1f147c1a3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATEBGoalChecker::isGoalReached</definition>
+        <argsstring>(const geometry_msgs::msg::Pose &amp;query_pose, const geometry_msgs::msg::Pose &amp;goal_pose, const geometry_msgs::msg::Twist &amp;velocity) override</argsstring>
+        <name>isGoalReached</name>
+        <param>
+          <type>const geometry_msgs::msg::Pose &amp;</type>
+          <declname>query_pose</declname>
+        </param>
+        <param>
+          <type>const geometry_msgs::msg::Pose &amp;</type>
+          <declname>goal_pose</declname>
+        </param>
+        <param>
+          <type>const geometry_msgs::msg::Twist &amp;</type>
+          <declname>velocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="54" column="8" bodyfile="hateb_local_planner/src/hateb_goal_checker.cpp" bodystart="40" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATEBGoalChecker_1a197d6d415e411a979b705cc0b399e990" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATEBGoalChecker::getTolerances</definition>
+        <argsstring>(geometry_msgs::msg::Pose &amp;pose_tolerance, geometry_msgs::msg::Twist &amp;vel_tolerance) override</argsstring>
+        <name>getTolerances</name>
+        <param>
+          <type>geometry_msgs::msg::Pose &amp;</type>
+          <declname>pose_tolerance</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::Twist &amp;</type>
+          <declname>vel_tolerance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="56" column="8" bodyfile="hateb_local_planner/src/hateb_goal_checker.cpp" bodystart="59" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATEBGoalChecker_1a9230dff17311d44f89d9f19b3e45cae1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::HATEBGoalChecker::setGoalControl</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>setGoalControl</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="58" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1HATEBGoalChecker_1a8f4976afb734ebece04f70c8c3ad96bd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult hateb_local_planner::HATEBGoalChecker::dynamicParametersCallback</definition>
+        <argsstring>(std::vector&lt; rclcpp::Parameter &gt; parameters)</argsstring>
+        <name>dynamicParametersCallback</name>
+        <param>
+          <type>std::vector&lt; rclcpp::Parameter &gt;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Callback executed when a parameter change is detected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of changed parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="75" column="44" bodyfile="hateb_local_planner/src/hateb_goal_checker.cpp" bodystart="78" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hateb_local_planner::HATEBGoalChecker</label>
+        <link refid="classhateb__local__planner_1_1HATEBGoalChecker"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nav2_core::GoalChecker</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hateb_local_planner::HATEBGoalChecker</label>
+        <link refid="classhateb__local__planner_1_1HATEBGoalChecker"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nav2_core::GoalChecker</label>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" line="38" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_goal_checker.hpp" bodystart="38" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1ab171a35b5bc28b11206bf9b278416791" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>check_xy_</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1afafc0ebdaeefafb9b580ea7a7573bc23" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>dyn_params_handler_</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1a8f4976afb734ebece04f70c8c3ad96bd" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>dynamicParametersCallback</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1a197d6d415e411a979b705cc0b399e990" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>getTolerances</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1a1914465764a6c25a48f4561173c094e9" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>goal_ctrl_</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1a50ec4756fffa3a5e175a7d717368a922" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>HATEBGoalChecker</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1a6a8b93140cd9edd944641ddee39ac53a" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>initialize</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1ad280c32d278a163985b69f1f147c1a3a" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>isGoalReached</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1a9cf9142d951ac021c19e1ee977cf6761" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>plugin_name_</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1a4bcab734eb6fa1e29c8ff3d40de87ffe" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>reset</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1a9230dff17311d44f89d9f19b3e45cae1" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>setGoalControl</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1af6e9d33c28d140c6428a2b889282e3c6" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>stateful_</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1a419f68dd3b8c42fa2d697be32200dc10" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>xy_goal_tolerance_</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1afe99eb84b72853033516e76e50950480" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>xy_goal_tolerance_sq_</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1ab8b427f5820913521071f46fd25a219b" prot="protected" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>yaw_goal_tolerance_</name></member>
+      <member refid="classhateb__local__planner_1_1HATEBGoalChecker_1af3b049f1f9e030de23c6c29f95913ae1" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATEBGoalChecker</scope><name>~HATEBGoalChecker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

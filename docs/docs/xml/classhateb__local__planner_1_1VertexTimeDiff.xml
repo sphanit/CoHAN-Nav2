@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1VertexTimeDiff" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::VertexTimeDiff</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">g2o::BaseVertex&lt; 1, double &gt;</basecompoundref>
+    <includes refid="vertex__timediff_8h" local="no">vertex_timediff.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexTimeDiff_1a906619f97c084787e036122990042b57" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::VertexTimeDiff::VertexTimeDiff</definition>
+        <argsstring>(bool fixed=false)</argsstring>
+        <name>VertexTimeDiff</name>
+        <param>
+          <type>bool</type>
+          <declname>fixed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fixed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, this vertex is considered fixed during optimization [default: <computeroutput>false</computeroutput>] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" line="65" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexTimeDiff_1ab1fb2dea75fcf547a0a8798fa0b0cee8" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::VertexTimeDiff::VertexTimeDiff</definition>
+        <argsstring>(double dt, bool fixed=false)</argsstring>
+        <name>VertexTimeDiff</name>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fixed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Construct the TimeDiff vertex with a value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time difference value of the vertex </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fixed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, this vertex is considered fixed during optimization [default: <computeroutput>false</computeroutput>] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" line="75" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexTimeDiff_1aad2118d239551215249f2caafdb7c10d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::VertexTimeDiff::~VertexTimeDiff</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~VertexTimeDiff</name>
+        <briefdescription>
+<para>Destructs the <ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" line="83" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexTimeDiff_1a54c5f1092662646d2c4cb56d02b2b6aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; hateb_local_planner::VertexTimeDiff::dt</definition>
+        <argsstring>()</argsstring>
+        <name>dt</name>
+        <briefdescription>
+<para>Access the timediff value of the vertex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>estimate </para>
+</simplesect>
+<simplesect kind="return"><para>reference to dt </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" line="90" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexTimeDiff_1aa049de9d17d87d86754e0c94cb9d1a6d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; hateb_local_planner::VertexTimeDiff::dt</definition>
+        <argsstring>() const</argsstring>
+        <name>dt</name>
+        <briefdescription>
+<para>Access the timediff value of the vertex (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>estimate </para>
+</simplesect>
+<simplesect kind="return"><para>const reference to dt </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" line="97" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexTimeDiff_1a7c1236008a39ca733ed52043dfc473dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::VertexTimeDiff::setToOriginImpl</definition>
+        <argsstring>() override</argsstring>
+        <name>setToOriginImpl</name>
+        <briefdescription>
+<para>Set the underlying TimeDiff estimate <formula id="26">$ \Delta T $</formula> to default. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" line="102" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexTimeDiff_1a026eef69ae5bd181a11bdf46ed49f295" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::VertexTimeDiff::oplusImpl</definition>
+        <argsstring>(const double *update) override</argsstring>
+        <name>oplusImpl</name>
+        <param>
+          <type>const double *</type>
+          <declname>update</declname>
+        </param>
+        <briefdescription>
+<para>Define the update increment <formula id="27">$ \Delta T_{k+1} = \Delta T_k + update $</formula>. A simple addition implements what we want. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>update</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>increment that should be added to the previous esimate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" line="109" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexTimeDiff_1a5e2dd84a1084fde7d6776a0f5f2f1518" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::VertexTimeDiff::read</definition>
+        <argsstring>(std::istream &amp;is) override</argsstring>
+        <name>read</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+<para>Read an estimate of <formula id="26">$ \Delta T $</formula> from an input stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>is</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>always <computeroutput>true</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" line="116" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexTimeDiff_1a4decd25cf52f88f5e6fffca77eeaee5e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::VertexTimeDiff::write</definition>
+        <argsstring>(std::ostream &amp;os) const override</argsstring>
+        <name>write</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Write the estimate <formula id="26">$ \Delta T $</formula> to an output stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the export was successful, otherwise <computeroutput>false</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" line="126" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" bodystart="126" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class stores and wraps a time difference <formula id="26">$ \Delta T $</formula> into a vertex that can be optimized via g2o. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>g2o::BaseVertex&lt; 1, double &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::VertexTimeDiff</label>
+        <link refid="classhateb__local__planner_1_1VertexTimeDiff"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>g2o::BaseVertex&lt; 1, double &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::VertexTimeDiff</label>
+        <link refid="classhateb__local__planner_1_1VertexTimeDiff"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" line="59" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_timediff.h" bodystart="59" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1VertexTimeDiff_1a54c5f1092662646d2c4cb56d02b2b6aa" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexTimeDiff</scope><name>dt</name></member>
+      <member refid="classhateb__local__planner_1_1VertexTimeDiff_1aa049de9d17d87d86754e0c94cb9d1a6d" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexTimeDiff</scope><name>dt</name></member>
+      <member refid="classhateb__local__planner_1_1VertexTimeDiff_1a026eef69ae5bd181a11bdf46ed49f295" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexTimeDiff</scope><name>oplusImpl</name></member>
+      <member refid="classhateb__local__planner_1_1VertexTimeDiff_1a5e2dd84a1084fde7d6776a0f5f2f1518" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexTimeDiff</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1VertexTimeDiff_1a7c1236008a39ca733ed52043dfc473dd" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexTimeDiff</scope><name>setToOriginImpl</name></member>
+      <member refid="classhateb__local__planner_1_1VertexTimeDiff_1a906619f97c084787e036122990042b57" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexTimeDiff</scope><name>VertexTimeDiff</name></member>
+      <member refid="classhateb__local__planner_1_1VertexTimeDiff_1ab1fb2dea75fcf547a0a8798fa0b0cee8" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexTimeDiff</scope><name>VertexTimeDiff</name></member>
+      <member refid="classhateb__local__planner_1_1VertexTimeDiff_1a4decd25cf52f88f5e6fffca77eeaee5e" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexTimeDiff</scope><name>write</name></member>
+      <member refid="classhateb__local__planner_1_1VertexTimeDiff_1aad2118d239551215249f2caafdb7c10d" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexTimeDiff</scope><name>~VertexTimeDiff</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+.. _exhale_define_utils_8hpp_1a7dda2ee207b5602682b9912805739845:
+
+Define RCLCPP_DEBUG_COND
+========================
+
+- Defined in :ref:`file_ros2_helpers_include_ros2_helpers_utils.hpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: RCLCPP_DEBUG_COND
+   :project: CoHAN-Nav2

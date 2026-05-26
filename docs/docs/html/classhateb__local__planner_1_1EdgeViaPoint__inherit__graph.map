@@ -1,0 +1,5 @@
+<map id="hateb_local_planner::EdgeViaPoint" name="hateb_local_planner::EdgeViaPoint">
+<area shape="rect" id="node1" title="Edge defining the cost function for pushing a configuration towards a via point." alt="" coords="26,228,179,269"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebUnaryEdge.html" title=" " alt="" coords="11,109,194,180"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,200,61"/>
+</map>

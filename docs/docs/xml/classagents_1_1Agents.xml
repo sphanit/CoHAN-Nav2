@@ -1,0 +1,806 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classagents_1_1Agents" kind="class" language="C++" prot="public">
+    <compoundname>agents::Agents</compoundname>
+    <includes refid="agents__class_8h" local="no">agents_class.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classagents_1_1Agents_1a33593b5061a60e9496df03886e73ca73" prot="private" static="no" mutable="no">
+        <type>cohan_msgs::TrackedAgents</type>
+        <definition>cohan_msgs::TrackedAgents agents::Agents::tracked_agents_</definition>
+        <argsstring></argsstring>
+        <name>tracked_agents_</name>
+        <briefdescription>
+<para>Latest tracked agents message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="177" column="29" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a969510bcf09b60b368443e14cbb78ddb" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, geometry_msgs::Pose &gt;</type>
+        <definition>std::map&lt;int, geometry_msgs::Pose&gt; agents::Agents::agents_</definition>
+        <argsstring></argsstring>
+        <name>agents_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="178" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1add506c7e0a1db01afc0f062c3493737f" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, geometry_msgs::Pose &gt;</type>
+        <definition>std::map&lt;int, geometry_msgs::Pose&gt; agents::Agents::prev_agents_</definition>
+        <argsstring></argsstring>
+        <name>prev_agents_</name>
+        <briefdescription>
+<para>Current and previous agent poses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="178" column="20" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a5c0c2bf2610a50b6c6abb3f8a7474ea2" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, bool &gt;</type>
+        <definition>std::map&lt;int, bool&gt; agents::Agents::agent_still_</definition>
+        <argsstring></argsstring>
+        <name>agent_still_</name>
+        <briefdescription>
+<para>Map tracking if agents are stationary. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="179" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1aea51f1cdb2ab9a97efe8ac5d91b1d134" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::vector&lt; double &gt; &gt;</type>
+        <definition>std::map&lt;int, std::vector&lt;double&gt; &gt; agents::Agents::agent_vels_</definition>
+        <argsstring></argsstring>
+        <name>agent_vels_</name>
+        <briefdescription>
+<para>List of agent velocities over time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="180" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1ad195b8f5b68b8f8f3a4aecf007964ea4" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, double &gt;</type>
+        <definition>std::map&lt;int, double&gt; agents::Agents::agent_nominal_vels_</definition>
+        <argsstring></argsstring>
+        <name>agent_nominal_vels_</name>
+        <briefdescription>
+<para>Nominal velocities based on moving average. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="181" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a13f62fc0a79aa15092548b875ad5b0ec" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, <ref refid="namespaceagents_1a11caf48a935369da9fb37768e769738f" kindref="member">AgentState</ref> &gt;</type>
+        <definition>std::map&lt;int, AgentState&gt; agents::Agents::agents_states_</definition>
+        <argsstring></argsstring>
+        <name>agents_states_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="182" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a340449988f759f77a6f292b8a17087a2" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, <ref refid="namespaceagents_1a11caf48a935369da9fb37768e769738f" kindref="member">AgentState</ref> &gt;</type>
+        <definition>std::map&lt;int, AgentState&gt; agents::Agents::prev_agents_states_</definition>
+        <argsstring></argsstring>
+        <name>prev_agents_states_</name>
+        <briefdescription>
+<para>Current and previous agent states. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="182" column="27" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1ab741b6067a13a40ea536cb16fad35ab6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; agents::Agents::visible_agent_ids_</definition>
+        <argsstring></argsstring>
+        <name>visible_agent_ids_</name>
+        <briefdescription>
+<para>List of visible agent IDs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="183" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a5f8e96e79d58a1f76848e90e5a0285ef" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::Agents::ns_</definition>
+        <argsstring></argsstring>
+        <name>ns_</name>
+        <briefdescription>
+<para>Namespace for multiple agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="186" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a755ce3766cee5a9e8f7d4b696c973504" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::Agents::tracked_agents_sub_topic_</definition>
+        <argsstring></argsstring>
+        <name>tracked_agents_sub_topic_</name>
+        <briefdescription>
+<para>Topic for tracked agents subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="187" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a8688f048cf2e3d4e73351be1fd8127e6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool agents::Agents::initialized_</definition>
+        <argsstring></argsstring>
+        <name>initialized_</name>
+        <briefdescription>
+<para>Initialization status flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="188" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1aa1d7767e6b666170ae78f98174b702a7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool agents::Agents::stuck_</definition>
+        <argsstring></argsstring>
+        <name>stuck_</name>
+        <briefdescription>
+<para>Flag indicating if agent is stuck. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="189" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1adb9eb6a83d2bc934c675d187a35ee544" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int agents::Agents::stuck_agent_id_</definition>
+        <argsstring></argsstring>
+        <name>stuck_agent_id_</name>
+        <briefdescription>
+<para>ID of agent blocking robot&apos;s path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="190" column="7" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1aec5fc17556ac8cb242e5ecc45736ed2f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int agents::Agents::window_moving_avg_</definition>
+        <argsstring></argsstring>
+        <name>window_moving_avg_</name>
+        <briefdescription>
+<para>Window size for moving average calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="193" column="7" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a0a3847fa6217e921545545526a0df5f5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int agents::Agents::planning_mode_</definition>
+        <argsstring></argsstring>
+        <name>planning_mode_</name>
+        <briefdescription>
+<para>Mode of planning (different strategies) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="194" column="7" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1acd5da82471c4f34c5b7889b6314f7b30" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::Agents::human_radius_</definition>
+        <argsstring></argsstring>
+        <name>human_radius_</name>
+        <briefdescription>
+<para>Radius considered for human agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="195" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1aa2cf433db2fa536a05063a65d316cd9c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::Agents::robot_radius_</definition>
+        <argsstring></argsstring>
+        <name>robot_radius_</name>
+        <briefdescription>
+<para>Robot&apos;s physical radius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="196" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1aaf053c5f2d20abc6af1d407248cb2397" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::Agents::planning_radius_</definition>
+        <argsstring></argsstring>
+        <name>planning_radius_</name>
+        <briefdescription>
+<para>Radius used for planning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="197" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a023c1644bb448789eee4e8bb424f37a4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::Agents::base_link_frame_</definition>
+        <argsstring></argsstring>
+        <name>base_link_frame_</name>
+        <briefdescription>
+<para>Robot&apos;s base link frame ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="198" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a77ed0bf5a9d7a6fec25e66fe552fe3ec" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::Agents::map_frame_</definition>
+        <argsstring></argsstring>
+        <name>map_frame_</name>
+        <briefdescription>
+<para>Map frame ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="199" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a6012e13583cf56cb84636a7bcdddf8a5" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::Agents::odom_frame_</definition>
+        <argsstring></argsstring>
+        <name>odom_frame_</name>
+        <briefdescription>
+<para>Odometry frame ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="200" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1aceb78c8adf09e996aa9efb089a6b73fc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool agents::Agents::use_simulated_fov_</definition>
+        <argsstring></argsstring>
+        <name>use_simulated_fov_</name>
+        <briefdescription>
+<para>Flag for using simulated field of view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="201" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a0d234fb90a16110ab843f3e3d58979a4" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher agents::Agents::agents_info_pub_</definition>
+        <argsstring></argsstring>
+        <name>agents_info_pub_</name>
+        <briefdescription>
+<para>Publisher for agent information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="204" column="18" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a30c2d917a8dff79200726fbfae5c6ff7" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber agents::Agents::tracked_agents_sub_</definition>
+        <argsstring></argsstring>
+        <name>tracked_agents_sub_</name>
+        <briefdescription>
+<para>Subscriber for tracked agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="205" column="19" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a68935e3f52a621e360a635cf22c414d2" prot="private" static="no" mutable="no">
+        <type>tf2_ros::Buffer *</type>
+        <definition>tf2_ros::Buffer* agents::Agents::tf_</definition>
+        <argsstring></argsstring>
+        <name>tf_</name>
+        <briefdescription>
+<para>Pointer to tf buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="206" column="19" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a1cdd9d4b039956ed46c83875e348d50e" prot="private" static="no" mutable="no">
+        <type>costmap_2d::Costmap2DROS *</type>
+        <definition>costmap_2d::Costmap2DROS* agents::Agents::costmap_ros_</definition>
+        <argsstring></argsstring>
+        <name>costmap_ros_</name>
+        <briefdescription>
+<para>Pointer to the costmap ros wrapper. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="207" column="28" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a778f0792aac152c239f09f7c9544fd69" prot="private" static="no" mutable="no">
+        <type>costmap_2d::Costmap2D *</type>
+        <definition>costmap_2d::Costmap2D* agents::Agents::costmap_</definition>
+        <argsstring></argsstring>
+        <name>costmap_</name>
+        <briefdescription>
+<para>Pointer to the 2d costmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="208" column="25" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Agents_1a06c42afc289e80a0a3511f7581ebad49" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::Agents::inflation_radius_</definition>
+        <argsstring></argsstring>
+        <name>inflation_radius_</name>
+        <briefdescription>
+<para>Inflation radius for costmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="209" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classagents_1_1Agents_1ac2aee2f5846eaa0a8eaeb9a4c4da00ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>agents::Agents::Agents</definition>
+        <argsstring>()</argsstring>
+        <name>Agents</name>
+        <briefdescription>
+<para>Default constructor for <ref refid="classagents_1_1Agents" kindref="compound">Agents</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="89" column="3" bodyfile="agent_path_prediction/src/agents_class.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1Agents_1a498e4199a641b75775c60f38a7154682" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>agents::Agents::Agents</definition>
+        <argsstring>(tf2_ros::Buffer *tf, costmap_2d::Costmap2DROS *costmap_ros)</argsstring>
+        <name>Agents</name>
+        <param>
+          <type>tf2_ros::Buffer *</type>
+          <declname>tf</declname>
+        </param>
+        <param>
+          <type>costmap_2d::Costmap2DROS *</type>
+          <declname>costmap_ros</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with parameters for tf buffer and costmap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to tf buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>costmap_ros</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to costmap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="96" column="3" bodyfile="agent_path_prediction/src/agents_class.cpp" bodystart="22" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1Agents_1a560fd5e09e83beaa800af1e958a25bdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>agents::Agents::~Agents</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Agents</name>
+        <briefdescription>
+<para>Destructor of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="101" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1Agents_1a61a2801747706259f9260cc0e274074a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::Agents::setState</definition>
+        <argsstring>(AgentState state, int id)</argsstring>
+        <name>setState</name>
+        <param>
+          <type><ref refid="namespaceagents_1a11caf48a935369da9fb37768e769738f" kindref="member">AgentState</ref></type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Set the state of an agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state to set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the agent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="108" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="108" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1Agents_1a7e6feb8e444ca53d21266e91bd499514" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::Agents::resetAgents</definition>
+        <argsstring>()</argsstring>
+        <name>resetAgents</name>
+        <briefdescription>
+<para>Reset all agent states. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="119" column="8" bodyfile="agent_path_prediction/src/agents_class.cpp" bodystart="317" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1Agents_1a25ea4e9cfe0dcbd657d628bd52c4780b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool agents::Agents::isAgentStuck</definition>
+        <argsstring>() const</argsstring>
+        <name>isAgentStuck</name>
+        <briefdescription>
+<para>Check if any agent is stuck. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if an agent is stuck, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="125" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="125" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1Agents_1af82e3c1f375b6a17f3ac4c6ac2ee2565" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::Agents::resetStuckAgent</definition>
+        <argsstring>()</argsstring>
+        <name>resetStuckAgent</name>
+        <briefdescription>
+<para>Reset the stuck agent ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="130" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="130" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1Agents_1a4abeee4283efcd50b6b6dc42a164dab0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; int, geometry_msgs::Pose &gt;</type>
+        <definition>std::map&lt;int, geometry_msgs::Pose&gt; agents::Agents::getAgents</definition>
+        <argsstring>()</argsstring>
+        <name>getAgents</name>
+        <briefdescription>
+<para>Get the poses of all agents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Map of agent IDs to their poses </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="136" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1Agents_1aa9fbe7ec2b525ecd4ff0808030651146" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceagents_1a11caf48a935369da9fb37768e769738f" kindref="member">AgentState</ref></type>
+        <definition>AgentState agents::Agents::agentState</definition>
+        <argsstring>(int id)</argsstring>
+        <name>agentState</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get the state of the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of agent whose state is required </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>State of the given agent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="143" column="14" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1Agents_1acaf62825882658898f0af9e2c017e7c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; int, double &gt;</type>
+        <definition>std::map&lt;int, double&gt; agents::Agents::getNominalVels</definition>
+        <argsstring>()</argsstring>
+        <name>getNominalVels</name>
+        <briefdescription>
+<para>Get nominal velocities of all agents based on a moving average filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Map of agent IDs to their nominal velocities </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="149" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="149" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classagents_1_1Agents_1a2f161af7481a5c95026bba736dbe2317" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::Agents::trackedAgentsCB</definition>
+        <argsstring>(const cohan_msgs::TrackedAgents &amp;tracked_agents)</argsstring>
+        <name>trackedAgentsCB</name>
+        <param>
+          <type>const cohan_msgs::TrackedAgents &amp;</type>
+          <declname>tracked_agents</declname>
+        </param>
+        <briefdescription>
+<para>Callback for tracked agents updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tracked_agents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tracked agents message containing agent states </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="157" column="8" bodyfile="agent_path_prediction/src/agents_class.cpp" bodystart="51" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1Agents_1ac00df3b1726f4f928358fd8af8430e5e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; agents::Agents::filterVisibleAgents</definition>
+        <argsstring>(std::map&lt; int, geometry_msgs::Pose &gt; tr_agents, std::vector&lt; int &gt; sorted_ids, std::map&lt; int, double &gt; agents_radii, geometry_msgs::Pose2D robot_pose)</argsstring>
+        <name>filterVisibleAgents</name>
+        <param>
+          <type>std::map&lt; int, geometry_msgs::Pose &gt;</type>
+          <declname>tr_agents</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>sorted_ids</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, double &gt;</type>
+          <declname>agents_radii</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::Pose2D</type>
+          <declname>robot_pose</declname>
+        </param>
+        <briefdescription>
+<para>Filters agents that are in the FOV of the robot (for e.g., in simulation or mocap) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tr_agents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transformed agent poses </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sorted_ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of sorted agent IDs </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agents_radii</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent radii </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>robot_pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current robot pose </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of visible agent IDs in the FOV of the robot </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="168" column="15" bodyfile="agent_path_prediction/src/agents_class.cpp" bodystart="254" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1Agents_1aa266185468e053b82b4484952bbe7a04" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::Agents::loadRosParamFromNodeHandle</definition>
+        <argsstring>(const ros::NodeHandle &amp;private_nh)</argsstring>
+        <name>loadRosParamFromNodeHandle</name>
+        <param>
+          <type>const ros::NodeHandle &amp;</type>
+          <declname>private_nh</declname>
+        </param>
+        <briefdescription>
+<para>Loads parameters from ROS parameter server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>private_nh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Private node handle containing parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="174" column="8" bodyfile="agent_path_prediction/src/agents_class.cpp" bodystart="325" bodyend="338"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class representing agents and their states. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="agent_path_prediction/include/agent_path_prediction/agents_class.h" line="84" column="1" bodyfile="agent_path_prediction/include/agent_path_prediction/agents_class.h" bodystart="84" bodyend="210"/>
+    <listofallmembers>
+      <member refid="classagents_1_1Agents_1ad195b8f5b68b8f8f3a4aecf007964ea4" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>agent_nominal_vels_</name></member>
+      <member refid="classagents_1_1Agents_1a5c0c2bf2610a50b6c6abb3f8a7474ea2" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>agent_still_</name></member>
+      <member refid="classagents_1_1Agents_1aea51f1cdb2ab9a97efe8ac5d91b1d134" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>agent_vels_</name></member>
+      <member refid="classagents_1_1Agents_1ac2aee2f5846eaa0a8eaeb9a4c4da00ef" prot="public" virt="non-virtual"><scope>agents::Agents</scope><name>Agents</name></member>
+      <member refid="classagents_1_1Agents_1a498e4199a641b75775c60f38a7154682" prot="public" virt="non-virtual"><scope>agents::Agents</scope><name>Agents</name></member>
+      <member refid="classagents_1_1Agents_1a969510bcf09b60b368443e14cbb78ddb" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>agents_</name></member>
+      <member refid="classagents_1_1Agents_1a0d234fb90a16110ab843f3e3d58979a4" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>agents_info_pub_</name></member>
+      <member refid="classagents_1_1Agents_1a13f62fc0a79aa15092548b875ad5b0ec" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>agents_states_</name></member>
+      <member refid="classagents_1_1Agents_1aa9fbe7ec2b525ecd4ff0808030651146" prot="public" virt="non-virtual"><scope>agents::Agents</scope><name>agentState</name></member>
+      <member refid="classagents_1_1Agents_1a023c1644bb448789eee4e8bb424f37a4" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>base_link_frame_</name></member>
+      <member refid="classagents_1_1Agents_1a778f0792aac152c239f09f7c9544fd69" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>costmap_</name></member>
+      <member refid="classagents_1_1Agents_1a1cdd9d4b039956ed46c83875e348d50e" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>costmap_ros_</name></member>
+      <member refid="classagents_1_1Agents_1ac00df3b1726f4f928358fd8af8430e5e" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>filterVisibleAgents</name></member>
+      <member refid="classagents_1_1Agents_1a4abeee4283efcd50b6b6dc42a164dab0" prot="public" virt="non-virtual"><scope>agents::Agents</scope><name>getAgents</name></member>
+      <member refid="classagents_1_1Agents_1acaf62825882658898f0af9e2c017e7c7" prot="public" virt="non-virtual"><scope>agents::Agents</scope><name>getNominalVels</name></member>
+      <member refid="classagents_1_1Agents_1acd5da82471c4f34c5b7889b6314f7b30" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>human_radius_</name></member>
+      <member refid="classagents_1_1Agents_1a06c42afc289e80a0a3511f7581ebad49" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>inflation_radius_</name></member>
+      <member refid="classagents_1_1Agents_1a8688f048cf2e3d4e73351be1fd8127e6" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>initialized_</name></member>
+      <member refid="classagents_1_1Agents_1a25ea4e9cfe0dcbd657d628bd52c4780b" prot="public" virt="non-virtual"><scope>agents::Agents</scope><name>isAgentStuck</name></member>
+      <member refid="classagents_1_1Agents_1aa266185468e053b82b4484952bbe7a04" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>loadRosParamFromNodeHandle</name></member>
+      <member refid="classagents_1_1Agents_1a77ed0bf5a9d7a6fec25e66fe552fe3ec" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>map_frame_</name></member>
+      <member refid="classagents_1_1Agents_1a5f8e96e79d58a1f76848e90e5a0285ef" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>ns_</name></member>
+      <member refid="classagents_1_1Agents_1a6012e13583cf56cb84636a7bcdddf8a5" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>odom_frame_</name></member>
+      <member refid="classagents_1_1Agents_1a0a3847fa6217e921545545526a0df5f5" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>planning_mode_</name></member>
+      <member refid="classagents_1_1Agents_1aaf053c5f2d20abc6af1d407248cb2397" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>planning_radius_</name></member>
+      <member refid="classagents_1_1Agents_1add506c7e0a1db01afc0f062c3493737f" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>prev_agents_</name></member>
+      <member refid="classagents_1_1Agents_1a340449988f759f77a6f292b8a17087a2" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>prev_agents_states_</name></member>
+      <member refid="classagents_1_1Agents_1a7e6feb8e444ca53d21266e91bd499514" prot="public" virt="non-virtual"><scope>agents::Agents</scope><name>resetAgents</name></member>
+      <member refid="classagents_1_1Agents_1af82e3c1f375b6a17f3ac4c6ac2ee2565" prot="public" virt="non-virtual"><scope>agents::Agents</scope><name>resetStuckAgent</name></member>
+      <member refid="classagents_1_1Agents_1aa2cf433db2fa536a05063a65d316cd9c" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>robot_radius_</name></member>
+      <member refid="classagents_1_1Agents_1a61a2801747706259f9260cc0e274074a" prot="public" virt="non-virtual"><scope>agents::Agents</scope><name>setState</name></member>
+      <member refid="classagents_1_1Agents_1aa1d7767e6b666170ae78f98174b702a7" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>stuck_</name></member>
+      <member refid="classagents_1_1Agents_1adb9eb6a83d2bc934c675d187a35ee544" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>stuck_agent_id_</name></member>
+      <member refid="classagents_1_1Agents_1a68935e3f52a621e360a635cf22c414d2" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>tf_</name></member>
+      <member refid="classagents_1_1Agents_1a33593b5061a60e9496df03886e73ca73" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>tracked_agents_</name></member>
+      <member refid="classagents_1_1Agents_1a30c2d917a8dff79200726fbfae5c6ff7" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>tracked_agents_sub_</name></member>
+      <member refid="classagents_1_1Agents_1a755ce3766cee5a9e8f7d4b696c973504" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>tracked_agents_sub_topic_</name></member>
+      <member refid="classagents_1_1Agents_1a2f161af7481a5c95026bba736dbe2317" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>trackedAgentsCB</name></member>
+      <member refid="classagents_1_1Agents_1aceb78c8adf09e996aa9efb089a6b73fc" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>use_simulated_fov_</name></member>
+      <member refid="classagents_1_1Agents_1ab741b6067a13a40ea536cb16fad35ab6" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>visible_agent_ids_</name></member>
+      <member refid="classagents_1_1Agents_1aec5fc17556ac8cb242e5ecc45736ed2f" prot="private" virt="non-virtual"><scope>agents::Agents</scope><name>window_moving_avg_</name></member>
+      <member refid="classagents_1_1Agents_1a560fd5e09e83beaa800af1e958a25bdd" prot="public" virt="non-virtual"><scope>agents::Agents</scope><name>~Agents</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

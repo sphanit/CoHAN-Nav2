@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhateb__local__planner_1_1HATebConfig_1_1Visualization" kind="struct" language="C++" prot="public">
+    <compoundname>hateb_local_planner::HATebConfig::Visualization</compoundname>
+    <includes refid="hateb__config_8hpp" local="no">hateb_config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1a6ba3616e236cad82d784f7e234917c14" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Visualization::publish_robot_global_plan</definition>
+        <argsstring></argsstring>
+        <name>publish_robot_global_plan</name>
+        <briefdescription>
+<para>If true, publish the global plan for the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="271" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1ad17dce6140e70822f6c4a400b5ccf7e3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Visualization::publish_robot_local_plan</definition>
+        <argsstring></argsstring>
+        <name>publish_robot_local_plan</name>
+        <briefdescription>
+<para>If true, publish the local plan for the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="272" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1a42701e249dbd9d949b8901b8148bdb71" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Visualization::publish_robot_local_plan_poses</definition>
+        <argsstring></argsstring>
+        <name>publish_robot_local_plan_poses</name>
+        <briefdescription>
+<para>If true, publish poses from the robot&apos;s local plan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="273" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1a44d85f91082c4ef901ff0cd271d0e857" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Visualization::publish_robot_local_plan_fp_poses</definition>
+        <argsstring></argsstring>
+        <name>publish_robot_local_plan_fp_poses</name>
+        <briefdescription>
+<para>If true, publish footprint (time colored and vel scaled) poses from the robot&apos;s local plan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="274" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1ae58e761a16057128b5e872c33f91416e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Visualization::publish_agents_global_plans</definition>
+        <argsstring></argsstring>
+        <name>publish_agents_global_plans</name>
+        <briefdescription>
+<para>If true, publish the global plans for all agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="275" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1a4c9007da428aaffa63aa2a2f34d9dace" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Visualization::publish_agents_local_plans</definition>
+        <argsstring></argsstring>
+        <name>publish_agents_local_plans</name>
+        <briefdescription>
+<para>If true, publish the local plans for all agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="276" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1a953ab1775496b31b4cb3e073f7b4c16c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Visualization::publish_agents_local_plan_poses</definition>
+        <argsstring></argsstring>
+        <name>publish_agents_local_plan_poses</name>
+        <briefdescription>
+<para>If true, publish poses from agents&apos; local plans. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="277" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1afb12da31049f9370c1159238927ab75e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Visualization::publish_agents_local_plan_fp_poses</definition>
+        <argsstring></argsstring>
+        <name>publish_agents_local_plan_fp_poses</name>
+        <briefdescription>
+<para>If true, publish footprint (time colored and vel scaled) poses from agents&apos; local plans. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="278" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1a4b45cb61c6452b54f01c825804aa0ced" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Visualization::pose_array_z_scale</definition>
+        <argsstring></argsstring>
+        <name>pose_array_z_scale</name>
+        <briefdescription>
+<para>Multiplier to show time on z value of pose array for agents and robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="279" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Visualization" kindref="compound">Visualization</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="270" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="270" bodyend="280"/>
+    <listofallmembers>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1a4b45cb61c6452b54f01c825804aa0ced" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Visualization</scope><name>pose_array_z_scale</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1ae58e761a16057128b5e872c33f91416e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Visualization</scope><name>publish_agents_global_plans</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1afb12da31049f9370c1159238927ab75e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Visualization</scope><name>publish_agents_local_plan_fp_poses</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1a953ab1775496b31b4cb3e073f7b4c16c" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Visualization</scope><name>publish_agents_local_plan_poses</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1a4c9007da428aaffa63aa2a2f34d9dace" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Visualization</scope><name>publish_agents_local_plans</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1a6ba3616e236cad82d784f7e234917c14" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Visualization</scope><name>publish_robot_global_plan</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1ad17dce6140e70822f6c4a400b5ccf7e3" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Visualization</scope><name>publish_robot_local_plan</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1a44d85f91082c4ef901ff0cd271d0e857" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Visualization</scope><name>publish_robot_local_plan_fp_poses</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Visualization_1a42701e249dbd9d949b8901b8148bdb71" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Visualization</scope><name>publish_robot_local_plan_poses</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

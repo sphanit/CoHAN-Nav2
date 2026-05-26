@@ -1,0 +1,844 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="edge__acceleration_8h" kind="file" language="C++">
+    <compoundname>edge_acceleration.h</compoundname>
+    <includes refid="base__teb__edges_8h" local="no">hateb_local_planner/g2o_types/base_teb_edges.h</includes>
+    <includes refid="penalties_8h" local="no">hateb_local_planner/g2o_types/penalties.h</includes>
+    <includes refid="vertex__pose_8h" local="no">hateb_local_planner/g2o_types/vertex_pose.h</includes>
+    <includes refid="vertex__timediff_8h" local="no">hateb_local_planner/g2o_types/vertex_timediff.h</includes>
+    <includes local="no">geometry_msgs/msg/twist.hpp</includes>
+    <includes refid="hateb__config_8hpp" local="no">hateb_local_planner/hateb_config.hpp</includes>
+    <includedby refid="optimal__planner_8h" local="no">optimal_planner.h</includedby>
+    <incdepgraph>
+      <node id="19">
+        <label>boost/pointer_cast.hpp</label>
+      </node>
+      <node id="35">
+        <label>functional</label>
+      </node>
+      <node id="20">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="22">
+        <label>geometry_msgs/msg/polygon.hpp</label>
+      </node>
+      <node id="50">
+        <label>geometry_msgs/msg/twist.hpp</label>
+      </node>
+      <node id="34">
+        <label>ros2_helpers/parameters.hpp</label>
+        <link refid="parameters_8hpp"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>hateb_local_planner/footprint_model.h</label>
+        <link refid="footprint__model_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="29">
+        <label>geometry_msgs/msg/pose.hpp</label>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner/g2o_types/base_teb_edges.h</label>
+        <link refid="base__teb__edges_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>cmath</label>
+      </node>
+      <node id="6">
+        <label>cassert</label>
+      </node>
+      <node id="48">
+        <label>g2o/core/hyper_graph_action.h</label>
+      </node>
+      <node id="12">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="49">
+        <label>hateb_local_planner/g2o_types/vertex_timediff.h</label>
+        <link refid="vertex__timediff_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>rclcpp/logging.hpp</label>
+      </node>
+      <node id="40">
+        <label>string</label>
+      </node>
+      <node id="45">
+        <label>hateb_local_planner/g2o_types/vertex_pose.h</label>
+        <link refid="vertex__pose_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>g2o/core/base_multi_edge.h</label>
+      </node>
+      <node id="31">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="28">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="24">
+        <label>geometry_msgs/msg/twist_with_covariance.hpp</label>
+      </node>
+      <node id="33">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="47">
+        <label>g2o/core/base_vertex.h</label>
+      </node>
+      <node id="11">
+        <label>hateb_local_planner/misc.h</label>
+        <link refid="hateb__local__planner_2include_2hateb__local__planner_2misc_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>hateb_local_planner/g2o_types/penalties.h</label>
+        <link refid="penalties_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>g2o/config.h</label>
+      </node>
+      <node id="18">
+        <label>Eigen/StdVector</label>
+      </node>
+      <node id="23">
+        <label>geometry_msgs/msg/quaternion_stamped.hpp</label>
+      </node>
+      <node id="7">
+        <label>hateb_local_planner/hateb_config.hpp</label>
+        <link refid="hateb__config_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>hateb_local_planner/obstacles.h</label>
+        <link refid="obstacles_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>rcl_interfaces/msg/parameter_descriptor.hpp</label>
+      </node>
+      <node id="15">
+        <label>vector</label>
+      </node>
+      <node id="37">
+        <label>rcl_interfaces/msg/integer_range.hpp</label>
+      </node>
+      <node id="25">
+        <label>utility</label>
+      </node>
+      <node id="3">
+        <label>g2o/core/base_binary_edge.h</label>
+      </node>
+      <node id="5">
+        <label>g2o/core/base_unary_edge.h</label>
+      </node>
+      <node id="14">
+        <label>boost/utility.hpp</label>
+      </node>
+      <node id="30">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="41">
+        <label>unordered_map</label>
+      </node>
+      <node id="32">
+        <label>mutex</label>
+      </node>
+      <node id="26">
+        <label>hateb_local_planner/pose_se2.h</label>
+        <link refid="pose__se2_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>g2o/stuff/misc.h</label>
+      </node>
+      <node id="21">
+        <label>complex</label>
+      </node>
+      <node id="16">
+        <label>algorithm</label>
+      </node>
+      <node id="10">
+        <label>hateb_local_planner/distance_calculations.h</label>
+        <link refid="distance__calculations_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="1">
+        <label>edge_acceleration.h</label>
+        <link refid="edge__acceleration_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>boost/type_traits.hpp</label>
+      </node>
+      <node id="36">
+        <label>rcl_interfaces/msg/floating_point_range.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>visualization.cpp</label>
+        <link refid="visualization_8cpp"/>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner_ros.cpp</label>
+        <link refid="hateb__local__planner__ros_8cpp"/>
+      </node>
+      <node id="3">
+        <label>hateb_local_planner_ros.h</label>
+        <link refid="hateb__local__planner__ros_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>optimal_planner.h</label>
+        <link refid="optimal__planner_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>optimal_planner.cpp</label>
+        <link refid="optimal__planner_8cpp"/>
+      </node>
+      <node id="1">
+        <label>edge_acceleration.h</label>
+        <link refid="edge__acceleration_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhateb__local__planner_1_1EdgeAcceleration" prot="public">hateb_local_planner::EdgeAcceleration</innerclass>
+    <innerclass refid="classhateb__local__planner_1_1EdgeAccelerationStart" prot="public">hateb_local_planner::EdgeAccelerationStart</innerclass>
+    <innerclass refid="classhateb__local__planner_1_1EdgeAccelerationGoal" prot="public">hateb_local_planner::EdgeAccelerationGoal</innerclass>
+    <innerclass refid="classhateb__local__planner_1_1EdgeAccelerationHolonomic" prot="public">hateb_local_planner::EdgeAccelerationHolonomic</innerclass>
+    <innerclass refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicStart" prot="public">hateb_local_planner::EdgeAccelerationHolonomicStart</innerclass>
+    <innerclass refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicGoal" prot="public">hateb_local_planner::EdgeAccelerationHolonomicGoal</innerclass>
+    <innernamespace refid="namespacehateb__local__planner">hateb_local_planner</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(BSD<sp/>License)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2016,</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>TU<sp/>Dortmund<sp/>-<sp/>Institute<sp/>of<sp/>Control<sp/>Theory<sp/>and<sp/>Systems<sp/>Engineering.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>copyright<sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>disclaimer<sp/>in<sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>institute<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>Notes:</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>The<sp/>following<sp/>class<sp/>is<sp/>derived<sp/>from<sp/>a<sp/>class<sp/>defined<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>g2o-framework.<sp/>g2o<sp/>is<sp/>licensed<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>BSD<sp/>License.</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>Refer<sp/>to<sp/>the<sp/>base<sp/>class<sp/>source<sp/>for<sp/>detailed<sp/>licensing<sp/>information.</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Christoph<sp/>Rösmann</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EDGE_ACCELERATION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EDGE_ACCELERATION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="base__teb__edges_8h" kindref="compound">hateb_local_planner/g2o_types/base_teb_edges.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="penalties_8h" kindref="compound">hateb_local_planner/g2o_types/penalties.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="vertex__pose_8h" kindref="compound">hateb_local_planner/g2o_types/vertex_pose.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="vertex__timediff_8h" kindref="compound">hateb_local_planner/g2o_types/vertex_timediff.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/msg/twist.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="hateb__config_8hpp" kindref="compound">hateb_local_planner/hateb_config.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehateb__local__planner" kindref="compound">hateb_local_planner</ref><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classhateb__local__planner_1_1EdgeAcceleration" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1EdgeAcceleration" kindref="compound">EdgeAcceleration</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge" kindref="compound">BaseTebMultiEdge</ref>&lt;2,<sp/>double&gt;<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80" refid="classhateb__local__planner_1_1EdgeAcceleration_1a302c783c319634319a1e9deb2911e3b1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1EdgeAcceleration_1a302c783c319634319a1e9deb2911e3b1" kindref="member">EdgeAcceleration</ref>()<sp/>{<sp/>this-&gt;<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a57f2fb741d0ded5f4491d4602919c5a3" kindref="member">resize</ref>(5);<sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classhateb__local__planner_1_1EdgeAcceleration_1a4dab8bb829593faf4bb984d33afdbf8c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1EdgeAcceleration_1a4dab8bb829593faf4bb984d33afdbf8c" kindref="member">computeError</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>,<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>must<sp/>call<sp/>setHATebConfig<sp/>on<sp/>EdgeAcceleration()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose1<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[0]);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose2<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[1]);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose3<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[2]);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>dt1<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[3]);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>dt2<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[4]);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>VELOCITY<sp/>&amp;<sp/>ACCELERATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::Vector2d<sp/>diff1<sp/>=<sp/>pose2-&gt;position()<sp/>-<sp/>pose1-&gt;position();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::Vector2d<sp/>diff2<sp/>=<sp/>pose3-&gt;position()<sp/>-<sp/>pose2-&gt;position();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist1<sp/>=<sp/>diff1.norm();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist2<sp/>=<sp/>diff2.norm();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>angle_diff1<sp/>=<sp/>g2o::normalize_theta(pose2-&gt;theta()<sp/>-<sp/>pose1-&gt;theta());</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>angle_diff2<sp/>=<sp/>g2o::normalize_theta(pose3-&gt;theta()<sp/>-<sp/>pose2-&gt;theta());</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a66f7d8f18503575290b9e27dc81c9fd1" kindref="member">trajectory</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Trajectory_1ae16c696f6153f59fd62d32b9f814f3da" kindref="member">exact_arc_length</ref>)<sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>exact<sp/>arc<sp/>length<sp/>instead<sp/>of<sp/>Euclidean<sp/>approximation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(angle_diff1<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius<sp/>=<sp/>dist1<sp/>/<sp/>(2<sp/>*<sp/>sin(angle_diff1<sp/>/<sp/>2));</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist1<sp/>=<sp/>fabs(angle_diff1<sp/>*<sp/>radius);<sp/><sp/></highlight><highlight class="comment">//<sp/>actual<sp/>arg<sp/>length!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(angle_diff2<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius<sp/>=<sp/>dist2<sp/>/<sp/>(2<sp/>*<sp/>sin(angle_diff2<sp/>/<sp/>2));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist2<sp/>=<sp/>fabs(angle_diff2<sp/>*<sp/>radius);<sp/><sp/></highlight><highlight class="comment">//<sp/>actual<sp/>arg<sp/>length!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel1<sp/>=<sp/>dist1<sp/>/<sp/>dt1-&gt;dt();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel2<sp/>=<sp/>dist2<sp/>/<sp/>dt2-&gt;dt();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>consider<sp/>directions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>vel1<sp/>*=<sp/><ref refid="namespacehateb__local__planner_1a39af8f619a3185d081cde50624f5dfa8" kindref="member">fast_sigmoid</ref>(100<sp/>*<sp/>(diff1.x()<sp/>*<sp/>cos(pose1-&gt;theta())<sp/>+<sp/>diff1.y()<sp/>*<sp/>sin(pose1-&gt;theta())));</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>vel2<sp/>*=<sp/><ref refid="namespacehateb__local__planner_1a39af8f619a3185d081cde50624f5dfa8" kindref="member">fast_sigmoid</ref>(100<sp/>*<sp/>(diff2.x()<sp/>*<sp/>cos(pose2-&gt;theta())<sp/>+<sp/>diff2.y()<sp/>*<sp/>sin(pose2-&gt;theta())));</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_lin<sp/>=<sp/>(vel2<sp/>-<sp/>vel1)<sp/>*<sp/>2<sp/>/<sp/>(dt1-&gt;dt()<sp/>+<sp/>dt2-&gt;dt());</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[0]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_lin,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1af40f4841ac6f5b5fa7ffadaab7426f74" kindref="member">acc_lim_x</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ANGULAR<sp/>ACCELERATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega1<sp/>=<sp/>angle_diff1<sp/>/<sp/>dt1-&gt;dt();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega2<sp/>=<sp/>angle_diff2<sp/>/<sp/>dt2-&gt;dt();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_rot<sp/>=<sp/>(omega2<sp/>-<sp/>omega1)<sp/>*<sp/>2<sp/>/<sp/>(dt1-&gt;dt()<sp/>+<sp/>dt2-&gt;dt());</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[1]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_rot,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a3bc88eb765e707533710492b82c316b7" kindref="member">acc_lim_theta</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[0]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAcceleration::computeError()<sp/>translational:<sp/>_error[0]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[0]);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[1]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAcceleration::computeError()<sp/>rotational:<sp/>_error[1]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[1]);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_ANALYTIC_JACOBI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/>*<sp/>@brief<sp/>Jacobi<sp/>matrix<sp/>of<sp/>the<sp/>cost<sp/>function<sp/>specified<sp/>in<sp/>computeError().</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>linearizeOplus()<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>,<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>must<sp/>call<sp/>setHATebConfig<sp/>on<sp/>EdgeAcceleration()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VertexPointXY*<sp/>conf1<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">VertexPointXY*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[0]);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VertexPointXY*<sp/>conf2<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">VertexPointXY*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[1]);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VertexPointXY*<sp/>conf3<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">VertexPointXY*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[2]);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>*<sp/>deltaT1<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[3]);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>*<sp/>deltaT2<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[4]);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VertexOrientation*<sp/>angle1<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">VertexOrientation*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[5]);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VertexOrientation*<sp/>angle2<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">VertexOrientation*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[6]);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VertexOrientation*<sp/>angle3<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">VertexOrientation*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[7]);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>deltaS1<sp/>=<sp/>conf2-&gt;estimate()<sp/>-<sp/>conf1-&gt;estimate();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>deltaS2<sp/>=<sp/>conf3-&gt;estimate()<sp/>-<sp/>conf2-&gt;estimate();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist1<sp/>=<sp/>deltaS1.norm();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist2<sp/>=<sp/>deltaS2.norm();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sum_time<sp/>=<sp/>deltaT1-&gt;estimate()<sp/>+<sp/>deltaT2-&gt;estimate();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sum_time_inv<sp/>=<sp/>1<sp/>/<sp/>sum_time;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt1_inv<sp/>=<sp/>1<sp/>/<sp/>deltaT1-&gt;estimate();</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt2_inv<sp/>=<sp/>1<sp/>/<sp/>deltaT2-&gt;estimate();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>aux0<sp/>=<sp/>2<sp/>/<sp/>sum_time_inv;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>aux1<sp/>=<sp/>dist1<sp/>*<sp/>deltaT1-&gt;estimate();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>aux2<sp/>=<sp/>dist2<sp/>*<sp/>deltaT2-&gt;estimate();</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel1<sp/>=<sp/>dist1<sp/>*<sp/>dt1_inv;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel2<sp/>=<sp/>dist2<sp/>*<sp/>dt2_inv;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega1<sp/>=<sp/>g2o::normalize_theta(angle2-&gt;estimate()<sp/>-<sp/>angle1-&gt;estimate())<sp/>*<sp/>dt1_inv;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega2<sp/>=<sp/>g2o::normalize_theta(angle3-&gt;estimate()<sp/>-<sp/>angle2-&gt;estimate())<sp/>*<sp/>dt2_inv;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc<sp/>=<sp/>(vel2<sp/>-<sp/>vel1)<sp/>*<sp/>aux0;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omegadot<sp/>=<sp/>(omega2<sp/>-<sp/>omega1)<sp/>*<sp/>aux0;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>aux3<sp/>=<sp/>-acc<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>aux4<sp/>=<sp/>-omegadot<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dev_border_acc<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a15250529ebfe9fe310c0e0dc62617472" kindref="member">penaltyBoundToIntervalDerivative</ref>(acc,<sp/><ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref>.robot_acceleration_max_trans,<sp/>optimizationConfig.optimization_boundaries_epsilon,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>optimizationConfig.optimization_boundaries_scale,<sp/>optimizationConfig.optimization_boundaries_order);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dev_border_omegadot<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a15250529ebfe9fe310c0e0dc62617472" kindref="member">penaltyBoundToIntervalDerivative</ref>(omegadot,<sp/><ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref>.robot_acceleration_max_rot,<sp/>optimizationConfig.optimization_boundaries_epsilon,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>optimizationConfig.optimization_boundaries_scale,<sp/>optimizationConfig.optimization_boundaries_order);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[0].resize(2,<sp/>2);<sp/><sp/></highlight><highlight class="comment">//<sp/>conf1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[1].resize(2,<sp/>2);<sp/><sp/></highlight><highlight class="comment">//<sp/>conf2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[2].resize(2,<sp/>2);<sp/><sp/></highlight><highlight class="comment">//<sp/>conf3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[3].resize(2,<sp/>1);<sp/><sp/></highlight><highlight class="comment">//<sp/>deltaT1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[4].resize(2,<sp/>1);<sp/><sp/></highlight><highlight class="comment">//<sp/>deltaT2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[5].resize(2,<sp/>1);<sp/><sp/></highlight><highlight class="comment">//<sp/>angle1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[6].resize(2,<sp/>1);<sp/><sp/></highlight><highlight class="comment">//<sp/>angle2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[7].resize(2,<sp/>1);<sp/><sp/></highlight><highlight class="comment">//<sp/>angle3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aux1<sp/>==<sp/>0)<sp/>aux1<sp/>=<sp/>1e-20;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aux2<sp/>==<sp/>0)<sp/>aux2<sp/>=<sp/>1e-20;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dev_border_acc<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>double<sp/>aux<sp/>=<sp/>aux0<sp/>*<sp/>dev_border_acc;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double<sp/>aux123<sp/>=<sp/>aux<sp/>/<sp/>aux1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[0](0,<sp/>0)<sp/>=<sp/>aux0<sp/>*<sp/>deltaS1[0]<sp/>/<sp/>aux1<sp/>*<sp/>dev_border_acc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>x1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[0](0,<sp/>1)<sp/>=<sp/>aux0<sp/>*<sp/>deltaS1[1]<sp/>/<sp/>aux1<sp/>*<sp/>dev_border_acc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>y1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[1](0,<sp/>0)<sp/>=<sp/>-aux0<sp/>*<sp/>(deltaS1[0]<sp/>/<sp/>aux1<sp/>+<sp/>deltaS2[0]<sp/>/<sp/>aux2)<sp/>*<sp/>dev_border_acc;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>x2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[1](0,<sp/>1)<sp/>=<sp/>-aux0<sp/>*<sp/>(deltaS1[1]<sp/>/<sp/>aux1<sp/>+<sp/>deltaS2[1]<sp/>/<sp/>aux2)<sp/>*<sp/>dev_border_acc;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>y2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[2](0,<sp/>0)<sp/>=<sp/>aux0<sp/>*<sp/>deltaS2[0]<sp/>/<sp/>aux2<sp/>*<sp/>dev_border_acc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>x3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[2](0,<sp/>1)<sp/>=<sp/>aux0<sp/>*<sp/>deltaS2[1]<sp/>/<sp/>aux2<sp/>*<sp/>dev_border_acc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>y3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[2](0,<sp/>0)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[2](0,<sp/>1)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[3](0,<sp/>0)<sp/>=<sp/>aux0<sp/>*<sp/>(aux3<sp/>+<sp/>vel1<sp/>*<sp/>dt1_inv)<sp/>*<sp/>dev_border_acc;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>deltaT1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[4](0,<sp/>0)<sp/>=<sp/>aux0<sp/>*<sp/>(aux3<sp/>-<sp/>vel2<sp/>*<sp/>dt2_inv)<sp/>*<sp/>dev_border_acc;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>deltaT2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[0](0,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>x1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[0](0,<sp/>1)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>y1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[1](0,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>x2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[1](0,<sp/>1)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>y2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[2](0,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>x3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[2](0,<sp/>1)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>y3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[3](0,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>deltaT1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[4](0,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>deltaT2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dev_border_omegadot<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[3](1,<sp/>0)<sp/>=<sp/>aux0<sp/>*<sp/>(aux4<sp/>+<sp/>omega1<sp/>*<sp/>dt1_inv)<sp/>*<sp/>dev_border_omegadot;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>deltaT1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[4](1,<sp/>0)<sp/>=<sp/>aux0<sp/>*<sp/>(aux4<sp/>-<sp/>omega2<sp/>*<sp/>dt2_inv)<sp/>*<sp/>dev_border_omegadot;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>deltaT2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[5](1,<sp/>0)<sp/>=<sp/>aux0<sp/>*<sp/>dt1_inv<sp/>*<sp/>dev_border_omegadot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>angle1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[6](1,<sp/>0)<sp/>=<sp/>-aux0<sp/>*<sp/>(dt1_inv<sp/>+<sp/>dt2_inv)<sp/>*<sp/>dev_border_omegadot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>angle2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[7](1,<sp/>0)<sp/>=<sp/>aux0<sp/>*<sp/>dt2_inv<sp/>*<sp/>dev_border_omegadot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>angle3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[3](1,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>deltaT1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[4](1,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>deltaT2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[5](1,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>angle1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[6](1,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>angle2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_jacobianOplus[7](1,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>angle3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[0](1,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>x1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[0](1,<sp/>1)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>y1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[1](1,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>x2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[1](1,<sp/>1)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>y2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[2](1,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>x3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[2](1,<sp/>1)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>omegadot<sp/>y3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[5](0,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>angle1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[6](0,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>angle2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>_jacobianOplus[7](0,<sp/>0)<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>acc<sp/>angle3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>EIGEN_MAKE_ALIGNED_OPERATOR_NEW</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="classhateb__local__planner_1_1EdgeAccelerationStart" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1EdgeAccelerationStart" kindref="compound">EdgeAccelerationStart</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge" kindref="compound">BaseTebMultiEdge</ref>&lt;2,<sp/>const<sp/>geometry_msgs::msg::Twist*&gt;<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="270" refid="classhateb__local__planner_1_1EdgeAccelerationStart_1a0f756a30af893664cb16c8b51198949d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationStart_1a0f756a30af893664cb16c8b51198949d" kindref="member">EdgeAccelerationStart</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>_measurement<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a57f2fb741d0ded5f4491d4602919c5a3" kindref="member">resize</ref>(3);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278" refid="classhateb__local__planner_1_1EdgeAccelerationStart_1a9aed45840be94047ce10d8a00b4091a9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationStart_1a9aed45840be94047ce10d8a00b4091a9" kindref="member">computeError</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref><sp/>&amp;&amp;<sp/>_measurement,<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>must<sp/>call<sp/>setHATebConfig()<sp/>and<sp/>setStartVelocity()<sp/>on<sp/>EdgeAccelerationStart()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose1<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[0]);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose2<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[1]);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>dt<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[2]);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>VELOCITY<sp/>&amp;<sp/>ACCELERATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::Vector2d<sp/>diff<sp/>=<sp/>pose2-&gt;position()<sp/>-<sp/>pose1-&gt;position();</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>diff.norm();</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>angle_diff<sp/>=<sp/>g2o::normalize_theta(pose2-&gt;theta()<sp/>-<sp/>pose1-&gt;theta());</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a66f7d8f18503575290b9e27dc81c9fd1" kindref="member">trajectory</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Trajectory_1ae16c696f6153f59fd62d32b9f814f3da" kindref="member">exact_arc_length</ref><sp/>&amp;&amp;<sp/>angle_diff<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius<sp/>=<sp/>dist<sp/>/<sp/>(2<sp/>*<sp/>sin(angle_diff<sp/>/<sp/>2));</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>fabs(angle_diff<sp/>*<sp/>radius);<sp/><sp/></highlight><highlight class="comment">//<sp/>actual<sp/>arg<sp/>length!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel1<sp/>=<sp/>_measurement-&gt;linear.x;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel2<sp/>=<sp/>dist<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>consider<sp/>directions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>vel2<sp/>*=<sp/><ref refid="namespacehateb__local__planner_1a39af8f619a3185d081cde50624f5dfa8" kindref="member">fast_sigmoid</ref>(100<sp/>*<sp/>(diff.x()<sp/>*<sp/>cos(pose1-&gt;theta())<sp/>+<sp/>diff.y()<sp/>*<sp/>sin(pose1-&gt;theta())));</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_lin<sp/>=<sp/>(vel2<sp/>-<sp/>vel1)<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[0]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_lin,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1af40f4841ac6f5b5fa7ffadaab7426f74" kindref="member">acc_lim_x</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ANGULAR<sp/>ACCELERATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega1<sp/>=<sp/>_measurement-&gt;angular.z;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega2<sp/>=<sp/>angle_diff<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_rot<sp/>=<sp/>(omega2<sp/>-<sp/>omega1)<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[1]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_rot,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a3bc88eb765e707533710492b82c316b7" kindref="member">acc_lim_theta</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[0]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAccelerationStart::computeError()<sp/>translational:<sp/>_error[0]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[0]);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[1]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAccelerationStart::computeError()<sp/>rotational:<sp/>_error[1]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[1]);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318" refid="classhateb__local__planner_1_1EdgeAccelerationStart_1aeaffccbbd0b3a43c60a1a5efe7c95206" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationStart_1aeaffccbbd0b3a43c60a1a5efe7c95206" kindref="member">setInitialVelocity</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::Twist&amp;<sp/>vel_start)<sp/>{<sp/>_measurement<sp/>=<sp/>&amp;vel_start;<sp/>}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/>EIGEN_MAKE_ALIGNED_OPERATOR_NEW</highlight></codeline>
+<codeline lineno="322"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343" refid="classhateb__local__planner_1_1EdgeAccelerationGoal" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1EdgeAccelerationGoal" kindref="compound">EdgeAccelerationGoal</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge" kindref="compound">BaseTebMultiEdge</ref>&lt;2,<sp/>const<sp/>geometry_msgs::msg::Twist*&gt;<sp/>{</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="348" refid="classhateb__local__planner_1_1EdgeAccelerationGoal_1a318848b7711f2beb84e4056ed3155f7b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationGoal_1a318848b7711f2beb84e4056ed3155f7b" kindref="member">EdgeAccelerationGoal</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>_measurement<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a57f2fb741d0ded5f4491d4602919c5a3" kindref="member">resize</ref>(3);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356" refid="classhateb__local__planner_1_1EdgeAccelerationGoal_1af3e36f1c52b13adf280da21835f491f9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationGoal_1af3e36f1c52b13adf280da21835f491f9" kindref="member">computeError</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref><sp/>&amp;&amp;<sp/>_measurement,<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>must<sp/>call<sp/>setHATebConfig()<sp/>and<sp/>setGoalVelocity()<sp/>on<sp/>EdgeAccelerationGoal()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose_pre_goal<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[0]);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose_goal<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[1]);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>dt<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[2]);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>VELOCITY<sp/>&amp;<sp/>ACCELERATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::Vector2d<sp/>diff<sp/>=<sp/>pose_goal-&gt;position()<sp/>-<sp/>pose_pre_goal-&gt;position();</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>diff.norm();</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>angle_diff<sp/>=<sp/>g2o::normalize_theta(pose_goal-&gt;theta()<sp/>-<sp/>pose_pre_goal-&gt;theta());</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a66f7d8f18503575290b9e27dc81c9fd1" kindref="member">trajectory</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Trajectory_1ae16c696f6153f59fd62d32b9f814f3da" kindref="member">exact_arc_length</ref><sp/>&amp;&amp;<sp/>angle_diff<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius<sp/>=<sp/>dist<sp/>/<sp/>(2<sp/>*<sp/>sin(angle_diff<sp/>/<sp/>2));</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>fabs(angle_diff<sp/>*<sp/>radius);<sp/><sp/></highlight><highlight class="comment">//<sp/>actual<sp/>arg<sp/>length!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel1<sp/>=<sp/>dist<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel2<sp/>=<sp/>_measurement-&gt;linear.x;</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>consider<sp/>directions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>vel1<sp/>*=<sp/><ref refid="namespacehateb__local__planner_1a39af8f619a3185d081cde50624f5dfa8" kindref="member">fast_sigmoid</ref>(100<sp/>*<sp/>(diff.x()<sp/>*<sp/>cos(pose_pre_goal-&gt;theta())<sp/>+<sp/>diff.y()<sp/>*<sp/>sin(pose_pre_goal-&gt;theta())));</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_lin<sp/>=<sp/>(vel2<sp/>-<sp/>vel1)<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[0]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_lin,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1af40f4841ac6f5b5fa7ffadaab7426f74" kindref="member">acc_lim_x</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ANGULAR<sp/>ACCELERATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega1<sp/>=<sp/>angle_diff<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega2<sp/>=<sp/>_measurement-&gt;angular.z;</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_rot<sp/>=<sp/>(omega2<sp/>-<sp/>omega1)<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[1]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_rot,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a3bc88eb765e707533710492b82c316b7" kindref="member">acc_lim_theta</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[0]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAccelerationGoal::computeError()<sp/>translational:<sp/>_error[0]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[0]);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[1]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAccelerationGoal::computeError()<sp/>rotational:<sp/>_error[1]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[1]);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397" refid="classhateb__local__planner_1_1EdgeAccelerationGoal_1a8e2c7ba9640ee45ab69e7ccf79ca6d64" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationGoal_1a8e2c7ba9640ee45ab69e7ccf79ca6d64" kindref="member">setGoalVelocity</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::Twist&amp;<sp/>vel_goal)<sp/>{<sp/>_measurement<sp/>=<sp/>&amp;vel_goal;<sp/>}</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/>EIGEN_MAKE_ALIGNED_OPERATOR_NEW</highlight></codeline>
+<codeline lineno="401"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="422" refid="classhateb__local__planner_1_1EdgeAccelerationHolonomic" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomic" kindref="compound">EdgeAccelerationHolonomic</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge" kindref="compound">BaseTebMultiEdge</ref>&lt;3,<sp/>double&gt;<sp/>{</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="427" refid="classhateb__local__planner_1_1EdgeAccelerationHolonomic_1ad2a720309d3beaa7b66bfe2ebfd4d683" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomic_1ad2a720309d3beaa7b66bfe2ebfd4d683" kindref="member">EdgeAccelerationHolonomic</ref>()<sp/>{<sp/>this-&gt;<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a57f2fb741d0ded5f4491d4602919c5a3" kindref="member">resize</ref>(5);<sp/>}</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight></codeline>
+<codeline lineno="432" refid="classhateb__local__planner_1_1EdgeAccelerationHolonomic_1a9431d1e089346b4ff7e30ff3b529f105" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomic_1a9431d1e089346b4ff7e30ff3b529f105" kindref="member">computeError</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>,<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>must<sp/>call<sp/>setHATebConfig<sp/>on<sp/>EdgeAcceleration()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose1<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[0]);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose2<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[1]);</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose3<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[2]);</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>dt1<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[3]);</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>dt2<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[4]);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>VELOCITY<sp/>&amp;<sp/>ACCELERATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>diff1<sp/>=<sp/>pose2-&gt;position()<sp/>-<sp/>pose1-&gt;position();</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>diff2<sp/>=<sp/>pose3-&gt;position()<sp/>-<sp/>pose2-&gt;position();</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cos_theta1<sp/>=<sp/>std::cos(pose1-&gt;theta());</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sin_theta1<sp/>=<sp/>std::sin(pose1-&gt;theta());</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cos_theta2<sp/>=<sp/>std::cos(pose2-&gt;theta());</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sin_theta2<sp/>=<sp/>std::sin(pose2-&gt;theta());</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>transform<sp/>pose2<sp/>into<sp/>robot<sp/>frame<sp/>pose1<sp/>(inverse<sp/>2d<sp/>rotation<sp/>matrix)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p1_dx<sp/>=<sp/>(cos_theta1<sp/>*<sp/>diff1.x())<sp/>+<sp/>(sin_theta1<sp/>*<sp/>diff1.y());</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p1_dy<sp/>=<sp/>(-sin_theta1<sp/>*<sp/>diff1.x())<sp/>+<sp/>(cos_theta1<sp/>*<sp/>diff1.y());</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>transform<sp/>pose3<sp/>into<sp/>robot<sp/>frame<sp/>pose2<sp/>(inverse<sp/>2d<sp/>rotation<sp/>matrix)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p2_dx<sp/>=<sp/>(cos_theta2<sp/>*<sp/>diff2.x())<sp/>+<sp/>(sin_theta2<sp/>*<sp/>diff2.y());</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p2_dy<sp/>=<sp/>(-sin_theta2<sp/>*<sp/>diff2.x())<sp/>+<sp/>(cos_theta2<sp/>*<sp/>diff2.y());</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel1_x<sp/>=<sp/>p1_dx<sp/>/<sp/>dt1-&gt;dt();</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel1_y<sp/>=<sp/>p1_dy<sp/>/<sp/>dt1-&gt;dt();</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel2_x<sp/>=<sp/>p2_dx<sp/>/<sp/>dt2-&gt;dt();</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel2_y<sp/>=<sp/>p2_dy<sp/>/<sp/>dt2-&gt;dt();</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"></highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt12<sp/>=<sp/>dt1-&gt;dt()<sp/>+<sp/>dt2-&gt;dt();</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"></highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_x<sp/>=<sp/>(vel2_x<sp/>-<sp/>vel1_x)<sp/>*<sp/>2<sp/>/<sp/>dt12;</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_y<sp/>=<sp/>(vel2_y<sp/>-<sp/>vel1_y)<sp/>*<sp/>2<sp/>/<sp/>dt12;</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"></highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[0]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_x,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1af40f4841ac6f5b5fa7ffadaab7426f74" kindref="member">acc_lim_x</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[1]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_y,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1aeca1e45a2334d4104b4c55d1a124b70c" kindref="member">acc_lim_y</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ANGULAR<sp/>ACCELERATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega1<sp/>=<sp/>g2o::normalize_theta(pose2-&gt;theta()<sp/>-<sp/>pose1-&gt;theta())<sp/>/<sp/>dt1-&gt;dt();</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega2<sp/>=<sp/>g2o::normalize_theta(pose3-&gt;theta()<sp/>-<sp/>pose2-&gt;theta())<sp/>/<sp/>dt2-&gt;dt();</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_rot<sp/>=<sp/>(omega2<sp/>-<sp/>omega1)<sp/>*<sp/>2<sp/>/<sp/>dt12;</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[2]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_rot,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a3bc88eb765e707533710492b82c316b7" kindref="member">acc_lim_theta</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[0]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAcceleration::computeError()<sp/>translational:<sp/>_error[0]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[0]);</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[1]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAcceleration::computeError()<sp/>strafing:<sp/>_error[1]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[1]);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[2]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAcceleration::computeError()<sp/>rotational:<sp/>_error[2]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[2]);</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"></highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/>EIGEN_MAKE_ALIGNED_OPERATOR_NEW</highlight></codeline>
+<codeline lineno="483"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"></highlight></codeline>
+<codeline lineno="505" refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicStart" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicStart" kindref="compound">EdgeAccelerationHolonomicStart</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge" kindref="compound">BaseTebMultiEdge</ref>&lt;3,<sp/>const<sp/>geometry_msgs::msg::Twist*&gt;<sp/>{</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="510" refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicStart_1a51f746ffa59d6ab084747bfcb3a98d9c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicStart_1a51f746ffa59d6ab084747bfcb3a98d9c" kindref="member">EdgeAccelerationHolonomicStart</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a57f2fb741d0ded5f4491d4602919c5a3" kindref="member">resize</ref>(3);</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/>_measurement<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="518" refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicStart_1a5ddeb8b3e98b889105e4c86740b3068d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicStart_1a5ddeb8b3e98b889105e4c86740b3068d" kindref="member">computeError</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref><sp/>&amp;&amp;<sp/>_measurement,<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>must<sp/>call<sp/>setHATebConfig()<sp/>and<sp/>setStartVelocity()<sp/>on<sp/>EdgeAccelerationStart()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose1<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[0]);</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose2<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[1]);</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>dt<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[2]);</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"></highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>VELOCITY<sp/>&amp;<sp/>ACCELERATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>diff<sp/>=<sp/>pose2-&gt;position()<sp/>-<sp/>pose1-&gt;position();</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"></highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cos_theta1<sp/>=<sp/>std::cos(pose1-&gt;theta());</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sin_theta1<sp/>=<sp/>std::sin(pose1-&gt;theta());</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>transform<sp/>pose2<sp/>into<sp/>robot<sp/>frame<sp/>pose1<sp/>(inverse<sp/>2d<sp/>rotation<sp/>matrix)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p1_dx<sp/>=<sp/>(cos_theta1<sp/>*<sp/>diff.x())<sp/>+<sp/>(sin_theta1<sp/>*<sp/>diff.y());</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p1_dy<sp/>=<sp/>(-sin_theta1<sp/>*<sp/>diff.x())<sp/>+<sp/>(cos_theta1<sp/>*<sp/>diff.y());</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"></highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel1_x<sp/>=<sp/>_measurement-&gt;linear.x;</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel1_y<sp/>=<sp/>_measurement-&gt;linear.y;</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel2_x<sp/>=<sp/>p1_dx<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel2_y<sp/>=<sp/>p1_dy<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"></highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_lin_x<sp/>=<sp/>(vel2_x<sp/>-<sp/>vel1_x)<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_lin_y<sp/>=<sp/>(vel2_y<sp/>-<sp/>vel1_y)<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[0]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_lin_x,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1af40f4841ac6f5b5fa7ffadaab7426f74" kindref="member">acc_lim_x</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[1]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_lin_y,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1aeca1e45a2334d4104b4c55d1a124b70c" kindref="member">acc_lim_y</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"></highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ANGULAR<sp/>ACCELERATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega1<sp/>=<sp/>_measurement-&gt;angular.z;</highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega2<sp/>=<sp/>g2o::normalize_theta(pose2-&gt;theta()<sp/>-<sp/>pose1-&gt;theta())<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="548"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_rot<sp/>=<sp/>(omega2<sp/>-<sp/>omega1)<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"></highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[2]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_rot,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a3bc88eb765e707533710492b82c316b7" kindref="member">acc_lim_theta</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[0]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAccelerationStart::computeError()<sp/>translational:<sp/>_error[0]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[0]);</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[1]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAccelerationStart::computeError()<sp/>strafing:<sp/>_error[1]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[1]);</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[2]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAccelerationStart::computeError()<sp/>rotational:<sp/>_error[2]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[2]);</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"></highlight></codeline>
+<codeline lineno="561" refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicStart_1a0e967f40a78a08d3793b41cb87ed564e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicStart_1a0e967f40a78a08d3793b41cb87ed564e" kindref="member">setInitialVelocity</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::Twist&amp;<sp/>vel_start)<sp/>{<sp/>_measurement<sp/>=<sp/>&amp;vel_start;<sp/>}</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"></highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/>EIGEN_MAKE_ALIGNED_OPERATOR_NEW</highlight></codeline>
+<codeline lineno="565"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="566"><highlight class="normal"></highlight></codeline>
+<codeline lineno="587" refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicGoal" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicGoal" kindref="compound">EdgeAccelerationHolonomicGoal</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge" kindref="compound">BaseTebMultiEdge</ref>&lt;3,<sp/>const<sp/>geometry_msgs::msg::Twist*&gt;<sp/>{</highlight></codeline>
+<codeline lineno="588"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="592" refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicGoal_1ad0580baefc639e03755722e6bc5ab1ad" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicGoal_1ad0580baefc639e03755722e6bc5ab1ad" kindref="member">EdgeAccelerationHolonomicGoal</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/>_measurement<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a57f2fb741d0ded5f4491d4602919c5a3" kindref="member">resize</ref>(3);</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="596"><highlight class="normal"></highlight></codeline>
+<codeline lineno="600" refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicGoal_1a4a5b72290db7d938bd5e37168e657dce" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicGoal_1a4a5b72290db7d938bd5e37168e657dce" kindref="member">computeError</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(<ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref><sp/>&amp;&amp;<sp/>_measurement,<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>must<sp/>call<sp/>setHATebConfig()<sp/>and<sp/>setGoalVelocity()<sp/>on<sp/>EdgeAccelerationGoal()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose_pre_goal<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[0]);</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pose_goal<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[1]);</highlight></codeline>
+<codeline lineno="604"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>dt<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_vertices[2]);</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"></highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>VELOCITY<sp/>&amp;<sp/>ACCELERATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="607"><highlight class="normal"></highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>diff<sp/>=<sp/>pose_goal-&gt;position()<sp/>-<sp/>pose_pre_goal-&gt;position();</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"></highlight></codeline>
+<codeline lineno="610"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cos_theta1<sp/>=<sp/>std::cos(pose_pre_goal-&gt;theta());</highlight></codeline>
+<codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sin_theta1<sp/>=<sp/>std::sin(pose_pre_goal-&gt;theta());</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight></codeline>
+<codeline lineno="613"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>transform<sp/>pose2<sp/>into<sp/>robot<sp/>frame<sp/>pose1<sp/>(inverse<sp/>2d<sp/>rotation<sp/>matrix)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="614"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p1_dx<sp/>=<sp/>(cos_theta1<sp/>*<sp/>diff.x())<sp/>+<sp/>(sin_theta1<sp/>*<sp/>diff.y());</highlight></codeline>
+<codeline lineno="615"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p1_dy<sp/>=<sp/>(-sin_theta1<sp/>*<sp/>diff.x())<sp/>+<sp/>(cos_theta1<sp/>*<sp/>diff.y());</highlight></codeline>
+<codeline lineno="616"><highlight class="normal"></highlight></codeline>
+<codeline lineno="617"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel1_x<sp/>=<sp/>p1_dx<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="618"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel1_y<sp/>=<sp/>p1_dy<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="619"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel2_x<sp/>=<sp/>_measurement-&gt;linear.x;</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel2_y<sp/>=<sp/>_measurement-&gt;linear.y;</highlight></codeline>
+<codeline lineno="621"><highlight class="normal"></highlight></codeline>
+<codeline lineno="622"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_lin_x<sp/>=<sp/>(vel2_x<sp/>-<sp/>vel1_x)<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="623"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_lin_y<sp/>=<sp/>(vel2_y<sp/>-<sp/>vel1_y)<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="624"><highlight class="normal"></highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[0]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_lin_x,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1af40f4841ac6f5b5fa7ffadaab7426f74" kindref="member">acc_lim_x</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[1]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_lin_y,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1aeca1e45a2334d4104b4c55d1a124b70c" kindref="member">acc_lim_y</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="627"><highlight class="normal"></highlight></codeline>
+<codeline lineno="628"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ANGULAR<sp/>ACCELERATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega1<sp/>=<sp/>g2o::normalize_theta(pose_goal-&gt;theta()<sp/>-<sp/>pose_pre_goal-&gt;theta())<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>omega2<sp/>=<sp/>_measurement-&gt;angular.z;</highlight></codeline>
+<codeline lineno="631"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acc_rot<sp/>=<sp/>(omega2<sp/>-<sp/>omega1)<sp/>/<sp/>dt-&gt;dt();</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"></highlight></codeline>
+<codeline lineno="633"><highlight class="normal"><sp/><sp/><sp/><sp/>_error[2]<sp/>=<sp/><ref refid="namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710" kindref="member">penaltyBoundToInterval</ref>(acc_rot,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a7453a4721bc6ae407a6a8354c0bada97" kindref="member">robot</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a3bc88eb765e707533710492b82c316b7" kindref="member">acc_lim_theta</ref>,<sp/><ref refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" kindref="member">cfg_</ref>-&gt;<ref refid="classhateb__local__planner_1_1HATebConfig_1a162e554b1458c4a47c8f5d93c8285589" kindref="member">optim</ref>.<ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" kindref="member">penalty_epsilon</ref>);</highlight></codeline>
+<codeline lineno="634"><highlight class="normal"></highlight></codeline>
+<codeline lineno="635"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[0]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAccelerationGoal::computeError()<sp/>translational:<sp/>_error[0]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[0]);</highlight></codeline>
+<codeline lineno="636"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[1]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAccelerationGoal::computeError()<sp/>strafing:<sp/>_error[1]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[1]);</highlight></codeline>
+<codeline lineno="637"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622" kindref="member">HATEB_ASSERT_MSG</ref>(std::isfinite(_error[2]),<sp/></highlight><highlight class="stringliteral">&quot;EdgeAccelerationGoal::computeError()<sp/>rotational:<sp/>_error[2]=%f\n&quot;</highlight><highlight class="normal">,<sp/>_error[2]);</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="639"><highlight class="normal"></highlight></codeline>
+<codeline lineno="644" refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicGoal_1ad26d30203a1cf2ef26ec4dadfd8c16cb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1EdgeAccelerationHolonomicGoal_1ad26d30203a1cf2ef26ec4dadfd8c16cb" kindref="member">setGoalVelocity</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::Twist&amp;<sp/>vel_goal)<sp/>{<sp/>_measurement<sp/>=<sp/>&amp;vel_goal;<sp/>}</highlight></codeline>
+<codeline lineno="645"><highlight class="normal"></highlight></codeline>
+<codeline lineno="646"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="647"><highlight class="normal"><sp/><sp/>EIGEN_MAKE_ALIGNED_OPERATOR_NEW</highlight></codeline>
+<codeline lineno="648"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="649"><highlight class="normal"></highlight></codeline>
+<codeline lineno="650"><highlight class="normal">};<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hateb_local_planner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="651"><highlight class="normal"></highlight></codeline>
+<codeline lineno="652"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>EDGE_ACCELERATION_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_acceleration.h"/>
+  </compounddef>
+</doxygen>

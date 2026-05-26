@@ -1,0 +1,1040 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classinvisible__humans__detection_1_1MapScanner" kind="class" language="C++" prot="public">
+    <compoundname>invisible_humans_detection::MapScanner</compoundname>
+    <includes refid="map__scanner_8h" local="no">map_scanner.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1aef190cc69d0a4e72ea479d49c454b412" prot="private" static="no" mutable="no">
+        <type>ros::Timer</type>
+        <definition>ros::Timer invisible_humans_detection::MapScanner::get_robot_pose_</definition>
+        <argsstring></argsstring>
+        <name>get_robot_pose_</name>
+        <briefdescription>
+<para>Timer for periodically updating the robot&apos;s pose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="204" column="14" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a66263d61dccd54e6f5a78657a11abb7d" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::PoseStamped</type>
+        <definition>geometry_msgs::PoseStamped invisible_humans_detection::MapScanner::robot_pose_</definition>
+        <argsstring></argsstring>
+        <name>robot_pose_</name>
+        <briefdescription>
+<para>Current pose of the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="205" column="30" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a35e76ba0e48cca53ac6793b912a8f69a" prot="private" static="no" mutable="no">
+        <type>tf2_ros::Buffer</type>
+        <definition>tf2_ros::Buffer invisible_humans_detection::MapScanner::tf_</definition>
+        <argsstring></argsstring>
+        <name>tf_</name>
+        <briefdescription>
+<para>Buffer for storing TF2 transformations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="206" column="19" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a6afd47b8d1cd7546e9acf5d64998e997" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber invisible_humans_detection::MapScanner::map_sub_</definition>
+        <argsstring></argsstring>
+        <name>map_sub_</name>
+        <briefdescription>
+<para>Subscriber for receiving map updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="207" column="19" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a0c7ed15202d90ec590118d3f308bb84f" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher invisible_humans_detection::MapScanner::scan_pub_</definition>
+        <argsstring></argsstring>
+        <name>scan_pub_</name>
+        <briefdescription>
+<para>Publisher for scan data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="208" column="18" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a229ccc056a5aa864715bc808bff26991" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher invisible_humans_detection::MapScanner::pub_invis_human_viz_</definition>
+        <argsstring></argsstring>
+        <name>pub_invis_human_viz_</name>
+        <briefdescription>
+<para>Publisher for visualizing invisible humans. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="209" column="18" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a4e199ca4b9861bab1ac8fa3827d7bc4e" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher invisible_humans_detection::MapScanner::pub_invis_human_</definition>
+        <argsstring></argsstring>
+        <name>pub_invis_human_</name>
+        <briefdescription>
+<para>Publisher for invisible human obstacle msg. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="210" column="18" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1ad2317a882b114fb63eaff2c1ea316f86" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher invisible_humans_detection::MapScanner::pub_invis_human_corners_</definition>
+        <argsstring></argsstring>
+        <name>pub_invis_human_corners_</name>
+        <briefdescription>
+<para>Publisher for invisible human corner data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="211" column="18" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1afe2173690e6003fa71ea27e1e29c7e23" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher invisible_humans_detection::MapScanner::pub_invis_humans_pos_</definition>
+        <argsstring></argsstring>
+        <name>pub_invis_humans_pos_</name>
+        <briefdescription>
+<para>Publisher for invisible human positions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="212" column="18" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a91ed0a4ce202a288bac9694c11868b39" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher invisible_humans_detection::MapScanner::passage_detect_pub_</definition>
+        <argsstring></argsstring>
+        <name>passage_detect_pub_</name>
+        <briefdescription>
+<para>Publisher for detected passages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="213" column="18" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a6eadf3ded7b8e0eb4c5b474e01c7556d" prot="private" static="no" mutable="no">
+        <type>nav_msgs::OccupancyGrid</type>
+        <definition>nav_msgs::OccupancyGrid invisible_humans_detection::MapScanner::map_</definition>
+        <argsstring></argsstring>
+        <name>map_</name>
+        <briefdescription>
+<para>Occupancy grid map data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="214" column="27" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a1804fabbd161d9fed6b5e76081cef8e3" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; invisible_humans_detection::MapScanner::ranges_</definition>
+        <argsstring></argsstring>
+        <name>ranges_</name>
+        <briefdescription>
+<para>Ranges from sensor data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="215" column="15" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1aee5345161c56788fa0098e634465d05b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; invisible_humans_detection::MapScanner::corner_ranges_</definition>
+        <argsstring></argsstring>
+        <name>corner_ranges_</name>
+        <briefdescription>
+<para>Ranges for detected corners. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="216" column="15" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a8ffd6cc6d7ebf854d12bb866458a6678" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int invisible_humans_detection::MapScanner::samples_</definition>
+        <argsstring></argsstring>
+        <name>samples_</name>
+        <briefdescription>
+<para>Number of samples for scanning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="217" column="7" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1ab098835d6886f6de9f1cb599d867a498" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int invisible_humans_detection::MapScanner::scan_resolution_</definition>
+        <argsstring></argsstring>
+        <name>scan_resolution_</name>
+        <briefdescription>
+<para>Resolution of the scan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="218" column="7" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1ad51890bcaff889c6fe3f8f45a7df87d0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int invisible_humans_detection::MapScanner::size_x_</definition>
+        <argsstring></argsstring>
+        <name>size_x_</name>
+        <briefdescription>
+<para>Size of the map in the x-direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="219" column="7" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1ab667eb47f7b6e7ecea17e3e35ca808a7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int invisible_humans_detection::MapScanner::size_y_</definition>
+        <argsstring></argsstring>
+        <name>size_y_</name>
+        <briefdescription>
+<para>Size of the map in the y-direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="220" column="7" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a0658a5d4ec14e5831bc0f46b6415c644" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::MapScanner::origin_x_</definition>
+        <argsstring></argsstring>
+        <name>origin_x_</name>
+        <briefdescription>
+<para>Origin of the map in the x-direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="221" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a21e8c09b7bc1d53c7f220ca179b582a9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::MapScanner::origin_y_</definition>
+        <argsstring></argsstring>
+        <name>origin_y_</name>
+        <briefdescription>
+<para>Origin of the map in the y-direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="222" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a6de905111dc614547392948053119547" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::MapScanner::resolution_</definition>
+        <argsstring></argsstring>
+        <name>resolution_</name>
+        <briefdescription>
+<para>Resolution of the map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="223" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a2a40e548145d945ab6489a73193a4b39" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::MapScanner::angle_min_</definition>
+        <argsstring></argsstring>
+        <name>angle_min_</name>
+        <briefdescription>
+<para>Minimum angle for scanning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="224" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1ac974e09631c7f28c21de1a07a90fa972" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::MapScanner::angle_max_</definition>
+        <argsstring></argsstring>
+        <name>angle_max_</name>
+        <briefdescription>
+<para>Maximum angle for scanning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="225" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a9c58837c64e34fe7afcc1b8ba8c48c22" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::MapScanner::range_min_</definition>
+        <argsstring></argsstring>
+        <name>range_min_</name>
+        <briefdescription>
+<para>Minimum range for scanning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="226" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1ab9cd8b04b6c881ecf0f98fc82276d97a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::MapScanner::range_max_</definition>
+        <argsstring></argsstring>
+        <name>range_max_</name>
+        <briefdescription>
+<para>Maximum range for scanning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="227" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1ad5d2ce299b0488d0e7eb36d846c99427" prot="private" static="no" mutable="no">
+        <type>sensor_msgs::LaserScan</type>
+        <definition>sensor_msgs::LaserScan invisible_humans_detection::MapScanner::scan_msg_</definition>
+        <argsstring></argsstring>
+        <name>scan_msg_</name>
+        <briefdescription>
+<para>Laser scan message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="228" column="26" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a5f0287b10ddfcd10c2aa119878878462" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool invisible_humans_detection::MapScanner::publish_scan_</definition>
+        <argsstring></argsstring>
+        <name>publish_scan_</name>
+        <briefdescription>
+<para>Flag to indicate whether to publish scan data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="229" column="8" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a3fbe3e6c8d45d59dedb315d4ab6b6f6a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double invisible_humans_detection::MapScanner::human_radius_</definition>
+        <argsstring></argsstring>
+        <name>human_radius_</name>
+        <briefdescription>
+<para>Radius of a human for detection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="230" column="10" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1afda176adc9dfaa2422f87d2b2981b7c7" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string invisible_humans_detection::MapScanner::ns_</definition>
+        <argsstring></argsstring>
+        <name>ns_</name>
+        <briefdescription>
+<para>Namespace of the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="231" column="15" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classinvisible__humans__detection_1_1MapScanner_1a1e82d587c69a0be59c8e23d8869bfaa2" prot="private" static="no" mutable="no">
+        <type>Eigen::Vector2d</type>
+        <definition>Eigen::Vector2d invisible_humans_detection::MapScanner::robot_vec_</definition>
+        <argsstring></argsstring>
+        <name>robot_vec_</name>
+        <briefdescription>
+<para>Unit vector in the direction of the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="232" column="19" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1a66ac3ccfb680d85b9df5432eaa63fe04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>invisible_humans_detection::MapScanner::MapScanner</definition>
+        <argsstring>()</argsstring>
+        <name>MapScanner</name>
+        <briefdescription>
+<para>Default constructor for <ref refid="classinvisible__humans__detection_1_1MapScanner" kindref="compound">MapScanner</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="70" column="3" bodyfile="invisible_humans_detection/src/invisible_humans_detection.cpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1a0c2c5932317636e1fe10bc6beb307981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>invisible_humans_detection::MapScanner::~MapScanner</definition>
+        <argsstring>()</argsstring>
+        <name>~MapScanner</name>
+        <briefdescription>
+<para>Default destructor for <ref refid="classinvisible__humans__detection_1_1MapScanner" kindref="compound">MapScanner</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="75" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1add9c07f51ccfe8144d7eb940b7ae13bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void invisible_humans_detection::MapScanner::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+<para>Initializes the <ref refid="classinvisible__humans__detection_1_1MapScanner" kindref="compound">MapScanner</ref> node and sets up ROS. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="80" column="8" bodyfile="invisible_humans_detection/src/invisible_humans_detection.cpp" bodystart="47" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1a1a34a622304fb065a868f0a61a63b4bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void invisible_humans_detection::MapScanner::loadRosParamFromNodeHandle</definition>
+        <argsstring>(const ros::NodeHandle &amp;private_nh)</argsstring>
+        <name>loadRosParamFromNodeHandle</name>
+        <param>
+          <type>const ros::NodeHandle &amp;</type>
+          <declname>private_nh</declname>
+        </param>
+        <briefdescription>
+<para>Loads ROS parameters from the node handle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>private_nh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Private node handle containing parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="87" column="8" bodyfile="invisible_humans_detection/src/invisible_humans_detection.cpp" bodystart="76" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1a946a51241f2460951227c6cb3bbb601e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void invisible_humans_detection::MapScanner::mapCB</definition>
+        <argsstring>(const nav_msgs::OccupancyGrid &amp;grid)</argsstring>
+        <name>mapCB</name>
+        <param>
+          <type>const nav_msgs::OccupancyGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <briefdescription>
+<para>Callback for map updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The occupancy grid message containing map data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="93" column="8" bodyfile="invisible_humans_detection/src/invisible_humans_detection.cpp" bodystart="91" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1aef399ed829a281387d030b39ce5e8bcd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool invisible_humans_detection::MapScanner::locateInvHumans</definition>
+        <argsstring>(Coordinates c1, Coordinates c2, std::vector&lt; char &gt; direction, geometry_msgs::TransformStamped &amp;footprint_transform)</argsstring>
+        <name>locateInvHumans</name>
+        <param>
+          <type><ref refid="namespaceinvisible__humans__detection_1ae25a689c317c3768475551c8cd57fce6" kindref="member">Coordinates</ref></type>
+          <declname>c1</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceinvisible__humans__detection_1ae25a689c317c3768475551c8cd57fce6" kindref="member">Coordinates</ref></type>
+          <declname>c2</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; char &gt;</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::TransformStamped &amp;</type>
+          <declname>footprint_transform</declname>
+        </param>
+        <briefdescription>
+<para>Locates invisible humans based on the detected corner sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First set of corners </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second set of corners </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Directions vector (positive or negative to select the right or left point) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>footprint_transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transform of the robot footprint to the world frame </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if invisible humans are located successfully, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="103" column="8" bodyfile="invisible_humans_detection/src/invisible_humans_detection.cpp" bodystart="242" bodyend="472"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1a7487ca072aafca927379e9814c28c17c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void invisible_humans_detection::MapScanner::detectOccludedCorners</definition>
+        <argsstring>(const ros::TimerEvent &amp;event)</argsstring>
+        <name>detectOccludedCorners</name>
+        <param>
+          <type>const ros::TimerEvent &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Detects occluded corners in the map where humans might be present. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timer event triggering the detection </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="109" column="8" bodyfile="invisible_humans_detection/src/invisible_humans_detection.cpp" bodystart="137" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1a95ca803c84523a6cc10b6cb527e48b42" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void invisible_humans_detection::MapScanner::publishInvisibleHumans</definition>
+        <argsstring>(const geometry_msgs::PoseArray &amp;corners, const geometry_msgs::PoseArray &amp;poses, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;inv_humans)</argsstring>
+        <name>publishInvisibleHumans</name>
+        <param>
+          <type>const geometry_msgs::PoseArray &amp;</type>
+          <declname>corners</declname>
+        </param>
+        <param>
+          <type>const geometry_msgs::PoseArray &amp;</type>
+          <declname>poses</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; double &gt;&gt; &amp;</type>
+          <declname>inv_humans</declname>
+        </param>
+        <briefdescription>
+<para>Publishes detected invisible humans (corners, poses and obstacles message) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>corners</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Detected corners </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>poses</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Detected poses </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inv_humans</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Invisible humans info for Obstacle Msg </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="117" column="8" bodyfile="invisible_humans_detection/src/invisible_humans_detection.cpp" bodystart="101" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1a13a1c0ff5dd037b23b90ed9246a3ebaa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void invisible_humans_detection::MapScanner::detectPassages</definition>
+        <argsstring>(geometry_msgs::PoseArray detections)</argsstring>
+        <name>detectPassages</name>
+        <param>
+          <type>geometry_msgs::PoseArray</type>
+          <declname>detections</declname>
+        </param>
+        <briefdescription>
+<para>Detects different kinds of passages in the map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>detections</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of detected invisible humans </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="123" column="8" bodyfile="invisible_humans_detection/src/invisible_humans_detection.cpp" bodystart="475" bodyend="532"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1ac03cfd9ccf098da909697e29512c02c2" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool invisible_humans_detection::MapScanner::worldToMap</definition>
+        <argsstring>(double wx, double wy, int &amp;mx, int &amp;my) const</argsstring>
+        <name>worldToMap</name>
+        <param>
+          <type>double</type>
+          <declname>wx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>wy</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>mx</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>my</declname>
+        </param>
+        <briefdescription>
+<para>Converts world coordinates to map coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>World x-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>World y-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map x-coordinate (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>my</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map y-coordinate (output) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if conversion is successful, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="133" column="8" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="133" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1adf0d1b7df374ce5fe3e3a4e42c51da51" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int invisible_humans_detection::MapScanner::getIndex</definition>
+        <argsstring>(unsigned int mx, unsigned int my) const</argsstring>
+        <name>getIndex</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>mx</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>my</declname>
+        </param>
+        <briefdescription>
+<para>Gets the index of a map cell based on its coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map x-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>my</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map y-coordinate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of the map cell </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="148" column="16" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="148" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1a0c6024b6a09b868790d9cfb35f721996" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref></type>
+        <definition>static Point invisible_humans_detection::MapScanner::getLeftPoint</definition>
+        <argsstring>(Point p1, Point p2, Point p3, double dist=1)</argsstring>
+        <name>getLeftPoint</name>
+        <param>
+          <type><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref></type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref></type>
+          <declname>p2</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref></type>
+          <declname>p3</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dist</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Calculates a point perpendicular to p1, p2 and passing through p3 on the left of \vec(p1p2) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Distance for calculation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Calculated point to the left of p3 at a given distance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="158" column="16" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="158" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1a806c90ec44d3512f5458c8c2ee62adda" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref></type>
+        <definition>static Point invisible_humans_detection::MapScanner::getRightPoint</definition>
+        <argsstring>(Point p1, Point p2, Point p3, double dist=1)</argsstring>
+        <name>getRightPoint</name>
+        <param>
+          <type><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref></type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref></type>
+          <declname>p2</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref></type>
+          <declname>p3</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dist</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Calculates a point perpendicular to p1, p2 and passing through p3 on the right of \vec(p1p2) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Distance for calculation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Calculated point to the right of p3 at a given distance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="177" column="16" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="177" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classinvisible__humans__detection_1_1MapScanner_1a5c6d4fcb8467c18d49ef561f3e8d2d94" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref> &gt;</type>
+        <definition>static std::vector&lt;Point&gt; invisible_humans_detection::MapScanner::getTwoPoints</definition>
+        <argsstring>(Point p1, Point p2, double radius)</argsstring>
+        <name>getTwoPoints</name>
+        <param>
+          <type><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref></type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref></type>
+          <declname>p2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+<para>Calculates points perpendicular to p1, p2 and passing through p2 on the right and left of \vec(p1p2) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Radius of human for calculation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector containing the two calculated points </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="195" column="22" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="195" bodyend="202"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class for scanning maps to detect invisible humans. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" line="65" column="1" bodyfile="invisible_humans_detection/include/invisible_humans_detection/map_scanner.h" bodystart="65" bodyend="233"/>
+    <listofallmembers>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1ac974e09631c7f28c21de1a07a90fa972" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>angle_max_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a2a40e548145d945ab6489a73193a4b39" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>angle_min_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1aee5345161c56788fa0098e634465d05b" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>corner_ranges_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a7487ca072aafca927379e9814c28c17c" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>detectOccludedCorners</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a13a1c0ff5dd037b23b90ed9246a3ebaa" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>detectPassages</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1aef190cc69d0a4e72ea479d49c454b412" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>get_robot_pose_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1adf0d1b7df374ce5fe3e3a4e42c51da51" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>getIndex</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a0c6024b6a09b868790d9cfb35f721996" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>getLeftPoint</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a806c90ec44d3512f5458c8c2ee62adda" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>getRightPoint</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a5c6d4fcb8467c18d49ef561f3e8d2d94" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>getTwoPoints</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a3fbe3e6c8d45d59dedb315d4ab6b6f6a" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>human_radius_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1add9c07f51ccfe8144d7eb940b7ae13bc" prot="public" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>initialize</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a1a34a622304fb065a868f0a61a63b4bd" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>loadRosParamFromNodeHandle</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1aef399ed829a281387d030b39ce5e8bcd" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>locateInvHumans</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a6eadf3ded7b8e0eb4c5b474e01c7556d" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>map_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a6afd47b8d1cd7546e9acf5d64998e997" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>map_sub_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a946a51241f2460951227c6cb3bbb601e" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>mapCB</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a66ac3ccfb680d85b9df5432eaa63fe04" prot="public" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>MapScanner</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1afda176adc9dfaa2422f87d2b2981b7c7" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>ns_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a0658a5d4ec14e5831bc0f46b6415c644" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>origin_x_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a21e8c09b7bc1d53c7f220ca179b582a9" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>origin_y_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a91ed0a4ce202a288bac9694c11868b39" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>passage_detect_pub_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a4e199ca4b9861bab1ac8fa3827d7bc4e" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>pub_invis_human_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1ad2317a882b114fb63eaff2c1ea316f86" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>pub_invis_human_corners_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a229ccc056a5aa864715bc808bff26991" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>pub_invis_human_viz_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1afe2173690e6003fa71ea27e1e29c7e23" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>pub_invis_humans_pos_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a5f0287b10ddfcd10c2aa119878878462" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>publish_scan_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a95ca803c84523a6cc10b6cb527e48b42" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>publishInvisibleHumans</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1ab9cd8b04b6c881ecf0f98fc82276d97a" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>range_max_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a9c58837c64e34fe7afcc1b8ba8c48c22" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>range_min_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a1804fabbd161d9fed6b5e76081cef8e3" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>ranges_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a6de905111dc614547392948053119547" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>resolution_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a66263d61dccd54e6f5a78657a11abb7d" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>robot_pose_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a1e82d587c69a0be59c8e23d8869bfaa2" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>robot_vec_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a8ffd6cc6d7ebf854d12bb866458a6678" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>samples_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1ad5d2ce299b0488d0e7eb36d846c99427" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>scan_msg_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a0c7ed15202d90ec590118d3f308bb84f" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>scan_pub_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1ab098835d6886f6de9f1cb599d867a498" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>scan_resolution_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1ad51890bcaff889c6fe3f8f45a7df87d0" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>size_x_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1ab667eb47f7b6e7ecea17e3e35ca808a7" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>size_y_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a35e76ba0e48cca53ac6793b912a8f69a" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>tf_</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1ac03cfd9ccf098da909697e29512c02c2" prot="private" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>worldToMap</name></member>
+      <member refid="classinvisible__humans__detection_1_1MapScanner_1a0c2c5932317636e1fe10bc6beb307981" prot="public" virt="non-virtual"><scope>invisible_humans_detection::MapScanner</scope><name>~MapScanner</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

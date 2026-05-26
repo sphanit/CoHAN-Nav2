@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhateb__local__planner_1_1HATebConfig_1_1Recovery" kind="struct" language="C++" prot="public">
+    <compoundname>hateb_local_planner::HATebConfig::Recovery</compoundname>
+    <includes refid="hateb__config_8hpp" local="no">hateb_config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1a07a738635944e814d0dd023fade22e15" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Recovery::shrink_horizon_backup</definition>
+        <argsstring></argsstring>
+        <name>shrink_horizon_backup</name>
+        <briefdescription>
+<para>Allows the planner to shrink the horizon temporary (50%) in case of automatically detected issues. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="260" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1abcf23ec90420639f5cf8f9c6e49dd85e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Recovery::shrink_horizon_min_duration</definition>
+        <argsstring></argsstring>
+        <name>shrink_horizon_min_duration</name>
+        <briefdescription>
+<para>Specify minimum duration for the reduced horizon in case an infeasible trajectory is detected. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="261" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1abf6e13307618c5fe4c43a2595a0975fc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Recovery::oscillation_recovery</definition>
+        <argsstring></argsstring>
+        <name>oscillation_recovery</name>
+        <briefdescription>
+<para>Try to detect and resolve oscillations between multiple solutions in the same equivalence class (robot frequently switches between left/right/forward/backwards) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="262" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1a01731934f5b750385a8d0797ff8a0f46" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Recovery::oscillation_v_eps</definition>
+        <argsstring></argsstring>
+        <name>oscillation_v_eps</name>
+        <briefdescription>
+<para>Threshold for the average normalized linear velocity: if oscillation_v_eps and oscillation_omega_eps are not exceeded both, a possible oscillation is detected. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="263" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1a79677bedd27b0015893faf8c2df09698" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Recovery::oscillation_omega_eps</definition>
+        <argsstring></argsstring>
+        <name>oscillation_omega_eps</name>
+        <briefdescription>
+<para>Threshold for the average normalized angular velocity: if oscillation_v_eps and oscillation_omega_eps are not exceeded both, a possible oscillation is detected. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="264" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1a3da9d57c0d6f36a673a5577cb11014b1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Recovery::oscillation_recovery_min_duration</definition>
+        <argsstring></argsstring>
+        <name>oscillation_recovery_min_duration</name>
+        <briefdescription>
+<para>Minumum duration [sec] for which the recovery mode is activated after an oscillation is detected. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="265" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1abed601287992897d9faf527ddcfe6de5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Recovery::oscillation_filter_duration</definition>
+        <argsstring></argsstring>
+        <name>oscillation_filter_duration</name>
+        <briefdescription>
+<para>Filter length/duration [sec] for the detection of oscillations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="266" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Recovery/backup related parameters. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="259" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="259" bodyend="267"/>
+    <listofallmembers>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1abed601287992897d9faf527ddcfe6de5" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Recovery</scope><name>oscillation_filter_duration</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1a79677bedd27b0015893faf8c2df09698" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Recovery</scope><name>oscillation_omega_eps</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1abf6e13307618c5fe4c43a2595a0975fc" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Recovery</scope><name>oscillation_recovery</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1a3da9d57c0d6f36a673a5577cb11014b1" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Recovery</scope><name>oscillation_recovery_min_duration</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1a01731934f5b750385a8d0797ff8a0f46" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Recovery</scope><name>oscillation_v_eps</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1a07a738635944e814d0dd023fade22e15" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Recovery</scope><name>shrink_horizon_backup</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Recovery_1abcf23ec90420639f5cf8f9c6e49dd85e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Recovery</scope><name>shrink_horizon_min_duration</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

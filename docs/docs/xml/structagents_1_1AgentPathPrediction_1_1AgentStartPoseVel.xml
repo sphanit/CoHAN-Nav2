@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel" kind="struct" language="C++" prot="private">
+    <compoundname>agents::AgentPathPrediction::AgentStartPoseVel</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel_1a2c11309c5930941f485fce6876f4716e" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t agents::AgentPathPrediction::AgentStartPoseVel::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="121" column="14" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel_1ad94a1b1db939546c53ec4eed5696563e" prot="public" static="no" mutable="no">
+        <type>geometry_msgs::msg::PoseStamped</type>
+        <definition>geometry_msgs::msg::PoseStamped agents::AgentPathPrediction::AgentStartPoseVel::pose</definition>
+        <argsstring></argsstring>
+        <name>pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="122" column="37" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel_1abbc44db94d90075389c951d0b845702a" prot="public" static="no" mutable="no">
+        <type>geometry_msgs::msg::TwistWithCovariance</type>
+        <definition>geometry_msgs::msg::TwistWithCovariance agents::AgentPathPrediction::AgentStartPoseVel::vel</definition>
+        <argsstring></argsstring>
+        <name>vel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="123" column="45" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure to store agent&apos;s initial pose and velocity. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="120" column="3" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="120" bodyend="124"/>
+    <listofallmembers>
+      <member refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel_1a2c11309c5930941f485fce6876f4716e" prot="public" virt="non-virtual"><scope>agents::AgentPathPrediction::AgentStartPoseVel</scope><name>id</name></member>
+      <member refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel_1ad94a1b1db939546c53ec4eed5696563e" prot="public" virt="non-virtual"><scope>agents::AgentPathPrediction::AgentStartPoseVel</scope><name>pose</name></member>
+      <member refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel_1abbc44db94d90075389c951d0b845702a" prot="public" virt="non-virtual"><scope>agents::AgentPathPrediction::AgentStartPoseVel</scope><name>vel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

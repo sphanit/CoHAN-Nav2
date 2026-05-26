@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hateb__goal__checker_8cpp" kind="file" language="C++">
+    <compoundname>hateb_goal_checker.cpp</compoundname>
+    <includes refid="hateb__goal__checker_8hpp" local="no">hateb_local_planner/hateb_goal_checker.hpp</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">angles/angles.h</includes>
+    <includes local="yes">nav2_util/geometry_utils.hpp</includes>
+    <includes local="yes">nav2_util/node_utils.hpp</includes>
+    <includes local="yes">pluginlib/class_list_macros.hpp</includes>
+    <includes local="yes">tf2/utils.hpp</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>limits</label>
+      </node>
+      <node id="12">
+        <label>nav2_util/geometry_utils.hpp</label>
+      </node>
+      <node id="13">
+        <label>nav2_util/node_utils.hpp</label>
+      </node>
+      <node id="5">
+        <label>rcl_interfaces/msg/set_parameters_result.hpp</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="11">
+        <label>angles/angles.h</label>
+      </node>
+      <node id="14">
+        <label>pluginlib/class_list_macros.hpp</label>
+      </node>
+      <node id="4">
+        <label>nav2_core/goal_checker.hpp</label>
+      </node>
+      <node id="1">
+        <label>hateb_goal_checker.cpp</label>
+        <link refid="hateb__goal__checker_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="15">
+        <label>tf2/utils.hpp</label>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner/hateb_goal_checker.hpp</label>
+        <link refid="hateb__goal__checker_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehateb__local__planner">hateb_local_planner</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="hateb__goal__checker_8hpp" kindref="compound">hateb_local_planner/hateb_goal_checker.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;angles/angles.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;nav2_util/geometry_utils.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;nav2_util/node_utils.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pluginlib/class_list_macros.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;tf2/utils.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>rcl_interfaces::msg::ParameterType;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::placeholders::_1;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehateb__local__planner" kindref="compound">hateb_local_planner</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="classhateb__local__planner_1_1HATEBGoalChecker_1a50ec4756fffa3a5e175a7d717368a922" kindref="member">HATEBGoalChecker::HATEBGoalChecker</ref>()<sp/>:<sp/>xy_goal_tolerance_(0.15),<sp/>yaw_goal_tolerance_(0.15),<sp/>stateful_(true),<sp/>check_xy_(true),<sp/>xy_goal_tolerance_sq_(0.0225),<sp/>goal_ctrl_(true)<sp/>{}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HATEBGoalChecker::initialize(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp_lifecycle::LifecycleNode::WeakPtr&amp;<sp/>parent,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>plugin_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;nav2_costmap_2d::Costmap2DROS&gt;<sp/></highlight><highlight class="comment">/*costmap_ros*/</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>plugin_name_<sp/>=<sp/>plugin_name;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>node<sp/>=<sp/>parent.lock();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>nav2_util::declare_parameter_if_not_declared(node,<sp/>plugin_name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.xy_goal_tolerance&quot;</highlight><highlight class="normal">,<sp/>rclcpp::ParameterValue(0.25));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>nav2_util::declare_parameter_if_not_declared(node,<sp/>plugin_name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.yaw_goal_tolerance&quot;</highlight><highlight class="normal">,<sp/>rclcpp::ParameterValue(0.25));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>nav2_util::declare_parameter_if_not_declared(node,<sp/>plugin_name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.stateful&quot;</highlight><highlight class="normal">,<sp/>rclcpp::ParameterValue(</highlight><highlight class="keyword">true</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>node-&gt;get_parameter(plugin_name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.xy_goal_tolerance&quot;</highlight><highlight class="normal">,<sp/>xy_goal_tolerance_);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>node-&gt;get_parameter(plugin_name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.yaw_goal_tolerance&quot;</highlight><highlight class="normal">,<sp/>yaw_goal_tolerance_);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>node-&gt;get_parameter(plugin_name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.stateful&quot;</highlight><highlight class="normal">,<sp/>stateful_);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>xy_goal_tolerance_sq_<sp/>=<sp/>xy_goal_tolerance_<sp/>*<sp/>xy_goal_tolerance_;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>callback<sp/>for<sp/>dynamic<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>dyn_params_handler_<sp/>=<sp/>node-&gt;add_on_set_parameters_callback(std::bind(&amp;HATEBGoalChecker::dynamicParametersCallback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HATEBGoalChecker::reset()<sp/>{<sp/>check_xy_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>HATEBGoalChecker::isGoalReached(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::Pose&amp;<sp/>query_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::Pose&amp;<sp/>goal_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::Twist&amp;)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(goal_ctrl_)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(check_xy_)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/>query_pose.position.x<sp/>-<sp/>goal_pose.position.x,<sp/>dy<sp/>=<sp/>query_pose.position.y<sp/>-<sp/>goal_pose.position.y;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dx<sp/>*<sp/>dx<sp/>+<sp/>dy<sp/>*<sp/>dy<sp/>&gt;<sp/>xy_goal_tolerance_sq_)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>are<sp/>within<sp/>the<sp/>window</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>are<sp/>stateful,<sp/>change<sp/>the<sp/>state.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stateful_)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check_xy_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dyaw<sp/>=<sp/>angles::shortest_angular_distance(tf2::getYaw(query_pose.orientation),<sp/>tf2::getYaw(goal_pose.orientation));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fabs(dyaw)<sp/>&lt;=<sp/>yaw_goal_tolerance_;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>HATEBGoalChecker::getTolerances(geometry_msgs::msg::Pose&amp;<sp/>pose_tolerance,<sp/>geometry_msgs::msg::Twist&amp;<sp/>vel_tolerance)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>invalid_field<sp/>=<sp/>std::numeric_limits&lt;double&gt;::lowest();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>pose_tolerance.position.x<sp/>=<sp/>xy_goal_tolerance_;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>pose_tolerance.position.y<sp/>=<sp/>xy_goal_tolerance_;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>pose_tolerance.position.z<sp/>=<sp/>invalid_field;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>pose_tolerance.orientation<sp/>=<sp/>nav2_util::geometry_utils::orientationAroundZAxis(yaw_goal_tolerance_);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>vel_tolerance.linear.x<sp/>=<sp/>invalid_field;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>vel_tolerance.linear.y<sp/>=<sp/>invalid_field;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>vel_tolerance.linear.z<sp/>=<sp/>invalid_field;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>vel_tolerance.angular.x<sp/>=<sp/>invalid_field;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>vel_tolerance.angular.y<sp/>=<sp/>invalid_field;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>vel_tolerance.angular.z<sp/>=<sp/>invalid_field;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">rcl_interfaces::msg::SetParametersResult<sp/>HATEBGoalChecker::dynamicParametersCallback(std::vector&lt;rclcpp::Parameter&gt;<sp/><ref refid="namespaceparameters" kindref="compound">parameters</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>rcl_interfaces::msg::SetParametersResult<sp/>result;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>parameter<sp/>:<sp/><ref refid="namespaceparameters" kindref="compound">parameters</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>param_type<sp/>=<sp/>parameter.get_type();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>param_name<sp/>=<sp/>parameter.get_name();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(param_name.find(plugin_name_<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(param_type<sp/>==<sp/>ParameterType::PARAMETER_DOUBLE)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(param_name<sp/>==<sp/>plugin_name_<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.xy_goal_tolerance&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xy_goal_tolerance_<sp/>=<sp/>parameter.as_double();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xy_goal_tolerance_sq_<sp/>=<sp/>xy_goal_tolerance_<sp/>*<sp/>xy_goal_tolerance_;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(param_name<sp/>==<sp/>plugin_name_<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.yaw_goal_tolerance&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yaw_goal_tolerance_<sp/>=<sp/>parameter.as_double();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(param_type<sp/>==<sp/>ParameterType::PARAMETER_BOOL)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(param_name<sp/>==<sp/>plugin_name_<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.stateful&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stateful_<sp/>=<sp/>parameter.as_bool();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>result.successful<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hateb_local_planner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">PLUGINLIB_EXPORT_CLASS(<ref refid="classhateb__local__planner_1_1HATEBGoalChecker" kindref="compound">hateb_local_planner::HATEBGoalChecker</ref>,<sp/>nav2_core::GoalChecker)</highlight></codeline>
+    </programlisting>
+    <location file="hateb_local_planner/src/hateb_goal_checker.cpp"/>
+  </compounddef>
+</doxygen>

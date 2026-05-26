@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_7915b9464c0fb6f988b3750b09b3e43b" kind="dir">
+    <compoundname>costmap_to_dynamic_obstacles</compoundname>
+    <innerdir refid="dir_e1910ffb0517ab7e883802ab7077f4df">multitarget_tracker</innerdir>
+    <innerfile refid="background__subtractor_8h">background_subtractor.h</innerfile>
+    <innerfile refid="blob__detector_8h">blob_detector.h</innerfile>
+    <innerfile refid="costmap__to__dynamic__obstacles_8h">costmap_to_dynamic_obstacles.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/"/>
+  </compounddef>
+</doxygen>

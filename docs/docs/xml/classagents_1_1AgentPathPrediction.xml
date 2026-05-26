@@ -1,0 +1,1370 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classagents_1_1AgentPathPrediction" kind="class" language="C++" prot="public">
+    <compoundname>agents::AgentPathPrediction</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <includes refid="agent__path__prediction_8hpp" local="no">agent_path_prediction.hpp</includes>
+    <innerclass refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel" prot="private">agents::AgentPathPrediction::AgentPathVel</innerclass>
+    <innerclass refid="structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel" prot="private">agents::AgentPathPrediction::AgentStartPoseVel</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classagents_1_1AgentPathPrediction_1a5a42717987bb25bca66ebd744ebaa5d9" prot="private" static="no">
+        <type>nav2_msgs::action::ComputePathToPose</type>
+        <definition>using agents::AgentPathPrediction::ComputePathToPose =  nav2_msgs::action::ComputePathToPose</definition>
+        <argsstring></argsstring>
+        <name>ComputePathToPose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="127" column="3" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classagents_1_1AgentPathPrediction_1a78187931fd5400e13530165ef63f9645" prot="private" static="no">
+        <type>rclcpp_action::ClientGoalHandle&lt; <ref refid="classagents_1_1AgentPathPrediction_1a5a42717987bb25bca66ebd744ebaa5d9" kindref="member">ComputePathToPose</ref> &gt;</type>
+        <definition>using agents::AgentPathPrediction::GoalHandleComputePathToPose =  rclcpp_action::ClientGoalHandle&lt;ComputePathToPose&gt;</definition>
+        <argsstring></argsstring>
+        <name>GoalHandleComputePathToPose</name>
+        <briefdescription>
+<para>Goal handle type for ComputePathToPose action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="129" column="3" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a7588173c287ac2b1594bfeeeab305b12" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classagents_1_1AgentPathPredictConfig" kindref="compound">AgentPathPredictConfig</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;AgentPathPredictConfig&gt; agents::AgentPathPrediction::cfg_</definition>
+        <argsstring></argsstring>
+        <name>cfg_</name>
+        <briefdescription>
+<para>Configuration parameters for agent path prediction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="105" column="19" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a4c3f64fb7a5510b1dfa9e7b5415da40f" prot="private" static="no" mutable="no">
+        <type>rclcpp_action::Client&lt; <ref refid="classagents_1_1AgentPathPrediction_1a5a42717987bb25bca66ebd744ebaa5d9" kindref="member">ComputePathToPose</ref> &gt;::SharedPtr</type>
+        <definition>rclcpp_action::Client&lt;ComputePathToPose&gt;::SharedPtr agents::AgentPathPrediction::get_plan_client_</definition>
+        <argsstring></argsstring>
+        <name>get_plan_client_</name>
+        <briefdescription>
+<para>Action client for computing navigation paths. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="128" column="37" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1aa79e1043ef2fa80bdbf0b82e0d1257c9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt;::SharedPtr agents::AgentPathPrediction::predicted_agents_pub_</definition>
+        <argsstring></argsstring>
+        <name>predicted_agents_pub_</name>
+        <briefdescription>
+<para>Publisher for predicted agent paths. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="270" column="33" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1ae2d4e0e76d66d9a0c7beb9c142f8afd1" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PoseStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PoseStamped&gt;::SharedPtr agents::AgentPathPrediction::front_pose_pub_</definition>
+        <argsstring></argsstring>
+        <name>front_pose_pub_</name>
+        <briefdescription>
+<para>Publisher for front pose information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="271" column="33" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a3ce50a1c8acfda4e2e56fc86c3cb1636" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; cohan_msgs::msg::TrackedAgents &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;cohan_msgs::msg::TrackedAgents&gt;::SharedPtr agents::AgentPathPrediction::tracked_agents_sub_</definition>
+        <argsstring></argsstring>
+        <name>tracked_agents_sub_</name>
+        <briefdescription>
+<para>Subscriber for tracked agents information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="272" column="36" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a1b4580ddc7e9c9c461a1e0d5f6fc2281" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; cohan_msgs::msg::AgentPathArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;cohan_msgs::msg::AgentPathArray&gt;::SharedPtr agents::AgentPathPrediction::external_paths_sub_</definition>
+        <argsstring></argsstring>
+        <name>external_paths_sub_</name>
+        <briefdescription>
+<para>Subscriber for external path information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="273" column="36" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1ae0e199e0fcd7feac7ce6302a59623afa" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; agent_path_prediction::msg::PredictedGoals &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;agent_path_prediction::msg::PredictedGoals&gt;::SharedPtr agents::AgentPathPrediction::predicted_goal_sub_</definition>
+        <argsstring></argsstring>
+        <name>predicted_goal_sub_</name>
+        <briefdescription>
+<para>Subscriber for predicted goals. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="274" column="36" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a196cef60d98065545bf3062f861dedb4" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; agent_path_prediction::srv::AgentPosePredict &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;agent_path_prediction::srv::AgentPosePredict&gt;::SharedPtr agents::AgentPathPrediction::predict_agents_server_</definition>
+        <argsstring></argsstring>
+        <name>predict_agents_server_</name>
+        <briefdescription>
+<para>Server for agent prediction service. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="277" column="31" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a48512aa97aed121f07a6e84c1d055f8c" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; agent_path_prediction::srv::AgentGoal &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;agent_path_prediction::srv::AgentGoal&gt;::SharedPtr agents::AgentPathPrediction::set_goal_srv_</definition>
+        <argsstring></argsstring>
+        <name>set_goal_srv_</name>
+        <briefdescription>
+<para>Server for setting agent goals. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="278" column="31" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1af271444583773e730cbde7199d93d3d9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; std_srvs::srv::Empty &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;std_srvs::srv::Empty&gt;::SharedPtr agents::AgentPathPrediction::reset_prediction_services_server_</definition>
+        <argsstring></argsstring>
+        <name>reset_prediction_services_server_</name>
+        <briefdescription>
+<para>Server for resetting predictions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="279" column="31" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a62c9d02761ad6538cd7eb78fbcacdc17" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; tf2_ros::Buffer &gt;</type>
+        <definition>std::shared_ptr&lt;tf2_ros::Buffer&gt; agents::AgentPathPrediction::tf_buffer_</definition>
+        <argsstring></argsstring>
+        <name>tf_buffer_</name>
+        <briefdescription>
+<para>TF2 buffer for coordinate transformations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="282" column="19" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a3e928ad5f50f8bcce02c383b857a4a3c" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; tf2_ros::TransformListener &gt;</type>
+        <definition>std::shared_ptr&lt;tf2_ros::TransformListener&gt; agents::AgentPathPrediction::tf_</definition>
+        <argsstring></argsstring>
+        <name>tf_</name>
+        <briefdescription>
+<para>TF2 transform listener for coordinate transformations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="283" column="19" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1ad536f25bbcae3f7b162e3e3c1180cd98" prot="private" static="no" mutable="no">
+        <type>cohan_msgs::msg::TrackedAgents</type>
+        <definition>cohan_msgs::msg::TrackedAgents agents::AgentPathPrediction::tracked_agents_</definition>
+        <argsstring></argsstring>
+        <name>tracked_agents_</name>
+        <briefdescription>
+<para>Current state of tracked agents in the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="286" column="34" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a7c493790bd80d543a7741840430b10e3" prot="private" static="no" mutable="no">
+        <type>cohan_msgs::msg::AgentPathArray</type>
+        <definition>cohan_msgs::msg::AgentPathArray agents::AgentPathPrediction::external_paths_</definition>
+        <argsstring></argsstring>
+        <name>external_paths_</name>
+        <briefdescription>
+<para>External paths provided for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="287" column="35" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a7a8f342a6cf6fc2b53424abef927e49a" prot="private" static="no" mutable="no">
+        <type>agent_path_prediction::msg::PredictedGoals</type>
+        <definition>agent_path_prediction::msg::PredictedGoals agents::AgentPathPrediction::predicted_goals_</definition>
+        <argsstring></argsstring>
+        <name>predicted_goals_</name>
+        <briefdescription>
+<para>Collection of predicted goals for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="288" column="46" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1aef6127c02480e0a649682d5c2ecb2efc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; agent_path_prediction::msg::AgentPose &gt;</type>
+        <definition>std::vector&lt;agent_path_prediction::msg::AgentPose&gt; agents::AgentPathPrediction::external_goals_</definition>
+        <argsstring></argsstring>
+        <name>external_goals_</name>
+        <briefdescription>
+<para>Vector storing external goals for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="289" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a00d24ac50f4b80361f95c43c2fb38b66" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel" kindref="compound">AgentPathVel</ref> &gt;</type>
+        <definition>std::vector&lt;AgentPathVel&gt; agents::AgentPathPrediction::path_vels_</definition>
+        <argsstring></argsstring>
+        <name>path_vels_</name>
+        <briefdescription>
+<para>Vector storing path and velocity information for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="290" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a46d3187082c971c29b328168a05de302" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; agents::AgentPathPrediction::path_vels_pos_</definition>
+        <argsstring></argsstring>
+        <name>path_vels_pos_</name>
+        <briefdescription>
+<para>Vector storing positions in the path velocity array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="291" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1aad8b6d7f58ad9e5a13a4a948866269e6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; agent_path_prediction::msg::PredictedPoses &gt;</type>
+        <definition>std::vector&lt;agent_path_prediction::msg::PredictedPoses&gt; agents::AgentPathPrediction::last_predicted_poses_</definition>
+        <argsstring></argsstring>
+        <name>last_predicted_poses_</name>
+        <briefdescription>
+<para>Vector storing the last predicted poses for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="292" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1ab01e01bbeef567abd29b7fc3cd6641d4" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint64_t, size_t &gt;</type>
+        <definition>std::map&lt;uint64_t, size_t&gt; agents::AgentPathPrediction::last_prune_indices_</definition>
+        <argsstring></argsstring>
+        <name>last_prune_indices_</name>
+        <briefdescription>
+<para>Map storing last pruning indices for each agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="293" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a983b614e8b93ca742840cadb933c96e7" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint64_t, int &gt;</type>
+        <definition>std::map&lt;uint64_t, int&gt; agents::AgentPathPrediction::last_markers_size_map_</definition>
+        <argsstring></argsstring>
+        <name>last_markers_size_map_</name>
+        <briefdescription>
+<para>Map storing last marker sizes for each agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="294" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1ae24ee9712f7257e4a73934c830cf48fe" prot="private" static="no" mutable="no">
+        <type>visualization_msgs::msg::MarkerArray</type>
+        <definition>visualization_msgs::msg::MarkerArray agents::AgentPathPrediction::predicted_agents_markers_</definition>
+        <argsstring></argsstring>
+        <name>predicted_agents_markers_</name>
+        <briefdescription>
+<para>Visualization markers for predicted agent paths. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="295" column="40" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1aa622c90bab0162345496d6fd2a0b940e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool agents::AgentPathPrediction::check_path_</definition>
+        <argsstring></argsstring>
+        <name>check_path_</name>
+        <briefdescription>
+<para>Flag path checking. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="296" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1aa9a691a634bc23253152db5c41c99776" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool agents::AgentPathPrediction::showing_markers_</definition>
+        <argsstring></argsstring>
+        <name>showing_markers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="297" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a7bccec7ac9341244d43cac64b79e9470" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool agents::AgentPathPrediction::got_new_agent_paths_</definition>
+        <argsstring></argsstring>
+        <name>got_new_agent_paths_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="297" column="25" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a96786bf5f15d2267b3d2e0174726846d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool agents::AgentPathPrediction::got_external_goal_</definition>
+        <argsstring></argsstring>
+        <name>got_external_goal_</name>
+        <briefdescription>
+<para>Flags for marker visualization and path updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="297" column="46" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a138ed6977ea1887a445d6b84a0c0fe63" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Transform</type>
+        <definition>geometry_msgs::msg::Transform agents::AgentPathPrediction::behind_pose_</definition>
+        <argsstring></argsstring>
+        <name>behind_pose_</name>
+        <briefdescription>
+<para>Transform for behind pose calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="298" column="33" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1aed35715dd7ddc625f7b84fffbdaab39c" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::AgentPathPrediction::tracked_agents_sub_topic_</definition>
+        <argsstring></argsstring>
+        <name>tracked_agents_sub_topic_</name>
+        <briefdescription>
+<para>Topic name for tracked agents subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="299" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a9d10d00a04ab902e039a7e604ad4d081" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::AgentPathPrediction::get_plan_srv_name_</definition>
+        <argsstring></argsstring>
+        <name>get_plan_srv_name_</name>
+        <briefdescription>
+<para>Service name for get plan service. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="300" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a6d79011b10a83cf459f420c4dccc9970" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::AgentPathPrediction::ns_</definition>
+        <argsstring></argsstring>
+        <name>ns_</name>
+        <briefdescription>
+<para>Namespace for the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="301" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1ab9ca3423081a010edf11ccd365689b44" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool agents::AgentPathPrediction::planning_done_</definition>
+        <argsstring></argsstring>
+        <name>planning_done_</name>
+        <briefdescription>
+<para>Flag indicating if planning is done. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="302" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a796ccddf27e97c3b1079f2d2019641b3" prot="private" static="no" mutable="no">
+        <type>nav_msgs::msg::Path</type>
+        <definition>nav_msgs::msg::Path agents::AgentPathPrediction::planned_path_</definition>
+        <argsstring></argsstring>
+        <name>planned_path_</name>
+        <briefdescription>
+<para>Planned path from action server. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="303" column="23" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a7fa0a26f0c91e7838974fbf893e74e98" prot="private" static="no" mutable="no">
+        <type>rclcpp::Node::SharedPtr</type>
+        <definition>rclcpp::Node::SharedPtr agents::AgentPathPrediction::client_node_</definition>
+        <argsstring></argsstring>
+        <name>client_node_</name>
+        <briefdescription>
+<para>Node for action client. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="304" column="27" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPrediction_1a763bc7a192765a3b478ed3fd1e68e489" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; rclcpp::executors::SingleThreadedExecutor &gt;</type>
+        <definition>std::shared_ptr&lt;rclcpp::executors::SingleThreadedExecutor&gt; agents::AgentPathPrediction::client_executor_</definition>
+        <argsstring></argsstring>
+        <name>client_executor_</name>
+        <briefdescription>
+<para>Executor for action client. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="305" column="19" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1afc77310ca34eab027d8c83a35977e188" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>agents::AgentPathPrediction::AgentPathPrediction</definition>
+        <argsstring>()</argsstring>
+        <name>AgentPathPrediction</name>
+        <briefdescription>
+<para>Constructor for <ref refid="classagents_1_1AgentPathPrediction" kindref="compound">AgentPathPrediction</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="94" column="3" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1afafee2e99135310d643643e05e81841c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>agents::AgentPathPrediction::~AgentPathPrediction</definition>
+        <argsstring>()=default</argsstring>
+        <name>~AgentPathPrediction</name>
+        <briefdescription>
+<para>Default destructor for <ref refid="classagents_1_1AgentPathPrediction" kindref="compound">AgentPathPrediction</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="98" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1abf79deb87acd0d6ddc422cd41c8b1f12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+<para>Initializes the <ref refid="classagents_1_1AgentPathPrediction" kindref="compound">AgentPathPrediction</ref> node and sets up ROS communication. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="102" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="35" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a74ff82535eb6cf1f8d0aeb923585ca6b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::sendActionGoal</definition>
+        <argsstring>(ComputePathToPose::Goal goal_msg)</argsstring>
+        <name>sendActionGoal</name>
+        <param>
+          <type>ComputePathToPose::Goal</type>
+          <declname>goal_msg</declname>
+        </param>
+        <briefdescription>
+<para>Sends a goal to the ComputePathToPose action server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>goal_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The goal message containing the target pose and start pose </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="136" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="86" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a88251ce4eb1448a5fb8165c50104482d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::goalResponseCB</definition>
+        <argsstring>(GoalHandleComputePathToPose::SharedPtr goal_handle)</argsstring>
+        <name>goalResponseCB</name>
+        <param>
+          <type>GoalHandleComputePathToPose::SharedPtr</type>
+          <declname>goal_handle</declname>
+        </param>
+        <briefdescription>
+<para>Callback for processing action goal responses from ComputePathToPose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>goal_handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the goal handle returned by the action server </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="142" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="101" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a6d99ea64a411b5ca176e0178654ba069" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::resultCB</definition>
+        <argsstring>(const GoalHandleComputePathToPose::WrappedResult &amp;result)</argsstring>
+        <name>resultCB</name>
+        <param>
+          <type>const GoalHandleComputePathToPose::WrappedResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Callback for processing action results from ComputePathToPose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The wrapped result from the action server </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="148" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="109" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1af2d9fd4c078f684731720918e3e4d117" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool agents::AgentPathPrediction::isPlanningDone</definition>
+        <argsstring>() const</argsstring>
+        <name>isPlanningDone</name>
+        <briefdescription>
+<para>Checks if the planning action is done. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if planning is done, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="154" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="154" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a6a1beceb1803aa147c22c2d397912a03" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::trackedAgentsCB</definition>
+        <argsstring>(const cohan_msgs::msg::TrackedAgents::SharedPtr tracked_agents)</argsstring>
+        <name>trackedAgentsCB</name>
+        <param>
+          <type>const cohan_msgs::msg::TrackedAgents::SharedPtr</type>
+          <declname>tracked_agents</declname>
+        </param>
+        <briefdescription>
+<para>Callback for tracked agents updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tracked_agents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tracked agents message containing current agent states </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="161" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="129" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1ab5a2f68132307b7e546444ffcc2de408" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::externalPathsCB</definition>
+        <argsstring>(const cohan_msgs::msg::AgentPathArray::SharedPtr external_paths)</argsstring>
+        <name>externalPathsCB</name>
+        <param>
+          <type>const cohan_msgs::msg::AgentPathArray::SharedPtr</type>
+          <declname>external_paths</declname>
+        </param>
+        <briefdescription>
+<para>Callback for external path updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>external_paths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of external paths for agents </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="167" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1ab75dd4ce85f5dd05273db220edbbfa09" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::predictedGoalCB</definition>
+        <argsstring>(const agent_path_prediction::msg::PredictedGoals::SharedPtr predicted_goal)</argsstring>
+        <name>predictedGoalCB</name>
+        <param>
+          <type>const agent_path_prediction::msg::PredictedGoals::SharedPtr</type>
+          <declname>predicted_goal</declname>
+        </param>
+        <briefdescription>
+<para>Callback for predicted goal updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>predicted_goal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The predicted goals message </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="173" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a61baafef3ba3d6b7c4777cfe613fa2ce" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::predictAgents</definition>
+        <argsstring>(const std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Request &gt; req, std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Response &gt; res)</argsstring>
+        <name>predictAgents</name>
+        <param>
+          <type>const std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Request &gt;</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Response &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>Service to predict agent paths using default prediction method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service request containing agent data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service response with predicted paths </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="181" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="138" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1af02fc9e6b0fe4a38c0892625101ed421" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::predictAgentsVelObs</definition>
+        <argsstring>(const std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Request &gt; req, std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Response &gt; res) const</argsstring>
+        <name>predictAgentsVelObs</name>
+        <param>
+          <type>const std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Request &gt;</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Response &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>Service to predict agent paths using velocity obstacle method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service request containing agent data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service response with predicted paths </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="188" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="221" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a0188ab479042630a68d3668ce21816df" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::predictAgentsExternal</definition>
+        <argsstring>(const std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Request &gt; req, std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Response &gt; res)</argsstring>
+        <name>predictAgentsExternal</name>
+        <param>
+          <type>const std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Request &gt;</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Response &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>Service to predict agent paths using external path information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service request containing agent data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service response with predicted paths </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="195" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="312" bodyend="514"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a0fa7eae9ba7fcbef9eb31d6287e5fdd4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::predictAgentsBehind</definition>
+        <argsstring>(const std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Request &gt; req, std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Response &gt; res)</argsstring>
+        <name>predictAgentsBehind</name>
+        <param>
+          <type>const std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Request &gt;</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Response &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>Service to predict paths for agents assuming their goal is behind the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service request containing agent data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service response with predicted paths </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="202" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="516" bodyend="683"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a9dafec387c772af21529feccc95f286f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::predictAgentsGoal</definition>
+        <argsstring>(const std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Request &gt; req, std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Response &gt; res)</argsstring>
+        <name>predictAgentsGoal</name>
+        <param>
+          <type>const std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Request &gt;</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Response &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>Service to predict agent paths based on predicted goals. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service request containing agent data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service response with predicted paths </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="209" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="685" bodyend="845"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a412a07cf494f120bcc1b2bfc01474ab7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::predictAgentsFromPaths</definition>
+        <argsstring>(const std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Request &gt; req, std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Response &gt; res)</argsstring>
+        <name>predictAgentsFromPaths</name>
+        <param>
+          <type>const std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Request &gt;</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; agent_path_prediction::srv::AgentPosePredict::Response &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>Service to predict agent paths from existing path data. This method is called internally at the end of different prediction mechanisms. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service request containing agent data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service response with predicted paths </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path_vels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of agent paths and velocities </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="217" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="847" bodyend="945"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a00ba3027167fb06b7599a523864f3835" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::resetPredictionSrvs</definition>
+        <argsstring>(const std::shared_ptr&lt; std_srvs::srv::Empty::Request &gt; req, std::shared_ptr&lt; std_srvs::srv::Empty::Response &gt; res)</argsstring>
+        <name>resetPredictionSrvs</name>
+        <param>
+          <type>const std::shared_ptr&lt; std_srvs::srv::Empty::Request &gt;</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; std_srvs::srv::Empty::Response &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>Service to reset all prediction services. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Empty service request </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Empty service response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="224" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="960" bodyend="968"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a9695da6ef8b4d9f03c7866c52b09e566" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPrediction::setGoal</definition>
+        <argsstring>(const std::shared_ptr&lt; agent_path_prediction::srv::AgentGoal::Request &gt; req, std::shared_ptr&lt; agent_path_prediction::srv::AgentGoal::Response &gt; res)</argsstring>
+        <name>setGoal</name>
+        <param>
+          <type>const std::shared_ptr&lt; agent_path_prediction::srv::AgentGoal::Request &gt;</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; agent_path_prediction::srv::AgentGoal::Response &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>Service to set goals for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service request containing goal data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="231" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="948" bodyend="958"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1ac2886019b7f953e2c03de8ace84b3b71" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool agents::AgentPathPrediction::transformPoseTwist</definition>
+        <argsstring>(const cohan_msgs::msg::TrackedAgents &amp;tracked_agents, const uint64_t &amp;agent_id, const std::string &amp;to_frame, geometry_msgs::msg::PoseStamped &amp;pose, geometry_msgs::msg::TwistStamped &amp;twist) const</argsstring>
+        <name>transformPoseTwist</name>
+        <param>
+          <type>const cohan_msgs::msg::TrackedAgents &amp;</type>
+          <declname>tracked_agents</declname>
+        </param>
+        <param>
+          <type>const uint64_t &amp;</type>
+          <declname>agent_id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>to_frame</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::PoseStamped &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::TwistStamped &amp;</type>
+          <declname>twist</declname>
+        </param>
+        <briefdescription>
+<para>Transforms pose and twist of agent to a target frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tracked_agents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tracked agents data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the agent to transform </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to_frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target frame for transformation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output transformed pose </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>twist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output transformed twist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if transformation successful, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="258" column="8" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="1014" bodyend="1078"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a9d5cdbae993b87d0da7fb1c467a548fc" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>nav_msgs::msg::Path</type>
+        <definition>nav_msgs::msg::Path agents::AgentPathPrediction::setFixedPath</definition>
+        <argsstring>(const geometry_msgs::msg::PoseStamped &amp;start_pose)</argsstring>
+        <name>setFixedPath</name>
+        <param>
+          <type>const geometry_msgs::msg::PoseStamped &amp;</type>
+          <declname>start_pose</declname>
+        </param>
+        <briefdescription>
+<para>Creates a fixed path from a start pose. It adds constant velocity based prediction for 0.5m infront of the human. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting pose for the path (human&apos;s current position) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The generated fixed path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="238" column="30" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="970" bodyend="993"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a29bd81ad46200e617f5037ffd47bc53c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t agents::AgentPathPrediction::prunePath</definition>
+        <argsstring>(size_t begin_index, const geometry_msgs::msg::Pose &amp;pose, const std::vector&lt; geometry_msgs::msg::PoseWithCovarianceStamped &gt; &amp;path)</argsstring>
+        <name>prunePath</name>
+        <param>
+          <type>size_t</type>
+          <declname>begin_index</declname>
+        </param>
+        <param>
+          <type>const geometry_msgs::msg::Pose &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; geometry_msgs::msg::PoseWithCovarianceStamped &gt; &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Prunes a path starting from a given index based on pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting index for pruning </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference pose for pruning </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of poses to prune </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of the given pose in the vector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="247" column="17" bodyfile="agent_path_prediction/src/agent_path_prediction.cpp" bodystart="995" bodyend="1012"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPrediction_1a08bce64794ffbf8b285543de5f7b8a6a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double agents::AgentPathPrediction::checkdist</definition>
+        <argsstring>(geometry_msgs::msg::Pose agent, geometry_msgs::msg::Pose robot)</argsstring>
+        <name>checkdist</name>
+        <param>
+          <type>geometry_msgs::msg::Pose</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::Pose</type>
+          <declname>robot</declname>
+        </param>
+        <briefdescription>
+<para>Calculates Euclidean distance between agent and robot poses. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent pose </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>robot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Robot pose </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Distance between agent and robot </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="267" column="17" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="267" bodyend="267"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class for agent path prediction using different methods. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+      <node id="1">
+        <label>agents::AgentPathPrediction</label>
+        <link refid="classagents_1_1AgentPathPrediction"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+      <node id="1">
+        <label>agents::AgentPathPrediction</label>
+        <link refid="classagents_1_1AgentPathPrediction"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="90" column="1" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="90" bodyend="306"/>
+    <listofallmembers>
+      <member refid="classagents_1_1AgentPathPrediction_1afc77310ca34eab027d8c83a35977e188" prot="public" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>AgentPathPrediction</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a138ed6977ea1887a445d6b84a0c0fe63" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>behind_pose_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a7588173c287ac2b1594bfeeeab305b12" prot="public" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>cfg_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1aa622c90bab0162345496d6fd2a0b940e" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>check_path_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a08bce64794ffbf8b285543de5f7b8a6a" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>checkdist</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a763bc7a192765a3b478ed3fd1e68e489" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>client_executor_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a7fa0a26f0c91e7838974fbf893e74e98" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>client_node_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a5a42717987bb25bca66ebd744ebaa5d9" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>ComputePathToPose</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1aef6127c02480e0a649682d5c2ecb2efc" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>external_goals_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a7c493790bd80d543a7741840430b10e3" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>external_paths_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a1b4580ddc7e9c9c461a1e0d5f6fc2281" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>external_paths_sub_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1ab5a2f68132307b7e546444ffcc2de408" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>externalPathsCB</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1ae2d4e0e76d66d9a0c7beb9c142f8afd1" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>front_pose_pub_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a4c3f64fb7a5510b1dfa9e7b5415da40f" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>get_plan_client_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a9d10d00a04ab902e039a7e604ad4d081" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>get_plan_srv_name_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a78187931fd5400e13530165ef63f9645" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>GoalHandleComputePathToPose</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a88251ce4eb1448a5fb8165c50104482d" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>goalResponseCB</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a96786bf5f15d2267b3d2e0174726846d" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>got_external_goal_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a7bccec7ac9341244d43cac64b79e9470" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>got_new_agent_paths_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1abf79deb87acd0d6ddc422cd41c8b1f12" prot="public" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>initialize</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1af2d9fd4c078f684731720918e3e4d117" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>isPlanningDone</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a983b614e8b93ca742840cadb933c96e7" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>last_markers_size_map_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1aad8b6d7f58ad9e5a13a4a948866269e6" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>last_predicted_poses_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1ab01e01bbeef567abd29b7fc3cd6641d4" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>last_prune_indices_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a6d79011b10a83cf459f420c4dccc9970" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>ns_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a00d24ac50f4b80361f95c43c2fb38b66" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>path_vels_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a46d3187082c971c29b328168a05de302" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>path_vels_pos_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a796ccddf27e97c3b1079f2d2019641b3" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>planned_path_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1ab9ca3423081a010edf11ccd365689b44" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>planning_done_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a196cef60d98065545bf3062f861dedb4" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>predict_agents_server_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a61baafef3ba3d6b7c4777cfe613fa2ce" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>predictAgents</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a0fa7eae9ba7fcbef9eb31d6287e5fdd4" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>predictAgentsBehind</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a0188ab479042630a68d3668ce21816df" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>predictAgentsExternal</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a412a07cf494f120bcc1b2bfc01474ab7" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>predictAgentsFromPaths</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a9dafec387c772af21529feccc95f286f" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>predictAgentsGoal</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1af02fc9e6b0fe4a38c0892625101ed421" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>predictAgentsVelObs</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1ae24ee9712f7257e4a73934c830cf48fe" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>predicted_agents_markers_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1aa79e1043ef2fa80bdbf0b82e0d1257c9" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>predicted_agents_pub_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1ae0e199e0fcd7feac7ce6302a59623afa" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>predicted_goal_sub_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a7a8f342a6cf6fc2b53424abef927e49a" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>predicted_goals_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1ab75dd4ce85f5dd05273db220edbbfa09" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>predictedGoalCB</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a29bd81ad46200e617f5037ffd47bc53c" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>prunePath</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1af271444583773e730cbde7199d93d3d9" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>reset_prediction_services_server_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a00ba3027167fb06b7599a523864f3835" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>resetPredictionSrvs</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a6d99ea64a411b5ca176e0178654ba069" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>resultCB</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a74ff82535eb6cf1f8d0aeb923585ca6b" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>sendActionGoal</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a48512aa97aed121f07a6e84c1d055f8c" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>set_goal_srv_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a9d5cdbae993b87d0da7fb1c467a548fc" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>setFixedPath</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a9695da6ef8b4d9f03c7866c52b09e566" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>setGoal</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1aa9a691a634bc23253152db5c41c99776" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>showing_markers_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a3e928ad5f50f8bcce02c383b857a4a3c" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>tf_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a62c9d02761ad6538cd7eb78fbcacdc17" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>tf_buffer_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1ad536f25bbcae3f7b162e3e3c1180cd98" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>tracked_agents_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a3ce50a1c8acfda4e2e56fc86c3cb1636" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>tracked_agents_sub_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1aed35715dd7ddc625f7b84fffbdaab39c" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>tracked_agents_sub_topic_</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1a6a1beceb1803aa147c22c2d397912a03" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>trackedAgentsCB</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1ac2886019b7f953e2c03de8ace84b3b71" prot="private" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>transformPoseTwist</name></member>
+      <member refid="classagents_1_1AgentPathPrediction_1afafee2e99135310d643643e05e81841c" prot="public" virt="non-virtual"><scope>agents::AgentPathPrediction</scope><name>~AgentPathPrediction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

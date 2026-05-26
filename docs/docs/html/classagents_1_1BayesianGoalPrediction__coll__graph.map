@@ -1,0 +1,4 @@
+<map id="agents::BayesianGoalPrediction" name="agents::BayesianGoalPrediction">
+<area shape="rect" id="node1" title="Class implementing Bayesian goal prediction for agents." alt="" coords="5,95,235,121"/>
+<area shape="rect" id="node2" href="$classagents_1_1Gaussian.html" title="Class representing a 1D Gaussian distribution for probability calculations." alt="" coords="53,5,187,32"/>
+</map>

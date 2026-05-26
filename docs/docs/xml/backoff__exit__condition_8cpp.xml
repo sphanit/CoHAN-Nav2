@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="backoff__exit__condition_8cpp" kind="file" language="C++">
+    <compoundname>backoff_exit_condition.cpp</compoundname>
+    <includes refid="backoff__exit__condition_8h" local="no">hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h</includes>
+    <includes refid="bt__core_8h" local="yes">hateb_local_planner/behavior_tree/bt_core.h</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>cohan_msgs/AgentPathArray.h</label>
+      </node>
+      <node id="24">
+        <label>nav_msgs/GetPlan.h</label>
+      </node>
+      <node id="27">
+        <label>tf/transform_listener.h</label>
+      </node>
+      <node id="16">
+        <label>cohan_msgs/TrackedSegmentType.h</label>
+      </node>
+      <node id="12">
+        <label>cohan_msgs/AgentTrajectory.h</label>
+      </node>
+      <node id="15">
+        <label>cohan_msgs/TrackedAgents.h</label>
+      </node>
+      <node id="17">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="18">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>backoff_exit_condition.cpp</label>
+        <link refid="backoff__exit__condition_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="7">
+        <label>tf2/convert.h</label>
+      </node>
+      <node id="21">
+        <label>base_local_planner/costmap_model.h</label>
+      </node>
+      <node id="22">
+        <label>dynamic_reconfigure/server.h</label>
+      </node>
+      <node id="28">
+        <label>hateb_local_planner/behavior_tree/bt_core.h</label>
+        <link refid="bt__core_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>hateb_local_planner/backoff.h</label>
+        <link refid="backoff_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>costmap_2d/costmap_2d_ros.h</label>
+      </node>
+      <node id="25">
+        <label>std_srvs/SetBool.h</label>
+      </node>
+      <node id="23">
+        <label>geometry_msgs/Pose2D.h</label>
+      </node>
+      <node id="20">
+        <label>actionlib/client/simple_action_client.h</label>
+      </node>
+      <node id="3">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="5">
+        <label>agent_path_prediction/AgentsInfo.h</label>
+      </node>
+      <node id="29">
+        <label>behaviortree_cpp/bt_factory.h</label>
+      </node>
+      <node id="14">
+        <label>cohan_msgs/StateArray.h</label>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h</label>
+        <link refid="backoff__exit__condition_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>std_srvs/Trigger.h</label>
+      </node>
+      <node id="9">
+        <label>tf2_ros/transform_listener.h</label>
+      </node>
+      <node id="6">
+        <label>agent_path_prediction/agents_class.h</label>
+        <link refid="agents__class_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>tf2_ros/buffer.h</label>
+      </node>
+      <node id="13">
+        <label>cohan_msgs/AgentTrajectoryArray.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehateb__local__planner">hateb_local_planner</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="backoff__exit__condition_8h" kindref="compound">hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bt__core_8h" kindref="compound">hateb_local_planner/behavior_tree/bt_core.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehateb__local__planner" kindref="compound">hateb_local_planner</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="classhateb__local__planner_1_1BackoffExitCondition_1a502bd0c88a8babfec36378fb36ceca7e" kindref="member">BackoffExitCondition::BackoffExitCondition</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>condition_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BT::NodeConfiguration&amp;<sp/>conf)<sp/>:<sp/>BT::ConditionNode(condition_name,<sp/>conf)<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>node<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>name_<sp/>=<sp/>condition_name;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>started_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>new_goal_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>backed_off_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">BackoffExitCondition::~BackoffExitCondition()<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS_INFO<sp/>in<sp/>destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>ROS_INFO(</highlight><highlight class="stringliteral">&quot;Shutting<sp/>downd<sp/>the<sp/>BackoffExitCondition<sp/>BT<sp/>Node&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">BT::NodeStatus<sp/>BackoffExitCondition::tick()<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isRecoveryComplete())<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>the<sp/>recovery<sp/>flag<sp/>when<sp/>done</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>setOutput(</highlight><highlight class="stringliteral">&quot;recovery&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Abort<sp/>recovery<sp/>if<sp/>new<sp/>goal<sp/>is<sp/>received<sp/>and<sp/>return<sp/>SUCCESS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(new_goal_)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>everything</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>new_goal_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>started_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>backed_off_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>agents_ptr_-&gt;resetAgents();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/></highlight><highlight class="stringliteral">&quot;New<sp/>Goal<sp/>recieved<sp/>during<sp/>the<sp/>recovery.<sp/>Aborting<sp/>backoff!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>BT::NodeStatus::SUCCESS;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Otherwise,<sp/>the<sp/>recovery<sp/>is<sp/>complete,<sp/>reset<sp/>states<sp/>and<sp/>set<sp/>back<sp/>the<sp/>goal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>new_goal_<sp/>=<sp/>false;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>started_<sp/>=<sp/>false;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>backed_off_<sp/>=<sp/>false;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>agents_ptr_-&gt;resetAgents();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>backoff_ptr_-&gt;setbackGoal(current_goal_);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>setOutput(&quot;nav_goal&quot;,<sp/>current_goal_);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/>&quot;Recovery<sp/>is<sp/>completed,<sp/>setting<sp/>back<sp/>the<sp/>goal!&quot;)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>BT::NodeStatus::SUCCESS;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Wait<sp/>for<sp/>the<sp/>recovery<sp/>behavior<sp/>to<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/>&quot;in<sp/>Backoff<sp/>recovery&quot;)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>return<sp/>BT::NodeStatus::FAILURE;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>BackoffExitCondition::isRecoveryComplete()<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>new_goal_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>getInput(</highlight><highlight class="stringliteral">&quot;agents_info&quot;</highlight><highlight class="normal">,<sp/>agents_info_);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>data<sp/>from<sp/>blackboard<sp/>and<sp/>start<sp/>the<sp/>recovery</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!started_)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>getInput(</highlight><highlight class="stringliteral">&quot;backoff_ptr&quot;</highlight><highlight class="normal">,<sp/>backoff_ptr_);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>getInput(</highlight><highlight class="stringliteral">&quot;agents_ptr&quot;</highlight><highlight class="normal">,<sp/>agents_ptr_);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>setOutput(</highlight><highlight class="stringliteral">&quot;recovery&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>getInput(</highlight><highlight class="stringliteral">&quot;nav_goal&quot;</highlight><highlight class="normal">,<sp/>current_goal_);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/>current_goal_);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>started_<sp/>=<sp/>backoff_ptr_-&gt;startRecovery();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/></highlight><highlight class="stringliteral">&quot;Starting<sp/>recovery!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>false;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>a<sp/>new<sp/>goal<sp/>is<sp/>given,<sp/>stop<sp/>recovery</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>if<sp/>(started_<sp/>&amp;&amp;<sp/>backoff_ptr_-&gt;checkNewGoal())<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>new_goal_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>getInput(</highlight><highlight class="stringliteral">&quot;nav_goal&quot;</highlight><highlight class="normal">,<sp/>current_goal_);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/></highlight><highlight class="stringliteral">&quot;New<sp/>goal!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>true;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>timeout<sp/>has<sp/>been<sp/>completed,<sp/>reset<sp/>goal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>if<sp/>(started_<sp/>&amp;&amp;<sp/>backoff_ptr_-&gt;timeOut())<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/></highlight><highlight class="stringliteral">&quot;Time<sp/>out!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>true;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>After<sp/>reaching<sp/>backoff<sp/>goal,<sp/>the<sp/>human<sp/>is<sp/>not<sp/>there<sp/>anymore<sp/>-&gt;<sp/>human<sp/>moved<sp/>away</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>if<sp/>(!backed_off_<sp/>&amp;&amp;<sp/>backoff_ptr_-&gt;isBackoffGoalReached(agents_info_.robot_pose))<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>backed_off_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!agents_ptr_-&gt;isAgentStuck())<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/></highlight><highlight class="stringliteral">&quot;Agent<sp/>moved<sp/>away<sp/>while<sp/>backoff<sp/>is<sp/>being<sp/>performed!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!agents_ptr_-&gt;isAgentStuck();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Stop<sp/>waiting<sp/>if<sp/>the<sp/>agent<sp/>has<sp/>cleared<sp/>the<sp/>way<sp/>and<sp/>return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(backed_off_<sp/>&amp;&amp;<sp/>!agents_ptr_-&gt;isAgentStuck())<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/></highlight><highlight class="stringliteral">&quot;Agent<sp/>cleared<sp/>the<sp/>way!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>true;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>return<sp/>false;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">};<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hateb_local_planner</highlight></codeline>
+    </programlisting>
+    <location file="hateb_local_planner/src/behavior_tree/condition/backoff_exit_condition.cpp"/>
+  </compounddef>
+</doxygen>

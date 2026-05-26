@@ -1,0 +1,71 @@
+
+.. _program_listing_file_hateb_local_planner_src_behavior_tree_condition_is_goal_updated.cpp:
+
+Program Listing for File is_goal_updated.cpp
+============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_hateb_local_planner_src_behavior_tree_condition_is_goal_updated.cpp>` (``hateb_local_planner/src/behavior_tree/condition/is_goal_updated.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*******************************************************************************
+    * Software License Agreement (MIT License)
+    *
+    * Copyright (c) 2024-2025 LAAS-CNRS
+    *
+    * Permission is hereby granted, free of charge, to any person obtaining a copy
+    * of this software and associated documentation files (the "Software"), to deal
+    * in the Software without restriction, including without limitation the rights
+    * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    * copies of the Software, and to permit persons to whom the Software is
+    * furnished to do so, subject to the following conditions:
+    *
+    * The above copyright notice and this permission notice shall be included in
+    * all copies or substantial portions of the Software.
+    *
+    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    * THE SOFTWARE.
+    *
+    * Author: Phani Teja Singamaneni
+    *********************************************************************************/
+   
+   #include <hateb_local_planner/behavior_tree/condition/is_goal_updated.h>
+   
+   namespace hateb_local_planner {
+   
+   IsGoalUpdated::IsGoalUpdated(const std::string& condition_name, const BT::NodeConfiguration& conf) : BT::ConditionNode(condition_name, conf) {
+     // set the node name
+     name_ = condition_name;
+     BT_INFO(name_, "Starting the IsGoalUpdated BT Node");
+   }
+   
+   IsGoalUpdated::~IsGoalUpdated() {
+     // BT_INFO in destructor
+     BT_INFO(name_, "Shutting down the IsGoalUpdated BT Node");
+   }
+   
+   BT::NodeStatus IsGoalUpdated::tick() {
+     bool updated = false;
+     bool recovery = true;
+     // Read the values from black board
+     getInput("goal_update", updated);
+     getInput("recovery", recovery);
+   
+     // Goal updated case
+     if (updated && !recovery) {
+       BT_INFO(name_, "Goal updated, restarting the tree!")
+       return BT::NodeStatus::SUCCESS;
+     }
+   
+     BT_INFO(name_, "Goal in progress.")
+     return BT::NodeStatus::FAILURE;
+   }
+   
+   };  // namespace hateb_local_planner

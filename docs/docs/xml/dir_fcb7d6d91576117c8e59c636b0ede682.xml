@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_fcb7d6d91576117c8e59c636b0ede682" kind="dir">
+    <compoundname>multitarget_tracker</compoundname>
+    <innerfile refid="Ctracker_8cpp">Ctracker.cpp</innerfile>
+    <innerfile refid="HungarianAlg_8cpp">HungarianAlg.cpp</innerfile>
+    <innerfile refid="Kalman_8cpp">Kalman.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/"/>
+  </compounddef>
+</doxygen>

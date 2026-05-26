@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_30515ee430052bfad4e2eeb3da20bbf4" kind="dir">
+    <compoundname>condition</compoundname>
+    <innerfile refid="dual__band__exit__condition_8h">dual_band_exit_condition.h</innerfile>
+    <innerfile refid="is__goal__updated_8h">is_goal_updated.h</innerfile>
+    <innerfile refid="passthrough__condition_8h">passthrough_condition.h</innerfile>
+    <innerfile refid="single__band__exit__condition_8h">single_band_exit_condition.h</innerfile>
+    <innerfile refid="vel__obs__exit__condition_8h">vel_obs_exit_condition.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/"/>
+  </compounddef>
+</doxygen>

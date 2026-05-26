@@ -1,0 +1,4 @@
+<map id="hateb_local_planner::BackoffExitCondition" name="hateb_local_planner::BackoffExitCondition">
+<area shape="rect" id="node1" title="Class implementing a condition node for managing backoff recovery behavior." alt="" coords="5,80,171,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="17,5,159,32"/>
+</map>

@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1SingleBandExitCondition" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::SingleBandExitCondition</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BT::ConditionNode</basecompoundref>
+    <includes refid="single__band__exit__condition_8h" local="no">single_band_exit_condition.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1SingleBandExitCondition_1a3f5188bbd81a3471e0daf78bbc12a0d3" prot="private" static="no" mutable="no">
+        <type>agent_path_prediction::msg::AgentsInfo</type>
+        <definition>agent_path_prediction::msg::AgentsInfo hateb_local_planner::SingleBandExitCondition::agents_info_</definition>
+        <argsstring></argsstring>
+        <name>agents_info_</name>
+        <briefdescription>
+<para>Information about agents in the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" line="82" column="42" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1SingleBandExitCondition_1ad264f44756822214ab356fb858d55ecd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::SingleBandExitCondition::dist_max_</definition>
+        <argsstring></argsstring>
+        <name>dist_max_</name>
+        <briefdescription>
+<para>Maximum distance threshold for band exit condition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" line="83" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1SingleBandExitCondition_1a255b5189a0687b2264cf589a99608938" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::SingleBandExitCondition::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of the condition node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" line="86" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1SingleBandExitCondition_1ace6beac8e31a26d78cbb21aca68af5cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::SingleBandExitCondition::SingleBandExitCondition</definition>
+        <argsstring>(const std::string &amp;condition_name, const BT::NodeConfiguration &amp;conf)</argsstring>
+        <name>SingleBandExitCondition</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>condition_name</declname>
+        </param>
+        <param>
+          <type>const BT::NodeConfiguration &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with condition name and configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>condition_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the condition node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration for the behavior tree node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" line="53" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/single_band_exit_condition.cpp" bodystart="31" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1SingleBandExitCondition_1ab0d2dfecbc29f233d41a37920ca06159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::SingleBandExitCondition::SingleBandExitCondition</definition>
+        <argsstring>()=delete</argsstring>
+        <name>SingleBandExitCondition</name>
+        <briefdescription>
+<para>Deleted default constructor to enforce proper initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" line="58" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1SingleBandExitCondition_1a7999cacce523847ccefa39ddef79b413" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::SingleBandExitCondition::~SingleBandExitCondition</definition>
+        <argsstring>() override</argsstring>
+        <name>~SingleBandExitCondition</name>
+        <briefdescription>
+<para>Virtual destructor for cleanup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" line="63" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/single_band_exit_condition.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1SingleBandExitCondition_1a0d107ab1e096fb2dd124d80c5e898843" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BT::NodeStatus</type>
+        <definition>BT::NodeStatus hateb_local_planner::SingleBandExitCondition::tick</definition>
+        <argsstring>() override</argsstring>
+        <name>tick</name>
+        <briefdescription>
+<para>Method called to evaluate the condition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Status indicating whether condition is met </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" line="69" column="18" bodyfile="hateb_local_planner/src/behavior_tree/condition/single_band_exit_condition.cpp" bodystart="43" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1SingleBandExitCondition_1a6191fbab8706ea889d1f543d7ad38e5d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BT::PortsList</type>
+        <definition>static BT::PortsList hateb_local_planner::SingleBandExitCondition::providedPorts</definition>
+        <argsstring>()</argsstring>
+        <name>providedPorts</name>
+        <briefdescription>
+<para>Defines input ports for condition evaluation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ports list containing agents_info and dist_max as inputs </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" line="75" column="24" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class implementing a condition node for checking single band exit criteria. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides functionality to determine if a single band planning mode should be exited based on agent information and distance thresholds. It inherits from BT::ConditionNode to integrate with the behavior tree framework. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::SingleBandExitCondition</label>
+        <link refid="classhateb__local__planner_1_1SingleBandExitCondition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::SingleBandExitCondition</label>
+        <link refid="classhateb__local__planner_1_1SingleBandExitCondition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" line="46" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/single_band_exit_condition.h" bodystart="46" bodyend="87"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1SingleBandExitCondition_1a3f5188bbd81a3471e0daf78bbc12a0d3" prot="private" virt="non-virtual"><scope>hateb_local_planner::SingleBandExitCondition</scope><name>agents_info_</name></member>
+      <member refid="classhateb__local__planner_1_1SingleBandExitCondition_1ad264f44756822214ab356fb858d55ecd" prot="private" virt="non-virtual"><scope>hateb_local_planner::SingleBandExitCondition</scope><name>dist_max_</name></member>
+      <member refid="classhateb__local__planner_1_1SingleBandExitCondition_1a255b5189a0687b2264cf589a99608938" prot="private" virt="non-virtual"><scope>hateb_local_planner::SingleBandExitCondition</scope><name>name_</name></member>
+      <member refid="classhateb__local__planner_1_1SingleBandExitCondition_1a6191fbab8706ea889d1f543d7ad38e5d" prot="public" virt="non-virtual"><scope>hateb_local_planner::SingleBandExitCondition</scope><name>providedPorts</name></member>
+      <member refid="classhateb__local__planner_1_1SingleBandExitCondition_1ace6beac8e31a26d78cbb21aca68af5cb" prot="public" virt="non-virtual"><scope>hateb_local_planner::SingleBandExitCondition</scope><name>SingleBandExitCondition</name></member>
+      <member refid="classhateb__local__planner_1_1SingleBandExitCondition_1ab0d2dfecbc29f233d41a37920ca06159" prot="public" virt="non-virtual"><scope>hateb_local_planner::SingleBandExitCondition</scope><name>SingleBandExitCondition</name></member>
+      <member refid="classhateb__local__planner_1_1SingleBandExitCondition_1a0d107ab1e096fb2dd124d80c5e898843" prot="public" virt="non-virtual"><scope>hateb_local_planner::SingleBandExitCondition</scope><name>tick</name></member>
+      <member refid="classhateb__local__planner_1_1SingleBandExitCondition_1a7999cacce523847ccefa39ddef79b413" prot="public" virt="non-virtual"><scope>hateb_local_planner::SingleBandExitCondition</scope><name>~SingleBandExitCondition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

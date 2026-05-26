@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="agent__layer__config_8hpp" kind="file" language="C++">
+    <compoundname>agent_layer_config.hpp</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">rclcpp_lifecycle/lifecycle_node.hpp</includes>
+    <includes refid="parameters_8hpp" local="no">ros2_helpers/parameters.hpp</includes>
+    <includedby refid="agent__layer_8hpp" local="no">agent_layer.hpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>functional</label>
+      </node>
+      <node id="1">
+        <label>agent_layer_config.hpp</label>
+        <link refid="agent__layer__config_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ros2_helpers/parameters.hpp</label>
+        <link refid="parameters_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cmath</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="8">
+        <label>rcl_interfaces/msg/parameter_descriptor.hpp</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+      <node id="7">
+        <label>rcl_interfaces/msg/integer_range.hpp</label>
+      </node>
+      <node id="11">
+        <label>unordered_map</label>
+      </node>
+      <node id="3">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="6">
+        <label>rcl_interfaces/msg/floating_point_range.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>agent_layer_config.hpp</label>
+        <link refid="agent__layer__config_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>agent_layer.hpp</label>
+        <link refid="agent__layer_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>agent_visibility_layer.cpp</label>
+        <link refid="agent__visibility__layer_8cpp"/>
+      </node>
+      <node id="3">
+        <label>agent_visibility_layer.hpp</label>
+        <link refid="agent__visibility__layer_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>agent_layer.cpp</label>
+        <link refid="agent__layer_8cpp"/>
+      </node>
+      <node id="6">
+        <label>static_agent_layer.cpp</label>
+        <link refid="static__agent__layer_8cpp"/>
+      </node>
+      <node id="5">
+        <label>static_agent_layer.hpp</label>
+        <link refid="static__agent__layer_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classcohan__layers_1_1AgentLayerConfig" prot="public">cohan_layers::AgentLayerConfig</innerclass>
+    <innernamespace refid="namespacecohan__layers">cohan_layers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(MIT<sp/>License)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2025<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>AGENT_LAYER_CONFIG_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_LAYER_CONFIG_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp_lifecycle/lifecycle_node.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="parameters_8hpp" kindref="compound">ros2_helpers/parameters.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecohan__layers" kindref="compound">cohan_layers</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="classcohan__layers_1_1AgentLayerConfig" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcohan__layers_1_1AgentLayerConfig" kindref="compound">AgentLayerConfig</ref><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37" refid="classcohan__layers_1_1AgentLayerConfig_1a036f9cdbd7bba93c48266ad555f19f69" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a036f9cdbd7bba93c48266ad555f19f69" kindref="member">AgentLayerConfig</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38" refid="classcohan__layers_1_1AgentLayerConfig_1ae645c1939040871519bbc79628d4785e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1ae645c1939040871519bbc79628d4785e" kindref="member">~AgentLayerConfig</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classcohan__layers_1_1AgentLayerConfig_1abe3ed8f418bc52ae1004169f44ba62d4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1abe3ed8f418bc52ae1004169f44ba62d4" kindref="member">initialize</ref>(rclcpp_lifecycle::LifecycleNode::SharedPtr<sp/>node,<sp/>std::string<sp/>layer_name)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a1e040c99cc3e0ab63bfce4d2b383086a" kindref="member">layer_name_</ref><sp/>=<sp/>layer_name;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a39326f15d4ef4c40e8dbf18331e26a25" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1abb75497aaf65e971e7d10613f89c9e6c" kindref="member">initialize</ref>(node);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(node-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;Initializing<sp/>parameters<sp/>for<sp/>layer:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>layer_name.c_str());</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classcohan__layers_1_1AgentLayerConfig_1a621f6daf4b47a100a50ca4e038ce5584" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a621f6daf4b47a100a50ca4e038ce5584" kindref="member">setupParameterCallback</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Bind<sp/>all<sp/>parameters<sp/>with<sp/>automatic<sp/>updates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1aedc0937baa8fce088db5f2d12ecbc6ec" kindref="member">bindParameters</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>parameter<sp/>change<sp/>callback<sp/>-<sp/>parameters<sp/>are<sp/>auto-updated<sp/>by<sp/>bindings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a39326f15d4ef4c40e8dbf18331e26a25" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1a7c46052de452247a5f9c236ee3b616b0" kindref="member">setupParameterCallback</ref>([</highlight><highlight class="keyword">this</highlight><highlight class="normal">](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;rclcpp::Parameter&gt;&amp;<sp/>params)<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parameters<sp/>are<sp/>automatically<sp/>updated<sp/>by<sp/>ParameterHelper<sp/>bindings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>initial<sp/>parameter<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a39326f15d4ef4c40e8dbf18331e26a25" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1a39baf91c634c0eda52d6be9992ade42f" kindref="member">loadBoundParameters</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classcohan__layers_1_1AgentLayerConfig_1afd6e33c345087c9664a2e21971902535" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1afd6e33c345087c9664a2e21971902535" kindref="member">enabled</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="classcohan__layers_1_1AgentLayerConfig_1a87fbcf5b829e1c63637974ebcb908526" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a87fbcf5b829e1c63637974ebcb908526" kindref="member">amplitude</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="classcohan__layers_1_1AgentLayerConfig_1a7e27b8f89cd009b73cc8bc6541e5cf91" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a7e27b8f89cd009b73cc8bc6541e5cf91" kindref="member">radius</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="classcohan__layers_1_1AgentLayerConfig_1a2fa325ae4497a906ebe2ac645d1508c3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a2fa325ae4497a906ebe2ac645d1508c3" kindref="member">agent_radius</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="classcohan__layers_1_1AgentLayerConfig_1a59096b4ab4179009cc54da31fa39ee3d" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a59096b4ab4179009cc54da31fa39ee3d" kindref="member">ns</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70" refid="classcohan__layers_1_1AgentLayerConfig_1aedc0937baa8fce088db5f2d12ecbc6ec" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1aedc0937baa8fce088db5f2d12ecbc6ec" kindref="member">bindParameters</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>default<sp/>values<sp/>for<sp/>parameters<sp/>BEFORE<sp/>binding</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1afd6e33c345087c9664a2e21971902535" kindref="member">enabled</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a87fbcf5b829e1c63637974ebcb908526" kindref="member">amplitude</ref><sp/>=<sp/>150.0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a7e27b8f89cd009b73cc8bc6541e5cf91" kindref="member">radius</ref><sp/>=<sp/>1.5;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a2fa325ae4497a906ebe2ac645d1508c3" kindref="member">agent_radius</ref><sp/>=<sp/>0.3;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a59096b4ab4179009cc54da31fa39ee3d" kindref="member">ns</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Bind<sp/>parameters<sp/>with<sp/>layer<sp/>name<sp/>prefix<sp/>for<sp/>scoping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a39326f15d4ef4c40e8dbf18331e26a25" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1a2c177f4567e5c37b2456787a1f0a2da4" kindref="member">bindBoolParam</ref>(<ref refid="classcohan__layers_1_1AgentLayerConfig_1a1e040c99cc3e0ab63bfce4d2b383086a" kindref="member">layer_name_</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.enabled&quot;</highlight><highlight class="normal">,<sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1afd6e33c345087c9664a2e21971902535" kindref="member">enabled</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Whether<sp/>to<sp/>apply<sp/>this<sp/>plugin<sp/>or<sp/>not&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a39326f15d4ef4c40e8dbf18331e26a25" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1aaa55665c070adb3fd244d28454f8b6d0" kindref="member">bindFloatParam</ref>(<ref refid="classcohan__layers_1_1AgentLayerConfig_1a1e040c99cc3e0ab63bfce4d2b383086a" kindref="member">layer_name_</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.amplitude&quot;</highlight><highlight class="normal">,<sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a87fbcf5b829e1c63637974ebcb908526" kindref="member">amplitude</ref>,<sp/>0.0,<sp/>254.0,<sp/></highlight><highlight class="stringliteral">&quot;Amplitude<sp/>of<sp/>adjustments<sp/>at<sp/>peak&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a39326f15d4ef4c40e8dbf18331e26a25" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1aaa55665c070adb3fd244d28454f8b6d0" kindref="member">bindFloatParam</ref>(<ref refid="classcohan__layers_1_1AgentLayerConfig_1a1e040c99cc3e0ab63bfce4d2b383086a" kindref="member">layer_name_</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.radius&quot;</highlight><highlight class="normal">,<sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a7e27b8f89cd009b73cc8bc6541e5cf91" kindref="member">radius</ref>,<sp/>0.0,<sp/>10.0,<sp/></highlight><highlight class="stringliteral">&quot;Radius<sp/>of<sp/>the<sp/>Gaussian&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a39326f15d4ef4c40e8dbf18331e26a25" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1aaa55665c070adb3fd244d28454f8b6d0" kindref="member">bindFloatParam</ref>(<ref refid="classcohan__layers_1_1AgentLayerConfig_1a1e040c99cc3e0ab63bfce4d2b383086a" kindref="member">layer_name_</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.agent_radius&quot;</highlight><highlight class="normal">,<sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a2fa325ae4497a906ebe2ac645d1508c3" kindref="member">agent_radius</ref>,<sp/>0.0,<sp/>10.0,<sp/></highlight><highlight class="stringliteral">&quot;Radius<sp/>of<sp/>the<sp/>agent&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a39326f15d4ef4c40e8dbf18331e26a25" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1a79d5f3143e3b48047bb494c0b13f253e" kindref="member">bindStringParam</ref>(<ref refid="classcohan__layers_1_1AgentLayerConfig_1a1e040c99cc3e0ab63bfce4d2b383086a" kindref="member">layer_name_</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.ns&quot;</highlight><highlight class="normal">,<sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a59096b4ab4179009cc54da31fa39ee3d" kindref="member">ns</ref>,<sp/></highlight><highlight class="stringliteral">&quot;ROS<sp/>namespace<sp/>for<sp/>topics<sp/>and<sp/>services&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classcohan__layers_1_1AgentLayerConfig_1a39326f15d4ef4c40e8dbf18331e26a25" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classparameters_1_1ParameterHelper" kindref="compound">parameters::ParameterHelper</ref><sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a39326f15d4ef4c40e8dbf18331e26a25" kindref="member">param_helper_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="classcohan__layers_1_1AgentLayerConfig_1a1e040c99cc3e0ab63bfce4d2b383086a" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classcohan__layers_1_1AgentLayerConfig_1a1e040c99cc3e0ab63bfce4d2b383086a" kindref="member">layer_name_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cohan_layers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>AGENT_LAYER_CONFIG_HPP_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp"/>
+  </compounddef>
+</doxygen>

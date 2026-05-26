@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" kind="struct" language="C++" prot="public">
+    <compoundname>costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint</compoundname>
+    <includes refid="costmap__to__polygons_8h" local="no">costmap_to_polygons.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_1ae6f998d82e1297529daa14f998c01284" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>x coordinate [m] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="92" column="14" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_1a6f3884916fa72912b0d0a0a4964a8afe" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>y coordinate [m] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="93" column="14" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_1aa20b0929077e8d9636b74de1507de754" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint::KeyPoint</definition>
+        <argsstring>()</argsstring>
+        <name>KeyPoint</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="89" column="7" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_1a08bdab994b172d37c8b197216f0539ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint::KeyPoint</definition>
+        <argsstring>(double x_, double y_)</argsstring>
+        <name>KeyPoint</name>
+        <param>
+          <type>double</type>
+          <declname>x_</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y_</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with point initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="91" column="7" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_1a2ff0c8fd18b6430cb0abc8787a4b0083" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint::toPointMsg</definition>
+        <argsstring>(geometry_msgs::msg::Point &amp;point) const</argsstring>
+        <name>toPointMsg</name>
+        <param>
+          <type>geometry_msgs::msg::Point &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>Convert keypoint to geometry_msgs::msg::Point message type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="96" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_1a5d3fda099a58d82b5e08f28d75f88826" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint::toPointMsg</definition>
+        <argsstring>(geometry_msgs::msg::Point32 &amp;point) const</argsstring>
+        <name>toPointMsg</name>
+        <param>
+          <type>geometry_msgs::msg::Point32 &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>Convert keypoint to geometry_msgs::msg::Point32 message type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="98" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines a keypoint in metric coordinates of the map. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" line="86" column="5" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons.h" bodystart="87" bodyend="99"/>
+    <listofallmembers>
+      <member refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_1aa20b0929077e8d9636b74de1507de754" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint</scope><name>KeyPoint</name></member>
+      <member refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_1a08bdab994b172d37c8b197216f0539ae" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint</scope><name>KeyPoint</name></member>
+      <member refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_1a2ff0c8fd18b6430cb0abc8787a4b0083" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint</scope><name>toPointMsg</name></member>
+      <member refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_1a5d3fda099a58d82b5e08f28d75f88826" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint</scope><name>toPointMsg</name></member>
+      <member refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_1ae6f998d82e1297529daa14f998c01284" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint</scope><name>x</name></member>
+      <member refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_1a6f3884916fa72912b0d0a0a4964a8afe" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

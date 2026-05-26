@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>Todo List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>Member <ref refid="classBlobDetector_1a1aec59fca3c1e29fe805c493fd047ea5" kindref="member">BlobDetector::detect</ref>  (const cv::Mat &amp;image, std::vector&lt; cv::KeyPoint &gt; &amp;keypoints, const cv::Mat &amp;mask=cv::Mat())</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000001"/>The mask option is currently not implemented. </para>
+</listitem>
+<varlistentry><term>Class <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull" kindref="compound">costmap_converter::CostmapToPolygonsDBSConcaveHull</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000004"/>change the class hierarchy to a clearer and more generic one  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a59b986ce31bf6723a8f2a181143d8bdf" kindref="member">costmap_converter::CostmapToPolygonsDBSMCCH::convexHull</ref>  (std::vector&lt; KeyPoint &gt; &amp;cluster, geometry_msgs::msg::Polygon &amp;polygon)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000002"/>Evaluate and figure out whether <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a59b986ce31bf6723a8f2a181143d8bdf" kindref="member">convexHull()</ref> or <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a25bede95689564c58620c8dcbe860023" kindref="member">convexHull2()</ref> is better suited (performance, quality, ...)  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a25bede95689564c58620c8dcbe860023" kindref="member">costmap_converter::CostmapToPolygonsDBSMCCH::convexHull2</ref>  (std::vector&lt; KeyPoint &gt; &amp;cluster, geometry_msgs::msg::Polygon &amp;polygon)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000003"/>Evaluate and figure out whether <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a59b986ce31bf6723a8f2a181143d8bdf" kindref="member">convexHull()</ref> or <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a25bede95689564c58620c8dcbe860023" kindref="member">convexHull2()</ref> is better suited (performance, quality, ...) </para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+    <location file="todo"/>
+  </compounddef>
+</doxygen>

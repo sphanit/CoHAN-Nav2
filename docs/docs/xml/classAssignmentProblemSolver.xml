@@ -1,0 +1,559 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classAssignmentProblemSolver" kind="class" language="C++" prot="public">
+    <compoundname>AssignmentProblemSolver</compoundname>
+    <includes refid="HungarianAlg_8h" local="no">HungarianAlg.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>TMethod</name>
+        <enumvalue id="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75" prot="public">
+          <name>optimal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a226c2e4b79d0beeb342087880d97bb2a" prot="public">
+          <name>many_forbidden_assignments</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a3329e7571829a83b21be4821df62310d" prot="public">
+          <name>without_forbidden_assignments</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="49" column="3" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" bodystart="50" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classAssignmentProblemSolver_1a5b84a5167984db1050821926f52b5187" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssignmentProblemSolver::assignmentoptimal</definition>
+        <argsstring>(assignments_t &amp;assignment, track_t &amp;cost, const distMatrix_t &amp;distMatrixIn, size_t nOfRows, size_t nOfColumns)</argsstring>
+        <name>assignmentoptimal</name>
+        <param>
+          <type><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref> &amp;</type>
+          <declname>assignment</declname>
+        </param>
+        <param>
+          <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref> &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <param>
+          <type>const <ref refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" kindref="member">distMatrix_t</ref> &amp;</type>
+          <declname>distMatrixIn</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfColumns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="21" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="38" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssignmentProblemSolver_1a1aa1c05dec6aef723f5d41affc667a77" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssignmentProblemSolver::buildassignmentvector</definition>
+        <argsstring>(assignments_t &amp;assignment, bool *starMatrix, size_t nOfRows, size_t nOfColumns)</argsstring>
+        <name>buildassignmentvector</name>
+        <param>
+          <type><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref> &amp;</type>
+          <declname>assignment</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>starMatrix</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfColumns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="23" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="171" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssignmentProblemSolver_1a978fa51f563d47dbd00c697704cf4ad9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssignmentProblemSolver::computeassignmentcost</definition>
+        <argsstring>(const assignments_t &amp;assignment, track_t &amp;cost, const distMatrix_t &amp;distMatrixIn, size_t nOfRows)</argsstring>
+        <name>computeassignmentcost</name>
+        <param>
+          <type>const <ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref> &amp;</type>
+          <declname>assignment</declname>
+        </param>
+        <param>
+          <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref> &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <param>
+          <type>const <ref refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" kindref="member">distMatrix_t</ref> &amp;</type>
+          <declname>distMatrixIn</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfRows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="24" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="189" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssignmentProblemSolver_1adef6ec1494dd6058fdf1373bc2c6d6eb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssignmentProblemSolver::step2a</definition>
+        <argsstring>(assignments_t &amp;assignment, track_t *distMatrix, bool *starMatrix, bool *newStarMatrix, bool *primeMatrix, bool *coveredColumns, bool *coveredRows, size_t nOfRows, size_t nOfColumns, size_t minDim)</argsstring>
+        <name>step2a</name>
+        <param>
+          <type><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref> &amp;</type>
+          <declname>assignment</declname>
+        </param>
+        <param>
+          <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref> *</type>
+          <declname>distMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>starMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>newStarMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>primeMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>coveredColumns</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>coveredRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfColumns</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>minDim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="26" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="205" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssignmentProblemSolver_1a069b78d89842031f7b54e0837c2bd602" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssignmentProblemSolver::step2b</definition>
+        <argsstring>(assignments_t &amp;assignment, track_t *distMatrix, bool *starMatrix, bool *newStarMatrix, bool *primeMatrix, bool *coveredColumns, bool *coveredRows, size_t nOfRows, size_t nOfColumns, size_t minDim)</argsstring>
+        <name>step2b</name>
+        <param>
+          <type><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref> &amp;</type>
+          <declname>assignment</declname>
+        </param>
+        <param>
+          <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref> *</type>
+          <declname>distMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>starMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>newStarMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>primeMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>coveredColumns</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>coveredRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfColumns</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>minDim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="28" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="232" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssignmentProblemSolver_1acb8f0b1e8f28d57dc08704e893666ce1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssignmentProblemSolver::step3</definition>
+        <argsstring>(assignments_t &amp;assignment, track_t *distMatrix, bool *starMatrix, bool *newStarMatrix, bool *primeMatrix, bool *coveredColumns, bool *coveredRows, size_t nOfRows, size_t nOfColumns, size_t minDim)</argsstring>
+        <name>step3</name>
+        <param>
+          <type><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref> &amp;</type>
+          <declname>assignment</declname>
+        </param>
+        <param>
+          <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref> *</type>
+          <declname>distMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>starMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>newStarMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>primeMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>coveredColumns</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>coveredRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfColumns</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>minDim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="30" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="261" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssignmentProblemSolver_1a6ea85d386a136effd84c00f4e2f3cd77" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssignmentProblemSolver::step4</definition>
+        <argsstring>(assignments_t &amp;assignment, track_t *distMatrix, bool *starMatrix, bool *newStarMatrix, bool *primeMatrix, bool *coveredColumns, bool *coveredRows, size_t nOfRows, size_t nOfColumns, size_t minDim, size_t row, size_t col)</argsstring>
+        <name>step4</name>
+        <param>
+          <type><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref> &amp;</type>
+          <declname>assignment</declname>
+        </param>
+        <param>
+          <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref> *</type>
+          <declname>distMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>starMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>newStarMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>primeMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>coveredColumns</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>coveredRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfColumns</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>minDim</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="32" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="315" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssignmentProblemSolver_1aa1c72a5f8de7a19bd1671aabdf426179" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssignmentProblemSolver::step5</definition>
+        <argsstring>(assignments_t &amp;assignment, track_t *distMatrix, bool *starMatrix, bool *newStarMatrix, bool *primeMatrix, bool *coveredColumns, bool *coveredRows, size_t nOfRows, size_t nOfColumns, size_t minDim)</argsstring>
+        <name>step5</name>
+        <param>
+          <type><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref> &amp;</type>
+          <declname>assignment</declname>
+        </param>
+        <param>
+          <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref> *</type>
+          <declname>distMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>starMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>newStarMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>primeMatrix</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>coveredColumns</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>coveredRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfColumns</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>minDim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="35" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="382" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssignmentProblemSolver_1ae8fddfafc7387f3597493f02e8366883" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssignmentProblemSolver::assignmentsuboptimal1</definition>
+        <argsstring>(assignments_t &amp;assignment, track_t &amp;cost, const distMatrix_t &amp;distMatrixIn, size_t nOfRows, size_t nOfColumns)</argsstring>
+        <name>assignmentsuboptimal1</name>
+        <param>
+          <type><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref> &amp;</type>
+          <declname>assignment</declname>
+        </param>
+        <param>
+          <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref> &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <param>
+          <type>const <ref refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" kindref="member">distMatrix_t</ref> &amp;</type>
+          <declname>distMatrixIn</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfColumns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="40" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="491" bodyend="732"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssignmentProblemSolver_1a31277dc88cb22e07db1e52b6fe88f84f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssignmentProblemSolver::assignmentsuboptimal2</definition>
+        <argsstring>(assignments_t &amp;assignment, track_t &amp;cost, const distMatrix_t &amp;distMatrixIn, size_t nOfRows, size_t nOfColumns)</argsstring>
+        <name>assignmentsuboptimal2</name>
+        <param>
+          <type><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref> &amp;</type>
+          <declname>assignment</declname>
+        </param>
+        <param>
+          <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref> &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <param>
+          <type>const <ref refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" kindref="member">distMatrix_t</ref> &amp;</type>
+          <declname>distMatrixIn</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfColumns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="45" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="435" bodyend="487"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAssignmentProblemSolver_1a13a83a34d4a0b4da872d87c79cb9c687" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AssignmentProblemSolver::AssignmentProblemSolver</definition>
+        <argsstring>()</argsstring>
+        <name>AssignmentProblemSolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="56" column="3" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssignmentProblemSolver_1a47317b69e3eb9b50426c427ebcf5770f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AssignmentProblemSolver::~AssignmentProblemSolver</definition>
+        <argsstring>()</argsstring>
+        <name>~AssignmentProblemSolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="57" column="3" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classAssignmentProblemSolver_1a38198467ca647403c40be2c2bb47e177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref></type>
+        <definition>track_t AssignmentProblemSolver::Solve</definition>
+        <argsstring>(const distMatrix_t &amp;distMatrixIn, size_t nOfRows, size_t nOfColumns, assignments_t &amp;assignment, TMethod Method=optimal)</argsstring>
+        <name>Solve</name>
+        <param>
+          <type>const <ref refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" kindref="member">distMatrix_t</ref> &amp;</type>
+          <declname>distMatrixIn</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfRows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nOfColumns</declname>
+        </param>
+        <param>
+          <type><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref> &amp;</type>
+          <declname>assignment</declname>
+        </param>
+        <param>
+          <type><ref refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8" kindref="member">TMethod</ref></type>
+          <declname>Method</declname>
+          <defval><ref refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75" kindref="member">optimal</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="58" column="11" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.cpp" bodystart="11" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" line="15" column="1" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h" bodystart="16" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classAssignmentProblemSolver_1a5b84a5167984db1050821926f52b5187" prot="private" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>assignmentoptimal</name></member>
+      <member refid="classAssignmentProblemSolver_1a13a83a34d4a0b4da872d87c79cb9c687" prot="public" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>AssignmentProblemSolver</name></member>
+      <member refid="classAssignmentProblemSolver_1ae8fddfafc7387f3597493f02e8366883" prot="private" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>assignmentsuboptimal1</name></member>
+      <member refid="classAssignmentProblemSolver_1a31277dc88cb22e07db1e52b6fe88f84f" prot="private" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>assignmentsuboptimal2</name></member>
+      <member refid="classAssignmentProblemSolver_1a1aa1c05dec6aef723f5d41affc667a77" prot="private" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>buildassignmentvector</name></member>
+      <member refid="classAssignmentProblemSolver_1a978fa51f563d47dbd00c697704cf4ad9" prot="private" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>computeassignmentcost</name></member>
+      <member refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a226c2e4b79d0beeb342087880d97bb2a" prot="public" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>many_forbidden_assignments</name></member>
+      <member refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75" prot="public" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>optimal</name></member>
+      <member refid="classAssignmentProblemSolver_1a38198467ca647403c40be2c2bb47e177" prot="public" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>Solve</name></member>
+      <member refid="classAssignmentProblemSolver_1adef6ec1494dd6058fdf1373bc2c6d6eb" prot="private" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>step2a</name></member>
+      <member refid="classAssignmentProblemSolver_1a069b78d89842031f7b54e0837c2bd602" prot="private" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>step2b</name></member>
+      <member refid="classAssignmentProblemSolver_1acb8f0b1e8f28d57dc08704e893666ce1" prot="private" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>step3</name></member>
+      <member refid="classAssignmentProblemSolver_1a6ea85d386a136effd84c00f4e2f3cd77" prot="private" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>step4</name></member>
+      <member refid="classAssignmentProblemSolver_1aa1c72a5f8de7a19bd1671aabdf426179" prot="private" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>step5</name></member>
+      <member refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8" prot="public" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>TMethod</name></member>
+      <member refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a3329e7571829a83b21be4821df62310d" prot="public" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>without_forbidden_assignments</name></member>
+      <member refid="classAssignmentProblemSolver_1a47317b69e3eb9b50426c427ebcf5770f" prot="public" virt="non-virtual"><scope>AssignmentProblemSolver</scope><name>~AssignmentProblemSolver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

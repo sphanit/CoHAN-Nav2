@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_5de9b0ef5f18ec9f3d5c68f86694fd90" kind="dir">
+    <compoundname>rviz_path_array</compoundname>
+    <innerdir refid="dir_9bb6ca16fd2604f26fb74026fe2baeef">src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="rviz_path_array/"/>
+  </compounddef>
+</doxygen>

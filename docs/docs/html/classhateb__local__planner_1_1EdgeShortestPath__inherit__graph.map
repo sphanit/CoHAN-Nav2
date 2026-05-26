@@ -1,0 +1,5 @@
+<map id="hateb_local_planner::EdgeShortestPath" name="hateb_local_planner::EdgeShortestPath">
+<area shape="rect" id="node1" title="Edge defining the cost function for minimizing the Euclidean distance between two consectuive poses." alt="" coords="21,228,174,269"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebBinaryEdge.html" title=" " alt="" coords="6,109,189,180"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,189,61"/>
+</map>

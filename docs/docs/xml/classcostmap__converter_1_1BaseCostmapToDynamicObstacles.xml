@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcostmap__converter_1_1BaseCostmapToDynamicObstacles" kind="class" language="C++" prot="public">
+    <compoundname>costmap_converter::BaseCostmapToDynamicObstacles</compoundname>
+    <basecompoundref refid="classcostmap__converter_1_1BaseCostmapToPolygons" prot="public" virt="non-virtual">costmap_converter::BaseCostmapToPolygons</basecompoundref>
+    <derivedcompoundref refid="classcostmap__converter_1_1CostmapToDynamicObstacles" prot="public" virt="non-virtual">costmap_converter::CostmapToDynamicObstacles</derivedcompoundref>
+    <includes refid="costmap__converter__interface_8h" local="no">costmap_converter_interface.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a12bd9e3124a58770643eeee63e7532ab" prot="private" static="no" mutable="no">
+        <type>pluginlib::ClassLoader&lt; <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons" kindref="compound">BaseCostmapToPolygons</ref> &gt;</type>
+        <definition>pluginlib::ClassLoader&lt;BaseCostmapToPolygons&gt; costmap_converter::BaseCostmapToDynamicObstacles::static_converter_loader_</definition>
+        <argsstring></argsstring>
+        <name>static_converter_loader_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="378" column="26" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons" kindref="compound">BaseCostmapToPolygons</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;BaseCostmapToPolygons&gt; costmap_converter::BaseCostmapToDynamicObstacles::static_costmap_converter_</definition>
+        <argsstring></argsstring>
+        <name>static_costmap_converter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="379" column="19" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a3901dbaab92d4ebd54ee866166804256" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::BaseCostmapToDynamicObstacles::loadStaticCostmapConverterPlugin</definition>
+        <argsstring>(const std::string &amp;plugin_name, rclcpp::Node::SharedPtr nh_parent)</argsstring>
+        <name>loadStaticCostmapConverterPlugin</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>plugin_name</declname>
+        </param>
+        <param>
+          <type>rclcpp::Node::SharedPtr</type>
+          <declname>nh_parent</declname>
+        </param>
+        <briefdescription>
+<para>Load underlying static costmap conversion plugin via plugin-loader. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plugin_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exact class name of the plugin to be loaded, e.g. <ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH" kindref="compound">costmap_converter::CostmapToPolygonsDBSMCCH</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nh_parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NodeHandle which is extended by the namespace of the static conversion plugin </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="300" column="8" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="300" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1ac88e29904958d1135070859486cbfab6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::BaseCostmapToDynamicObstacles::setStaticCostmapConverterPlugin</definition>
+        <argsstring>(std::shared_ptr&lt; BaseCostmapToPolygons &gt; static_costmap_converter)</argsstring>
+        <name>setStaticCostmapConverterPlugin</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons" kindref="compound">BaseCostmapToPolygons</ref> &gt;</type>
+          <declname>static_costmap_converter</declname>
+        </param>
+        <briefdescription>
+<para>Set the underlying plugin for subsequent costmap conversion of the static background of the costmap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>static_costmap_converter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the static costmap conversion plugin </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="327" column="8" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="327" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a8597c36aa440d9e3672edbde5fd1cf12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::BaseCostmapToDynamicObstacles::setStaticCostmap</definition>
+        <argsstring>(std::shared_ptr&lt; nav2_costmap_2d::Costmap2D &gt; static_costmap)</argsstring>
+        <name>setStaticCostmap</name>
+        <param>
+          <type>std::shared_ptr&lt; nav2_costmap_2d::Costmap2D &gt;</type>
+          <declname>static_costmap</declname>
+        </param>
+        <briefdescription>
+<para>Set the costmap for the underlying plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>static_costmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Costmap2D, which contains the static part of the original costmap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="336" column="8" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="336" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a10dba078631ef120ec585e46fb1ae690" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::BaseCostmapToDynamicObstacles::convertStaticObstacles</definition>
+        <argsstring>()</argsstring>
+        <name>convertStaticObstacles</name>
+        <briefdescription>
+<para>Apply the underlying plugin for static costmap conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="344" column="8" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="344" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a506653e4f553b784d2784e7aef02bd7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacecostmap__converter_1a6063889d67ef296ddfd08f08d5df4a5b" kindref="member">PolygonContainerConstPtr</ref></type>
+        <definition>PolygonContainerConstPtr costmap_converter::BaseCostmapToDynamicObstacles::getStaticPolygons</definition>
+        <argsstring>()</argsstring>
+        <name>getStaticPolygons</name>
+        <briefdescription>
+<para>Get the converted polygons from the underlying plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Shared instance of the underlying plugins polygon container </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="353" column="28" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="353" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a314f921603fc71c47bb1666de9a577f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool costmap_converter::BaseCostmapToDynamicObstacles::stackedCostmapConversion</definition>
+        <argsstring>()</argsstring>
+        <name>stackedCostmapConversion</name>
+        <reimplements refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5f42b7263fcfdde112b09c73429e55be">stackedCostmapConversion</reimplements>
+        <briefdescription>
+<para>Determines whether an additional plugin for subsequent costmap conversion is specified. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true, if a plugin for subsequent costmap conversion is specified </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="363" column="8" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="363" bodyend="369"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1af9c4d3851bea551a15e344ffc72724c5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>costmap_converter::BaseCostmapToDynamicObstacles::BaseCostmapToDynamicObstacles</definition>
+        <argsstring>()</argsstring>
+        <name>BaseCostmapToDynamicObstacles</name>
+        <briefdescription>
+<para>Protected constructor that should be called by subclasses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="375" column="3" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="375" bodyend="375"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>costmap_converter::BaseCostmapToPolygons</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToPolygons"/>
+      </node>
+      <node id="1">
+        <label>costmap_converter::BaseCostmapToDynamicObstacles</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>costmap_converter::CostmapToDynamicObstacles</label>
+        <link refid="classcostmap__converter_1_1CostmapToDynamicObstacles"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>costmap_converter::BaseCostmapToPolygons</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToPolygons"/>
+      </node>
+      <node id="1">
+        <label>costmap_converter::BaseCostmapToDynamicObstacles</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="290" column="1" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="291" bodyend="380"/>
+    <listofallmembers>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1af9c4d3851bea551a15e344ffc72724c5" prot="protected" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>BaseCostmapToDynamicObstacles</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aed9851c00b8d93e88bb8ee79b95a23d9" prot="protected" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>BaseCostmapToPolygons</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1abec3dc10bc44341b73d5fc4e635be01f" prot="public" virt="pure-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>compute</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a10dba078631ef120ec585e46fb1ae690" prot="public" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>convertStaticObstacles</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5c9d89e344e9592ab66fd4eae4e3c495" prot="protected" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>getLogger</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a568d60474400d08a40218d0674b46fed" prot="public" virt="virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>getObstacles</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a8e68cedfe4acd986b555edbcf5fe6d44" prot="public" virt="virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>getPolygons</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a506653e4f553b784d2784e7aef02bd7e" prot="public" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>getStaticPolygons</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a687f79218c610912cd29f0f288a26fb9" prot="public" virt="virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>initialize</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a3901dbaab92d4ebd54ee866166804256" prot="public" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>loadStaticCostmapConverterPlugin</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" prot="private" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>need_to_terminate_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" prot="private" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>nh_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1adde51e27138497c972070f585485d920" prot="protected" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>now</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ac98d1254a59d142285db6662dbc5af47" prot="public" virt="pure-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>setCostmap2D</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ae2913087d659654c55f5869397f8e2c5" prot="public" virt="virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>setOdomTopic</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a8597c36aa440d9e3672edbde5fd1cf12" prot="public" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>setStaticCostmap</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1ac88e29904958d1135070859486cbfab6" prot="public" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>setStaticCostmapConverterPlugin</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" prot="private" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>spin_thread_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa39c0f13e7ad5bddade4cfc86324abb3" prot="protected" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>spinThread</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a314f921603fc71c47bb1666de9a577f5" prot="public" virt="virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>stackedCostmapConversion</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" prot="public" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>startWorker</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a12bd9e3124a58770643eeee63e7532ab" prot="private" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>static_converter_loader_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" prot="private" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>static_costmap_converter_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a7e5b367499223999167be752208eb59f" prot="public" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>stopWorker</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a78896f9e23abc564acb1d27cd4f38aac" prot="private" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>terminate_mutex_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a83f5e0c6c9954c6cf54a25e4f0de5b6c" prot="public" virt="pure-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>updateCostmap2D</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a947fc00b05f6ac5f478afb9ce6c67a06" prot="private" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>worker_timer_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a98ab2ab132530d153084db2d9249b75d" prot="protected" virt="non-virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>workerCallback</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a3bee32afc15401220df123bce1a87921" prot="public" virt="virtual"><scope>costmap_converter::BaseCostmapToDynamicObstacles</scope><name>~BaseCostmapToPolygons</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

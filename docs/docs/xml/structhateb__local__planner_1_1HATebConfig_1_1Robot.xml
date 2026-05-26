@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhateb__local__planner_1_1HATebConfig_1_1Robot" kind="struct" language="C++" prot="public">
+    <compoundname>hateb_local_planner::HATebConfig::Robot</compoundname>
+    <includes refid="hateb__config_8hpp" local="no">hateb_config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a8194012fb2be163f9f55ced9c4a05979" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Robot::radius</definition>
+        <argsstring></argsstring>
+        <name>radius</name>
+        <briefdescription>
+<para>Radius of the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="113" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a8fcf3ee4c94f846566279276e681f5f8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Robot::max_vel_x</definition>
+        <argsstring></argsstring>
+        <name>max_vel_x</name>
+        <briefdescription>
+<para>Maximum translational velocity of the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="114" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a2d3cfee88b7b77ee21b8a9ec91de9869" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Robot::max_vel_x_backwards</definition>
+        <argsstring></argsstring>
+        <name>max_vel_x_backwards</name>
+        <briefdescription>
+<para>Maximum translational velocity of the robot for driving backwards. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="115" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1aac09443d7d4d70b3be7a17ceb04e097e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Robot::max_vel_y</definition>
+        <argsstring></argsstring>
+        <name>max_vel_y</name>
+        <briefdescription>
+<para>Maximum strafing velocity of the robot (should be zero for non-holonomic robots!) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="116" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1ac910e6825fec7357488f00e3f9ff6223" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Robot::max_vel_theta</definition>
+        <argsstring></argsstring>
+        <name>max_vel_theta</name>
+        <briefdescription>
+<para>Maximum angular velocity of the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="117" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1af40f4841ac6f5b5fa7ffadaab7426f74" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Robot::acc_lim_x</definition>
+        <argsstring></argsstring>
+        <name>acc_lim_x</name>
+        <briefdescription>
+<para>Maximum translational acceleration of the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="118" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1aeca1e45a2334d4104b4c55d1a124b70c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Robot::acc_lim_y</definition>
+        <argsstring></argsstring>
+        <name>acc_lim_y</name>
+        <briefdescription>
+<para>Maximum strafing acceleration of the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="119" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a3bc88eb765e707533710492b82c316b7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Robot::acc_lim_theta</definition>
+        <argsstring></argsstring>
+        <name>acc_lim_theta</name>
+        <briefdescription>
+<para>Maximum angular acceleration of the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="120" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1ad4d9e23303241c150806adc0a6880994" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Robot::min_turning_radius</definition>
+        <argsstring></argsstring>
+        <name>min_turning_radius</name>
+        <briefdescription>
+<para>Minimum turning radius of a carlike robot (diff-drive robot: zero);. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="121" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a6c3860f0b6e2c6f0a5b523a079ac98cb" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Robot::wheelbase</definition>
+        <argsstring></argsstring>
+        <name>wheelbase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The distance between the drive shaft and steering axle (only required for a carlike robot with &apos;cmd_angle_instead_rotvel&apos; enabled); The value might be negative for back-wheeled robots! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="122" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a2b01b3144334ac1d0fdbe71014c5937e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Robot::cmd_angle_instead_rotvel</definition>
+        <argsstring></argsstring>
+        <name>cmd_angle_instead_rotvel</name>
+        <briefdescription>
+<para>Substitute the rotational velocity in the commanded velocity message by the corresponding steering angle (check &apos;axles_distance&apos;) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="124" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a145dc991eb718e111b850cc8325d2e1f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Robot::is_footprint_dynamic</definition>
+        <argsstring></argsstring>
+        <name>is_footprint_dynamic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="125" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a42cce3e78bc7fb71ede2f571afdb0d89" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Robot::use_simulated_fov</definition>
+        <argsstring></argsstring>
+        <name>use_simulated_fov</name>
+        <briefdescription>
+<para>Whether to use the simulated field of view for human-aware planning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="126" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Robot" kindref="compound">Robot</ref> related parameters. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="112" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="112" bodyend="128"/>
+    <listofallmembers>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a3bc88eb765e707533710492b82c316b7" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>acc_lim_theta</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1af40f4841ac6f5b5fa7ffadaab7426f74" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>acc_lim_x</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1aeca1e45a2334d4104b4c55d1a124b70c" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>acc_lim_y</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a2b01b3144334ac1d0fdbe71014c5937e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>cmd_angle_instead_rotvel</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a145dc991eb718e111b850cc8325d2e1f" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>is_footprint_dynamic</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1ac910e6825fec7357488f00e3f9ff6223" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>max_vel_theta</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a8fcf3ee4c94f846566279276e681f5f8" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>max_vel_x</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a2d3cfee88b7b77ee21b8a9ec91de9869" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>max_vel_x_backwards</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1aac09443d7d4d70b3be7a17ceb04e097e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>max_vel_y</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1ad4d9e23303241c150806adc0a6880994" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>min_turning_radius</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a8194012fb2be163f9f55ced9c4a05979" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>radius</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a42cce3e78bc7fb71ede2f571afdb0d89" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>use_simulated_fov</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Robot_1a6c3860f0b6e2c6f0a5b523a079ac98cb" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Robot</scope><name>wheelbase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

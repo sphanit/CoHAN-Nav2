@@ -1,0 +1,4 @@
+<map id="hateb_local_planner::ModeSwitch" name="hateb_local_planner::ModeSwitch">
+<area shape="rect" id="node1" title="Class managing planning mode switches in the HATEB local planner." alt="" coords="5,109,159,151"/>
+<area shape="rect" id="node2" href="$structhateb__local__planner_1_1ModeInfo.html" title="Structure combining planning and prediction modes Used to configure the behavior of the local planner..." alt="" coords="5,5,159,47"/>
+</map>

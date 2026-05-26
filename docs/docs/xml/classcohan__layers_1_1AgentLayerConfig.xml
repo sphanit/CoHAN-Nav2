@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcohan__layers_1_1AgentLayerConfig" kind="class" language="C++" prot="public">
+    <compoundname>cohan_layers::AgentLayerConfig</compoundname>
+    <includes refid="agent__layer__config_8hpp" local="no">agent_layer_config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayerConfig_1afd6e33c345087c9664a2e21971902535" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cohan_layers::AgentLayerConfig::enabled</definition>
+        <argsstring></argsstring>
+        <name>enabled</name>
+        <briefdescription>
+<para>Whether the plugin is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="60" column="8" bodyfile="cohan_layers/include/cohan_layers/agent_layer_config.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayerConfig_1a87fbcf5b829e1c63637974ebcb908526" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayerConfig::amplitude</definition>
+        <argsstring></argsstring>
+        <name>amplitude</name>
+        <briefdescription>
+<para>Amplitude of adjustments at peak. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="61" column="10" bodyfile="cohan_layers/include/cohan_layers/agent_layer_config.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayerConfig_1a7e27b8f89cd009b73cc8bc6541e5cf91" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayerConfig::radius</definition>
+        <argsstring></argsstring>
+        <name>radius</name>
+        <briefdescription>
+<para>Radius of the Gaussian. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="62" column="10" bodyfile="cohan_layers/include/cohan_layers/agent_layer_config.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayerConfig_1a2fa325ae4497a906ebe2ac645d1508c3" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayerConfig::agent_radius</definition>
+        <argsstring></argsstring>
+        <name>agent_radius</name>
+        <briefdescription>
+<para>Radius of the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="63" column="10" bodyfile="cohan_layers/include/cohan_layers/agent_layer_config.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayerConfig_1a59096b4ab4179009cc54da31fa39ee3d" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string cohan_layers::AgentLayerConfig::ns</definition>
+        <argsstring></argsstring>
+        <name>ns</name>
+        <briefdescription>
+<para>ROS namespace. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="64" column="15" bodyfile="cohan_layers/include/cohan_layers/agent_layer_config.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayerConfig_1a39326f15d4ef4c40e8dbf18331e26a25" prot="private" static="no" mutable="no">
+        <type><ref refid="classparameters_1_1ParameterHelper" kindref="compound">parameters::ParameterHelper</ref></type>
+        <definition>parameters::ParameterHelper cohan_layers::AgentLayerConfig::param_helper_</definition>
+        <argsstring></argsstring>
+        <name>param_helper_</name>
+        <briefdescription>
+<para>Parameter helper for managing ROS2 parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="86" column="31" bodyfile="cohan_layers/include/cohan_layers/agent_layer_config.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayerConfig_1a1e040c99cc3e0ab63bfce4d2b383086a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string cohan_layers::AgentLayerConfig::layer_name_</definition>
+        <argsstring></argsstring>
+        <name>layer_name_</name>
+        <briefdescription>
+<para>Name of the layer for parameter scoping. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="87" column="15" bodyfile="cohan_layers/include/cohan_layers/agent_layer_config.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayerConfig_1a036f9cdbd7bba93c48266ad555f19f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cohan_layers::AgentLayerConfig::AgentLayerConfig</definition>
+        <argsstring>()=default</argsstring>
+        <name>AgentLayerConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="37" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayerConfig_1ae645c1939040871519bbc79628d4785e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cohan_layers::AgentLayerConfig::~AgentLayerConfig</definition>
+        <argsstring>()=default</argsstring>
+        <name>~AgentLayerConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="38" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayerConfig_1abe3ed8f418bc52ae1004169f44ba62d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cohan_layers::AgentLayerConfig::initialize</definition>
+        <argsstring>(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::string layer_name)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>rclcpp_lifecycle::LifecycleNode::SharedPtr</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>layer_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="40" column="8" bodyfile="cohan_layers/include/cohan_layers/agent_layer_config.hpp" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayerConfig_1a621f6daf4b47a100a50ca4e038ce5584" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cohan_layers::AgentLayerConfig::setupParameterCallback</definition>
+        <argsstring>()</argsstring>
+        <name>setupParameterCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="46" column="8" bodyfile="cohan_layers/include/cohan_layers/agent_layer_config.hpp" bodystart="46" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayerConfig_1aedc0937baa8fce088db5f2d12ecbc6ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cohan_layers::AgentLayerConfig::bindParameters</definition>
+        <argsstring>()</argsstring>
+        <name>bindParameters</name>
+        <briefdescription>
+<para>Binds all configuration variables to parameters for auto-update. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="70" column="8" bodyfile="cohan_layers/include/cohan_layers/agent_layer_config.hpp" bodystart="70" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>cohan_layers::AgentLayerConfig</label>
+        <link refid="classcohan__layers_1_1AgentLayerConfig"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>param_helper_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>parameters::ParameterHelper</label>
+        <link refid="classparameters_1_1ParameterHelper"/>
+      </node>
+    </collaborationgraph>
+    <location file="cohan_layers/include/cohan_layers/agent_layer_config.hpp" line="35" column="1" bodyfile="cohan_layers/include/cohan_layers/agent_layer_config.hpp" bodystart="35" bodyend="88"/>
+    <listofallmembers>
+      <member refid="classcohan__layers_1_1AgentLayerConfig_1a2fa325ae4497a906ebe2ac645d1508c3" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayerConfig</scope><name>agent_radius</name></member>
+      <member refid="classcohan__layers_1_1AgentLayerConfig_1a036f9cdbd7bba93c48266ad555f19f69" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayerConfig</scope><name>AgentLayerConfig</name></member>
+      <member refid="classcohan__layers_1_1AgentLayerConfig_1a87fbcf5b829e1c63637974ebcb908526" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayerConfig</scope><name>amplitude</name></member>
+      <member refid="classcohan__layers_1_1AgentLayerConfig_1aedc0937baa8fce088db5f2d12ecbc6ec" prot="private" virt="non-virtual"><scope>cohan_layers::AgentLayerConfig</scope><name>bindParameters</name></member>
+      <member refid="classcohan__layers_1_1AgentLayerConfig_1afd6e33c345087c9664a2e21971902535" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayerConfig</scope><name>enabled</name></member>
+      <member refid="classcohan__layers_1_1AgentLayerConfig_1abe3ed8f418bc52ae1004169f44ba62d4" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayerConfig</scope><name>initialize</name></member>
+      <member refid="classcohan__layers_1_1AgentLayerConfig_1a1e040c99cc3e0ab63bfce4d2b383086a" prot="private" virt="non-virtual"><scope>cohan_layers::AgentLayerConfig</scope><name>layer_name_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayerConfig_1a59096b4ab4179009cc54da31fa39ee3d" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayerConfig</scope><name>ns</name></member>
+      <member refid="classcohan__layers_1_1AgentLayerConfig_1a39326f15d4ef4c40e8dbf18331e26a25" prot="private" virt="non-virtual"><scope>cohan_layers::AgentLayerConfig</scope><name>param_helper_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayerConfig_1a7e27b8f89cd009b73cc8bc6541e5cf91" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayerConfig</scope><name>radius</name></member>
+      <member refid="classcohan__layers_1_1AgentLayerConfig_1a621f6daf4b47a100a50ca4e038ce5584" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayerConfig</scope><name>setupParameterCallback</name></member>
+      <member refid="classcohan__layers_1_1AgentLayerConfig_1ae645c1939040871519bbc79628d4785e" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayerConfig</scope><name>~AgentLayerConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

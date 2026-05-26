@@ -1,0 +1,5 @@
+<map id="hateb_local_planner::EdgeTimeOptimal" name="hateb_local_planner::EdgeTimeOptimal">
+<area shape="rect" id="node1" title="Edge defining the cost function for minimizing transition time of the trajectory." alt="" coords="39,199,192,240"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebUnaryEdge.html" title=" " alt="" coords="12,95,219,151"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,225,47"/>
+</map>

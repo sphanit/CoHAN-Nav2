@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structagents_1_1AgentPathPrediction_1_1AgentPathVel" kind="struct" language="C++" prot="private">
+    <compoundname>agents::AgentPathPrediction::AgentPathVel</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structagents_1_1AgentPathPrediction_1_1AgentPathVel_1a2ca4c529844b33fb8a6147bd41eae4ba" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t agents::AgentPathPrediction::AgentPathVel::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="112" column="14" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structagents_1_1AgentPathPrediction_1_1AgentPathVel_1af283f0bc54c2416e4c200e5f3486e299" prot="public" static="no" mutable="no">
+        <type>nav_msgs::msg::Path</type>
+        <definition>nav_msgs::msg::Path agents::AgentPathPrediction::AgentPathVel::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="113" column="25" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structagents_1_1AgentPathPrediction_1_1AgentPathVel_1a04ad28169671132ec03860955523844b" prot="public" static="no" mutable="no">
+        <type>geometry_msgs::msg::TwistWithCovariance</type>
+        <definition>geometry_msgs::msg::TwistWithCovariance agents::AgentPathPrediction::AgentPathVel::start_vel</definition>
+        <argsstring></argsstring>
+        <name>start_vel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="114" column="45" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure to store agent path and velocity information. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" line="111" column="3" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction.hpp" bodystart="111" bodyend="115"/>
+    <listofallmembers>
+      <member refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel_1a2ca4c529844b33fb8a6147bd41eae4ba" prot="public" virt="non-virtual"><scope>agents::AgentPathPrediction::AgentPathVel</scope><name>id</name></member>
+      <member refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel_1af283f0bc54c2416e4c200e5f3486e299" prot="public" virt="non-virtual"><scope>agents::AgentPathPrediction::AgentPathVel</scope><name>path</name></member>
+      <member refid="structagents_1_1AgentPathPrediction_1_1AgentPathVel_1a04ad28169671132ec03860955523844b" prot="public" virt="non-virtual"><scope>agents::AgentPathPrediction::AgentPathVel</scope><name>start_vel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

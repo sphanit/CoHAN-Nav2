@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classCTrack" kind="class" language="C++" prot="public">
+    <compoundname>CTrack</compoundname>
+    <includes refid="Ctracker_8h" local="no">Ctracker.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classCTrack_1a4297d655043af89b77494dd16fb7f650" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref> &gt;</type>
+        <definition>std::vector&lt;Point_t&gt; CTrack::trace</definition>
+        <argsstring></argsstring>
+        <name>trace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="62" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCTrack_1a92d7e1681f36ef2be1556aed2e16819d" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t CTrack::track_id</definition>
+        <argsstring></argsstring>
+        <name>track_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="63" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCTrack_1aaeb899d650f6e5a8a4ff4dd8a60b2cd4" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t CTrack::skipped_frames</definition>
+        <argsstring></argsstring>
+        <name>skipped_frames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="64" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCTrack_1a16f6ab28f0a311111839be6f5840e2f2" prot="private" static="no" mutable="no">
+        <type><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref></type>
+        <definition>Point_t CTrack::prediction</definition>
+        <argsstring></argsstring>
+        <name>prediction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="67" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCTrack_1a4be62a79112fdca5fa132c270b106b46" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::Point &gt;</type>
+        <definition>std::vector&lt;cv::Point&gt; CTrack::lastContour</definition>
+        <argsstring></argsstring>
+        <name>lastContour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="68" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCTrack_1aa062266621a62977fda4b674f2223448" prot="private" static="no" mutable="no">
+        <type><ref refid="classTKalmanFilter" kindref="compound">TKalmanFilter</ref></type>
+        <definition>TKalmanFilter CTrack::KF</definition>
+        <argsstring></argsstring>
+        <name>KF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="69" column="17" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCTrack_1a37338123b760f303d7ded5ed36d56b2d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CTrack::CTrack</definition>
+        <argsstring>(const Point_t &amp;p, const std::vector&lt; cv::Point &gt; &amp;contour, track_t dt, size_t trackID)</argsstring>
+        <name>CTrack</name>
+        <param>
+          <type>const <ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; cv::Point &gt; &amp;</type>
+          <declname>contour</declname>
+        </param>
+        <param>
+          <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref></type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>trackID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="17" column="3" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="17" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classCTrack_1affe6f8a72475aae3caf01dd4717098a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref></type>
+        <definition>track_t CTrack::CalcDist</definition>
+        <argsstring>(const Point_t &amp;p)</argsstring>
+        <name>CalcDist</name>
+        <param>
+          <type>const <ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="26" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classCTrack_1a8f239ffea231a2882194f113b93750f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CTrack::Update</definition>
+        <argsstring>(const Point_t &amp;p, const std::vector&lt; cv::Point &gt; &amp;contour, bool dataCorrect, size_t max_trace_length)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>const <ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; cv::Point &gt; &amp;</type>
+          <declname>contour</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>dataCorrect</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max_trace_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="32" column="8" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="32" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classCTrack_1aa6758bbeb2f7bc44c225b54b444a0483" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; cv::Point &gt;</type>
+        <definition>std::vector&lt;cv::Point&gt; CTrack::getLastContour</definition>
+        <argsstring>() const</argsstring>
+        <name>getLastContour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="51" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classCTrack_1ab32486b49086e5421e8f9abcd00becdd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref></type>
+        <definition>Point_t CTrack::getEstimatedVelocity</definition>
+        <argsstring>() const</argsstring>
+        <name>getEstimatedVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="57" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="57" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>TKalmanFilter</label>
+        <link refid="classTKalmanFilter"/>
+      </node>
+      <node id="1">
+        <label>CTrack</label>
+        <link refid="classCTrack"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>KF</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="14" column="1" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="15" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classCTrack_1affe6f8a72475aae3caf01dd4717098a2" prot="public" virt="non-virtual"><scope>CTrack</scope><name>CalcDist</name></member>
+      <member refid="classCTrack_1a37338123b760f303d7ded5ed36d56b2d" prot="public" virt="non-virtual"><scope>CTrack</scope><name>CTrack</name></member>
+      <member refid="classCTrack_1ab32486b49086e5421e8f9abcd00becdd" prot="public" virt="non-virtual"><scope>CTrack</scope><name>getEstimatedVelocity</name></member>
+      <member refid="classCTrack_1aa6758bbeb2f7bc44c225b54b444a0483" prot="public" virt="non-virtual"><scope>CTrack</scope><name>getLastContour</name></member>
+      <member refid="classCTrack_1aa062266621a62977fda4b674f2223448" prot="private" virt="non-virtual"><scope>CTrack</scope><name>KF</name></member>
+      <member refid="classCTrack_1a4be62a79112fdca5fa132c270b106b46" prot="private" virt="non-virtual"><scope>CTrack</scope><name>lastContour</name></member>
+      <member refid="classCTrack_1a16f6ab28f0a311111839be6f5840e2f2" prot="private" virt="non-virtual"><scope>CTrack</scope><name>prediction</name></member>
+      <member refid="classCTrack_1aaeb899d650f6e5a8a4ff4dd8a60b2cd4" prot="public" virt="non-virtual"><scope>CTrack</scope><name>skipped_frames</name></member>
+      <member refid="classCTrack_1a4297d655043af89b77494dd16fb7f650" prot="public" virt="non-virtual"><scope>CTrack</scope><name>trace</name></member>
+      <member refid="classCTrack_1a92d7e1681f36ef2be1556aed2e16819d" prot="public" virt="non-virtual"><scope>CTrack</scope><name>track_id</name></member>
+      <member refid="classCTrack_1a8f239ffea231a2882194f113b93750f0" prot="public" virt="non-virtual"><scope>CTrack</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

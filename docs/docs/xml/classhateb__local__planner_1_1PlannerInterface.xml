@@ -1,0 +1,562 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1PlannerInterface" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>hateb_local_planner::PlannerInterface</compoundname>
+    <derivedcompoundref refid="classhateb__local__planner_1_1HATebOptimalPlanner" prot="public" virt="non-virtual">hateb_local_planner::HATebOptimalPlanner</derivedcompoundref>
+    <includes refid="planner__interface_8h" local="no">planner_interface.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Plan a trajectory</header>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1PlannerInterface_1abfb070f651a503cd427dd3ac1adf3490" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::PlannerInterface::local_weight_optimaltime_</definition>
+        <argsstring></argsstring>
+        <name>local_weight_optimaltime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="182" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/planner_interface.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PlannerInterface_1aa1b6ecf56adc56f150c7d980b853e001" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool hateb_local_planner::PlannerInterface::plan</definition>
+        <argsstring>(const std::vector&lt; geometry_msgs::msg::PoseStamped &gt; &amp;initial_plan, const geometry_msgs::msg::Twist *start_vel=nullptr, bool free_goal_vel=false, const AgentPlanVelMap *initial_agent_plan_vels=nullptr, hateb_local_planner::msg::OptimizationCostArray *op_costs=nullptr, double dt_ref=0.4, double dt_hyst=0.1, int Mode=0)=0</argsstring>
+        <name>plan</name>
+        <reimplementedby refid="classhateb__local__planner_1_1HATebOptimalPlanner_1aaf933e800dc904a8298455a61009fc57">plan</reimplementedby>
+        <param>
+          <type>const std::vector&lt; geometry_msgs::msg::PoseStamped &gt; &amp;</type>
+          <declname>initial_plan</declname>
+        </param>
+        <param>
+          <type>const geometry_msgs::msg::Twist *</type>
+          <declname>start_vel</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>free_goal_vel</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const <ref refid="namespacehateb__local__planner_1a3b4752a48696bcc63570d62786fb9736" kindref="member">AgentPlanVelMap</ref> *</type>
+          <declname>initial_agent_plan_vels</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>hateb_local_planner::msg::OptimizationCostArray *</type>
+          <declname>op_costs</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_ref</declname>
+          <defval>0.4</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_hyst</declname>
+          <defval>0.1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Mode</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Plan a trajectory based on an initial reference plan. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide this method to create and optimize a trajectory that is initialized according to an initial reference plan (given as a container of poses). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initial_plan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of geometry_msgs::msg::PoseStamped </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_vel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current start velocity (e.g. the velocity of the robot, only linear.x and angular.z are used) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>free_goal_vel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default: false) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if planning was successful, <computeroutput>false</computeroutput> otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="104" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PlannerInterface_1a7794e02a171d46f1a0e5a0db75d849d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool hateb_local_planner::PlannerInterface::plan</definition>
+        <argsstring>(const PoseSE2 &amp;start, const PoseSE2 &amp;goal, const geometry_msgs::msg::Twist *start_vel=nullptr, bool free_goal_vel=false, double pre_plan_time=0.0, hateb_local_planner::msg::OptimizationCostArray *op_costs=nullptr, double dt_ref=0.4, double dt_hyst=0.1, int Mode=0)=0</argsstring>
+        <name>plan</name>
+        <reimplementedby refid="classhateb__local__planner_1_1HATebOptimalPlanner_1ac8355340ec1d4e0b134692caf8ecd119">plan</reimplementedby>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>goal</declname>
+        </param>
+        <param>
+          <type>const geometry_msgs::msg::Twist *</type>
+          <declname>start_vel</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>free_goal_vel</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>pre_plan_time</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>hateb_local_planner::msg::OptimizationCostArray *</type>
+          <declname>op_costs</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_ref</declname>
+          <defval>0.4</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_hyst</declname>
+          <defval>0.1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Mode</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Plan a trajectory between a given start and goal pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide this method to create and optimize a trajectory that is initialized between a given start and goal pose. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> containing the start pose of the trajectory </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>goal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> containing the goal pose of the trajectory </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_vel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial velocity at the start pose (twist msg containing the translational and angular velocity). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>free_goal_vel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default: false) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if planning was successful, <computeroutput>false</computeroutput> otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="119" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PlannerInterface_1a358434cc932aef04ef5c058de6e9932d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool hateb_local_planner::PlannerInterface::getVelocityCommand</definition>
+        <argsstring>(double &amp;vx, double &amp;vy, double &amp;omega, int look_ahead_poses, double dt_ref) const =0</argsstring>
+        <name>getVelocityCommand</name>
+        <reimplementedby refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a45d33cda00a92fff9d9eac95ba719182">getVelocityCommand</reimplementedby>
+        <param>
+          <type>double &amp;</type>
+          <declname>vx</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>vy</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>omega</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>look_ahead_poses</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_ref</declname>
+        </param>
+        <briefdescription>
+<para>Get the velocity command from a previously optimized plan to control the robot at the current sampling interval. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Call <ref refid="classhateb__local__planner_1_1PlannerInterface_1aa1b6ecf56adc56f150c7d980b853e001" kindref="member">plan()</ref> first and check if the generated plan is feasible. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">vx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>translational velocity [m/s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">vy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>strafing velocity which can be nonzero for holonomic robots [m/s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">omega</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rotational velocity [rad/s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">look_ahead_poses</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the final pose used to compute the velocity command. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if command is valid, <computeroutput>false</computeroutput> otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="131" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PlannerInterface_1a325a73a30d9288b7d0d25aff9cc79bf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void hateb_local_planner::PlannerInterface::clearPlanner</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearPlanner</name>
+        <reimplementedby refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a4796ce453bff8c7220ef872548d8415a">clearPlanner</reimplementedby>
+        <briefdescription>
+<para>Reset the planner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="138" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PlannerInterface_1a77c2811290d77a03dfd9f3fca759e41b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void hateb_local_planner::PlannerInterface::setPreferredTurningDir</definition>
+        <argsstring>(RotType dir)</argsstring>
+        <name>setPreferredTurningDir</name>
+        <reimplementedby refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a7f526c0b7bb86bdddb1d5e6ec53a35af">setPreferredTurningDir</reimplementedby>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1a463aa878b6972598ee87204519a60ba0" kindref="member">RotType</ref></type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Prefer a desired initial turning direction (by penalizing the opposing one) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A desired (initial) turning direction might be specified in case the planned trajectory oscillates between two solutions (in the same equivalence class!) with similar cost. Check the parameters in order to adjust the weight of the penalty. Initial means that the penalty is applied only to the first few poses of the trajectory. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter might be <ref refid="namespacehateb__local__planner_1a463aa878b6972598ee87204519a60ba0a811882fecd5c7618d7099ebbd39ea254" kindref="member">RotType::left</ref> (prefer left), <ref refid="namespacehateb__local__planner_1a463aa878b6972598ee87204519a60ba0a7c4f29407893c334a6cb7a87bf045c0d" kindref="member">RotType::right</ref> (prefer right) or <ref refid="namespacehateb__local__planner_1a463aa878b6972598ee87204519a60ba0a334c4a4c42fdb79d7ebc3e73b517e6f8" kindref="member">RotType::none</ref> (prefer none) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="148" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/planner_interface.h" bodystart="148" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PlannerInterface_1ad13778a54ca5746f9ec1f10bcfabb343" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void hateb_local_planner::PlannerInterface::visualize</definition>
+        <argsstring>()</argsstring>
+        <name>visualize</name>
+        <reimplementedby refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a8a3875ec3b9ce7438b206be1f135eddf">visualize</reimplementedby>
+        <briefdescription>
+<para>Visualize planner specific stuff. Overwrite this method to provide an interface to perform all planner related visualizations at once. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="154" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/planner_interface.h" bodystart="154" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PlannerInterface_1af03a4f8e39d652b95168a8eb3a919ec0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool hateb_local_planner::PlannerInterface::isTrajectoryFeasible</definition>
+        <argsstring>(std::shared_ptr&lt; nav2_costmap_2d::FootprintCollisionChecker&lt; nav2_costmap_2d::Costmap2D * &gt;&gt; collision_checker, const std::vector&lt; geometry_msgs::msg::Point &gt; &amp;footprint_spec, double inscribed_radius=0.0, double circumscribed_radius=0.0, int look_ahead_idx=-1)=0</argsstring>
+        <name>isTrajectoryFeasible</name>
+        <reimplementedby refid="classhateb__local__planner_1_1HATebOptimalPlanner_1abc499dacff66df22fba80074302ebf16">isTrajectoryFeasible</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; nav2_costmap_2d::FootprintCollisionChecker&lt; nav2_costmap_2d::Costmap2D * &gt;&gt;</type>
+          <declname>collision_checker</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; geometry_msgs::msg::Point &gt; &amp;</type>
+          <declname>footprint_spec</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>inscribed_radius</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>circumscribed_radius</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>look_ahead_idx</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Check whether the planned trajectory is feasible or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method currently checks only that the trajectory, or a part of the trajectory is collision free. Obstacles are here represented as costmap instead of the internal ObstacleContainer. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>collision_checker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the collision checker associated with a costmap </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>footprint_spec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The specification of the footprint of the robot in world coordinates </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inscribed_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The radius of the inscribed circle of the robot </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>circumscribed_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The radius of the circumscribed circle of the robot </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>look_ahead_idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of poses along the trajectory that should be verified, if -1, the complete trajectory will be checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput>, if the robot footprint along the first part of the trajectory intersects with any obstacle in the costmap, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="169" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PlannerInterface_1a159c88d6f69ea73631619cfe639e0212" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void hateb_local_planner::PlannerInterface::computeCurrentCost</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;cost, double obst_cost_scale=1.0, bool alternative_time_cost=false)</argsstring>
+        <name>computeCurrentCost</name>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>obst_cost_scale</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alternative_time_cost</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute and return the cost of the current optimization graph (supports multiple trajectories) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">cost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current cost value for each trajectory [for a planner with just a single trajectory: size=1, vector will not be cleared] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obst_cost_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify extra scaling for obstacle costs </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alternative_time_cost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replace the cost for the time optimal objective by the actual (weighted) transition time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="178" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/planner_interface.h" bodystart="178" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PlannerInterface_1a94c5dfe2281f2bc42d6909c50392959c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>cohan_msgs::msg::Trajectory</type>
+        <definition>virtual cohan_msgs::msg::Trajectory hateb_local_planner::PlannerInterface::getFullTrajectory</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getFullTrajectory</name>
+        <reimplementedby refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a3cd51300a03e02cf1ee8908314ce7cb2">getFullTrajectory</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="179" column="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PlannerInterface_1a6a71e3a4cb48bfd4c2ef94b849e8ab53" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>cohan_msgs::msg::Trajectory</type>
+        <definition>virtual cohan_msgs::msg::Trajectory hateb_local_planner::PlannerInterface::getFullAgentTrajectory</definition>
+        <argsstring>(uint64_t agent_id)=0</argsstring>
+        <name>getFullAgentTrajectory</name>
+        <reimplementedby refid="classhateb__local__planner_1_1HATebOptimalPlanner_1a594a3e75c4d27969f790be3337b1a215">getFullAgentTrajectory</reimplementedby>
+        <param>
+          <type>uint64_t</type>
+          <declname>agent_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="180" column="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1PlannerInterface_1ac6728ebca6d43636f825ea4f61c5da0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::PlannerInterface::PlannerInterface</definition>
+        <argsstring>()=default</argsstring>
+        <name>PlannerInterface</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="84" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PlannerInterface_1a5e36c90af485d53a5d9fe1701d86714a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual hateb_local_planner::PlannerInterface::~PlannerInterface</definition>
+        <argsstring>()=default</argsstring>
+        <name>~PlannerInterface</name>
+        <briefdescription>
+<para>Virtual destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="88" column="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This abstract class defines an interface for local planners. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hateb_local_planner::HATebOptimalPlanner</label>
+        <link refid="classhateb__local__planner_1_1HATebOptimalPlanner"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::PlannerInterface</label>
+        <link refid="classhateb__local__planner_1_1PlannerInterface"/>
+      </node>
+    </inheritancegraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/planner_interface.h" line="79" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/planner_interface.h" bodystart="79" bodyend="183"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1a325a73a30d9288b7d0d25aff9cc79bf9" prot="public" virt="pure-virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>clearPlanner</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1a159c88d6f69ea73631619cfe639e0212" prot="public" virt="virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>computeCurrentCost</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1a6a71e3a4cb48bfd4c2ef94b849e8ab53" prot="public" virt="pure-virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>getFullAgentTrajectory</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1a94c5dfe2281f2bc42d6909c50392959c" prot="public" virt="pure-virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>getFullTrajectory</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1a358434cc932aef04ef5c058de6e9932d" prot="public" virt="pure-virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>getVelocityCommand</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1af03a4f8e39d652b95168a8eb3a919ec0" prot="public" virt="pure-virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>isTrajectoryFeasible</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1abfb070f651a503cd427dd3ac1adf3490" prot="public" virt="non-virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>local_weight_optimaltime_</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1aa1b6ecf56adc56f150c7d980b853e001" prot="public" virt="pure-virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>plan</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1a7794e02a171d46f1a0e5a0db75d849d0" prot="public" virt="pure-virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>plan</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1ac6728ebca6d43636f825ea4f61c5da0e" prot="public" virt="non-virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>PlannerInterface</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1a77c2811290d77a03dfd9f3fca759e41b" prot="public" virt="virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>setPreferredTurningDir</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1ad13778a54ca5746f9ec1f10bcfabb343" prot="public" virt="virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>visualize</name></member>
+      <member refid="classhateb__local__planner_1_1PlannerInterface_1a5e36c90af485d53a5d9fe1701d86714a" prot="public" virt="virtual"><scope>hateb_local_planner::PlannerInterface</scope><name>~PlannerInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

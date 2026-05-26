@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_b299645c5bac397bf09e80918e071f0e" kind="dir">
+    <compoundname>hateb_local_planner</compoundname>
+    <innerdir refid="dir_0fe1cbd59a03f8dfb7b2f8f7d4b04b58">behavior_tree</innerdir>
+    <innerdir refid="dir_e1f18391171a62395bb327dee6b2ae22">g2o_types</innerdir>
+    <innerfile refid="agents__class_8hpp">agents_class.hpp</innerfile>
+    <innerfile refid="distance__calculations_8h">distance_calculations.h</innerfile>
+    <innerfile refid="footprint__model_8h">footprint_model.h</innerfile>
+    <innerfile refid="hateb__config_8hpp">hateb_config.hpp</innerfile>
+    <innerfile refid="hateb__goal__checker_8hpp">hateb_goal_checker.hpp</innerfile>
+    <innerfile refid="hateb__local__planner__ros_8h">hateb_local_planner_ros.h</innerfile>
+    <innerfile refid="hateb__local__planner_2include_2hateb__local__planner_2misc_8h">hateb_local_planner/include/hateb_local_planner/misc.h</innerfile>
+    <innerfile refid="mode__switch_8h">mode_switch.h</innerfile>
+    <innerfile refid="obstacles_8h">obstacles.h</innerfile>
+    <innerfile refid="optimal__planner_8h">optimal_planner.h</innerfile>
+    <innerfile refid="planner__interface_8h">planner_interface.h</innerfile>
+    <innerfile refid="pose__se2_8h">pose_se2.h</innerfile>
+    <innerfile refid="recovery__behaviors_8h">recovery_behaviors.h</innerfile>
+    <innerfile refid="timed__elastic__band_8hpp">timed_elastic_band.hpp</innerfile>
+    <innerfile refid="visualization_8hpp">visualization.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/"/>
+  </compounddef>
+</doxygen>

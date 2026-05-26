@@ -1,0 +1,14 @@
+.. _exhale_define_backoff_8cpp_1a28505835e5427c2308453f69c4bffa07:
+
+Define GET_PLAN_SRV_NAME
+========================
+
+- Defined in :ref:`file_hateb_local_planner_src_backoff.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: GET_PLAN_SRV_NAME
+   :project: CoHAN-Nav2

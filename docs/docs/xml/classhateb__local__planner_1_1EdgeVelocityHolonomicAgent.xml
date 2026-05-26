@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgeVelocityHolonomicAgent" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgeVelocityHolonomicAgent</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebMultiEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebMultiEdge&lt; 4, double &gt;</basecompoundref>
+    <includes refid="edge__velocity_8h" local="no">edge_velocity.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1EdgeVelocityHolonomicAgent_1ac764dd7adf29285809141059cc438f3a" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::EdgeVelocityHolonomicAgent::nominal_vel_</definition>
+        <argsstring></argsstring>
+        <name>nominal_vel_</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_velocity.h" line="338" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_velocity.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeVelocityHolonomicAgent_1a0a570a2781d01127a901540dfa139afc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeVelocityHolonomicAgent::EdgeVelocityHolonomicAgent</definition>
+        <argsstring>()</argsstring>
+        <name>EdgeVelocityHolonomicAgent</name>
+        <briefdescription>
+<para>Construct edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_velocity.h" line="292" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_velocity.h" bodystart="292" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeVelocityHolonomicAgent_1ab4e1915201fb78c663973e6256e5015f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeVelocityHolonomicAgent::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Actual cost function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_velocity.h" line="299" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_velocity.h" bodystart="299" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeVelocityHolonomicAgent_1a333600b527952e7977725367f5e92d5b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeVelocityHolonomicAgent::setParameters</definition>
+        <argsstring>(const HATebConfig &amp;cfg, const double nominal_vel)</argsstring>
+        <name>setParameters</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> &amp;</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>nominal_vel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_velocity.h" line="332" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_velocity.h" bodystart="332" bodyend="335"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hateb_local_planner::EdgeVelocityHolonomicAgent</label>
+        <link refid="classhateb__local__planner_1_1EdgeVelocityHolonomicAgent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseMultiEdge&lt; D, double &gt;</label>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebMultiEdge&lt; 4, double &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebMultiEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hateb_local_planner::EdgeVelocityHolonomicAgent</label>
+        <link refid="classhateb__local__planner_1_1EdgeVelocityHolonomicAgent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseMultiEdge&lt; D, double &gt;</label>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebMultiEdge&lt; 4, double &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebMultiEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_velocity.h" line="287" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_velocity.h" bodystart="287" bodyend="342"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeVelocityHolonomicAgent</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeVelocityHolonomicAgent_1ab4e1915201fb78c663973e6256e5015f" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeVelocityHolonomicAgent</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeVelocityHolonomicAgent_1a0a570a2781d01127a901540dfa139afc" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeVelocityHolonomicAgent</scope><name>EdgeVelocityHolonomicAgent</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a3783b6cfd9f8666ecb000b07c25758f4" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeVelocityHolonomicAgent</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeVelocityHolonomicAgent_1ac764dd7adf29285809141059cc438f3a" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeVelocityHolonomicAgent</scope><name>nominal_vel_</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a77ae43578b59d5ac54ffe9d50a859255" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeVelocityHolonomicAgent</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a57f2fb741d0ded5f4491d4602919c5a3" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeVelocityHolonomicAgent</scope><name>resize</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1ae126de1d25032cf83de82823cdcf74bc" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeVelocityHolonomicAgent</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeVelocityHolonomicAgent_1a333600b527952e7977725367f5e92d5b" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeVelocityHolonomicAgent</scope><name>setParameters</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1af763878f2200a5cf70b3b7d6c5a86b78" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeVelocityHolonomicAgent</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

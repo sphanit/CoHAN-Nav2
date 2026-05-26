@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1IsGoalUpdated" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::IsGoalUpdated</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BT::ConditionNode</basecompoundref>
+    <includes refid="is__goal__updated_8h" local="no">is_goal_updated.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1IsGoalUpdated_1a73f0a0201931f5a3f578f740f9feffd4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::IsGoalUpdated::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_updated.h" line="74" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_updated.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalUpdated_1a9375a71ef2c274a93170f6acdaab57cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::IsGoalUpdated::IsGoalUpdated</definition>
+        <argsstring>(const std::string &amp;condition_name, const BT::NodeConfiguration &amp;conf)</argsstring>
+        <name>IsGoalUpdated</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>condition_name</declname>
+        </param>
+        <param>
+          <type>const BT::NodeConfiguration &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with condition name and configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>condition_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the condition node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration for the behavior tree node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_updated.h" line="46" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/is_goal_updated.cpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalUpdated_1ac97c87faa7fc89bcff038bb646bf38f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::IsGoalUpdated::IsGoalUpdated</definition>
+        <argsstring>()=delete</argsstring>
+        <name>IsGoalUpdated</name>
+        <briefdescription>
+<para>Deleted default constructor to enforce proper initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_updated.h" line="51" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalUpdated_1a39b5e538557deeb5aa781fe896a2234c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::IsGoalUpdated::~IsGoalUpdated</definition>
+        <argsstring>() override</argsstring>
+        <name>~IsGoalUpdated</name>
+        <briefdescription>
+<para>Virtual destructor for cleanup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_updated.h" line="56" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/is_goal_updated.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalUpdated_1a3d8a661302ba20b434dfcc314272311d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BT::NodeStatus</type>
+        <definition>BT::NodeStatus hateb_local_planner::IsGoalUpdated::tick</definition>
+        <argsstring>() override</argsstring>
+        <name>tick</name>
+        <briefdescription>
+<para>Method called to evaluate if goal has been updated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>SUCCESS if goal has been updated and not in recovery, FAILURE otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_updated.h" line="62" column="18" bodyfile="hateb_local_planner/src/behavior_tree/condition/is_goal_updated.cpp" bodystart="42" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1IsGoalUpdated_1abdeedfd907adbfd10d62a0e81a2c38ae" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BT::PortsList</type>
+        <definition>static BT::PortsList hateb_local_planner::IsGoalUpdated::providedPorts</definition>
+        <argsstring>()</argsstring>
+        <name>providedPorts</name>
+        <briefdescription>
+<para>Defines input ports for condition evaluation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ports list containing goal_update and recovery status as inputs </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Flag indicating if goal was updated</para>
+<para>&lt; Flag indicating if in recovery mode</para>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_updated.h" line="68" column="24" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_updated.h" bodystart="68" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class implementing a condition node for checking if navigation goal has been updated. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class monitors updates to the robot&apos;s navigation goal and provides functionality to detect when a new goal has been set. This is important for handling goal changes during navigation and recovery behaviors. It inherits from BT::ConditionNode to integrate with the behavior tree framework. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::IsGoalUpdated</label>
+        <link refid="classhateb__local__planner_1_1IsGoalUpdated"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::IsGoalUpdated</label>
+        <link refid="classhateb__local__planner_1_1IsGoalUpdated"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_updated.h" line="39" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/is_goal_updated.h" bodystart="39" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1IsGoalUpdated_1a9375a71ef2c274a93170f6acdaab57cd" prot="public" virt="non-virtual"><scope>hateb_local_planner::IsGoalUpdated</scope><name>IsGoalUpdated</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalUpdated_1ac97c87faa7fc89bcff038bb646bf38f5" prot="public" virt="non-virtual"><scope>hateb_local_planner::IsGoalUpdated</scope><name>IsGoalUpdated</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalUpdated_1a73f0a0201931f5a3f578f740f9feffd4" prot="private" virt="non-virtual"><scope>hateb_local_planner::IsGoalUpdated</scope><name>name_</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalUpdated_1abdeedfd907adbfd10d62a0e81a2c38ae" prot="public" virt="non-virtual"><scope>hateb_local_planner::IsGoalUpdated</scope><name>providedPorts</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalUpdated_1a3d8a661302ba20b434dfcc314272311d" prot="public" virt="non-virtual"><scope>hateb_local_planner::IsGoalUpdated</scope><name>tick</name></member>
+      <member refid="classhateb__local__planner_1_1IsGoalUpdated_1a39b5e538557deeb5aa781fe896a2234c" prot="public" virt="non-virtual"><scope>hateb_local_planner::IsGoalUpdated</scope><name>~IsGoalUpdated</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

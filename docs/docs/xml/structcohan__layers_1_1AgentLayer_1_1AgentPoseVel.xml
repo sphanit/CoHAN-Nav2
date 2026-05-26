@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel" kind="struct" language="C++" prot="protected">
+    <compoundname>cohan_layers::AgentLayer::AgentPoseVel</compoundname>
+    <includes refid="agent__layer_8hpp" local="no">agent_layer.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1accbd201e11ad255b88069c7cdbe8ecf6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cohan_layers::AgentLayer::AgentPoseVel::track_id</definition>
+        <argsstring></argsstring>
+        <name>track_id</name>
+        <briefdescription>
+<para>Unique identifier for the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="96" column="9" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a8fe631617b2f0ed56f81b90939d0fe71" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cohan_layers::AgentLayer::AgentPoseVel::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>Type of the agent (e.g., human, robot) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="97" column="9" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a2ee76c0dcdaf9c4c4c9291279c1fdfaa" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cohan_layers::AgentLayer::AgentPoseVel::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+<para>State of the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="98" column="9" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a55031d6589ae289874a8af4290821d26" prot="public" static="no" mutable="no">
+        <type>std_msgs::msg::Header</type>
+        <definition>std_msgs::msg::Header cohan_layers::AgentLayer::AgentPoseVel::header</definition>
+        <argsstring></argsstring>
+        <name>header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="99" column="27" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a421b083f8a70ad3d1929c9f8553ef985" prot="public" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose cohan_layers::AgentLayer::AgentPoseVel::pose</definition>
+        <argsstring></argsstring>
+        <name>pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="100" column="30" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a3d1f600b5ab07614c39a56b9df2f77c5" prot="public" static="no" mutable="no">
+        <type>geometry_msgs::msg::Twist</type>
+        <definition>geometry_msgs::msg::Twist cohan_layers::AgentLayer::AgentPoseVel::velocity</definition>
+        <argsstring></argsstring>
+        <name>velocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="101" column="31" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="95" column="3" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="95" bodyend="102"/>
+    <listofallmembers>
+      <member refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a55031d6589ae289874a8af4290821d26" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayer::AgentPoseVel</scope><name>header</name></member>
+      <member refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a421b083f8a70ad3d1929c9f8553ef985" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayer::AgentPoseVel</scope><name>pose</name></member>
+      <member refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a2ee76c0dcdaf9c4c4c9291279c1fdfaa" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayer::AgentPoseVel</scope><name>state</name></member>
+      <member refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1accbd201e11ad255b88069c7cdbe8ecf6" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayer::AgentPoseVel</scope><name>track_id</name></member>
+      <member refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a8fe631617b2f0ed56f81b90939d0fe71" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayer::AgentPoseVel</scope><name>type</name></member>
+      <member refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel_1a3d1f600b5ab07614c39a56b9df2f77c5" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayer::AgentPoseVel</scope><name>velocity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

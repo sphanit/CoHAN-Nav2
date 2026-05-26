@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_f8dcef7c33bcf85ec897ff1e67434dce" kind="dir">
+    <compoundname>agent_path_prediction</compoundname>
+    <innerdir refid="dir_19b1c7ecbfa3968de7cbe23176ccfd17">include</innerdir>
+    <innerdir refid="dir_fb93ed3c2fe05328328a192747b956c5">src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="agent_path_prediction/"/>
+  </compounddef>
+</doxygen>

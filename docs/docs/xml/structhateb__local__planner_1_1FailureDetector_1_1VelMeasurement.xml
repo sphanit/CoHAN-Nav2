@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhateb__local__planner_1_1FailureDetector_1_1VelMeasurement" kind="struct" language="C++" prot="protected">
+    <compoundname>hateb_local_planner::FailureDetector::VelMeasurement</compoundname>
+    <includes refid="recovery__behaviors_8h" local="no">recovery_behaviors.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhateb__local__planner_1_1FailureDetector_1_1VelMeasurement_1aa2850459b4bee97645d32f82a0f14e5d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::FailureDetector::VelMeasurement::v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="106" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1FailureDetector_1_1VelMeasurement_1af164608b9be8ee9071e415de76c764cd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::FailureDetector::VelMeasurement::omega</definition>
+        <argsstring></argsstring>
+        <name>omega</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="107" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Variables to be monitored </para>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" line="105" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/recovery_behaviors.h" bodystart="105" bodyend="108"/>
+    <listofallmembers>
+      <member refid="structhateb__local__planner_1_1FailureDetector_1_1VelMeasurement_1af164608b9be8ee9071e415de76c764cd" prot="public" virt="non-virtual"><scope>hateb_local_planner::FailureDetector::VelMeasurement</scope><name>omega</name></member>
+      <member refid="structhateb__local__planner_1_1FailureDetector_1_1VelMeasurement_1aa2850459b4bee97645d32f82a0f14e5d" prot="public" virt="non-virtual"><scope>hateb_local_planner::FailureDetector::VelMeasurement</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

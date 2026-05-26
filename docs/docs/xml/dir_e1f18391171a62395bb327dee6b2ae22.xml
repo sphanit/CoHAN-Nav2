@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_e1f18391171a62395bb327dee6b2ae22" kind="dir">
+    <compoundname>g2o_types</compoundname>
+    <innerfile refid="base__teb__edges_8h">base_teb_edges.h</innerfile>
+    <innerfile refid="edge__acceleration_8h">edge_acceleration.h</innerfile>
+    <innerfile refid="edge__agent__agent__safety_8h">edge_agent_agent_safety.h</innerfile>
+    <innerfile refid="edge__agent__robot__rel__velocity_8h">edge_agent_robot_rel_velocity.h</innerfile>
+    <innerfile refid="edge__agent__robot__safety_8h">edge_agent_robot_safety.h</innerfile>
+    <innerfile refid="edge__agent__robot__visibility_8h">edge_agent_robot_visibility.h</innerfile>
+    <innerfile refid="edge__dynamic__obstacle_8h">edge_dynamic_obstacle.h</innerfile>
+    <innerfile refid="edge__invisible__human_8h">edge_invisible_human.h</innerfile>
+    <innerfile refid="edge__kinematics_8h">edge_kinematics.h</innerfile>
+    <innerfile refid="edge__obstacle_8h">edge_obstacle.h</innerfile>
+    <innerfile refid="edge__prefer__rotdir_8h">edge_prefer_rotdir.h</innerfile>
+    <innerfile refid="edge__shortest__path_8h">edge_shortest_path.h</innerfile>
+    <innerfile refid="edge__static__agent__visibility_8h">edge_static_agent_visibility.h</innerfile>
+    <innerfile refid="edge__time__optimal_8h">edge_time_optimal.h</innerfile>
+    <innerfile refid="edge__velocity_8h">edge_velocity.h</innerfile>
+    <innerfile refid="edge__via__point_8h">edge_via_point.h</innerfile>
+    <innerfile refid="penalties_8h">penalties.h</innerfile>
+    <innerfile refid="vertex__pose_8h">vertex_pose.h</innerfile>
+    <innerfile refid="vertex__timediff_8h">vertex_timediff.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/"/>
+  </compounddef>
+</doxygen>

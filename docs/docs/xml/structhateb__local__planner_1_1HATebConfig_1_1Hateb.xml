@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhateb__local__planner_1_1HATebConfig_1_1Hateb" kind="struct" language="C++" prot="public">
+    <compoundname>hateb_local_planner::HATebConfig::Hateb</compoundname>
+    <includes refid="hateb__config_8hpp" local="no">hateb_config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1ae661cc4ed14cdd70726c90e3ae378cc4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Hateb::use_agent_robot_safety_c</definition>
+        <argsstring></argsstring>
+        <name>use_agent_robot_safety_c</name>
+        <briefdescription>
+<para>Enable agent-robot safety constraints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="243" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1ae38862558173772c65e05126662abad2" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Hateb::use_agent_agent_safety_c</definition>
+        <argsstring></argsstring>
+        <name>use_agent_agent_safety_c</name>
+        <briefdescription>
+<para>Enable agent-agent safety constraints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="244" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1aea87069bac63102858bd580a2ade46f0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Hateb::use_agent_robot_rel_vel_c</definition>
+        <argsstring></argsstring>
+        <name>use_agent_robot_rel_vel_c</name>
+        <briefdescription>
+<para>Enable relative velocity constraints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="245" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a6e38ed67abafe64dc3e7a269817ba345" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Hateb::add_invisible_humans</definition>
+        <argsstring></argsstring>
+        <name>add_invisible_humans</name>
+        <briefdescription>
+<para>Include invisible humans in planning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="246" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a7eccf723beca67289fe888f39dc25728" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Hateb::use_agent_robot_visi_c</definition>
+        <argsstring></argsstring>
+        <name>use_agent_robot_visi_c</name>
+        <briefdescription>
+<para>Enable visibility constraints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="247" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a9791b284ee3899e1fbb04daf44727822" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Hateb::use_agent_elastic_vel</definition>
+        <argsstring></argsstring>
+        <name>use_agent_elastic_vel</name>
+        <briefdescription>
+<para>Enable elastic velocity constraints for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="248" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1ac893fe24c018ec17a0476fb577e52097" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Hateb::pose_prediction_reset_time</definition>
+        <argsstring></argsstring>
+        <name>pose_prediction_reset_time</name>
+        <briefdescription>
+<para>Time after which pose prediction is reset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="249" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a5341ada4833a655a43134d7bf064650e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Hateb::min_agent_robot_dist</definition>
+        <argsstring></argsstring>
+        <name>min_agent_robot_dist</name>
+        <briefdescription>
+<para>Minimum distance that should be maintained agent and robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="250" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1aa93c9f5b6e5786fdda5c2f1cf0f12314" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Hateb::min_agent_agent_dist</definition>
+        <argsstring></argsstring>
+        <name>min_agent_agent_dist</name>
+        <briefdescription>
+<para>Minimum distance that should be maintained between agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="251" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a468389bdf24aec0362705b837ca74361" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Hateb::rel_vel_cost_threshold</definition>
+        <argsstring></argsstring>
+        <name>rel_vel_cost_threshold</name>
+        <briefdescription>
+<para>Threshold value for Relative Velocity Constraint (lower means higher reaction) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="252" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a8f8062a5fd9b16eec2c466a68cc5b9fb" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Hateb::invisible_human_threshold</definition>
+        <argsstring></argsstring>
+        <name>invisible_human_threshold</name>
+        <briefdescription>
+<para>Threshold value for Invisible Humans Constraint (higher means higher reaction) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="253" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a5afcdd266e968dc6bf5cbf899864b6c4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Hateb::visibility_cost_threshold</definition>
+        <argsstring></argsstring>
+        <name>visibility_cost_threshold</name>
+        <briefdescription>
+<para>Threshold value for Visibility Constraint (lower means higher reaction) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="254" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a6a04e1c11f0353dfe3778fd062db8744" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Hateb::prediction_time_horizon</definition>
+        <argsstring></argsstring>
+        <name>prediction_time_horizon</name>
+        <briefdescription>
+<para>Prediction time horizon for constant velocity agent path prediction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="255" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="242" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="242" bodyend="256"/>
+    <listofallmembers>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a6e38ed67abafe64dc3e7a269817ba345" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>add_invisible_humans</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a8f8062a5fd9b16eec2c466a68cc5b9fb" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>invisible_human_threshold</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1aa93c9f5b6e5786fdda5c2f1cf0f12314" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>min_agent_agent_dist</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a5341ada4833a655a43134d7bf064650e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>min_agent_robot_dist</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1ac893fe24c018ec17a0476fb577e52097" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>pose_prediction_reset_time</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a6a04e1c11f0353dfe3778fd062db8744" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>prediction_time_horizon</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a468389bdf24aec0362705b837ca74361" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>rel_vel_cost_threshold</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1ae38862558173772c65e05126662abad2" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>use_agent_agent_safety_c</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a9791b284ee3899e1fbb04daf44727822" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>use_agent_elastic_vel</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1aea87069bac63102858bd580a2ade46f0" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>use_agent_robot_rel_vel_c</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1ae661cc4ed14cdd70726c90e3ae378cc4" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>use_agent_robot_safety_c</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a7eccf723beca67289fe888f39dc25728" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>use_agent_robot_visi_c</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb_1a5afcdd266e968dc6bf5cbf899864b6c4" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Hateb</scope><name>visibility_cost_threshold</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

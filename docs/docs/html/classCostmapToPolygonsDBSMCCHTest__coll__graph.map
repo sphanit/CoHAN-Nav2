@@ -1,0 +1,8 @@
+<map id="CostmapToPolygonsDBSMCCHTest" name="CostmapToPolygonsDBSMCCHTest">
+<area shape="rect" id="node1" title=" " alt="" coords="1028,31,1275,57"/>
+<area shape="rect" id="node2" title=" " alt="" coords="706,5,807,32"/>
+<area shape="rect" id="node3" href="$classCostmapToPolygons.html" title=" " alt="" coords="680,56,833,83"/>
+<area shape="rect" id="node4" href="$classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html" title="This class converts the costmap_2d into a set of convex polygons (and points)" alt="" coords="411,49,631,90"/>
+<area shape="rect" id="node5" href="$classcostmap__converter_1_1BaseCostmapToPolygons.html" title="This abstract class defines the interface for plugins that convert the costmap into polygon types." alt="" coords="23,11,208,53"/>
+<area shape="rect" id="node6" href="$structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html" title="Defines the parameters of the algorithm." alt="" coords="5,77,225,133"/>
+</map>

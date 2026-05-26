@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="footprint__model_8h" kind="file" language="C++">
+    <compoundname>footprint_model.h</compoundname>
+    <includes refid="obstacles_8h" local="no">hateb_local_planner/obstacles.h</includes>
+    <includes refid="pose__se2_8h" local="no">hateb_local_planner/pose_se2.h</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">visualization_msgs/msg/marker.hpp</includes>
+    <includedby refid="edge__agent__robot__safety_8h" local="no">edge_agent_robot_safety.h</includedby>
+    <includedby refid="edge__dynamic__obstacle_8h" local="no">edge_dynamic_obstacle.h</includedby>
+    <includedby refid="edge__invisible__human_8h" local="no">edge_invisible_human.h</includedby>
+    <includedby refid="edge__obstacle_8h" local="no">edge_obstacle.h</includedby>
+    <includedby refid="hateb__config_8hpp" local="no">hateb_config.hpp</includedby>
+    <includedby refid="optimal__planner_8h" local="no">optimal_planner.h</includedby>
+    <includedby refid="visualization_8hpp" local="no">visualization.hpp</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>boost/pointer_cast.hpp</label>
+      </node>
+      <node id="13">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="15">
+        <label>geometry_msgs/msg/polygon.hpp</label>
+      </node>
+      <node id="1">
+        <label>footprint_model.h</label>
+        <link refid="footprint__model_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="22">
+        <label>geometry_msgs/msg/pose.hpp</label>
+      </node>
+      <node id="5">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="24">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="21">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="17">
+        <label>geometry_msgs/msg/twist_with_covariance.hpp</label>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner/misc.h</label>
+        <link refid="hateb__local__planner_2include_2hateb__local__planner_2misc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Eigen/StdVector</label>
+      </node>
+      <node id="16">
+        <label>geometry_msgs/msg/quaternion_stamped.hpp</label>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner/obstacles.h</label>
+        <link refid="obstacles_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="18">
+        <label>utility</label>
+      </node>
+      <node id="7">
+        <label>boost/utility.hpp</label>
+      </node>
+      <node id="23">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="19">
+        <label>hateb_local_planner/pose_se2.h</label>
+        <link refid="pose__se2_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>g2o/stuff/misc.h</label>
+      </node>
+      <node id="14">
+        <label>complex</label>
+      </node>
+      <node id="9">
+        <label>algorithm</label>
+      </node>
+      <node id="3">
+        <label>hateb_local_planner/distance_calculations.h</label>
+        <link refid="distance__calculations_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>boost/type_traits.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="21">
+        <label>vel_obs_exit_condition.h</label>
+        <link refid="vel__obs__exit__condition_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>edge_obstacle.h</label>
+        <link refid="edge__obstacle_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>edge_agent_robot_rel_velocity.h</label>
+        <link refid="edge__agent__robot__rel__velocity_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>passthrough_condition.cpp</label>
+        <link refid="passthrough__condition_8cpp"/>
+      </node>
+      <node id="23">
+        <label>agents_class.cpp</label>
+        <link refid="agents__class_8cpp"/>
+      </node>
+      <node id="34">
+        <label>edge_velocity.h</label>
+        <link refid="edge__velocity_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>vel_obs_exit_condition.cpp</label>
+        <link refid="vel__obs__exit__condition_8cpp"/>
+      </node>
+      <node id="1">
+        <label>footprint_model.h</label>
+        <link refid="footprint__model_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>visualization.cpp</label>
+        <link refid="visualization_8cpp"/>
+      </node>
+      <node id="19">
+        <label>single_band_exit_condition.h</label>
+        <link refid="single__band__exit__condition_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>hateb_local_planner_ros.cpp</label>
+        <link refid="hateb__local__planner__ros_8cpp"/>
+      </node>
+      <node id="24">
+        <label>base_teb_edges.h</label>
+        <link refid="base__teb__edges_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>agents_class.hpp</label>
+        <link refid="agents__class_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>edge_shortest_path.h</label>
+        <link refid="edge__shortest__path_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>edge_invisible_human.h</label>
+        <link refid="edge__invisible__human_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dual_band_exit_condition.h</label>
+        <link refid="dual__band__exit__condition_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>edge_dynamic_obstacle.h</label>
+        <link refid="edge__dynamic__obstacle_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>edge_agent_robot_visibility.h</label>
+        <link refid="edge__agent__robot__visibility_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>passthrough_condition.h</label>
+        <link refid="passthrough__condition_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>hateb_config.hpp</label>
+        <link refid="hateb__config_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>edge_via_point.h</label>
+        <link refid="edge__via__point_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>edge_kinematics.h</label>
+        <link refid="edge__kinematics_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>dual_band_exit_condition.cpp</label>
+        <link refid="dual__band__exit__condition_8cpp"/>
+      </node>
+      <node id="14">
+        <label>mode_switch.h</label>
+        <link refid="mode__switch_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>edge_agent_agent_safety.h</label>
+        <link refid="edge__agent__agent__safety_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>single_band_exit_condition.cpp</label>
+        <link refid="single__band__exit__condition_8cpp"/>
+      </node>
+      <node id="37">
+        <label>hateb_config.cpp</label>
+        <link refid="hateb__config_8cpp"/>
+      </node>
+      <node id="15">
+        <label>mode_switch.cpp</label>
+        <link refid="mode__switch_8cpp"/>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner_ros.h</label>
+        <link refid="hateb__local__planner__ros_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>edge_static_agent_visibility.h</label>
+        <link refid="edge__static__agent__visibility_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>optimal_planner.h</label>
+        <link refid="optimal__planner_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>edge_agent_robot_safety.h</label>
+        <link refid="edge__agent__robot__safety_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>edge_time_optimal.h</label>
+        <link refid="edge__time__optimal_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>optimal_planner.cpp</label>
+        <link refid="optimal__planner_8cpp"/>
+      </node>
+      <node id="36">
+        <label>visualization.hpp</label>
+        <link refid="visualization_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>edge_acceleration.h</label>
+        <link refid="edge__acceleration_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>edge_prefer_rotdir.h</label>
+        <link refid="edge__prefer__rotdir_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhateb__local__planner_1_1BaseFootprintModel" prot="public">hateb_local_planner::BaseFootprintModel</innerclass>
+    <innerclass refid="classhateb__local__planner_1_1PointFootprint" prot="public">hateb_local_planner::PointFootprint</innerclass>
+    <innerclass refid="classhateb__local__planner_1_1CircularFootprint" prot="public">hateb_local_planner::CircularFootprint</innerclass>
+    <innerclass refid="classhateb__local__planner_1_1TwoCirclesFootprint" prot="public">hateb_local_planner::TwoCirclesFootprint</innerclass>
+    <innerclass refid="classhateb__local__planner_1_1LineFootprint" prot="public">hateb_local_planner::LineFootprint</innerclass>
+    <innerclass refid="classhateb__local__planner_1_1PolygonFootprint" prot="public">hateb_local_planner::PolygonFootprint</innerclass>
+    <innernamespace refid="namespacehateb__local__planner">hateb_local_planner</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Modified<sp/>by<sp/>Phani<sp/>Teja<sp/>Singamaneni<sp/>in<sp/>2021</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Additional<sp/>changes<sp/>licensed<sp/>under<sp/>the<sp/>MIT<sp/>License.<sp/>See<sp/>LICENSE<sp/>file.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(BSD<sp/>License)</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2016,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>TU<sp/>Dortmund<sp/>-<sp/>Institute<sp/>of<sp/>Control<sp/>Theory<sp/>and<sp/>Systems<sp/>Engineering.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>copyright<sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>disclaimer<sp/>in<sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>institute<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/><sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/><sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Christoph<sp/>Rösmann</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ROBOT_FOOTPRINT_MODEL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROBOT_FOOTPRINT_MODEL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="obstacles_8h" kindref="compound">hateb_local_planner/obstacles.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="pose__se2_8h" kindref="compound">hateb_local_planner/pose_se2.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;visualization_msgs/msg/marker.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehateb__local__planner" kindref="compound">hateb_local_planner</ref><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classhateb__local__planner_1_1BaseFootprintModel" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1BaseFootprintModel" kindref="compound">BaseFootprintModel</ref><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66" refid="classhateb__local__planner_1_1BaseFootprintModel_1a23994e2593de8cedf5f839058407d8ec" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel_1a23994e2593de8cedf5f839058407d8ec" kindref="member">BaseFootprintModel</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classhateb__local__planner_1_1BaseFootprintModel_1a011c4b6ecc51affad4f90b37330f52ee" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel_1a011c4b6ecc51affad4f90b37330f52ee" kindref="member">~BaseFootprintModel</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classhateb__local__planner_1_1BaseFootprintModel_1a72b681ecb2473cef98a42bebd4472945" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel_1a72b681ecb2473cef98a42bebd4472945" kindref="member">calculateDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>*<sp/>obstacle)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classhateb__local__planner_1_1BaseFootprintModel_1ae162fde4a89a0101cca339a3704e27f1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel_1ae162fde4a89a0101cca339a3704e27f1" kindref="member">estimateSpatioTemporalDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>*<sp/>obstacle,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classhateb__local__planner_1_1BaseFootprintModel_1ab9bd7f908bba3c23049b208a64a03909" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel_1ab9bd7f908bba3c23049b208a64a03909" kindref="member">visualizeModel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/>std::vector&lt;visualization_msgs::msg::Marker&gt;&amp;<sp/>markers,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std_msgs::msg::ColorRGBA&amp;<sp/>color)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classhateb__local__planner_1_1BaseFootprintModel_1a805f1e7b919244211f1deb4f884e06de" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel_1a805f1e7b919244211f1deb4f884e06de" kindref="member">getInscribedRadius</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classhateb__local__planner_1_1BaseFootprintModel_1af6f9b6e83795e0ccf558d15c69e50e12" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel_1af6f9b6e83795e0ccf558d15c69e50e12" kindref="member">getCircumscribedRadius</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>EIGEN_MAKE_ALIGNED_OPERATOR_NEW</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="namespacehateb__local__planner_1abe95adae9e2ba3cab50c815dba133141" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacehateb__local__planner_1abe95adae9e2ba3cab50c815dba133141" kindref="member">FootprintModelPtr</ref><sp/>=<sp/>std::shared_ptr&lt;BaseFootprintModel&gt;;</highlight></codeline>
+<codeline lineno="120" refid="namespacehateb__local__planner_1a61e35a486d15614f831b378fa459f2b0" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacehateb__local__planner_1a61e35a486d15614f831b378fa459f2b0" kindref="member">FootprintModelConstPtr</ref><sp/>=<sp/>std::shared_ptr&lt;const<sp/>BaseFootprintModel&gt;;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="classhateb__local__planner_1_1PointFootprint" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1PointFootprint" kindref="compound">PointFootprint</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel" kindref="compound">BaseFootprintModel</ref><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="135" refid="classhateb__local__planner_1_1PointFootprint_1a9bca306133cd48a104e0a24e6cfacafe" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1PointFootprint_1a9bca306133cd48a104e0a24e6cfacafe" kindref="member">PointFootprint</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="classhateb__local__planner_1_1PointFootprint_1a0be0a5f5b077e7107a33d3f3eea943ab" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PointFootprint_1a0be0a5f5b077e7107a33d3f3eea943ab" kindref="member">PointFootprint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min_obstacle_dist)<sp/>:<sp/><ref refid="classhateb__local__planner_1_1PointFootprint_1adea0c9ffc8f7eb4ed7e037c07723fa3b" kindref="member">min_obstacle_dist_</ref>(min_obstacle_dist)<sp/>{}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="classhateb__local__planner_1_1PointFootprint_1a9896cd861179c94f2745949b70fecae5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1PointFootprint_1a9896cd861179c94f2745949b70fecae5" kindref="member">~PointFootprint</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="classhateb__local__planner_1_1PointFootprint_1ac3745f75396a0cecc9ac066396ee0a74" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PointFootprint_1ac3745f75396a0cecc9ac066396ee0a74" kindref="member">calculateDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>*<sp/>obstacle)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obstacle-&gt;<ref refid="classhateb__local__planner_1_1Obstacle_1a7fbc6d91807721ecf7bf0d3545215d7e" kindref="member">getMinimumDistance</ref>(current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1abbe2946db8fad126b7762b5bc2ffb537" kindref="member">position</ref>());<sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="classhateb__local__planner_1_1PointFootprint_1a54a816acca44e733ded8b035166cc349" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PointFootprint_1a54a816acca44e733ded8b035166cc349" kindref="member">estimateSpatioTemporalDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>*<sp/>obstacle,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obstacle-&gt;<ref refid="classhateb__local__planner_1_1Obstacle_1a5823384ad8772f10a996c1ff95b6c1c2" kindref="member">getMinimumSpatioTemporalDistance</ref>(current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1abbe2946db8fad126b7762b5bc2ffb537" kindref="member">position</ref>(),<sp/>t);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="classhateb__local__planner_1_1PointFootprint_1ab553d8acbfe079381aa49d5cc49f34fb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PointFootprint_1ab553d8acbfe079381aa49d5cc49f34fb" kindref="member">getInscribedRadius</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;<sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="classhateb__local__planner_1_1PointFootprint_1a5297747a2a81f058927f24fafc4ce3fd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PointFootprint_1a5297747a2a81f058927f24fafc4ce3fd" kindref="member">getCircumscribedRadius</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;<sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="classhateb__local__planner_1_1PointFootprint_1a2c574bf57ca9d1c197a8439d5190e282" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PointFootprint_1a2c574bf57ca9d1c197a8439d5190e282" kindref="member">visualizeModel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/>std::vector&lt;visualization_msgs::msg::Marker&gt;&amp;<sp/>markers,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std_msgs::msg::ColorRGBA&amp;<sp/>color)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>point<sp/>footprint</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>markers.emplace_back();</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>visualization_msgs::msg::Marker&amp;<sp/>marker<sp/>=<sp/>markers.back();</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.type<sp/>=<sp/>visualization_msgs::msg::Marker::POINTS;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a49c5b9bc4d664e46df056cd63682d53a" kindref="member">toPoseMsg</ref>(marker.pose);<sp/><sp/></highlight><highlight class="comment">//<sp/>all<sp/>points<sp/>are<sp/>transformed<sp/>into<sp/>the<sp/>robot/human<sp/>frame!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.points.emplace_back();</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.scale.x<sp/>=<sp/>0.025;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.color<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1PointFootprint_1adea0c9ffc8f7eb4ed7e037c07723fa3b" kindref="member">min_obstacle_dist_</ref><sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>footprint<sp/>with<sp/>min_obstacle_dist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>markers.emplace_back();</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>visualization_msgs::msg::Marker&amp;<sp/>marker2<sp/>=<sp/>markers.back();</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>marker2.type<sp/>=<sp/>visualization_msgs::msg::Marker::LINE_STRIP;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>marker2.scale.x<sp/>=<sp/>0.025;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>marker2.color<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a49c5b9bc4d664e46df056cd63682d53a" kindref="member">toPoseMsg</ref>(marker2.pose);<sp/><sp/></highlight><highlight class="comment">//<sp/>all<sp/>points<sp/>are<sp/>transformed<sp/>into<sp/>the<sp/>robot/human<sp/>frame!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>9;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r<sp/>=<sp/><ref refid="classhateb__local__planner_1_1PointFootprint_1adea0c9ffc8f7eb4ed7e037c07723fa3b" kindref="member">min_obstacle_dist_</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>theta<sp/>=<sp/>0;<sp/>theta<sp/>&lt;=<sp/>2<sp/>*<sp/><ref refid="hateb__config_8hpp_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref>;<sp/>theta<sp/>+=<sp/><ref refid="hateb__config_8hpp_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref><sp/>/<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref><sp/>pt;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pt.x<sp/>=<sp/>r<sp/>*<sp/>cos(theta);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pt.y<sp/>=<sp/>r<sp/>*<sp/>sin(theta);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker2.points.push_back(pt);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="221" refid="classhateb__local__planner_1_1PointFootprint_1adea0c9ffc8f7eb4ed7e037c07723fa3b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PointFootprint_1adea0c9ffc8f7eb4ed7e037c07723fa3b" kindref="member">min_obstacle_dist_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="classhateb__local__planner_1_1CircularFootprint" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1CircularFootprint" kindref="compound">CircularFootprint</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel" kindref="compound">BaseFootprintModel</ref><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="234" refid="classhateb__local__planner_1_1CircularFootprint_1a582b92b18b3c23e3144c33c20a931936" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a582b92b18b3c23e3144c33c20a931936" kindref="member">CircularFootprint</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="235" refid="classhateb__local__planner_1_1CircularFootprint_1a13c3918fe5d9abc5f6400bd26e30ad2f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a13c3918fe5d9abc5f6400bd26e30ad2f" kindref="member">CircularFootprint</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius)<sp/>:<sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a3f3b9e8d4b7c30b7c1154d688adc7a9d" kindref="member">radius_</ref>(radius)<sp/>{}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240" refid="classhateb__local__planner_1_1CircularFootprint_1a1142ce145fa274a7ad7aa1ffdfc25d87" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a1142ce145fa274a7ad7aa1ffdfc25d87" kindref="member">~CircularFootprint</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="classhateb__local__planner_1_1CircularFootprint_1adbcc838f0afb3626fd4349157cc8f420" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1adbcc838f0afb3626fd4349157cc8f420" kindref="member">setRadius</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius)<sp/>{<sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a3f3b9e8d4b7c30b7c1154d688adc7a9d" kindref="member">radius_</ref><sp/>=<sp/>radius;<sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="classhateb__local__planner_1_1CircularFootprint_1ad4b70e4c164ca53b89cee335a535d113" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1ad4b70e4c164ca53b89cee335a535d113" kindref="member">calculateDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>*<sp/>obstacle)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obstacle-&gt;<ref refid="classhateb__local__planner_1_1Obstacle_1a7fbc6d91807721ecf7bf0d3545215d7e" kindref="member">getMinimumDistance</ref>(current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1abbe2946db8fad126b7762b5bc2ffb537" kindref="member">position</ref>())<sp/>-<sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a3f3b9e8d4b7c30b7c1154d688adc7a9d" kindref="member">radius_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="classhateb__local__planner_1_1CircularFootprint_1a3ed2b580fc92bc83532a6686dd018dc4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a3ed2b580fc92bc83532a6686dd018dc4" kindref="member">estimateSpatioTemporalDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>*<sp/>obstacle,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obstacle-&gt;<ref refid="classhateb__local__planner_1_1Obstacle_1a5823384ad8772f10a996c1ff95b6c1c2" kindref="member">getMinimumSpatioTemporalDistance</ref>(current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1abbe2946db8fad126b7762b5bc2ffb537" kindref="member">position</ref>(),<sp/>t)<sp/>-<sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a3f3b9e8d4b7c30b7c1154d688adc7a9d" kindref="member">radius_</ref>;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="classhateb__local__planner_1_1CircularFootprint_1a5a85189488ebe3d5c3cf367540c14e09" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a5a85189488ebe3d5c3cf367540c14e09" kindref="member">visualizeModel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/>std::vector&lt;visualization_msgs::msg::Marker&gt;&amp;<sp/>markers,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std_msgs::msg::ColorRGBA&amp;<sp/>color)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>markers.resize(1);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>visualization_msgs::msg::Marker&amp;<sp/>marker<sp/>=<sp/>markers.back();</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.type<sp/>=<sp/>visualization_msgs::msg::Marker::CYLINDER;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a49c5b9bc4d664e46df056cd63682d53a" kindref="member">toPoseMsg</ref>(marker.pose);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.scale.x<sp/>=<sp/>marker.scale.y<sp/>=<sp/>2<sp/>*<sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a3f3b9e8d4b7c30b7c1154d688adc7a9d" kindref="member">radius_</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>scale<sp/>=<sp/>diameter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.scale.z<sp/>=<sp/>0.05;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.color<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="classhateb__local__planner_1_1CircularFootprint_1aef9298fb380d871f9a489b40e89734f9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1aef9298fb380d871f9a489b40e89734f9" kindref="member">getInscribedRadius</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a3f3b9e8d4b7c30b7c1154d688adc7a9d" kindref="member">radius_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292" refid="classhateb__local__planner_1_1CircularFootprint_1a9531970c9a3c0aa35376ba56081bb7da" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a9531970c9a3c0aa35376ba56081bb7da" kindref="member">getCircumscribedRadius</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a3f3b9e8d4b7c30b7c1154d688adc7a9d" kindref="member">radius_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="295" refid="classhateb__local__planner_1_1CircularFootprint_1a3f3b9e8d4b7c30b7c1154d688adc7a9d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1CircularFootprint_1a3f3b9e8d4b7c30b7c1154d688adc7a9d" kindref="member">radius_</ref>;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="297" refid="namespacehateb__local__planner_1acfe48bd575f55ee9148d03b363f72c0c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacehateb__local__planner_1acfe48bd575f55ee9148d03b363f72c0c" kindref="member">CircularFootprintPtr</ref><sp/>=<sp/>std::shared_ptr&lt;CircularFootprint&gt;;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303" refid="classhateb__local__planner_1_1TwoCirclesFootprint" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint" kindref="compound">TwoCirclesFootprint</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel" kindref="compound">BaseFootprintModel</ref><sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="312" refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a52a711f7a293606d6970dc565c3c357f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a52a711f7a293606d6970dc565c3c357f" kindref="member">TwoCirclesFootprint</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>front_offset,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>front_radius,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rear_offset,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rear_radius)</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a6c76683827fba99ade12f0a3bed0260f" kindref="member">front_offset_</ref>(front_offset),<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" kindref="member">front_radius_</ref>(front_radius),<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a5e82c07f18a5fe13d77498a10aad6c85" kindref="member">rear_offset_</ref>(rear_offset),<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" kindref="member">rear_radius_</ref>(rear_radius)<sp/>{}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318" refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a67f1eb546fd4a9e75fd933c068b0a86d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a67f1eb546fd4a9e75fd933c068b0a86d" kindref="member">~TwoCirclesFootprint</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327" refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a72df33bba245087610a54eacc02a3023" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a72df33bba245087610a54eacc02a3023" kindref="member">setParameters</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>front_offset,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>front_radius,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rear_offset,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rear_radius)<sp/>{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a6c76683827fba99ade12f0a3bed0260f" kindref="member">front_offset_</ref><sp/>=<sp/>front_offset;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" kindref="member">front_radius_</ref><sp/>=<sp/>front_radius;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a5e82c07f18a5fe13d77498a10aad6c85" kindref="member">rear_offset_</ref><sp/>=<sp/>rear_offset;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" kindref="member">rear_radius_</ref><sp/>=<sp/>rear_radius;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340" refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a47e95f9896cfe76f474d8557281b44a2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a47e95f9896cfe76f474d8557281b44a2" kindref="member">calculateDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>*<sp/>obstacle)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>dir<sp/>=<sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a4fe1aba76e94d618fdde90d74a803dda" kindref="member">orientationUnitVec</ref>();</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist_front<sp/>=<sp/>obstacle-&gt;<ref refid="classhateb__local__planner_1_1Obstacle_1a7fbc6d91807721ecf7bf0d3545215d7e" kindref="member">getMinimumDistance</ref>(current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1abbe2946db8fad126b7762b5bc2ffb537" kindref="member">position</ref>()<sp/>+<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a6c76683827fba99ade12f0a3bed0260f" kindref="member">front_offset_</ref><sp/>*<sp/>dir)<sp/>-<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" kindref="member">front_radius_</ref>;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist_rear<sp/>=<sp/>obstacle-&gt;<ref refid="classhateb__local__planner_1_1Obstacle_1a7fbc6d91807721ecf7bf0d3545215d7e" kindref="member">getMinimumDistance</ref>(current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1abbe2946db8fad126b7762b5bc2ffb537" kindref="member">position</ref>()<sp/>-<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a5e82c07f18a5fe13d77498a10aad6c85" kindref="member">rear_offset_</ref><sp/>*<sp/>dir)<sp/>-<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" kindref="member">rear_radius_</ref>;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::min(dist_front,<sp/>dist_rear);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354" refid="classhateb__local__planner_1_1TwoCirclesFootprint_1abb28f17e4749f4688515c76bb7e01155" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1abb28f17e4749f4688515c76bb7e01155" kindref="member">estimateSpatioTemporalDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>*<sp/>obstacle,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>dir<sp/>=<sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a4fe1aba76e94d618fdde90d74a803dda" kindref="member">orientationUnitVec</ref>();</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist_front<sp/>=<sp/>obstacle-&gt;<ref refid="classhateb__local__planner_1_1Obstacle_1a5823384ad8772f10a996c1ff95b6c1c2" kindref="member">getMinimumSpatioTemporalDistance</ref>(current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1abbe2946db8fad126b7762b5bc2ffb537" kindref="member">position</ref>()<sp/>+<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a6c76683827fba99ade12f0a3bed0260f" kindref="member">front_offset_</ref><sp/>*<sp/>dir,<sp/>t)<sp/>-<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" kindref="member">front_radius_</ref>;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist_rear<sp/>=<sp/>obstacle-&gt;<ref refid="classhateb__local__planner_1_1Obstacle_1a5823384ad8772f10a996c1ff95b6c1c2" kindref="member">getMinimumSpatioTemporalDistance</ref>(current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1abbe2946db8fad126b7762b5bc2ffb537" kindref="member">position</ref>()<sp/>-<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a5e82c07f18a5fe13d77498a10aad6c85" kindref="member">rear_offset_</ref><sp/>*<sp/>dir,<sp/>t)<sp/>-<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" kindref="member">rear_radius_</ref>;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::min(dist_front,<sp/>dist_rear);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370" refid="classhateb__local__planner_1_1TwoCirclesFootprint_1aa7ecb0cb353aec12157bb0408c279872" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1aa7ecb0cb353aec12157bb0408c279872" kindref="member">visualizeModel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/>std::vector&lt;visualization_msgs::msg::Marker&gt;&amp;<sp/>markers,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std_msgs::msg::ColorRGBA&amp;<sp/>color)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>dir<sp/>=<sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a4fe1aba76e94d618fdde90d74a803dda" kindref="member">orientationUnitVec</ref>();</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" kindref="member">front_radius_</ref><sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>markers.emplace_back();</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>visualization_msgs::msg::Marker&amp;<sp/>marker1<sp/>=<sp/>markers.front();</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker1.type<sp/>=<sp/>visualization_msgs::msg::Marker::CYLINDER;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a49c5b9bc4d664e46df056cd63682d53a" kindref="member">toPoseMsg</ref>(marker1.pose);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker1.pose.position.x<sp/>+=<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a6c76683827fba99ade12f0a3bed0260f" kindref="member">front_offset_</ref><sp/>*<sp/>dir.x();</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker1.pose.position.y<sp/>+=<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a6c76683827fba99ade12f0a3bed0260f" kindref="member">front_offset_</ref><sp/>*<sp/>dir.y();</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker1.scale.x<sp/>=<sp/>marker1.scale.y<sp/>=<sp/>2<sp/>*<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" kindref="member">front_radius_</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>scale<sp/>=<sp/>diameter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>marker1.scale.z<sp/>=<sp/>0.05;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker1.color<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" kindref="member">rear_radius_</ref><sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>markers.emplace_back();</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>visualization_msgs::msg::Marker&amp;<sp/>marker2<sp/>=<sp/>markers.back();</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker2.type<sp/>=<sp/>visualization_msgs::msg::Marker::CYLINDER;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a49c5b9bc4d664e46df056cd63682d53a" kindref="member">toPoseMsg</ref>(marker2.pose);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker2.pose.position.x<sp/>-=<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a5e82c07f18a5fe13d77498a10aad6c85" kindref="member">rear_offset_</ref><sp/>*<sp/>dir.x();</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker2.pose.position.y<sp/>-=<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a5e82c07f18a5fe13d77498a10aad6c85" kindref="member">rear_offset_</ref><sp/>*<sp/>dir.y();</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker2.scale.x<sp/>=<sp/>marker2.scale.y<sp/>=<sp/>2<sp/>*<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" kindref="member">rear_radius_</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>scale<sp/>=<sp/>diameter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>marker2.scale.z<sp/>=<sp/>0.05;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker2.color<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400" refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a36e51ac27b5a5c66c7c60af8b4b3359b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a36e51ac27b5a5c66c7c60af8b4b3359b" kindref="member">getInscribedRadius</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min_longitudinal<sp/>=<sp/>std::min(<ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a5e82c07f18a5fe13d77498a10aad6c85" kindref="member">rear_offset_</ref><sp/>+<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" kindref="member">rear_radius_</ref>,<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a6c76683827fba99ade12f0a3bed0260f" kindref="member">front_offset_</ref><sp/>+<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" kindref="member">front_radius_</ref>);</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min_lateral<sp/>=<sp/>std::min(<ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" kindref="member">rear_radius_</ref>,<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" kindref="member">front_radius_</ref>);</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::min(min_longitudinal,<sp/>min_lateral);</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410" refid="classhateb__local__planner_1_1TwoCirclesFootprint_1ad693423391752cedefb9164097ba9f08" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1ad693423391752cedefb9164097ba9f08" kindref="member">getCircumscribedRadius</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::max(<ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a6c76683827fba99ade12f0a3bed0260f" kindref="member">front_offset_</ref><sp/>+<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" kindref="member">front_radius_</ref>,<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a5e82c07f18a5fe13d77498a10aad6c85" kindref="member">rear_offset_</ref><sp/>+<sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" kindref="member">rear_radius_</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="413" refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a6c76683827fba99ade12f0a3bed0260f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a6c76683827fba99ade12f0a3bed0260f" kindref="member">front_offset_</ref>;</highlight></codeline>
+<codeline lineno="414" refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" kindref="member">front_radius_</ref>;</highlight></codeline>
+<codeline lineno="415" refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a5e82c07f18a5fe13d77498a10aad6c85" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a5e82c07f18a5fe13d77498a10aad6c85" kindref="member">rear_offset_</ref>;</highlight></codeline>
+<codeline lineno="416" refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" kindref="member">rear_radius_</ref>;</highlight></codeline>
+<codeline lineno="417"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="423" refid="classhateb__local__planner_1_1LineFootprint" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1LineFootprint" kindref="compound">LineFootprint</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel" kindref="compound">BaseFootprintModel</ref><sp/>{</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="430" refid="classhateb__local__planner_1_1LineFootprint_1a0efbe015e0ff464ac31fc80b859ba59e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a0efbe015e0ff464ac31fc80b859ba59e" kindref="member">LineFootprint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref>&amp;<sp/>line_start,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref>&amp;<sp/>line_end)<sp/>{<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a4b373b5f0f8a49161a8e75693e48f44f" kindref="member">setLine</ref>(line_start,<sp/>line_end);<sp/>}</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437" refid="classhateb__local__planner_1_1LineFootprint_1ab97b8fd72e2b87a667a55c62f401d430" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1ab97b8fd72e2b87a667a55c62f401d430" kindref="member">LineFootprint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::Vector2d&amp;<sp/>line_start,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::Vector2d&amp;<sp/>line_end,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min_obstacle_dist)<sp/>:<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a2f838449afae13cdb134ddf1e671f965" kindref="member">min_obstacle_dist_</ref>(min_obstacle_dist)<sp/>{<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a4b373b5f0f8a49161a8e75693e48f44f" kindref="member">setLine</ref>(line_start,<sp/>line_end);<sp/>}</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight></codeline>
+<codeline lineno="442" refid="classhateb__local__planner_1_1LineFootprint_1a016f3ba331d76291da35e5571dc2f7bf" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a016f3ba331d76291da35e5571dc2f7bf" kindref="member">~LineFootprint</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight></codeline>
+<codeline lineno="448" refid="classhateb__local__planner_1_1LineFootprint_1a4b373b5f0f8a49161a8e75693e48f44f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a4b373b5f0f8a49161a8e75693e48f44f" kindref="member">setLine</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref>&amp;<sp/>line_start,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref>&amp;<sp/>line_end)<sp/>{</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" kindref="member">line_start_</ref>.x()<sp/>=<sp/>line_start.x;</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" kindref="member">line_start_</ref>.y()<sp/>=<sp/>line_start.y;</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" kindref="member">line_end_</ref>.x()<sp/>=<sp/>line_end.x;</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" kindref="member">line_end_</ref>.y()<sp/>=<sp/>line_end.y;</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459" refid="classhateb__local__planner_1_1LineFootprint_1ae3e5d7f33506d77d1460432baa9ea233" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1ae3e5d7f33506d77d1460432baa9ea233" kindref="member">setLine</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::Vector2d&amp;<sp/>line_start,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::Vector2d&amp;<sp/>line_end)<sp/>{</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" kindref="member">line_start_</ref><sp/>=<sp/>line_start;</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" kindref="member">line_end_</ref><sp/>=<sp/>line_end;</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"></highlight></codeline>
+<codeline lineno="470" refid="classhateb__local__planner_1_1LineFootprint_1a513cb63354f96e4e4e864510a0eb444f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a513cb63354f96e4e4e864510a0eb444f" kindref="member">calculateDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>*<sp/>obstacle)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>line_start_world;</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>line_end_world;</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a84cd485406ed8685742a7cec9b92ff6b" kindref="member">transformToWorld</ref>(current_pose,<sp/>line_start_world,<sp/>line_end_world);</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obstacle-&gt;<ref refid="classhateb__local__planner_1_1Obstacle_1a7fbc6d91807721ecf7bf0d3545215d7e" kindref="member">getMinimumDistance</ref>(line_start_world,<sp/>line_end_world);</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"></highlight></codeline>
+<codeline lineno="484" refid="classhateb__local__planner_1_1LineFootprint_1a4371c29b86388e99d0ddd40c867db974" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a4371c29b86388e99d0ddd40c867db974" kindref="member">estimateSpatioTemporalDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>*<sp/>obstacle,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>line_start_world;</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>line_end_world;</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a84cd485406ed8685742a7cec9b92ff6b" kindref="member">transformToWorld</ref>(current_pose,<sp/>line_start_world,<sp/>line_end_world);</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obstacle-&gt;<ref refid="classhateb__local__planner_1_1Obstacle_1a5823384ad8772f10a996c1ff95b6c1c2" kindref="member">getMinimumSpatioTemporalDistance</ref>(line_start_world,<sp/>line_end_world,<sp/>t);</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"></highlight></codeline>
+<codeline lineno="500" refid="classhateb__local__planner_1_1LineFootprint_1a8cac11b36b99769426de64f4ff56332a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a8cac11b36b99769426de64f4ff56332a" kindref="member">visualizeModel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/>std::vector&lt;visualization_msgs::msg::Marker&gt;&amp;<sp/>markers,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std_msgs::msg::ColorRGBA&amp;<sp/>color)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/>markers.emplace_back();</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/>visualization_msgs::msg::Marker&amp;<sp/>marker<sp/>=<sp/>markers.front();</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.type<sp/>=<sp/>visualization_msgs::msg::Marker::LINE_STRIP;</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a49c5b9bc4d664e46df056cd63682d53a" kindref="member">toPoseMsg</ref>(marker.pose);<sp/><sp/></highlight><highlight class="comment">//<sp/>all<sp/>points<sp/>are<sp/>transformed<sp/>into<sp/>the<sp/>robot/human<sp/>frame!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref><sp/>line_start_world;</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/>line_start_world.x<sp/>=<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" kindref="member">line_start_</ref>.x();</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/>line_start_world.y<sp/>=<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" kindref="member">line_start_</ref>.y();</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/>line_start_world.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.points.push_back(line_start_world);</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref><sp/>line_end_world;</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/>line_end_world.x<sp/>=<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" kindref="member">line_end_</ref>.x();</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/>line_end_world.y<sp/>=<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" kindref="member">line_end_</ref>.y();</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/>line_end_world.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.points.push_back(line_end_world);</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.scale.x<sp/>=<sp/>0.05;</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.color<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"></highlight></codeline>
+<codeline lineno="527" refid="classhateb__local__planner_1_1LineFootprint_1a0faf871f8784766558d231740a8f14fc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a0faf871f8784766558d231740a8f14fc" kindref="member">getInscribedRadius</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;<sp/><sp/></highlight><highlight class="comment">//<sp/>lateral<sp/>distance<sp/>=<sp/>0.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="535" refid="classhateb__local__planner_1_1LineFootprint_1aa00c54b2f01d5a0f418114d941316c24" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1aa00c54b2f01d5a0f418114d941316c24" kindref="member">getCircumscribedRadius</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::max(std::hypot(<ref refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" kindref="member">line_start_</ref>.x(),<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" kindref="member">line_start_</ref>.y()),<sp/>std::hypot(<ref refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" kindref="member">line_end_</ref>.x(),<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" kindref="member">line_end_</ref>.y()));<sp/>}</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="544" refid="classhateb__local__planner_1_1LineFootprint_1a84cd485406ed8685742a7cec9b92ff6b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a84cd485406ed8685742a7cec9b92ff6b" kindref="member">transformToWorld</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/>Eigen::Vector2d&amp;<sp/>line_start_world,<sp/>Eigen::Vector2d&amp;<sp/>line_end_world)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cos_th<sp/>=<sp/>std::cos(current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a9745f5e8d91068a96152bb66b4569466" kindref="member">theta</ref>());</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sin_th<sp/>=<sp/>std::sin(current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a9745f5e8d91068a96152bb66b4569466" kindref="member">theta</ref>());</highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/><sp/><sp/>line_start_world.x()<sp/>=<sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a99d2afaf99bdfff1075be7cfe8771169" kindref="member">x</ref>()<sp/>+<sp/>cos_th<sp/>*<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" kindref="member">line_start_</ref>.x()<sp/>-<sp/>sin_th<sp/>*<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" kindref="member">line_start_</ref>.y();</highlight></codeline>
+<codeline lineno="548"><highlight class="normal"><sp/><sp/><sp/><sp/>line_start_world.y()<sp/>=<sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1adb4b866a4f3ec291adf26f60b420344e" kindref="member">y</ref>()<sp/>+<sp/>sin_th<sp/>*<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" kindref="member">line_start_</ref>.x()<sp/>+<sp/>cos_th<sp/>*<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" kindref="member">line_start_</ref>.y();</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/>line_end_world.x()<sp/>=<sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a99d2afaf99bdfff1075be7cfe8771169" kindref="member">x</ref>()<sp/>+<sp/>cos_th<sp/>*<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" kindref="member">line_end_</ref>.x()<sp/>-<sp/>sin_th<sp/>*<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" kindref="member">line_end_</ref>.y();</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/>line_end_world.y()<sp/>=<sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1adb4b866a4f3ec291adf26f60b420344e" kindref="member">y</ref>()<sp/>+<sp/>sin_th<sp/>*<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" kindref="member">line_end_</ref>.x()<sp/>+<sp/>cos_th<sp/>*<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" kindref="member">line_end_</ref>.y();</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553" refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector2d<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1acb8ba2de6c6a3d024bf086ff79188433" kindref="member">line_start_</ref>;</highlight></codeline>
+<codeline lineno="554" refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector2d<sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a18f1f9ebf00e5532d25a36b793126944" kindref="member">line_end_</ref>;</highlight></codeline>
+<codeline lineno="555" refid="classhateb__local__planner_1_1LineFootprint_1a2f838449afae13cdb134ddf1e671f965" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1LineFootprint_1a2f838449afae13cdb134ddf1e671f965" kindref="member">min_obstacle_dist_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"></highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/>EIGEN_MAKE_ALIGNED_OPERATOR_NEW</highlight></codeline>
+<codeline lineno="559"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"></highlight></codeline>
+<codeline lineno="565" refid="classhateb__local__planner_1_1PolygonFootprint" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhateb__local__planner_1_1PolygonFootprint" kindref="compound">PolygonFootprint</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1BaseFootprintModel" kindref="compound">BaseFootprintModel</ref><sp/>{</highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="571" refid="classhateb__local__planner_1_1PolygonFootprint_1a35755808de7138ada785d0d547626137" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a35755808de7138ada785d0d547626137" kindref="member">PolygonFootprint</ref>(<ref refid="namespacehateb__local__planner_1aada6c9abcaa246f092095786ca9bf598" kindref="member">Point2dContainer</ref><sp/>vertices)<sp/>:<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>(std::move(vertices))<sp/>{}</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"></highlight></codeline>
+<codeline lineno="576" refid="classhateb__local__planner_1_1PolygonFootprint_1ab76324b33c2931bccad83e6342f6935c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1ab76324b33c2931bccad83e6342f6935c" kindref="member">~PolygonFootprint</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"></highlight></codeline>
+<codeline lineno="582" refid="classhateb__local__planner_1_1PolygonFootprint_1ab24d3b3de982dc6b384a06d7b4d74230" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1ab24d3b3de982dc6b384a06d7b4d74230" kindref="member">setVertices</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehateb__local__planner_1aada6c9abcaa246f092095786ca9bf598" kindref="member">Point2dContainer</ref>&amp;<sp/>vertices)<sp/>{<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref><sp/>=<sp/>vertices;<sp/>}</highlight></codeline>
+<codeline lineno="583"><highlight class="normal"></highlight></codeline>
+<codeline lineno="590" refid="classhateb__local__planner_1_1PolygonFootprint_1a3fd2aa3808860c2e89361c21aa051d27" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a3fd2aa3808860c2e89361c21aa051d27" kindref="member">calculateDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>*<sp/>obstacle)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehateb__local__planner_1aada6c9abcaa246f092095786ca9bf598" kindref="member">Point2dContainer</ref><sp/>polygon_world(<ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>.size());</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a5f0a5ac850c89020e808055afa340862" kindref="member">transformToWorld</ref>(current_pose,<sp/>polygon_world);</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obstacle-&gt;<ref refid="classhateb__local__planner_1_1Obstacle_1a7fbc6d91807721ecf7bf0d3545215d7e" kindref="member">getMinimumDistance</ref>(polygon_world);</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="603" refid="classhateb__local__planner_1_1PolygonFootprint_1a77726f6f43f26b1d18b3118352083e17" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a77726f6f43f26b1d18b3118352083e17" kindref="member">estimateSpatioTemporalDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref>*<sp/>obstacle,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="604"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehateb__local__planner_1aada6c9abcaa246f092095786ca9bf598" kindref="member">Point2dContainer</ref><sp/>polygon_world(<ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>.size());</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a5f0a5ac850c89020e808055afa340862" kindref="member">transformToWorld</ref>(current_pose,<sp/>polygon_world);</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obstacle-&gt;<ref refid="classhateb__local__planner_1_1Obstacle_1a5823384ad8772f10a996c1ff95b6c1c2" kindref="member">getMinimumSpatioTemporalDistance</ref>(polygon_world,<sp/>t);</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"></highlight></codeline>
+<codeline lineno="618" refid="classhateb__local__planner_1_1PolygonFootprint_1aa726574b827f1e8df2397437cb87bc24" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1aa726574b827f1e8df2397437cb87bc24" kindref="member">visualizeModel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/>std::vector&lt;visualization_msgs::msg::Marker&gt;&amp;<sp/>markers,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std_msgs::msg::ColorRGBA&amp;<sp/>color)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="619"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>.empty())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"></highlight></codeline>
+<codeline lineno="621"><highlight class="normal"><sp/><sp/><sp/><sp/>markers.emplace_back();</highlight></codeline>
+<codeline lineno="622"><highlight class="normal"><sp/><sp/><sp/><sp/>visualization_msgs::msg::Marker&amp;<sp/>marker<sp/>=<sp/>markers.front();</highlight></codeline>
+<codeline lineno="623"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.type<sp/>=<sp/>visualization_msgs::msg::Marker::LINE_STRIP;</highlight></codeline>
+<codeline lineno="624"><highlight class="normal"><sp/><sp/><sp/><sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a49c5b9bc4d664e46df056cd63682d53a" kindref="member">toPoseMsg</ref>(marker.pose);<sp/><sp/></highlight><highlight class="comment">//<sp/>all<sp/>points<sp/>are<sp/>transformed<sp/>into<sp/>the<sp/>robot/human<sp/>frame!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="625"><highlight class="normal"></highlight></codeline>
+<codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>vertice<sp/>:<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="627"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref><sp/>point;</highlight></codeline>
+<codeline lineno="628"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>point.x<sp/>=<sp/>vertice.x();</highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>point.y<sp/>=<sp/>vertice.y();</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>point.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="631"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>marker.points.push_back(point);</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="633"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>first<sp/>point<sp/>again<sp/>in<sp/>order<sp/>to<sp/>close<sp/>the<sp/>polygon</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="634"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">geometry_msgs::msg::Point</ref><sp/>point;</highlight></codeline>
+<codeline lineno="635"><highlight class="normal"><sp/><sp/><sp/><sp/>point.x<sp/>=<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>.front().x();</highlight></codeline>
+<codeline lineno="636"><highlight class="normal"><sp/><sp/><sp/><sp/>point.y<sp/>=<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>.front().y();</highlight></codeline>
+<codeline lineno="637"><highlight class="normal"><sp/><sp/><sp/><sp/>point.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.points.push_back(point);</highlight></codeline>
+<codeline lineno="639"><highlight class="normal"></highlight></codeline>
+<codeline lineno="640"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.scale.x<sp/>=<sp/>0.025;</highlight></codeline>
+<codeline lineno="641"><highlight class="normal"><sp/><sp/><sp/><sp/>marker.color<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="642"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="643"><highlight class="normal"></highlight></codeline>
+<codeline lineno="648" refid="classhateb__local__planner_1_1PolygonFootprint_1ab53b395053e2174a17725324162ca567" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1ab53b395053e2174a17725324162ca567" kindref="member">getInscribedRadius</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="649"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min_dist<sp/>=<sp/>std::numeric_limits&lt;double&gt;::max();</highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>center(0.0,<sp/>0.0);</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"></highlight></codeline>
+<codeline lineno="652"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>.size()<sp/>&lt;=<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="653"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="655"><highlight class="normal"></highlight></codeline>
+<codeline lineno="656"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>static_cast&lt;int&gt;(<ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>.size())<sp/>-<sp/>1;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>distance<sp/>from<sp/>the<sp/>robot/human<sp/>center<sp/>point<sp/>to<sp/>the<sp/>first<sp/>vertex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="658"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vertex_dist<sp/>=<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>[i].norm();</highlight></codeline>
+<codeline lineno="659"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>edge_dist<sp/>=<sp/><ref refid="namespacehateb__local__planner_1adfa76447cf46833d01b4dd5647ecfe86" kindref="member">distance_point_to_segment_2d</ref>(center,<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>[i],<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>[i<sp/>+<sp/>1]);</highlight></codeline>
+<codeline lineno="660"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>min_dist<sp/>=<sp/>std::min({min_dist,<sp/>vertex_dist,<sp/>edge_dist});</highlight></codeline>
+<codeline lineno="661"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="662"><highlight class="normal"></highlight></codeline>
+<codeline lineno="663"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>also<sp/>need<sp/>to<sp/>check<sp/>the<sp/>last<sp/>vertex<sp/>and<sp/>the<sp/>first<sp/>vertex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="664"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vertex_dist<sp/>=<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>.back().norm();</highlight></codeline>
+<codeline lineno="665"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>edge_dist<sp/>=<sp/><ref refid="namespacehateb__local__planner_1adfa76447cf46833d01b4dd5647ecfe86" kindref="member">distance_point_to_segment_2d</ref>(center,<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>.back(),<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>.front());</highlight></codeline>
+<codeline lineno="666"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::min({min_dist,<sp/>vertex_dist,<sp/>edge_dist});</highlight></codeline>
+<codeline lineno="667"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="668"><highlight class="normal"></highlight></codeline>
+<codeline lineno="673" refid="classhateb__local__planner_1_1PolygonFootprint_1a20f176bf990080389f7a0b75e2406c76" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a20f176bf990080389f7a0b75e2406c76" kindref="member">getCircumscribedRadius</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>vertex<sp/>:<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>std::hypot(vertex.x(),<sp/>vertex.y());</highlight></codeline>
+<codeline lineno="677"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>radius<sp/>=<sp/>std::max(radius,<sp/>dist);</highlight></codeline>
+<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>radius;</highlight></codeline>
+<codeline lineno="680"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="681"><highlight class="normal"></highlight></codeline>
+<codeline lineno="682"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="688" refid="classhateb__local__planner_1_1PolygonFootprint_1a5f0a5ac850c89020e808055afa340862" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a5f0a5ac850c89020e808055afa340862" kindref="member">transformToWorld</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>&amp;<sp/>current_pose,<sp/><ref refid="namespacehateb__local__planner_1aada6c9abcaa246f092095786ca9bf598" kindref="member">Point2dContainer</ref>&amp;<sp/>polygon_world)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cos_th<sp/>=<sp/>std::cos(current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a9745f5e8d91068a96152bb66b4569466" kindref="member">theta</ref>());</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sin_th<sp/>=<sp/>std::sin(current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a9745f5e8d91068a96152bb66b4569466" kindref="member">theta</ref>());</highlight></codeline>
+<codeline lineno="691"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::size_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>polygon_world[i].x()<sp/>=<sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1a99d2afaf99bdfff1075be7cfe8771169" kindref="member">x</ref>()<sp/>+<sp/>cos_th<sp/>*<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>[i].x()<sp/>-<sp/>sin_th<sp/>*<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>[i].y();</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>polygon_world[i].y()<sp/>=<sp/>current_pose.<ref refid="classhateb__local__planner_1_1PoseSE2_1adb4b866a4f3ec291adf26f60b420344e" kindref="member">y</ref>()<sp/>+<sp/>sin_th<sp/>*<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>[i].x()<sp/>+<sp/>cos_th<sp/>*<sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>[i].y();</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="695"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="696"><highlight class="normal"></highlight></codeline>
+<codeline lineno="697" refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacehateb__local__planner_1aada6c9abcaa246f092095786ca9bf598" kindref="member">Point2dContainer</ref><sp/><ref refid="classhateb__local__planner_1_1PolygonFootprint_1a99a635f50896d7450384dc426ec8425c" kindref="member">vertices_</ref>;</highlight></codeline>
+<codeline lineno="698"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="699"><highlight class="normal"></highlight></codeline>
+<codeline lineno="700"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hateb_local_planner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="701"><highlight class="normal"></highlight></codeline>
+<codeline lineno="702"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ROBOT_FOOTPRINT_MODEL_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h"/>
+  </compounddef>
+</doxygen>

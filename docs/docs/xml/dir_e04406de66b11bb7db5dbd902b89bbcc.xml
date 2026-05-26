@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_e04406de66b11bb7db5dbd902b89bbcc" kind="dir">
+    <compoundname>ros2_helpers</compoundname>
+    <innerdir refid="dir_35ec89cb5763ae542df6fe81aa265504">include</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ros2_helpers/"/>
+  </compounddef>
+</doxygen>

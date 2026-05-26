@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structBackgroundSubtractor_1_1Params" kind="struct" language="C++" prot="public">
+    <compoundname>BackgroundSubtractor::Params</compoundname>
+    <includes refid="background__subtractor_8h" local="no">background_subtractor.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structBackgroundSubtractor_1_1Params_1a1d1113f5cff564078a7995fd410fb1ec" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BackgroundSubtractor::Params::alpha_slow</definition>
+        <argsstring></argsstring>
+        <name>alpha_slow</name>
+        <briefdescription>
+<para>Filter constant (learning rate) of the slow filter part. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="62" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBackgroundSubtractor_1_1Params_1af4253c1a5b2bd54a85da4ca41a098a75" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BackgroundSubtractor::Params::alpha_fast</definition>
+        <argsstring></argsstring>
+        <name>alpha_fast</name>
+        <briefdescription>
+<para>Filter constant (learning rate) of the fast filter part. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="63" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBackgroundSubtractor_1_1Params_1a8a8bf5bf651cb3a98f131f28b3031a01" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BackgroundSubtractor::Params::beta</definition>
+        <argsstring></argsstring>
+        <name>beta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="64" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBackgroundSubtractor_1_1Params_1a624a677a9ee96a6be5f4ba7ad0196cc3" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BackgroundSubtractor::Params::min_sep_between_fast_and_slow_filter</definition>
+        <argsstring></argsstring>
+        <name>min_sep_between_fast_and_slow_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="65" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBackgroundSubtractor_1_1Params_1aa8ca2089caab93a92d2eba61df6d1f75" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BackgroundSubtractor::Params::min_occupancy_probability</definition>
+        <argsstring></argsstring>
+        <name>min_occupancy_probability</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="66" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBackgroundSubtractor_1_1Params_1aac98f78474b50cd78232f6075f75a4ec" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BackgroundSubtractor::Params::max_occupancy_neighbors</definition>
+        <argsstring></argsstring>
+        <name>max_occupancy_neighbors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="67" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBackgroundSubtractor_1_1Params_1a1c80041afeee543e7a47eb0488d88778" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BackgroundSubtractor::Params::morph_size</definition>
+        <argsstring></argsstring>
+        <name>morph_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="68" column="9" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="60" column="3" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="61" bodyend="69"/>
+    <listofallmembers>
+      <member refid="structBackgroundSubtractor_1_1Params_1af4253c1a5b2bd54a85da4ca41a098a75" prot="public" virt="non-virtual"><scope>BackgroundSubtractor::Params</scope><name>alpha_fast</name></member>
+      <member refid="structBackgroundSubtractor_1_1Params_1a1d1113f5cff564078a7995fd410fb1ec" prot="public" virt="non-virtual"><scope>BackgroundSubtractor::Params</scope><name>alpha_slow</name></member>
+      <member refid="structBackgroundSubtractor_1_1Params_1a8a8bf5bf651cb3a98f131f28b3031a01" prot="public" virt="non-virtual"><scope>BackgroundSubtractor::Params</scope><name>beta</name></member>
+      <member refid="structBackgroundSubtractor_1_1Params_1aac98f78474b50cd78232f6075f75a4ec" prot="public" virt="non-virtual"><scope>BackgroundSubtractor::Params</scope><name>max_occupancy_neighbors</name></member>
+      <member refid="structBackgroundSubtractor_1_1Params_1aa8ca2089caab93a92d2eba61df6d1f75" prot="public" virt="non-virtual"><scope>BackgroundSubtractor::Params</scope><name>min_occupancy_probability</name></member>
+      <member refid="structBackgroundSubtractor_1_1Params_1a624a677a9ee96a6be5f4ba7ad0196cc3" prot="public" virt="non-virtual"><scope>BackgroundSubtractor::Params</scope><name>min_sep_between_fast_and_slow_filter</name></member>
+      <member refid="structBackgroundSubtractor_1_1Params_1a1c80041afeee543e7a47eb0488d88778" prot="public" virt="non-virtual"><scope>BackgroundSubtractor::Params</scope><name>morph_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

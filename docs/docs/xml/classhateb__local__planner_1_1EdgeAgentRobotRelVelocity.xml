@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgeAgentRobotRelVelocity" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgeAgentRobotRelVelocity</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebMultiEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebMultiEdge&lt; 1, double &gt;</basecompoundref>
+    <includes refid="edge__agent__robot__rel__velocity_8h" local="no">edge_agent_robot_rel_velocity.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeAgentRobotRelVelocity_1abe676bb5564fe1c0e0dc3fa380bcf2da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeAgentRobotRelVelocity::EdgeAgentRobotRelVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>EdgeAgentRobotRelVelocity</name>
+        <briefdescription>
+<para>Construct edge and resize to 6 vertices (robot/agent poses and time diffs). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_robot_rel_velocity.h" line="58" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_robot_rel_velocity.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeAgentRobotRelVelocity_1a1857a8a62ffe80a255ce77a175b0a9e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeAgentRobotRelVelocity::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Compute the error / cost for the edge. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the relative velocity between the robot and agent over a time interval, and applies a penalty if the cost exceeds the allowed threshold. The error is stored in _error[0]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_robot_rel_velocity.h" line="66" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_robot_rel_velocity.h" bodystart="66" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Edge defining a relative velocity constraint between robot and agent trajectories in the optimization graph. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This edge penalizes configurations where the relative velocity between the robot and an agent exceeds a specified threshold. The cost is computed based on the difference in velocities projected along the direction between the robot and agent, and is penalized if it exceeds cfg_-&gt;hateb.rel_vel_cost_threshold.</para>
+<para>Inherits from <ref refid="classhateb__local__planner_1_1BaseTebMultiEdge" kindref="compound">BaseTebMultiEdge&lt;1, double&gt;</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebMultiEdge&lt; 1, double &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebMultiEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeAgentRobotRelVelocity</label>
+        <link refid="classhateb__local__planner_1_1EdgeAgentRobotRelVelocity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseMultiEdge&lt; D, double &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebMultiEdge&lt; 1, double &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebMultiEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeAgentRobotRelVelocity</label>
+        <link refid="classhateb__local__planner_1_1EdgeAgentRobotRelVelocity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseMultiEdge&lt; D, double &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_robot_rel_velocity.h" line="53" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_robot_rel_velocity.h" bodystart="53" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentRobotRelVelocity</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeAgentRobotRelVelocity_1a1857a8a62ffe80a255ce77a175b0a9e6" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentRobotRelVelocity</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeAgentRobotRelVelocity_1abe676bb5564fe1c0e0dc3fa380bcf2da" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentRobotRelVelocity</scope><name>EdgeAgentRobotRelVelocity</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a3783b6cfd9f8666ecb000b07c25758f4" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentRobotRelVelocity</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a77ae43578b59d5ac54ffe9d50a859255" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeAgentRobotRelVelocity</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a57f2fb741d0ded5f4491d4602919c5a3" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeAgentRobotRelVelocity</scope><name>resize</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1ae126de1d25032cf83de82823cdcf74bc" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentRobotRelVelocity</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1af763878f2200a5cf70b3b7d6c5a86b78" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeAgentRobotRelVelocity</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

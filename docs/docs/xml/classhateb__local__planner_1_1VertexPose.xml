@@ -1,0 +1,546 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1VertexPose" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::VertexPose</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">g2o::BaseVertex&lt; 3, PoseSE2 &gt;</basecompoundref>
+    <includes refid="vertex__pose_8h" local="no">vertex_pose.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1af67663535d30d6844ff31519277ca713" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::VertexPose::VertexPose</definition>
+        <argsstring>(bool fixed=false)</argsstring>
+        <name>VertexPose</name>
+        <param>
+          <type>bool</type>
+          <declname>fixed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fixed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, this vertex is considered fixed during optimization [default: <computeroutput>false</computeroutput>] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="67" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1aa2cb97657c4ef6f3d9f39024b9ebcffe" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::VertexPose::VertexPose</definition>
+        <argsstring>(const PoseSE2 &amp;pose, bool fixed=false)</argsstring>
+        <name>VertexPose</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fixed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Construct pose using a given <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> defining the pose [x, y, angle_rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fixed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, this vertex is considered fixed during optimization [default: <computeroutput>false</computeroutput>] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="77" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1a3790350ad3c4053e48308e696c7dca75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::VertexPose::VertexPose</definition>
+        <argsstring>(const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;position, double theta, bool fixed=false)</argsstring>
+        <name>VertexPose</name>
+        <param>
+          <type>const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fixed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Construct pose using a given 2D position vector and orientation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Eigen::Vector2d containing x and y coordinates </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yaw-angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fixed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, this vertex is considered fixed during optimization [default: <computeroutput>false</computeroutput>] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="88" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1abb64e66a070d3ec7570111fc66f85173" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::VertexPose::VertexPose</definition>
+        <argsstring>(double x, double y, double theta, bool fixed=false)</argsstring>
+        <name>VertexPose</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fixed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Construct pose using single components x, y, and the yaw angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yaw angle in rad </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fixed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, this vertex is considered fixed during optimization [default: <computeroutput>false</computeroutput>] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="101" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="101" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1a34b3e9fccdf596f380ef27af15361507" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::VertexPose::~VertexPose</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~VertexPose</name>
+        <briefdescription>
+<para>Destructs the <ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="111" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1ac2479e5a8f47def9b9ce2539a02572d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+        <definition>PoseSE2&amp; hateb_local_planner::VertexPose::pose</definition>
+        <argsstring>()</argsstring>
+        <name>pose</name>
+        <briefdescription>
+<para>Access the pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>estimate </para>
+</simplesect>
+<simplesect kind="return"><para>reference to the <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> estimate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="118" column="18" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="118" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1af13a86535fedba2e45ab3f3005b19fff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+        <definition>const PoseSE2&amp; hateb_local_planner::VertexPose::pose</definition>
+        <argsstring>() const</argsstring>
+        <name>pose</name>
+        <briefdescription>
+<para>Access the pose (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>estimate </para>
+</simplesect>
+<simplesect kind="return"><para>const reference to the <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> estimate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="125" column="24" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="125" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1a2a7cd5148c462bb89fe82f56cef2d174" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Eigen::Vector2d &amp;</type>
+        <definition>Eigen::Vector2d&amp; hateb_local_planner::VertexPose::position</definition>
+        <argsstring>()</argsstring>
+        <name>position</name>
+        <briefdescription>
+<para>Access the 2D position part. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>estimate </para>
+</simplesect>
+<simplesect kind="return"><para>reference to the 2D position part </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="132" column="26" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="132" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1a354d3686506b585b425eecd257488bf5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Eigen::Vector2d &amp;</type>
+        <definition>const Eigen::Vector2d&amp; hateb_local_planner::VertexPose::position</definition>
+        <argsstring>() const</argsstring>
+        <name>position</name>
+        <briefdescription>
+<para>Access the 2D position part (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>estimate </para>
+</simplesect>
+<simplesect kind="return"><para>const reference to the 2D position part </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="139" column="32" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="139" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1a6ea7be173e321f3a50dd004c4fa24a0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; hateb_local_planner::VertexPose::x</definition>
+        <argsstring>()</argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>Access the x-coordinate the pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>reference to the x-coordinate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="145" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1a7b0ede1783842f12caf6010c67c03a44" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; hateb_local_planner::VertexPose::x</definition>
+        <argsstring>() const</argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>Access the x-coordinate the pose (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the x-coordinate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="151" column="23" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1abd720a20e0db25efa5da1013217ffbae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; hateb_local_planner::VertexPose::y</definition>
+        <argsstring>()</argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Access the y-coordinate the pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>reference to the y-coordinate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="157" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="157" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1a92bb5107157dfff083ccab99b76b360c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; hateb_local_planner::VertexPose::y</definition>
+        <argsstring>() const</argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Access the y-coordinate the pose (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the y-coordinate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="163" column="23" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="163" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1af47bc2c186c2e14fff2f4f13376a59b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; hateb_local_planner::VertexPose::theta</definition>
+        <argsstring>()</argsstring>
+        <name>theta</name>
+        <briefdescription>
+<para>Access the orientation part (yaw angle) of the pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>reference to the yaw angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="169" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="169" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1af857c33468e3cb2bdfc2200e8a3dc2be" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; hateb_local_planner::VertexPose::theta</definition>
+        <argsstring>() const</argsstring>
+        <name>theta</name>
+        <briefdescription>
+<para>Access the orientation part (yaw angle) of the pose (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the yaw angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="175" column="23" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="175" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1a5843d3c5cbc79b06dda39a1b7f9c3d86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::VertexPose::setToOriginImpl</definition>
+        <argsstring>() override</argsstring>
+        <name>setToOriginImpl</name>
+        <briefdescription>
+<para>Set the underlying estimate (2D vector) to zero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="180" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="180" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1a6d3eca3f08eed8dda6d7152aee3f3e3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::VertexPose::oplusImpl</definition>
+        <argsstring>(const double *update) override</argsstring>
+        <name>oplusImpl</name>
+        <param>
+          <type>const double *</type>
+          <declname>update</declname>
+        </param>
+        <briefdescription>
+<para>Define the update increment <formula id="24">$ \mathbf{x}_{k+1} = \mathbf{x}_k + \Delta \mathbf{x} $</formula>. A simple addition for the position. The angle is first added to the previous estimated angle and afterwards normalized to the interval <formula id="25">$ [-\pi \pi] $</formula>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>update</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>increment that should be added to the previous esimate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="189" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="189" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1ac8892984a1f51aae5dd2e45a8af04449" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::VertexPose::read</definition>
+        <argsstring>(std::istream &amp;is) override</argsstring>
+        <name>read</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+<para>Read an estimate from an input stream. First the x-coordinate followed by y and the yaw angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>is</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>always <computeroutput>true</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="197" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="197" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VertexPose_1a0eda61ecac01fcce72227769e8bc9440" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::VertexPose::write</definition>
+        <argsstring>(std::ostream &amp;os) const override</argsstring>
+        <name>write</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Write the estimate to an output stream First the x-coordinate followed by y and the yaw angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the export was successful, otherwise <computeroutput>false</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="208" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="208" bodyend="211"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized via g2o. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>g2o::BaseVertex&lt; 3, PoseSE2 &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::VertexPose</label>
+        <link refid="classhateb__local__planner_1_1VertexPose"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>g2o::BaseVertex&lt; 3, PoseSE2 &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::VertexPose</label>
+        <link refid="classhateb__local__planner_1_1VertexPose"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" line="61" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/vertex_pose.h" bodystart="61" bodyend="214"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1VertexPose_1a6d3eca3f08eed8dda6d7152aee3f3e3a" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>oplusImpl</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1ac2479e5a8f47def9b9ce2539a02572d6" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>pose</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1af13a86535fedba2e45ab3f3005b19fff" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>pose</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1a2a7cd5148c462bb89fe82f56cef2d174" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>position</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1a354d3686506b585b425eecd257488bf5" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>position</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1ac8892984a1f51aae5dd2e45a8af04449" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1a5843d3c5cbc79b06dda39a1b7f9c3d86" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>setToOriginImpl</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1af47bc2c186c2e14fff2f4f13376a59b2" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>theta</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1af857c33468e3cb2bdfc2200e8a3dc2be" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>theta</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1af67663535d30d6844ff31519277ca713" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>VertexPose</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1aa2cb97657c4ef6f3d9f39024b9ebcffe" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>VertexPose</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1a3790350ad3c4053e48308e696c7dca75" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>VertexPose</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1abb64e66a070d3ec7570111fc66f85173" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>VertexPose</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1a0eda61ecac01fcce72227769e8bc9440" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>write</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1a6ea7be173e321f3a50dd004c4fa24a0b" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>x</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1a7b0ede1783842f12caf6010c67c03a44" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>x</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1abd720a20e0db25efa5da1013217ffbae" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>y</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1a92bb5107157dfff083ccab99b76b360c" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>y</name></member>
+      <member refid="classhateb__local__planner_1_1VertexPose_1a34b3e9fccdf596f380ef27af15361507" prot="public" virt="non-virtual"><scope>hateb_local_planner::VertexPose</scope><name>~VertexPose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

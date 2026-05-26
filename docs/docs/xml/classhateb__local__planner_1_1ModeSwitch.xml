@@ -1,0 +1,761 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1ModeSwitch" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::ModeSwitch</compoundname>
+    <includes refid="mode__switch_8h" local="no">mode_switch.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a075d65e69586c23fd4b7a420dec8f38a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::ModeSwitch::goal_reached_</definition>
+        <argsstring></argsstring>
+        <name>goal_reached_</name>
+        <briefdescription>
+<para>Flag indicating if current goal was reached. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="173" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1aefd4c95fbad1f4ada3f9584441694873" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::ModeSwitch::initialized_</definition>
+        <argsstring></argsstring>
+        <name>initialized_</name>
+        <briefdescription>
+<para>Flag indicating if class was properly initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="174" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a00801aea58ed373499e425b74d648ec6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::ModeSwitch::goal_update_</definition>
+        <argsstring></argsstring>
+        <name>goal_update_</name>
+        <briefdescription>
+<para>Flag indicating if goal was updated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="175" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" prot="private" static="no" mutable="no">
+        <type>rclcpp_lifecycle::LifecycleNode::SharedPtr</type>
+        <definition>rclcpp_lifecycle::LifecycleNode::SharedPtr hateb_local_planner::ModeSwitch::node_</definition>
+        <argsstring></argsstring>
+        <name>node_</name>
+        <briefdescription>
+<para>ROS 2 node shared pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="178" column="46" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a4526138b2971e3007cfd39540c2ab1d3" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; agent_path_prediction::msg::AgentsInfo &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;agent_path_prediction::msg::AgentsInfo&gt;::SharedPtr hateb_local_planner::ModeSwitch::agents_info_sub_</definition>
+        <argsstring></argsstring>
+        <name>agents_info_sub_</name>
+        <briefdescription>
+<para>Subscriber for agent information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="179" column="36" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a1d70f055a6d1ffab8b02cee88212efa6" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Path &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Path&gt;::SharedPtr hateb_local_planner::ModeSwitch::plan_sub_</definition>
+        <argsstring></argsstring>
+        <name>plan_sub_</name>
+        <briefdescription>
+<para>Subscriber for navigation goals. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="180" column="36" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a60fdc7d0aadf6eabd5eca64c65e3d81b" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; action_msgs::msg::GoalStatusArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;action_msgs::msg::GoalStatusArray&gt;::SharedPtr hateb_local_planner::ModeSwitch::result_sub_</definition>
+        <argsstring></argsstring>
+        <name>result_sub_</name>
+        <briefdescription>
+<para>Subscriber for navigation results. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="181" column="36" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a12c770bc77b5df28dfb9f639ec12eaec" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; cohan_msgs::msg::PassageType &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;cohan_msgs::msg::PassageType&gt;::SharedPtr hateb_local_planner::ModeSwitch::passage_detect_sub_</definition>
+        <argsstring></argsstring>
+        <name>passage_detect_sub_</name>
+        <briefdescription>
+<para>Subscriber for passage detection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="182" column="36" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1ad704dca9045293ec6746d70d7c38decf" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; hateb_local_planner::msg::PlanningMode &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;hateb_local_planner::msg::PlanningMode&gt;::SharedPtr hateb_local_planner::ModeSwitch::planning_mode_pub_</definition>
+        <argsstring></argsstring>
+        <name>planning_mode_pub_</name>
+        <briefdescription>
+<para>Publisher for current planning mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="183" column="33" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1af4edc6a0c5f65500feef8537f8f92c74" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::PoseStamped</type>
+        <definition>geometry_msgs::msg::PoseStamped hateb_local_planner::ModeSwitch::goal_</definition>
+        <argsstring></argsstring>
+        <name>goal_</name>
+        <briefdescription>
+<para>Current navigation goal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="186" column="35" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a1a08c0800483728149aa4ef8e50b24d7" prot="private" static="no" mutable="no">
+        <type>agent_path_prediction::msg::AgentsInfo</type>
+        <definition>agent_path_prediction::msg::AgentsInfo hateb_local_planner::ModeSwitch::agents_info_</definition>
+        <argsstring></argsstring>
+        <name>agents_info_</name>
+        <briefdescription>
+<para>Current agent information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="187" column="42" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a64887a81f41be3700f7eb5a8b1f4705f" prot="private" static="no" mutable="no">
+        <type>action_msgs::msg::GoalStatusArray</type>
+        <definition>action_msgs::msg::GoalStatusArray hateb_local_planner::ModeSwitch::result_msg_</definition>
+        <argsstring></argsstring>
+        <name>result_msg_</name>
+        <briefdescription>
+<para>Latest navigation result. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="188" column="37" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a5b57798d071bd8bba920b10652b72d9f" prot="private" static="no" mutable="no">
+        <type>BT::BehaviorTreeFactory</type>
+        <definition>BT::BehaviorTreeFactory hateb_local_planner::ModeSwitch::bhv_factory_</definition>
+        <argsstring></argsstring>
+        <name>bhv_factory_</name>
+        <briefdescription>
+<para>Factory for creating BT nodes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="191" column="27" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" prot="private" static="no" mutable="no">
+        <type>BT::Tree</type>
+        <definition>BT::Tree hateb_local_planner::ModeSwitch::bhv_tree_</definition>
+        <argsstring></argsstring>
+        <name>bhv_tree_</name>
+        <briefdescription>
+<para>The behavior tree instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="192" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a16cc375474bd05bb060cfb84ff1bfb5d" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex hateb_local_planner::ModeSwitch::pub_mutex_</definition>
+        <argsstring></argsstring>
+        <name>pub_mutex_</name>
+        <briefdescription>
+<para>Mutex for thread-safe publishing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="194" column="14" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a364490ca57c1cdad3c495e1037c468ec" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::ModeSwitch::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of this node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="196" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1ae84aca2c2506f24063a1a5f02213fcf0" prot="private" static="no" mutable="no">
+        <type>hateb_local_planner::msg::PlanningMode</type>
+        <definition>hateb_local_planner::msg::PlanningMode hateb_local_planner::ModeSwitch::plan_mode_</definition>
+        <argsstring></argsstring>
+        <name>plan_mode_</name>
+        <briefdescription>
+<para>Current planning mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="197" column="42" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a9036b519c97c53bd0d63d503498a5781" prot="private" static="no" mutable="no">
+        <type><ref refid="structhateb__local__planner_1_1ModeInfo" kindref="compound">ModeInfo</ref></type>
+        <definition>ModeInfo hateb_local_planner::ModeSwitch::mode_info_</definition>
+        <argsstring></argsstring>
+        <name>mode_info_</name>
+        <briefdescription>
+<para>Detailed mode information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="198" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1ac34ec0926c6715623a693b1c4d35debd" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::ModeSwitch::ns_</definition>
+        <argsstring></argsstring>
+        <name>ns_</name>
+        <briefdescription>
+<para>Namespace of the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="201" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a67e7fc50b4ec4ce156a68a89edb9888e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::ModeSwitch::agents_info_sub_topic_</definition>
+        <argsstring></argsstring>
+        <name>agents_info_sub_topic_</name>
+        <briefdescription>
+<para>Topic for agents information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="202" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1adb7b165cbd810b904ecef593ca3db6d0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::ModeSwitch::plan_sub_topic_</definition>
+        <argsstring></argsstring>
+        <name>plan_sub_topic_</name>
+        <briefdescription>
+<para>Topic for robot plan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="203" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1abaf681100237b726b69d975ec9fd23ea" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::ModeSwitch::result_sub_topic_</definition>
+        <argsstring></argsstring>
+        <name>result_sub_topic_</name>
+        <briefdescription>
+<para>Topic for robot goal result. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="204" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1a3831e8aa883e831be5de164c63639e62" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::ModeSwitch::passage_sub_topic_</definition>
+        <argsstring></argsstring>
+        <name>passage_sub_topic_</name>
+        <briefdescription>
+<para>Topic for passage detection (from invisible humans) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="205" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1ModeSwitch_1ae8a90f00e936c920a0bdf9f6679168bd" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;HATebConfig&gt; hateb_local_planner::ModeSwitch::cfg_</definition>
+        <argsstring></argsstring>
+        <name>cfg_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="207" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1a0f977db12863b680c34f1c909ee55b43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::ModeSwitch::ModeSwitch</definition>
+        <argsstring>()</argsstring>
+        <name>ModeSwitch</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="81" column="3" bodyfile="hateb_local_planner/src/mode_switch.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1aab035d5b0b57efa54e7786d40cc7233e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::ModeSwitch::~ModeSwitch</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ModeSwitch</name>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="86" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1a8efbff053db52eb82ab03d5690e36d30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::ModeSwitch::initialize</definition>
+        <argsstring>(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::shared_ptr&lt; HATebConfig &gt; cfg, std::shared_ptr&lt; hateb_local_planner::Agents &gt; &amp;agents_ptr)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>rclcpp_lifecycle::LifecycleNode::SharedPtr</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> &gt;</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classhateb__local__planner_1_1Agents" kindref="compound">hateb_local_planner::Agents</ref> &gt; &amp;</type>
+          <declname>agents_ptr</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the mode switch with required components. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ROS 2 node shared pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agents_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the agents management class </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="94" column="8" bodyfile="hateb_local_planner/src/mode_switch.cpp" bodystart="39" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1aa860dc9be20753e5b083966de64f42dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BT::NodeStatus</type>
+        <definition>BT::NodeStatus hateb_local_planner::ModeSwitch::tickBT</definition>
+        <argsstring>()</argsstring>
+        <name>tickBT</name>
+        <briefdescription>
+<para>Executes one tick of the behavior tree. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Status of the behavior tree after the tick </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="100" column="18" bodyfile="hateb_local_planner/src/mode_switch.cpp" bodystart="171" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1a0dfa09b1400828f8e485091e20b73056" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::ModeSwitch::resetBT</definition>
+        <argsstring>()</argsstring>
+        <name>resetBT</name>
+        <briefdescription>
+<para>Resets the behavior tree to its initial state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="105" column="8" bodyfile="hateb_local_planner/src/mode_switch.cpp" bodystart="217" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1a5488b3a5c2c11127b0815855b59273c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BT::Tree *</type>
+        <definition>BT::Tree* hateb_local_planner::ModeSwitch::BTree</definition>
+        <argsstring>()</argsstring>
+        <name>BTree</name>
+        <briefdescription>
+<para>Gets a pointer to the behavior tree. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the behavior tree instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="111" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1ac6d5bb04ebb9457a026d343fe14b2086" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hateb_local_planner::msg::PlanningMode</type>
+        <definition>hateb_local_planner::msg::PlanningMode hateb_local_planner::ModeSwitch::tickAndGetMode</definition>
+        <argsstring>()</argsstring>
+        <name>tickAndGetMode</name>
+        <briefdescription>
+<para>Ticks the behavior tree and returns the resulting planning mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The selected planning mode after the tree evaluation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="117" column="42" bodyfile="hateb_local_planner/src/mode_switch.cpp" bodystart="211" bodyend="215"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1a6062fb532accdcc1a46454d8a6f6129e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hateb_local_planner::ModeSwitch::setBTDebugEnabled</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setBTDebugEnabled</name>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Sets the behavior tree debug logging flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to enable debug logging, false to disable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="123" column="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1adaee89986120f308a98eb63c4b4b50c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::ModeSwitch::registerNodes</definition>
+        <argsstring>()</argsstring>
+        <name>registerNodes</name>
+        <briefdescription>
+<para>Registers custom nodes with the behavior tree factory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="129" column="8" bodyfile="hateb_local_planner/src/mode_switch.cpp" bodystart="224" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1af9f58bdb7b68a26bf671701f4840e10e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::ModeSwitch::agentsInfoCB</definition>
+        <argsstring>(const agent_path_prediction::msg::AgentsInfo::SharedPtr info_msg)</argsstring>
+        <name>agentsInfoCB</name>
+        <param>
+          <type>const agent_path_prediction::msg::AgentsInfo::SharedPtr</type>
+          <declname>info_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for processing agent information updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>info_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message containing updated agent information </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="135" column="8" bodyfile="hateb_local_planner/src/mode_switch.cpp" bodystart="134" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1a8be2ca5b793f2da710e92be3e8b56243" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::ModeSwitch::planCB</definition>
+        <argsstring>(const nav_msgs::msg::Path::SharedPtr plan_msg)</argsstring>
+        <name>planCB</name>
+        <param>
+          <type>const nav_msgs::msg::Path::SharedPtr</type>
+          <declname>plan_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for processing new navigation goals. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>goal_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message containing the new goal </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="141" column="8" bodyfile="hateb_local_planner/src/mode_switch.cpp" bodystart="141" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1af2c094362571e4d36d4d1ce66b2e32f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::ModeSwitch::resultNavigateToPoseCB</definition>
+        <argsstring>(const action_msgs::msg::GoalStatusArray::SharedPtr result_msg)</argsstring>
+        <name>resultNavigateToPoseCB</name>
+        <param>
+          <type>const action_msgs::msg::GoalStatusArray::SharedPtr</type>
+          <declname>result_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for processing navigation results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>result_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message containing the navigation result </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="147" column="8" bodyfile="hateb_local_planner/src/mode_switch.cpp" bodystart="160" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1a37cc2b411b9fee91473ee5b7dcdbcaab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::ModeSwitch::passageCB</definition>
+        <argsstring>(const cohan_msgs::msg::PassageType::SharedPtr passage_msg)</argsstring>
+        <name>passageCB</name>
+        <param>
+          <type>const cohan_msgs::msg::PassageType::SharedPtr</type>
+          <declname>passage_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for processing passage type information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>passage_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message containing passage classification </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="153" column="8" bodyfile="hateb_local_planner/src/mode_switch.cpp" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1a4011bbbbf267c3d8f1e1e62bc13e9199" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::ModeSwitch::updateMode</definition>
+        <argsstring>(int duration=0)</argsstring>
+        <name>updateMode</name>
+        <param>
+          <type>int</type>
+          <declname>duration</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Updates the current planning mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>duration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional duration parameter for the update </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="159" column="8" bodyfile="hateb_local_planner/src/mode_switch.cpp" bodystart="183" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1ModeSwitch_1a2a237e7d893356b1a26388fae0206c83" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::ModeSwitch::printTreeStatus</definition>
+        <argsstring>(const BT::TreeNode *node, int level=0)</argsstring>
+        <name>printTreeStatus</name>
+        <param>
+          <type>const BT::TreeNode *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="161" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="161" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class managing planning mode switches in the HATEB local planner. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classhateb__local__planner_1_1ModeSwitch" kindref="compound">ModeSwitch</ref> implements a behavior tree-based decision system for switching between different planning modes (single band, dual band, velocity obstacles, etc.) based on the current situation. It processes information about nearby agents, goals, and passage types to determine the most appropriate planning strategy. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>hateb_local_planner::ModeInfo</label>
+        <link refid="structhateb__local__planner_1_1ModeInfo"/>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::ModeSwitch</label>
+        <link refid="classhateb__local__planner_1_1ModeSwitch"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>mode_info_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/mode_switch.h" line="76" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/mode_switch.h" bodystart="76" bodyend="208"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a1a08c0800483728149aa4ef8e50b24d7" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>agents_info_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a4526138b2971e3007cfd39540c2ab1d3" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>agents_info_sub_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a67e7fc50b4ec4ce156a68a89edb9888e" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>agents_info_sub_topic_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1af9f58bdb7b68a26bf671701f4840e10e" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>agentsInfoCB</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a5b57798d071bd8bba920b10652b72d9f" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>bhv_factory_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a798d721d79ae54ce1e95b99946bf8363" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>bhv_tree_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a5488b3a5c2c11127b0815855b59273c7" prot="public" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>BTree</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1ae8a90f00e936c920a0bdf9f6679168bd" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1af4edc6a0c5f65500feef8537f8f92c74" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>goal_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a075d65e69586c23fd4b7a420dec8f38a" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>goal_reached_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a00801aea58ed373499e425b74d648ec6" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>goal_update_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a8efbff053db52eb82ab03d5690e36d30" prot="public" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>initialize</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1aefd4c95fbad1f4ada3f9584441694873" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>initialized_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a9036b519c97c53bd0d63d503498a5781" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>mode_info_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a0f977db12863b680c34f1c909ee55b43" prot="public" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>ModeSwitch</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a364490ca57c1cdad3c495e1037c468ec" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>name_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a4ffdb6bc22fc921ee4fd43beb1b04b45" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>node_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1ac34ec0926c6715623a693b1c4d35debd" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>ns_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a12c770bc77b5df28dfb9f639ec12eaec" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>passage_detect_sub_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a3831e8aa883e831be5de164c63639e62" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>passage_sub_topic_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a37cc2b411b9fee91473ee5b7dcdbcaab" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>passageCB</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1ae84aca2c2506f24063a1a5f02213fcf0" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>plan_mode_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a1d70f055a6d1ffab8b02cee88212efa6" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>plan_sub_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1adb7b165cbd810b904ecef593ca3db6d0" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>plan_sub_topic_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a8be2ca5b793f2da710e92be3e8b56243" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>planCB</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1ad704dca9045293ec6746d70d7c38decf" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>planning_mode_pub_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a2a237e7d893356b1a26388fae0206c83" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>printTreeStatus</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a16cc375474bd05bb060cfb84ff1bfb5d" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>pub_mutex_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1adaee89986120f308a98eb63c4b4b50c6" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>registerNodes</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a0dfa09b1400828f8e485091e20b73056" prot="public" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>resetBT</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a64887a81f41be3700f7eb5a8b1f4705f" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>result_msg_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a60fdc7d0aadf6eabd5eca64c65e3d81b" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>result_sub_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1abaf681100237b726b69d975ec9fd23ea" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>result_sub_topic_</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1af2c094362571e4d36d4d1ce66b2e32f7" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>resultNavigateToPoseCB</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a6062fb532accdcc1a46454d8a6f6129e" prot="public" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>setBTDebugEnabled</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1ac6d5bb04ebb9457a026d343fe14b2086" prot="public" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>tickAndGetMode</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1aa860dc9be20753e5b083966de64f42dd" prot="public" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>tickBT</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1a4011bbbbf267c3d8f1e1e62bc13e9199" prot="private" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>updateMode</name></member>
+      <member refid="classhateb__local__planner_1_1ModeSwitch_1aab035d5b0b57efa54e7786d40cc7233e" prot="public" virt="non-virtual"><scope>hateb_local_planner::ModeSwitch</scope><name>~ModeSwitch</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

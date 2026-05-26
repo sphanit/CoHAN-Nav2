@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_78734b8a0edacd5ba430c44a99e280d0" kind="dir">
+    <compoundname>costmap_converter</compoundname>
+    <innerdir refid="dir_7915b9464c0fb6f988b3750b09b3e43b">costmap_to_dynamic_obstacles</innerdir>
+    <innerfile refid="costmap__converter__interface_8h">costmap_converter_interface.h</innerfile>
+    <innerfile refid="costmap__to__lines__convex__hull_8h">costmap_to_lines_convex_hull.h</innerfile>
+    <innerfile refid="costmap__to__lines__ransac_8h">costmap_to_lines_ransac.h</innerfile>
+    <innerfile refid="costmap__to__polygons_8h">costmap_to_polygons.h</innerfile>
+    <innerfile refid="costmap__to__polygons__concave_8h">costmap_to_polygons_concave.h</innerfile>
+    <innerfile refid="costmap__converter_2costmap__converter_2include_2costmap__converter_2misc_8h">costmap_converter/costmap_converter/include/costmap_converter/misc.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/"/>
+  </compounddef>
+</doxygen>

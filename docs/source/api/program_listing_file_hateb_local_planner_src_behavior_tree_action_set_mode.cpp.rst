@@ -1,0 +1,109 @@
+
+.. _program_listing_file_hateb_local_planner_src_behavior_tree_action_set_mode.cpp:
+
+Program Listing for File set_mode.cpp
+=====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_hateb_local_planner_src_behavior_tree_action_set_mode.cpp>` (``hateb_local_planner/src/behavior_tree/action/set_mode.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*******************************************************************************
+    * Software License Agreement (MIT License)
+    *
+    * Copyright (c) 2024-2025 LAAS-CNRS
+    *
+    * Permission is hereby granted, free of charge, to any person obtaining a copy
+    * of this software and associated documentation files (the "Software"), to deal
+    * in the Software without restriction, including without limitation the rights
+    * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    * copies of the Software, and to permit persons to whom the Software is
+    * furnished to do so, subject to the following conditions:
+    *
+    * The above copyright notice and this permission notice shall be included in
+    * all copies or substantial portions of the Software.
+    *
+    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    * THE SOFTWARE.
+    *
+    * Author: Phani Teja Singamaneni
+    *********************************************************************************/
+   
+   #include <hateb_local_planner/behavior_tree/action/set_mode.h>
+   
+   namespace hateb_local_planner {
+   
+   SetMode::SetMode(const std::string& name, const BT::NodeConfiguration& config) : BT::StatefulActionNode(name, config) {
+     name_ = name;
+     BT_INFO(name_, "Starting the SetMode BT Node");
+   }
+   
+   SetMode::~SetMode() {
+     // Set the RCLCPP_INFO while shutting down the node
+     BT_INFO(name_, "Shutting down the SetMode BT Node");
+   }
+   
+   BT::NodeStatus SetMode::onStart() {
+     getInput("plan_type", plan_type_);
+     getInput("predict_type", predict_type_);
+   
+     // Update the planning mode on the blackboard based on the type
+     if (plan_type_ == "single") {
+       p_msg_.plan = PLAN::SINGLE_BAND;
+     }
+   
+     else if (plan_type_ == "dual") {
+       p_msg_.plan = PLAN::DUAL_BAND;
+     }
+   
+     else if (plan_type_ == "velobs") {
+       p_msg_.plan = PLAN::VELOBS;
+     }
+   
+     else if (plan_type_ == "passthrough") {
+       p_msg_.plan = PLAN::PASSTHROUGH;
+     }
+   
+     if (predict_type_ == "const_vel") {
+       p_msg_.predict = PREDICTION::CONST_VEL;
+     }
+   
+     else if (predict_type_ == "behind") {
+       p_msg_.predict = PREDICTION::BEHIND;
+     }
+   
+     else if (predict_type_ == "predict") {
+       p_msg_.predict = PREDICTION::PREDICT;
+     }
+   
+     else if (predict_type_ == "external") {
+       p_msg_.predict = PREDICTION::EXTERNAL;
+     }
+   
+     // Port Remapping has to be called before using setOutput (notice name change)
+     setOutput("mode", p_msg_);
+   
+     BT_INFO(name_, "onStart()")
+     // Set the status to RUNNING
+     return BT::NodeStatus::RUNNING;
+   }
+   
+   BT::NodeStatus SetMode::onRunning() {
+     // Keep Running until halt
+     BT_INFO(name_, "onRunning()")
+     return BT::NodeStatus::RUNNING;
+   }
+   
+   void SetMode::onHalted() {
+     // Just update the info
+     BT_INFO(name_, "Node is interrupted by calling onHalted()");
+   }
+   
+   };  // namespace hateb_local_planner

@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="Kalman_8h" kind="file" language="C++">
+    <compoundname>Kalman.h</compoundname>
+    <includes refid="defines_8h" local="yes">defines.h</includes>
+    <includes local="no">opencv2/opencv.hpp</includes>
+    <includedby refid="Ctracker_8h" local="yes">Ctracker.h</includedby>
+    <includedby refid="Kalman_8cpp" local="no">Kalman.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Kalman.h</label>
+        <link refid="Kalman_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="2">
+        <label>defines.h</label>
+        <link refid="defines_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>Kalman.h</label>
+        <link refid="Kalman_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Ctracker.cpp</label>
+        <link refid="Ctracker_8cpp"/>
+      </node>
+      <node id="2">
+        <label>Ctracker.h</label>
+        <link refid="Ctracker_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>costmap_to_dynamic_obstacles.h</label>
+        <link refid="costmap__to__dynamic__obstacles_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Kalman.cpp</label>
+        <link refid="Kalman_8cpp"/>
+      </node>
+      <node id="4">
+        <label>costmap_to_dynamic_obstacles.cpp</label>
+        <link refid="costmap__to__dynamic__obstacles_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classTKalmanFilter" prot="public">TKalmanFilter</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Based<sp/>on<sp/>https://github.com/Smorodov/Multitarget-tracker/tree/master/Tracker,<sp/>GPLv3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Refer<sp/>to<sp/>README.md<sp/>in<sp/>this<sp/>directory.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="defines_8h" kindref="compound">defines.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;opencv2/opencv.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.morethantechnical.com/2011/06/17/simple-kalman-filter-for-tracking-using-opencv-2-2-w-code/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classTKalmanFilter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTKalmanFilter" kindref="compound">TKalmanFilter</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><ref refid="classTKalmanFilter_1abad97c077ca0863a5c759b2476c58ce9" kindref="member">TKalmanFilter</ref>(<ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref><sp/>p,<sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref><sp/>deltatime<sp/>=<sp/>0.2);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><ref refid="classTKalmanFilter_1a19b5f44e8aadad2217ed3f2f370c8608" kindref="member">~TKalmanFilter</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTKalmanFilter_1afd9f51495142af0c610802447f0fc4bd" kindref="member">Prediction</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref><sp/><ref refid="classTKalmanFilter_1adec756af94bd680fc66ce8219faed3bf" kindref="member">Update</ref>(<ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>DataCorrect);</highlight></codeline>
+<codeline lineno="16" refid="classTKalmanFilter_1ae00aef3f97b64481e226693762faae55" refkind="member"><highlight class="normal"><sp/><sp/>cv::KalmanFilter*<sp/><ref refid="classTKalmanFilter_1ae00aef3f97b64481e226693762faae55" kindref="member">kalman</ref>;</highlight></codeline>
+<codeline lineno="17" refid="classTKalmanFilter_1ad91b52da581a105eca07adbf821eff50" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="defines_8h_1a7ce9c8817b42ab418e61756f579549ab" kindref="member">track_t</ref><sp/><ref refid="classTKalmanFilter_1ad91b52da581a105eca07adbf821eff50" kindref="member">dt</ref>;</highlight></codeline>
+<codeline lineno="18" refid="classTKalmanFilter_1a469facc70aadc788ef9f6cadf215bf8c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref><sp/><ref refid="classTKalmanFilter_1a469facc70aadc788ef9f6cadf215bf8c" kindref="member">LastPosition</ref>;<sp/></highlight><highlight class="comment">//<sp/>contour<sp/>in<sp/>[px]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classTKalmanFilter_1a9e6ecc34ba4e3c4439180f5a0eb8e249" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref><sp/><ref refid="classTKalmanFilter_1a9e6ecc34ba4e3c4439180f5a0eb8e249" kindref="member">LastVelocity</ref>;<sp/></highlight><highlight class="comment">//<sp/>velocity<sp/>in<sp/>[px/s]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h"/>
+  </compounddef>
+</doxygen>

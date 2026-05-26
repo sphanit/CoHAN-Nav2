@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,247,163,274"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebUnaryEdge.html" title=" " alt="" coords="223,5,405,76"/>
+<area shape="rect" id="node4" href="$classhateb__local__planner_1_1BaseTebUnaryEdge.html" title=" " alt="" coords="223,101,405,157"/>
+<area shape="rect" id="node6" href="$classhateb__local__planner_1_1BaseTebUnaryEdge.html" title=" " alt="" coords="231,181,397,252"/>
+<area shape="rect" id="node8" href="$classhateb__local__planner_1_1BaseTebUnaryEdge.html" title=" " alt="" coords="211,277,417,333"/>
+<area shape="rect" id="node10" href="$classhateb__local__planner_1_1BaseTebUnaryEdge.html" title=" " alt="" coords="231,357,397,428"/>
+<area shape="rect" id="node13" href="$classhateb__local__planner_1_1BaseTebUnaryEdge.html" title="Base edge connecting a single vertex in the TEB optimization problem." alt="" coords="231,453,397,509"/>
+<area shape="rect" id="node3" href="$classhateb__local__planner_1_1EdgeViaPoint.html" title="Edge defining the cost function for pushing a configuration towards a via point." alt="" coords="486,20,639,61"/>
+<area shape="rect" id="node5" href="$classhateb__local__planner_1_1EdgeStaticAgentVisibility.html" title="Edge defining a visibility constraint between a static agent and the robot in the optimization graph." alt="" coords="465,108,660,149"/>
+<area shape="rect" id="node7" href="$classhateb__local__planner_1_1EdgeObstacle.html" title="Edge defining the cost function for keeping a minimum distance from obstacles." alt="" coords="486,196,639,237"/>
+<area shape="rect" id="node9" href="$classhateb__local__planner_1_1EdgeTimeOptimal.html" title="Edge defining the cost function for minimizing transition time of the trajectory." alt="" coords="486,284,639,325"/>
+<area shape="rect" id="node11" href="$classhateb__local__planner_1_1EdgeDynamicObstacle.html" title="Edge defining the cost function for keeping a distance from dynamic (moving) obstacles." alt="" coords="474,361,651,403"/>
+<area shape="rect" id="node12" href="$classhateb__local__planner_1_1EdgeInflatedObstacle.html" title="Edge defining the cost function for keeping a minimum distance from inflated obstacles." alt="" coords="479,427,647,468"/>
+</map>

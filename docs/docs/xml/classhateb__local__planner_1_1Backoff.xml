@@ -1,0 +1,757 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1Backoff" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::Backoff</compoundname>
+    <includes refid="backoff_8h" local="no">backoff.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a9359af47ea9cff80e6389cad795673b4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::Backoff::map_frame_</definition>
+        <argsstring></argsstring>
+        <name>map_frame_</name>
+        <briefdescription>
+<para>Name of the map frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="166" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a2f5e6d28a06357c31b4ba16623287c30" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::Backoff::footprint_frame_</definition>
+        <argsstring></argsstring>
+        <name>footprint_frame_</name>
+        <briefdescription>
+<para>Name of the robot&apos;s footprint frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="167" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a0133d675df43274872289cb8cee3d4cb" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::Backoff::ns_</definition>
+        <argsstring></argsstring>
+        <name>ns_</name>
+        <briefdescription>
+<para>Namespace for the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="168" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a40cb7798ffbf5b60fbde3d95d9a4d72c" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::Backoff::publish_goal_topic_</definition>
+        <argsstring></argsstring>
+        <name>publish_goal_topic_</name>
+        <briefdescription>
+<para>Topic name for publishing backoff goals. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="169" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a3df9e7bce0c874cf05cd94bee7a05783" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::Backoff::current_goal_topic_</definition>
+        <argsstring></argsstring>
+        <name>current_goal_topic_</name>
+        <briefdescription>
+<para>Topic name for current goal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="170" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1ae87a3ea7ef10faa0f304dd2681645627" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::Backoff::get_plan_srv_name_</definition>
+        <argsstring></argsstring>
+        <name>get_plan_srv_name_</name>
+        <briefdescription>
+<para>Service name for path planning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="171" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1ae8d020f6014756b22345da190a15aba0" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::Backoff::backoff_timeout_</definition>
+        <argsstring></argsstring>
+        <name>backoff_timeout_</name>
+        <briefdescription>
+<para>Maximum allowed time for backoff maneuver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="172" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a09f975fea345e1d812ce160ed932b7fd" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::PoseStamped</type>
+        <definition>geometry_msgs::PoseStamped hateb_local_planner::Backoff::goal_</definition>
+        <argsstring></argsstring>
+        <name>goal_</name>
+        <briefdescription>
+<para>Current navigation goal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="174" column="30" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a37cb0419cee8434376af2bc9ca9444f3" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::PoseStamped</type>
+        <definition>geometry_msgs::PoseStamped hateb_local_planner::Backoff::old_goal_</definition>
+        <argsstring></argsstring>
+        <name>old_goal_</name>
+        <briefdescription>
+<para>Previous navigation goal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="175" column="30" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a015d7d7038d9e24e540bcc2ca6ebea7e" prot="private" static="no" mutable="no">
+        <type>tf::TransformListener</type>
+        <definition>tf::TransformListener hateb_local_planner::Backoff::tf_</definition>
+        <argsstring></argsstring>
+        <name>tf_</name>
+        <briefdescription>
+<para>Transform listener for coordinate transformations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="177" column="25" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1aa4a08359e24385f0ad5d99a283f3ce06" prot="private" static="no" mutable="no">
+        <type>costmap_2d::Costmap2DROS *</type>
+        <definition>costmap_2d::Costmap2DROS* hateb_local_planner::Backoff::costmap_ros_</definition>
+        <argsstring></argsstring>
+        <name>costmap_ros_</name>
+        <briefdescription>
+<para>Pointer to the costmap ROS wrapper. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="179" column="28" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a1980f1e27353de21de5b7bfc272fe8a3" prot="private" static="no" mutable="no">
+        <type>costmap_2d::Costmap2D *</type>
+        <definition>costmap_2d::Costmap2D* hateb_local_planner::Backoff::costmap_</definition>
+        <argsstring></argsstring>
+        <name>costmap_</name>
+        <briefdescription>
+<para>Pointer to the 2D costmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="180" column="25" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1aa2b1e9ce809aa4a440398bda0966a01d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::Backoff::robot_circumscribed_radius_</definition>
+        <argsstring></argsstring>
+        <name>robot_circumscribed_radius_</name>
+        <briefdescription>
+<para>Radius of circle encompassing the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="181" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a57ec518687eeb87f0657772388912d23" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher hateb_local_planner::Backoff::goal_pub_</definition>
+        <argsstring></argsstring>
+        <name>goal_pub_</name>
+        <briefdescription>
+<para>Publisher for sending backoff goal poses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="184" column="18" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a2e39cb348c2f0bdd6957fc0d529f42ae" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher hateb_local_planner::Backoff::poly_pub_l_</definition>
+        <argsstring></argsstring>
+        <name>poly_pub_l_</name>
+        <briefdescription>
+<para>Publisher for visualizing left grid points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="185" column="18" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a7ab9b6993a738ba15e6f3f59def5f6f2" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher hateb_local_planner::Backoff::poly_pub_r_</definition>
+        <argsstring></argsstring>
+        <name>poly_pub_r_</name>
+        <briefdescription>
+<para>Publisher for visualizing right grid points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="186" column="18" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1ac5f627cc15fc3be0bdeb38f4a3e5b8a7" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber hateb_local_planner::Backoff::goal_sub_</definition>
+        <argsstring></argsstring>
+        <name>goal_sub_</name>
+        <briefdescription>
+<para>Subscriber for receiving navigation goals. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="187" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a4871ce4d8a7842fff729401a06bcecda" prot="private" static="no" mutable="no">
+        <type>ros::ServiceClient</type>
+        <definition>ros::ServiceClient hateb_local_planner::Backoff::get_plan_client_</definition>
+        <argsstring></argsstring>
+        <name>get_plan_client_</name>
+        <briefdescription>
+<para>Service client for requesting path plans. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="188" column="22" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a0f2b4a4d1af57a2bdd3aa47c8899195e" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::Transform</type>
+        <definition>geometry_msgs::Transform hateb_local_planner::Backoff::start_pose_</definition>
+        <argsstring></argsstring>
+        <name>start_pose_</name>
+        <briefdescription>
+<para>Initial robot pose when backoff maneuver starts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="190" column="28" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1ae0a2834237dda5874e23df3e7f5cbb60" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::Backoff::visualize_backoff_</definition>
+        <argsstring></argsstring>
+        <name>visualize_backoff_</name>
+        <briefdescription>
+<para>Enable visualization of backoff grids. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="191" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a0599baffb33b80d2ea6c06099b7f7bdc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::Backoff::self_published_</definition>
+        <argsstring></argsstring>
+        <name>self_published_</name>
+        <briefdescription>
+<para>Whether the goal was published by this node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="192" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a537320f7f1cdfacd9dc3f78ccda5f9c7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::Backoff::new_goal_</definition>
+        <argsstring></argsstring>
+        <name>new_goal_</name>
+        <briefdescription>
+<para>Whether a new navigation goal was received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="193" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1aaa56fcbf92fb3841e071a8b37e517ace" prot="private" static="no" mutable="no">
+        <type>ros::Time</type>
+        <definition>ros::Time hateb_local_planner::Backoff::last_time_</definition>
+        <argsstring></argsstring>
+        <name>last_time_</name>
+        <briefdescription>
+<para>Time of the last update. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="195" column="13" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" prot="private" static="no" mutable="no">
+        <type>tf::Transform</type>
+        <definition>tf::Transform hateb_local_planner::Backoff::start_pose_tr_</definition>
+        <argsstring></argsstring>
+        <name>start_pose_tr_</name>
+        <briefdescription>
+<para>Initial pose stored as transform. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="199" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a928b39830276d2e77bc2016b0ebe6614" prot="private" static="no" mutable="no">
+        <type>tf::StampedTransform</type>
+        <definition>tf::StampedTransform hateb_local_planner::Backoff::robot_to_map_tf_</definition>
+        <argsstring></argsstring>
+        <name>robot_to_map_tf_</name>
+        <briefdescription>
+<para>Transform from robot base to map frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="200" column="24" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a6ca8b3f21c05f5b0a8389fe95af5b1e1" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; base_local_planner::CostmapModel &gt;</type>
+        <definition>std::shared_ptr&lt;base_local_planner::CostmapModel&gt; hateb_local_planner::Backoff::costmap_model_</definition>
+        <argsstring></argsstring>
+        <name>costmap_model_</name>
+        <briefdescription>
+<para>Model for collision checking with costmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="202" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a22a87e217d510cdcd61bb1681ba70b46" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::PoseStamped</type>
+        <definition>geometry_msgs::PoseStamped hateb_local_planner::Backoff::backoff_goal_</definition>
+        <argsstring></argsstring>
+        <name>backoff_goal_</name>
+        <briefdescription>
+<para>Goal pose for backoff maneuver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="203" column="30" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a8075b0060a5381eb4a2b4f9c2882561b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; geometry_msgs::Point &gt;</type>
+        <definition>std::vector&lt;geometry_msgs::Point&gt; hateb_local_planner::Backoff::left_grid_</definition>
+        <argsstring></argsstring>
+        <name>left_grid_</name>
+        <briefdescription>
+<para>Grid points for left obstacle checks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="205" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Backoff_1a9f8d5aa440ba6a4877359231cd646253" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; geometry_msgs::Point &gt;</type>
+        <definition>std::vector&lt;geometry_msgs::Point&gt; hateb_local_planner::Backoff::right_grid_</definition>
+        <argsstring></argsstring>
+        <name>right_grid_</name>
+        <briefdescription>
+<para>Grid points for right obstacle checks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="206" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1Backoff_1a0cbd0914494f6fcd5de277b517133f24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::Backoff::Backoff</definition>
+        <argsstring>(costmap_2d::Costmap2DROS *costmap_ros)</argsstring>
+        <name>Backoff</name>
+        <param>
+          <type>costmap_2d::Costmap2DROS *</type>
+          <declname>costmap_ros</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="67" column="3" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Backoff_1a5aa081921f7cef80153ac65992556294" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::Backoff::~Backoff</definition>
+        <argsstring>()</argsstring>
+        <name>~Backoff</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="72" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Backoff_1a1c63f2df553d3b604d38bd55b990c0c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::Backoff::initialize</definition>
+        <argsstring>(costmap_2d::Costmap2DROS *costmap_ros)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>costmap_2d::Costmap2DROS *</type>
+          <declname>costmap_ros</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the backoff behavior with a costmap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>costmap_ros</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the costmap ROS wrapper </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="78" column="8" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="59" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Backoff_1a96e56515fc60bc8188ce7627e28b3ce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::Backoff::setbackGoal</definition>
+        <argsstring>(geometry_msgs::PoseStamped goal)</argsstring>
+        <name>setbackGoal</name>
+        <param>
+          <type>geometry_msgs::PoseStamped</type>
+          <declname>goal</declname>
+        </param>
+        <briefdescription>
+<para>Sets a new backoff goal position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>goal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The goal pose to back off to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if goal was successfully set </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="85" column="8" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="305" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Backoff_1acf9478b64a2d64fe6944ac93fce0d03b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::Backoff::timeOut</definition>
+        <argsstring>()</argsstring>
+        <name>timeOut</name>
+        <briefdescription>
+<para>Checks if backoff behavior has timed out. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if timeout occurred </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="91" column="8" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="315" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Backoff_1afede89f07e3bdd06f9cdb8281138b548" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::Backoff::startRecovery</definition>
+        <argsstring>()</argsstring>
+        <name>startRecovery</name>
+        <briefdescription>
+<para>Initiates the recovery behavior. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if recovery was successfully started </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="97" column="8" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="104" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Backoff_1a4e3f4b56ee4a83fdda7dd58f294d51d8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::Backoff::checkNewGoal</definition>
+        <argsstring>() const</argsstring>
+        <name>checkNewGoal</name>
+        <briefdescription>
+<para>Checks if a new goal has been received. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if there is a new goal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="103" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Backoff_1a2d60edaa11d945aab08e3e843f50ae9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::Backoff::isBackoffGoalReached</definition>
+        <argsstring>(geometry_msgs::Pose2D &amp;robot_pose) const</argsstring>
+        <name>isBackoffGoalReached</name>
+        <param>
+          <type>geometry_msgs::Pose2D &amp;</type>
+          <declname>robot_pose</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the backoff goal position has been reached. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>robot_pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current pose of the robot </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if goal has been reached </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="110" column="8" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="320" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Backoff_1a9c10ac17d8496089658e7810c3e0c9ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::Backoff::initializeOffsets</definition>
+        <argsstring>(double r)</argsstring>
+        <name>initializeOffsets</name>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the grid offsets for obstacle checking. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up two grids of points (left and right) around the robot&apos;s circumference used for checking nearby obstacles when planning backoff maneuvers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Robot&apos;s circumscribed radius </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="120" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="120" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1Backoff_1a391ce80e9b4ca0c4eb74187a87b44f3a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::Backoff::goalCB</definition>
+        <argsstring>(const geometry_msgs::PoseStamped::ConstPtr &amp;goal)</argsstring>
+        <name>goalCB</name>
+        <param>
+          <type>const geometry_msgs::PoseStamped::ConstPtr &amp;</type>
+          <declname>goal</declname>
+        </param>
+        <briefdescription>
+<para>Callback for processing new goal messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>goal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received goal message </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="147" column="8" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="94" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Backoff_1a443e7a131dfd8276a459513452176ad6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::Backoff::loadRosParamFromNodeHandle</definition>
+        <argsstring>(const ros::NodeHandle &amp;private_nh)</argsstring>
+        <name>loadRosParamFromNodeHandle</name>
+        <param>
+          <type>const ros::NodeHandle &amp;</type>
+          <declname>private_nh</declname>
+        </param>
+        <briefdescription>
+<para>Loads ROS parameters from the node handle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>private_nh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Private node handle containing parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="164" column="8" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="328" bodyend="337"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1Backoff_1a40afbef52dea1ff373e969398fdfbd8d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double hateb_local_planner::Backoff::normalize_angle</definition>
+        <argsstring>(double angle_radians)</argsstring>
+        <name>normalize_angle</name>
+        <param>
+          <type>double</type>
+          <declname>angle_radians</declname>
+        </param>
+        <briefdescription>
+<para>Normalizes an angle to the range [-π, π]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle_radians</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Angle to normalize (in radians) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Normalized angle in radians </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="154" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="154" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class implementing backoff behavior for robot navigation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classhateb__local__planner_1_1Backoff" kindref="compound">Backoff</ref> class provides recovery behavior when the robot encounters a human in a place where both agents (human and robot) get stuck without any progress towards to goal. It implements methods to calculate and execute backoff maneuvers to help the robot recover from such situations. </para>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/backoff.h" line="62" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/backoff.h" bodystart="62" bodyend="207"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1Backoff_1a0cbd0914494f6fcd5de277b517133f24" prot="public" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>Backoff</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a22a87e217d510cdcd61bb1681ba70b46" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>backoff_goal_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1ae8d020f6014756b22345da190a15aba0" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>backoff_timeout_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a4e3f4b56ee4a83fdda7dd58f294d51d8" prot="public" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>checkNewGoal</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a1980f1e27353de21de5b7bfc272fe8a3" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>costmap_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a6ca8b3f21c05f5b0a8389fe95af5b1e1" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>costmap_model_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1aa4a08359e24385f0ad5d99a283f3ce06" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>costmap_ros_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a3df9e7bce0c874cf05cd94bee7a05783" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>current_goal_topic_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a2f5e6d28a06357c31b4ba16623287c30" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>footprint_frame_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a4871ce4d8a7842fff729401a06bcecda" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>get_plan_client_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1ae87a3ea7ef10faa0f304dd2681645627" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>get_plan_srv_name_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a09f975fea345e1d812ce160ed932b7fd" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>goal_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a57ec518687eeb87f0657772388912d23" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>goal_pub_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1ac5f627cc15fc3be0bdeb38f4a3e5b8a7" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>goal_sub_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a391ce80e9b4ca0c4eb74187a87b44f3a" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>goalCB</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a1c63f2df553d3b604d38bd55b990c0c8" prot="public" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>initialize</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a9c10ac17d8496089658e7810c3e0c9ad" prot="public" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>initializeOffsets</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a2d60edaa11d945aab08e3e843f50ae9f" prot="public" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>isBackoffGoalReached</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1aaa56fcbf92fb3841e071a8b37e517ace" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>last_time_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a8075b0060a5381eb4a2b4f9c2882561b" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>left_grid_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a443e7a131dfd8276a459513452176ad6" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>loadRosParamFromNodeHandle</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a9359af47ea9cff80e6389cad795673b4" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>map_frame_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a537320f7f1cdfacd9dc3f78ccda5f9c7" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>new_goal_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a40afbef52dea1ff373e969398fdfbd8d" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>normalize_angle</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a0133d675df43274872289cb8cee3d4cb" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>ns_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a37cb0419cee8434376af2bc9ca9444f3" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>old_goal_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a2e39cb348c2f0bdd6957fc0d529f42ae" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>poly_pub_l_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a7ab9b6993a738ba15e6f3f59def5f6f2" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>poly_pub_r_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a40cb7798ffbf5b60fbde3d95d9a4d72c" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>publish_goal_topic_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a9f8d5aa440ba6a4877359231cd646253" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>right_grid_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1aa2b1e9ce809aa4a440398bda0966a01d" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>robot_circumscribed_radius_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a928b39830276d2e77bc2016b0ebe6614" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>robot_to_map_tf_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a0599baffb33b80d2ea6c06099b7f7bdc" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>self_published_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a96e56515fc60bc8188ce7627e28b3ce7" prot="public" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>setbackGoal</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a0f2b4a4d1af57a2bdd3aa47c8899195e" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>start_pose_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>start_pose_tr_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1afede89f07e3bdd06f9cdb8281138b548" prot="public" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>startRecovery</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a015d7d7038d9e24e540bcc2ca6ebea7e" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>tf_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1acf9478b64a2d64fe6944ac93fce0d03b" prot="public" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>timeOut</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1ae0a2834237dda5874e23df3e7f5cbb60" prot="private" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>visualize_backoff_</name></member>
+      <member refid="classhateb__local__planner_1_1Backoff_1a5aa081921f7cef80153ac65992556294" prot="public" virt="non-virtual"><scope>hateb_local_planner::Backoff</scope><name>~Backoff</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

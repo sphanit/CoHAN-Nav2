@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1BaseTebMultiEdge" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::BaseTebMultiEdge</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">g2o::BaseMultiEdge&lt; D, E &gt;</basecompoundref>
+    <includes refid="base__teb__edges_8h" local="no">base_teb_edges.h</includes>
+    <templateparamlist>
+      <param>
+        <type>int</type>
+        <declname>D</declname>
+        <defname>D</defname>
+      </param>
+      <param>
+        <type>typename E</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> *</type>
+        <definition>const HATebConfig* hateb_local_planner::BaseTebMultiEdge&lt; D, E &gt;::cfg_</definition>
+        <argsstring></argsstring>
+        <name>cfg_</name>
+        <briefdescription>
+<para>Store <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> class for parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" line="248" column="21" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1BaseTebMultiEdge_1a57f2fb741d0ded5f4491d4602919c5a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void hateb_local_planner::BaseTebMultiEdge&lt; D, E &gt;::resize</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>resize</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" line="205" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" bodystart="205" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BaseTebMultiEdge_1a3783b6cfd9f8666ecb000b07c25758f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ErrorVector &amp;</type>
+        <definition>ErrorVector&amp; hateb_local_planner::BaseTebMultiEdge&lt; D, E &gt;::getError</definition>
+        <argsstring>()</argsstring>
+        <name>getError</name>
+        <briefdescription>
+<para>Compute and return error / cost value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called by TebOptimalPlanner::computeCurrentCost to obtain the current cost. <simplesect kind="return"><para>2D Cost / error vector [nh cost, backward drive dir cost]^T </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" line="217" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" bodystart="217" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BaseTebMultiEdge_1a77ae43578b59d5ac54ffe9d50a859255" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool hateb_local_planner::BaseTebMultiEdge&lt; D, E &gt;::read</definition>
+        <argsstring>(std::istream &amp;is)</argsstring>
+        <name>read</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+<para>Read values from input stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" line="225" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" bodystart="225" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BaseTebMultiEdge_1af763878f2200a5cf70b3b7d6c5a86b78" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool hateb_local_planner::BaseTebMultiEdge&lt; D, E &gt;::write</definition>
+        <argsstring>(std::ostream &amp;os) const</argsstring>
+        <name>write</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Write values to an output stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" line="233" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" bodystart="233" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BaseTebMultiEdge_1ae126de1d25032cf83de82823cdcf74bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::BaseTebMultiEdge&lt; D, E &gt;::setHATebConfig</definition>
+        <argsstring>(const HATebConfig &amp;cfg)</argsstring>
+        <name>setHATebConfig</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> &amp;</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+<para>Assign the <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> class for parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> class </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" line="242" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" bodystart="242" bodyend="242"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base edge connecting multiple vertices in the TEB optimization problem. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This edge defines a base edge type for the TEB optimization problem. It is derived from the corresponding g2o base classes augmented with additional information for the dedicated TEB problem (e.g. config). The destructor erases the edge in all attached vertices in order to allow keeping the vertices valid in subsequent g2o optimization calls. Memory of edges should be freed by calling the clearEdge method of the g2o optimizer class. <simplesect kind="see"><para><ref refid="classhateb__local__planner_1_1BaseTebBinaryEdge" kindref="compound">BaseTebBinaryEdge</ref>, <ref refid="classhateb__local__planner_1_1BaseTebUnaryEdge" kindref="compound">BaseTebUnaryEdge</ref>, g2o::BaseBinaryEdge, g2o::BaseUnaryEdge, g2o::BaseMultiEdge </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>g2o::BaseMultiEdge&lt; D, E &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::BaseTebMultiEdge&lt; D, E &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebMultiEdge"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>g2o::BaseMultiEdge&lt; D, E &gt;</label>
+      </node>
+      <node id="13">
+        <label>hateb_local_planner::HATebConfig::Optimization</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization"/>
+      </node>
+      <node id="7">
+        <label>hateb_local_planner::HATebConfig::GoalTolerance</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance"/>
+      </node>
+      <node id="6">
+        <label>hateb_local_planner::HATebConfig::RobotFootprint</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint"/>
+      </node>
+      <node id="8">
+        <label>hateb_local_planner::HATebConfig::Trajectory</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Trajectory"/>
+      </node>
+      <node id="4">
+        <label>parameters::ParameterHelper</label>
+        <link refid="classparameters_1_1ParameterHelper"/>
+      </node>
+      <node id="5">
+        <label>hateb_local_planner::HATebConfig::Recovery</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Recovery"/>
+      </node>
+      <node id="14">
+        <label>hateb_local_planner::HATebConfig::Robot</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Robot"/>
+      </node>
+      <node id="11">
+        <label>hateb_local_planner::HATebConfig::Obstacles</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles"/>
+      </node>
+      <node id="3">
+        <label>hateb_local_planner::HATebConfig</label>
+        <link refid="classhateb__local__planner_1_1HATebConfig"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>param_helper_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>recovery</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>robot_footprint</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>goal_tolerance</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>trajectory</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>bt_mode_switch</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>hateb</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>obstacles</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>agent</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>optim</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>robot</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>visualization</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>hateb_local_planner::HATebConfig::Visualization</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Visualization"/>
+      </node>
+      <node id="12">
+        <label>hateb_local_planner::HATebConfig::Agent</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Agent"/>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::BaseTebMultiEdge&lt; D, E &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebMultiEdge"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>cfg_</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hateb_local_planner::HATebConfig::Hateb</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1Hateb"/>
+      </node>
+      <node id="9">
+        <label>hateb_local_planner::HATebConfig::BTModeSwitch</label>
+        <link refid="structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch"/>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" line="199" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/base_teb_edges.h" bodystart="199" bodyend="252"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" prot="protected" virt="non-virtual"><scope>hateb_local_planner::BaseTebMultiEdge</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a3783b6cfd9f8666ecb000b07c25758f4" prot="public" virt="non-virtual"><scope>hateb_local_planner::BaseTebMultiEdge</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a77ae43578b59d5ac54ffe9d50a859255" prot="public" virt="virtual"><scope>hateb_local_planner::BaseTebMultiEdge</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a57f2fb741d0ded5f4491d4602919c5a3" prot="public" virt="virtual"><scope>hateb_local_planner::BaseTebMultiEdge</scope><name>resize</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1ae126de1d25032cf83de82823cdcf74bc" prot="public" virt="non-virtual"><scope>hateb_local_planner::BaseTebMultiEdge</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1af763878f2200a5cf70b3b7d6c5a86b78" prot="public" virt="virtual"><scope>hateb_local_planner::BaseTebMultiEdge</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+.. _exhale_define_agents__class_8h_1a191e5a424a0b478c977515d5694610a8:
+
+Define DEFAULT_AGENT_SEGMENT
+============================
+
+- Defined in :ref:`file_agent_path_prediction_include_agent_path_prediction_agents_class.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEFAULT_AGENT_SEGMENT
+   :project: CoHAN-Nav2

@@ -1,0 +1,433 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="costmap__converter__interface_8h" kind="file" language="C++">
+    <compoundname>costmap_converter_interface.h</compoundname>
+    <includes local="no">mutex</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">rclcpp_lifecycle/lifecycle_node.hpp</includes>
+    <includes local="no">nav2_costmap_2d/costmap_2d.hpp</includes>
+    <includes local="no">nav2_costmap_2d/costmap_2d_ros.hpp</includes>
+    <includes local="no">geometry_msgs/msg/polygon.hpp</includes>
+    <includes local="no">costmap_converter_msgs/msg/obstacle_array_msg.hpp</includes>
+    <includedby refid="costmap__to__dynamic__obstacles_8h" local="no">costmap_to_dynamic_obstacles.h</includedby>
+    <includedby refid="costmap__to__lines__convex__hull_8h" local="no">costmap_to_lines_convex_hull.h</includedby>
+    <includedby refid="costmap__to__lines__ransac_8h" local="no">costmap_to_lines_ransac.h</includedby>
+    <includedby refid="costmap__to__polygons_8h" local="no">costmap_to_polygons.h</includedby>
+    <includedby refid="costmap__converter__node_8cpp" local="no">costmap_converter_node.cpp</includedby>
+    <includedby refid="hateb__local__planner__ros_8h" local="no">hateb_local_planner_ros.h</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>geometry_msgs/msg/polygon.hpp</label>
+      </node>
+      <node id="6">
+        <label>nav2_costmap_2d/costmap_2d.hpp</label>
+      </node>
+      <node id="4">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="7">
+        <label>nav2_costmap_2d/costmap_2d_ros.hpp</label>
+      </node>
+      <node id="1">
+        <label>costmap_converter_interface.h</label>
+        <link refid="costmap__converter__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>costmap_converter_msgs/msg/obstacle_array_msg.hpp</label>
+      </node>
+      <node id="2">
+        <label>mutex</label>
+      </node>
+      <node id="5">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>costmap_to_lines_ransac.h</label>
+        <link refid="costmap__to__lines__ransac_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>hateb_local_planner_ros.cpp</label>
+        <link refid="hateb__local__planner__ros_8cpp"/>
+      </node>
+      <node id="10">
+        <label>costmap_to_polygons_concave.cpp</label>
+        <link refid="costmap__to__polygons__concave_8cpp"/>
+      </node>
+      <node id="13">
+        <label>costmap_converter_node.cpp</label>
+        <link refid="costmap__converter__node_8cpp"/>
+      </node>
+      <node id="4">
+        <label>costmap_to_lines_convex_hull.h</label>
+        <link refid="costmap__to__lines__convex__hull_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>costmap_to_dynamic_obstacles.h</label>
+        <link refid="costmap__to__dynamic__obstacles_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>costmap_to_polygons.h</label>
+        <link refid="costmap__to__polygons_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>costmap_converter_interface.h</label>
+        <link refid="costmap__converter__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>costmap_to_polygons_concave.h</label>
+        <link refid="costmap__to__polygons__concave_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>hateb_local_planner_ros.h</label>
+        <link refid="hateb__local__planner__ros_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>costmap_polygons.cpp</label>
+        <link refid="costmap__polygons_8cpp"/>
+      </node>
+      <node id="3">
+        <label>costmap_to_dynamic_obstacles.cpp</label>
+        <link refid="costmap__to__dynamic__obstacles_8cpp"/>
+      </node>
+      <node id="11">
+        <label>costmap_to_polygons.cpp</label>
+        <link refid="costmap__to__polygons_8cpp"/>
+      </node>
+      <node id="7">
+        <label>costmap_to_lines_ransac.cpp</label>
+        <link refid="costmap__to__lines__ransac_8cpp"/>
+      </node>
+      <node id="5">
+        <label>costmap_to_lines_convex_hull.cpp</label>
+        <link refid="costmap__to__lines__convex__hull_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classcostmap__converter_1_1BaseCostmapToPolygons" prot="public">costmap_converter::BaseCostmapToPolygons</innerclass>
+    <innerclass refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles" prot="public">costmap_converter::BaseCostmapToDynamicObstacles</innerclass>
+    <innernamespace refid="namespacecostmap__converter">costmap_converter</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(BSD<sp/>License)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2016</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>TU<sp/>Dortmund<sp/>-<sp/>Institute<sp/>of<sp/>Control<sp/>Theory<sp/>and<sp/>Systems<sp/>Engineering.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>copyright<sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>disclaimer<sp/>in<sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>institute<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Christoph<sp/>Rösmann,<sp/>Otniel<sp/>Rinaldo</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COSTMAP_CONVERTER_INTERFACE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COSTMAP_CONVERTER_INTERFACE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&lt;costmap_2d/costmap_2d_ros.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp/rclcpp.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp_lifecycle/lifecycle_node.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav2_costmap_2d/costmap_2d.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav2_costmap_2d/costmap_2d_ros.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/msg/polygon.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;costmap_converter_msgs/msg/obstacle_array_msg.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="namespacecostmap__converter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecostmap__converter" kindref="compound">costmap_converter</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="namespacecostmap__converter_1a360c95f0cb141a3f43667649add6d4aa" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>costmap_converter_msgs::msg::ObstacleArrayMsg::SharedPtr<sp/><ref refid="namespacecostmap__converter_1a360c95f0cb141a3f43667649add6d4aa" kindref="member">ObstacleArrayPtr</ref>;</highlight></codeline>
+<codeline lineno="59" refid="namespacecostmap__converter_1a3e9948c22dfceca87d2a7cc59c62fc97" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>costmap_converter_msgs::msg::ObstacleArrayMsg::ConstSharedPtr<sp/><ref refid="namespacecostmap__converter_1a3e9948c22dfceca87d2a7cc59c62fc97" kindref="member">ObstacleArrayConstPtr</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="namespacecostmap__converter_1a031147f2cb53ae68f7647b96868516dd" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std::vector&lt;geometry_msgs::msg::Polygon&gt;&gt;<sp/><ref refid="namespacecostmap__converter_1a031147f2cb53ae68f7647b96868516dd" kindref="member">PolygonContainerPtr</ref>;</highlight></codeline>
+<codeline lineno="64" refid="namespacecostmap__converter_1a6063889d67ef296ddfd08f08d5df4a5b" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;const<sp/>std::vector&lt;geometry_msgs::msg::Polygon&gt;&gt;<sp/><ref refid="namespacecostmap__converter_1a6063889d67ef296ddfd08f08d5df4a5b" kindref="member">PolygonContainerConstPtr</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classcostmap__converter_1_1BaseCostmapToPolygons" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons" kindref="compound">BaseCostmapToPolygons</ref></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a687f79218c610912cd29f0f288a26fb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a687f79218c610912cd29f0f288a26fb9" kindref="member">initialize</ref>(rclcpp::Node::SharedPtr<sp/>nh)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" kindref="member">nh_</ref><sp/>=<sp/>nh;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a3bee32afc15401220df123bce1a87921" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a3bee32afc15401220df123bce1a87921" kindref="member">~BaseCostmapToPolygons</ref>()<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a7e5b367499223999167be752208eb59f" kindref="member">stopWorker</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ac98d1254a59d142285db6662dbc5af47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ac98d1254a59d142285db6662dbc5af47" kindref="member">setCostmap2D</ref>(nav2_costmap_2d::Costmap2D*<sp/>costmap)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a83f5e0c6c9954c6cf54a25e4f0de5b6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a83f5e0c6c9954c6cf54a25e4f0de5b6c" kindref="member">updateCostmap2D</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1abec3dc10bc44341b73d5fc4e635be01f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1abec3dc10bc44341b73d5fc4e635be01f" kindref="member">compute</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a8e68cedfe4acd986b555edbcf5fe6d44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespacecostmap__converter_1a6063889d67ef296ddfd08f08d5df4a5b" kindref="member">PolygonContainerConstPtr</ref><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a8e68cedfe4acd986b555edbcf5fe6d44" kindref="member">getPolygons</ref>(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacecostmap__converter_1a6063889d67ef296ddfd08f08d5df4a5b" kindref="member">PolygonContainerConstPtr</ref>();}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a568d60474400d08a40218d0674b46fed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespacecostmap__converter_1a3e9948c22dfceca87d2a7cc59c62fc97" kindref="member">ObstacleArrayConstPtr</ref><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a568d60474400d08a40218d0674b46fed" kindref="member">getObstacles</ref>()</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacecostmap__converter_1a360c95f0cb141a3f43667649add6d4aa" kindref="member">ObstacleArrayPtr</ref><sp/>obstacles<sp/>=<sp/>std::make_shared&lt;costmap_converter_msgs::msg::ObstacleArrayMsg&gt;();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacecostmap__converter_1a6063889d67ef296ddfd08f08d5df4a5b" kindref="member">PolygonContainerConstPtr</ref><sp/>polygons<sp/>=<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a8e68cedfe4acd986b555edbcf5fe6d44" kindref="member">getPolygons</ref>();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(polygons)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::Polygon&amp;<sp/>polygon<sp/>:<sp/>*polygons)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obstacles-&gt;obstacles.emplace_back();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obstacles-&gt;obstacles.back().polygon<sp/>=<sp/>polygon;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obstacles;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ae2913087d659654c55f5869397f8e2c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ae2913087d659654c55f5869397f8e2c5" kindref="member">setOdomTopic</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>odom_topic)<sp/>{<sp/>(void)odom_topic;<sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5f42b7263fcfdde112b09c73429e55be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5f42b7263fcfdde112b09c73429e55be" kindref="member">stackedCostmapConversion</ref>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" kindref="member">startWorker</ref>(rclcpp::Rate::SharedPtr<sp/>rate,<sp/>nav2_costmap_2d::Costmap2D*<sp/>costmap,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>spin_thread<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ac98d1254a59d142285db6662dbc5af47" kindref="member">setCostmap2D</ref>(costmap);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" kindref="member">spin_thread_</ref>)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>terminate_lock(<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a78896f9e23abc564acb1d27cd4f38aac" kindref="member">terminate_mutex_</ref>);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" kindref="member">need_to_terminate_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" kindref="member">spin_thread_</ref>-&gt;join();</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" kindref="member">spin_thread_</ref>;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(spin_thread)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" kindref="member">nh_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;costmap_converter&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Spinning<sp/>up<sp/>a<sp/>thread<sp/>for<sp/>the<sp/>CostmapToPolygons<sp/>plugin&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" kindref="member">need_to_terminate_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a947fc00b05f6ac5f478afb9ce6c67a06" kindref="member">worker_timer_</ref><sp/>=<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" kindref="member">nh_</ref>-&gt;create_wall_timer(</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rate-&gt;period(),</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(&amp;<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a98ab2ab132530d153084db2d9249b75d" kindref="member">BaseCostmapToPolygons::workerCallback</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" kindref="member">spin_thread_</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::thread(std::bind(&amp;<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa39c0f13e7ad5bddade4cfc86324abb3" kindref="member">BaseCostmapToPolygons::spinThread</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a947fc00b05f6ac5f478afb9ce6c67a06" kindref="member">worker_timer_</ref><sp/>=<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" kindref="member">nh_</ref>-&gt;create_wall_timer(</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rate-&gt;period(),</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(&amp;<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a98ab2ab132530d153084db2d9249b75d" kindref="member">BaseCostmapToPolygons::workerCallback</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" kindref="member">spin_thread_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a7e5b367499223999167be752208eb59f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a7e5b367499223999167be752208eb59f" kindref="member">stopWorker</ref>()</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a947fc00b05f6ac5f478afb9ce6c67a06" kindref="member">worker_timer_</ref>)<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a947fc00b05f6ac5f478afb9ce6c67a06" kindref="member">worker_timer_</ref>-&gt;cancel();</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" kindref="member">spin_thread_</ref>)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>terminate_lock(<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a78896f9e23abc564acb1d27cd4f38aac" kindref="member">terminate_mutex_</ref>);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" kindref="member">need_to_terminate_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" kindref="member">spin_thread_</ref>-&gt;join();</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" kindref="member">spin_thread_</ref>;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="236" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aed9851c00b8d93e88bb8ee79b95a23d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aed9851c00b8d93e88bb8ee79b95a23d9" kindref="member">BaseCostmapToPolygons</ref>()<sp/>:<sp/></highlight><highlight class="comment">//nh_(&quot;~costmap_to_polygons&quot;),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" kindref="member">nh_</ref>(nullptr),</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" kindref="member">spin_thread_</ref>(nullptr),<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" kindref="member">need_to_terminate_</ref>(false)<sp/>{}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="243" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa39c0f13e7ad5bddade4cfc86324abb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa39c0f13e7ad5bddade4cfc86324abb3" kindref="member">spinThread</ref>()</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(rclcpp::ok())</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>terminate_lock(<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a78896f9e23abc564acb1d27cd4f38aac" kindref="member">terminate_mutex_</ref>);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" kindref="member">need_to_terminate_</ref>)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rclcpp::spin_some(<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" kindref="member">nh_</ref>);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="259" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a98ab2ab132530d153084db2d9249b75d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a98ab2ab132530d153084db2d9249b75d" kindref="member">workerCallback</ref>()</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a83f5e0c6c9954c6cf54a25e4f0de5b6c" kindref="member">updateCostmap2D</ref>();</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1abec3dc10bc44341b73d5fc4e635be01f" kindref="member">compute</ref>();</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5c9d89e344e9592ab66fd4eae4e3c495" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Logger<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5c9d89e344e9592ab66fd4eae4e3c495" kindref="member">getLogger</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="266"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" kindref="member">nh_</ref>-&gt;get_logger();</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1adde51e27138497c972070f585485d920" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Time<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1adde51e27138497c972070f585485d920" kindref="member">now</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="271"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" kindref="member">nh_</ref>-&gt;now();</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="276" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a947fc00b05f6ac5f478afb9ce6c67a06" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a947fc00b05f6ac5f478afb9ce6c67a06" kindref="member">worker_timer_</ref>;</highlight></codeline>
+<codeline lineno="277" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Node::SharedPtr<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" kindref="member">nh_</ref>;</highlight></codeline>
+<codeline lineno="278" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" refkind="member"><highlight class="normal"><sp/><sp/>std::thread*<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" kindref="member">spin_thread_</ref>;</highlight></codeline>
+<codeline lineno="279" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a78896f9e23abc564acb1d27cd4f38aac" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a78896f9e23abc564acb1d27cd4f38aac" kindref="member">terminate_mutex_</ref>;</highlight></codeline>
+<codeline lineno="280" refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" kindref="member">need_to_terminate_</ref>;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">};<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles" kindref="compound">BaseCostmapToDynamicObstacles</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToPolygons" kindref="compound">BaseCostmapToPolygons</ref></highlight></codeline>
+<codeline lineno="291"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a3901dbaab92d4ebd54ee866166804256" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a3901dbaab92d4ebd54ee866166804256" kindref="member">loadStaticCostmapConverterPlugin</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>plugin_name,<sp/>rclcpp::Node::SharedPtr<sp/>nh_parent)</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" kindref="member">static_costmap_converter_</ref><sp/>=<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a12bd9e3124a58770643eeee63e7532ab" kindref="member">static_converter_loader_</ref>.createSharedInstance(plugin_name);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(std::dynamic_pointer_cast&lt;BaseCostmapToDynamicObstacles&gt;(<ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" kindref="member">static_costmap_converter_</ref>))</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>pluginlib::PluginlibException(</highlight><highlight class="stringliteral">&quot;The<sp/>specified<sp/>plugin<sp/>for<sp/>static<sp/>costmap<sp/>conversion<sp/>is<sp/>a<sp/>dynamic<sp/>plugin.<sp/>Specify<sp/>a<sp/>static<sp/>plugin.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>raw_plugin_name<sp/>=<sp/>static_converter_loader_.getName(plugin_name);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" kindref="member">static_costmap_converter_</ref>-&gt;initialize(nh_parent);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1ac88e29904958d1135070859486cbfab6" kindref="member">setStaticCostmapConverterPlugin</ref>(<ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" kindref="member">static_costmap_converter_</ref>);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_INFO(<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5c9d89e344e9592ab66fd4eae4e3c495" kindref="member">getLogger</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;CostmapToDynamicObstacles:<sp/>underlying<sp/>costmap<sp/>conversion<sp/>plugin<sp/>for<sp/>static<sp/>obstacles<sp/>%s<sp/>loaded.&quot;</highlight><highlight class="normal">,<sp/>plugin_name);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pluginlib::PluginlibException&amp;<sp/>ex)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5c9d89e344e9592ab66fd4eae4e3c495" kindref="member">getLogger</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;CostmapToDynamicObstacles:<sp/>The<sp/>specified<sp/>costmap<sp/>converter<sp/>plugin<sp/>cannot<sp/>be<sp/>loaded.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Continuing<sp/>without<sp/>subsequent<sp/>conversion<sp/>of<sp/>static<sp/>obstacles.<sp/>Error<sp/>message:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>ex.what());</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" kindref="member">static_costmap_converter_</ref>.reset();</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327" refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1ac88e29904958d1135070859486cbfab6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1ac88e29904958d1135070859486cbfab6" kindref="member">setStaticCostmapConverterPlugin</ref>(std::shared_ptr&lt;BaseCostmapToPolygons&gt;<sp/>static_costmap_converter)</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" kindref="member">static_costmap_converter_</ref><sp/>=<sp/>static_costmap_converter;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336" refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a8597c36aa440d9e3672edbde5fd1cf12" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a8597c36aa440d9e3672edbde5fd1cf12" kindref="member">setStaticCostmap</ref>(std::shared_ptr&lt;nav2_costmap_2d::Costmap2D&gt;<sp/>static_costmap)</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" kindref="member">static_costmap_converter_</ref>-&gt;setCostmap2D(static_costmap.get());</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344" refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a10dba078631ef120ec585e46fb1ae690" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a10dba078631ef120ec585e46fb1ae690" kindref="member">convertStaticObstacles</ref>()</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" kindref="member">static_costmap_converter_</ref>-&gt;compute();</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353" refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a506653e4f553b784d2784e7aef02bd7e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacecostmap__converter_1a6063889d67ef296ddfd08f08d5df4a5b" kindref="member">PolygonContainerConstPtr</ref><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a506653e4f553b784d2784e7aef02bd7e" kindref="member">getStaticPolygons</ref>()</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" kindref="member">static_costmap_converter_</ref>-&gt;getPolygons();</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363" refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a314f921603fc71c47bb1666de9a577f5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a314f921603fc71c47bb1666de9a577f5" kindref="member">stackedCostmapConversion</ref>()</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" kindref="member">static_costmap_converter_</ref>)</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="375" refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1af9c4d3851bea551a15e344ffc72724c5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1af9c4d3851bea551a15e344ffc72724c5" kindref="member">BaseCostmapToDynamicObstacles</ref>()<sp/>:<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a12bd9e3124a58770643eeee63e7532ab" kindref="member">static_converter_loader_</ref>(</highlight><highlight class="stringliteral">&quot;costmap_converter&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;costmap_converter::BaseCostmapToPolygons&quot;</highlight><highlight class="normal">),<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" kindref="member">static_costmap_converter_</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="378" refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a12bd9e3124a58770643eeee63e7532ab" refkind="member"><highlight class="normal"><sp/><sp/>pluginlib::ClassLoader&lt;BaseCostmapToPolygons&gt;<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a12bd9e3124a58770643eeee63e7532ab" kindref="member">static_converter_loader_</ref>;</highlight></codeline>
+<codeline lineno="379" refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;BaseCostmapToPolygons&gt;<sp/><ref refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles_1a63c17d0f7baca2b85eed15a80dbf6152" kindref="member">static_costmap_converter_</ref>;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>end<sp/>COSTMAP_CONVERTER_INTERFACE_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h"/>
+  </compounddef>
+</doxygen>

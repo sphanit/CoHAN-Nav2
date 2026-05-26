@@ -1,0 +1,7 @@
+<map id="hateb_local_planner::Obstacle" name="hateb_local_planner::Obstacle">
+<area shape="rect" id="node1" title="Abstract class that defines the interface for modelling obstacles." alt="" coords="5,104,159,145"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1CircularObstacle.html" title="Implements a 2D circular obstacle (point obstacle plus radius)" alt="" coords="207,5,360,47"/>
+<area shape="rect" id="node3" href="$classhateb__local__planner_1_1LineObstacle.html" title="Implements a 2D line obstacle." alt="" coords="207,71,360,112"/>
+<area shape="rect" id="node4" href="$classhateb__local__planner_1_1PointObstacle.html" title="Implements a 2D point obstacle." alt="" coords="207,136,360,177"/>
+<area shape="rect" id="node5" href="$classhateb__local__planner_1_1PolygonObstacle.html" title="Implements a polygon obstacle with an arbitrary number of vertices." alt="" coords="207,201,360,243"/>
+</map>

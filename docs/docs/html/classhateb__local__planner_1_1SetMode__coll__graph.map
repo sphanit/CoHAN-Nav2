@@ -1,0 +1,5 @@
+<map id="hateb_local_planner::SetMode" name="hateb_local_planner::SetMode">
+<area shape="rect" id="node1" title="Class implementing a behavior tree action node to set planning mode." alt="" coords="108,109,261,151"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,13,177,39"/>
+<area shape="rect" id="node3" href="$structhateb__local__planner_1_1ModeInfo.html" title="Structure combining planning and prediction modes Used to configure the behavior of the local planner..." alt="" coords="201,5,355,47"/>
+</map>

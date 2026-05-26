@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classCostmapStandaloneConversion" kind="class" language="C++" prot="public">
+    <compoundname>CostmapStandaloneConversion</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCostmapStandaloneConversion_1afc3b30cc62bbf237a2cd132ef304745a" prot="private" static="no" mutable="no">
+        <type>pluginlib::ClassLoader&lt; <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons" kindref="compound">costmap_converter::BaseCostmapToPolygons</ref> &gt;</type>
+        <definition>pluginlib::ClassLoader&lt;costmap_converter::BaseCostmapToPolygons&gt; CostmapStandaloneConversion::converter_loader_</definition>
+        <argsstring></argsstring>
+        <name>converter_loader_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="241" column="7" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCostmapStandaloneConversion_1ae0ac7a9982a2e216274e82a2df3ecb7a" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classcostmap__converter_1_1BaseCostmapToPolygons" kindref="compound">costmap_converter::BaseCostmapToPolygons</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;costmap_converter::BaseCostmapToPolygons&gt; CostmapStandaloneConversion::converter_</definition>
+        <argsstring></argsstring>
+        <name>converter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="242" column="19" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCostmapStandaloneConversion_1af3ed0138470097d92ae5c366b1ffa271" prot="private" static="no" mutable="no">
+        <type>rclcpp::Node::SharedPtr</type>
+        <definition>rclcpp::Node::SharedPtr CostmapStandaloneConversion::n_</definition>
+        <argsstring></argsstring>
+        <name>n_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="244" column="27" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCostmapStandaloneConversion_1a4b8ab00d3cf5497ae1faf2afd4a0964a" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; nav2_costmap_2d::Costmap2DROS &gt;</type>
+        <definition>std::shared_ptr&lt;nav2_costmap_2d::Costmap2DROS&gt; CostmapStandaloneConversion::costmap_ros_</definition>
+        <argsstring></argsstring>
+        <name>costmap_ros_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="245" column="19" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCostmapStandaloneConversion_1af56139b823e3d0b5baf9ccc2084fd516" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; std::thread &gt;</type>
+        <definition>std::unique_ptr&lt;std::thread&gt; CostmapStandaloneConversion::costmap_thread_</definition>
+        <argsstring></argsstring>
+        <name>costmap_thread_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="246" column="19" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCostmapStandaloneConversion_1a51d4464ef6eb2b328038127d41f85317" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; costmap_converter_msgs::msg::ObstacleArrayMsg &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;costmap_converter_msgs::msg::ObstacleArrayMsg&gt;::SharedPtr CostmapStandaloneConversion::obstacle_pub_</definition>
+        <argsstring></argsstring>
+        <name>obstacle_pub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="248" column="7" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCostmapStandaloneConversion_1a3cc0449fff68e5d72b4f98e6f99693d2" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; visualization_msgs::msg::Marker &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;visualization_msgs::msg::Marker&gt;::SharedPtr CostmapStandaloneConversion::marker_pub_</definition>
+        <argsstring></argsstring>
+        <name>marker_pub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="249" column="33" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCostmapStandaloneConversion_1a3ee1a95c79059c51e5aa7f162922556e" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr CostmapStandaloneConversion::pub_timer_</definition>
+        <argsstring></argsstring>
+        <name>pub_timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="250" column="32" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCostmapStandaloneConversion_1a8dbab1f5770abb912ee8193de9b24161" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CostmapStandaloneConversion::frame_id_</definition>
+        <argsstring></argsstring>
+        <name>frame_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="252" column="15" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCostmapStandaloneConversion_1ad4749819a96b8bb4347e04edd9fad965" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CostmapStandaloneConversion::occupied_min_value_</definition>
+        <argsstring></argsstring>
+        <name>occupied_min_value_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="253" column="7" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCostmapStandaloneConversion_1a0d134ec0abb36ecebaf4c16e9a5c97ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CostmapStandaloneConversion::CostmapStandaloneConversion</definition>
+        <argsstring>(const std::string node_name)</argsstring>
+        <name>CostmapStandaloneConversion</name>
+        <param>
+          <type>const std::string</type>
+          <declname>node_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="52" column="3" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="52" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classCostmapStandaloneConversion_1aeb4c13230ad1a505d2f3964d800c7cf0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CostmapStandaloneConversion::publishCallback</definition>
+        <argsstring>()</argsstring>
+        <name>publishCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="133" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="133" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classCostmapStandaloneConversion_1a236bdd1e85110c922ce31e6e75977185" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CostmapStandaloneConversion::publishAsMarker</definition>
+        <argsstring>(const std::string &amp;frame_id, const std::vector&lt; geometry_msgs::msg::PolygonStamped &gt; &amp;polygonStamped)</argsstring>
+        <name>publishAsMarker</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>frame_id</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; geometry_msgs::msg::PolygonStamped &gt; &amp;</type>
+          <declname>polygonStamped</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="146" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="146" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classCostmapStandaloneConversion_1a5f93805247482af9efca23e6913ad015" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CostmapStandaloneConversion::publishAsMarker</definition>
+        <argsstring>(const std::string &amp;frame_id, const costmap_converter_msgs::msg::ObstacleArrayMsg &amp;obstacles)</argsstring>
+        <name>publishAsMarker</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>frame_id</declname>
+        </param>
+        <param>
+          <type>const costmap_converter_msgs::msg::ObstacleArrayMsg &amp;</type>
+          <declname>obstacles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="193" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="193" bodyend="237"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CostmapStandaloneConversion</label>
+        <link refid="classCostmapStandaloneConversion"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CostmapStandaloneConversion</label>
+        <link refid="classCostmapStandaloneConversion"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" line="50" column="1" bodyfile="costmap_converter/costmap_converter/src/costmap_converter_node.cpp" bodystart="50" bodyend="254"/>
+    <listofallmembers>
+      <member refid="classCostmapStandaloneConversion_1ae0ac7a9982a2e216274e82a2df3ecb7a" prot="private" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>converter_</name></member>
+      <member refid="classCostmapStandaloneConversion_1afc3b30cc62bbf237a2cd132ef304745a" prot="private" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>converter_loader_</name></member>
+      <member refid="classCostmapStandaloneConversion_1a4b8ab00d3cf5497ae1faf2afd4a0964a" prot="private" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>costmap_ros_</name></member>
+      <member refid="classCostmapStandaloneConversion_1af56139b823e3d0b5baf9ccc2084fd516" prot="private" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>costmap_thread_</name></member>
+      <member refid="classCostmapStandaloneConversion_1a0d134ec0abb36ecebaf4c16e9a5c97ed" prot="public" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>CostmapStandaloneConversion</name></member>
+      <member refid="classCostmapStandaloneConversion_1a8dbab1f5770abb912ee8193de9b24161" prot="private" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>frame_id_</name></member>
+      <member refid="classCostmapStandaloneConversion_1a3cc0449fff68e5d72b4f98e6f99693d2" prot="private" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>marker_pub_</name></member>
+      <member refid="classCostmapStandaloneConversion_1af3ed0138470097d92ae5c366b1ffa271" prot="private" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>n_</name></member>
+      <member refid="classCostmapStandaloneConversion_1a51d4464ef6eb2b328038127d41f85317" prot="private" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>obstacle_pub_</name></member>
+      <member refid="classCostmapStandaloneConversion_1ad4749819a96b8bb4347e04edd9fad965" prot="private" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>occupied_min_value_</name></member>
+      <member refid="classCostmapStandaloneConversion_1a3ee1a95c79059c51e5aa7f162922556e" prot="private" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>pub_timer_</name></member>
+      <member refid="classCostmapStandaloneConversion_1a236bdd1e85110c922ce31e6e75977185" prot="public" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>publishAsMarker</name></member>
+      <member refid="classCostmapStandaloneConversion_1a5f93805247482af9efca23e6913ad015" prot="public" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>publishAsMarker</name></member>
+      <member refid="classCostmapStandaloneConversion_1aeb4c13230ad1a505d2f3964d800c7cf0" prot="public" virt="non-virtual"><scope>CostmapStandaloneConversion</scope><name>publishCallback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="invisible__humans__detection_8hpp" kind="file" language="C++">
+    <compoundname>invisible_humans_detection.hpp</compoundname>
+    <includes local="no">tf2/LinearMath/Quaternion.h</includes>
+    <includes local="no">tf2/LinearMath/Transform.h</includes>
+    <includes local="no">tf2/LinearMath/Vector3.h</includes>
+    <includes local="no">tf2/utils.h</includes>
+    <includes local="no">tf2_ros/buffer.h</includes>
+    <includes local="no">tf2_ros/transform_listener.h</includes>
+    <includes local="no">Eigen/Core</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">cohan_msgs/msg/passage_type.hpp</includes>
+    <includes local="no">costmap_converter_msgs/msg/obstacle_array_msg.hpp</includes>
+    <includes local="no">costmap_converter_msgs/msg/obstacle_msg.hpp</includes>
+    <includes local="no">geometry_msgs/msg/pose_array.hpp</includes>
+    <includes local="no">geometry_msgs/msg/pose_stamped.hpp</includes>
+    <includes local="no">geometry_msgs/msg/transform_stamped.hpp</includes>
+    <includes refid="invisible__humans__config_8hpp" local="no">invisible_humans_detection/invisible_humans_config.hpp</includes>
+    <includes local="no">map</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">nav_msgs/msg/occupancy_grid.hpp</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">sensor_msgs/msg/laser_scan.hpp</includes>
+    <includes local="no">std_msgs/msg/int8.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">tf2_eigen/tf2_eigen.hpp</includes>
+    <includes local="no">tf2_geometry_msgs/tf2_geometry_msgs.hpp</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">visualization_msgs/msg/marker.hpp</includes>
+    <includes local="no">visualization_msgs/msg/marker_array.hpp</includes>
+    <includedby refid="invisible__humans__detection_8cpp" local="no">invisible_humans_detection.cpp</includedby>
+    <incdepgraph>
+      <node id="14">
+        <label>geometry_msgs/msg/pose_array.hpp</label>
+      </node>
+      <node id="19">
+        <label>functional</label>
+      </node>
+      <node id="15">
+        <label>geometry_msgs/msg/pose_stamped.hpp</label>
+      </node>
+      <node id="13">
+        <label>costmap_converter_msgs/msg/obstacle_msg.hpp</label>
+      </node>
+      <node id="3">
+        <label>tf2/LinearMath/Transform.h</label>
+      </node>
+      <node id="18">
+        <label>ros2_helpers/parameters.hpp</label>
+        <link refid="parameters_8hpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>cohan_msgs/msg/passage_type.hpp</label>
+      </node>
+      <node id="32">
+        <label>std_msgs/msg/int8.hpp</label>
+      </node>
+      <node id="16">
+        <label>geometry_msgs/msg/transform_stamped.hpp</label>
+      </node>
+      <node id="10">
+        <label>cmath</label>
+      </node>
+      <node id="9">
+        <label>cassert</label>
+      </node>
+      <node id="8">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="25">
+        <label>string</label>
+      </node>
+      <node id="17">
+        <label>invisible_humans_detection/invisible_humans_config.hpp</label>
+        <link refid="invisible__humans__config_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>nav_msgs/msg/occupancy_grid.hpp</label>
+      </node>
+      <node id="35">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="28">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="23">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="1">
+        <label>invisible_humans_detection.hpp</label>
+        <link refid="invisible__humans__detection_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>rcl_interfaces/msg/parameter_descriptor.hpp</label>
+      </node>
+      <node id="4">
+        <label>tf2/LinearMath/Vector3.h</label>
+      </node>
+      <node id="27">
+        <label>vector</label>
+      </node>
+      <node id="21">
+        <label>rcl_interfaces/msg/integer_range.hpp</label>
+      </node>
+      <node id="31">
+        <label>sensor_msgs/msg/laser_scan.hpp</label>
+      </node>
+      <node id="34">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="12">
+        <label>costmap_converter_msgs/msg/obstacle_array_msg.hpp</label>
+      </node>
+      <node id="33">
+        <label>tf2_eigen/tf2_eigen.hpp</label>
+      </node>
+      <node id="26">
+        <label>unordered_map</label>
+      </node>
+      <node id="2">
+        <label>tf2/LinearMath/Quaternion.h</label>
+      </node>
+      <node id="36">
+        <label>visualization_msgs/msg/marker_array.hpp</label>
+      </node>
+      <node id="7">
+        <label>tf2_ros/transform_listener.h</label>
+      </node>
+      <node id="6">
+        <label>tf2_ros/buffer.h</label>
+      </node>
+      <node id="24">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="29">
+        <label>memory</label>
+      </node>
+      <node id="20">
+        <label>rcl_interfaces/msg/floating_point_range.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>invisible_humans_detection.hpp</label>
+        <link refid="invisible__humans__detection_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>invisible_humans_detection.cpp</label>
+        <link refid="invisible__humans__detection_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classinvisible__humans__detection_1_1InvHumansDetection" prot="public">invisible_humans_detection::InvHumansDetection</innerclass>
+    <innernamespace refid="namespaceinvisible__humans__detection">invisible_humans_detection</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(MIT<sp/>License)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2022-2025<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INVISIBLE_HUMANS_DETECTION_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INVISIBLE_HUMANS_DETECTION_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/LinearMath/Quaternion.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/LinearMath/Transform.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/LinearMath/Vector3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2/utils.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_ros/buffer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_ros/transform_listener.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Core&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/msg/passage_type.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;costmap_converter_msgs/msg/obstacle_array_msg.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;costmap_converter_msgs/msg/obstacle_msg.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/msg/pose_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/msg/pose_stamped.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/msg/transform_stamped.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="invisible__humans__config_8hpp" kindref="compound">invisible_humans_detection/invisible_humans_config.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav_msgs/msg/occupancy_grid.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rclcpp/rclcpp.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sensor_msgs/msg/laser_scan.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;std_msgs/msg/int8.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_eigen/tf2_eigen.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;visualization_msgs/msg/marker.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;visualization_msgs/msg/marker_array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceinvisible__humans__detection" kindref="compound">invisible_humans_detection</ref><sp/>{</highlight></codeline>
+<codeline lineno="61" refid="namespaceinvisible__humans__detection_1ae25a689c317c3768475551c8cd57fce6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceinvisible__humans__detection_1ae25a689c317c3768475551c8cd57fce6" kindref="member">Coordinates</ref><sp/>=<sp/>std::vector&lt;std::pair&lt;double,<sp/>double&gt;&gt;;</highlight></codeline>
+<codeline lineno="62" refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/>=<sp/>std::pair&lt;double,<sp/>double&gt;;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Pattern<sp/>1<sp/>of<sp/>ROS2<sp/>Nodes<sp/>--&gt;<sp/>Inherit<sp/>from<sp/>rclcpp::Node<sp/>(Good<sp/>for<sp/>Standalone<sp/>nodes)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classinvisible__humans__detection_1_1InvHumansDetection" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classinvisible__humans__detection_1_1InvHumansDetection" kindref="compound">InvHumansDetection</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74" refid="classinvisible__humans__detection_1_1InvHumansDetection_1abab1e941b117d61dd27ef039ccfa9312" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1abab1e941b117d61dd27ef039ccfa9312" kindref="member">InvHumansDetection</ref>()<sp/>:<sp/>Node(</highlight><highlight class="stringliteral">&quot;inv_humans_detection&quot;</highlight><highlight class="normal">)<sp/>{}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a2a14942c25d91ecd6d3f7ee6e6bee39a" kindref="member">initialize</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a9c9f34a109addb4b4fdaf0536ebfecda" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a9c9f34a109addb4b4fdaf0536ebfecda" kindref="member">~InvHumansDetection</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1aab3ecd0de677de38549925d32bc977f8" kindref="member">mapCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nav_msgs::msg::OccupancyGrid::SharedPtr<sp/>grid);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1af423331b88e8cb01bb9c991a397e169b" kindref="member">locateInvHumans</ref>(<ref refid="namespaceinvisible__humans__detection_1ae25a689c317c3768475551c8cd57fce6" kindref="member">Coordinates</ref><sp/>c1,<sp/><ref refid="namespaceinvisible__humans__detection_1ae25a689c317c3768475551c8cd57fce6" kindref="member">Coordinates</ref><sp/>c2,<sp/>std::vector&lt;char&gt;<sp/>direction,<sp/>geometry_msgs::msg::TransformStamped&amp;<sp/>footprint_transform);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1ae581790986de364365d9620b14f70be6" kindref="member">detectOccludedCorners</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1aabf24a36a4c01c0aeff738f60fab6736" kindref="member">publishInvisibleHumans</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::PoseArray&amp;<sp/>corners,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::msg::PoseArray&amp;<sp/>poses,<sp/>std::vector&lt;std::vector&lt;double&gt;&gt;&amp;<sp/>inv_humans);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1af4ea74cb34f500b38b80301bbf0a17f2" kindref="member">detectPassages</ref>(geometry_msgs::msg::PoseArray<sp/>detections);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a9748ecbb4d32c5c2e6ab9bf85b4c3369" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a9748ecbb4d32c5c2e6ab9bf85b4c3369" kindref="member">worldToMap</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wy,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>mx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>my)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wx<sp/>&lt;<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1aaa28380cb0ab9058f2142e2e3cf6ec09" kindref="member">origin_x_</ref><sp/>||<sp/>wy<sp/>&lt;<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a31649012869865ce6e94b2ab3388afb9" kindref="member">origin_y_</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>mx<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">((wx<sp/>-<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1aaa28380cb0ab9058f2142e2e3cf6ec09" kindref="member">origin_x_</ref>)<sp/>/<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a1d6a7b5245babf05932232aef6ac3b70" kindref="member">resolution_</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>my<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">((wy<sp/>-<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a31649012869865ce6e94b2ab3388afb9" kindref="member">origin_y_</ref>)<sp/>/<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a1d6a7b5245babf05932232aef6ac3b70" kindref="member">resolution_</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mx<sp/>&lt;<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a8ba833cce05a9f1f1dba628f15ca6398" kindref="member">size_x_</ref><sp/>&amp;&amp;<sp/>my<sp/>&lt;<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1ad21ea4453b2df4af5d16be3231a300a1" kindref="member">size_y_</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a75e4c6d54d9a0714e30eff19c093680e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a75e4c6d54d9a0714e30eff19c093680e" kindref="member">getIndex</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>my)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(my<sp/>*<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a8ba833cce05a9f1f1dba628f15ca6398" kindref="member">size_x_</ref>)<sp/>+<sp/>mx;<sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="classinvisible__humans__detection_1_1InvHumansDetection_1afcdd62393e7c406bf13218704c975dda" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1afcdd62393e7c406bf13218704c975dda" kindref="member">getLeftPoint</ref>(<ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/>p1,<sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/>p2,<sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/>p3,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>p2.first<sp/>-<sp/>p1.first;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>p2.second<sp/>-<sp/>p1.second;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>point_dist<sp/>=<sp/>std::hypot(x,<sp/>y);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/>p;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>p.first<sp/>=<sp/>p3.first<sp/>-<sp/>(dist<sp/>*<sp/>y<sp/>/<sp/>point_dist);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>p.second<sp/>=<sp/>p3.second<sp/>+<sp/>(dist<sp/>*<sp/>x<sp/>/<sp/>point_dist);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a78368bf4ffa361a62b51ac08656ee450" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a78368bf4ffa361a62b51ac08656ee450" kindref="member">getRightPoint</ref>(<ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/>p1,<sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/>p2,<sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/>p3,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>p2.first<sp/>-<sp/>p1.first;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>p2.second<sp/>-<sp/>p1.second;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>point_dist<sp/>=<sp/>std::hypot(x,<sp/>y);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/>p;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>p.first<sp/>=<sp/>p3.first<sp/>+<sp/>(dist<sp/>*<sp/>y<sp/>/<sp/>point_dist);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>p.second<sp/>=<sp/>p3.second<sp/>-<sp/>(dist<sp/>*<sp/>x<sp/>/<sp/>point_dist);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a918dca5911d5b0e62c0859f572c1b8b8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;Point&gt;<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a918dca5911d5b0e62c0859f572c1b8b8" kindref="member">getTwoPoints</ref>(<ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/>p1,<sp/><ref refid="namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c" kindref="member">Point</ref><sp/>p2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Point&gt;<sp/>points;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>l_p<sp/>=<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1afcdd62393e7c406bf13218704c975dda" kindref="member">getLeftPoint</ref>(p1,<sp/>p2,<sp/>p2,<sp/>radius);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>points.push_back(l_p);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r_p<sp/>=<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a78368bf4ffa361a62b51ac08656ee450" kindref="member">getRightPoint</ref>(p1,<sp/>p2,<sp/>p2,<sp/>radius);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>points.push_back(r_p);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>points;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS2<sp/>helpers<sp/>and<sp/>configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="classinvisible__humans__detection_1_1InvHumansDetection_1ac9627a7789fdbf1d0b6a1a27a904f97f" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;InvisibleHumansConfig&gt;<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1ac9627a7789fdbf1d0b6a1a27a904f97f" kindref="member">cfg_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="classinvisible__humans__detection_1_1InvHumansDetection_1aad914e28eb47a9534dd0f65b784c0eaa" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1aad914e28eb47a9534dd0f65b784c0eaa" kindref="member">timer_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a23ab19fd25b50675822bf12aa0ed6f83" refkind="member"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::PoseStamped<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a23ab19fd25b50675822bf12aa0ed6f83" kindref="member">robot_pose_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a4e84d7b8820912d8d6e9a2d58f31eb08" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;tf2_ros::Buffer&gt;<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a4e84d7b8820912d8d6e9a2d58f31eb08" kindref="member">tf_buffer_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="207" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a0a30637417a747e551ba22fac7ac49b5" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;tf2_ros::TransformListener&gt;<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a0a30637417a747e551ba22fac7ac49b5" kindref="member">tf_listener_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a6fc8986fe31de500d817587a06b4b962" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;nav_msgs::msg::OccupancyGrid&gt;::SharedPtr<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a6fc8986fe31de500d817587a06b4b962" kindref="member">map_sub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="209" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a08b7585a1482720b570bd35249921272" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;sensor_msgs::msg::LaserScan&gt;::SharedPtr<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a08b7585a1482720b570bd35249921272" kindref="member">scan_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="210" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a75680e5e859c44364bc1b666b9a18a90" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt;::SharedPtr<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a75680e5e859c44364bc1b666b9a18a90" kindref="member">pub_invis_human_viz_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="211" refid="classinvisible__humans__detection_1_1InvHumansDetection_1ad31c1eb9d608d8b4738b420f66165de9" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;costmap_converter_msgs::msg::ObstacleArrayMsg&gt;::SharedPtr<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1ad31c1eb9d608d8b4738b420f66165de9" kindref="member">pub_invis_human_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="212" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a6bef19b53efad4ec60a18a1f70e235d4" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;geometry_msgs::msg::PoseArray&gt;::SharedPtr<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a6bef19b53efad4ec60a18a1f70e235d4" kindref="member">pub_invis_human_corners_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="213" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a76712713e6464f5f5331db6cf12236cc" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;geometry_msgs::msg::PoseArray&gt;::SharedPtr<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a76712713e6464f5f5331db6cf12236cc" kindref="member">pub_invis_humans_pos_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a8fef3b9bb7d02a7b6c5717c9d4a70d5c" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;cohan_msgs::msg::PassageType&gt;::SharedPtr<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a8fef3b9bb7d02a7b6c5717c9d4a70d5c" kindref="member">passage_detect_pub_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="215" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a6727aa7318e9dc2ff0b86593a23eda49" refkind="member"><highlight class="normal"><sp/><sp/>nav_msgs::msg::OccupancyGrid<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a6727aa7318e9dc2ff0b86593a23eda49" kindref="member">map_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="216" refid="classinvisible__humans__detection_1_1InvHumansDetection_1acc1e87d71ba933c2c81fc436b4f685fc" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;float&gt;<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1acc1e87d71ba933c2c81fc436b4f685fc" kindref="member">ranges_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a87562d884aa112f39ccb0f6ae3698a34" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a87562d884aa112f39ccb0f6ae3698a34" kindref="member">corner_ranges_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a8ba833cce05a9f1f1dba628f15ca6398" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a8ba833cce05a9f1f1dba628f15ca6398" kindref="member">size_x_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="219" refid="classinvisible__humans__detection_1_1InvHumansDetection_1ad21ea4453b2df4af5d16be3231a300a1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1ad21ea4453b2df4af5d16be3231a300a1" kindref="member">size_y_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="220" refid="classinvisible__humans__detection_1_1InvHumansDetection_1aaa28380cb0ab9058f2142e2e3cf6ec09" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1aaa28380cb0ab9058f2142e2e3cf6ec09" kindref="member">origin_x_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="221" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a31649012869865ce6e94b2ab3388afb9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a31649012869865ce6e94b2ab3388afb9" kindref="member">origin_y_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="222" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a1d6a7b5245babf05932232aef6ac3b70" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a1d6a7b5245babf05932232aef6ac3b70" kindref="member">resolution_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="223" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a72dfbbdb7b13c654ee37b654a779e605" refkind="member"><highlight class="normal"><sp/><sp/>sensor_msgs::msg::LaserScan<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a72dfbbdb7b13c654ee37b654a779e605" kindref="member">scan_msg_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="224" refid="classinvisible__humans__detection_1_1InvHumansDetection_1a2943e16217edff9693242588af291461" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector2d<sp/><ref refid="classinvisible__humans__detection_1_1InvHumansDetection_1a2943e16217edff9693242588af291461" kindref="member">robot_vec_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>invisible_humans_detection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>INVISIBLE_HUMANS_DETECTION_HPP</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_detection.hpp"/>
+  </compounddef>
+</doxygen>

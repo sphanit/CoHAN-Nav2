@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classagents_1_1BayesianGoalPrediction" kind="class" language="C++" prot="public">
+    <compoundname>agents::BayesianGoalPrediction</compoundname>
+    <includes refid="predict__goal_8hpp" local="no">predict_goal.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classagents_1_1BayesianGoalPrediction_1a2e6f78552d73bfc207d75877bee93b1e" prot="public" static="no">
+        <type>std::vector&lt; Eigen::Vector2d &gt;</type>
+        <definition>using agents::BayesianGoalPrediction::Trajectory =  std::vector&lt;Eigen::Vector2d&gt;</definition>
+        <argsstring></argsstring>
+        <name>Trajectory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="78" column="3" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classagents_1_1BayesianGoalPrediction_1ad5520b219332a5da061c37140c922c29" prot="private" static="no" mutable="no">
+        <type><ref refid="classagents_1_1Gaussian" kindref="compound">Gaussian</ref></type>
+        <definition>Gaussian agents::BayesianGoalPrediction::nd_</definition>
+        <argsstring></argsstring>
+        <name>nd_</name>
+        <briefdescription>
+<para><ref refid="classagents_1_1Gaussian" kindref="compound">Gaussian</ref> distribution for probability calculations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="201" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1BayesianGoalPrediction_1a0ef4c8ea79a85843d3b46194d545fe23" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::Vector2d &gt;</type>
+        <definition>std::vector&lt;Eigen::Vector2d&gt; agents::BayesianGoalPrediction::goals_</definition>
+        <argsstring></argsstring>
+        <name>goals_</name>
+        <briefdescription>
+<para>List of goal positions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="202" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1BayesianGoalPrediction_1abb9f3d90b8afaa46674624f50139ab55" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; agents::BayesianGoalPrediction::goal_names_</definition>
+        <argsstring></argsstring>
+        <name>goal_names_</name>
+        <briefdescription>
+<para>List of goal names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="203" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1BayesianGoalPrediction_1ac965a785b6e56d3ec7a620af1df1b102" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, <ref refid="classagents_1_1BayesianGoalPrediction_1a2e6f78552d73bfc207d75877bee93b1e" kindref="member">Trajectory</ref> &gt;</type>
+        <definition>std::map&lt;int, Trajectory&gt; agents::BayesianGoalPrediction::agents_trajs_</definition>
+        <argsstring></argsstring>
+        <name>agents_trajs_</name>
+        <briefdescription>
+<para>Map of agent trajectories. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="204" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1BayesianGoalPrediction_1ace62112d5d93296c1eee7a3baf5b9d5a" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::vector&lt; double &gt; &gt;</type>
+        <definition>std::map&lt;int, std::vector&lt;double&gt; &gt; agents::BayesianGoalPrediction::goal_priors_</definition>
+        <argsstring></argsstring>
+        <name>goal_priors_</name>
+        <briefdescription>
+<para>Map of goal priors for each agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="205" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1BayesianGoalPrediction_1a276756764ddfcec9b1ae2a000e76716f" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::vector&lt; double &gt; &gt;</type>
+        <definition>std::map&lt;int, std::vector&lt;double&gt; &gt; agents::BayesianGoalPrediction::agent_probs_</definition>
+        <argsstring></argsstring>
+        <name>agent_probs_</name>
+        <briefdescription>
+<para>Map of probabilities for each agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="206" column="12" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1BayesianGoalPrediction_1a8f394e49041a2ec75a3456bfbd7606f8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int agents::BayesianGoalPrediction::window_size_</definition>
+        <argsstring></argsstring>
+        <name>window_size_</name>
+        <briefdescription>
+<para>Sliding window size for trajectory analysis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="207" column="7" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classagents_1_1BayesianGoalPrediction_1af2d9c598e8ae4e4625321d41d3be8c74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>agents::BayesianGoalPrediction::BayesianGoalPrediction</definition>
+        <argsstring>()</argsstring>
+        <name>BayesianGoalPrediction</name>
+        <briefdescription>
+<para>Constructor initializing with default covariance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="83" column="3" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1BayesianGoalPrediction_1a8e6cf4bfedee186b6128c83e1499aa93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>agents::BayesianGoalPrediction::~BayesianGoalPrediction</definition>
+        <argsstring>()=default</argsstring>
+        <name>~BayesianGoalPrediction</name>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="88" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1BayesianGoalPrediction_1a825aa3dc7367c470f3011061f35e1d00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::BayesianGoalPrediction::initialize</definition>
+        <argsstring>(const std::map&lt; std::string, Eigen::Vector2d &gt; &amp;goals, int window_size)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const std::map&lt; std::string, Eigen::Vector2d &gt; &amp;</type>
+          <declname>goals</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>window_size</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the predictor with potential goals and window size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>goals</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map of goal names to their 2D positions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>window_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the sliding window for trajectory analysis </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="95" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="95" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1BayesianGoalPrediction_1ae6ce341f459f073f44fc8daafe4856fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string agents::BayesianGoalPrediction::predictGoal</definition>
+        <argsstring>(int id, Eigen::Vector2d &amp;xy)</argsstring>
+        <name>predictGoal</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>Eigen::Vector2d &amp;</type>
+          <declname>xy</declname>
+        </param>
+        <briefdescription>
+<para>Predict the most likely goal for an agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent identifier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current position of the agent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Name of the predicted goal, &quot;None&quot; if insufficient data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="109" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="109" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classagents_1_1BayesianGoalPrediction_1ae5bb7f8d62d99f01b4cba3897fb91b39" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::BayesianGoalPrediction::addPosition</definition>
+        <argsstring>(int id, Eigen::Vector2d &amp;xy)</argsstring>
+        <name>addPosition</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>Eigen::Vector2d &amp;</type>
+          <declname>xy</declname>
+        </param>
+        <briefdescription>
+<para>Add a new position to agent&apos;s trajectory. This method updates the trajectory of the agent by adding the current position. If the trajectory exceeds the window size, the oldest position is removed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current position of the agent as a 2D vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="130" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="130" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1BayesianGoalPrediction_1a18d606a44b2cab66b9259e0ba3fd2b2a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::BayesianGoalPrediction::getProbabilities</definition>
+        <argsstring>(int id)</argsstring>
+        <name>getProbabilities</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Calculate probabilities for each goal based on the agent&apos;s trajectory. This method computes the likelihood of each goal being the agent&apos;s target based on the agent&apos;s motion history and predefined goal priors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="142" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="142" bodyend="199"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class implementing Bayesian goal prediction for agents. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>agents::BayesianGoalPrediction</label>
+        <link refid="classagents_1_1BayesianGoalPrediction"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>nd_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>agents::Gaussian</label>
+        <link refid="classagents_1_1Gaussian"/>
+      </node>
+    </collaborationgraph>
+    <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="76" column="1" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="76" bodyend="208"/>
+    <listofallmembers>
+      <member refid="classagents_1_1BayesianGoalPrediction_1ae5bb7f8d62d99f01b4cba3897fb91b39" prot="private" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>addPosition</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1a276756764ddfcec9b1ae2a000e76716f" prot="private" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>agent_probs_</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1ac965a785b6e56d3ec7a620af1df1b102" prot="private" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>agents_trajs_</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1af2d9c598e8ae4e4625321d41d3be8c74" prot="public" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>BayesianGoalPrediction</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1a18d606a44b2cab66b9259e0ba3fd2b2a" prot="private" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>getProbabilities</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1abb9f3d90b8afaa46674624f50139ab55" prot="private" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>goal_names_</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1ace62112d5d93296c1eee7a3baf5b9d5a" prot="private" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>goal_priors_</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1a0ef4c8ea79a85843d3b46194d545fe23" prot="private" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>goals_</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1a825aa3dc7367c470f3011061f35e1d00" prot="public" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>initialize</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1ad5520b219332a5da061c37140c922c29" prot="private" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>nd_</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1ae6ce341f459f073f44fc8daafe4856fb" prot="public" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>predictGoal</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1a2e6f78552d73bfc207d75877bee93b1e" prot="public" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>Trajectory</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1a8f394e49041a2ec75a3456bfbd7606f8" prot="private" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>window_size_</name></member>
+      <member refid="classagents_1_1BayesianGoalPrediction_1a8e6cf4bfedee186b6128c83e1499aa93" prot="public" virt="non-virtual"><scope>agents::BayesianGoalPrediction</scope><name>~BayesianGoalPrediction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

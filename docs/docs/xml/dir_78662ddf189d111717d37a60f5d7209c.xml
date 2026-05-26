@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_78662ddf189d111717d37a60f5d7209c" kind="dir">
+    <compoundname>behavior_tree</compoundname>
+    <innerdir refid="dir_5780353a2e84725b7b4f764e5220cb69">action</innerdir>
+    <innerdir refid="dir_7d74e7506267b85b28f38d362f93ff90">condition</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/src/behavior_tree/"/>
+  </compounddef>
+</doxygen>

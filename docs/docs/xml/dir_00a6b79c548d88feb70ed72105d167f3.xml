@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_00a6b79c548d88feb70ed72105d167f3" kind="dir">
+    <compoundname>src</compoundname>
+    <innerdir refid="dir_78662ddf189d111717d37a60f5d7209c">behavior_tree</innerdir>
+    <innerfile refid="agents__class_8cpp">agents_class.cpp</innerfile>
+    <innerfile refid="hateb__config_8cpp">hateb_config.cpp</innerfile>
+    <innerfile refid="hateb__goal__checker_8cpp">hateb_goal_checker.cpp</innerfile>
+    <innerfile refid="hateb__local__planner__ros_8cpp">hateb_local_planner_ros.cpp</innerfile>
+    <innerfile refid="mode__switch_8cpp">mode_switch.cpp</innerfile>
+    <innerfile refid="obstacles_8cpp">obstacles.cpp</innerfile>
+    <innerfile refid="optimal__planner_8cpp">optimal_planner.cpp</innerfile>
+    <innerfile refid="recovery__behaviors_8cpp">recovery_behaviors.cpp</innerfile>
+    <innerfile refid="timed__elastic__band_8cpp">timed_elastic_band.cpp</innerfile>
+    <innerfile refid="visualization_8cpp">visualization.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/src/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,4 @@
+<map id="hateb_local_planner::TebOptimalPlanner" name="hateb_local_planner::TebOptimalPlanner">
+<area shape="rect" id="node1" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o&#45;framework." alt="" coords="5,95,159,136"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1PlannerInterface.html" title="This abstract class defines an interface for local planners." alt="" coords="5,5,159,47"/>
+</map>

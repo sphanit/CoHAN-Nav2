@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgeKinematicsCarlike" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgeKinematicsCarlike</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebBinaryEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebBinaryEdge&lt; 2, double, VertexPose, VertexPose &gt;</basecompoundref>
+    <includes refid="edge__kinematics_8h" local="no">edge_kinematics.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeKinematicsCarlike_1a4c154dffb647b56daaa44be6960503e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeKinematicsCarlike::EdgeKinematicsCarlike</definition>
+        <argsstring>()</argsstring>
+        <name>EdgeKinematicsCarlike</name>
+        <briefdescription>
+<para>Construct edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_kinematics.h" line="175" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_kinematics.h" bodystart="175" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeKinematicsCarlike_1abbffb31ef8aafbc2c1f82a1ab37789b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeKinematicsCarlike::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Actual cost function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_kinematics.h" line="180" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_kinematics.h" bodystart="180" bodyend="201"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Edge defining the cost function for satisfying the non-holonomic kinematics of a carlike mobile robot. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The edge depends on two vertices <formula id="8">$ \mathbf{s}_i, \mathbf{s}_{ip1} $</formula> and minimizes a geometric interpretation of the non-holonomic constraint:<itemizedlist>
+<listitem><para>C. Rösmann et al.: Trajectory modification considering dynamic constraints of autonomous robots, ROBOTIK, 2012.</para>
+</listitem></itemizedlist>
+</para>
+<para>The definition is identically to the one of the differential drive robot. Additionally, this edge incorporates a minimum turning radius that is required by carlike robots. The turning radius is defined by <formula id="9">$ r=v/omega $</formula>.</para>
+<para>The <emphasis>weight</emphasis> can be set using setInformation(): Matrix element 1,1: (Choose a very high value: ~1000). <linebreak/>
+The second equation enforces a minimum turning radius. The <emphasis>weight</emphasis> can be set using setInformation(): Matrix element 2,2. <linebreak/>
+The dimension of the error / cost vector is 3: the first component represents the nonholonomic constraint cost, the second one backward-drive cost and the third one the minimum turning radius <simplesect kind="see"><para>TebOptimalPlanner::AddEdgesKinematics, <ref refid="classhateb__local__planner_1_1EdgeKinematicsDiffDrive" kindref="compound">EdgeKinematicsDiffDrive</ref> </para>
+</simplesect>
+<simplesect kind="remark"><para>Bounding the turning radius from below is not affected by the penalty_epsilon parameter, the user might add an extra margin to the min_turning_radius param. </para>
+</simplesect>
+<simplesect kind="remark"><para>Do not forget to call <ref refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1abc6ae7a9e1fd02416a4a94cbb785ba19" kindref="member">setHATebConfig()</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebBinaryEdge&lt; 2, double, VertexPose, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebBinaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseBinaryEdge&lt; D, double, VertexPose, VertexPose &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeKinematicsCarlike</label>
+        <link refid="classhateb__local__planner_1_1EdgeKinematicsCarlike"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebBinaryEdge&lt; 2, double, VertexPose, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebBinaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseBinaryEdge&lt; D, double, VertexPose, VertexPose &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeKinematicsCarlike</label>
+        <link refid="classhateb__local__planner_1_1EdgeKinematicsCarlike"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_kinematics.h" line="170" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_kinematics.h" bodystart="170" bodyend="205"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1af5ba7be337a1f51e8f000255ffd40e71" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeKinematicsCarlike</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeKinematicsCarlike_1abbffb31ef8aafbc2c1f82a1ab37789b2" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeKinematicsCarlike</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeKinematicsCarlike_1a4c154dffb647b56daaa44be6960503e4" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeKinematicsCarlike</scope><name>EdgeKinematicsCarlike</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a0c0f4853fd8744194a18775226f9b731" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeKinematicsCarlike</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a0b775d38f7afb0f63f9156ed241fbe25" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeKinematicsCarlike</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1abc6ae7a9e1fd02416a4a94cbb785ba19" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeKinematicsCarlike</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a85a24cf969c90917f50cb057173527ca" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeKinematicsCarlike</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,731 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1Agents" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::Agents</compoundname>
+    <includes refid="agents__class_8hpp" local="no">agents_class.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a686e924d6603e83fda00fe87889dc2ca" prot="private" static="no" mutable="no">
+        <type>cohan_msgs::msg::TrackedAgents::SharedPtr</type>
+        <definition>cohan_msgs::msg::TrackedAgents::SharedPtr hateb_local_planner::Agents::tracked_agents_</definition>
+        <argsstring></argsstring>
+        <name>tracked_agents_</name>
+        <briefdescription>
+<para>Latest tracked agents message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="173" column="45" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a2390156dbb5be300a417acaef94f50bc" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, geometry_msgs::msg::Pose &gt;</type>
+        <definition>std::map&lt;int, geometry_msgs::msg::Pose&gt; hateb_local_planner::Agents::agents_</definition>
+        <argsstring></argsstring>
+        <name>agents_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="174" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1afc666a3e5a9fee33e7702eec9ed9ac44" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, geometry_msgs::msg::Pose &gt;</type>
+        <definition>std::map&lt;int, geometry_msgs::msg::Pose&gt; hateb_local_planner::Agents::prev_agents_</definition>
+        <argsstring></argsstring>
+        <name>prev_agents_</name>
+        <briefdescription>
+<para>Current and previous agent poses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="174" column="20" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a2739db788571639e7f93eaf83844e948" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, bool &gt;</type>
+        <definition>std::map&lt;int, bool&gt; hateb_local_planner::Agents::agent_still_</definition>
+        <argsstring></argsstring>
+        <name>agent_still_</name>
+        <briefdescription>
+<para>Map tracking if agents are stationary. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="175" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1ad8b2f9f6976f57a201854b0c7eb3b3dd" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::vector&lt; double &gt; &gt;</type>
+        <definition>std::map&lt;int, std::vector&lt;double&gt; &gt; hateb_local_planner::Agents::agent_vels_</definition>
+        <argsstring></argsstring>
+        <name>agent_vels_</name>
+        <briefdescription>
+<para>List of agent velocities over time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="176" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a58a20a40cca043ad6158bb84c6742f3b" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, double &gt;</type>
+        <definition>std::map&lt;int, double&gt; hateb_local_planner::Agents::agent_nominal_vels_</definition>
+        <argsstring></argsstring>
+        <name>agent_nominal_vels_</name>
+        <briefdescription>
+<para>Nominal velocities based on moving average. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="177" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1ad9710df28f34920a049ac08f0dd0ae96" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, <ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454" kindref="member">AgentState</ref> &gt;</type>
+        <definition>std::map&lt;int, AgentState&gt; hateb_local_planner::Agents::agents_states_</definition>
+        <argsstring></argsstring>
+        <name>agents_states_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="178" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1abbb6f0f00bcaacb03166f91f354b361d" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, <ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454" kindref="member">AgentState</ref> &gt;</type>
+        <definition>std::map&lt;int, AgentState&gt; hateb_local_planner::Agents::prev_agents_states_</definition>
+        <argsstring></argsstring>
+        <name>prev_agents_states_</name>
+        <briefdescription>
+<para>Current and previous agent states. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="178" column="27" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1ac25e8dbd09f94b36a050518ad74f556d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; hateb_local_planner::Agents::visible_agent_ids_</definition>
+        <argsstring></argsstring>
+        <name>visible_agent_ids_</name>
+        <briefdescription>
+<para>List of visible agent IDs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="179" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a6ef179ab3d73cf471d8c327ee10c66b6" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::Agents::tracked_agents_sub_topic_</definition>
+        <argsstring></argsstring>
+        <name>tracked_agents_sub_topic_</name>
+        <briefdescription>
+<para>Topic for tracked agents subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="182" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1ae8f04b33ee6c58c70882c03ab917228d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::Agents::initialized_</definition>
+        <argsstring></argsstring>
+        <name>initialized_</name>
+        <briefdescription>
+<para>Initialization status flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="183" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a5f0d5f2bbab7a6762c8a42d7e97d28aa" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::Agents::stuck_</definition>
+        <argsstring></argsstring>
+        <name>stuck_</name>
+        <briefdescription>
+<para>Flag indicating if agent is stuck. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="184" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a027a6507f4ab7c06c106dadccece011c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hateb_local_planner::Agents::stuck_agent_id_</definition>
+        <argsstring></argsstring>
+        <name>stuck_agent_id_</name>
+        <briefdescription>
+<para>ID of agent blocking robot&apos;s path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="185" column="7" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a06ef2116d40d612479c8b6b9ed8c6b0c" prot="private" static="no" mutable="no">
+        <type>rclcpp_lifecycle::LifecycleNode::SharedPtr</type>
+        <definition>rclcpp_lifecycle::LifecycleNode::SharedPtr hateb_local_planner::Agents::node_</definition>
+        <argsstring></argsstring>
+        <name>node_</name>
+        <briefdescription>
+<para>ROS2 node handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="188" column="46" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a79c37fe0b2b727cbffae8e67f045c369" prot="private" static="no" mutable="no">
+        <type><ref refid="classparameters_1_1ParameterHelper" kindref="compound">parameters::ParameterHelper</ref></type>
+        <definition>parameters::ParameterHelper hateb_local_planner::Agents::param_helper_</definition>
+        <argsstring></argsstring>
+        <name>param_helper_</name>
+        <briefdescription>
+<para>Helper for managing parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="189" column="31" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1af5a244d07b9be46ff9fa88388e821f94" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; agent_path_prediction::msg::AgentsInfo &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;agent_path_prediction::msg::AgentsInfo&gt;::SharedPtr hateb_local_planner::Agents::agents_info_pub_</definition>
+        <argsstring></argsstring>
+        <name>agents_info_pub_</name>
+        <briefdescription>
+<para>Publisher for agent information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="190" column="33" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a43e6a1b3ea7bbe60cf74a66802509a98" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; cohan_msgs::msg::TrackedAgents &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;cohan_msgs::msg::TrackedAgents&gt;::SharedPtr hateb_local_planner::Agents::tracked_agents_sub_</definition>
+        <argsstring></argsstring>
+        <name>tracked_agents_sub_</name>
+        <briefdescription>
+<para>Subscriber for tracked agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="191" column="36" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1ae1307edfe061fd1b7e89177b42cf6ff2" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; tf2_ros::Buffer &gt;</type>
+        <definition>std::shared_ptr&lt;tf2_ros::Buffer&gt; hateb_local_planner::Agents::tf_</definition>
+        <argsstring></argsstring>
+        <name>tf_</name>
+        <briefdescription>
+<para>Pointer to tf buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="192" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1aaab29138ac693b4c37b4646d597fe5ad" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; nav2_costmap_2d::Costmap2DROS &gt;</type>
+        <definition>std::shared_ptr&lt;nav2_costmap_2d::Costmap2DROS&gt; hateb_local_planner::Agents::costmap_ros_</definition>
+        <argsstring></argsstring>
+        <name>costmap_ros_</name>
+        <briefdescription>
+<para>Pointer to the costmap ros wrapper. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="193" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1abc9cb7e14a8a1ad313106fd5fb49b0a3" prot="private" static="no" mutable="no">
+        <type>nav2_costmap_2d::Costmap2D *</type>
+        <definition>nav2_costmap_2d::Costmap2D* hateb_local_planner::Agents::costmap_</definition>
+        <argsstring></argsstring>
+        <name>costmap_</name>
+        <briefdescription>
+<para>Pointer to the 2d costmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="194" column="30" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1ab5711d97468ae028798e06c4a313dc3b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::Agents::inflation_radius_</definition>
+        <argsstring></argsstring>
+        <name>inflation_radius_</name>
+        <briefdescription>
+<para>Inflation radius for costmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="195" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1ab5acc47f6498920b7ec9085acdbff912" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::Agents::ns_</definition>
+        <argsstring></argsstring>
+        <name>ns_</name>
+        <briefdescription>
+<para>Namespace for multiple agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="196" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a92d7b4605a02a25b253f01c8047a1b68" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::Agents::map_frame_</definition>
+        <argsstring></argsstring>
+        <name>map_frame_</name>
+        <briefdescription>
+<para>Frame ID for map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="197" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a97a44f1de0e8baf4878349fe4c276dc2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hateb_local_planner::Agents::planning_mode_</definition>
+        <argsstring></argsstring>
+        <name>planning_mode_</name>
+        <briefdescription>
+<para>Planning mode for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="198" column="7" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1Agents_1a792d2cfb8e7ca342b9146730de7c5438" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;HATebConfig&gt; hateb_local_planner::Agents::cfg_</definition>
+        <argsstring></argsstring>
+        <name>cfg_</name>
+        <briefdescription>
+<para>Config class that stores and manages all related parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="199" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1Agents_1a969c12243d50fc6d770a081ab4ec326a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::Agents::Agents</definition>
+        <argsstring>(rclcpp_lifecycle::LifecycleNode::SharedPtr node, std::shared_ptr&lt; tf2_ros::Buffer &gt; tf, std::shared_ptr&lt; nav2_costmap_2d::Costmap2DROS &gt; costmap_ros, std::shared_ptr&lt; HATebConfig &gt; cfg)</argsstring>
+        <name>Agents</name>
+        <param>
+          <type>rclcpp_lifecycle::LifecycleNode::SharedPtr</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; tf2_ros::Buffer &gt;</type>
+          <declname>tf</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; nav2_costmap_2d::Costmap2DROS &gt;</type>
+          <declname>costmap_ros</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> &gt;</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with parameters for node, tf buffer and costmap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to ROS2 node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to tf buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>costmap_ros</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to costmap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="93" column="3" bodyfile="hateb_local_planner/src/agents_class.cpp" bodystart="36" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Agents_1a77e5e8586f64fa2d71c446b6511500d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::Agents::~Agents</definition>
+        <argsstring>()</argsstring>
+        <name>~Agents</name>
+        <briefdescription>
+<para>Destructor of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="98" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="98" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Agents_1a9fdfdd9c850c30d3e3ac83c39e134120" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::Agents::setState</definition>
+        <argsstring>(AgentState state, int id)</argsstring>
+        <name>setState</name>
+        <param>
+          <type><ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454" kindref="member">AgentState</ref></type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Set the state of an agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state to set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the agent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="110" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="110" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Agents_1a369325fbf7f769ee9c64e4f569e0332f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::Agents::resetAgents</definition>
+        <argsstring>()</argsstring>
+        <name>resetAgents</name>
+        <briefdescription>
+<para>Reset all agent states. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="121" column="8" bodyfile="hateb_local_planner/src/agents_class.cpp" bodystart="344" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Agents_1ae56197f4b983b0622d2b680762492033" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::Agents::isAgentStuck</definition>
+        <argsstring>() const</argsstring>
+        <name>isAgentStuck</name>
+        <briefdescription>
+<para>Check if any agent is stuck. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if an agent is stuck, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="127" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="127" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Agents_1a119c76366e838a099eeb5abbd29f93ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::Agents::resetStuckAgent</definition>
+        <argsstring>()</argsstring>
+        <name>resetStuckAgent</name>
+        <briefdescription>
+<para>Reset the stuck agent ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="132" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="132" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Agents_1a654d82dcbcdd1395894a65e05b924326" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; int, geometry_msgs::msg::Pose &gt;</type>
+        <definition>std::map&lt;int, geometry_msgs::msg::Pose&gt; hateb_local_planner::Agents::getAgents</definition>
+        <argsstring>()</argsstring>
+        <name>getAgents</name>
+        <briefdescription>
+<para>Get the poses of all agents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Map of agent IDs to their poses </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="138" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="138" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Agents_1a6a91df653760c0f5938c236d62c475f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454" kindref="member">AgentState</ref></type>
+        <definition>AgentState hateb_local_planner::Agents::agentState</definition>
+        <argsstring>(int id)</argsstring>
+        <name>agentState</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get the state of the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of agent whose state is required </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>State of the given agent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="145" column="14" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Agents_1a530b6f69a77c3ed7ec3568338217554d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; int, double &gt;</type>
+        <definition>std::map&lt;int, double&gt; hateb_local_planner::Agents::getNominalVels</definition>
+        <argsstring>()</argsstring>
+        <name>getNominalVels</name>
+        <briefdescription>
+<para>Get nominal velocities of all agents based on a moving average filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Map of agent IDs to their nominal velocities </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="151" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="151" bodyend="151"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1Agents_1ac34148646aacd39c630a6427f93d563c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::Agents::trackedAgentsCB</definition>
+        <argsstring>(const cohan_msgs::msg::TrackedAgents::SharedPtr tracked_agents)</argsstring>
+        <name>trackedAgentsCB</name>
+        <param>
+          <type>const cohan_msgs::msg::TrackedAgents::SharedPtr</type>
+          <declname>tracked_agents</declname>
+        </param>
+        <briefdescription>
+<para>Callback for tracked agents updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tracked_agents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tracked agents message containing agent states </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="159" column="8" bodyfile="hateb_local_planner/src/agents_class.cpp" bodystart="69" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1Agents_1ab59f9bf9db870900ffbeaeec0913a81b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; hateb_local_planner::Agents::filterVisibleAgents</definition>
+        <argsstring>(std::map&lt; int, geometry_msgs::msg::Pose &gt; tr_agents, std::vector&lt; int &gt; sorted_ids, std::map&lt; int, double &gt; agents_radii, geometry_msgs::msg::Pose2D robot_pose)</argsstring>
+        <name>filterVisibleAgents</name>
+        <param>
+          <type>std::map&lt; int, geometry_msgs::msg::Pose &gt;</type>
+          <declname>tr_agents</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>sorted_ids</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, double &gt;</type>
+          <declname>agents_radii</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::Pose2D</type>
+          <declname>robot_pose</declname>
+        </param>
+        <briefdescription>
+<para>Filters agents that are in the FOV of the robot (for e.g., in simulation or mocap) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tr_agents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transformed agent poses </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sorted_ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of sorted agent IDs </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agents_radii</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent radii </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>robot_pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current robot pose </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of visible agent IDs in the FOV of the robot </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="170" column="15" bodyfile="hateb_local_planner/src/agents_class.cpp" bodystart="280" bodyend="342"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class representing agents and their states. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>parameters::ParameterHelper</label>
+        <link refid="classparameters_1_1ParameterHelper"/>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::Agents</label>
+        <link refid="classhateb__local__planner_1_1Agents"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>param_helper_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" line="85" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/agents_class.hpp" bodystart="85" bodyend="200"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1Agents_1a58a20a40cca043ad6158bb84c6742f3b" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>agent_nominal_vels_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a2739db788571639e7f93eaf83844e948" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>agent_still_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1ad8b2f9f6976f57a201854b0c7eb3b3dd" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>agent_vels_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a969c12243d50fc6d770a081ab4ec326a" prot="public" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>Agents</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a2390156dbb5be300a417acaef94f50bc" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>agents_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1af5a244d07b9be46ff9fa88388e821f94" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>agents_info_pub_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1ad9710df28f34920a049ac08f0dd0ae96" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>agents_states_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a6a91df653760c0f5938c236d62c475f2" prot="public" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>agentState</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a792d2cfb8e7ca342b9146730de7c5438" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1abc9cb7e14a8a1ad313106fd5fb49b0a3" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>costmap_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1aaab29138ac693b4c37b4646d597fe5ad" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>costmap_ros_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1ab59f9bf9db870900ffbeaeec0913a81b" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>filterVisibleAgents</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a654d82dcbcdd1395894a65e05b924326" prot="public" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>getAgents</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a530b6f69a77c3ed7ec3568338217554d" prot="public" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>getNominalVels</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1ab5711d97468ae028798e06c4a313dc3b" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>inflation_radius_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1ae8f04b33ee6c58c70882c03ab917228d" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>initialized_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1ae56197f4b983b0622d2b680762492033" prot="public" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>isAgentStuck</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a92d7b4605a02a25b253f01c8047a1b68" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>map_frame_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a06ef2116d40d612479c8b6b9ed8c6b0c" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>node_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1ab5acc47f6498920b7ec9085acdbff912" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>ns_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a79c37fe0b2b727cbffae8e67f045c369" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>param_helper_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a97a44f1de0e8baf4878349fe4c276dc2" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>planning_mode_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1afc666a3e5a9fee33e7702eec9ed9ac44" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>prev_agents_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1abbb6f0f00bcaacb03166f91f354b361d" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>prev_agents_states_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a369325fbf7f769ee9c64e4f569e0332f" prot="public" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>resetAgents</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a119c76366e838a099eeb5abbd29f93ec" prot="public" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>resetStuckAgent</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a9fdfdd9c850c30d3e3ac83c39e134120" prot="public" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>setState</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a5f0d5f2bbab7a6762c8a42d7e97d28aa" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>stuck_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a027a6507f4ab7c06c106dadccece011c" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>stuck_agent_id_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1ae1307edfe061fd1b7e89177b42cf6ff2" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>tf_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a686e924d6603e83fda00fe87889dc2ca" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>tracked_agents_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a43e6a1b3ea7bbe60cf74a66802509a98" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>tracked_agents_sub_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a6ef179ab3d73cf471d8c327ee10c66b6" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>tracked_agents_sub_topic_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1ac34148646aacd39c630a6427f93d563c" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>trackedAgentsCB</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1ac25e8dbd09f94b36a050518ad74f556d" prot="private" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>visible_agent_ids_</name></member>
+      <member refid="classhateb__local__planner_1_1Agents_1a77e5e8586f64fa2d71c446b6511500d5" prot="public" virt="non-virtual"><scope>hateb_local_planner::Agents</scope><name>~Agents</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance" kind="struct" language="C++" prot="public">
+    <compoundname>hateb_local_planner::HATebConfig::GoalTolerance</compoundname>
+    <includes refid="hateb__config_8hpp" local="no">hateb_config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance_1a29ad35bee6d79661681cd90bbdb771a4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::GoalTolerance::yaw_goal_tolerance</definition>
+        <argsstring></argsstring>
+        <name>yaw_goal_tolerance</name>
+        <briefdescription>
+<para>Allowed final orientation error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="161" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance_1a02265fb691f79a74c7b22e0500b78406" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::GoalTolerance::xy_goal_tolerance</definition>
+        <argsstring></argsstring>
+        <name>xy_goal_tolerance</name>
+        <briefdescription>
+<para>Allowed final euclidean distance to the goal position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="162" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance_1a962382f59597834440ea1409304756aa" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::GoalTolerance::free_goal_vel</definition>
+        <argsstring></argsstring>
+        <name>free_goal_vel</name>
+        <briefdescription>
+<para>Allow the robot&apos;s velocity to be nonzero (usally max_vel) for planning purposes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="163" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance_1ab13dfdeb274b41496cb697aac87965fc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::GoalTolerance::complete_global_plan</definition>
+        <argsstring></argsstring>
+        <name>complete_global_plan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="164" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Goal tolerance related parameters. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="160" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="160" bodyend="165"/>
+    <listofallmembers>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance_1ab13dfdeb274b41496cb697aac87965fc" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::GoalTolerance</scope><name>complete_global_plan</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance_1a962382f59597834440ea1409304756aa" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::GoalTolerance</scope><name>free_goal_vel</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance_1a02265fb691f79a74c7b22e0500b78406" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::GoalTolerance</scope><name>xy_goal_tolerance</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance_1a29ad35bee6d79661681cd90bbdb771a4" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::GoalTolerance</scope><name>yaw_goal_tolerance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

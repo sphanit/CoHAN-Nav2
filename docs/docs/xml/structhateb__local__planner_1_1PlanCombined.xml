@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhateb__local__planner_1_1PlanCombined" kind="struct" language="C++" prot="public">
+    <compoundname>hateb_local_planner::PlanCombined</compoundname>
+    <includes refid="visualization_8hpp" local="no">visualization.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhateb__local__planner_1_1PlanCombined_1a6471de07c74bfd32f42d779a847c43ec" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; geometry_msgs::msg::PoseStamped &gt;</type>
+        <definition>std::vector&lt;geometry_msgs::msg::PoseStamped&gt; hateb_local_planner::PlanCombined::plan_before</definition>
+        <argsstring></argsstring>
+        <name>plan_before</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="127" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1PlanCombined_1ad23f186a1ff0d8f609f7bbca31542a17" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; geometry_msgs::msg::PoseStamped &gt;</type>
+        <definition>std::vector&lt;geometry_msgs::msg::PoseStamped&gt; hateb_local_planner::PlanCombined::plan_to_optimize</definition>
+        <argsstring></argsstring>
+        <name>plan_to_optimize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="128" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1PlanCombined_1a89427a81c07b3b4bb37112d32c6edbaa" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; geometry_msgs::msg::PoseStamped &gt;</type>
+        <definition>std::vector&lt;geometry_msgs::msg::PoseStamped&gt; hateb_local_planner::PlanCombined::plan_after</definition>
+        <argsstring></argsstring>
+        <name>plan_after</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="129" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/visualization.hpp" line="126" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/visualization.hpp" bodystart="126" bodyend="130"/>
+    <listofallmembers>
+      <member refid="structhateb__local__planner_1_1PlanCombined_1a89427a81c07b3b4bb37112d32c6edbaa" prot="public" virt="non-virtual"><scope>hateb_local_planner::PlanCombined</scope><name>plan_after</name></member>
+      <member refid="structhateb__local__planner_1_1PlanCombined_1a6471de07c74bfd32f42d779a847c43ec" prot="public" virt="non-virtual"><scope>hateb_local_planner::PlanCombined</scope><name>plan_before</name></member>
+      <member refid="structhateb__local__planner_1_1PlanCombined_1ad23f186a1ff0d8f609f7bbca31542a17" prot="public" virt="non-virtual"><scope>hateb_local_planner::PlanCombined</scope><name>plan_to_optimize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

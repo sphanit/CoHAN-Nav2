@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classPointShape" kind="class" language="C++" prot="public">
+    <compoundname>PointShape</compoundname>
+    <includes refid="footprint__model_8h" local="no">footprint_model.h</includes>
+    <briefdescription>
+<para>Class that defines a point-robot. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Instead of using a CircularFootprint this class might be utitilzed and the robot/human radius can be added to the mininum distance parameter. This avoids a subtraction of zero each time a distance is calculated. </para>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="123" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

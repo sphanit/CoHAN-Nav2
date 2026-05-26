@@ -1,0 +1,662 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kind="struct" language="C++" prot="public">
+    <compoundname>hateb_local_planner::HATebConfig::Optimization</compoundname>
+    <includes refid="hateb__config_8hpp" local="no">hateb_config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6a5cac0586c8ce97b237d28c7f0087b4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hateb_local_planner::HATebConfig::Optimization::no_inner_iterations</definition>
+        <argsstring></argsstring>
+        <name>no_inner_iterations</name>
+        <briefdescription>
+<para>Number of solver iterations called in each outerloop iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="194" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1ac9330bc6e7cab4cc01e4a1ee4fa286ae" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hateb_local_planner::HATebConfig::Optimization::no_outer_iterations</definition>
+        <argsstring></argsstring>
+        <name>no_outer_iterations</name>
+        <briefdescription>
+<para>Each outerloop iteration automatically resizes the trajectory and invokes the internal optimizer with no_inner_iterations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="195" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1afde3db5ae77195114dd7308306afb215" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Optimization::optimization_activate</definition>
+        <argsstring></argsstring>
+        <name>optimization_activate</name>
+        <briefdescription>
+<para>Activate the optimization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="197" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a8d05b31717602445dd9201d38b5d5c6e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Optimization::optimization_verbose</definition>
+        <argsstring></argsstring>
+        <name>optimization_verbose</name>
+        <briefdescription>
+<para>Print verbose information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="198" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::penalty_epsilon</definition>
+        <argsstring></argsstring>
+        <name>penalty_epsilon</name>
+        <briefdescription>
+<para>Add a small safety margin to penalty functions for hard-constraint approximations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="200" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1adb150a3fea356d2aac88f302444163c5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::time_penalty_epsilon</definition>
+        <argsstring></argsstring>
+        <name>time_penalty_epsilon</name>
+        <briefdescription>
+<para>Time safety margin for penalty functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="201" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a1ce9b1b42de055ac45a8615a2a13e3c1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Optimization::cap_optimaltime_penalty</definition>
+        <argsstring></argsstring>
+        <name>cap_optimaltime_penalty</name>
+        <briefdescription>
+<para>Whether to cap the optimal time penalty. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="202" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a36f4678b6c37d995ca66c1a3202fb760" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_max_vel_x</definition>
+        <argsstring></argsstring>
+        <name>weight_max_vel_x</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying the maximum allowed translational velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="203" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a52dd121fdd8ae3f337d9d33315019218" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_max_vel_y</definition>
+        <argsstring></argsstring>
+        <name>weight_max_vel_y</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying the maximum allowed strafing velocity (in use only for holonomic robots) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="204" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1acca9520ec0fc55eb3847bc09493a6da0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_max_vel_theta</definition>
+        <argsstring></argsstring>
+        <name>weight_max_vel_theta</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying the maximum allowed angular velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="205" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a06fcdeb6b8bcea4ac93858648f5d3f61" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_acc_lim_x</definition>
+        <argsstring></argsstring>
+        <name>weight_acc_lim_x</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying the maximum allowed translational acceleration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="206" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a3c204045d039120a61531e309bfda0dc" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_acc_lim_y</definition>
+        <argsstring></argsstring>
+        <name>weight_acc_lim_y</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying the maximum allowed strafing acceleration (in use only for holonomic robots) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="207" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1ab280c4f31e89908380c7f14db0a90510" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_acc_lim_theta</definition>
+        <argsstring></argsstring>
+        <name>weight_acc_lim_theta</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying the maximum allowed angular acceleration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="208" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1aef6aa45b1fc0315827dbcc61482486fd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_kinematics_nh</definition>
+        <argsstring></argsstring>
+        <name>weight_kinematics_nh</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying the non-holonomic kinematics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="209" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1abfbfc192d0f6f87da37cee83cc893bbc" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_kinematics_forward_drive</definition>
+        <argsstring></argsstring>
+        <name>weight_kinematics_forward_drive</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for forcing the robot to choose only forward directions (positive transl. velocities, only diffdrive robot) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="210" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1ac98e28dd981b7ad233fda24320da1126" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_kinematics_turning_radius</definition>
+        <argsstring></argsstring>
+        <name>weight_kinematics_turning_radius</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for enforcing a minimum turning radius (carlike robots) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="211" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a440f6cf4aa2cd14b4c1d4a42391d94a4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_optimaltime</definition>
+        <argsstring></argsstring>
+        <name>weight_optimaltime</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for contracting the trajectory w.r.t. transition time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="212" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1af9cad343716a9aff284d5b941d51d038" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_shortest_path</definition>
+        <argsstring></argsstring>
+        <name>weight_shortest_path</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for contracting the trajectory w.r.t. path length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="213" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a4875c5da76c222ac9a46339e429628d1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_obstacle</definition>
+        <argsstring></argsstring>
+        <name>weight_obstacle</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying a minimum separation from obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="214" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a566ed08b915ffebbc74bdbdad4e2b1c3" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_inflation</definition>
+        <argsstring></argsstring>
+        <name>weight_inflation</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for the inflation penalty (should be small) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="215" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a4c0800059f5eb0d345cc9c11d1f4108f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_dynamic_obstacle</definition>
+        <argsstring></argsstring>
+        <name>weight_dynamic_obstacle</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying a minimum separation from dynamic obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="216" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1add787c741d0fd629ef5f06685ff2a3b0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_dynamic_obstacle_inflation</definition>
+        <argsstring></argsstring>
+        <name>weight_dynamic_obstacle_inflation</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for the inflation penalty of dynamic obstacles (should be small) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="217" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a97382544660b70aa74ac09d6f51c302c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_viapoint</definition>
+        <argsstring></argsstring>
+        <name>weight_viapoint</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for minimizing the distance to via-points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="218" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a558f19e92fadd1fd85cc426a114bbaae" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_prefer_rotdir</definition>
+        <argsstring></argsstring>
+        <name>weight_prefer_rotdir</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for preferring a specific turning direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="219" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a2cfe983868f33a24d1c50404cf3333b7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_adapt_factor</definition>
+        <argsstring></argsstring>
+        <name>weight_adapt_factor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Some special weights (currently &apos;weight_obstacle&apos;) are repeatedly scaled by this factor in each outer TEB iteration (weight_new = weight_old*factor); Increasing weights iteratively instead of setting a huge value a-priori leads to better numerical conditions of the underlying optimization problem. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="220" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a82801bb44af7ba1b51c7a3e00b2a1657" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::obstacle_cost_exponent</definition>
+        <argsstring></argsstring>
+        <name>obstacle_cost_exponent</name>
+        <briefdescription>
+<para>Exponent for nonlinear obstacle cost (cost = linear_cost * obstacle_cost_exponent). Set to 1 to disable nonlinear cost (default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="222" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a8ae16bab161495cd98fed2c26f5e49dc" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_max_agent_vel_x</definition>
+        <argsstring></argsstring>
+        <name>weight_max_agent_vel_x</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying maximum agent translational velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="223" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a0bc2ed7214441acbc1c8ce14f6463a72" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_max_agent_vel_y</definition>
+        <argsstring></argsstring>
+        <name>weight_max_agent_vel_y</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying maximum agent straffing velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="224" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1aaf5a49cd7739cd409d5d0a9b112744b0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_nominal_agent_vel_x</definition>
+        <argsstring></argsstring>
+        <name>weight_nominal_agent_vel_x</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for maintaining nominal agent velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="225" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1ac90cd08baf692358264c515961df6906" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_max_agent_vel_theta</definition>
+        <argsstring></argsstring>
+        <name>weight_max_agent_vel_theta</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying maximum agent angular velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="226" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a3ac5e586e0515a109b1ccccbc38a6c75" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_agent_acc_lim_x</definition>
+        <argsstring></argsstring>
+        <name>weight_agent_acc_lim_x</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying agent translational acceleration limits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="227" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1ae8b5569329ce71d676f48cc6e5213ef3" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_agent_acc_lim_y</definition>
+        <argsstring></argsstring>
+        <name>weight_agent_acc_lim_y</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying agent straffing acceleration limits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="228" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a36643b4958a3ddb32a8e5047d568025c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_agent_acc_lim_theta</definition>
+        <argsstring></argsstring>
+        <name>weight_agent_acc_lim_theta</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for satisfying agent angular acceleration limits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="229" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a86763f1ee9b18631537203faec89b0ca" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_agent_optimaltime</definition>
+        <argsstring></argsstring>
+        <name>weight_agent_optimaltime</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for agent trajectory transition time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="230" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a8234386135834d17a08d1dbb8aec1cb6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_agent_viapoint</definition>
+        <argsstring></argsstring>
+        <name>weight_agent_viapoint</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for agent via-points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="231" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1ac14c20faf1c0d126066e19f2c1e241d4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_invisible_human</definition>
+        <argsstring></argsstring>
+        <name>weight_invisible_human</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for invisible human penalties. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="232" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a25d00a8297ce2d703e0e263b862cd121" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_agent_robot_safety</definition>
+        <argsstring></argsstring>
+        <name>weight_agent_robot_safety</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for agent-robot safety constraints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="233" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a7c78f05a7d2b5b57d9e7a151e61f89df" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_agent_agent_safety</definition>
+        <argsstring></argsstring>
+        <name>weight_agent_agent_safety</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for agent-agent safety constraints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="234" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1aa97c9f46727894962aa02b123afbb46e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_agent_robot_rel_vel</definition>
+        <argsstring></argsstring>
+        <name>weight_agent_robot_rel_vel</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for relative velocity constraint between agent and robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="235" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a23cf240a226e36850632f0a940ef79f2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::weight_agent_robot_visibility</definition>
+        <argsstring></argsstring>
+        <name>weight_agent_robot_visibility</name>
+        <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> weight for agent visibility to robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="236" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1aba24f01ec4a9ae6e8ce0e2e3a689314d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Optimization::disable_warm_start</definition>
+        <argsstring></argsstring>
+        <name>disable_warm_start</name>
+        <briefdescription>
+<para>If true, disables warm start in optimization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="237" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1af6e2e762e8685ff5a0fcdb750343f9b6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Optimization::disable_rapid_omega_chage</definition>
+        <argsstring></argsstring>
+        <name>disable_rapid_omega_chage</name>
+        <briefdescription>
+<para>If true, prevents rapid changes in angular velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="238" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a3cd875f8cd2441386426eca95357387e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Optimization::omega_chage_time_seperation</definition>
+        <argsstring></argsstring>
+        <name>omega_chage_time_seperation</name>
+        <briefdescription>
+<para>Minimum time separation for angular velocity changes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="239" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization" kindref="compound">Optimization</ref> related parameters. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="193" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="193" bodyend="240"/>
+    <listofallmembers>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a1ce9b1b42de055ac45a8615a2a13e3c1" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>cap_optimaltime_penalty</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1af6e2e762e8685ff5a0fcdb750343f9b6" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>disable_rapid_omega_chage</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1aba24f01ec4a9ae6e8ce0e2e3a689314d" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>disable_warm_start</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6a5cac0586c8ce97b237d28c7f0087b4" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>no_inner_iterations</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1ac9330bc6e7cab4cc01e4a1ee4fa286ae" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>no_outer_iterations</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a82801bb44af7ba1b51c7a3e00b2a1657" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>obstacle_cost_exponent</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a3cd875f8cd2441386426eca95357387e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>omega_chage_time_seperation</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1afde3db5ae77195114dd7308306afb215" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>optimization_activate</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a8d05b31717602445dd9201d38b5d5c6e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>optimization_verbose</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a6884f612df14f6f652ca3c7fc2d9b40c" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>penalty_epsilon</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1adb150a3fea356d2aac88f302444163c5" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>time_penalty_epsilon</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1ab280c4f31e89908380c7f14db0a90510" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_acc_lim_theta</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a06fcdeb6b8bcea4ac93858648f5d3f61" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_acc_lim_x</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a3c204045d039120a61531e309bfda0dc" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_acc_lim_y</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a2cfe983868f33a24d1c50404cf3333b7" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_adapt_factor</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a36643b4958a3ddb32a8e5047d568025c" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_agent_acc_lim_theta</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a3ac5e586e0515a109b1ccccbc38a6c75" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_agent_acc_lim_x</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1ae8b5569329ce71d676f48cc6e5213ef3" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_agent_acc_lim_y</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a7c78f05a7d2b5b57d9e7a151e61f89df" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_agent_agent_safety</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a86763f1ee9b18631537203faec89b0ca" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_agent_optimaltime</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1aa97c9f46727894962aa02b123afbb46e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_agent_robot_rel_vel</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a25d00a8297ce2d703e0e263b862cd121" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_agent_robot_safety</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a23cf240a226e36850632f0a940ef79f2" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_agent_robot_visibility</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a8234386135834d17a08d1dbb8aec1cb6" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_agent_viapoint</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a4c0800059f5eb0d345cc9c11d1f4108f" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_dynamic_obstacle</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1add787c741d0fd629ef5f06685ff2a3b0" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_dynamic_obstacle_inflation</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a566ed08b915ffebbc74bdbdad4e2b1c3" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_inflation</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1ac14c20faf1c0d126066e19f2c1e241d4" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_invisible_human</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1abfbfc192d0f6f87da37cee83cc893bbc" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_kinematics_forward_drive</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1aef6aa45b1fc0315827dbcc61482486fd" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_kinematics_nh</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1ac98e28dd981b7ad233fda24320da1126" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_kinematics_turning_radius</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1ac90cd08baf692358264c515961df6906" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_max_agent_vel_theta</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a8ae16bab161495cd98fed2c26f5e49dc" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_max_agent_vel_x</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a0bc2ed7214441acbc1c8ce14f6463a72" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_max_agent_vel_y</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1acca9520ec0fc55eb3847bc09493a6da0" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_max_vel_theta</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a36f4678b6c37d995ca66c1a3202fb760" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_max_vel_x</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a52dd121fdd8ae3f337d9d33315019218" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_max_vel_y</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1aaf5a49cd7739cd409d5d0a9b112744b0" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_nominal_agent_vel_x</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a4875c5da76c222ac9a46339e429628d1" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_obstacle</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a440f6cf4aa2cd14b4c1d4a42391d94a4" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_optimaltime</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a558f19e92fadd1fd85cc426a114bbaae" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_prefer_rotdir</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1af9cad343716a9aff284d5b941d51d038" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_shortest_path</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Optimization_1a97382544660b70aa74ac09d6f51c302c" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Optimization</scope><name>weight_viapoint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

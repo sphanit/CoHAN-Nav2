@@ -1,0 +1,14 @@
+.. _exhale_define_hateb__local__planner_2include_2hateb__local__planner_2misc_8h_1a63e45eaf93729d5707b89a5340d68334:
+
+Define SMALL_NUM
+================
+
+- Defined in :ref:`file_hateb_local_planner_include_hateb_local_planner_misc.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SMALL_NUM
+   :project: CoHAN-Nav2

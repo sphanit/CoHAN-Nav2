@@ -1,0 +1,571 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacecostmap__converter" kind="namespace" language="C++">
+    <compoundname>costmap_converter</compoundname>
+    <innerclass refid="classcostmap__converter_1_1BaseCostmapToPolygons" prot="public">costmap_converter::BaseCostmapToPolygons</innerclass>
+    <innerclass refid="classcostmap__converter_1_1BaseCostmapToDynamicObstacles" prot="public">costmap_converter::BaseCostmapToDynamicObstacles</innerclass>
+    <innerclass refid="classcostmap__converter_1_1CostmapToDynamicObstacles" prot="public">costmap_converter::CostmapToDynamicObstacles</innerclass>
+    <innerclass refid="classcostmap__converter_1_1CostmapToLinesDBSMCCH" prot="public">costmap_converter::CostmapToLinesDBSMCCH</innerclass>
+    <innerclass refid="classcostmap__converter_1_1CostmapToLinesDBSRANSAC" prot="public">costmap_converter::CostmapToLinesDBSRANSAC</innerclass>
+    <innerclass refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH" prot="public">costmap_converter::CostmapToPolygonsDBSMCCH</innerclass>
+    <innerclass refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull" prot="public">costmap_converter::CostmapToPolygonsDBSConcaveHull</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacecostmap__converter_1a360c95f0cb141a3f43667649add6d4aa" prot="public" static="no">
+        <type>costmap_converter_msgs::msg::ObstacleArrayMsg::SharedPtr</type>
+        <definition>typedef costmap_converter_msgs::msg::ObstacleArrayMsg::SharedPtr costmap_converter::ObstacleArrayPtr</definition>
+        <argsstring></argsstring>
+        <name>ObstacleArrayPtr</name>
+        <briefdescription>
+<para>Typedef for a shared dynamic obstacle container. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="57" column="66" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecostmap__converter_1a3e9948c22dfceca87d2a7cc59c62fc97" prot="public" static="no">
+        <type>costmap_converter_msgs::msg::ObstacleArrayMsg::ConstSharedPtr</type>
+        <definition>typedef costmap_converter_msgs::msg::ObstacleArrayMsg::ConstSharedPtr costmap_converter::ObstacleArrayConstPtr</definition>
+        <argsstring></argsstring>
+        <name>ObstacleArrayConstPtr</name>
+        <briefdescription>
+<para>Typedef for a shared dynamic obstacle container (read-only access) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="59" column="71" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecostmap__converter_1a031147f2cb53ae68f7647b96868516dd" prot="public" static="no">
+        <type>std::shared_ptr&lt; std::vector&lt; geometry_msgs::msg::Polygon &gt; &gt;</type>
+        <definition>typedef std::shared_ptr&lt;std::vector&lt;geometry_msgs::msg::Polygon&gt; &gt; costmap_converter::PolygonContainerPtr</definition>
+        <argsstring></argsstring>
+        <name>PolygonContainerPtr</name>
+        <briefdescription>
+<para>Typedef for a shared polygon container. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="62" column="25" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecostmap__converter_1a6063889d67ef296ddfd08f08d5df4a5b" prot="public" static="no">
+        <type>std::shared_ptr&lt; const std::vector&lt; geometry_msgs::msg::Polygon &gt; &gt;</type>
+        <definition>typedef std::shared_ptr&lt;const std::vector&lt;geometry_msgs::msg::Polygon&gt; &gt; costmap_converter::PolygonContainerConstPtr</definition>
+        <argsstring></argsstring>
+        <name>PolygonContainerConstPtr</name>
+        <briefdescription>
+<para>Typedef for a shared polygon container (read-only access) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="64" column="25" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecostmap__converter_1af107c3275b40704aa10f684ffc1ed456" prot="public" static="no">
+        <type><ref refid="classcostmap__converter_1_1CostmapToLinesDBSMCCH" kindref="compound">CostmapToLinesDBSMCCH</ref></type>
+        <definition>typedef CostmapToLinesDBSMCCH costmap_converter::CL</definition>
+        <argsstring></argsstring>
+        <name>CL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_to_lines_convex_hull.cpp" line="136" column="31" bodyfile="costmap_converter/costmap_converter/src/costmap_to_lines_convex_hull.cpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacecostmap__converter_1aa7f937a0031115f2fcbc1434255cb58e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Point</type>
+          </param>
+          <param>
+            <type>typename LinePoint</type>
+          </param>
+        </templateparamlist>
+        <type>double</type>
+        <definition>double costmap_converter::computeDistanceToLine</definition>
+        <argsstring>(const Point &amp;point, const LinePoint &amp;line_pt1, const LinePoint &amp;line_pt2)</argsstring>
+        <name>computeDistanceToLine</name>
+        <param>
+          <type>const Point &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>const LinePoint &amp;</type>
+          <declname>line_pt1</declname>
+        </param>
+        <param>
+          <type>const LinePoint &amp;</type>
+          <declname>line_pt2</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the distance between a point and a straight line (with infinite length) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point type defining the reference point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_pt1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point as part of the line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_pt2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point as part of the line </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic point type that should provide x and y member fiels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LinePoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic point type that should provide x and y member fiels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(minimum) euclidean distance to the line segment </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/misc.h" line="58" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/misc.h" bodystart="58" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecostmap__converter_1a97f2d0a8596465fbf7fdc0ade9875e59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Point</type>
+          </param>
+          <param>
+            <type>typename LinePoint</type>
+          </param>
+        </templateparamlist>
+        <type>double</type>
+        <definition>double costmap_converter::computeSquaredDistanceToLineSegment</definition>
+        <argsstring>(const Point &amp;point, const LinePoint &amp;line_start, const LinePoint &amp;line_end, bool *is_inbetween=NULL)</argsstring>
+        <name>computeSquaredDistanceToLineSegment</name>
+        <param>
+          <type>const Point &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>const LinePoint &amp;</type>
+          <declname>line_start</declname>
+        </param>
+        <param>
+          <type>const LinePoint &amp;</type>
+          <declname>line_end</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>is_inbetween</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Calculate the squared distance between a point and a straight line segment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point type defining the reference point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point type defining the start of the line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point type defining the end of the line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">is_inbetween</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>write <computeroutput>true</computeroutput>, if the point is placed inbetween start and end [optional] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic point type that should provide x and y member fiels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LinePoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic point type that should provide x and y member fiels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(minimum) squared euclidean distance to the line segment </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/misc.h" line="83" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/misc.h" bodystart="83" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecostmap__converter_1a31e7f61c3d30a61c501b4caddabaa98f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Point</type>
+          </param>
+          <param>
+            <type>typename LinePoint</type>
+          </param>
+        </templateparamlist>
+        <type>double</type>
+        <definition>double costmap_converter::computeDistanceToLineSegment</definition>
+        <argsstring>(const Point &amp;point, const LinePoint &amp;line_start, const LinePoint &amp;line_end, bool *is_inbetween=NULL)</argsstring>
+        <name>computeDistanceToLineSegment</name>
+        <param>
+          <type>const Point &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>const LinePoint &amp;</type>
+          <declname>line_start</declname>
+        </param>
+        <param>
+          <type>const LinePoint &amp;</type>
+          <declname>line_end</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>is_inbetween</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Calculate the distance between a point and a straight line segment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point type defining the reference point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point type defining the start of the line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point type defining the end of the line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">is_inbetween</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>write <computeroutput>true</computeroutput>, if the point is placed inbetween start and end [optional] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic point type that should provide x and y member fiels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LinePoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic point type that should provide x and y member fiels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(minimum) euclidean distance to the line segment </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/misc.h" line="118" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/misc.h" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecostmap__converter_1ac793152f43e658215c6ef6c5e2013e0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Point1</type>
+          </param>
+          <param>
+            <type>typename Point2</type>
+          </param>
+        </templateparamlist>
+        <type>double</type>
+        <definition>double costmap_converter::norm2d</definition>
+        <argsstring>(const Point1 &amp;pt1, const Point2 &amp;pt2)</argsstring>
+        <name>norm2d</name>
+        <param>
+          <type>const Point1 &amp;</type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type>const Point2 &amp;</type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the distance between two 2d points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pt1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pt2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Point1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic point type that should provide x and y member fiels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Point2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic point type that should provide x and y member fiels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>euclidean distance to the line segment </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/misc.h" line="133" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/misc.h" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecostmap__converter_1aaf6fe78d452b1f93e78e8e7b0056baa1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Point1</type>
+          </param>
+          <param>
+            <type>typename Point2</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool costmap_converter::isApprox2d</definition>
+        <argsstring>(const Point1 &amp;pt1, const Point2 &amp;pt2, double threshold)</argsstring>
+        <name>isApprox2d</name>
+        <param>
+          <type>const Point1 &amp;</type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type>const Point2 &amp;</type>
+          <declname>pt2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+<para>Check if two points are approximately defining the same one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pt1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pt2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic 2D point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>define the minimum threshold |pt1.x-pt2.y| &lt; tresh &amp;&amp; |pt1.y-pt2.y| &lt; tresh </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Point1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic point type that should provide x and y member fiels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Point2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic point type that should provide x and y member fiels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput>, if similar, <computeroutput>false</computeroutput> otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/misc.h" line="148" column="13" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/misc.h" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecostmap__converter_1a84d2eaca0ba390fd629f57a9c7a5ef95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool costmap_converter::sort_keypoint_x</definition>
+        <argsstring>(const std::size_t &amp;i, const std::size_t &amp;j, const std::vector&lt; CL::KeyPoint &gt; &amp;cluster)</argsstring>
+        <name>sort_keypoint_x</name>
+        <param>
+          <type>const std::size_t &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>const std::size_t &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" kindref="compound">CL::KeyPoint</ref> &gt; &amp;</type>
+          <declname>cluster</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_to_lines_convex_hull.cpp" line="137" column="6" bodyfile="costmap_converter/costmap_converter/src/costmap_to_lines_convex_hull.cpp" bodystart="137" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecostmap__converter_1a50c9e530433a49953100977df2aa2e20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool costmap_converter::sort_keypoint_y</definition>
+        <argsstring>(const std::size_t &amp;i, const std::size_t &amp;j, const std::vector&lt; CL::KeyPoint &gt; &amp;cluster)</argsstring>
+        <name>sort_keypoint_y</name>
+        <param>
+          <type>const std::size_t &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>const std::size_t &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" kindref="compound">CL::KeyPoint</ref> &gt; &amp;</type>
+          <declname>cluster</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_to_lines_convex_hull.cpp" line="139" column="6" bodyfile="costmap_converter/costmap_converter/src/costmap_to_lines_convex_hull.cpp" bodystart="139" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecostmap__converter_1a5db684a6d5381bd49c70406f17f12e25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool costmap_converter::isXCoordinateSmaller</definition>
+        <argsstring>(const CostmapToPolygonsDBSMCCH::KeyPoint &amp;p1, const CostmapToPolygonsDBSMCCH::KeyPoint &amp;p2)</argsstring>
+        <name>isXCoordinateSmaller</name>
+        <param>
+          <type>const <ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" kindref="compound">CostmapToPolygonsDBSMCCH::KeyPoint</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" kindref="compound">CostmapToPolygonsDBSMCCH::KeyPoint</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" line="322" column="6" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons.cpp" bodystart="322" bodyend="325"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="53" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull" kind="class" language="C++" prot="public">
+    <compoundname>costmap_converter::CostmapToPolygonsDBSConcaveHull</compoundname>
+    <basecompoundref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH" prot="public" virt="non-virtual">costmap_converter::CostmapToPolygonsDBSMCCH</basecompoundref>
+    <includes refid="costmap__to__polygons__concave_8h" local="no">costmap_to_polygons_concave.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1a76f056d429e3e49a2cbe73961c5fd135" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double costmap_converter::CostmapToPolygonsDBSConcaveHull::concave_hull_depth_</definition>
+        <argsstring></argsstring>
+        <name>concave_hull_depth_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" line="114" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1ad61fefa1264d1422b874ead6f329698f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>costmap_converter::CostmapToPolygonsDBSConcaveHull::CostmapToPolygonsDBSConcaveHull</definition>
+        <argsstring>()</argsstring>
+        <name>CostmapToPolygonsDBSConcaveHull</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" line="69" column="5" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons_concave.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1a20e67f48531689658beb0fb2e769c775" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>costmap_converter::CostmapToPolygonsDBSConcaveHull::~CostmapToPolygonsDBSConcaveHull</definition>
+        <argsstring>()</argsstring>
+        <name>~CostmapToPolygonsDBSConcaveHull</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" line="74" column="13" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons_concave.cpp" bodystart="53" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1ae207ee8646c2ce596f89424f3d85d238" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSConcaveHull::initialize</definition>
+        <argsstring>(rclcpp::Node::SharedPtr nh)</argsstring>
+        <name>initialize</name>
+        <reimplements refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a94c56aed99894b24f21d066bd2f3d8df">initialize</reimplements>
+        <param>
+          <type>rclcpp::Node::SharedPtr</type>
+          <declname>nh</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nodehandle that defines the namespace for parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" line="80" column="18" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons_concave.cpp" bodystart="59" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1ad63be1baa7d62a7e72bd4da346574f28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSConcaveHull::compute</definition>
+        <argsstring>()</argsstring>
+        <name>compute</name>
+        <reimplements refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1ae063f12674d979b18e63d92c27deac33">compute</reimplements>
+        <briefdescription>
+<para>This method performs the actual work (conversion of the costmap to polygons) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" line="86" column="18" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons_concave.cpp" bodystart="87" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1a55904b2921ada033bd49126da16ebf1a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSConcaveHull::concaveHull</definition>
+        <argsstring>(std::vector&lt; KeyPoint &gt; &amp;cluster, double depth, geometry_msgs::msg::Polygon &amp;polygon)</argsstring>
+        <name>concaveHull</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" kindref="compound">KeyPoint</ref> &gt; &amp;</type>
+          <declname>cluster</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::Polygon &amp;</type>
+          <declname>polygon</declname>
+        </param>
+        <briefdescription>
+<para>Compute the concave hull for a single cluster. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>The last point is the same as the first one </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cluster</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of keypoints that should be converted into a polygon </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Smaller depth: sharper surface, depth -&gt; high value: convex hull </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">polygon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the resulting convex polygon </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" line="99" column="10" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons_concave.cpp" bodystart="118" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1abb473684fe45a0ac18403844a83b23ca" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void costmap_converter::CostmapToPolygonsDBSConcaveHull::concaveHullClusterCut</definition>
+        <argsstring>(std::vector&lt; KeyPoint &gt; &amp;cluster, double depth, geometry_msgs::msg::Polygon &amp;polygon)</argsstring>
+        <name>concaveHullClusterCut</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint" kindref="compound">KeyPoint</ref> &gt; &amp;</type>
+          <declname>cluster</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::Polygon &amp;</type>
+          <declname>polygon</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" line="101" column="10" bodyfile="costmap_converter/costmap_converter/src/costmap_to_polygons_concave.cpp" bodystart="162" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1a0c7f958e615b639dc088b09f02f229be" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename PointLine</type>
+          </param>
+          <param>
+            <type>typename PointCluster</type>
+          </param>
+          <param>
+            <type>typename PointHull</type>
+          </param>
+        </templateparamlist>
+        <type>std::size_t</type>
+        <definition>std::size_t costmap_converter::CostmapToPolygonsDBSConcaveHull::findNearestInnerPoint</definition>
+        <argsstring>(PointLine line_start, PointLine line_end, const std::vector&lt; PointCluster &gt; &amp;cluster, const std::vector&lt; PointHull &gt; &amp;hull, bool *found)</argsstring>
+        <name>findNearestInnerPoint</name>
+        <param>
+          <type>PointLine</type>
+          <declname>line_start</declname>
+        </param>
+        <param>
+          <type>PointLine</type>
+          <declname>line_end</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; PointCluster &gt; &amp;</type>
+          <declname>cluster</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; PointHull &gt; &amp;</type>
+          <declname>hull</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>found</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" line="104" column="17" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" bodystart="134" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1a32a14e98f068a4f18314c58f1f9102ef" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Point1</type>
+          </param>
+          <param>
+            <type>typename Point2</type>
+          </param>
+          <param>
+            <type>typename Point3</type>
+          </param>
+          <param>
+            <type>typename Point4</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool costmap_converter::CostmapToPolygonsDBSConcaveHull::checkLineIntersection</definition>
+        <argsstring>(const Point1 &amp;line1_start, const Point2 &amp;line1_end, const Point3 &amp;line2_start, const Point4 &amp;line2_end)</argsstring>
+        <name>checkLineIntersection</name>
+        <param>
+          <type>const Point1 &amp;</type>
+          <declname>line1_start</declname>
+        </param>
+        <param>
+          <type>const Point2 &amp;</type>
+          <declname>line1_end</declname>
+        </param>
+        <param>
+          <type>const Point3 &amp;</type>
+          <declname>line2_start</declname>
+        </param>
+        <param>
+          <type>const Point4 &amp;</type>
+          <declname>line2_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" line="108" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" bodystart="168" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1a74bb8828ef0b5a28baa07d6affaa0369" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename PointHull</type>
+          </param>
+          <param>
+            <type>typename Point1</type>
+          </param>
+          <param>
+            <type>typename Point2</type>
+          </param>
+          <param>
+            <type>typename Point3</type>
+          </param>
+          <param>
+            <type>typename Point4</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool costmap_converter::CostmapToPolygonsDBSConcaveHull::checkLineIntersection</definition>
+        <argsstring>(const std::vector&lt; PointHull &gt; &amp;hull, const Point1 &amp;current_line_start, const Point2 &amp;current_line_end, const Point3 &amp;test_line_start, const Point4 &amp;test_line_end)</argsstring>
+        <name>checkLineIntersection</name>
+        <param>
+          <type>const std::vector&lt; PointHull &gt; &amp;</type>
+          <declname>hull</declname>
+        </param>
+        <param>
+          <type>const Point1 &amp;</type>
+          <declname>current_line_start</declname>
+        </param>
+        <param>
+          <type>const Point2 &amp;</type>
+          <declname>current_line_end</declname>
+        </param>
+        <param>
+          <type>const Point3 &amp;</type>
+          <declname>test_line_start</declname>
+        </param>
+        <param>
+          <type>const Point4 &amp;</type>
+          <declname>test_line_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" line="111" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" bodystart="181" bodyend="197"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class converts the costmap_2d into a set of non-convex polygons (and points) </para>
+    </briefdescription>
+    <detaileddescription>
+<para>All single points that do not define a cluster (noise) are also treated as polygon (represented as a single vertex) <xrefsect id="todo_1_todo000004"><xreftitle>Todo</xreftitle><xrefdescription><para>change the class hierarchy to a clearer and more generic one </para>
+</xrefdescription></xrefsect></para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>costmap_converter::BaseCostmapToPolygons</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToPolygons"/>
+      </node>
+      <node id="2">
+        <label>costmap_converter::CostmapToPolygonsDBSMCCH</label>
+        <link refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>costmap_converter::CostmapToPolygonsDBSConcaveHull</label>
+        <link refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>costmap_converter::CostmapToPolygonsDBSMCCH::Parameters</label>
+        <link refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters"/>
+      </node>
+      <node id="3">
+        <label>costmap_converter::BaseCostmapToPolygons</label>
+        <link refid="classcostmap__converter_1_1BaseCostmapToPolygons"/>
+      </node>
+      <node id="2">
+        <label>costmap_converter::CostmapToPolygonsDBSMCCH</label>
+        <link refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>parameter_</edgelabel>
+          <edgelabel>parameter_buffered_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>costmap_converter::CostmapToPolygonsDBSConcaveHull</label>
+        <link refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" line="60" column="1" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_polygons_concave.h" bodystart="61" bodyend="130"/>
+    <listofallmembers>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a4fb264f67eb63e68e8d5183f1f0ca4ad" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>addPoint</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aed9851c00b8d93e88bb8ee79b95a23d9" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>BaseCostmapToPolygons</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1a32a14e98f068a4f18314c58f1f9102ef" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>checkLineIntersection</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1a74bb8828ef0b5a28baa07d6affaa0369" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>checkLineIntersection</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1ad63be1baa7d62a7e72bd4da346574f28" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>compute</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1a76f056d429e3e49a2cbe73961c5fd135" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>concave_hull_depth_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1a55904b2921ada033bd49126da16ebf1a" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>concaveHull</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1abb473684fe45a0ac18403844a83b23ca" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>concaveHullClusterCut</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a5e8c8e163ac3dddead2693ec59d1fa7f" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>convertPointToPolygon</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a59b986ce31bf6723a8f2a181143d8bdf" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>convexHull</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a25bede95689564c58620c8dcbe860023" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>convexHull2</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a7ddd3d9198c7ec0b2145d35ea2cfc3a8" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>costmap_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1ad61fefa1264d1422b874ead6f329698f" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>CostmapToPolygonsDBSConcaveHull</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aa221aa769dc1d82db848a47fddfe6b51" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>CostmapToPolygonsDBSMCCH</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aaeed7c6af5b0b8420f0988d6213c3f61" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>cross</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a0cd5aaaba9344ff25b5c3feb6faa534c" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>dbScan</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1a0c7f958e615b639dc088b09f02f229be" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>findNearestInnerPoint</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5c9d89e344e9592ab66fd4eae4e3c495" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>getLogger</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a568d60474400d08a40218d0674b46fed" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>getObstacles</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aa6d70bea1ba80d5ad84c221846e9ea62" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>getPolygons</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1ae207ee8646c2ce596f89424f3d85d238" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>initialize</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1ab4f8c71312e9ef9b91e51529b9efce7a" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>mutex_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a119113f3398a9829e4ca540361bb1fe2" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>need_to_terminate_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a1492bab030a0fe2236a9f531d8178b86" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>neighbor_lookup_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a9933aaeb5d7249fe8d4f466771fb677f" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>neighbor_size_x_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a71e2a22cfd9b4a35129dab677980e12b" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>neighbor_size_y_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a55d233727263d3f89d007f9fb8754744" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>neighborCellsToIndex</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1ee108afc717a47570c73dbd44e1f527" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>nh_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1adde51e27138497c972070f585485d920" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>now</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1af086dcaa5d4d7196a94552105bc9b868" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>occupied_cells_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a68009a61efee912fa6f53c88216d2a28" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>offset_x_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a40315680a42482e8a81367f802c73545" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>offset_y_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aacda867bb50b071838a331f98527559c" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>parameter_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a80a194d849ba7beb3f455fee560e5b42" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>parameter_buffered_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a16059ce6e3feee91468cafea313a309e" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>parameter_mutex_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a44c350a82dd0b45084b05701e3094caf" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>pointToNeighborCells</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aea2f70c684881627d2bd639e8cd5ce0c" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>polygons_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a30c9e455820f8193735362f325e0de60" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>regionQuery</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a5fa67041d5b91feed40135939ef871e7" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>setCostmap2D</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1ae2913087d659654c55f5869397f8e2c5" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>setOdomTopic</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a96099731e6f2906716bb3f0c5411a389" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>simplifyPolygon</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a1c8f8db20bd26360876f1b3bae2996d2" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>spin_thread_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa39c0f13e7ad5bddade4cfc86324abb3" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>spinThread</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a5f42b7263fcfdde112b09c73429e55be" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>stackedCostmapConversion</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1aa75e7eae21dbbd80523f184f9e566555" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>startWorker</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a7e5b367499223999167be752208eb59f" prot="public" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>stopWorker</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a78896f9e23abc564acb1d27cd4f38aac" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>terminate_mutex_</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a9d91a27cb2afd17d5dc2226214ccb57a" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>updateCostmap2D</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a8a09ea3e7b78271f0b9f1f7e13933479" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>updatePolygonContainer</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a947fc00b05f6ac5f478afb9ce6c67a06" prot="private" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>worker_timer_</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a98ab2ab132530d153084db2d9249b75d" prot="protected" virt="non-virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>workerCallback</name></member>
+      <member refid="classcostmap__converter_1_1BaseCostmapToPolygons_1a3bee32afc15401220df123bce1a87921" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>~BaseCostmapToPolygons</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_1a20e67f48531689658beb0fb2e769c775" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>~CostmapToPolygonsDBSConcaveHull</name></member>
+      <member refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a392a0ee3cd02afe0185853f90b539161" prot="public" virt="virtual"><scope>costmap_converter::CostmapToPolygonsDBSConcaveHull</scope><name>~CostmapToPolygonsDBSMCCH</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

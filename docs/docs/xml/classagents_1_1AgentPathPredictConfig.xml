@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classagents_1_1AgentPathPredictConfig" kind="class" language="C++" prot="public">
+    <compoundname>agents::AgentPathPredictConfig</compoundname>
+    <includes refid="agent__path__prediction__config_8hpp" local="no">agent_path_prediction_config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1ad1944db499734f0632b52d81fba868af" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::AgentPathPredictConfig::tracked_agents_sub_topic</definition>
+        <argsstring></argsstring>
+        <name>tracked_agents_sub_topic</name>
+        <briefdescription>
+<para>Topic for tracked agents subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="77" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1ae43fa38ca9299178bb3683b48482a8d7" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::AgentPathPredictConfig::external_paths_sub_topic</definition>
+        <argsstring></argsstring>
+        <name>external_paths_sub_topic</name>
+        <briefdescription>
+<para>Topic for external agent paths subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="78" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1a676666fc3f5919d0eadf452727e5e2a8" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::AgentPathPredictConfig::get_plan_srv_name</definition>
+        <argsstring></argsstring>
+        <name>get_plan_srv_name</name>
+        <briefdescription>
+<para>Service name for getting navigation plan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="79" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1a80f30f613aae0a931fbc6662b60dd389" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::AgentPathPredictConfig::predicted_goal_topic</definition>
+        <argsstring></argsstring>
+        <name>predicted_goal_topic</name>
+        <briefdescription>
+<para>Topic for predicted goal subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="80" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1af632989ea108fca84b297ea21f7c9672" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::AgentPathPredictConfig::goals_file</definition>
+        <argsstring></argsstring>
+        <name>goals_file</name>
+        <briefdescription>
+<para>File path for goals YAML file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="81" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1ae2a5908f8365fe652a1a41464b79037c" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::AgentPathPredictConfig::robot_frame_id</definition>
+        <argsstring></argsstring>
+        <name>robot_frame_id</name>
+        <briefdescription>
+<para>Frame ID for robot base coordinate frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="84" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1a14f30f8e3ec3e1945d6f5b4e309e289a" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string agents::AgentPathPredictConfig::map_frame_id</definition>
+        <argsstring></argsstring>
+        <name>map_frame_id</name>
+        <briefdescription>
+<para>Frame ID for map coordinate frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="85" column="15" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1a9b56bfce3972f3245d4724b48c91305d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::AgentPathPredictConfig::velobs_mul</definition>
+        <argsstring></argsstring>
+        <name>velobs_mul</name>
+        <briefdescription>
+<para>Velocity obstacle multiplier. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="88" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1a156ccac4b285bbb76838de4c0d23b143" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::AgentPathPredictConfig::velobs_min_rad</definition>
+        <argsstring></argsstring>
+        <name>velobs_min_rad</name>
+        <briefdescription>
+<para>Minimum radius for velocity obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="89" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1a789439ed2878f00180683a31cce62773" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::AgentPathPredictConfig::velobs_max_rad</definition>
+        <argsstring></argsstring>
+        <name>velobs_max_rad</name>
+        <briefdescription>
+<para>Maximum radius for velocity obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="90" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1a06e006f844a1e972689166f453197045" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::AgentPathPredictConfig::velobs_max_rad_time</definition>
+        <argsstring></argsstring>
+        <name>velobs_max_rad_time</name>
+        <briefdescription>
+<para>Maximum time for velocity obstacle radius calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="91" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1a9f5a6d38a038e5203da32c05101fcaa1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool agents::AgentPathPredictConfig::velobs_use_ang</definition>
+        <argsstring></argsstring>
+        <name>velobs_use_ang</name>
+        <briefdescription>
+<para>Flag to use angular velocity in velocity obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="92" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1aad95ff6c26e4532ab6ef9890a76fb2a0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::AgentPathPredictConfig::agent_dist_behind_robot</definition>
+        <argsstring></argsstring>
+        <name>agent_dist_behind_robot</name>
+        <briefdescription>
+<para>Distance behind robot for agent detection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="95" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1abbf3c8caa6a0f0445e809c423821f54c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::AgentPathPredictConfig::agent_angle_behind_robot</definition>
+        <argsstring></argsstring>
+        <name>agent_angle_behind_robot</name>
+        <briefdescription>
+<para>Angle behind robot for agent detection (radians) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="96" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1a0e830b94ed98506f93b37bb823aefd71" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int agents::AgentPathPredictConfig::default_agent_part</definition>
+        <argsstring></argsstring>
+        <name>default_agent_part</name>
+        <briefdescription>
+<para>Default body part to track for agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="97" column="7" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1a5de5d66ebdbdb64ae890132a1d2ef311" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool agents::AgentPathPredictConfig::publish_markers</definition>
+        <argsstring></argsstring>
+        <name>publish_markers</name>
+        <briefdescription>
+<para>Flag to enable marker visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="100" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classagents_1_1AgentPathPredictConfig_1abd5f3ca9f907ad7069f88908cf7aea51" prot="private" static="no" mutable="no">
+        <type><ref refid="classparameters_1_1ParameterHelper" kindref="compound">parameters::ParameterHelper</ref></type>
+        <definition>parameters::ParameterHelper agents::AgentPathPredictConfig::param_helper_</definition>
+        <argsstring></argsstring>
+        <name>param_helper_</name>
+        <briefdescription>
+<para>Parameter helper for managing ROS2 parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="152" column="31" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classagents_1_1AgentPathPredictConfig_1a97c30488669be836d0bfff953d5a186f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>agents::AgentPathPredictConfig::AgentPathPredictConfig</definition>
+        <argsstring>()=default</argsstring>
+        <name>AgentPathPredictConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="47" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPredictConfig_1a876ebc5fb41b2a10409c83906d4ca777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>agents::AgentPathPredictConfig::~AgentPathPredictConfig</definition>
+        <argsstring>()=default</argsstring>
+        <name>~AgentPathPredictConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="49" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPredictConfig_1a5d2488396ae84c471e4dc7d81bc12415" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPredictConfig::initialize</definition>
+        <argsstring>(rclcpp::Node::SharedPtr node)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>rclcpp::Node::SharedPtr</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the parameter helper for this config. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="54" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1AgentPathPredictConfig_1af3c1086b8a190eb93858748e35072570" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPredictConfig::setupParameterCallback</definition>
+        <argsstring>()</argsstring>
+        <name>setupParameterCallback</name>
+        <briefdescription>
+<para>Sets up parameter declarations and callback for parameter updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="62" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="62" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classagents_1_1AgentPathPredictConfig_1ab47fa09fc5623c92a03e07d722163fb7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void agents::AgentPathPredictConfig::bindParameters</definition>
+        <argsstring>()</argsstring>
+        <name>bindParameters</name>
+        <briefdescription>
+<para>Binds all configuration variables to parameters for auto-update. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="106" column="8" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="106" bodyend="150"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>parameters::ParameterHelper</label>
+        <link refid="classparameters_1_1ParameterHelper"/>
+      </node>
+      <node id="1">
+        <label>agents::AgentPathPredictConfig</label>
+        <link refid="classagents_1_1AgentPathPredictConfig"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>param_helper_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" line="45" column="1" bodyfile="agent_path_prediction/include/agent_path_prediction/agent_path_prediction_config.hpp" bodystart="45" bodyend="153"/>
+    <listofallmembers>
+      <member refid="classagents_1_1AgentPathPredictConfig_1abbf3c8caa6a0f0445e809c423821f54c" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>agent_angle_behind_robot</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1aad95ff6c26e4532ab6ef9890a76fb2a0" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>agent_dist_behind_robot</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a97c30488669be836d0bfff953d5a186f" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>AgentPathPredictConfig</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1ab47fa09fc5623c92a03e07d722163fb7" prot="private" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>bindParameters</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a0e830b94ed98506f93b37bb823aefd71" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>default_agent_part</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1ae43fa38ca9299178bb3683b48482a8d7" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>external_paths_sub_topic</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a676666fc3f5919d0eadf452727e5e2a8" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>get_plan_srv_name</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1af632989ea108fca84b297ea21f7c9672" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>goals_file</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a5d2488396ae84c471e4dc7d81bc12415" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>initialize</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a14f30f8e3ec3e1945d6f5b4e309e289a" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>map_frame_id</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1abd5f3ca9f907ad7069f88908cf7aea51" prot="private" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>param_helper_</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a80f30f613aae0a931fbc6662b60dd389" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>predicted_goal_topic</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a5de5d66ebdbdb64ae890132a1d2ef311" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>publish_markers</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1ae2a5908f8365fe652a1a41464b79037c" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>robot_frame_id</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1af3c1086b8a190eb93858748e35072570" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>setupParameterCallback</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1ad1944db499734f0632b52d81fba868af" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>tracked_agents_sub_topic</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a789439ed2878f00180683a31cce62773" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>velobs_max_rad</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a06e006f844a1e972689166f453197045" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>velobs_max_rad_time</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a156ccac4b285bbb76838de4c0d23b143" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>velobs_min_rad</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a9b56bfce3972f3245d4724b48c91305d" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>velobs_mul</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a9f5a6d38a038e5203da32c05101fcaa1" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>velobs_use_ang</name></member>
+      <member refid="classagents_1_1AgentPathPredictConfig_1a876ebc5fb41b2a10409c83906d4ca777" prot="public" virt="non-virtual"><scope>agents::AgentPathPredictConfig</scope><name>~AgentPathPredictConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

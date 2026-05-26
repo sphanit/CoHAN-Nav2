@@ -1,0 +1,1102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcohan__layers_1_1AgentLayer" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>cohan_layers::AgentLayer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">nav2_costmap_2d::Layer</basecompoundref>
+    <derivedcompoundref refid="classcohan__layers_1_1AgentVisibilityLayer" prot="public" virt="non-virtual">cohan_layers::AgentVisibilityLayer</derivedcompoundref>
+    <derivedcompoundref refid="classcohan__layers_1_1StaticAgentLayer" prot="public" virt="non-virtual">cohan_layers::StaticAgentLayer</derivedcompoundref>
+    <includes refid="agent__layer_8hpp" local="no">agent_layer.hpp</includes>
+    <innerclass refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel" prot="protected">cohan_layers::AgentLayer::AgentPoseVel</innerclass>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1ac61a654deccf27a05a7c11ec18d1dc22" prot="protected" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; cohan_msgs::msg::TrackedAgents &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;cohan_msgs::msg::TrackedAgents&gt;::SharedPtr cohan_layers::AgentLayer::agents_sub_</definition>
+        <argsstring></argsstring>
+        <name>agents_sub_</name>
+        <briefdescription>
+<para>ros subscribers </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="181" column="36" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1add2698b05d148a7d2418c57a7550325d" prot="protected" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; agent_path_prediction::msg::AgentsInfo &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;agent_path_prediction::msg::AgentsInfo&gt;::SharedPtr cohan_layers::AgentLayer::agents_states_sub_</definition>
+        <argsstring></argsstring>
+        <name>agents_states_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="182" column="36" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1ac9ee0829d62d918b3916e22663f74a69" prot="protected" static="no" mutable="no">
+        <type>rclcpp::Service&lt; std_srvs::srv::SetBool &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;std_srvs::srv::SetBool&gt;::SharedPtr cohan_layers::AgentLayer::stopmap_srv_</definition>
+        <argsstring></argsstring>
+        <name>stopmap_srv_</name>
+        <briefdescription>
+<para>ros services </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="183" column="31" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a801140ab6adf55a9a460ab3c466011a1" prot="protected" static="no" mutable="no">
+        <type>cohan_msgs::msg::TrackedAgents</type>
+        <definition>cohan_msgs::msg::TrackedAgents cohan_layers::AgentLayer::agents_</definition>
+        <argsstring></argsstring>
+        <name>agents_</name>
+        <briefdescription>
+<para>agents </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="184" column="34" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a9277b94d9450bf969edaf84c8beb408c" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; int, int &gt;</type>
+        <definition>std::map&lt;int, int&gt; cohan_layers::AgentLayer::states_</definition>
+        <argsstring></argsstring>
+        <name>states_</name>
+        <briefdescription>
+<para>agent_states </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="185" column="12" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a1b9df0ba8009c991432124692fbf37ed" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structcohan__layers_1_1AgentLayer_1_1AgentPoseVel" kindref="compound">AgentPoseVel</ref> &gt;</type>
+        <definition>std::vector&lt;AgentPoseVel&gt; cohan_layers::AgentLayer::transformed_agents_</definition>
+        <argsstring></argsstring>
+        <name>transformed_agents_</name>
+        <briefdescription>
+<para>transformed agents </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="186" column="15" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a92d77be1142c0f79d570444e4b76c4bf" prot="protected" static="no" mutable="no">
+        <type>std::recursive_mutex</type>
+        <definition>std::recursive_mutex cohan_layers::AgentLayer::lock_</definition>
+        <argsstring></argsstring>
+        <name>lock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="187" column="24" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a358ed2716ba140c39dd85357bbf54b40" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cohan_layers::AgentLayer::first_time_</definition>
+        <argsstring></argsstring>
+        <name>first_time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="188" column="8" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a8892ad59c63a48ad948bdf5f79a91ca2" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cohan_layers::AgentLayer::reset_</definition>
+        <argsstring></argsstring>
+        <name>reset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="188" column="20" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a0b31b0736d9ab8c8d2ac46458f530463" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cohan_layers::AgentLayer::shutdown_</definition>
+        <argsstring></argsstring>
+        <name>shutdown_</name>
+        <briefdescription>
+<para>flags </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="188" column="27" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a21378dde41af0a46972350407c497e37" prot="protected" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time cohan_layers::AgentLayer::last_time_</definition>
+        <argsstring></argsstring>
+        <name>last_time_</name>
+        <briefdescription>
+<para>time checks </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="189" column="16" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1ac7bdd6029e6c3c088e8dc6b0eefc2395" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayer::last_min_x_</definition>
+        <argsstring></argsstring>
+        <name>last_min_x_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="190" column="10" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a92f24d94dd0b1283b35384438a9368da" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayer::last_min_y_</definition>
+        <argsstring></argsstring>
+        <name>last_min_y_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="190" column="22" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1af90964373c6d6be5f4f6593d7537d5cb" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayer::last_max_x_</definition>
+        <argsstring></argsstring>
+        <name>last_max_x_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="190" column="34" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a455b625eb20bc1c98500dbdb0228d176" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayer::last_max_y_</definition>
+        <argsstring></argsstring>
+        <name>last_max_y_</name>
+        <briefdescription>
+<para>min and max x and y values for the costmap </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="190" column="46" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a8838ac8e005d47f70003b51745d77065" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayer::radius_</definition>
+        <argsstring></argsstring>
+        <name>radius_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="193" column="10" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a5fc416e8a57ea57f34927756eb6c74c2" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayer::amplitude_</definition>
+        <argsstring></argsstring>
+        <name>amplitude_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="193" column="18" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a8763d4746e35c183bb3a1792d542aeca" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayer::covar_</definition>
+        <argsstring></argsstring>
+        <name>covar_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="193" column="29" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a7da870ee93930677a69874e1d0fa32f4" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayer::cutoff_</definition>
+        <argsstring></argsstring>
+        <name>cutoff_</name>
+        <briefdescription>
+<para>parameters for the gaussian </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="193" column="36" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a477bdf069b1d186f3d5fc1fcfae7757b" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayer::robot_radius_</definition>
+        <argsstring></argsstring>
+        <name>robot_radius_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="194" column="10" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a23e098bc72c0c79470d4493fe59f1572" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cohan_layers::AgentLayer::agent_radius_</definition>
+        <argsstring></argsstring>
+        <name>agent_radius_</name>
+        <briefdescription>
+<para>radii for the agents </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="194" column="24" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a4a1311ca24a93859ac1f536bb46a1845" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string cohan_layers::AgentLayer::ns_</definition>
+        <argsstring></argsstring>
+        <name>ns_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="195" column="15" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1aba00f5021c8077f6c9a3d50c2a72611f" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string cohan_layers::AgentLayer::tracked_agents_sub_topic_</definition>
+        <argsstring></argsstring>
+        <name>tracked_agents_sub_topic_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="195" column="19" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1a8fdfce94f480552f6ff035745095e674" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string cohan_layers::AgentLayer::agents_states_sub_topic_</definition>
+        <argsstring></argsstring>
+        <name>agents_states_sub_topic_</name>
+        <briefdescription>
+<para>ROS namespace and topic names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="195" column="45" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcohan__layers_1_1AgentLayer_1ad07097f84ac670bd4d4bba875a315621" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classcohan__layers_1_1AgentLayerConfig" kindref="compound">AgentLayerConfig</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;AgentLayerConfig&gt; cohan_layers::AgentLayer::cfg_</definition>
+        <argsstring></argsstring>
+        <name>cfg_</name>
+        <briefdescription>
+<para>configuration parameters </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="196" column="19" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayer_1afdd328a134b53a8758ebc49c60829b14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cohan_layers::AgentLayer::AgentLayer</definition>
+        <argsstring>()</argsstring>
+        <name>AgentLayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="50" column="3" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayer_1a1af29e63306b94ae450c66916c2d364c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cohan_layers::AgentLayer::onInitialize</definition>
+        <argsstring>() override</argsstring>
+        <name>onInitialize</name>
+        <briefdescription>
+<para>Initializes the agent layer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="55" column="8" bodyfile="cohan_layers/src/agent_layer.cpp" bodystart="41" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayer_1afecded3910ae8f847b22a2818b6d33f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cohan_layers::AgentLayer::updateBounds</definition>
+        <argsstring>(double origin_x, double origin_y, double origin_yaw, double *min_x, double *min_y, double *max_x, double *max_y) override</argsstring>
+        <name>updateBounds</name>
+        <param>
+          <type>double</type>
+          <declname>origin_x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>origin_y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>origin_yaw</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>min_x</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>min_y</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>max_x</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>max_y</declname>
+        </param>
+        <briefdescription>
+<para>Updates the bounds of the costmap based on agent positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>origin_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Origin x-coordinate of the costmap </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>origin_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Origin y-coordinate of the costmap </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>origin_yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rotation angle of the costmap origin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the minimum x-coordinate of the bounds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the minimum y-coordinate of the bounds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the maximum x-coordinate of the bounds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the maximum y-coordinate of the bounds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="67" column="8" bodyfile="cohan_layers/src/agent_layer.cpp" bodystart="115" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayer_1afae88fa93e40653f1cc1e5d963ff6d55" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>void cohan_layers::AgentLayer::updateCosts</definition>
+        <argsstring>(nav2_costmap_2d::Costmap2D &amp;master_grid, int min_i, int min_j, int max_i, int max_j) override=0</argsstring>
+        <name>updateCosts</name>
+        <reimplementedby refid="classcohan__layers_1_1AgentVisibilityLayer_1a81daebe89b9f5ed27f6114afa37bea78">updateCosts</reimplementedby>
+        <reimplementedby refid="classcohan__layers_1_1StaticAgentLayer_1a1d4219f6d7bdc4e9425bc6dbd4789941">updateCosts</reimplementedby>
+        <param>
+          <type>nav2_costmap_2d::Costmap2D &amp;</type>
+          <declname>master_grid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_j</declname>
+        </param>
+        <briefdescription>
+<para>Updates the cost values in the costmap based on agent positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>master_grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the master costmap grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum index in the i-direction defining the region to update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum index in the j-direction defining the region to update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum index in the i-direction defining the region to update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum index in the j-direction defining the region to update. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="77" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayer_1a2cd68deeadaae0160ac6aee736d92e37" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void cohan_layers::AgentLayer::updateBoundsFromAgents</definition>
+        <argsstring>(double *min_x, double *min_y, double *max_x, double *max_y)=0</argsstring>
+        <name>updateBoundsFromAgents</name>
+        <reimplementedby refid="classcohan__layers_1_1AgentVisibilityLayer_1ac06ddf80a829b6ec2c5fde66e6ba4e8e">updateBoundsFromAgents</reimplementedby>
+        <reimplementedby refid="classcohan__layers_1_1StaticAgentLayer_1a123392f39c7d8ef6054a330b949c558c">updateBoundsFromAgents</reimplementedby>
+        <param>
+          <type>double *</type>
+          <declname>min_x</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>min_y</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>max_x</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>max_y</declname>
+        </param>
+        <briefdescription>
+<para>Updates the bounds from agent positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the minimum x-coordinate of the bounds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the minimum y-coordinate of the bounds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the maximum x-coordinate of the bounds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the maximum y-coordinate of the bounds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="86" column="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayer_1a6fb9d22b880b9479d842b3cc5fb38fb4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool cohan_layers::AgentLayer::isDiscretized</definition>
+        <argsstring>()</argsstring>
+        <name>isDiscretized</name>
+        <briefdescription>
+<para>Indicates whether the layer is discretized. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Always returns false as this layer is not discretized </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="92" column="15" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="92" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayer_1afd4966609f1fc8a0e451aa47a2fb9110" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cohan_layers::AgentLayer::agentsCB</definition>
+        <argsstring>(const cohan_msgs::msg::TrackedAgents::SharedPtr agents)</argsstring>
+        <name>agentsCB</name>
+        <param>
+          <type>const cohan_msgs::msg::TrackedAgents::SharedPtr</type>
+          <declname>agents</declname>
+        </param>
+        <briefdescription>
+<para>Callback for TrackedAgents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Tracked agents data received from the topic Updates the agents_ member variable with the received data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="109" column="8" bodyfile="cohan_layers/src/agent_layer.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayer_1a1c19517f8a6216348e87ba227c2d08a2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cohan_layers::AgentLayer::statesCB</definition>
+        <argsstring>(const agent_path_prediction::msg::AgentsInfo::SharedPtr agents_info)</argsstring>
+        <name>statesCB</name>
+        <param>
+          <type>const agent_path_prediction::msg::AgentsInfo::SharedPtr</type>
+          <declname>agents_info</declname>
+        </param>
+        <briefdescription>
+<para>Callback for AgentsInfo to get the agent states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agents_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Information about agents including their states Updates the states_ member variable with the received data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="116" column="8" bodyfile="cohan_layers/src/agent_layer.cpp" bodystart="92" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayer_1ab8fac895e69546f9a59512a9bc46f8c1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cohan_layers::AgentLayer::shutdownCB</definition>
+        <argsstring>(const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt; req, std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt; res)</argsstring>
+        <name>shutdownCB</name>
+        <param>
+          <type>const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt;</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>Callback for shutdown service. Handles the shutdown of the agent layer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service request containing the shutdown flag </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service response indicating success or failure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="123" column="8" bodyfile="cohan_layers/src/agent_layer.cpp" bodystart="104" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayer_1a5ae292ea204553aff2857ac4f84889c4" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double cohan_layers::AgentLayer::Guassian1D</definition>
+        <argsstring>(double x, double x0, double A, double varx)</argsstring>
+        <name>Guassian1D</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>varx</declname>
+        </param>
+        <briefdescription>
+<para>Computes a 1D Gaussian value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mean of the Gaussian </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amplitude of the Gaussian </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>varx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variance of the Gaussian </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1D Gaussian value for the given input </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="133" column="17" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayer_1af272dd866db7d3befefccdbd5e39a0dd" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double cohan_layers::AgentLayer::Gaussian2D</definition>
+        <argsstring>(double x, double y, double x0, double y0, double A, double varx, double vary)</argsstring>
+        <name>Gaussian2D</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>varx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vary</declname>
+        </param>
+        <briefdescription>
+<para>Computes a 2D Gaussian value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input x-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input y-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mean x-coordinate of the Gaussian </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mean y-coordinate of the Gaussian </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amplitude of the Gaussian </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>varx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variance in the x-direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variance in the y-direction </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>2D Gaussian value for the given inputs </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="149" column="17" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="149" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classcohan__layers_1_1AgentLayer_1a8994a864b6896d2726adaada5af5257e" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double cohan_layers::AgentLayer::Gaussian2D_skewed</definition>
+        <argsstring>(double x, double y, double x0, double y0, double A, double varx, double vary, double skew_ang)</argsstring>
+        <name>Gaussian2D_skewed</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>varx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vary</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>skew_ang</declname>
+        </param>
+        <briefdescription>
+<para>Computes a skewed 2D Gaussian value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input x-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input y-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mean x-coordinate of the Gaussian </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mean y-coordinate of the Gaussian </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amplitude of the Gaussian </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>varx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variance in the x-direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variance in the y-direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>skew_ang</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Skew angle for the Gaussian </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Skewed 2D Gaussian value for the given inputs </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="171" column="17" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="171" bodyend="179"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>cohan_layers::StaticAgentLayer</label>
+        <link refid="classcohan__layers_1_1StaticAgentLayer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>cohan_layers::AgentLayer</label>
+        <link refid="classcohan__layers_1_1AgentLayer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cohan_layers::AgentVisibilityLayer</label>
+        <link refid="classcohan__layers_1_1AgentVisibilityLayer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nav2_costmap_2d::Layer</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>cohan_layers::AgentLayer</label>
+        <link refid="classcohan__layers_1_1AgentLayer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nav2_costmap_2d::Layer</label>
+      </node>
+    </collaborationgraph>
+    <location file="cohan_layers/include/cohan_layers/agent_layer.hpp" line="48" column="1" bodyfile="cohan_layers/include/cohan_layers/agent_layer.hpp" bodystart="48" bodyend="197"/>
+    <listofallmembers>
+      <member refid="classcohan__layers_1_1AgentLayer_1a23e098bc72c0c79470d4493fe59f1572" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>agent_radius_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1afdd328a134b53a8758ebc49c60829b14" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>AgentLayer</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a801140ab6adf55a9a460ab3c466011a1" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>agents_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1add2698b05d148a7d2418c57a7550325d" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>agents_states_sub_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a8fdfce94f480552f6ff035745095e674" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>agents_states_sub_topic_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1ac61a654deccf27a05a7c11ec18d1dc22" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>agents_sub_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1afd4966609f1fc8a0e451aa47a2fb9110" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>agentsCB</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a5fc416e8a57ea57f34927756eb6c74c2" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>amplitude_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1ad07097f84ac670bd4d4bba875a315621" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>cfg_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a8763d4746e35c183bb3a1792d542aeca" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>covar_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a7da870ee93930677a69874e1d0fa32f4" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>cutoff_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a358ed2716ba140c39dd85357bbf54b40" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>first_time_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1af272dd866db7d3befefccdbd5e39a0dd" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>Gaussian2D</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a8994a864b6896d2726adaada5af5257e" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>Gaussian2D_skewed</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a5ae292ea204553aff2857ac4f84889c4" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>Guassian1D</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a6fb9d22b880b9479d842b3cc5fb38fb4" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>isDiscretized</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1af90964373c6d6be5f4f6593d7537d5cb" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>last_max_x_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a455b625eb20bc1c98500dbdb0228d176" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>last_max_y_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1ac7bdd6029e6c3c088e8dc6b0eefc2395" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>last_min_x_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a92f24d94dd0b1283b35384438a9368da" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>last_min_y_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a21378dde41af0a46972350407c497e37" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>last_time_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a92d77be1142c0f79d570444e4b76c4bf" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>lock_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a4a1311ca24a93859ac1f536bb46a1845" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>ns_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a1af29e63306b94ae450c66916c2d364c" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>onInitialize</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a8838ac8e005d47f70003b51745d77065" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>radius_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a8892ad59c63a48ad948bdf5f79a91ca2" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>reset_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a477bdf069b1d186f3d5fc1fcfae7757b" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>robot_radius_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a0b31b0736d9ab8c8d2ac46458f530463" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>shutdown_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1ab8fac895e69546f9a59512a9bc46f8c1" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>shutdownCB</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a9277b94d9450bf969edaf84c8beb408c" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>states_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a1c19517f8a6216348e87ba227c2d08a2" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>statesCB</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1ac9ee0829d62d918b3916e22663f74a69" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>stopmap_srv_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1aba00f5021c8077f6c9a3d50c2a72611f" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>tracked_agents_sub_topic_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a1b9df0ba8009c991432124692fbf37ed" prot="protected" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>transformed_agents_</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1afecded3910ae8f847b22a2818b6d33f0" prot="public" virt="non-virtual"><scope>cohan_layers::AgentLayer</scope><name>updateBounds</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1a2cd68deeadaae0160ac6aee736d92e37" prot="public" virt="pure-virtual"><scope>cohan_layers::AgentLayer</scope><name>updateBoundsFromAgents</name></member>
+      <member refid="classcohan__layers_1_1AgentLayer_1afae88fa93e40653f1cc1e5d963ff6d55" prot="public" virt="pure-virtual"><scope>cohan_layers::AgentLayer</scope><name>updateCosts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

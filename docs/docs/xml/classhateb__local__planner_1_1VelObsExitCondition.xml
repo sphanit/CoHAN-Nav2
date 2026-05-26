@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1VelObsExitCondition" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::VelObsExitCondition</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BT::ConditionNode</basecompoundref>
+    <includes refid="vel__obs__exit__condition_8h" local="no">vel_obs_exit_condition.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1VelObsExitCondition_1abebbd97eb3c266a1ee1478ec8cb75ef1" prot="private" static="no" mutable="no">
+        <type>agent_path_prediction::msg::AgentsInfo</type>
+        <definition>agent_path_prediction::msg::AgentsInfo hateb_local_planner::VelObsExitCondition::agents_info_</definition>
+        <argsstring></argsstring>
+        <name>agents_info_</name>
+        <briefdescription>
+<para>Current information about all agents in the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="88" column="42" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1VelObsExitCondition_1a55d3ae4c8a597f5265d4c0a9facfd81a" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classhateb__local__planner_1_1Agents" kindref="compound">hateb_local_planner::Agents</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;hateb_local_planner::Agents&gt; hateb_local_planner::VelObsExitCondition::agents_ptr_</definition>
+        <argsstring></argsstring>
+        <name>agents_ptr_</name>
+        <briefdescription>
+<para>Pointer to the agents management class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="89" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1VelObsExitCondition_1a67cca4f381872a8917ec0177b283e439" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::VelObsExitCondition::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of this behavior tree node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="91" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1VelObsExitCondition_1ab0412f6990ac72c985fa27660eb2a5ea" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hateb_local_planner::VelObsExitCondition::nearest_human_id_</definition>
+        <argsstring></argsstring>
+        <name>nearest_human_id_</name>
+        <briefdescription>
+<para>ID of the nearest human agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="92" column="7" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1VelObsExitCondition_1a8f4307042afb3fbaf2b1bf3f7e40cef9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hateb_local_planner::VelObsExitCondition::t_stuck_</definition>
+        <argsstring></argsstring>
+        <name>t_stuck_</name>
+        <briefdescription>
+<para>Time counter for how long an agent has been stuck. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="93" column="7" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1VelObsExitCondition_1a6a2794fa3b8be0a0927b89a99290a53e" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex hateb_local_planner::VelObsExitCondition::agents_mutex_</definition>
+        <argsstring></argsstring>
+        <name>agents_mutex_</name>
+        <briefdescription>
+<para>Mutex to protect concurrent access to agent data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="94" column="14" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1VelObsExitCondition_1a595c3695e5187db0902861a98636d970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::VelObsExitCondition::VelObsExitCondition</definition>
+        <argsstring>(const std::string &amp;condition_name, const BT::NodeConfiguration &amp;conf)</argsstring>
+        <name>VelObsExitCondition</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>condition_name</declname>
+        </param>
+        <param>
+          <type>const BT::NodeConfiguration &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="classhateb__local__planner_1_1VelObsExitCondition" kindref="compound">VelObsExitCondition</ref> node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>condition_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the condition node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node configuration containing the input/output ports </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="54" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/vel_obs_exit_condition.cpp" bodystart="31" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VelObsExitCondition_1a3da5a0c0843539c2a8c40fe6222504a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::VelObsExitCondition::VelObsExitCondition</definition>
+        <argsstring>()=delete</argsstring>
+        <name>VelObsExitCondition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="56" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VelObsExitCondition_1ab27abed36ab08bb456b02f78cc85368e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::VelObsExitCondition::~VelObsExitCondition</definition>
+        <argsstring>() override</argsstring>
+        <name>~VelObsExitCondition</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="61" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/vel_obs_exit_condition.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1VelObsExitCondition_1a863fe1d3e03c9df2fc7d39867f73431f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BT::NodeStatus</type>
+        <definition>BT::NodeStatus hateb_local_planner::VelObsExitCondition::tick</definition>
+        <argsstring>() override</argsstring>
+        <name>tick</name>
+        <briefdescription>
+<para>Main execution tick of the condition node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>NodeStatus SUCCESS if a human has stopped, FAILURE otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="67" column="18" bodyfile="hateb_local_planner/src/behavior_tree/condition/vel_obs_exit_condition.cpp" bodystart="44" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1VelObsExitCondition_1a0155387ed345f79142f50984042a9e5c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BT::PortsList</type>
+        <definition>static BT::PortsList hateb_local_planner::VelObsExitCondition::providedPorts</definition>
+        <argsstring>()</argsstring>
+        <name>providedPorts</name>
+        <briefdescription>
+<para>Defines the input and output ports for the condition node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>PortsList containing the node&apos;s ports configuration </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="73" column="24" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" bodystart="73" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1VelObsExitCondition_1a9947e3c4026693b884457351f0f9bdb6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::VelObsExitCondition::hasHumanStopped</definition>
+        <argsstring>()</argsstring>
+        <name>hasHumanStopped</name>
+        <briefdescription>
+<para>Checks if any human agent in the environment has stopped moving. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if a human has stopped, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="83" column="8" bodyfile="hateb_local_planner/src/behavior_tree/condition/vel_obs_exit_condition.cpp" bodystart="68" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Condition node that checks if an obstacle (human) has stopped in the environment. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements a behavior tree condition that monitors the velocity state of nearby human agents and determines if any have come to a stop. It is used to detect situations where the robot&apos;s path may be blocked by a stationary human obstacle. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::VelObsExitCondition</label>
+        <link refid="classhateb__local__planner_1_1VelObsExitCondition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::VelObsExitCondition</label>
+        <link refid="classhateb__local__planner_1_1VelObsExitCondition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" line="47" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/vel_obs_exit_condition.h" bodystart="47" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1VelObsExitCondition_1abebbd97eb3c266a1ee1478ec8cb75ef1" prot="private" virt="non-virtual"><scope>hateb_local_planner::VelObsExitCondition</scope><name>agents_info_</name></member>
+      <member refid="classhateb__local__planner_1_1VelObsExitCondition_1a6a2794fa3b8be0a0927b89a99290a53e" prot="private" virt="non-virtual"><scope>hateb_local_planner::VelObsExitCondition</scope><name>agents_mutex_</name></member>
+      <member refid="classhateb__local__planner_1_1VelObsExitCondition_1a55d3ae4c8a597f5265d4c0a9facfd81a" prot="private" virt="non-virtual"><scope>hateb_local_planner::VelObsExitCondition</scope><name>agents_ptr_</name></member>
+      <member refid="classhateb__local__planner_1_1VelObsExitCondition_1a9947e3c4026693b884457351f0f9bdb6" prot="private" virt="non-virtual"><scope>hateb_local_planner::VelObsExitCondition</scope><name>hasHumanStopped</name></member>
+      <member refid="classhateb__local__planner_1_1VelObsExitCondition_1a67cca4f381872a8917ec0177b283e439" prot="private" virt="non-virtual"><scope>hateb_local_planner::VelObsExitCondition</scope><name>name_</name></member>
+      <member refid="classhateb__local__planner_1_1VelObsExitCondition_1ab0412f6990ac72c985fa27660eb2a5ea" prot="private" virt="non-virtual"><scope>hateb_local_planner::VelObsExitCondition</scope><name>nearest_human_id_</name></member>
+      <member refid="classhateb__local__planner_1_1VelObsExitCondition_1a0155387ed345f79142f50984042a9e5c" prot="public" virt="non-virtual"><scope>hateb_local_planner::VelObsExitCondition</scope><name>providedPorts</name></member>
+      <member refid="classhateb__local__planner_1_1VelObsExitCondition_1a8f4307042afb3fbaf2b1bf3f7e40cef9" prot="private" virt="non-virtual"><scope>hateb_local_planner::VelObsExitCondition</scope><name>t_stuck_</name></member>
+      <member refid="classhateb__local__planner_1_1VelObsExitCondition_1a863fe1d3e03c9df2fc7d39867f73431f" prot="public" virt="non-virtual"><scope>hateb_local_planner::VelObsExitCondition</scope><name>tick</name></member>
+      <member refid="classhateb__local__planner_1_1VelObsExitCondition_1a595c3695e5187db0902861a98636d970" prot="public" virt="non-virtual"><scope>hateb_local_planner::VelObsExitCondition</scope><name>VelObsExitCondition</name></member>
+      <member refid="classhateb__local__planner_1_1VelObsExitCondition_1a3da5a0c0843539c2a8c40fe6222504a8" prot="public" virt="non-virtual"><scope>hateb_local_planner::VelObsExitCondition</scope><name>VelObsExitCondition</name></member>
+      <member refid="classhateb__local__planner_1_1VelObsExitCondition_1ab27abed36ab08bb456b02f78cc85368e" prot="public" virt="non-virtual"><scope>hateb_local_planner::VelObsExitCondition</scope><name>~VelObsExitCondition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

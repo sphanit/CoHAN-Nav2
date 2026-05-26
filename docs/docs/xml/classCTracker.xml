@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classCTracker" kind="class" language="C++" prot="public">
+    <compoundname>CTracker</compoundname>
+    <includes refid="Ctracker_8h" local="no">Ctracker.h</includes>
+    <innerclass refid="structCTracker_1_1Params" prot="public">CTracker::Params</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classCTrack" kindref="compound">CTrack</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;CTrack&gt; &gt; CTracker::tracks</definition>
+        <argsstring></argsstring>
+        <name>tracks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="86" column="15" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCTracker_1a2e23026ff118d89b44bf2eaf38c2f18a" prot="private" static="no" mutable="no">
+        <type><ref refid="structCTracker_1_1Params" kindref="compound">Params</ref></type>
+        <definition>Params CTracker::params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="93" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCTracker_1a6d15e02d600e914de0f826228ea394c5" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t CTracker::NextTrackID</definition>
+        <argsstring></argsstring>
+        <name>NextTrackID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="95" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCTracker_1ad21dd8dc747fe20f6a47e1e70a6bea0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CTracker::CTracker</definition>
+        <argsstring>(const Params &amp;parameters)</argsstring>
+        <name>CTracker</name>
+        <param>
+          <type>const <ref refid="structCTracker_1_1Params" kindref="compound">Params</ref> &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="83" column="3" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.cpp" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classCTracker_1ab74d4f1ce428c9d3fa9f9e9901a2070a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CTracker::~CTracker</definition>
+        <argsstring>(void)</argsstring>
+        <name>~CTracker</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="84" column="3" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.cpp" bodystart="130" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classCTracker_1a021c4f180bc560fd3c38c50bbdc824a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CTracker::Update</definition>
+        <argsstring>(const std::vector&lt; Point_t &gt; &amp;detectedCentroid, const std::vector&lt; std::vector&lt; cv::Point &gt; &gt; &amp;contour)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref> &gt; &amp;</type>
+          <declname>detectedCentroid</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; cv::Point &gt; &gt; &amp;</type>
+          <declname>contour</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="87" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.cpp" bodystart="17" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classCTracker_1a00f54fbf4b90da1fe128cd4b5cc05589" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CTracker::updateParameters</definition>
+        <argsstring>(const Params &amp;parameters)</argsstring>
+        <name>updateParameters</name>
+        <param>
+          <type>const <ref refid="structCTracker_1_1Params" kindref="compound">Params</ref> &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="89" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.cpp" bodystart="123" bodyend="126"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>CTracker</label>
+        <link refid="classCTracker"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>params</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CTracker::Params</label>
+        <link refid="structCTracker_1_1Params"/>
+      </node>
+    </collaborationgraph>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" line="73" column="1" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h" bodystart="74" bodyend="96"/>
+    <listofallmembers>
+      <member refid="classCTracker_1ad21dd8dc747fe20f6a47e1e70a6bea0d" prot="public" virt="non-virtual"><scope>CTracker</scope><name>CTracker</name></member>
+      <member refid="classCTracker_1a6d15e02d600e914de0f826228ea394c5" prot="private" virt="non-virtual"><scope>CTracker</scope><name>NextTrackID</name></member>
+      <member refid="classCTracker_1a2e23026ff118d89b44bf2eaf38c2f18a" prot="private" virt="non-virtual"><scope>CTracker</scope><name>params</name></member>
+      <member refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" prot="public" virt="non-virtual"><scope>CTracker</scope><name>tracks</name></member>
+      <member refid="classCTracker_1a021c4f180bc560fd3c38c50bbdc824a1" prot="public" virt="non-virtual"><scope>CTracker</scope><name>Update</name></member>
+      <member refid="classCTracker_1a00f54fbf4b90da1fe128cd4b5cc05589" prot="public" virt="non-virtual"><scope>CTracker</scope><name>updateParameters</name></member>
+      <member refid="classCTracker_1ab74d4f1ce428c9d3fa9f9e9901a2070a" prot="public" virt="non-virtual"><scope>CTracker</scope><name>~CTracker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

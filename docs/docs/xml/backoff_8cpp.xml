@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="backoff_8cpp" kind="file" language="C++">
+    <compoundname>backoff.cpp</compoundname>
+    <includes refid="backoff_8h" local="no">hateb_local_planner/backoff.h</includes>
+    <includes local="yes">ros/time.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>nav_msgs/GetPlan.h</label>
+      </node>
+      <node id="12">
+        <label>tf/transform_listener.h</label>
+      </node>
+      <node id="1">
+        <label>backoff.cpp</label>
+        <link refid="backoff_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="14">
+        <label>ros/time.h</label>
+      </node>
+      <node id="4">
+        <label>base_local_planner/costmap_model.h</label>
+      </node>
+      <node id="6">
+        <label>dynamic_reconfigure/server.h</label>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner/backoff.h</label>
+        <link refid="backoff_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>costmap_2d/costmap_2d_ros.h</label>
+      </node>
+      <node id="10">
+        <label>std_srvs/SetBool.h</label>
+      </node>
+      <node id="7">
+        <label>geometry_msgs/Pose2D.h</label>
+      </node>
+      <node id="3">
+        <label>actionlib/client/simple_action_client.h</label>
+      </node>
+      <node id="9">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="11">
+        <label>std_srvs/Trigger.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehateb__local__planner">hateb_local_planner</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="backoff_8cpp_1a8cc8d559acdd2f74085b20977182d5b7" prot="public" static="no">
+        <name>NODE_NAME</name>
+        <initializer>&quot;BackoffRecovery&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/src/backoff.cpp" line="42" column="9" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="backoff_8cpp_1ad7a65b9516782c43db8997a8eef5afb3" prot="public" static="no">
+        <name>MAP_FRAME</name>
+        <initializer>&quot;map&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/src/backoff.cpp" line="44" column="9" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="backoff_8cpp_1a30d0bb104c2d03680e5eb1a59fd4c311" prot="public" static="no">
+        <name>FOOTPRINT_FRAME</name>
+        <initializer>&quot;base_footprint&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/src/backoff.cpp" line="45" column="9" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="backoff_8cpp_1a5114cbe841af1bf20b7917782c7397cf" prot="public" static="no">
+        <name>PUBLISH_GOAL_TOPIC</name>
+        <initializer>&quot;/move_base_simple/goal&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/src/backoff.cpp" line="46" column="9" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="backoff_8cpp_1a28505835e5427c2308453f69c4bffa07" prot="public" static="no">
+        <name>GET_PLAN_SRV_NAME</name>
+        <initializer>&quot;/move_base/GlobalPlanner/make_plan&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/src/backoff.cpp" line="47" column="9" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="backoff_8cpp_1ad2f69313d4b8d6b83cc168d873ec656e" prot="public" static="no">
+        <name>CURRENT_GOAL_TOPIC_NAME</name>
+        <initializer>&quot;/move_base/current_goal&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/src/backoff.cpp" line="48" column="9" bodyfile="hateb_local_planner/src/backoff.cpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(BSD<sp/>License)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2025<sp/>LAAS/CNRS</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>copyright<sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>disclaimer<sp/>in<sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>institute<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni<sp/>(email:ptsingaman@laas.fr)</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="backoff_8h" kindref="compound">hateb_local_planner/backoff.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ros/time.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NODE_NAME<sp/>&quot;BackoffRecovery&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Configuarable<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP_FRAME<sp/>&quot;map&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FOOTPRINT_FRAME<sp/>&quot;base_footprint&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUBLISH_GOAL_TOPIC<sp/>&quot;/move_base_simple/goal&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_PLAN_SRV_NAME<sp/>&quot;/move_base/GlobalPlanner/make_plan&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CURRENT_GOAL_TOPIC_NAME<sp/>&quot;/move_base/current_goal&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehateb__local__planner" kindref="compound">hateb_local_planner</ref><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>empty<sp/>constructor<sp/>and<sp/>destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><ref refid="classhateb__local__planner_1_1Backoff_1a0cbd0914494f6fcd5de277b517133f24" kindref="member">Backoff::Backoff</ref>(costmap_2d::Costmap2DROS<sp/>*costmap_ros)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>backoff<sp/>recovery<sp/>behavior</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a1c63f2df553d3b604d38bd55b990c0c8" kindref="member">initialize</ref>(costmap_ros);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="classhateb__local__planner_1_1Backoff_1a5aa081921f7cef80153ac65992556294" kindref="member">Backoff::~Backoff</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a1c63f2df553d3b604d38bd55b990c0c8" kindref="member">Backoff::initialize</ref>(costmap_2d::Costmap2DROS<sp/>*costmap_ros)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>private<sp/>node<sp/>handle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>ros::NodeHandle<sp/>nh(</highlight><highlight class="stringliteral">&quot;~&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>the<sp/>parameters<sp/>from<sp/>the<sp/>ros<sp/>handle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a443e7a131dfd8276a459513452176ad6" kindref="member">loadRosParamFromNodeHandle</ref>(nh);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>a<sp/>namespace<sp/>is<sp/>associated<sp/>update<sp/>some<sp/>topics<sp/>accordingly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classhateb__local__planner_1_1Backoff_1a0133d675df43274872289cb8cee3d4cb" kindref="member">ns_</ref>.empty())<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a2f5e6d28a06357c31b4ba16623287c30" kindref="member">footprint_frame_</ref><sp/>=<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a0133d675df43274872289cb8cee3d4cb" kindref="member">ns_</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a2f5e6d28a06357c31b4ba16623287c30" kindref="member">footprint_frame_</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a3df9e7bce0c874cf05cd94bee7a05783" kindref="member">current_goal_topic_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a0133d675df43274872289cb8cee3d4cb" kindref="member">ns_</ref><sp/>+<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a3df9e7bce0c874cf05cd94bee7a05783" kindref="member">current_goal_topic_</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a40cb7798ffbf5b60fbde3d95d9a4d72c" kindref="member">publish_goal_topic_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a0133d675df43274872289cb8cee3d4cb" kindref="member">ns_</ref><sp/>+<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a40cb7798ffbf5b60fbde3d95d9a4d72c" kindref="member">publish_goal_topic_</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1ae87a3ea7ef10faa0f304dd2681645627" kindref="member">get_plan_srv_name_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a0133d675df43274872289cb8cee3d4cb" kindref="member">ns_</ref><sp/>+<sp/><ref refid="classhateb__local__planner_1_1Backoff_1ae87a3ea7ef10faa0f304dd2681645627" kindref="member">get_plan_srv_name_</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>costmap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1aa4a08359e24385f0ad5d99a283f3ce06" kindref="member">costmap_ros_</ref><sp/>=<sp/>costmap_ros;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a1980f1e27353de21de5b7bfc272fe8a3" kindref="member">costmap_</ref><sp/>=<sp/><ref refid="classhateb__local__planner_1_1Backoff_1aa4a08359e24385f0ad5d99a283f3ce06" kindref="member">costmap_ros_</ref>-&gt;getCostmap();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a6ca8b3f21c05f5b0a8389fe95af5b1e1" kindref="member">costmap_model_</ref><sp/>=<sp/>std::make_shared&lt;base_local_planner::CostmapModel&gt;(*<ref refid="classhateb__local__planner_1_1Backoff_1a1980f1e27353de21de5b7bfc272fe8a3" kindref="member">costmap_</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>ros<sp/>topics,<sp/>services<sp/>and<sp/>subscribers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1ac5f627cc15fc3be0bdeb38f4a3e5b8a7" kindref="member">goal_sub_</ref><sp/>=<sp/>nh.subscribe(<ref refid="classhateb__local__planner_1_1Backoff_1a3df9e7bce0c874cf05cd94bee7a05783" kindref="member">current_goal_topic_</ref>,<sp/>1,<sp/>&amp;<ref refid="classhateb__local__planner_1_1Backoff_1a391ce80e9b4ca0c4eb74187a87b44f3a" kindref="member">Backoff::goalCB</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a57ec518687eeb87f0657772388912d23" kindref="member">goal_pub_</ref><sp/>=<sp/>nh.advertise&lt;geometry_msgs::PoseStamped&gt;(<ref refid="classhateb__local__planner_1_1Backoff_1a40cb7798ffbf5b60fbde3d95d9a4d72c" kindref="member">publish_goal_topic_</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4871ce4d8a7842fff729401a06bcecda" kindref="member">get_plan_client_</ref><sp/>=<sp/>nh.serviceClient&lt;nav_msgs::GetPlan&gt;(<ref refid="classhateb__local__planner_1_1Backoff_1ae87a3ea7ef10faa0f304dd2681645627" kindref="member">get_plan_srv_name_</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a2e39cb348c2f0bdd6957fc0d529f42ae" kindref="member">poly_pub_l_</ref><sp/>=<sp/>nh.advertise&lt;geometry_msgs::PolygonStamped&gt;(</highlight><highlight class="stringliteral">&quot;left_polygon&quot;</highlight><highlight class="normal">,<sp/>100);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a7ab9b6993a738ba15e6f3f59def5f6f2" kindref="member">poly_pub_r_</ref><sp/>=<sp/>nh.advertise&lt;geometry_msgs::PolygonStamped&gt;(</highlight><highlight class="stringliteral">&quot;right_polygon&quot;</highlight><highlight class="normal">,<sp/>100);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a0599baffb33b80d2ea6c06099b7f7bdc" kindref="member">self_published_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a537320f7f1cdfacd9dc3f78ccda5f9c7" kindref="member">new_goal_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1aaa56fcbf92fb3841e071a8b37e517ace" kindref="member">last_time_</ref><sp/>=<sp/>ros::Time::now();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>ROS_DEBUG_NAMED(<ref refid="backoff_8cpp_1a8cc8d559acdd2f74085b20977182d5b7" kindref="member">NODE_NAME</ref>,<sp/></highlight><highlight class="stringliteral">&quot;node<sp/>%s<sp/>initialized&quot;</highlight><highlight class="normal">,<sp/><ref refid="backoff_8cpp_1a8cc8d559acdd2f74085b20977182d5b7" kindref="member">NODE_NAME</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a391ce80e9b4ca0c4eb74187a87b44f3a" kindref="member">Backoff::goalCB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::PoseStamped::ConstPtr<sp/>&amp;goal)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Skip<sp/>if<sp/>a<sp/>new<sp/>goal<sp/>is<sp/>published<sp/>by<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1Backoff_1a0599baffb33b80d2ea6c06099b7f7bdc" kindref="member">self_published_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a0599baffb33b80d2ea6c06099b7f7bdc" kindref="member">self_published_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a537320f7f1cdfacd9dc3f78ccda5f9c7" kindref="member">new_goal_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a537320f7f1cdfacd9dc3f78ccda5f9c7" kindref="member">new_goal_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Backoff_1afede89f07e3bdd06f9cdb8281138b548" kindref="member">Backoff::startRecovery</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>transform_found<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r<sp/>=<sp/><ref refid="classhateb__local__planner_1_1Backoff_1aa2b1e9ce809aa4a440398bda0966a01d" kindref="member">robot_circumscribed_radius_</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>transform<sp/>from<sp/>robot<sp/>frame<sp/>to<sp/>map<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a015d7d7038d9e24e540bcc2ca6ebea7e" kindref="member">tf_</ref>.lookupTransform(<ref refid="classhateb__local__planner_1_1Backoff_1a9359af47ea9cff80e6389cad795673b4" kindref="member">map_frame_</ref>,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a2f5e6d28a06357c31b4ba16623287c30" kindref="member">footprint_frame_</ref>,<sp/>ros::Time(0),<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a928b39830276d2e77bc2016b0ebe6614" kindref="member">robot_to_map_tf_</ref>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>transform_found<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(tf::LookupException<sp/>&amp;ex)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_ERROR_NAMED(<ref refid="backoff_8cpp_1a8cc8d559acdd2f74085b20977182d5b7" kindref="member">NODE_NAME</ref>,<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>Transform<sp/>available<sp/>Error:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>ex.what());</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(tf::ConnectivityException<sp/>&amp;ex)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_ERROR_NAMED(<ref refid="backoff_8cpp_1a8cc8d559acdd2f74085b20977182d5b7" kindref="member">NODE_NAME</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Connectivity<sp/>Error:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>ex.what());</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(tf::ExtrapolationException<sp/>&amp;ex)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_ERROR_NAMED(<ref refid="backoff_8cpp_1a8cc8d559acdd2f74085b20977182d5b7" kindref="member">NODE_NAME</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Extrapolation<sp/>Error:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>ex.what());</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>geometry_msgs::PoseStamped<sp/>backoff_goal;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>backoff_goal.header.frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;map&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>backoff_goal.header.stamp<sp/>=<sp/>ros::Time::now();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>backoff_goal.pose.orientation.w<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(transform_found<sp/>&amp;&amp;<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4871ce4d8a7842fff729401a06bcecda" kindref="member">get_plan_client_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;geometry_msgs::Point32&gt;<sp/>right_grid_vis;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;geometry_msgs::Point32&gt;<sp/>left_grid_vis;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>polygons<sp/>for<sp/>searching<sp/>(we<sp/>assume<sp/>square)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>right_grid_offsets_vis[4][2]<sp/>=<sp/>{{r,<sp/>-r},<sp/>{r,<sp/>-3<sp/>*<sp/>r},<sp/>{-r,<sp/>-3<sp/>*<sp/>r},<sp/>{-r,<sp/>-r}};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>left_grid_offsets_vis[4][2]<sp/>=<sp/>{{r,<sp/>3<sp/>*<sp/>r},<sp/>{r,<sp/>r},<sp/>{-r,<sp/>r},<sp/>{-r,<sp/>3<sp/>*<sp/>r}};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>necessary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>back_dist<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>robot_theta<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>search_angle<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>angle_increment<sp/>=<sp/>0.174;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>found<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>flipped<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;geometry_msgs::PoseStamped&gt;<sp/>goals;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>nav_msgs::GetPlan<sp/>get_plan_srv;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>get_plan_srv.request.start.header.frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;map&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>tf::poseTFToMsg(<ref refid="classhateb__local__planner_1_1Backoff_1a928b39830276d2e77bc2016b0ebe6614" kindref="member">robot_to_map_tf_</ref>,<sp/>get_plan_srv.request.start.pose);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>get_plan_srv.request.goal.header.frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;map&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>the<sp/>search</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref>.setOrigin(tf::Vector3(0.0,<sp/>0.0,<sp/>0.0));</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref>.setRotation(tf::createQuaternionFromYaw(search_angle));</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref><sp/>=<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a928b39830276d2e77bc2016b0ebe6614" kindref="member">robot_to_map_tf_</ref><sp/>*<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>tf::transformTFToMsg(<ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref>,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a0f2b4a4d1af57a2bdd3aa47c8899195e" kindref="member">start_pose_</ref>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>robot_theta<sp/>=<sp/>tf2::getYaw(<ref refid="classhateb__local__planner_1_1Backoff_1a0f2b4a4d1af57a2bdd3aa47c8899195e" kindref="member">start_pose_</ref>.rotation);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clearing<sp/>visualizes<sp/>only<sp/>the<sp/>lastest<sp/>search<sp/>angle.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>left_grid_vis.clear();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>right_grid_vis.clear();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Search<sp/>upto<sp/>50<sp/>configurations<sp/>for<sp/>each<sp/>angle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Needs<sp/>to<sp/>configure<sp/>or<sp/>adjust<sp/>this<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>50;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1Backoff_1ae0a2834237dda5874e23df3e7f5cbb60" kindref="member">visualize_backoff_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tf::Vector3<sp/>point_tf;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>point_tf.setZero();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>configuration<sp/>on<sp/>right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>*offset<sp/>:<sp/>right_grid_offsets_vis)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>point_tf.setValue(offset[0]<sp/>-<sp/>back_dist,<sp/>offset[1],<sp/>0.0);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>point_tf<sp/>=<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref><sp/>*<sp/>point_tf;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>geometry_msgs::Point32<sp/>p32;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p32.x<sp/>=<sp/>point_tf.x();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p32.y<sp/>=<sp/>point_tf.y();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p32.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>right_grid_vis.push_back(p32);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>configuration<sp/>on<sp/>left</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>*offset<sp/>:<sp/>left_grid_offsets_vis)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>point_tf.setValue(offset[0]<sp/>-<sp/>back_dist,<sp/>offset[1],<sp/>0.0);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>point_tf<sp/>=<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref><sp/>*<sp/>point_tf;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>geometry_msgs::Point32<sp/>p32;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p32.x<sp/>=<sp/>point_tf.x();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p32.y<sp/>=<sp/>point_tf.y();</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p32.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>left_grid_vis.push_back(p32);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Publish<sp/>the<sp/>Left<sp/>and<sp/>Right<sp/>polygons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>geometry_msgs::PolygonStamped<sp/>r_polygon;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r_polygon.header.frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;map&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r_polygon.header.stamp<sp/>=<sp/>ros::Time::now();</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r_polygon.polygon.points<sp/>=<sp/>right_grid_vis;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a7ab9b6993a738ba15e6f3f59def5f6f2" kindref="member">poly_pub_r_</ref>.publish(r_polygon);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>geometry_msgs::PolygonStamped<sp/>l_polygon;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l_polygon.header.frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;map&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l_polygon.header.stamp<sp/>=<sp/>ros::Time::now();</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l_polygon.polygon.points<sp/>=<sp/>left_grid_vis;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a2e39cb348c2f0bdd6957fc0d529f42ae" kindref="member">poly_pub_l_</ref>.publish(l_polygon);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Find<sp/>the<sp/>polygon<sp/>center<sp/>on<sp/>right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r_center<sp/>=<sp/>tf::Vector3(-back_dist,<sp/>-2<sp/>*<sp/>r,<sp/>0.0);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r_center<sp/>=<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref><sp/>*<sp/>r_center;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FInd<sp/>the<sp/>polygon<sp/>center<sp/>on<sp/>left</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>l_center<sp/>=<sp/>tf::Vector3(-back_dist,<sp/>2<sp/>*<sp/>r,<sp/>0.0);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l_center<sp/>=<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref><sp/>*<sp/>l_center;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>overlap<sp/>with<sp/>costmap<sp/>(right)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1Backoff_1a6ca8b3f21c05f5b0a8389fe95af5b1e1" kindref="member">costmap_model_</ref>-&gt;footprintCost(r_center.x(),<sp/>r_center.y(),<sp/>robot_theta,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a9f8d5aa440ba6a4877359231cd646253" kindref="member">right_grid_</ref>)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS_INFO(&quot;Found<sp/>safe<sp/>spot<sp/>on<sp/>right&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backoff_goal.pose.position.x<sp/>=<sp/>r_center.x();</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backoff_goal.pose.position.y<sp/>=<sp/>r_center.y();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backoff_goal.pose.position.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backoff_goal.pose.orientation<sp/>=<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a0f2b4a4d1af57a2bdd3aa47c8899195e" kindref="member">start_pose_</ref>.rotation;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goals.push_back(backoff_goal);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>found<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>overlap<sp/>with<sp/>costmap<sp/>(left)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhateb__local__planner_1_1Backoff_1a6ca8b3f21c05f5b0a8389fe95af5b1e1" kindref="member">costmap_model_</ref>-&gt;footprintCost(l_center.x(),<sp/>l_center.y(),<sp/>robot_theta,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a8075b0060a5381eb4a2b4f9c2882561b" kindref="member">left_grid_</ref>)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS_INFO(&quot;Found<sp/>safe<sp/>spot<sp/>on<sp/>left&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backoff_goal.pose.position.x<sp/>=<sp/>l_center.x();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backoff_goal.pose.position.y<sp/>=<sp/>l_center.y();</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backoff_goal.pose.position.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backoff_goal.pose.orientation<sp/>=<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a0f2b4a4d1af57a2bdd3aa47c8899195e" kindref="member">start_pose_</ref>.rotation;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goals.push_back(backoff_goal);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>found<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Increment<sp/>the<sp/>distance<sp/>and<sp/>repeat</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>back_dist<sp/>+=<sp/>0.5;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>the<sp/>distance<sp/>for<sp/>new<sp/>angle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>back_dist<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>increase<sp/>the<sp/>angle<sp/>to<sp/>continue<sp/>search</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!flipped)<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>search_angle<sp/>+=<sp/>angle_increment;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(search_angle<sp/>&gt;<sp/>M_PI<sp/>/<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Flip<sp/>when<sp/>positive<sp/>limit<sp/>is<sp/>reached</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>search_angle<sp/>=<sp/>-0.175;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flipped<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>search_angle<sp/>-=<sp/>angle_increment;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Break<sp/>when<sp/>negative<sp/>limit<sp/>is<sp/>reached</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(search_angle<sp/>&lt;<sp/>-M_PI<sp/>/<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!found)<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ROS_INFO(</highlight><highlight class="stringliteral">&quot;No<sp/>safespot<sp/>found<sp/>with<sp/>the<sp/>current<sp/>search<sp/>range!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>int&gt;<sp/>length_idx_map;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Interate<sp/>through<sp/>the<sp/>positions<sp/>and<sp/>get<sp/>the<sp/>length<sp/>of<sp/>global<sp/>plans.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>global<sp/>plan<sp/>lengths<sp/>are<sp/>then<sp/>used<sp/>to<sp/>determine<sp/>the<sp/>backoff<sp/>goal.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>count;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>get_plan_srv.request.start.header.stamp<sp/>=<sp/>ros::Time::now();</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>get_plan_srv.request.goal.header.stamp<sp/>=<sp/>ros::Time::now();</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>get_plan_srv.request.goal.pose.position.x<sp/>=<sp/>goals[i].pose.position.x;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>get_plan_srv.request.goal.pose.position.y<sp/>=<sp/>goals[i].pose.position.y;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>get_plan_srv.request.goal.pose.position.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>get_plan_srv.request.goal.pose.orientation<sp/>=<sp/>goals[i].pose.orientation;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4871ce4d8a7842fff729401a06bcecda" kindref="member">get_plan_client_</ref>.call(get_plan_srv);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!get_plan_srv.response.plan.poses.empty())<sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>length_idx_map[get_plan_srv.response.plan.poses.size()]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Map<sp/>arranges<sp/>the<sp/>distances<sp/>sorted<sp/>according<sp/>to<sp/>length.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Select<sp/>the<sp/>one<sp/>with<sp/>shortest<sp/>length<sp/>for<sp/>backoff.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a22a87e217d510cdcd61bb1681ba70b46" kindref="member">backoff_goal_</ref><sp/>=<sp/>goals[length_idx_map.begin()-&gt;second];</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Finally<sp/>publish<sp/>the<sp/>backoff<sp/>goal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a0599baffb33b80d2ea6c06099b7f7bdc" kindref="member">self_published_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref>.setOrigin(tf::Vector3(0.0,<sp/>0.0,<sp/>0.0));</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref>.setRotation(tf::createQuaternionFromYaw(0.0));</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref><sp/>=<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a928b39830276d2e77bc2016b0ebe6614" kindref="member">robot_to_map_tf_</ref><sp/>*<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref>;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/>tf::transformTFToMsg(<ref refid="classhateb__local__planner_1_1Backoff_1a4c62469cdc8b0f17255087c204eaf304" kindref="member">start_pose_tr_</ref>,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a0f2b4a4d1af57a2bdd3aa47c8899195e" kindref="member">start_pose_</ref>);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a57ec518687eeb87f0657772388912d23" kindref="member">goal_pub_</ref>.publish(<ref refid="classhateb__local__planner_1_1Backoff_1a22a87e217d510cdcd61bb1681ba70b46" kindref="member">backoff_goal_</ref>);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1aaa56fcbf92fb3841e071a8b37e517ace" kindref="member">last_time_</ref><sp/>=<sp/>ros::Time::now();</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a96e56515fc60bc8188ce7627e28b3ce7" kindref="member">Backoff::setbackGoal</ref>(geometry_msgs::PoseStamped<sp/>goal)<sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>back<sp/>the<sp/>goal<sp/>that<sp/>is<sp/>existing<sp/>before<sp/>recovery</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/>ROS_INFO(</highlight><highlight class="stringliteral">&quot;Setting<sp/>back<sp/>the<sp/>goal<sp/>!!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/>goal.header.stamp<sp/>=<sp/>ros::Time::now();</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/>goal.header.frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;map&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a57ec518687eeb87f0657772388912d23" kindref="member">goal_pub_</ref>.publish(goal);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/>ROS_INFO(</highlight><highlight class="stringliteral">&quot;Goal<sp/>set<sp/>back<sp/>success&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Backoff_1acf9478b64a2d64fe6944ac93fce0d03b" kindref="member">Backoff::timeOut</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>TRUE<sp/>after<sp/>a<sp/>given<sp/>timeout</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ros::Time::now()<sp/>-<sp/><ref refid="classhateb__local__planner_1_1Backoff_1aaa56fcbf92fb3841e071a8b37e517ace" kindref="member">last_time_</ref>).toSec()<sp/>&gt;<sp/><ref refid="classhateb__local__planner_1_1Backoff_1ae8d020f6014756b22345da190a15aba0" kindref="member">backoff_timeout_</ref>;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a2d60edaa11d945aab08e3e843f50ae9f" kindref="member">Backoff::isBackoffGoalReached</ref>(geometry_msgs::Pose2D<sp/>&amp;robot_pose)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>True<sp/>if<sp/>Backoff<sp/>goal<sp/>is<sp/>reached</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>delta_orient<sp/>=<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a40afbef52dea1ff373e969398fdfbd8d" kindref="member">normalize_angle</ref>(tf2::getYaw(<ref refid="classhateb__local__planner_1_1Backoff_1a22a87e217d510cdcd61bb1681ba70b46" kindref="member">backoff_goal_</ref>.pose.orientation)<sp/>-<sp/>robot_pose.theta);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dg<sp/>=<sp/>std::hypot(<ref refid="classhateb__local__planner_1_1Backoff_1a22a87e217d510cdcd61bb1681ba70b46" kindref="member">backoff_goal_</ref>.pose.position.x<sp/>-<sp/>robot_pose.x,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a22a87e217d510cdcd61bb1681ba70b46" kindref="member">backoff_goal_</ref>.pose.position.y<sp/>-<sp/>robot_pose.y);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fabs(dg)<sp/>&lt;<sp/>0.2<sp/>&amp;&amp;<sp/>fabs(delta_orient)<sp/>&lt;<sp/>0.2;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhateb__local__planner_1_1Backoff_1a443e7a131dfd8276a459513452176ad6" kindref="member">Backoff::loadRosParamFromNodeHandle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ros::NodeHandle<sp/>&amp;private_nh)<sp/>{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/>private_nh.param(</highlight><highlight class="stringliteral">&quot;ns&quot;</highlight><highlight class="normal">,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a0133d675df43274872289cb8cee3d4cb" kindref="member">ns_</ref>,<sp/>std::string(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/>private_nh.param(</highlight><highlight class="stringliteral">&quot;get_plan_srv_name&quot;</highlight><highlight class="normal">,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1ae87a3ea7ef10faa0f304dd2681645627" kindref="member">get_plan_srv_name_</ref>,<sp/>std::string(<ref refid="backoff_8cpp_1a28505835e5427c2308453f69c4bffa07" kindref="member">GET_PLAN_SRV_NAME</ref>));</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/>private_nh.param(</highlight><highlight class="stringliteral">&quot;current_goal_topic&quot;</highlight><highlight class="normal">,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a3df9e7bce0c874cf05cd94bee7a05783" kindref="member">current_goal_topic_</ref>,<sp/>std::string(<ref refid="backoff_8cpp_1ad2f69313d4b8d6b83cc168d873ec656e" kindref="member">CURRENT_GOAL_TOPIC_NAME</ref>));</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/>private_nh.param(</highlight><highlight class="stringliteral">&quot;publish_goal_topic&quot;</highlight><highlight class="normal">,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a40cb7798ffbf5b60fbde3d95d9a4d72c" kindref="member">publish_goal_topic_</ref>,<sp/>std::string(<ref refid="backoff_8cpp_1a5114cbe841af1bf20b7917782c7397cf" kindref="member">PUBLISH_GOAL_TOPIC</ref>));</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/>private_nh.param(</highlight><highlight class="stringliteral">&quot;footprint_frame&quot;</highlight><highlight class="normal">,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a2f5e6d28a06357c31b4ba16623287c30" kindref="member">footprint_frame_</ref>,<sp/>std::string(<ref refid="backoff_8cpp_1a30d0bb104c2d03680e5eb1a59fd4c311" kindref="member">FOOTPRINT_FRAME</ref>));</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/>private_nh.param(</highlight><highlight class="stringliteral">&quot;map_frame&quot;</highlight><highlight class="normal">,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1a9359af47ea9cff80e6389cad795673b4" kindref="member">map_frame_</ref>,<sp/>std::string(<ref refid="backoff_8cpp_1ad7a65b9516782c43db8997a8eef5afb3" kindref="member">MAP_FRAME</ref>));</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/>private_nh.param(</highlight><highlight class="stringliteral">&quot;visualize_backoff&quot;</highlight><highlight class="normal">,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1ae0a2834237dda5874e23df3e7f5cbb60" kindref="member">visualize_backoff_</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/>private_nh.param(</highlight><highlight class="stringliteral">&quot;backoff_timeout&quot;</highlight><highlight class="normal">,<sp/><ref refid="classhateb__local__planner_1_1Backoff_1ae8d020f6014756b22345da190a15aba0" kindref="member">backoff_timeout_</ref>,<sp/>30.0);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hateb_local_planner</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="hateb_local_planner/src/backoff.cpp"/>
+  </compounddef>
+</doxygen>

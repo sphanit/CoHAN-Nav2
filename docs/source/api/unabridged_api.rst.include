@@ -1,0 +1,1359 @@
+
+Full API
+--------
+
+Namespaces
+**********
+
+.. toctree::
+   :maxdepth: 5
+
+   namespace_agents.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   namespace_cohan_layers.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   namespace_hateb_local_planner.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   namespace_invisible_humans_detection.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   namespace_rviz_path_array.rst
+
+Classes and Structs
+*******************
+
+.. toctree::
+   :maxdepth: 5
+
+   structagents_1_1AgentPathPrediction_1_1AgentPathVel.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structagents_1_1AgentPathPrediction_1_1AgentStartPoseVel.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structcohan__layers_1_1AgentLayer_1_1AgentPoseVel.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1AgentPlanCombined.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1AgentPlanTrajCombined.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1FailureDetector_1_1VelMeasurement.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1HATebConfig_1_1Agent.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1HATebConfig_1_1Hateb.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1HATebConfig_1_1Obstacles.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1HATebConfig_1_1Optimization.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1HATebConfig_1_1Recovery.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1HATebConfig_1_1Robot.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1HATebConfig_1_1Trajectory.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1HATebConfig_1_1Visualization.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1ModeInfo.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1PlanCombined.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structhateb__local__planner_1_1PlanTrajCombined.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classagents_1_1AgentPathPredictConfig.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classagents_1_1AgentPathPrediction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classagents_1_1BayesianGoalPrediction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classagents_1_1Gaussian.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classagents_1_1PredictGoalROS.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classcohan__layers_1_1AgentLayer.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classcohan__layers_1_1AgentLayerConfig.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classcohan__layers_1_1AgentVisibilityLayer.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classcohan__layers_1_1StaticAgentLayer.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1Agents.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1BaseFootprintModel.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1BaseTebBinaryEdge.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1BaseTebMultiEdge.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1BaseTebUnaryEdge.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1CircularFootprint.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1CircularObstacle.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1DualBandExitCondition.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeAcceleration.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeAccelerationGoal.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeAccelerationHolonomic.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeAccelerationHolonomicGoal.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeAccelerationHolonomicStart.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeAccelerationStart.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeAgentAgentSafety.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeAgentRobotRelVelocity.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeAgentRobotSafety.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeAgentRobotVisibility.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeDynamicObstacle.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeInflatedObstacle.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeInvisibleHuman.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeKinematicsCarlike.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeKinematicsDiffDrive.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeObstacle.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgePreferRotDir.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeShortestPath.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeStaticAgentVisibility.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeTimeOptimal.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeVelocity.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeVelocityAgent.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeVelocityHolonomic.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeVelocityHolonomicAgent.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1EdgeViaPoint.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1FailureDetector.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1HATebConfig.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1HATEBGoalChecker.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1HATebLocalPlannerROS.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1HATebOptimalPlanner.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1IsGoalUpdated.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1LineFootprint.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1LineObstacle.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1ModeSwitch.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1Obstacle.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1PassThroughCondition.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1PlannerInterface.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1PointFootprint.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1PointObstacle.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1PolygonFootprint.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1PolygonObstacle.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1PoseSE2.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1SetMode.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1SingleBandExitCondition.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1StatefulActionNodeROS.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1TebVisualization.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1TimedElasticBand.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1TwoCirclesFootprint.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1VelObsExitCondition.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1VertexPose.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classhateb__local__planner_1_1VertexTimeDiff.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classinvisible__humans__detection_1_1InvHumansDetection.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classinvisible__humans__detection_1_1InvisibleHumansConfig.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classparameters_1_1ParameterHelper.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classPointShape.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classrviz__path__array_1_1AgentPathArrayDisplay.rst
+
+
+Enums
+*****
+
+
+.. toctree::
+   :maxdepth: 5
+
+   enum_namespacehateb__local__planner_1abd3ef104bc78d78ff49ca11cd26e0454.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   enum_namespacehateb__local__planner_1abf9d2429f0e193ae1b58a22309f8e7fa.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   enum_namespacehateb__local__planner_1a9053a9eaf358ea63f7d8f3c651376a8a.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   enum_namespacehateb__local__planner_1a463aa878b6972598ee87204519a60ba0.rst
+
+Functions
+*********
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a9d8ed497f13dd817219467f6851caf61.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a149078819e493c9816eb27d45420fb99.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a9c95517e3f1a8468a88f3db377831228.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1accc129d7b0acdd86b557bf37bbb0cd15.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a0fa85a1b4b27c909f8d43a422a63945b.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a0c118ac06a1f7d66fd756bfe4a8a7d1c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1ad608f81b0ad730706ceece80d5dac429.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1af0d33026d8646b389f2a76addd252325.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1aa6390beb4d01c1661e1c7523f74a93b2.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1af895105afa3bbde12cf912915473fcb1.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a93d058c71c6324fe929db8d83d7fa43a.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a3fb251a59ae7588035748ef6afd02519.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1adfa76447cf46833d01b4dd5647ecfe86.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a6b283a25ac83d84e4340dc2e25fa6f20.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a7390a4788c5cdca6fecac1aa7315958e.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1ae53d0dcfdd477c66b3ae14cad3100f1d.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1ac2e2d2432c7bf42cd93079ae086f9b27.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a39af8f619a3185d081cde50624f5dfa8.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a2109332af478b073ef8713bd5c8d3710.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a5f616f565ae6d41403359464581ddaaa.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a2ae8764bdacddaee9b80a5866db3b9b8.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1ae7a3f92de1df6ab7ba7cce0a3c30aa50.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1ab0d8f17ad8f685bedc4aaf2ea24a47f1.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a0bba69036c01261cfb3a0a0a4901ff5c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a803bab130c6e16215b0ddd8cb03fb1a3.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1af2b6c3c0d8dc4e84e5059ecb0bfb57ed.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1ac0fc0ad9921b131015538d3d29ec4f75.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a94ada7ff1cf4c2ece889d82f15b01710.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1affb0ebd0746958b63ff8a9481d5686e0.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a15250529ebfe9fe310c0e0dc62617472.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1aebe24da4ec2cf8d7e9e4d0ddc667200a.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1a704add57ebcb42e83c29d0fae7c4cc21.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1ad4d651606564abfd7419c9c11afbf532.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacehateb__local__planner_1aef51438998773bdbcaed0119e2a62a4b.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_utils_8hpp_1ad9906e6229c51b18d9c7e172a91a44d1.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_utils_8hpp_1adffcf4274738b3e0ab62184582030a90.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_bt__core_8h_1a443d59f71cd917451eb358a9d1e5c6c1.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacerviz__path__array_1a77322bcc72091499a4d58f2aa653421c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacerviz__path__array_1a8cee2c2e88aec2998f32f4445fce84c5.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespacerviz__path__array_1a4451706bc7fe4d0fe1a397a9415f7570.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_agent__path__prediction_8cpp_1a458379afdbad052bb3077d6b425d2fee.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_utils_8hpp_1a13398aca84c658e1890966778cd1296a.rst
+
+
+Variables
+*********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_namespacehateb__local__planner_1afe819955ada745eb4f798abc8d6cb2e5.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_namespacehateb__local__planner_1a8be0980eee84fa548e6076bbca9a404c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_namespacehateb__local__planner_1a646388b7d2c05dbfb029b1b00fd67f23.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_namespacehateb__local__planner_1a57a07be596aeb19e0ab7189a95da4214.rst
+
+Defines
+*******
+
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction__config_8hpp_1af0e126bb83c684d0b97a1a66834d78c5.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1aa704710e6ef01c22e41bc0cf304f3965.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction__config_8hpp_1a0e63830df919f825d5d9ce05f5bac840.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a4116983fa64e0d7c537fde9032e450f5.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1ad65a0039f8da8ae721d0d60b10060569.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a2bcfb3618748ffa21d501d4b355c09d6.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1ae74f5aa19afdf1154bbac1ad9356efae.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a5e30d61377f56c03a54e34969116303f.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a1c8bbda05111484320a210ef826ccba9.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a2f624e1a52967b5d964861df910a4d62.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a48c33c093011f94ee0d1a37c55745df9.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agents__class_8hpp_1ae24ae7fb28a32df195a4ae13f734c26c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a795afb902a67ac8a09a22f4f41b8a970.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a4291d106e69beae4dd3281e6ce9fb991.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__layer_8cpp_1a64524ba317a33d6069bb960e1eb8c133.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction__config_8hpp_1aa289a35d77148ac0299dea3bd75fc4d1.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agents__class_8cpp_1aa289a35d77148ac0299dea3bd75fc4d1.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_predict__goal__ros_8hpp_1aa289a35d77148ac0299dea3bd75fc4d1.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction_8hpp_1af331ec1c592c921393cc8e9e1b75c33f.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_bt__core_8h_1a17a6d4e925afade9a4ea0f7662bab72e.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_bt__core_8h_1acccaf2336aa9be5441a238d1879da6b7.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_bt__core_8h_1a05c17e4f2dcf680c74216793cdb428f0.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agents__class_8hpp_1afcae8c2a5021b396c0a659ee6dea0466.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1ab83b5f67f4eb6ff332347da5a681208a.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agents__class_8hpp_1aca429eece4b2ed55d2f38a84031ca6b5.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agents__class_8hpp_1afe3f51fbc354670e6c61f8e6f9c9b949.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_predict__goal_8hpp_1a1b0fda8ba947077492614595b1371c99.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a8d66653d75b793a14fbe288103da0947.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a2319687dcf2d9192b98fcdcca97a64f9.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__layer_8cpp_1a345d218c9cd83bb04fdb7749d8f5bca8.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction__config_8hpp_1a345d218c9cd83bb04fdb7749d8f5bca8.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agents__class_8hpp_1a191e5a424a0b478c977515d5694610a8.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a191e5a424a0b478c977515d5694610a8.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_invisible__humans__config_8hpp_1a3018f2f64a0c1470005d85bce5ebfbc5.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_invisible__humans__config_8hpp_1a78b74eefee5148a74ba254d7b209ecaa.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_invisible__humans__config_8hpp_1a0742497c9549c179e5cea1e03918b7a6.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_invisible__humans__config_8hpp_1aecfe69fecc655da965f64af85d9b3b28.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_invisible__humans__config_8hpp_1ad2c354b4949b2f1b4ad55efeed3e59c3.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_invisible__humans__config_8hpp_1a7a7cd478a804b4bfd24cf5369b60d8bf.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_invisible__humans__config_8hpp_1a016270c7d8ad6a47fd5866ef033f7626.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_invisible__humans__config_8hpp_1a8621ab24fe5ea40a881438fa352466fe.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_bt__core_8h_1a2f19df8e766e91807e5038b3bf1db104.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_bt__core_8h_1a6ebf6899d6c1c8b7b9d09be872c05aae.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction__config_8hpp_1a2783b6a2ea72933997aed59b59ae3f7f.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1af7f746aa0e1cb97b582a03542c8b45d9.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_invisible__humans__detection_8cpp_1a30d0bb104c2d03680e5eb1a59fd4c311.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction__config_8hpp_1a28505835e5427c2308453f69c4bffa07.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a87fb60abbdea44501569200652c77a62.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_base__teb__edges_8h_1a4a372063b296859becea03fd9be4e622.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_hateb__local__planner__ros_8h_1ac53c02939aa80f0026d8cf9cd3a3350e.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a1fb6b1744f84ded5edecf2b5d811f210.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1ab2cc20554028dc2c8af68c2786877d58.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1adebaf6daa832bf6d3dbc4e9eb717a779.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a6d6f4da3aea8e3cf69e8a6be42dbd44a.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_hateb__config_8hpp_1ae71449b1cc6e6250b91f539153a7a0d3.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_invisible__humans__detection_8cpp_1ad7a65b9516782c43db8997a8eef5afb3.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction__config_8hpp_1a3923a3ded552ac37bea50521f4c0e19f.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   defines_8h_1ab1a8d0e1d0eb73f62b8beee8a243475e.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction_8hpp_1af894f6c65704c92b68ed56dadb9afd02.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agents__class_8hpp_1aee924ef71b44dac1501d13e25ac2743f.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction_8hpp_1a16e1bbd9c734c79d0a08824bf14036f7.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agents__class_8hpp_1ad575de5af7bcfae345fddc8d769e560a.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction_8hpp_1a33f9de4ddabe0c954c7be6d7d593e00e.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1aac11bbf93316280c053f5ae1fcabce13.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction_8hpp_1a8cc8d559acdd2f74085b20977182d5b7.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_hateb__local__planner__ros_8h_1a5bb0259636cc695c1021411779d623f2.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction__config_8hpp_1ac9a459e1cc25dd40b2d3e50d421c4e9d.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1a77d8c3be30124fda1a25f0b4b82f2fe1.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1a10415cd3bf15d1228972b179881c7faa.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1a7dda2ee207b5602682b9912805739845.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1aa41a5d9968abcde2181decde5f87268a.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1a935b655cbd8e606383720d312a46dda2.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1a861c0dbcc7a4f9b20d0f1eb1689bcb95.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1ae168e15be2b6585591635d86f804edf0.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1ad9b3cad51773171081b346522ba2243f.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1a9ba2ac89402a4087b81dc98d2e6af15d.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1ac398a2db64fa466508754a6c4dc617c9.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1a23b2f17c400c61870539225a7a9353c4.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1acb6dcf43f434360655c6f031214a3bdc.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1a4230e377f358350065a84a171afd3bcc.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_utils_8hpp_1aa09205a7509a4687cccca8e678afbb60.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction_8hpp_1a70d5ea5ea8c43ed32d3d28e41567b81e.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a014f7df82a47e3708cc6f614d1a499b9.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__path__prediction__config_8hpp_1ab68760c2385d64dcd75083f587cb32f2.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a84fbff89ea093f979c5a54b0787f34d9.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a7ef7ceb6c04d20fc53e236ff1f5908cb.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a7a5d2f08418f5739336391784e88b0e2.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_hateb__local__planner_2include_2hateb__local__planner_2misc_8h_1a63e45eaf93729d5707b89a5340d68334.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1a0bce04529a2e1cf43baae159425d1fac.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_hateb__local__planner__ros_8h_1ac8e179e7ade35b9594ba65a297d058b7.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_optimal__planner_8cpp_1ac8e179e7ade35b9594ba65a297d058b7.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_agent__layer_8cpp_1ab11c2b6087ea76911944279ff5a6d65e.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1ab11c2b6087ea76911944279ff5a6d65e.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_visualization_8hpp_1ae044f78f124336287f592f2385130ab5.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_hateb__config_8hpp_1a4661cfc4be068735f3bf5f601a943088.rst
+
+Typedefs
+********
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1a3b4752a48696bcc63570d62786fb9736.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1acfe48bd575f55ee9148d03b363f72c0c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1a61e35a486d15614f831b378fa459f2b0.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1abe95adae9e2ba3cab50c815dba133141.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1aa40dd99696de24d8ac04feb443e22c6d.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1a80c55c90860d688747fb08b15a6e80d9.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1a81b126a26dcba30ecf7ac7017d54e868.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1abacc967cd1313e86a1482c5a70cee691.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1a4e41a52836ef0622157f60b3515bfaa8.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1a6a5674a2ba3b2b0bd64cdd76db2fc7e3.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1aa2fd52c70b6b2295dc138647919ea794.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1ad65f38c6c28524933b297bed33e915d9.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1a70557888b02c7527619a540586d4340d.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1aada6c9abcaa246f092095786ca9bf598.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1adb0456022df4079e7f827f10ee64981a.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1a5b4a543316468d9fdac10de1d63e7a77.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1a640aced052258f3d210b181eb4d1f045.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1a3106e664caee6d9f224ff0b25fb131f0.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1a6ee10d61c614b0238212192794ba76a2.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespacehateb__local__planner_1aa1464081de429166488fe52d38f977c6.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespaceinvisible__humans__detection_1ae25a689c317c3768475551c8cd57fce6.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_namespaceinvisible__humans__detection_1ac0e57bfc66ce6a431f5c889b6b1bd52c.rst

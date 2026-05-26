@@ -1,0 +1,4 @@
+<map id="hateb_local_planner::PointFootprint" name="hateb_local_planner::PointFootprint">
+<area shape="rect" id="node1" title=" " alt="" coords="9,95,162,136"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseFootprintModel.html" title="Abstract class that defines the interface for footprint/contour models." alt="" coords="5,5,165,47"/>
+</map>

@@ -1,0 +1,962 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classparameters_1_1ParameterHelper" kind="class" language="C++" prot="public">
+    <compoundname>parameters::ParameterHelper</compoundname>
+    <includes refid="parameters_8hpp" local="no">parameters.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" prot="private" static="no" mutable="no">
+        <type>rclcpp::Node::SharedPtr</type>
+        <definition>rclcpp::Node::SharedPtr parameters::ParameterHelper::node_</definition>
+        <argsstring></argsstring>
+        <name>node_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="374" column="27" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="374" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" prot="private" static="no" mutable="no">
+        <type>rclcpp_lifecycle::LifecycleNode::SharedPtr</type>
+        <definition>rclcpp_lifecycle::LifecycleNode::SharedPtr parameters::ParameterHelper::lifecycle_node_</definition>
+        <argsstring></argsstring>
+        <name>lifecycle_node_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="375" column="46" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool parameters::ParameterHelper::is_lifecycle_</definition>
+        <argsstring></argsstring>
+        <name>is_lifecycle_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="376" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classparameters_1_1ParameterHelper_1a1ca07e0160baed587a187da30d784739" prot="private" static="no" mutable="no">
+        <type>rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr parameters::ParameterHelper::param_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>param_callback_handle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="377" column="69" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classparameters_1_1ParameterHelper_1a47e2f9332fc0e09819ac59e48d6481bb" prot="private" static="no" mutable="no">
+        <type>rclcpp_lifecycle::LifecycleNode::OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>rclcpp_lifecycle::LifecycleNode::OnSetParametersCallbackHandle::SharedPtr parameters::ParameterHelper::param_callback_handle_lifecycle_</definition>
+        <argsstring></argsstring>
+        <name>param_callback_handle_lifecycle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="378" column="77" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classparameters_1_1ParameterHelper_1a548743a86b46463fe3362ff20cc74175" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::function&lt; void(const rclcpp::Parameter &amp;)&gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::function&lt;void(const rclcpp::Parameter&amp;)&gt; &gt; parameters::ParameterHelper::param_bindings_</definition>
+        <argsstring></argsstring>
+        <name>param_bindings_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="381" column="22" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1a485c5f86c265b885711ebe42bd5fff47" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>parameters::ParameterHelper::ParameterHelper</definition>
+        <argsstring>()=default</argsstring>
+        <name>ParameterHelper</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the ROS2 node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="85" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1abb75497aaf65e971e7d10613f89c9e6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::initialize</definition>
+        <argsstring>(rclcpp::Node::SharedPtr node)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>rclcpp::Node::SharedPtr</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="87" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1a972dabb897e84ce11ba275a7388e2cfe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::initialize</definition>
+        <argsstring>(rclcpp_lifecycle::LifecycleNode::SharedPtr node)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>rclcpp_lifecycle::LifecycleNode::SharedPtr</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="92" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1ab989a118851c1de4d04fa0de4728f045" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::declareFloatParam</definition>
+        <argsstring>(const std::string &amp;name, double default_value, double min, double max, const std::string &amp;description, double step=0.001)</argsstring>
+        <name>declareFloatParam</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>default_value</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>step</declname>
+          <defval>0.001</defval>
+        </param>
+        <briefdescription>
+<para>Declare a floating point parameter with range validation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>default_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum allowed value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowed value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter description </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>step</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Step size for the parameter (default: 0.001) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="106" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="106" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1ac4d4f70483692f058c39c1280a01b202" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::declareIntParam</definition>
+        <argsstring>(const std::string &amp;name, int64_t default_value, int64_t min, int64_t max, const std::string &amp;description, int64_t step=1)</argsstring>
+        <name>declareIntParam</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>default_value</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>step</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Declare an integer parameter with range validation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>default_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum allowed value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowed value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter description </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>step</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Step size for the parameter (default: 1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="132" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="132" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1a3ae98197943088c8ee6e2c421f199c09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::declareBoolParam</definition>
+        <argsstring>(const std::string &amp;name, bool default_value, const std::string &amp;description)</argsstring>
+        <name>declareBoolParam</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>default_value</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+<para>Declare a boolean parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>default_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter description </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="155" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="155" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1a91553a822970c4da9e87a452f501d299" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::declareStringParam</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;default_value, const std::string &amp;description)</argsstring>
+        <name>declareStringParam</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>default_value</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+<para>Declare a string parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>default_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter description </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="172" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="172" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1aaa55665c070adb3fd244d28454f8b6d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::bindFloatParam</definition>
+        <argsstring>(const std::string &amp;name, double &amp;variable, double min, double max, const std::string &amp;description, double step=0.001)</argsstring>
+        <name>bindFloatParam</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>step</declname>
+          <defval>0.001</defval>
+        </param>
+        <briefdescription>
+<para>Bind a floating point parameter to a member variable (declare + auto-update on change) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the variable to bind </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum allowed value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowed value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter description </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>step</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Step size for the parameter (default: 0.001) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="192" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="192" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1a9bab75fcd38c5af808a98ffa042f86c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::bindIntParam</definition>
+        <argsstring>(const std::string &amp;name, int &amp;variable, int min, int max, const std::string &amp;description, int step=1)</argsstring>
+        <name>bindIntParam</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>step</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Bind an integer parameter to a member variable (declare + auto-update on change) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the variable to bind </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum allowed value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowed value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter description </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>step</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Step size for the parameter (default: 1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="208" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="208" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1a2c177f4567e5c37b2456787a1f0a2da4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::bindBoolParam</definition>
+        <argsstring>(const std::string &amp;name, bool &amp;variable, const std::string &amp;description)</argsstring>
+        <name>bindBoolParam</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+<para>Bind a boolean parameter to a member variable (declare + auto-update on change) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the variable to bind </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter description </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="221" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="221" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1a79d5f3143e3b48047bb494c0b13f253e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::bindStringParam</definition>
+        <argsstring>(const std::string &amp;name, std::string &amp;variable, const std::string &amp;description)</argsstring>
+        <name>bindStringParam</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+<para>Bind a string parameter to a member variable (declare + auto-update on change) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the variable to bind </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter description </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="234" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="234" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1a9a51940d15ac8b41ecaca399de2269bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::bindFloatVectorParam</definition>
+        <argsstring>(const std::string &amp;name, std::vector&lt; double &gt; &amp;variable, const std::string &amp;description)</argsstring>
+        <name>bindFloatVectorParam</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+<para>Bind a float vector parameter to a member variable (declare + auto-update on change) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the variable to bind </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter description </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="247" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="247" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1a39baf91c634c0eda52d6be9992ade42f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::loadBoundParameters</definition>
+        <argsstring>()</argsstring>
+        <name>loadBoundParameters</name>
+        <briefdescription>
+<para>Load all bound parameters from the parameter server (call after all bindings are set up) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="264" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="264" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1a7c46052de452247a5f9c236ee3b616b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parameters::ParameterHelper::setupParameterCallback</definition>
+        <argsstring>(std::function&lt; bool(const std::vector&lt; rclcpp::Parameter &gt; &amp;)&gt; custom_callback=nullptr)</argsstring>
+        <name>setupParameterCallback</name>
+        <param>
+          <type>std::function&lt; bool(const std::vector&lt; rclcpp::Parameter &gt; &amp;)&gt;</type>
+          <declname>custom_callback</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Set up parameter change callback with optional custom validation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>custom_callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional custom callback function for parameter validation/handling </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="285" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="285" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1a60f8d0c57c78b4c1c3e44496dfda74a4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T parameters::ParameterHelper::getParam</definition>
+        <argsstring>(const std::string &amp;name, const T &amp;default_value) const</argsstring>
+        <name>getParam</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+<para>Get parameter value safely with type checking. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>default_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default value to return if parameter doesn&apos;t exist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter value or default value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="336" column="5" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="336" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="classparameters_1_1ParameterHelper_1a33fc2ae56f7597f90d621cb826b6763b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool parameters::ParameterHelper::setParam</definition>
+        <argsstring>(const std::string &amp;name, const T &amp;value)</argsstring>
+        <name>setParam</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Update parameter value programmatically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New parameter value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if successful, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="357" column="8" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="357" bodyend="371"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generic parameter utility class for ROS2 nodes This class provides a reusable way to declare parameters with validation and set up parameter change callbacks. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Usage Example with Auto-binding: <programlisting><codeline><highlight class="normal">class<sp/>MyConfig<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>double<sp/>max_vel;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>int<sp/>num_samples;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>bool<sp/>enable_feature;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>std::string<sp/>robot_name;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>parameters::ParameterHelper<sp/>param_helper_;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>void<sp/>initialize(rclcpp::Node::SharedPtr<sp/>node)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>param_helper_.initialize(node);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Bind<sp/>parameters<sp/>-<sp/>they<sp/>will<sp/>auto-update<sp/>when<sp/>changed</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>param_helper_.bindFloatParam(&quot;max_vel&quot;,<sp/>max_vel,<sp/>0.0,<sp/>10.0,<sp/>&quot;Maximum<sp/>velocity&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>param_helper_.bindIntParam(&quot;num_samples&quot;,<sp/>num_samples,<sp/>1,<sp/>100,<sp/>&quot;Number<sp/>of<sp/>samples&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>param_helper_.bindBoolParam(&quot;enable_feature&quot;,<sp/>enable_feature,<sp/>&quot;Enable<sp/>feature<sp/>flag&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>param_helper_.bindStringParam(&quot;robot_name&quot;,<sp/>robot_name,<sp/>&quot;Robot<sp/>name&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Set<sp/>up<sp/>callback<sp/>for<sp/>validation<sp/>(optional)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>param_helper_.setupParameterCallback([this](const<sp/>auto&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Custom<sp/>validation<sp/>logic<sp/>here</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(max_vel<sp/>&gt;<sp/>5.0)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(...,<sp/>&quot;High<sp/>velocity!&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;<sp/><sp/>//<sp/>Accept<sp/>changes</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Load<sp/>initial<sp/>values</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>param_helper_.loadBoundParameters();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="ros2_helpers/include/ros2_helpers/parameters.hpp" line="79" column="1" bodyfile="ros2_helpers/include/ros2_helpers/parameters.hpp" bodystart="79" bodyend="382"/>
+    <listofallmembers>
+      <member refid="classparameters_1_1ParameterHelper_1a2c177f4567e5c37b2456787a1f0a2da4" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>bindBoolParam</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1aaa55665c070adb3fd244d28454f8b6d0" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>bindFloatParam</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a9a51940d15ac8b41ecaca399de2269bf" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>bindFloatVectorParam</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a9bab75fcd38c5af808a98ffa042f86c1" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>bindIntParam</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a79d5f3143e3b48047bb494c0b13f253e" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>bindStringParam</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a3ae98197943088c8ee6e2c421f199c09" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>declareBoolParam</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1ab989a118851c1de4d04fa0de4728f045" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>declareFloatParam</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1ac4d4f70483692f058c39c1280a01b202" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>declareIntParam</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a91553a822970c4da9e87a452f501d299" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>declareStringParam</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a60f8d0c57c78b4c1c3e44496dfda74a4" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>getParam</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1abb75497aaf65e971e7d10613f89c9e6c" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>initialize</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a972dabb897e84ce11ba275a7388e2cfe" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>initialize</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a73bdfb2183ed7a6be0fddd9d01324b67" prot="private" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>is_lifecycle_</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1aa4125a289b5bae65e3678c0482d03533" prot="private" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>lifecycle_node_</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a39baf91c634c0eda52d6be9992ade42f" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>loadBoundParameters</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a4647f864399d920fc06cbc543208d58d" prot="private" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>node_</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a548743a86b46463fe3362ff20cc74175" prot="private" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>param_bindings_</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a1ca07e0160baed587a187da30d784739" prot="private" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>param_callback_handle_</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a47e2f9332fc0e09819ac59e48d6481bb" prot="private" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>param_callback_handle_lifecycle_</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a485c5f86c265b885711ebe42bd5fff47" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>ParameterHelper</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a33fc2ae56f7597f90d621cb826b6763b" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>setParam</name></member>
+      <member refid="classparameters_1_1ParameterHelper_1a7c46052de452247a5f9c236ee3b616b0" prot="public" virt="non-virtual"><scope>parameters::ParameterHelper</scope><name>setupParameterCallback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

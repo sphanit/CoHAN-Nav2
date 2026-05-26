@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_a360442b5c1e10f75d733f402d53f91c" kind="dir">
+    <compoundname>invisible_humans_detection</compoundname>
+    <innerdir refid="dir_fed679653b0aa7bb5435a406c67c8553">include</innerdir>
+    <innerdir refid="dir_705ab453c193ce580148cb5def76f83d">src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="invisible_humans_detection/"/>
+  </compounddef>
+</doxygen>

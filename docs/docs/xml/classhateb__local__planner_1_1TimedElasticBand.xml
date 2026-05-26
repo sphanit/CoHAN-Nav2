@@ -1,0 +1,2128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1TimedElasticBand" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::TimedElasticBand</compoundname>
+    <includes refid="timed__elastic__band_8hpp" local="no">timed_elastic_band.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Utility and status methods</header>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1TimedElasticBand_1ad1f573fa556da17e5e95ca25fdef06b7" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacehateb__local__planner_1adb0456022df4079e7f827f10ee64981a" kindref="member">PoseSequence</ref></type>
+        <definition>PoseSequence hateb_local_planner::TimedElasticBand::pose_vec_</definition>
+        <argsstring></argsstring>
+        <name>pose_vec_</name>
+        <briefdescription>
+<para>Internal container storing the sequence of optimzable pose vertices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="579" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="579" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1TimedElasticBand_1a899eeb7fd9c03157610519a338cddb40" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacehateb__local__planner_1a6ee10d61c614b0238212192794ba76a2" kindref="member">TimeDiffSequence</ref></type>
+        <definition>TimeDiffSequence hateb_local_planner::TimedElasticBand::timediff_vec_</definition>
+        <argsstring></argsstring>
+        <name>timediff_vec_</name>
+        <briefdescription>
+<para>Internal container storing the sequence of optimzable timediff vertices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="580" column="20" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="580" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a7d3b7b55f87d538b6b61275aae6a7117" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hateb_local_planner::TimedElasticBand::findClosestTrajectoryPose</definition>
+        <argsstring>(const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;ref_point, double *distance=nullptr, int begin_idx=0) const</argsstring>
+        <name>findClosestTrajectoryPose</name>
+        <param>
+          <type>const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;</type>
+          <declname>ref_point</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>distance</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>begin_idx</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Find the closest point on the trajectory w.r.t. to a provided reference point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function can be useful to find the part of a trajectory that is close to an obstacle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ref_point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference point (2D position vector) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] the resulting minimum distance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>begin_idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start search at this pose index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index to the closest pose in the pose sequence </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="493" column="7" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="374" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1aaa09d18e5408b21d3e5eb38e81869401" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hateb_local_planner::TimedElasticBand::findClosestTrajectoryPose</definition>
+        <argsstring>(const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;ref_line_start, const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;ref_line_end, double *distance=nullptr) const</argsstring>
+        <name>findClosestTrajectoryPose</name>
+        <param>
+          <type>const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;</type>
+          <declname>ref_line_start</declname>
+        </param>
+        <param>
+          <type>const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;</type>
+          <declname>ref_line_end</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>distance</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Find the closest point on the trajectory w.r.t. to a provided reference line. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function can be useful to find the part of a trajectory that is close to an (line) obstacle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ref_line_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start of the reference line (2D position vector) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ref_line_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end of the reference line (2D position vector) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] the resulting minimum distance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index to the closest pose in the pose sequence </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="505" column="7" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="397" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a5b60e3f3ab7e79f0efa9d03d06a4b8cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hateb_local_planner::TimedElasticBand::findClosestTrajectoryPose</definition>
+        <argsstring>(const Point2dContainer &amp;vertices, double *distance=nullptr) const</argsstring>
+        <name>findClosestTrajectoryPose</name>
+        <param>
+          <type>const <ref refid="namespacehateb__local__planner_1aada6c9abcaa246f092095786ca9bf598" kindref="member">Point2dContainer</ref> &amp;</type>
+          <declname>vertices</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>distance</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Find the closest point on the trajectory w.r.t. to a provided reference polygon. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function can be useful to find the part of a trajectory that is close to an (polygon) obstacle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vertex container containing Eigen::Vector2d points (the last and first point are connected) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] the resulting minimum distance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index to the closest pose in the pose sequence </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="517" column="7" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="416" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a58edf6f82626b1641ed29222b10b6c54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hateb_local_planner::TimedElasticBand::findClosestTrajectoryPose</definition>
+        <argsstring>(const Obstacle &amp;obstacle, double *distance=nullptr) const</argsstring>
+        <name>findClosestTrajectoryPose</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref> &amp;</type>
+          <declname>obstacle</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>distance</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Find the closest point on the trajectory w.r.t to a provided obstacle type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function can be useful to find the part of a trajectory that is close to an obstacle. The method is calculates appropriate distance metrics for point, line and polygon obstacles. For all unknown obstacles the centroid is used.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obstacle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subclass of the <ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref> base class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] the resulting minimum distance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index to the closest pose in the pose sequence </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="530" column="7" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="450" bodyend="467"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1af129042cb95fb6e6b31b237a216e92a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int hateb_local_planner::TimedElasticBand::sizePoses</definition>
+        <argsstring>() const</argsstring>
+        <name>sizePoses</name>
+        <briefdescription>
+<para>Get the length of the internal pose sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="535" column="7" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="535" bodyend="535"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a65d3e3334d2633d2f91bf31912c6fa74" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int hateb_local_planner::TimedElasticBand::sizeTimeDiffs</definition>
+        <argsstring>() const</argsstring>
+        <name>sizeTimeDiffs</name>
+        <briefdescription>
+<para>Get the length of the internal timediff sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="540" column="7" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="540" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1aeb156e89b12145e5f5fd3baf7f420229" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::TimedElasticBand::isInit</definition>
+        <argsstring>() const</argsstring>
+        <name>isInit</name>
+        <briefdescription>
+<para>Check whether the trajectory is initialized (nonzero pose and timediff sequences) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="545" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="545" bodyend="545"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a565d7369bc06660ef38fdd780cedf9a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::TimedElasticBand::getSumOfAllTimeDiffs</definition>
+        <argsstring>() const</argsstring>
+        <name>getSumOfAllTimeDiffs</name>
+        <briefdescription>
+<para>Calculate the total transition time (sum over all time intervals of the timediff sequence) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="550" column="10" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="208" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a7e838ee5e6e3c39b4b36585245e730fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::TimedElasticBand::getSumOfTimeDiffsUpToIdx</definition>
+        <argsstring>(int index) const</argsstring>
+        <name>getSumOfTimeDiffsUpToIdx</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the estimated transition time up to the pose denoted by index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the pose up to which the transition times are summed up </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Estimated transition time up to pose index </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="557" column="10" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="217" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a49a3df8215ea4bc1f2fbcf5995457aef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::TimedElasticBand::getAccumulatedDistance</definition>
+        <argsstring>() const</argsstring>
+        <name>getAccumulatedDistance</name>
+        <briefdescription>
+<para>Calculate the length (accumulated euclidean distance) of the trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="562" column="10" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="229" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a15a0f4902db31ab005e61cb826829704" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::TimedElasticBand::isTrajectoryInsideRegion</definition>
+        <argsstring>(double radius, double max_dist_behind_robot=-1, int skip_poses=0)</argsstring>
+        <name>isTrajectoryInsideRegion</name>
+        <param>
+          <type>double</type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max_dist_behind_robot</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>skip_poses</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Check if all trajectory points are contained in a specific region. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The specific region is a circle around the current robot position (Pose(0)) with given radius <computeroutput>radius</computeroutput>. This method investigates a different radius for points behind the robot if <computeroutput>max_dist_behind_robot</computeroutput> &gt;= 0. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>radius of the region with the robot position (Pose(0)) as center </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_dist_behind_robot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A separate radius for trajectory points behind the robot, activated if 0 or positive </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>skip_poses</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If &gt;0: the specified number of poses are skipped for the test, e.g. Pose(0), Pose(0+skip_poses+1), Pose(2*skip_poses+2), ... are tested. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput>, if all tested trajectory points are inside the specified region, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="574" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="507" bodyend="532"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Access pose and timediff sequences</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a2e513d2cca2bcbed0f9a5733fe421cea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacehateb__local__planner_1adb0456022df4079e7f827f10ee64981a" kindref="member">PoseSequence</ref> &amp;</type>
+        <definition>PoseSequence&amp; hateb_local_planner::TimedElasticBand::poses</definition>
+        <argsstring>()</argsstring>
+        <name>poses</name>
+        <briefdescription>
+<para>Access the complete pose sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>reference to the pose sequence </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="100" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a81f6f54884c074e6e28bb4f0b27aefea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="namespacehateb__local__planner_1adb0456022df4079e7f827f10ee64981a" kindref="member">PoseSequence</ref> &amp;</type>
+        <definition>const PoseSequence&amp; hateb_local_planner::TimedElasticBand::poses</definition>
+        <argsstring>() const</argsstring>
+        <name>poses</name>
+        <briefdescription>
+<para>Access the complete pose sequence (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the pose sequence </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="106" column="22" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1ac97dc3b90ea9512a5afa8c6f48f0136e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacehateb__local__planner_1a6ee10d61c614b0238212192794ba76a2" kindref="member">TimeDiffSequence</ref> &amp;</type>
+        <definition>TimeDiffSequence&amp; hateb_local_planner::TimedElasticBand::timediffs</definition>
+        <argsstring>()</argsstring>
+        <name>timediffs</name>
+        <briefdescription>
+<para>Access the complete timediff sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>reference to the dimediff sequence </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="112" column="20" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a03d7376cb444adc850930d112583a5bf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="namespacehateb__local__planner_1a6ee10d61c614b0238212192794ba76a2" kindref="member">TimeDiffSequence</ref> &amp;</type>
+        <definition>const TimeDiffSequence&amp; hateb_local_planner::TimedElasticBand::timediffs</definition>
+        <argsstring>() const</argsstring>
+        <name>timediffs</name>
+        <briefdescription>
+<para>Access the complete timediff sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>reference to the dimediff sequence </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="118" column="26" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="118" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a09a14db7568744389d5a93db03808e0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; hateb_local_planner::TimedElasticBand::TimeDiff</definition>
+        <argsstring>(int index)</argsstring>
+        <name>TimeDiff</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Access the time difference at pos <computeroutput>index</computeroutput> of the time sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element position inside the internal TimeDiffSequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>reference to the time difference at pos <computeroutput>index</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="125" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1ae2a4d90f430654d80afdfd9426131b00" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; hateb_local_planner::TimedElasticBand::TimeDiff</definition>
+        <argsstring>(int index) const</argsstring>
+        <name>TimeDiff</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Access the time difference at pos <computeroutput>index</computeroutput> of the time sequence (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element position inside the internal TimeDiffSequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to the time difference at pos <computeroutput>index</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="135" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a512b98c5681038804b31d9747f1c149a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+        <definition>PoseSE2&amp; hateb_local_planner::TimedElasticBand::Pose</definition>
+        <argsstring>(int index)</argsstring>
+        <name>Pose</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Access the pose at pos <computeroutput>index</computeroutput> of the pose sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element position inside the internal PoseSequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>reference to the pose at pos <computeroutput>index</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="145" column="11" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="145" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a297390580f3a675921a2915d98f6b597" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+        <definition>const PoseSE2&amp; hateb_local_planner::TimedElasticBand::Pose</definition>
+        <argsstring>(int index) const</argsstring>
+        <name>Pose</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Access the pose at pos <computeroutput>index</computeroutput> of the pose sequence (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element position inside the internal PoseSequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to the pose at pos <computeroutput>index</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="155" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="155" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a754e0c2cae23952c0dd7bb8b6ea55214" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+        <definition>PoseSE2&amp; hateb_local_planner::TimedElasticBand::BackPose</definition>
+        <argsstring>()</argsstring>
+        <name>BackPose</name>
+        <briefdescription>
+<para>Access the last <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> in the pose sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="163" column="11" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="163" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a7eabda2810a1939193cc6f661f18b601" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+        <definition>const PoseSE2&amp; hateb_local_planner::TimedElasticBand::BackPose</definition>
+        <argsstring>() const</argsstring>
+        <name>BackPose</name>
+        <briefdescription>
+<para>Access the last <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> in the pose sequence (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="168" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="168" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a1db36891f18451fb3404745affc6b5c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; hateb_local_planner::TimedElasticBand::BackTimeDiff</definition>
+        <argsstring>()</argsstring>
+        <name>BackTimeDiff</name>
+        <briefdescription>
+<para>Access the last TimeDiff in the time diff sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="173" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="173" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1ab190b1f66f3c210b6d8969b56ed33a84" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; hateb_local_planner::TimedElasticBand::BackTimeDiff</definition>
+        <argsstring>() const</argsstring>
+        <name>BackTimeDiff</name>
+        <briefdescription>
+<para>Access the last TimeDiff in the time diff sequence (read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="178" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="178" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1adb4522408e61e4d061b7140cdbfb186e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1VertexPose" kindref="compound">VertexPose</ref> *</type>
+        <definition>VertexPose* hateb_local_planner::TimedElasticBand::PoseVertex</definition>
+        <argsstring>(int index)</argsstring>
+        <name>PoseVertex</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Access the vertex of a pose at pos <computeroutput>index</computeroutput> for optimization purposes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element position inside the internal PoseSequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Weak raw pointer to the pose vertex at pos <computeroutput>index</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="185" column="14" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="185" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1aa48013a5132fd88a0822499be5287642" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhateb__local__planner_1_1VertexTimeDiff" kindref="compound">VertexTimeDiff</ref> *</type>
+        <definition>VertexTimeDiff* hateb_local_planner::TimedElasticBand::TimeDiffVertex</definition>
+        <argsstring>(int index)</argsstring>
+        <name>TimeDiffVertex</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Access the vertex of a time difference at pos <computeroutput>index</computeroutput> for optimization purposes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element position inside the internal TimeDiffSequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Weak raw pointer to the timediff vertex at pos <computeroutput>index</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="195" column="18" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="195" bodyend="198"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Append new elements to the pose and timediff sequences</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a532b60e492520918cfc1942d5f94aac5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::addPose</definition>
+        <argsstring>(const PoseSE2 &amp;pose, bool fixed=false)</argsstring>
+        <name>addPose</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fixed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Append a new pose vertex to the back of the pose sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> to push back on the internal PoseSequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fixed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mark the pose to be fixed or unfixed during trajectory optimization (important for the TebOptimalPlanner) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="210" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1aacdd67f4e874513f1496639099d76207" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::addPose</definition>
+        <argsstring>(const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;position, double theta, bool fixed=false)</argsstring>
+        <name>addPose</name>
+        <param>
+          <type>const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fixed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Append a new pose vertex to the back of the pose sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D vector representing the position part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yaw angle representing the orientation part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fixed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mark the pose to be fixed or unfixed during trajectory optimization (important for the TebOptimalPlanner) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="218" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1ac00a9f7b6bdafa86c7c325db69e413b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::addPose</definition>
+        <argsstring>(double x, double y, double theta, bool fixed=false)</argsstring>
+        <name>addPose</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fixed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Append a new pose vertex to the back of the pose sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinate of the position part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y-coordinate of the position part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yaw angle representing the orientation part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fixed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mark the pose to be fixed or unfixed during trajectory optimization (important for the TebOptimalPlanner) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="227" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1ad3b961f0890e7cd873ec61e680c6b2fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::addTimeDiff</definition>
+        <argsstring>(double dt, bool fixed=false)</argsstring>
+        <name>addTimeDiff</name>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fixed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Append a new time difference vertex to the back of the time diff sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time difference value to push back on the internal TimeDiffSequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fixed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mark the pose to be fixed or unfixed during trajectory optimization (important for the TebOptimalPlanner) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="234" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="84" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a89b8dd681f1417e1e50863e5365cbb54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::addPoseAndTimeDiff</definition>
+        <argsstring>(const PoseSE2 &amp;pose, double dt)</argsstring>
+        <name>addPoseAndTimeDiff</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> to push back on the internal PoseSequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time difference value to push back on the internal TimeDiffSequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>Since the timediff is defined to connect two consecutive poses, this call is only allowed if there exist already n poses and n-1 timediffs in the sequences (n=1,2,...): therefore add a single pose using <ref refid="classhateb__local__planner_1_1TimedElasticBand_1a532b60e492520918cfc1942d5f94aac5" kindref="member">addPose()</ref> first! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="244" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="98" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a0ae610ac110261b82ac574a9616f3e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::addPoseAndTimeDiff</definition>
+        <argsstring>(const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;position, double theta, double dt)</argsstring>
+        <name>addPoseAndTimeDiff</name>
+        <param>
+          <type>const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D vector representing the position part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yaw angle representing the orientation part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time difference value to push back on the internal TimeDiffSequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>see <ref refid="classhateb__local__planner_1_1TimedElasticBand_1a89b8dd681f1417e1e50863e5365cbb54" kindref="member">addPoseAndTimeDiff(const PoseSE2&amp; pose, double dt)</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="253" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="106" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a105a18339bc26b24f743e051740d855a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::addPoseAndTimeDiff</definition>
+        <argsstring>(double x, double y, double theta, double dt)</argsstring>
+        <name>addPoseAndTimeDiff</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinate of the position part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y-coordinate of the position part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yaw angle representing the orientation part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time difference value to push back on the internal TimeDiffSequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>see <ref refid="classhateb__local__planner_1_1TimedElasticBand_1a89b8dd681f1417e1e50863e5365cbb54" kindref="member">addPoseAndTimeDiff(const PoseSE2&amp; pose, double dt)</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="263" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="90" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Insert new elements and remove elements of the pose and timediff sequences</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1ab42e3738fb81f9bdce3eb2b1e745986d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::insertPose</definition>
+        <argsstring>(int index, const PoseSE2 &amp;pose)</argsstring>
+        <name>insertPose</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <briefdescription>
+<para>Insert a new pose vertex at pos. <computeroutput>index</computeroutput> to the pose sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element position inside the internal PoseSequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> element to insert into the internal PoseSequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="275" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1aa02be220017a9ea07e0c2c436e624981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::insertPose</definition>
+        <argsstring>(int index, const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;position, double theta)</argsstring>
+        <name>insertPose</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+<para>Insert a new pose vertex at pos. <computeroutput>index</computeroutput> to the pose sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element position inside the internal PoseSequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D vector representing the position part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yaw-angle representing the orientation part </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="283" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a85bae7b6407c1e41eb516bd0fca5cd83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::insertPose</definition>
+        <argsstring>(int index, double x, double y, double theta)</argsstring>
+        <name>insertPose</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+<para>Insert a new pose vertex at pos. <computeroutput>index</computeroutput> to the pose sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element position inside the internal PoseSequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinate of the position part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y-coordinate of the position part </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yaw-angle representing the orientation part </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="292" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a6b74ce9d742268151c0626438099cf0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::insertTimeDiff</definition>
+        <argsstring>(int index, double dt)</argsstring>
+        <name>insertTimeDiff</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Insert a new timediff vertex at pos. <computeroutput>index</computeroutput> to the timediff sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element position inside the internal TimeDiffSequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timediff value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="299" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a36d2b9295e1e8314d57a8232e2e18ac4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::deletePose</definition>
+        <argsstring>(int index)</argsstring>
+        <name>deletePose</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Delete pose at pos. <computeroutput>index</computeroutput> in the pose sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element position inside the internal PoseSequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="305" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="114" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a12f6ffe38c80d5e45abfee192a38dd93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::deletePoses</definition>
+        <argsstring>(int index, int number)</argsstring>
+        <name>deletePoses</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+<para>Delete multiple (<computeroutput>number</computeroutput>) poses starting at pos. <computeroutput>index</computeroutput> in the pose sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first element position inside the internal PoseSequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements that should be deleted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="312" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="120" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a13a7d4d29c13fbc96e70c35ba8dc736e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::deleteTimeDiff</definition>
+        <argsstring>(int index)</argsstring>
+        <name>deleteTimeDiff</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Delete pose at pos. <computeroutput>index</computeroutput> in the timediff sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element position inside the internal TimeDiffSequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="318" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="126" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a0fa4471c08f1271d95e885b8a53a40dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::deleteTimeDiffs</definition>
+        <argsstring>(int index, int number)</argsstring>
+        <name>deleteTimeDiffs</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+<para>Delete multiple (<computeroutput>number</computeroutput>) time differences starting at pos. <computeroutput>index</computeroutput> in the timediff sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first element position inside the internal TimeDiffSequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements that should be deleted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="325" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="132" bodyend="136"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Init the trajectory</header>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a905235b7cdcbc1c90a84edadcafacc99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::TimedElasticBand::initTrajectoryToGoal</definition>
+        <argsstring>(const PoseSE2 &amp;start, const PoseSE2 &amp;goal, double diststep=0, double max_vel_x=0.5, int min_samples=3, bool guess_backwards_motion=false)</argsstring>
+        <name>initTrajectoryToGoal</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>goal</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>diststep</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max_vel_x</declname>
+          <defval>0.5</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_samples</declname>
+          <defval>3</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>guess_backwards_motion</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Initialize a trajectory between a given start and goal pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The implemented algorithm subsamples the straight line between start and goal using a given discretiziation width. <linebreak/>
+The discretization width can be defined in the euclidean space using the <computeroutput>diststep</computeroutput> parameter. Each time difference between two consecutive poses is initialized to <computeroutput>timestep</computeroutput>. <linebreak/>
+If the <computeroutput>diststep</computeroutput> is chosen to be zero, the resulting trajectory contains the start and goal pose only. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> defining the start of the trajectory </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>goal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> defining the goal of the trajectory (final pose) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>diststep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>euclidean distance between two consecutive poses (if 0, no intermediate samples are inserted despite min_samples) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_vel_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum translational velocity used for determining time differences </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum number of samples that should be initialized at least </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>guess_backwards_motion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allow the initialization of backwards oriented trajectories if the goal heading is pointing behind the robot </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if everything was fine, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="350" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="238" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a4e07b7fde0d57e3c7274f53b6fa7efb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename BidirIter</type>
+          </param>
+          <param>
+            <type>typename Fun</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool hateb_local_planner::TimedElasticBand::initTrajectoryToGoal</definition>
+        <argsstring>(BidirIter path_start, BidirIter path_end, Fun fun_position, double max_vel_x, double max_vel_theta, boost::optional&lt; double &gt; max_acc_x, boost::optional&lt; double &gt; max_acc_theta, boost::optional&lt; double &gt; start_orientation, boost::optional&lt; double &gt; goal_orientation, int min_samples=3, bool guess_backwards_motion=false)</argsstring>
+        <name>initTrajectoryToGoal</name>
+        <param>
+          <type>BidirIter</type>
+          <declname>path_start</declname>
+        </param>
+        <param>
+          <type>BidirIter</type>
+          <declname>path_end</declname>
+        </param>
+        <param>
+          <type>Fun</type>
+          <declname>fun_position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max_vel_x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max_vel_theta</declname>
+        </param>
+        <param>
+          <type>boost::optional&lt; double &gt;</type>
+          <declname>max_acc_x</declname>
+        </param>
+        <param>
+          <type>boost::optional&lt; double &gt;</type>
+          <declname>max_acc_theta</declname>
+        </param>
+        <param>
+          <type>boost::optional&lt; double &gt;</type>
+          <declname>start_orientation</declname>
+        </param>
+        <param>
+          <type>boost::optional&lt; double &gt;</type>
+          <declname>goal_orientation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_samples</declname>
+          <defval>3</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>guess_backwards_motion</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Initialize a trajectory from a generic 2D reference path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The temporal information is determined using a given maximum velocity (2D vector containing the translational and angular velocity). <linebreak/>
+A constant velocity profile is implemented. <linebreak/>
+A possible maximum acceleration is considered if <computeroutput>max_acceleration</computeroutput> param is provided.</para>
+<para>Since the orientation is not included in the reference path, it can be provided seperately (e.g. from the robot pose and robot goal). <linebreak/>
+Otherwise the goal heading will be used as start and goal orientation. <linebreak/>
+The orientation along the trajectory will be determined using the connection vector between two consecutive positions of the reference path.</para>
+<para>The reference path is provided using a start and end iterator to a container class. You must provide a unary function that accepts the dereferenced iterator and returns a copy or (const) reference to an Eigen::Vector2d type containing the 2d position.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start iterator of a generic 2d path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end iterator of a generic 2d path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fun_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unary function that returns the Eigen::Vector2d object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_vel_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum translational velocity used for determining time differences </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_vel_theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum angular velocity used for determining time differences </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_acc_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specify to satisfy a maxmimum transl. acceleration and decceleration (optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_acc_theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specify to satisfy a maxmimum angular acceleration and decceleration (optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Orientation of the first pose of the trajectory (optional, otherwise use goal heading) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>goal_orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Orientation of the last pose of the trajectory (optional, otherwise use goal heading) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum number of samples that should be initialized at least </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>guess_backwards_motion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allow the initialization of backwards oriented trajectories if the goal heading is pointing behind the robot </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BidirIter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bidirectional iterator type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Fun</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unyary function that transforms the dereferenced iterator into an Eigen::Vector2d </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if everything was fine, false otherwise </para>
+</simplesect>
+<simplesect kind="remark"><para>Use <computeroutput>boost::none</computeroutput> to skip optional arguments. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="387" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="588" bodyend="700"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a7e2706cfc5553699970dc4f6cecceda4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::TimedElasticBand::initTrajectoryToGoal</definition>
+        <argsstring>(const std::vector&lt; geometry_msgs::msg::PoseStamped &gt; &amp;plan, double max_vel_x, double max_vel_theta, bool estimate_orient=false, int min_samples=3, bool guess_backwards_motion=false, double skip_dist=0.0)</argsstring>
+        <name>initTrajectoryToGoal</name>
+        <param>
+          <type>const std::vector&lt; geometry_msgs::msg::PoseStamped &gt; &amp;</type>
+          <declname>plan</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max_vel_x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max_vel_theta</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>estimate_orient</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_samples</declname>
+          <defval>3</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>guess_backwards_motion</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>skip_dist</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+<para>Initialize a trajectory from a reference pose sequence (positions and orientations). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method initializes the timed elastic band using a pose container (e.g. as local plan from the ros navigation stack). <linebreak/>
+The initial time difference between two consecutive poses can be uniformly set via the argument <computeroutput>dt</computeroutput>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of geometry_msgs::msg::PoseStamped </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_vel_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum translational velocity used for determining time differences </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_vel_theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum rotational velocity used for determining time differences </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>estimate_orient</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, calculate orientation using the straight line distance vector between consecutive poses (only copy start and goal orientation; recommended if no orientation data is available). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum number of samples that should be initialized at least </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>guess_backwards_motion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allow the initialization of backwards oriented trajectories if the goal heading is pointing behind the robot (this parameter is used only if <computeroutput>estimate_orient</computeroutput> is enabled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if everything was fine, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="408" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="303" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1aca5d7bbd67a53062d95690efdd76056e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::updateAndPruneTEB</definition>
+        <argsstring>(boost::optional&lt; const PoseSE2 &amp; &gt; new_start, boost::optional&lt; const PoseSE2 &amp; &gt; new_goal, int min_samples=3)</argsstring>
+        <name>updateAndPruneTEB</name>
+        <param>
+          <type>boost::optional&lt; const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp; &gt;</type>
+          <declname>new_start</declname>
+        </param>
+        <param>
+          <type>boost::optional&lt; const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp; &gt;</type>
+          <declname>new_goal</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_samples</declname>
+          <defval>3</defval>
+        </param>
+        <briefdescription>
+<para>Hot-Start from an existing trajectory with updated start and goal poses. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method updates a previously optimized trajectory with a new start and/or a new goal pose. <linebreak/>
+The current simple implementation cuts of pieces of the trajectory that are already passed due to the new start. <linebreak/>
+Afterwards the start and goal pose are replaced by the new ones. The resulting discontinuity will not be smoothed. The optimizer has to smooth the trajectory in TebOptimalPlanner. <linebreak/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>new_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New start pose (optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_goal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New goal pose (optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify the minimum number of samples that should at least remain in the trajectory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="424" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="469" bodyend="505"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a3576adcaec45103edd7e1d0da6b97a7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::autoResize</definition>
+        <argsstring>(double dt_ref, double dt_hysteresis, int min_samples=3, int max_samples=1000, bool fast_mode=false)</argsstring>
+        <name>autoResize</name>
+        <param>
+          <type>double</type>
+          <declname>dt_ref</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt_hysteresis</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_samples</declname>
+          <defval>3</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_samples</declname>
+          <defval>1000</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fast_mode</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Resize the trajectory by removing or inserting a (pose,dt) pair depending on a reference temporal resolution. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Resizing the trajectory is helpful e.g. for the following scenarios: <verbatim>- Obstacles requires the teb to be extended in order to
+  satisfy the given discritization width (plan resolution)
+ and to avoid undesirable behavior due to a large/small discretization step widths \f$ \Delta T_i \f$
+  After clearance of obstacles, the teb should (re-) contract to its (time-)optimal version.
+</verbatim><itemizedlist>
+<listitem><para>If the distance to the goal state is getting smaller, dt is decreasing as well. This leads to a heavily fine-grained discretization in combination with many discrete poses. Thus, the computation time will be/remain high and in addition numerical instabilities can appear (e.g. due to the division by a small <formula id="16">$ \Delta T_i $</formula>).</para>
+</listitem></itemizedlist>
+</para>
+<para>The implemented strategy checks all timediffs <formula id="16">$ \Delta T_i $</formula> and <verbatim>- inserts a new sample if \f$ \Delta T_i &gt; \Delta T_{ref} + \Delta T_{hyst} \f$
+</verbatim><itemizedlist>
+<listitem><para>removes a sample if <formula id="37">$ \Delta T_i &lt; \Delta T_{ref} - \Delta T_{hyst} $</formula></para>
+</listitem></itemizedlist>
+</para>
+<para>Each call only one new sample (pose-dt-pair) is inserted or removed. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt_ref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference temporal resolution </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt_hysteresis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hysteresis to avoid oscillations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum number of samples that should be remain in the trajectory after resizing </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of samples that should not be exceeded during resizing </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fast_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true, the trajectory is iterated once to insert or erase points; if false the trajectory is repeatedly iterated until no poses are added or removed anymore </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>iterate through all TEB states only once and add/remove states!</para>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="455" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="180" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1abf2497da9c5e1c9f83ceba296e5a0117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::setPoseVertexFixed</definition>
+        <argsstring>(int index, bool status)</argsstring>
+        <name>setPoseVertexFixed</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Set a pose vertex at pos <computeroutput>index</computeroutput> of the pose sequence to be fixed or unfixed during optimization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index to the pose vertex </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, the vertex will be fixed, otherwise unfixed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="462" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a59b9b853592805800d26fcf43b66b64b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::setTimeDiffVertexFixed</definition>
+        <argsstring>(int index, bool status)</argsstring>
+        <name>setTimeDiffVertexFixed</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Set a timediff vertex at pos <computeroutput>index</computeroutput> of the timediff sequence to be fixed or unfixed during optimization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index to the timediff vertex </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>true</computeroutput>, the vertex will be fixed, otherwise unfixed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="469" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="175" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a17ecd326ce62af3ac2254f5fb87c8bf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TimedElasticBand::clearTimedElasticBand</definition>
+        <argsstring>()</argsstring>
+        <name>clearTimedElasticBand</name>
+        <briefdescription>
+<para>clear all poses and timediffs from the trajectory. The pose and timediff sequences will be empty and <ref refid="classhateb__local__planner_1_1TimedElasticBand_1aeb156e89b12145e5f5fd3baf7f420229" kindref="member">isInit()</ref> will return <computeroutput>false</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="475" column="8" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="158" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1a50e99238a217986bd9b161e05ef8e14b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::TimedElasticBand::TimedElasticBand</definition>
+        <argsstring>()</argsstring>
+        <name>TimedElasticBand</name>
+        <briefdescription>
+<para>Construct the class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="86" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TimedElasticBand_1afc52a84ae6d0e596b91d9a7ff5a5eacc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>hateb_local_planner::TimedElasticBand::~TimedElasticBand</definition>
+        <argsstring>()</argsstring>
+        <name>~TimedElasticBand</name>
+        <briefdescription>
+<para>Destruct the class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="91" column="11" bodyfile="hateb_local_planner/src/timed_elastic_band.cpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class that defines a trajectory modeled as an elastic band with augmented tempoarl information. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>All trajectory related methods (initialization, modifying, ...) are implemented inside this class. <linebreak/>
+Let <formula id="34">$ Q = \lbrace \mathbf{s}_i \rbrace_{i=0...n},\ n \in \mathbb{N} $</formula> be a sequence of poses, <linebreak/>
+in which <formula id="35">$ \mathbf{s}_i = [x_i, y_i, \beta_i]^T \in \mathbb{R}^2 \times S^1 $</formula> denotes a single pose of the robot. <linebreak/>
+The Timed Elastic Band (TEB) augments this sequence of poses by incorporating time intervals between two consecutive poses, resuting in a sequence of <computeroutput>n-1</computeroutput> time intervals <formula id="16">$ \Delta T_i $</formula>: <linebreak/>
+ <formula id="36">$ \tau = \lbrace \Delta T_i \rbrace_{i=0...n-1} $</formula>. <linebreak/>
+Each time interval (time diff) denotes the time that the robot requires to transit from the current configuration to the next configuration. The tuple of both sequences defines the underlying trajectory.</para>
+<para>Poses and time differences are wrapped into a g2o::Vertex class in order to enable the efficient optimization in TebOptimalPlanner. <linebreak/>
+TebOptimalPlanner utilizes this Timed_Elastic_band class for representing an optimizable trajectory. </para>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" line="81" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/timed_elastic_band.hpp" bodystart="81" bodyend="584"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a532b60e492520918cfc1942d5f94aac5" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>addPose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1aacdd67f4e874513f1496639099d76207" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>addPose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1ac00a9f7b6bdafa86c7c325db69e413b0" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>addPose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a89b8dd681f1417e1e50863e5365cbb54" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>addPoseAndTimeDiff</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a0ae610ac110261b82ac574a9616f3e21" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>addPoseAndTimeDiff</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a105a18339bc26b24f743e051740d855a" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>addPoseAndTimeDiff</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1ad3b961f0890e7cd873ec61e680c6b2fa" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>addTimeDiff</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a3576adcaec45103edd7e1d0da6b97a7b" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>autoResize</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a754e0c2cae23952c0dd7bb8b6ea55214" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>BackPose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a7eabda2810a1939193cc6f661f18b601" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>BackPose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a1db36891f18451fb3404745affc6b5c9" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>BackTimeDiff</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1ab190b1f66f3c210b6d8969b56ed33a84" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>BackTimeDiff</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a17ecd326ce62af3ac2254f5fb87c8bf9" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>clearTimedElasticBand</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a36d2b9295e1e8314d57a8232e2e18ac4" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>deletePose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a12f6ffe38c80d5e45abfee192a38dd93" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>deletePoses</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a13a7d4d29c13fbc96e70c35ba8dc736e" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>deleteTimeDiff</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a0fa4471c08f1271d95e885b8a53a40dc" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>deleteTimeDiffs</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a7d3b7b55f87d538b6b61275aae6a7117" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>findClosestTrajectoryPose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1aaa09d18e5408b21d3e5eb38e81869401" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>findClosestTrajectoryPose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a5b60e3f3ab7e79f0efa9d03d06a4b8cd" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>findClosestTrajectoryPose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a58edf6f82626b1641ed29222b10b6c54" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>findClosestTrajectoryPose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a49a3df8215ea4bc1f2fbcf5995457aef" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>getAccumulatedDistance</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a565d7369bc06660ef38fdd780cedf9a8" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>getSumOfAllTimeDiffs</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a7e838ee5e6e3c39b4b36585245e730fc" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>getSumOfTimeDiffsUpToIdx</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a905235b7cdcbc1c90a84edadcafacc99" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>initTrajectoryToGoal</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a4e07b7fde0d57e3c7274f53b6fa7efb2" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>initTrajectoryToGoal</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a7e2706cfc5553699970dc4f6cecceda4" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>initTrajectoryToGoal</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1ab42e3738fb81f9bdce3eb2b1e745986d" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>insertPose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1aa02be220017a9ea07e0c2c436e624981" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>insertPose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a85bae7b6407c1e41eb516bd0fca5cd83" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>insertPose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a6b74ce9d742268151c0626438099cf0a" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>insertTimeDiff</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1aeb156e89b12145e5f5fd3baf7f420229" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>isInit</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a15a0f4902db31ab005e61cb826829704" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>isTrajectoryInsideRegion</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a512b98c5681038804b31d9747f1c149a" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>Pose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a297390580f3a675921a2915d98f6b597" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>Pose</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1ad1f573fa556da17e5e95ca25fdef06b7" prot="protected" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>pose_vec_</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a2e513d2cca2bcbed0f9a5733fe421cea" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>poses</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a81f6f54884c074e6e28bb4f0b27aefea" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>poses</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1adb4522408e61e4d061b7140cdbfb186e" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>PoseVertex</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1abf2497da9c5e1c9f83ceba296e5a0117" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>setPoseVertexFixed</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a59b9b853592805800d26fcf43b66b64b" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>setTimeDiffVertexFixed</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1af129042cb95fb6e6b31b237a216e92a2" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>sizePoses</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a65d3e3334d2633d2f91bf31912c6fa74" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>sizeTimeDiffs</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a50e99238a217986bd9b161e05ef8e14b" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>TimedElasticBand</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a09a14db7568744389d5a93db03808e0b" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>TimeDiff</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1ae2a4d90f430654d80afdfd9426131b00" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>TimeDiff</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a899eeb7fd9c03157610519a338cddb40" prot="protected" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>timediff_vec_</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1ac97dc3b90ea9512a5afa8c6f48f0136e" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>timediffs</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1a03d7376cb444adc850930d112583a5bf" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>timediffs</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1aa48013a5132fd88a0822499be5287642" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>TimeDiffVertex</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1aca5d7bbd67a53062d95690efdd76056e" prot="public" virt="non-virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>updateAndPruneTEB</name></member>
+      <member refid="classhateb__local__planner_1_1TimedElasticBand_1afc52a84ae6d0e596b91d9a7ff5a5eacc" prot="public" virt="virtual"><scope>hateb_local_planner::TimedElasticBand</scope><name>~TimedElasticBand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1BaseFootprintModel" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>hateb_local_planner::BaseFootprintModel</compoundname>
+    <derivedcompoundref refid="classhateb__local__planner_1_1CircularFootprint" prot="public" virt="non-virtual">hateb_local_planner::CircularFootprint</derivedcompoundref>
+    <derivedcompoundref refid="classhateb__local__planner_1_1LineFootprint" prot="public" virt="non-virtual">hateb_local_planner::LineFootprint</derivedcompoundref>
+    <derivedcompoundref refid="classhateb__local__planner_1_1PointFootprint" prot="public" virt="non-virtual">hateb_local_planner::PointFootprint</derivedcompoundref>
+    <derivedcompoundref refid="classhateb__local__planner_1_1PolygonFootprint" prot="public" virt="non-virtual">hateb_local_planner::PolygonFootprint</derivedcompoundref>
+    <derivedcompoundref refid="classhateb__local__planner_1_1TwoCirclesFootprint" prot="public" virt="non-virtual">hateb_local_planner::TwoCirclesFootprint</derivedcompoundref>
+    <includes refid="footprint__model_8h" local="no">footprint_model.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1BaseFootprintModel_1a23994e2593de8cedf5f839058407d8ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::BaseFootprintModel::BaseFootprintModel</definition>
+        <argsstring>()=default</argsstring>
+        <name>BaseFootprintModel</name>
+        <briefdescription>
+<para>Default constructor of the abstract obstacle class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="66" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BaseFootprintModel_1a011c4b6ecc51affad4f90b37330f52ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual hateb_local_planner::BaseFootprintModel::~BaseFootprintModel</definition>
+        <argsstring>()=default</argsstring>
+        <name>~BaseFootprintModel</name>
+        <briefdescription>
+<para>Virtual destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="71" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BaseFootprintModel_1a72b681ecb2473cef98a42bebd4472945" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double hateb_local_planner::BaseFootprintModel::calculateDistance</definition>
+        <argsstring>(const PoseSE2 &amp;current_pose, const Obstacle *obstacle) const =0</argsstring>
+        <name>calculateDistance</name>
+        <reimplementedby refid="classhateb__local__planner_1_1PointFootprint_1ac3745f75396a0cecc9ac066396ee0a74">calculateDistance</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1CircularFootprint_1ad4b70e4c164ca53b89cee335a535d113">calculateDistance</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a47e95f9896cfe76f474d8557281b44a2">calculateDistance</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1LineFootprint_1a513cb63354f96e4e4e864510a0eb444f">calculateDistance</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1PolygonFootprint_1a3fd2aa3808860c2e89361c21aa051d27">calculateDistance</reimplementedby>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>current_pose</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref> *</type>
+          <declname>obstacle</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the distance between the robot/human and an obstacle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current_pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current robot/human pose </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the obstacle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Euclidean distance to the robot/human </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="79" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BaseFootprintModel_1ae162fde4a89a0101cca339a3704e27f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double hateb_local_planner::BaseFootprintModel::estimateSpatioTemporalDistance</definition>
+        <argsstring>(const PoseSE2 &amp;current_pose, const Obstacle *obstacle, double t) const =0</argsstring>
+        <name>estimateSpatioTemporalDistance</name>
+        <reimplementedby refid="classhateb__local__planner_1_1PointFootprint_1a54a816acca44e733ded8b035166cc349">estimateSpatioTemporalDistance</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1CircularFootprint_1a3ed2b580fc92bc83532a6686dd018dc4">estimateSpatioTemporalDistance</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1TwoCirclesFootprint_1abb28f17e4749f4688515c76bb7e01155">estimateSpatioTemporalDistance</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1LineFootprint_1a4371c29b86388e99d0ddd40c867db974">estimateSpatioTemporalDistance</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1PolygonFootprint_1a77726f6f43f26b1d18b3118352083e17">estimateSpatioTemporalDistance</reimplementedby>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>current_pose</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref> *</type>
+          <declname>obstacle</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Estimate the distance between the robot/human and the predicted location of an obstacle at time t. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current_pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>robot/human pose, from which the distance to the obstacle is estimated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the dynamic obstacle (constant velocity model is assumed) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time, for which the predicted distance to the obstacle is calculated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Euclidean distance to the robot/human </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="88" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BaseFootprintModel_1ab9bd7f908bba3c23049b208a64a03909" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void hateb_local_planner::BaseFootprintModel::visualizeModel</definition>
+        <argsstring>(const PoseSE2 &amp;current_pose, std::vector&lt; visualization_msgs::msg::Marker &gt; &amp;markers, const std_msgs::msg::ColorRGBA &amp;color) const</argsstring>
+        <name>visualizeModel</name>
+        <reimplementedby refid="classhateb__local__planner_1_1PointFootprint_1a2c574bf57ca9d1c197a8439d5190e282">visualizeModel</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1CircularFootprint_1a5a85189488ebe3d5c3cf367540c14e09">visualizeModel</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1TwoCirclesFootprint_1aa7ecb0cb353aec12157bb0408c279872">visualizeModel</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1LineFootprint_1a8cac11b36b99769426de64f4ff56332a">visualizeModel</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1PolygonFootprint_1aa726574b827f1e8df2397437cb87bc24">visualizeModel</reimplementedby>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>current_pose</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; visualization_msgs::msg::Marker &gt; &amp;</type>
+          <declname>markers</declname>
+        </param>
+        <param>
+          <type>const std_msgs::msg::ColorRGBA &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Visualize the robot/human using a markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Fill a marker message with all necessary information (type, pose, scale and color). The header, namespace, id and marker lifetime will be overwritten. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current_pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current robot/human pose </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">markers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>container of marker messages describing the robot/human shape </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color of the footprint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="99" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BaseFootprintModel_1a805f1e7b919244211f1deb4f884e06de" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double hateb_local_planner::BaseFootprintModel::getInscribedRadius</definition>
+        <argsstring>()=0</argsstring>
+        <name>getInscribedRadius</name>
+        <reimplementedby refid="classhateb__local__planner_1_1PointFootprint_1ab553d8acbfe079381aa49d5cc49f34fb">getInscribedRadius</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1CircularFootprint_1aef9298fb380d871f9a489b40e89734f9">getInscribedRadius</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a36e51ac27b5a5c66c7c60af8b4b3359b">getInscribedRadius</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1LineFootprint_1a0faf871f8784766558d231740a8f14fc">getInscribedRadius</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1PolygonFootprint_1ab53b395053e2174a17725324162ca567">getInscribedRadius</reimplementedby>
+        <briefdescription>
+<para>Compute the inscribed radius of the footprint model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>inscribed radius </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="105" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BaseFootprintModel_1af6f9b6e83795e0ccf558d15c69e50e12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double hateb_local_planner::BaseFootprintModel::getCircumscribedRadius</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getCircumscribedRadius</name>
+        <reimplementedby refid="classhateb__local__planner_1_1PointFootprint_1a5297747a2a81f058927f24fafc4ce3fd">getCircumscribedRadius</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1CircularFootprint_1a9531970c9a3c0aa35376ba56081bb7da">getCircumscribedRadius</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1TwoCirclesFootprint_1ad693423391752cedefb9164097ba9f08">getCircumscribedRadius</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1LineFootprint_1aa00c54b2f01d5a0f418114d941316c24">getCircumscribedRadius</reimplementedby>
+        <reimplementedby refid="classhateb__local__planner_1_1PolygonFootprint_1a20f176bf990080389f7a0b75e2406c76">getCircumscribedRadius</reimplementedby>
+        <briefdescription>
+<para>Compute the circumscribed radius of the footprint model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>circumscribed radius </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="111" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract class that defines the interface for footprint/contour models. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The robot/human model class is currently used in optimization only, since taking the navigation stack footprint into account might be inefficient. The footprint is only used for checking feasibility. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hateb_local_planner::CircularFootprint</label>
+        <link refid="classhateb__local__planner_1_1CircularFootprint"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hateb_local_planner::LineFootprint</label>
+        <link refid="classhateb__local__planner_1_1LineFootprint"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>hateb_local_planner::TwoCirclesFootprint</label>
+        <link refid="classhateb__local__planner_1_1TwoCirclesFootprint"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hateb_local_planner::PointFootprint</label>
+        <link refid="classhateb__local__planner_1_1PointFootprint"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::BaseFootprintModel</label>
+        <link refid="classhateb__local__planner_1_1BaseFootprintModel"/>
+      </node>
+      <node id="5">
+        <label>hateb_local_planner::PolygonFootprint</label>
+        <link refid="classhateb__local__planner_1_1PolygonFootprint"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="61" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="61" bodyend="115"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseFootprintModel_1a23994e2593de8cedf5f839058407d8ec" prot="public" virt="non-virtual"><scope>hateb_local_planner::BaseFootprintModel</scope><name>BaseFootprintModel</name></member>
+      <member refid="classhateb__local__planner_1_1BaseFootprintModel_1a72b681ecb2473cef98a42bebd4472945" prot="public" virt="pure-virtual"><scope>hateb_local_planner::BaseFootprintModel</scope><name>calculateDistance</name></member>
+      <member refid="classhateb__local__planner_1_1BaseFootprintModel_1ae162fde4a89a0101cca339a3704e27f1" prot="public" virt="pure-virtual"><scope>hateb_local_planner::BaseFootprintModel</scope><name>estimateSpatioTemporalDistance</name></member>
+      <member refid="classhateb__local__planner_1_1BaseFootprintModel_1af6f9b6e83795e0ccf558d15c69e50e12" prot="public" virt="pure-virtual"><scope>hateb_local_planner::BaseFootprintModel</scope><name>getCircumscribedRadius</name></member>
+      <member refid="classhateb__local__planner_1_1BaseFootprintModel_1a805f1e7b919244211f1deb4f884e06de" prot="public" virt="pure-virtual"><scope>hateb_local_planner::BaseFootprintModel</scope><name>getInscribedRadius</name></member>
+      <member refid="classhateb__local__planner_1_1BaseFootprintModel_1ab9bd7f908bba3c23049b208a64a03909" prot="public" virt="virtual"><scope>hateb_local_planner::BaseFootprintModel</scope><name>visualizeModel</name></member>
+      <member refid="classhateb__local__planner_1_1BaseFootprintModel_1a011c4b6ecc51affad4f90b37330f52ee" prot="public" virt="virtual"><scope>hateb_local_planner::BaseFootprintModel</scope><name>~BaseFootprintModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

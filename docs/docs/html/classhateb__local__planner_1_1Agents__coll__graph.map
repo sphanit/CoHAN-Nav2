@@ -1,0 +1,4 @@
+<map id="hateb_local_planner::Agents" name="hateb_local_planner::Agents">
+<area shape="rect" id="node1" title="Class representing agents and their states." alt="" coords="36,95,189,136"/>
+<area shape="rect" id="node2" href="$classparameters_1_1ParameterHelper.html" title="Generic parameter utility class for ROS2 nodes This class provides a reusable way to declare paramete..." alt="" coords="5,5,220,32"/>
+</map>

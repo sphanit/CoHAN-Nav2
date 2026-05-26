@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgeStaticAgentVisibility" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgeStaticAgentVisibility</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebUnaryEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebUnaryEdge&lt; 1, double, VertexPose &gt;</basecompoundref>
+    <includes refid="edge__static__agent__visibility_8h" local="no">edge_static_agent_visibility.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1EdgeStaticAgentVisibility_1a567f133380ef816b81b0e6466b6c8011" prot="protected" static="no" mutable="no">
+        <type><ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref></type>
+        <definition>PoseSE2 hateb_local_planner::EdgeStaticAgentVisibility::static_agent_</definition>
+        <argsstring></argsstring>
+        <name>static_agent_</name>
+        <briefdescription>
+<para>Pose of the static agent used for visibility calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_static_agent_visibility.h" line="109" column="11" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_static_agent_visibility.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeStaticAgentVisibility_1af7d010141d0d47b5e3717a3e6c447252" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeStaticAgentVisibility::EdgeStaticAgentVisibility</definition>
+        <argsstring>()</argsstring>
+        <name>EdgeStaticAgentVisibility</name>
+        <briefdescription>
+<para>Construct edge and set measurement to zero (unused). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_static_agent_visibility.h" line="59" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_static_agent_visibility.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeStaticAgentVisibility_1a5d98a586c9f6f1a8027847f543f0b72c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeStaticAgentVisibility::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Compute the error / cost for the edge. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the visibility between the static agent and robot and applies a penalty if the visibility constraint is violated. The error is stored in _error[0]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_static_agent_visibility.h" line="67" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_static_agent_visibility.h" bodystart="67" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeStaticAgentVisibility_1ad46ded521db07d3acbcbe5fc5cc1b9f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeStaticAgentVisibility::setParameters</definition>
+        <argsstring>(const HATebConfig &amp;cfg, const PoseSE2 &amp;static_agent)</argsstring>
+        <name>setParameters</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> &amp;</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>static_agent</declname>
+        </param>
+        <briefdescription>
+<para>Set parameters for the edge, including configuration and static agent pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> configuration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>static_agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pose of the static agent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_static_agent_visibility.h" line="100" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_static_agent_visibility.h" bodystart="100" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Edge defining a visibility constraint between a static agent and the robot in the optimization graph. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This edge penalizes close configurations when the robot is not in the visible region of human. The cost is computed based on the visibility between the static agent and robot, and is used to enforce perception constraints.</para>
+<para>Inherits from <ref refid="classhateb__local__planner_1_1BaseTebUnaryEdge" kindref="compound">BaseTebUnaryEdge&lt;1, double, VertexPose&gt;</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hateb_local_planner::EdgeStaticAgentVisibility</label>
+        <link refid="classhateb__local__planner_1_1EdgeStaticAgentVisibility"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebUnaryEdge&lt; 1, double, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebUnaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseUnaryEdge&lt; D, double, VertexPose &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>hateb_local_planner::PoseSE2</label>
+        <link refid="classhateb__local__planner_1_1PoseSE2"/>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeStaticAgentVisibility</label>
+        <link refid="classhateb__local__planner_1_1EdgeStaticAgentVisibility"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>static_agent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebUnaryEdge&lt; 1, double, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebUnaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseUnaryEdge&lt; D, double, VertexPose &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_static_agent_visibility.h" line="54" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_static_agent_visibility.h" bodystart="54" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1aa1485afb0fdfc42fc331165a7d5c8b30" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeStaticAgentVisibility</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeStaticAgentVisibility_1a5d98a586c9f6f1a8027847f543f0b72c" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeStaticAgentVisibility</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeStaticAgentVisibility_1af7d010141d0d47b5e3717a3e6c447252" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeStaticAgentVisibility</scope><name>EdgeStaticAgentVisibility</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1aadf8f1d82509963f06807b27ef0c8166" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeStaticAgentVisibility</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1a7c199ff0a5a802ac533257e1254cd5a0" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeStaticAgentVisibility</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1a5e515f4663cbcfa4942b2d5449d62618" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeStaticAgentVisibility</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeStaticAgentVisibility_1ad46ded521db07d3acbcbe5fc5cc1b9f7" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeStaticAgentVisibility</scope><name>setParameters</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeStaticAgentVisibility_1a567f133380ef816b81b0e6466b6c8011" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeStaticAgentVisibility</scope><name>static_agent_</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1ae722abea8571e278cd57acf7fc2542cf" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeStaticAgentVisibility</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

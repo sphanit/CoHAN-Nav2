@@ -1,0 +1,8 @@
+<map id="hateb_local_planner::BaseFootprintModel" name="hateb_local_planner::BaseFootprintModel">
+<area shape="rect" id="node1" title="Abstract class that defines the interface for footprint/contour models." alt="" coords="5,136,165,177"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1CircularFootprint.html" title="Class that defines the a robot/human of circular shape." alt="" coords="215,5,369,47"/>
+<area shape="rect" id="node3" href="$classhateb__local__planner_1_1LineFootprint.html" title="Class that approximates the robot/human with line segment (zero&#45;width)" alt="" coords="215,71,369,112"/>
+<area shape="rect" id="node4" href="$classhateb__local__planner_1_1PointFootprint.html" title=" " alt="" coords="215,136,369,177"/>
+<area shape="rect" id="node5" href="$classhateb__local__planner_1_1PolygonFootprint.html" title="Class that approximates the robot/human with a closed polygon." alt="" coords="215,201,369,243"/>
+<area shape="rect" id="node6" href="$classhateb__local__planner_1_1TwoCirclesFootprint.html" title="Class that approximates the robot/human with two shifted circles." alt="" coords="213,267,371,308"/>
+</map>

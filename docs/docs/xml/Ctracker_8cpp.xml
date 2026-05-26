@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="Ctracker_8cpp" kind="file" language="C++">
+    <compoundname>Ctracker.cpp</compoundname>
+    <includes refid="Ctracker_8h" local="no">costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Kalman.h</label>
+        <link refid="Kalman_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>limits</label>
+      </node>
+      <node id="1">
+        <label>Ctracker.cpp</label>
+        <link refid="Ctracker_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h</label>
+        <link refid="Ctracker_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>HungarianAlg.h</label>
+        <link refid="HungarianAlg_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>array</label>
+      </node>
+      <node id="10">
+        <label>time.h</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>defines.h</label>
+        <link refid="defines_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Based<sp/>on<sp/>https://github.com/Smorodov/Multitarget-tracker/tree/master/Tracker,<sp/>GPLv3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Refer<sp/>to<sp/>README.md<sp/>in<sp/>this<sp/>directory.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Ctracker_8h" kindref="compound">costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>---------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Tracker.<sp/>Manage<sp/>tracks.<sp/>Create,<sp/>remove,<sp/>update.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>---------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="classCTracker_1ad21dd8dc747fe20f6a47e1e70a6bea0d" kindref="member">CTracker::CTracker</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Params<sp/>&amp;<ref refid="namespaceparameters" kindref="compound">parameters</ref>)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>params(<ref refid="namespaceparameters" kindref="compound">parameters</ref>),</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>NextTrackID(0)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>---------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>---------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCTracker_1a021c4f180bc560fd3c38c50bbdc824a1" kindref="member">CTracker::Update</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Point_t&gt;&amp;<sp/>detectedCentroid,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;<sp/>std::vector&lt;cv::Point&gt;<sp/>&gt;&amp;<sp/>contours)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Each<sp/>contour<sp/>has<sp/>a<sp/>centroid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>assert(detectedCentroid.size()<sp/>==<sp/>contours.size());</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>there<sp/>is<sp/>no<sp/>tracks<sp/>yet,<sp/>then<sp/>every<sp/>cv::Point<sp/>begins<sp/>its<sp/>own<sp/>track.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>.size()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>no<sp/>tracks<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>detectedCentroid.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>.push_back(</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;CTrack&gt;(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classCTrack" kindref="compound">CTrack</ref>(detectedCentroid[i],<sp/>contours[i],<sp/><ref refid="classCTracker_1a2e23026ff118d89b44bf2eaf38c2f18a" kindref="member">params</ref>.<ref refid="structCTracker_1_1Params_1a2c0a5d946cd2c4a8737b1ad233dfbcfb" kindref="member">dt</ref>,<sp/><ref refid="classCTracker_1a6d15e02d600e914de0f826228ea394c5" kindref="member">NextTrackID</ref>++)));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N<sp/>=<sp/><ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>.size();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>M<sp/>=<sp/>detectedCentroid.size();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="HungarianAlg_8h_1ad7b9f569a9adbd958c668a36b6884ffd" kindref="member">assignments_t</ref><sp/>assignment;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>.empty())</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Distance<sp/>matrix<sp/>of<sp/>N-th<sp/>Track<sp/>to<sp/>the<sp/>M-th<sp/>detectedCentroid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="HungarianAlg_8h_1af6ab0ee8259a51215f62e8f96416d5bb" kindref="member">distMatrix_t</ref><sp/>Cost(N<sp/>*<sp/>M);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>calculate<sp/>distance<sp/>between<sp/>the<sp/>blobs<sp/>centroids</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>detectedCentroid.size();<sp/>j++)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Cost[i<sp/>+<sp/>j<sp/>*<sp/>N]<sp/>=<sp/><ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>[i]-&gt;CalcDist(detectedCentroid[j]);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Solving<sp/>assignment<sp/>problem<sp/>(tracks<sp/>and<sp/>predictions<sp/>of<sp/>Kalman<sp/>filter)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAssignmentProblemSolver" kindref="compound">AssignmentProblemSolver</ref><sp/>APS;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>APS.<ref refid="classAssignmentProblemSolver_1a38198467ca647403c40be2c2bb47e177" kindref="member">Solve</ref>(Cost,<sp/>N,<sp/>M,<sp/>assignment,<sp/><ref refid="classAssignmentProblemSolver_1aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75" kindref="member">AssignmentProblemSolver::optimal</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clean<sp/>assignment<sp/>from<sp/>pairs<sp/>with<sp/>large<sp/>distance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>assignment.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(assignment[i]<sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Cost[i<sp/>+<sp/>assignment[i]<sp/>*<sp/>N]<sp/>&gt;<sp/><ref refid="classCTracker_1a2e23026ff118d89b44bf2eaf38c2f18a" kindref="member">params</ref>.<ref refid="structCTracker_1_1Params_1a34ccf63502f7f596edf682f0233da024" kindref="member">dist_thresh</ref>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assignment[i]<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>[i]-&gt;skipped_frames<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>track<sp/>have<sp/>no<sp/>assigned<sp/>detect,<sp/>then<sp/>increment<sp/>skipped<sp/>frames<sp/>counter.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>[i]-&gt;skipped_frames++;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>track<sp/>didn&apos;t<sp/>get<sp/>detects<sp/>long<sp/>time,<sp/>remove<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>static_cast&lt;int&gt;(<ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>.size());<sp/>i++)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>[i]-&gt;skipped_frames<sp/>&gt;<sp/><ref refid="classCTracker_1a2e23026ff118d89b44bf2eaf38c2f18a" kindref="member">params</ref>.<ref refid="structCTracker_1_1Params_1a12b31c512baaf1b20f5612936007db6e" kindref="member">max_allowed_skipped_frames</ref>)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>.erase(<ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>.begin()<sp/>+<sp/>i);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assignment.erase(assignment.begin()<sp/>+<sp/>i);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i--;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Search<sp/>for<sp/>unassigned<sp/>detects<sp/>and<sp/>start<sp/>new<sp/>tracks<sp/>for<sp/>them.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>detectedCentroid.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(find(assignment.begin(),<sp/>assignment.end(),<sp/>i)<sp/>==<sp/>assignment.end())</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>.push_back(std::unique_ptr&lt;CTrack&gt;(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classCTrack" kindref="compound">CTrack</ref>(detectedCentroid[i],<sp/>contours[i],<sp/><ref refid="classCTracker_1a2e23026ff118d89b44bf2eaf38c2f18a" kindref="member">params</ref>.<ref refid="structCTracker_1_1Params_1a2c0a5d946cd2c4a8737b1ad233dfbcfb" kindref="member">dt</ref>,<sp/><ref refid="classCTracker_1a6d15e02d600e914de0f826228ea394c5" kindref="member">NextTrackID</ref>++)));</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>Kalman<sp/>Filters<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>assignment.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>track<sp/>updated<sp/>less<sp/>than<sp/>one<sp/>time,<sp/>than<sp/>filter<sp/>state<sp/>is<sp/>not<sp/>correct.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(assignment[i]<sp/>!=<sp/>-1)<sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>have<sp/>assigned<sp/>detect,<sp/>then<sp/>update<sp/>using<sp/>its<sp/>coordinates,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>[i]-&gt;skipped_frames<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>[i]-&gt;Update(detectedCentroid[assignment[i]],<sp/>contours[assignment[i]],<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/><ref refid="classCTracker_1a2e23026ff118d89b44bf2eaf38c2f18a" kindref="member">params</ref>.<ref refid="structCTracker_1_1Params_1addf638056c459120864be7ea4b9caef5" kindref="member">max_trace_length</ref>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>if<sp/>not<sp/>continue<sp/>using<sp/>predictions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCTracker_1a5342c04e15bc4c255de4cc5ab58c1631" kindref="member">tracks</ref>[i]-&gt;Update(<ref refid="defines_8h_1a55bf6c4ee469b78ed649446615641b97" kindref="member">Point_t</ref>(),<sp/>std::vector&lt;cv::Point&gt;(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="classCTracker_1a2e23026ff118d89b44bf2eaf38c2f18a" kindref="member">params</ref>.<ref refid="structCTracker_1_1Params_1addf638056c459120864be7ea4b9caef5" kindref="member">max_trace_length</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCTracker_1a00f54fbf4b90da1fe128cd4b5cc05589" kindref="member">CTracker::updateParameters</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Params<sp/>&amp;<ref refid="namespaceparameters" kindref="compound">parameters</ref>)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><ref refid="classCTracker_1a2e23026ff118d89b44bf2eaf38c2f18a" kindref="member">params</ref><sp/>=<sp/><ref refid="namespaceparameters" kindref="compound">parameters</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/>---------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//<sp/>---------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><ref refid="classCTracker_1ab74d4f1ce428c9d3fa9f9e9901a2070a" kindref="member">CTracker::~CTracker</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{}</highlight></codeline>
+    </programlisting>
+    <location file="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.cpp"/>
+  </compounddef>
+</doxygen>

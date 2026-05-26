@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1BackoffExitCondition" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::BackoffExitCondition</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BT::ConditionNode</basecompoundref>
+    <includes refid="backoff__exit__condition_8h" local="no">backoff_exit_condition.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1BackoffExitCondition_1ac6656af70df0dfd79fccca5723877a54" prot="private" static="no" mutable="no">
+        <type>agent_path_prediction::AgentsInfo</type>
+        <definition>agent_path_prediction::AgentsInfo hateb_local_planner::BackoffExitCondition::agents_info_</definition>
+        <argsstring></argsstring>
+        <name>agents_info_</name>
+        <briefdescription>
+<para>Information about agents in the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="99" column="37" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1BackoffExitCondition_1a3d884b88f545538f59fa32cbb5abd9c0" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::PoseStamped</type>
+        <definition>geometry_msgs::PoseStamped hateb_local_planner::BackoffExitCondition::current_goal_</definition>
+        <argsstring></argsstring>
+        <name>current_goal_</name>
+        <briefdescription>
+<para>Current navigation goal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="100" column="30" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1BackoffExitCondition_1abd80c674ed59305dc5a5a1d0d1bd4bd3" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classhateb__local__planner_1_1Backoff" kindref="compound">Backoff</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Backoff&gt; hateb_local_planner::BackoffExitCondition::backoff_ptr_</definition>
+        <argsstring></argsstring>
+        <name>backoff_ptr_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Pointer to backoff behavior handler. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="101" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1BackoffExitCondition_1a5b2676642c4f18b23ffc48dafd83f999" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classagents_1_1Agents" kindref="compound">agents::Agents</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;agents::Agents&gt; hateb_local_planner::BackoffExitCondition::agents_ptr_</definition>
+        <argsstring></argsstring>
+        <name>agents_ptr_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Pointer to agents manager. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="102" column="19" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1BackoffExitCondition_1a404dbf1404ed334241431fe44b2e5c8b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hateb_local_planner::BackoffExitCondition::stuck_agent_</definition>
+        <argsstring></argsstring>
+        <name>stuck_agent_</name>
+        <briefdescription>
+<para>ID of the agent that is stuck. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="103" column="7" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1BackoffExitCondition_1a6584776418ae53e5e8f1422bcc3ed89b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::BackoffExitCondition::dist_max_</definition>
+        <argsstring></argsstring>
+        <name>dist_max_</name>
+        <briefdescription>
+<para>Maximum distance threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="104" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1BackoffExitCondition_1a66051a86b6a9e8f36d46bf41591c8817" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::BackoffExitCondition::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="106" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1BackoffExitCondition_1a92462621e59ac7b950bcc1066ec8710f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::BackoffExitCondition::started_</definition>
+        <argsstring></argsstring>
+        <name>started_</name>
+        <briefdescription>
+<para>Flag indicating if recovery has started. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="108" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1BackoffExitCondition_1a0128e536dc4a8bcfcb6261fa251ed136" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::BackoffExitCondition::new_goal_</definition>
+        <argsstring></argsstring>
+        <name>new_goal_</name>
+        <briefdescription>
+<para>Flag indicating if a new goal was received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="109" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1BackoffExitCondition_1a234bf9d6782e28c8ffd4000b4592134e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::BackoffExitCondition::backed_off_</definition>
+        <argsstring></argsstring>
+        <name>backed_off_</name>
+        <briefdescription>
+<para>Flag indicating if robot has backed off. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="110" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1BackoffExitCondition_1a3442c24873d61b414c093ca1adf5deb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::BackoffExitCondition::BackoffExitCondition</definition>
+        <argsstring>(const std::string &amp;condition_name, const BT::NodeConfiguration &amp;conf)</argsstring>
+        <name>BackoffExitCondition</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>condition_name</declname>
+        </param>
+        <param>
+          <type>const BT::NodeConfiguration &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with condition name and configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>condition_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the condition node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration for the behavior tree node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="63" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/backoff_exit_condition.cpp" bodystart="7" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BackoffExitCondition_1a502bd0c88a8babfec36378fb36ceca7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::BackoffExitCondition::BackoffExitCondition</definition>
+        <argsstring>()=delete</argsstring>
+        <name>BackoffExitCondition</name>
+        <briefdescription>
+<para>Deleted default constructor to enforce proper initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="68" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BackoffExitCondition_1a267aa59811a67eddabd75de5c271c723" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::BackoffExitCondition::~BackoffExitCondition</definition>
+        <argsstring>() override</argsstring>
+        <name>~BackoffExitCondition</name>
+        <briefdescription>
+<para>Virtual destructor for cleanup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="73" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/backoff_exit_condition.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1BackoffExitCondition_1a1a3faef9c3272d78a34ea6faa6622646" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BT::NodeStatus</type>
+        <definition>BT::NodeStatus hateb_local_planner::BackoffExitCondition::tick</definition>
+        <argsstring>() override</argsstring>
+        <name>tick</name>
+        <briefdescription>
+<para>Method called to evaluate the condition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>SUCCESS if backoff recovery should be exited, FAILURE otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="79" column="18" bodyfile="hateb_local_planner/src/behavior_tree/condition/backoff_exit_condition.cpp" bodystart="21" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1BackoffExitCondition_1ad82000f652950f5ac29e69946fe36dba" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BT::PortsList</type>
+        <definition>static BT::PortsList hateb_local_planner::BackoffExitCondition::providedPorts</definition>
+        <argsstring>()</argsstring>
+        <name>providedPorts</name>
+        <briefdescription>
+<para>Defines input and output ports for recovery condition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ports list containing agents_info, backoff_ptr, nav_goal, agents_ptr as inputs, and recovery status as output </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="86" column="24" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" bodystart="86" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1BackoffExitCondition_1aaa828fc6ff2b689238a8f76bb41cce96" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::BackoffExitCondition::isRecoveryComplete</definition>
+        <argsstring>()</argsstring>
+        <name>isRecoveryComplete</name>
+        <briefdescription>
+<para>Checks if the recovery behavior is complete. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if recovery is complete, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="96" column="8" bodyfile="hateb_local_planner/src/behavior_tree/condition/backoff_exit_condition.cpp" bodystart="55" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class implementing a condition node for managing backoff recovery behavior. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides functionality to control when to exit the backoff recovery mode. It monitors agent states and recovery progress to determine when to resume normal navigation. It inherits from BT::ConditionNode to integrate with the behavior tree framework. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::BackoffExitCondition</label>
+        <link refid="classhateb__local__planner_1_1BackoffExitCondition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::BackoffExitCondition</label>
+        <link refid="classhateb__local__planner_1_1BackoffExitCondition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" line="56" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/backoff_exit_condition.h" bodystart="56" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1ac6656af70df0dfd79fccca5723877a54" prot="private" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>agents_info_</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1a5b2676642c4f18b23ffc48dafd83f999" prot="private" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>agents_ptr_</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1a234bf9d6782e28c8ffd4000b4592134e" prot="private" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>backed_off_</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1abd80c674ed59305dc5a5a1d0d1bd4bd3" prot="private" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>backoff_ptr_</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1a3442c24873d61b414c093ca1adf5deb7" prot="public" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>BackoffExitCondition</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1a502bd0c88a8babfec36378fb36ceca7e" prot="public" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>BackoffExitCondition</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1a3d884b88f545538f59fa32cbb5abd9c0" prot="private" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>current_goal_</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1a6584776418ae53e5e8f1422bcc3ed89b" prot="private" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>dist_max_</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1aaa828fc6ff2b689238a8f76bb41cce96" prot="private" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>isRecoveryComplete</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1a66051a86b6a9e8f36d46bf41591c8817" prot="private" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>name_</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1a0128e536dc4a8bcfcb6261fa251ed136" prot="private" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>new_goal_</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1ad82000f652950f5ac29e69946fe36dba" prot="public" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>providedPorts</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1a92462621e59ac7b950bcc1066ec8710f" prot="private" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>started_</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1a404dbf1404ed334241431fe44b2e5c8b" prot="private" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>stuck_agent_</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1a1a3faef9c3272d78a34ea6faa6622646" prot="public" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>tick</name></member>
+      <member refid="classhateb__local__planner_1_1BackoffExitCondition_1a267aa59811a67eddabd75de5c271c723" prot="public" virt="non-virtual"><scope>hateb_local_planner::BackoffExitCondition</scope><name>~BackoffExitCondition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

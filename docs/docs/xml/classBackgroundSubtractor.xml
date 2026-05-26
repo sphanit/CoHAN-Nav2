@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classBackgroundSubtractor" kind="class" language="C++" prot="public">
+    <compoundname>BackgroundSubtractor</compoundname>
+    <includes refid="background__subtractor_8h" local="no">background_subtractor.h</includes>
+    <innerclass refid="structBackgroundSubtractor_1_1Params" prot="public">BackgroundSubtractor::Params</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classBackgroundSubtractor_1a0f21a90da57f94157ccb811eb393353c" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat BackgroundSubtractor::occupancy_grid_fast_</definition>
+        <argsstring></argsstring>
+        <name>occupancy_grid_fast_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="105" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBackgroundSubtractor_1aacd1226edca45723a206ac77e2322797" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat BackgroundSubtractor::occupancy_grid_slow_</definition>
+        <argsstring></argsstring>
+        <name>occupancy_grid_slow_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="106" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBackgroundSubtractor_1a4e35538ea851d9d38ab8f331c245ba3a" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat BackgroundSubtractor::current_frame_</definition>
+        <argsstring></argsstring>
+        <name>current_frame_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="107" column="11" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBackgroundSubtractor_1a26ef85af7e1fb3a9ba8d4908a1c9617e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BackgroundSubtractor::previous_shift_x_</definition>
+        <argsstring></argsstring>
+        <name>previous_shift_x_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="109" column="7" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBackgroundSubtractor_1aebffcab522ebeee2aa2f5d3a46405d1e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BackgroundSubtractor::previous_shift_y_</definition>
+        <argsstring></argsstring>
+        <name>previous_shift_y_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="110" column="7" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBackgroundSubtractor_1af48e414ad669221f96612364c1757820" prot="private" static="no" mutable="no">
+        <type><ref refid="structBackgroundSubtractor_1_1Params" kindref="compound">Params</ref></type>
+        <definition>Params BackgroundSubtractor::params_</definition>
+        <argsstring></argsstring>
+        <name>params_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="112" column="10" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBackgroundSubtractor_1ab0d0a02da5eeedc86cfc89f57e6e3db8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BackgroundSubtractor::BackgroundSubtractor</definition>
+        <argsstring>(const Params &amp;parameters)</argsstring>
+        <name>BackgroundSubtractor</name>
+        <param>
+          <type>const <ref refid="structBackgroundSubtractor_1_1Params" kindref="compound">Params</ref> &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Constructor that accepts a specific parameter configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="72" column="3" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/background_subtractor.cpp" bodystart="5" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classBackgroundSubtractor_1a085944b991b9f7bad17ff89b37b2a073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BackgroundSubtractor::apply</definition>
+        <argsstring>(const cv::Mat &amp;image, cv::Mat &amp;fg_mask, int shift_x=0, int shift_y=0)</argsstring>
+        <name>apply</name>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>cv::Mat &amp;</type>
+          <declname>fg_mask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>shift_x</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>shift_y</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Computes a foreground mask. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Next video frame </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">fg_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Foreground mask as an 8-bit binary image </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">shift_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Translation along the x axis between the current and previous image </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">shift_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Translation along the y axis between the current and previous image </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="81" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/background_subtractor.cpp" bodystart="9" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classBackgroundSubtractor_1a7cb3ea6295bbdf9bd8696e2fb211b02b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BackgroundSubtractor::visualize</definition>
+        <argsstring>(const std::string &amp;name, const cv::Mat &amp;image)</argsstring>
+        <name>visualize</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+<para>OpenCV Visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id/name of the opencv window </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image to be visualized </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="88" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/background_subtractor.cpp" bodystart="101" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classBackgroundSubtractor_1ae6df09eb6aadd1fbee09933049d59678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BackgroundSubtractor::writeMatToYAML</definition>
+        <argsstring>(const std::string &amp;filename, const std::vector&lt; cv::Mat &gt; &amp;mat_vec)</argsstring>
+        <name>writeMatToYAML</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; cv::Mat &gt; &amp;</type>
+          <declname>mat_vec</declname>
+        </param>
+        <briefdescription>
+<para>Export vector of matrices to yaml file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>This method is intended for debugging purposes </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desired filename including path and excluding file suffix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mat_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cv::Mat to be exported </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="96" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classBackgroundSubtractor_1a090063cdc2e7197b4f9079447695a008" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BackgroundSubtractor::updateParameters</definition>
+        <argsstring>(const Params &amp;parameters)</argsstring>
+        <name>updateParameters</name>
+        <param>
+          <type>const <ref refid="structBackgroundSubtractor_1_1Params" kindref="compound">Params</ref> &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Update internal parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="99" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/background_subtractor.cpp" bodystart="112" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classBackgroundSubtractor_1abfe1bdbdcf8f47945ccaf410fea2b41e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BackgroundSubtractor::transformToCurrentFrame</definition>
+        <argsstring>(int shift_x, int shift_y)</argsstring>
+        <name>transformToCurrentFrame</name>
+        <param>
+          <type>int</type>
+          <declname>shift_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>shift_y</declname>
+        </param>
+        <briefdescription>
+<para>Transform/shift all internal matrices/grids according to a given translation vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="103" column="8" bodyfile="costmap_converter/costmap_converter/src/costmap_to_dynamic_obstacles/background_subtractor.cpp" bodystart="84" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Perform background subtraction to extract the &quot;moving&quot; foreground. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is based on OpenCV&apos;s background subtraction class cv::BackgroundSubtractor. It has been modified in order to incorporate a specialized bandpass filter.</para>
+<para>See <ulink url="http://docs.opencv.org/3.2.0/d7/df6/classcv_1_1BackgroundSubtractor.html">http://docs.opencv.org/3.2.0/d7/df6/classcv_1_1BackgroundSubtractor.html</ulink> for the original class. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BackgroundSubtractor</label>
+        <link refid="classBackgroundSubtractor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>params_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BackgroundSubtractor::Params</label>
+        <link refid="structBackgroundSubtractor_1_1Params"/>
+      </node>
+    </collaborationgraph>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" line="57" column="1" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h" bodystart="58" bodyend="113"/>
+    <listofallmembers>
+      <member refid="classBackgroundSubtractor_1a085944b991b9f7bad17ff89b37b2a073" prot="public" virt="non-virtual"><scope>BackgroundSubtractor</scope><name>apply</name></member>
+      <member refid="classBackgroundSubtractor_1ab0d0a02da5eeedc86cfc89f57e6e3db8" prot="public" virt="non-virtual"><scope>BackgroundSubtractor</scope><name>BackgroundSubtractor</name></member>
+      <member refid="classBackgroundSubtractor_1a4e35538ea851d9d38ab8f331c245ba3a" prot="private" virt="non-virtual"><scope>BackgroundSubtractor</scope><name>current_frame_</name></member>
+      <member refid="classBackgroundSubtractor_1a0f21a90da57f94157ccb811eb393353c" prot="private" virt="non-virtual"><scope>BackgroundSubtractor</scope><name>occupancy_grid_fast_</name></member>
+      <member refid="classBackgroundSubtractor_1aacd1226edca45723a206ac77e2322797" prot="private" virt="non-virtual"><scope>BackgroundSubtractor</scope><name>occupancy_grid_slow_</name></member>
+      <member refid="classBackgroundSubtractor_1af48e414ad669221f96612364c1757820" prot="private" virt="non-virtual"><scope>BackgroundSubtractor</scope><name>params_</name></member>
+      <member refid="classBackgroundSubtractor_1a26ef85af7e1fb3a9ba8d4908a1c9617e" prot="private" virt="non-virtual"><scope>BackgroundSubtractor</scope><name>previous_shift_x_</name></member>
+      <member refid="classBackgroundSubtractor_1aebffcab522ebeee2aa2f5d3a46405d1e" prot="private" virt="non-virtual"><scope>BackgroundSubtractor</scope><name>previous_shift_y_</name></member>
+      <member refid="classBackgroundSubtractor_1abfe1bdbdcf8f47945ccaf410fea2b41e" prot="private" virt="non-virtual"><scope>BackgroundSubtractor</scope><name>transformToCurrentFrame</name></member>
+      <member refid="classBackgroundSubtractor_1a090063cdc2e7197b4f9079447695a008" prot="public" virt="non-virtual"><scope>BackgroundSubtractor</scope><name>updateParameters</name></member>
+      <member refid="classBackgroundSubtractor_1a7cb3ea6295bbdf9bd8696e2fb211b02b" prot="public" virt="non-virtual"><scope>BackgroundSubtractor</scope><name>visualize</name></member>
+      <member refid="classBackgroundSubtractor_1ae6df09eb6aadd1fbee09933049d59678" prot="public" virt="non-virtual"><scope>BackgroundSubtractor</scope><name>writeMatToYAML</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

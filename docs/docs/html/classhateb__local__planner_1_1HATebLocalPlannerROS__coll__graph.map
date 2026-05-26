@@ -1,0 +1,8 @@
+<map id="hateb_local_planner::HATebLocalPlannerROS" name="hateb_local_planner::HATebLocalPlannerROS">
+<area shape="rect" id="node1" title="Implements the nav2_core::Controller interface for Nav2, providing human&#45;aware trajectory planning wi..." alt="" coords="615,90,795,131"/>
+<area shape="rect" id="node2" title=" " alt="" coords="288,5,449,32"/>
+<area shape="rect" id="node3" href="$classhateb__local__planner_1_1ModeSwitch.html" title="Class managing planning mode switches in the HATEB local planner." alt="" coords="292,57,445,98"/>
+<area shape="rect" id="node4" href="$structhateb__local__planner_1_1ModeInfo.html" title="Structure combining planning and prediction modes Used to configure the behavior of the local planner..." alt="" coords="5,57,159,98"/>
+<area shape="rect" id="node5" href="$classhateb__local__planner_1_1FailureDetector.html" title="This class implements methods in order to detect if the robot got stucked or is oscillating." alt="" coords="292,122,445,163"/>
+<area shape="rect" id="node6" href="$classhateb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2: &#160;The pose consist of the position x and y and an orie..." alt="" coords="292,187,445,229"/>
+</map>

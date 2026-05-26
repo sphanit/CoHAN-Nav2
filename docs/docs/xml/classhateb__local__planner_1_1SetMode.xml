@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1SetMode" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::SetMode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BT::StatefulActionNode</basecompoundref>
+    <includes refid="set__mode_8h" local="no">set_mode.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1SetMode_1a8743dfb06f78469f95193a2f810abde9" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::SetMode::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of the behavior tree node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" line="88" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1SetMode_1a0997a2f47a0364d8f81b09bf6b96ca63" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::SetMode::plan_type_</definition>
+        <argsstring></argsstring>
+        <name>plan_type_</name>
+        <briefdescription>
+<para>Type of planning mode to use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" line="89" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1SetMode_1a536019518cf2c13a8b79188a97967bd0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::SetMode::predict_type_</definition>
+        <argsstring></argsstring>
+        <name>predict_type_</name>
+        <briefdescription>
+<para>Type of prediction to use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" line="90" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1SetMode_1a0708f3c43e55b8844b862072eb6ccd82" prot="private" static="no" mutable="no">
+        <type><ref refid="structhateb__local__planner_1_1ModeInfo" kindref="compound">ModeInfo</ref></type>
+        <definition>ModeInfo hateb_local_planner::SetMode::p_msg_</definition>
+        <argsstring></argsstring>
+        <name>p_msg_</name>
+        <briefdescription>
+<para>Message containing mode information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" line="91" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1SetMode_1a2b74aad559ac7157a0db5515f5e70000" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::SetMode::SetMode</definition>
+        <argsstring>(const std::string &amp;name, const BT::NodeConfiguration &amp;config)</argsstring>
+        <name>SetMode</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const BT::NodeConfiguration &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with ROS2 node and behavior tree configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ROS2 node shared pointer for communication </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the behavior tree node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration for the behavior tree node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" line="49" column="3" bodyfile="hateb_local_planner/src/behavior_tree/action/set_mode.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1SetMode_1a8b841a0464154c16d1054b8dac6840e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::SetMode::SetMode</definition>
+        <argsstring>()=delete</argsstring>
+        <name>SetMode</name>
+        <briefdescription>
+<para>Deleted default constructor to enforce proper initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" line="54" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1SetMode_1a0ac9760c9bad65fcb9292591bf8f09ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::SetMode::~SetMode</definition>
+        <argsstring>() override</argsstring>
+        <name>~SetMode</name>
+        <briefdescription>
+<para>Virtual destructor for cleanup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" line="59" column="3" bodyfile="hateb_local_planner/src/behavior_tree/action/set_mode.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1SetMode_1aa37dbc29dc5058c684fa2143dbd922ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BT::NodeStatus</type>
+        <definition>BT::NodeStatus hateb_local_planner::SetMode::onStart</definition>
+        <argsstring>() override</argsstring>
+        <name>onStart</name>
+        <briefdescription>
+<para>Method called when the node is first ticked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Status of the node after starting </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" line="74" column="18" bodyfile="hateb_local_planner/src/behavior_tree/action/set_mode.cpp" bodystart="41" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1SetMode_1a84898dac9ebae8670279f9419a18b6ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BT::NodeStatus</type>
+        <definition>BT::NodeStatus hateb_local_planner::SetMode::onRunning</definition>
+        <argsstring>() override</argsstring>
+        <name>onRunning</name>
+        <briefdescription>
+<para>Method called while the node is running. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current status of the node </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" line="80" column="18" bodyfile="hateb_local_planner/src/behavior_tree/action/set_mode.cpp" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1SetMode_1a75a1d479f146fbd8f1fe0a4de3f94cd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::SetMode::onHalted</definition>
+        <argsstring>() override</argsstring>
+        <name>onHalted</name>
+        <briefdescription>
+<para>Method called when the node is halted. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" line="85" column="8" bodyfile="hateb_local_planner/src/behavior_tree/action/set_mode.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1SetMode_1a0e136470b8c9336f3955045859d3d9b2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BT::PortsList</type>
+        <definition>static BT::PortsList hateb_local_planner::SetMode::providedPorts</definition>
+        <argsstring>()</argsstring>
+        <name>providedPorts</name>
+        <briefdescription>
+<para>Defines input and output ports for the behavior tree node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ports list containing plan_type and predict_type as inputs and mode as output </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" line="65" column="24" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" bodystart="65" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class implementing a behavior tree action node to set planning mode. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides functionality to set planning modes in CoHAN. It inherits from <ref refid="classhateb__local__planner_1_1StatefulActionNodeROS" kindref="compound">StatefulActionNodeROS</ref> to integrate with ROS and behavior tree framework. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hateb_local_planner::SetMode</label>
+        <link refid="classhateb__local__planner_1_1SetMode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BT::StatefulActionNode</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>hateb_local_planner::ModeInfo</label>
+        <link refid="structhateb__local__planner_1_1ModeInfo"/>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::SetMode</label>
+        <link refid="classhateb__local__planner_1_1SetMode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>p_msg_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BT::StatefulActionNode</label>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" line="41" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/action/set_mode.h" bodystart="41" bodyend="92"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1SetMode_1a8743dfb06f78469f95193a2f810abde9" prot="private" virt="non-virtual"><scope>hateb_local_planner::SetMode</scope><name>name_</name></member>
+      <member refid="classhateb__local__planner_1_1SetMode_1a75a1d479f146fbd8f1fe0a4de3f94cd7" prot="public" virt="non-virtual"><scope>hateb_local_planner::SetMode</scope><name>onHalted</name></member>
+      <member refid="classhateb__local__planner_1_1SetMode_1a84898dac9ebae8670279f9419a18b6ec" prot="public" virt="non-virtual"><scope>hateb_local_planner::SetMode</scope><name>onRunning</name></member>
+      <member refid="classhateb__local__planner_1_1SetMode_1aa37dbc29dc5058c684fa2143dbd922ca" prot="public" virt="non-virtual"><scope>hateb_local_planner::SetMode</scope><name>onStart</name></member>
+      <member refid="classhateb__local__planner_1_1SetMode_1a0708f3c43e55b8844b862072eb6ccd82" prot="private" virt="non-virtual"><scope>hateb_local_planner::SetMode</scope><name>p_msg_</name></member>
+      <member refid="classhateb__local__planner_1_1SetMode_1a0997a2f47a0364d8f81b09bf6b96ca63" prot="private" virt="non-virtual"><scope>hateb_local_planner::SetMode</scope><name>plan_type_</name></member>
+      <member refid="classhateb__local__planner_1_1SetMode_1a536019518cf2c13a8b79188a97967bd0" prot="private" virt="non-virtual"><scope>hateb_local_planner::SetMode</scope><name>predict_type_</name></member>
+      <member refid="classhateb__local__planner_1_1SetMode_1a0e136470b8c9336f3955045859d3d9b2" prot="public" virt="non-virtual"><scope>hateb_local_planner::SetMode</scope><name>providedPorts</name></member>
+      <member refid="classhateb__local__planner_1_1SetMode_1a2b74aad559ac7157a0db5515f5e70000" prot="public" virt="non-virtual"><scope>hateb_local_planner::SetMode</scope><name>SetMode</name></member>
+      <member refid="classhateb__local__planner_1_1SetMode_1a8b841a0464154c16d1054b8dac6840e1" prot="public" virt="non-virtual"><scope>hateb_local_planner::SetMode</scope><name>SetMode</name></member>
+      <member refid="classhateb__local__planner_1_1SetMode_1a0ac9760c9bad65fcb9292591bf8f09ce" prot="public" virt="non-virtual"><scope>hateb_local_planner::SetMode</scope><name>~SetMode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

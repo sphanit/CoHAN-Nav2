@@ -1,0 +1,4 @@
+<map id="rviz_path_array::AgentPathArrayDisplay" name="rviz_path_array::AgentPathArrayDisplay">
+<area shape="rect" id="node1" title="Displays a cohan_msgs::msg::AgentPathArray message." alt="" coords="12,109,208,151"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,215,61"/>
+</map>

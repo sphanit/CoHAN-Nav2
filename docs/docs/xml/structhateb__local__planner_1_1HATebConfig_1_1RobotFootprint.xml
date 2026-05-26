@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint" kind="struct" language="C++" prot="public">
+    <compoundname>hateb_local_planner::HATebConfig::RobotFootprint</compoundname>
+    <includes refid="hateb__config_8hpp" local="no">hateb_config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1adc8aa39e0706e5a62292485020302a7d" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::HATebConfig::RobotFootprint::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="131" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a203cafe9b4234ad3760ba1b1234bab77" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::RobotFootprint::radius</definition>
+        <argsstring></argsstring>
+        <name>radius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="132" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a06479053aea1dc1e56d2ae8369d1cc80" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; hateb_local_planner::HATebConfig::RobotFootprint::line_start</definition>
+        <argsstring></argsstring>
+        <name>line_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="133" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a76aeba50b1aa8e498337e4b9ea319653" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; hateb_local_planner::HATebConfig::RobotFootprint::line_end</definition>
+        <argsstring></argsstring>
+        <name>line_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="134" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a0a3b185ed7f46a79ea99f7b8353b72dd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::RobotFootprint::front_offset</definition>
+        <argsstring></argsstring>
+        <name>front_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="135" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1af095ba9e337fe296b10d5ca69527cea7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::RobotFootprint::front_radius</definition>
+        <argsstring></argsstring>
+        <name>front_radius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="136" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a588f2274774391099669e42ff272de5f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::RobotFootprint::rear_offset</definition>
+        <argsstring></argsstring>
+        <name>rear_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="137" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a194186c9d368e23e9fe558ca6ae44890" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::RobotFootprint::rear_radius</definition>
+        <argsstring></argsstring>
+        <name>rear_radius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="138" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a4fce2892401aecbc7e87724a180ebf34" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::HATebConfig::RobotFootprint::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="139" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="130" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="130" bodyend="141"/>
+    <listofallmembers>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a0a3b185ed7f46a79ea99f7b8353b72dd" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::RobotFootprint</scope><name>front_offset</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1af095ba9e337fe296b10d5ca69527cea7" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::RobotFootprint</scope><name>front_radius</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a76aeba50b1aa8e498337e4b9ea319653" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::RobotFootprint</scope><name>line_end</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a06479053aea1dc1e56d2ae8369d1cc80" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::RobotFootprint</scope><name>line_start</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a203cafe9b4234ad3760ba1b1234bab77" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::RobotFootprint</scope><name>radius</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a588f2274774391099669e42ff272de5f" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::RobotFootprint</scope><name>rear_offset</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a194186c9d368e23e9fe558ca6ae44890" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::RobotFootprint</scope><name>rear_radius</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1adc8aa39e0706e5a62292485020302a7d" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::RobotFootprint</scope><name>type</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint_1a4fce2892401aecbc7e87724a180ebf34" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::RobotFootprint</scope><name>vertices</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

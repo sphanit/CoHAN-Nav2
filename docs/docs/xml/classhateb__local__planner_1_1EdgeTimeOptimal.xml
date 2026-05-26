@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgeTimeOptimal" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgeTimeOptimal</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebUnaryEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebUnaryEdge&lt; 1, double, VertexTimeDiff &gt;</basecompoundref>
+    <includes refid="edge__time__optimal_8h" local="no">edge_time_optimal.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeTimeOptimal_1af54e36b50d1a14a91b769f5ba00d277e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeTimeOptimal::EdgeTimeOptimal</definition>
+        <argsstring>()</argsstring>
+        <name>EdgeTimeOptimal</name>
+        <briefdescription>
+<para>Construct edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_time_optimal.h" line="72" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_time_optimal.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeTimeOptimal_1a2faf03c88425ac665369a2e2e40552a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeTimeOptimal::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Actual cost function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_time_optimal.h" line="77" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_time_optimal.h" bodystart="77" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Edge defining the cost function for minimizing transition time of the trajectory. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The edge depends on a single vertex <formula id="16">$ \Delta T_i $</formula> and minimizes: <linebreak/>
+ <formula id="17">$ \min \Delta T_i^2 \cdot scale \cdot weight $</formula>. <linebreak/>
+<emphasis>scale</emphasis> is determined using the penaltyEquality() function, since we experiences good convergence speeds with it. <linebreak/>
+<emphasis>weight</emphasis> can be set using setInformation() (something around 1.0 seems to be fine). <linebreak/>
+<simplesect kind="see"><para>TebOptimalPlanner::AddEdgesTimeOptimal </para>
+</simplesect>
+<simplesect kind="remark"><para>Do not forget to call <ref refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1a5e515f4663cbcfa4942b2d5449d62618" kindref="member">setHATebConfig()</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebUnaryEdge&lt; 1, double, VertexTimeDiff &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebUnaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseUnaryEdge&lt; D, double, VertexTimeDiff &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeTimeOptimal</label>
+        <link refid="classhateb__local__planner_1_1EdgeTimeOptimal"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebUnaryEdge&lt; 1, double, VertexTimeDiff &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebUnaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseUnaryEdge&lt; D, double, VertexTimeDiff &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeTimeOptimal</label>
+        <link refid="classhateb__local__planner_1_1EdgeTimeOptimal"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_time_optimal.h" line="67" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_time_optimal.h" bodystart="67" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1aa1485afb0fdfc42fc331165a7d5c8b30" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeTimeOptimal</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeTimeOptimal_1a2faf03c88425ac665369a2e2e40552a0" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeTimeOptimal</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeTimeOptimal_1af54e36b50d1a14a91b769f5ba00d277e" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeTimeOptimal</scope><name>EdgeTimeOptimal</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1aadf8f1d82509963f06807b27ef0c8166" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeTimeOptimal</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1a7c199ff0a5a802ac533257e1254cd5a0" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeTimeOptimal</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1a5e515f4663cbcfa4942b2d5449d62618" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeTimeOptimal</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1ae722abea8571e278cd57acf7fc2542cf" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeTimeOptimal</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

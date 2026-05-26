@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="patharray__display_8h" kind="file" language="C++">
+    <compoundname>patharray_display.h</compoundname>
+    <includes local="no">cohan_msgs/AgentPath.h</includes>
+    <includes local="no">cohan_msgs/AgentPathArray.h</includes>
+    <includes local="no">rviz/ogre_helpers/arrow.h</includes>
+    <includes local="no">rviz/ogre_helpers/axes.h</includes>
+    <includes local="yes">rviz/message_filter_display.h</includes>
+    <includedby refid="patharray__display_8cpp" local="yes">patharray_display.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>cohan_msgs/AgentPathArray.h</label>
+      </node>
+      <node id="6">
+        <label>rviz/message_filter_display.h</label>
+      </node>
+      <node id="1">
+        <label>patharray_display.h</label>
+        <link refid="patharray__display_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>rviz/ogre_helpers/axes.h</label>
+      </node>
+      <node id="4">
+        <label>rviz/ogre_helpers/arrow.h</label>
+      </node>
+      <node id="2">
+        <label>cohan_msgs/AgentPath.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>patharray_display.cpp</label>
+        <link refid="patharray__display_8cpp"/>
+      </node>
+      <node id="1">
+        <label>patharray_display.h</label>
+        <link refid="patharray__display_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classrviz__path__array_1_1AgentPathArrayDisplay" prot="public">rviz_path_array::AgentPathArrayDisplay</innerclass>
+    <innernamespace refid="namespaceOgre">Ogre</innernamespace>
+    <innernamespace refid="namespacerviz">rviz</innernamespace>
+    <innernamespace refid="namespacerviz__path__array">rviz_path_array</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(BSD<sp/>License)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2025<sp/>LAAS/CNRS</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>copyright<sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>disclaimer<sp/>in<sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/>*<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>institute<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/><sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni<sp/>(email:ptsingaman@laas.fr)</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>AGENT_PATHARRAY_DISPLAY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGENT_PATHARRAY_DISPLAY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;nav_msgs/Path.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/AgentPath.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cohan_msgs/AgentPathArray.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rviz/ogre_helpers/arrow.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rviz/ogre_helpers/axes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rviz/message_filter_display.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="namespaceOgre" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceOgre" kindref="compound">Ogre</ref><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ManualObject;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="namespacerviz" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerviz" kindref="compound">rviz</ref><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ColorProperty;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">FloatProperty;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">IntProperty;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">EnumProperty;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">BillboardLine;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">VectorProperty;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rviz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerviz__path__array" kindref="compound">rviz_path_array</ref><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AgentPathArrayDisplay;</highlight></codeline>
+<codeline lineno="69" refid="classrviz__path__array_1_1AgentPathArrayDisplay" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay" kindref="compound">AgentPathArrayDisplay</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rviz::MessageFilterDisplay&lt;cohan_msgs::AgentPathArray&gt;<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a2cd1e7d7bbcffaf530f8017082c729e1" kindref="member">AgentPathArrayDisplay</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a960d3936630de50ec3903cb450c515c2" kindref="member">~AgentPathArrayDisplay</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1abeea96025eeb1cad913193b41e9f1b09" kindref="member">reset</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a24a180a90a92e17f133911d47b150b01" kindref="member">onInitialize</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a34163131472da8cea0358bfd4fe2c079" kindref="member">processMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cohan_msgs::AgentPathArray::ConstPtr&amp;<sp/>msg)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Q_SLOTS:</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a99915676a9a4e506df03eb9c65eb2830" kindref="member">updateBufferLength</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a877b546e9b49b6b070d90c9844092e78" kindref="member">updateStyle</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a331af8e6e344cf63b5e0599a88f291a0" kindref="member">updateLineWidth</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a454649cd654ac6229112b6be2eb5f3d2" kindref="member">updateOffset</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a0b79dfe839ad748f38c6ab4b5a79e8b2" kindref="member">updatePoseStyle</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a323b94ee2c14b6b263709db3501333aa" kindref="member">updatePoseAxisGeometry</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1aae4d9ba1f89c8d97177ba7a8e6a5c952" kindref="member">updatePoseArrowColor</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1aa6bf85988a5d7a5bf140bc1612c0c58f" kindref="member">updatePoseArrowGeometry</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1af406dc5f132d30bafcf64590e0c16ad4" kindref="member">destroyObjects</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a9752cec67f597e661e9b46400c0db6ca" kindref="member">allocateArrowVector</ref>(std::vector&lt;rviz::Arrow*&gt;&amp;<sp/>arrow_vect,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a14baf1ee605a3b5ccb0b463883b12bd7" kindref="member">allocateAxesVector</ref>(std::vector&lt;rviz::Axes*&gt;&amp;<sp/>axes_vect,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a868e2ce9de11ad4626028068a6eb15a2" kindref="member">destroyPoseAxesChain</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a46f7fd613d33711302047be63095c20e" kindref="member">destroyPoseArrowChain</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a4f9c1eeb4cd1b80ccbdb90e15197383d" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Ogre::ManualObject*&gt;<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a4f9c1eeb4cd1b80ccbdb90e15197383d" kindref="member">manual_objects_</ref>;</highlight></codeline>
+<codeline lineno="103" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1afa93e41bb186567051d090b570e5670b" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;rviz::BillboardLine*&gt;<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1afa93e41bb186567051d090b570e5670b" kindref="member">billboard_lines_</ref>;</highlight></codeline>
+<codeline lineno="104" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a7f5e02b40f10ce099096bd99c4045e9b" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;rviz::Axes*&gt;<sp/>&gt;<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a7f5e02b40f10ce099096bd99c4045e9b" kindref="member">axes_chain_</ref>;</highlight></codeline>
+<codeline lineno="105" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1afec80bc2e61139e37550b778188fc119" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;rviz::Arrow*&gt;<sp/>&gt;<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1afec80bc2e61139e37550b778188fc119" kindref="member">arrow_chain_</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a8aaea570ccdb3094af91fe09a2939590" refkind="member"><highlight class="normal"><sp/><sp/>rviz::EnumProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a8aaea570ccdb3094af91fe09a2939590" kindref="member">style_property_</ref>;</highlight></codeline>
+<codeline lineno="108" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1ad6ab2a608e76bafb1b2e97d346f6dfb9" refkind="member"><highlight class="normal"><sp/><sp/>rviz::ColorProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1ad6ab2a608e76bafb1b2e97d346f6dfb9" kindref="member">color_property_</ref>;</highlight></codeline>
+<codeline lineno="109" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1aaf8f62c96828ea12a056a80842ae0a48" refkind="member"><highlight class="normal"><sp/><sp/>rviz::FloatProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1aaf8f62c96828ea12a056a80842ae0a48" kindref="member">alpha_property_</ref>;</highlight></codeline>
+<codeline lineno="110" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1ab62d40d233862f13f48daf91c01ea0fe" refkind="member"><highlight class="normal"><sp/><sp/>rviz::FloatProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1ab62d40d233862f13f48daf91c01ea0fe" kindref="member">line_width_property_</ref>;</highlight></codeline>
+<codeline lineno="111" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a8aee129ef094b97d68f10831077e2890" refkind="member"><highlight class="normal"><sp/><sp/>rviz::IntProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a8aee129ef094b97d68f10831077e2890" kindref="member">buffer_length_property_</ref>;</highlight></codeline>
+<codeline lineno="112" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a4c6d8508ea2b9531745a0c21ae6f36bf" refkind="member"><highlight class="normal"><sp/><sp/>rviz::VectorProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a4c6d8508ea2b9531745a0c21ae6f36bf" kindref="member">offset_property_</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a3f2ebb44a41cd3f7acc5331f8d6ee134a8256e1113ecf698ec270a85ae84bec22" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a3f2ebb44a41cd3f7acc5331f8d6ee134" kindref="member">LineStyle</ref><sp/>{<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a3f2ebb44a41cd3f7acc5331f8d6ee134a2d9b153f49e9663d831a1d30baf55e76" kindref="member">LINES</ref>,<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a3f2ebb44a41cd3f7acc5331f8d6ee134a8256e1113ecf698ec270a85ae84bec22" kindref="member">BILLBOARDS</ref><sp/>};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>pose<sp/>marker<sp/>property</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a489abe7d62d38da57ed5351783896747" refkind="member"><highlight class="normal"><sp/><sp/>rviz::EnumProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a489abe7d62d38da57ed5351783896747" kindref="member">pose_style_property_</ref>;</highlight></codeline>
+<codeline lineno="118" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1afb7289f786c19e19ab112d4a5becd3b0" refkind="member"><highlight class="normal"><sp/><sp/>rviz::FloatProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1afb7289f786c19e19ab112d4a5becd3b0" kindref="member">pose_axes_length_property_</ref>;</highlight></codeline>
+<codeline lineno="119" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a16ba76616f912209582b29ad98b5fbe8" refkind="member"><highlight class="normal"><sp/><sp/>rviz::FloatProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a16ba76616f912209582b29ad98b5fbe8" kindref="member">pose_axes_radius_property_</ref>;</highlight></codeline>
+<codeline lineno="120" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a286e6f90c7c96b0771ffff2bded16440" refkind="member"><highlight class="normal"><sp/><sp/>rviz::ColorProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a286e6f90c7c96b0771ffff2bded16440" kindref="member">pose_arrow_color_property_</ref>;</highlight></codeline>
+<codeline lineno="121" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1acc6ab017f52ea0448a735016290148a3" refkind="member"><highlight class="normal"><sp/><sp/>rviz::FloatProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1acc6ab017f52ea0448a735016290148a3" kindref="member">pose_arrow_shaft_length_property_</ref>;</highlight></codeline>
+<codeline lineno="122" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1ab2f26bd6d2ba5fe4b8a37a88c354111e" refkind="member"><highlight class="normal"><sp/><sp/>rviz::FloatProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1ab2f26bd6d2ba5fe4b8a37a88c354111e" kindref="member">pose_arrow_head_length_property_</ref>;</highlight></codeline>
+<codeline lineno="123" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a0673ef955950db38ff738d7d12609cba" refkind="member"><highlight class="normal"><sp/><sp/>rviz::FloatProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a0673ef955950db38ff738d7d12609cba" kindref="member">pose_arrow_shaft_diameter_property_</ref>;</highlight></codeline>
+<codeline lineno="124" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1af6b624ca4a8f6585fdd01e2f09f85d14" refkind="member"><highlight class="normal"><sp/><sp/>rviz::FloatProperty*<sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1af6b624ca4a8f6585fdd01e2f09f85d14" kindref="member">pose_arrow_head_diameter_property_</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70" kindref="member">PoseStyle</ref><sp/>{</highlight></codeline>
+<codeline lineno="127" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70aaa29dc466e54c1a30b6ebe0f9d615671" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70aaa29dc466e54c1a30b6ebe0f9d615671" kindref="member">NONE</ref>,</highlight></codeline>
+<codeline lineno="128" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70a43a5a570f62e99a348a8fe68b60fd639" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70a43a5a570f62e99a348a8fe68b60fd639" kindref="member">AXES</ref>,</highlight></codeline>
+<codeline lineno="129" refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70a5e1c3b0f007be21d436036bc4c2bb18d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70a5e1c3b0f007be21d436036bc4c2bb18d" kindref="member">ARROWS</ref>,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rviz_path_array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>AGENT_PATHARRAY_DISPLAY_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="rviz_path_array/src/patharray_display.h"/>
+  </compounddef>
+</doxygen>

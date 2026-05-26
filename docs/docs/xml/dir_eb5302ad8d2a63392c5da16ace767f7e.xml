@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_eb5302ad8d2a63392c5da16ace767f7e" kind="dir">
+    <compoundname>agent_path_prediction</compoundname>
+    <innerfile refid="agent__path__prediction_8hpp">agent_path_prediction.hpp</innerfile>
+    <innerfile refid="agent__path__prediction__config_8hpp">agent_path_prediction_config.hpp</innerfile>
+    <innerfile refid="predict__goal_8hpp">predict_goal.hpp</innerfile>
+    <innerfile refid="predict__goal__ros_8hpp">predict_goal_ros.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="agent_path_prediction/include/agent_path_prediction/"/>
+  </compounddef>
+</doxygen>

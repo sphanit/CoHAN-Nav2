@@ -1,0 +1,5 @@
+<map id="hateb_local_planner::EdgeInflatedObstacle" name="hateb_local_planner::EdgeInflatedObstacle">
+<area shape="rect" id="node1" title="Edge defining the cost function for keeping a minimum distance from inflated obstacles." alt="" coords="5,228,173,269"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebUnaryEdge.html" title=" " alt="" coords="6,109,173,180"/>
+<area shape="rect" id="node3" title=" " alt="" coords="11,5,168,61"/>
+</map>

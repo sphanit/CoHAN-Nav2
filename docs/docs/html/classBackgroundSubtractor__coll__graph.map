@@ -1,0 +1,4 @@
+<map id="BackgroundSubtractor" name="BackgroundSubtractor">
+<area shape="rect" id="node1" title="Perform background subtraction to extract the &quot;moving&quot; foreground." alt="" coords="5,109,172,136"/>
+<area shape="rect" id="node2" href="$structBackgroundSubtractor_1_1Params.html" title=" " alt="" coords="5,5,172,47"/>
+</map>

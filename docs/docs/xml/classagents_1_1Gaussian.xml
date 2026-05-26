@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classagents_1_1Gaussian" kind="class" language="C++" prot="public">
+    <compoundname>agents::Gaussian</compoundname>
+    <includes refid="predict__goal_8hpp" local="no">predict_goal.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classagents_1_1Gaussian_1ada1f8aa4e47bbae656424a31321ae505" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::Gaussian::mean_</definition>
+        <argsstring></argsstring>
+        <name>mean_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="67" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Gaussian_1af35d30c148ccfa781f28924838c24cbd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::Gaussian::cov_</definition>
+        <argsstring></argsstring>
+        <name>cov_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="68" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Gaussian_1a66476bf7c62c0a2e608274a805e0fc95" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::Gaussian::inv_cov_</definition>
+        <argsstring></argsstring>
+        <name>inv_cov_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="69" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classagents_1_1Gaussian_1a783961a3ae7f0ca3ff09b1856f3be546" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double agents::Gaussian::norm_const_</definition>
+        <argsstring></argsstring>
+        <name>norm_const_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="70" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classagents_1_1Gaussian_1ad81ec7369414c45daf181faebf42246d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>agents::Gaussian::Gaussian</definition>
+        <argsstring>(double mean, double cov)</argsstring>
+        <name>Gaussian</name>
+        <param>
+          <type>double</type>
+          <declname>mean</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>cov</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for <ref refid="classagents_1_1Gaussian" kindref="compound">Gaussian</ref> distribution. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mean</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mean value of the distribution </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Covariance value of the distribution </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="49" column="3" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="49" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classagents_1_1Gaussian_1a366f2f8a4be0df5b6b902f26a0148260" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double agents::Gaussian::pdf</definition>
+        <argsstring>(double x) const</argsstring>
+        <name>pdf</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Evaluates the probability density function at a point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point at which to evaluate the PDF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>PDF value at point x </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="61" column="10" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class representing a 1D <ref refid="classagents_1_1Gaussian" kindref="compound">Gaussian</ref> distribution for probability calculations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" line="42" column="1" bodyfile="agent_path_prediction/include/agent_path_prediction/predict_goal.hpp" bodystart="42" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classagents_1_1Gaussian_1af35d30c148ccfa781f28924838c24cbd" prot="private" virt="non-virtual"><scope>agents::Gaussian</scope><name>cov_</name></member>
+      <member refid="classagents_1_1Gaussian_1ad81ec7369414c45daf181faebf42246d" prot="public" virt="non-virtual"><scope>agents::Gaussian</scope><name>Gaussian</name></member>
+      <member refid="classagents_1_1Gaussian_1a66476bf7c62c0a2e608274a805e0fc95" prot="private" virt="non-virtual"><scope>agents::Gaussian</scope><name>inv_cov_</name></member>
+      <member refid="classagents_1_1Gaussian_1ada1f8aa4e47bbae656424a31321ae505" prot="private" virt="non-virtual"><scope>agents::Gaussian</scope><name>mean_</name></member>
+      <member refid="classagents_1_1Gaussian_1a783961a3ae7f0ca3ff09b1856f3be546" prot="private" virt="non-virtual"><scope>agents::Gaussian</scope><name>norm_const_</name></member>
+      <member refid="classagents_1_1Gaussian_1a366f2f8a4be0df5b6b902f26a0148260" prot="public" virt="non-virtual"><scope>agents::Gaussian</scope><name>pdf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

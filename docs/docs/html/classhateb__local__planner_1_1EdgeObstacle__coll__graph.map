@@ -1,0 +1,5 @@
+<map id="hateb_local_planner::EdgeObstacle" name="hateb_local_planner::EdgeObstacle">
+<area shape="rect" id="node1" title="Edge defining the cost function for keeping a minimum distance from obstacles." alt="" coords="12,228,165,269"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebUnaryEdge.html" title=" " alt="" coords="5,109,172,180"/>
+<area shape="rect" id="node3" title=" " alt="" coords="10,5,167,61"/>
+</map>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_a8815f71ddd5302a5e5946b2722a89c9" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="agent__layer_8cpp">agent_layer.cpp</innerfile>
+    <innerfile refid="agent__visibility__layer_8cpp">agent_visibility_layer.cpp</innerfile>
+    <innerfile refid="static__agent__layer_8cpp">static_agent_layer.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cohan_layers/src/"/>
+  </compounddef>
+</doxygen>

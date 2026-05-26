@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgeDynamicObstacle" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgeDynamicObstacle</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebUnaryEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebUnaryEdge&lt; 2, const Obstacle *, VertexPose &gt;</basecompoundref>
+    <includes refid="edge__dynamic__obstacle_8h" local="no">edge_dynamic_obstacle.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1EdgeDynamicObstacle_1a39640ddbf8015a42c4b98f38b64e5a78" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::EdgeDynamicObstacle::t_</definition>
+        <argsstring></argsstring>
+        <name>t_</name>
+        <briefdescription>
+<para>Estimated time until current pose is reached. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" line="121" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1EdgeDynamicObstacle_1a32c9c485c8ca7083c5f8d2efb8f6e4e5" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hateb_local_planner::EdgeDynamicObstacle::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" line="122" column="7" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeDynamicObstacle_1a78b3d6fc03604c27fef650b86b7fa1ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeDynamicObstacle::EdgeDynamicObstacle</definition>
+        <argsstring>()</argsstring>
+        <name>EdgeDynamicObstacle</name>
+        <briefdescription>
+<para>Construct edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" line="77" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeDynamicObstacle_1a37d182260aaa4c9fc080f1bce0e598db" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeDynamicObstacle::EdgeDynamicObstacle</definition>
+        <argsstring>(double t)</argsstring>
+        <name>EdgeDynamicObstacle</name>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Construct edge and specify the time for its associated pose (neccessary for computeError). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Estimated time until current pose is reached </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" line="83" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeDynamicObstacle_1a48345609558f11ff15c8ca884101aef0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeDynamicObstacle::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Actual cost function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" line="88" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" bodystart="88" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeDynamicObstacle_1ade352e5de91569ac901214a425fd7a7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeDynamicObstacle::setParameters</definition>
+        <argsstring>(const HATebConfig &amp;cfg, const Obstacle *obstacle, const int type)</argsstring>
+        <name>setParameters</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> &amp;</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref> *</type>
+          <declname>obstacle</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Set all parameters at once. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D position vector containing the position of the obstacle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent type (0 - Robot, 1 - Human) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" line="114" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" bodystart="114" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Edge defining the cost function for keeping a distance from dynamic (moving) obstacles. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The edge depends on two vertices <formula id="6">$ \mathbf{s}_i, \Delta T_i $</formula> and minimizes: <linebreak/>
+ <formula id="7">$ \min \textrm{penaltyBelow}( dist2obstacle) \cdot weight $</formula>. <linebreak/>
+<emphasis>dist2obstacle</emphasis> denotes the minimum distance to the obstacle trajectory (spatial and temporal). <linebreak/>
+<emphasis>weight</emphasis> can be set using setInformation(). <linebreak/>
+<emphasis>penaltyBelow</emphasis> denotes the penalty function, see <ref refid="namespacehateb__local__planner_1ab0d8f17ad8f685bedc4aaf2ea24a47f1" kindref="member">penaltyBoundFromBelow()</ref>. <linebreak/>
+<simplesect kind="see"><para>TebOptimalPlanner::AddEdgesDynamicObstacles </para>
+</simplesect>
+<simplesect kind="remark"><para>Do not forget to call <ref refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1a5e515f4663cbcfa4942b2d5449d62618" kindref="member">setHATebConfig()</ref>, setVertexIdx() and </para>
+</simplesect>
+<simplesect kind="warning"><para>Experimental </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebUnaryEdge&lt; 2, const Obstacle *, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebUnaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeDynamicObstacle</label>
+        <link refid="classhateb__local__planner_1_1EdgeDynamicObstacle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseUnaryEdge&lt; D, const Obstacle *, VertexPose &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebUnaryEdge&lt; 2, const Obstacle *, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebUnaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeDynamicObstacle</label>
+        <link refid="classhateb__local__planner_1_1EdgeDynamicObstacle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseUnaryEdge&lt; D, const Obstacle *, VertexPose &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" line="72" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_dynamic_obstacle.h" bodystart="72" bodyend="126"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1aa1485afb0fdfc42fc331165a7d5c8b30" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeDynamicObstacle</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeDynamicObstacle_1a48345609558f11ff15c8ca884101aef0" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeDynamicObstacle</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeDynamicObstacle_1a78b3d6fc03604c27fef650b86b7fa1ea" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeDynamicObstacle</scope><name>EdgeDynamicObstacle</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeDynamicObstacle_1a37d182260aaa4c9fc080f1bce0e598db" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeDynamicObstacle</scope><name>EdgeDynamicObstacle</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1aadf8f1d82509963f06807b27ef0c8166" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeDynamicObstacle</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1a7c199ff0a5a802ac533257e1254cd5a0" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeDynamicObstacle</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1a5e515f4663cbcfa4942b2d5449d62618" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeDynamicObstacle</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeDynamicObstacle_1ade352e5de91569ac901214a425fd7a7f" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeDynamicObstacle</scope><name>setParameters</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeDynamicObstacle_1a39640ddbf8015a42c4b98f38b64e5a78" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeDynamicObstacle</scope><name>t_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeDynamicObstacle_1a32c9c485c8ca7083c5f8d2efb8f6e4e5" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeDynamicObstacle</scope><name>type_</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebUnaryEdge_1ae722abea8571e278cd57acf7fc2542cf" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeDynamicObstacle</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

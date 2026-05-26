@@ -1,0 +1,5 @@
+<map id="hateb_local_planner::EdgeAgentAgentSafety" name="hateb_local_planner::EdgeAgentAgentSafety">
+<area shape="rect" id="node1" title="Edge defining a safety constraint between two agent poses (e.g., humans) in the optimization graph." alt="" coords="7,228,187,269"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebBinaryEdge.html" title=" " alt="" coords="6,109,189,180"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,189,61"/>
+</map>

@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgeInvisibleHuman" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgeInvisibleHuman</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebMultiEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebMultiEdge&lt; 1, const Obstacle * &gt;</basecompoundref>
+    <includes refid="edge__invisible__human_8h" local="no">edge_invisible_human.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1EdgeInvisibleHuman_1ac0ac88ea9c34f7b9d7cda2192d67bb13" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::EdgeInvisibleHuman::t_</definition>
+        <argsstring></argsstring>
+        <name>t_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" line="106" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1EdgeInvisibleHuman_1a1ffb21820a3e383e07a4a3d981fd25d0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::EdgeInvisibleHuman::V_i_</definition>
+        <argsstring></argsstring>
+        <name>V_i_</name>
+        <initializer>= 1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" line="107" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1EdgeInvisibleHuman_1ae4290c19f597dd22035eb716c46ea133" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::EdgeInvisibleHuman::a_min_</definition>
+        <argsstring></argsstring>
+        <name>a_min_</name>
+        <initializer>= 0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" line="108" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1EdgeInvisibleHuman_1a98dd299c1de726c8db8aeda92299b18f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::EdgeInvisibleHuman::a_norm_</definition>
+        <argsstring></argsstring>
+        <name>a_norm_</name>
+        <initializer>= 0.68</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" line="109" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1EdgeInvisibleHuman_1accde96d3ff2b9e40fbd922f45e29d977" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::EdgeInvisibleHuman::a_max_</definition>
+        <argsstring></argsstring>
+        <name>a_max_</name>
+        <initializer>= 2.94</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" line="110" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeInvisibleHuman_1a087f896f133cabc0ca819760082542ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeInvisibleHuman::EdgeInvisibleHuman</definition>
+        <argsstring>()</argsstring>
+        <name>EdgeInvisibleHuman</name>
+        <briefdescription>
+<para>Construct edge and resize to 3 vertices (agent poses and time diff). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" line="61" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeInvisibleHuman_1a7fc17014c36caa15880dab3327629c19" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeInvisibleHuman::EdgeInvisibleHuman</definition>
+        <argsstring>(double t)</argsstring>
+        <name>EdgeInvisibleHuman</name>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Construct edge and specify the time for its associated pose (necessary for computeError). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Estimated time until current pose is reached </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" line="67" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeInvisibleHuman_1ae9bc096aa9a102bbc47215d356b5b715" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeInvisibleHuman::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Compute the error / cost for the edge. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the cost associated with the invisible human agent&apos;s predicted state, applying penalties if constraints are violated. The error is stored in _error[0]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" line="75" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" bodystart="75" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeInvisibleHuman_1a8d0dff3e60efa0c82b45a545bef4c54d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeInvisibleHuman::setParameters</definition>
+        <argsstring>(const HATebConfig &amp;cfg, const Obstacle *obstacle)</argsstring>
+        <name>setParameters</name>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> &amp;</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref> *</type>
+          <declname>obstacle</declname>
+        </param>
+        <briefdescription>
+<para>Set all parameters at once. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1HATebConfig" kindref="compound">HATebConfig</ref> class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>robot_model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Robot model required for distance calculation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref> msg constaining the invisible human agent&apos;s position and velocity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" line="101" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" bodystart="101" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Edge defining a constraint for invisible human agents in the optimization graph. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This edge penalizes robot configurations that are close to the predicted position of an invisible human agent. The cost is computed based on the agent&apos;s predicted position and the robot&apos;s relative to this prediction, enforcing safe and plausible robot behavior even when the human is not directly observed.</para>
+<para>Inherits from <ref refid="classhateb__local__planner_1_1BaseTebMultiEdge" kindref="compound">BaseTebMultiEdge&lt;1, const Obstacle*&gt;</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hateb_local_planner::EdgeInvisibleHuman</label>
+        <link refid="classhateb__local__planner_1_1EdgeInvisibleHuman"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseMultiEdge&lt; D, const Obstacle *  &gt;</label>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebMultiEdge&lt; 1, const Obstacle * &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebMultiEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hateb_local_planner::EdgeInvisibleHuman</label>
+        <link refid="classhateb__local__planner_1_1EdgeInvisibleHuman"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseMultiEdge&lt; D, const Obstacle *  &gt;</label>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebMultiEdge&lt; 1, const Obstacle * &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebMultiEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" line="56" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_invisible_human.h" bodystart="56" bodyend="117"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1EdgeInvisibleHuman_1accde96d3ff2b9e40fbd922f45e29d977" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>a_max_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeInvisibleHuman_1ae4290c19f597dd22035eb716c46ea133" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>a_min_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeInvisibleHuman_1a98dd299c1de726c8db8aeda92299b18f" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>a_norm_</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a405cc9e1660f62eee29fa73880eaa508" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeInvisibleHuman_1ae9bc096aa9a102bbc47215d356b5b715" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeInvisibleHuman_1a087f896f133cabc0ca819760082542ca" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>EdgeInvisibleHuman</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeInvisibleHuman_1a7fc17014c36caa15880dab3327629c19" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>EdgeInvisibleHuman</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a3783b6cfd9f8666ecb000b07c25758f4" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a77ae43578b59d5ac54ffe9d50a859255" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1a57f2fb741d0ded5f4491d4602919c5a3" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>resize</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1ae126de1d25032cf83de82823cdcf74bc" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeInvisibleHuman_1a8d0dff3e60efa0c82b45a545bef4c54d" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>setParameters</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeInvisibleHuman_1ac0ac88ea9c34f7b9d7cda2192d67bb13" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>t_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeInvisibleHuman_1a1ffb21820a3e383e07a4a3d981fd25d0" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>V_i_</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebMultiEdge_1af763878f2200a5cf70b3b7d6c5a86b78" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeInvisibleHuman</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

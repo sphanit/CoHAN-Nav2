@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="is__goal__reached_8cpp" kind="file" language="C++">
+    <compoundname>is_goal_reached.cpp</compoundname>
+    <includes refid="is__goal__reached_8h" local="no">hateb_local_planner/behavior_tree/condition/is_goal_reached.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>is_goal_reached.cpp</label>
+        <link refid="is__goal__reached_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner/behavior_tree/condition/is_goal_reached.h</label>
+        <link refid="is__goal__reached_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="5">
+        <label>move_base_msgs/MoveBaseActionGoal.h</label>
+      </node>
+      <node id="8">
+        <label>hateb_local_planner/behavior_tree/bt_core.h</label>
+        <link refid="bt__core_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="7">
+        <label>agent_path_prediction/AgentsInfo.h</label>
+      </node>
+      <node id="9">
+        <label>behaviortree_cpp/bt_factory.h</label>
+      </node>
+      <node id="6">
+        <label>move_base_msgs/MoveBaseActionResult.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehateb__local__planner">hateb_local_planner</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="is__goal__reached_8h" kindref="compound">hateb_local_planner/behavior_tree/condition/is_goal_reached.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehateb__local__planner" kindref="compound">hateb_local_planner</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><ref refid="classhateb__local__planner_1_1IsGoalReached_1a2f5771a5bc8f9cc5ce8f5f228748f802" kindref="member">IsGoalReached::IsGoalReached</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>condition_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BT::NodeConfiguration&amp;<sp/>conf)<sp/>:<sp/>BT::ConditionNode(condition_name,<sp/>conf),<sp/>goal_reached_(true)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>ROS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/>ros::NodeHandle<sp/>node(</highlight><highlight class="stringliteral">&quot;~/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>goal_sub_<sp/>=<sp/>node.subscribe(</highlight><highlight class="stringliteral">&quot;/move_base/goal&quot;</highlight><highlight class="normal">,<sp/>1,<sp/>&amp;IsGoalReached::goalReceivedCB,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>status_sub_<sp/>=<sp/>node.subscribe(</highlight><highlight class="stringliteral">&quot;/move_base/result&quot;</highlight><highlight class="normal">,<sp/>1,<sp/>&amp;IsGoalReached::resultCB,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>node<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>name_<sp/>=<sp/>condition_name;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">IsGoalReached::~IsGoalReached()<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS_INFO<sp/>in<sp/>destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>ROS_INFO(</highlight><highlight class="stringliteral">&quot;Shutting<sp/>downd<sp/>the<sp/>isGoalReached<sp/>BT<sp/>Node&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>IsGoalReached::goalReceivedCB(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>move_base_msgs::MoveBaseActionGoal&amp;<sp/>goal_msg)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>the<sp/>goal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!goal_reached_)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/></highlight><highlight class="stringliteral">&quot;Goal<sp/>updated.&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>updated_<sp/>=<sp/>true;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>goal_reached_<sp/>=<sp/>false;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>the<sp/>class<sp/>property<sp/>and<sp/>the<sp/>blackboard<sp/>values<sp/>with<sp/>new<sp/>goal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>goal_<sp/>=<sp/>goal_msg.goal.target_pose.pose;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>setOutput(&quot;nav_goal&quot;,<sp/>goal_);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Is<sp/>it<sp/>needed<sp/>if<sp/>we<sp/>are<sp/>checking<sp/>the<sp/>goal<sp/>reaching<sp/>manually?<sp/>TODO:<sp/>Check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>IsGoalReached::resultCB(const<sp/>move_base_msgs::MoveBaseActionResult&amp;<sp/>result_msg)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>the<sp/>goal<sp/>reached<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(result_msg.status.status)<sp/>==<sp/>3)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>goal_reached_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">BT::NodeStatus<sp/>IsGoalReached::tick()<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>the<sp/>goal<sp/>reached<sp/>condition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>goal_reached_<sp/>=<sp/>goalReachedCheck();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Goal<sp/>updated<sp/>case</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(updated_)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>updated_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/></highlight><highlight class="stringliteral">&quot;Goal<sp/>updated,<sp/>restarting<sp/>the<sp/>tree!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>BT::NodeStatus::SUCCESS;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Goal<sp/>reached<sp/>case</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>if<sp/>(goal_reached_)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/></highlight><highlight class="stringliteral">&quot;Goal<sp/>reached!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>BT::NodeStatus::SUCCESS;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><ref refid="bt__core_8h_1a25ae9fec95ea71254c494b5a594efeb9" kindref="member">BT_INFO</ref>(name_,<sp/>&quot;Goal<sp/>in<sp/>progress.&quot;)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>return<sp/>BT::NodeStatus::FAILURE;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsGoalReached::goalReachedCheck()<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>true<sp/>if<sp/>goal_reached_<sp/>is<sp/>already<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(goal_reached_)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>the<sp/>input<sp/>message<sp/>agents_info<sp/>from<sp/>the<sp/>blackboard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>getInput(</highlight><highlight class="stringliteral">&quot;agents_info&quot;</highlight><highlight class="normal">,<sp/>agents_info_);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>the<sp/>goal<sp/>manually</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>delta_orient<sp/>=<sp/><ref refid="bt__core_8h_1a443d59f71cd917451eb358a9d1e5c6c1" kindref="member">normalize_angle</ref>(tf2::getYaw(goal_.orientation)<sp/>-<sp/>agents_info_.robot_pose.theta);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dg<sp/>=<sp/>std::hypot(goal_.position.x<sp/>-<sp/>agents_info_.robot_pose.x,<sp/>goal_.position.y<sp/>-<sp/>agents_info_.robot_pose.y);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(fabs(dg)<sp/>&lt;<sp/><ref refid="bt__core_8h_1a6ebf6899d6c1c8b7b9d09be872c05aae" kindref="member">EPS</ref><sp/>&amp;&amp;<sp/>fabs(delta_orient)<sp/>&lt;<sp/><ref refid="bt__core_8h_1a6ebf6899d6c1c8b7b9d09be872c05aae" kindref="member">EPS</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hateb_local_planner</highlight></codeline>
+    </programlisting>
+    <location file="hateb_local_planner/src/behavior_tree/condition/is_goal_reached.cpp"/>
+  </compounddef>
+</doxygen>

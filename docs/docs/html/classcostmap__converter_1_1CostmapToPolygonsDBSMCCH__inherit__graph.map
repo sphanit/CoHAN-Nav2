@@ -1,0 +1,8 @@
+<map id="costmap_converter::CostmapToPolygonsDBSMCCH" name="costmap_converter::CostmapToPolygonsDBSMCCH">
+<area shape="rect" id="node1" title="This class converts the costmap_2d into a set of convex polygons (and points)" alt="" coords="239,90,459,131"/>
+<area shape="rect" id="node3" href="$classCostmapToPolygons.html" title=" " alt="" coords="561,5,715,32"/>
+<area shape="rect" id="node4" href="$classcostmap__converter_1_1CostmapToLinesDBSMCCH.html" title="This class converts the costmap_2d into a set of lines (and points)" alt="" coords="541,57,735,98"/>
+<area shape="rect" id="node5" href="$classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html" title="This class converts the costmap_2d into a set of lines (and points)" alt="" coords="533,122,743,163"/>
+<area shape="rect" id="node6" href="$classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull.html" title="This class converts the costmap_2d into a set of non&#45;convex polygons (and points)" alt="" coords="507,187,769,229"/>
+<area shape="rect" id="node2" href="$classcostmap__converter_1_1BaseCostmapToPolygons.html" title="This abstract class defines the interface for plugins that convert the costmap into polygon types." alt="" coords="5,90,191,131"/>
+</map>

@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="costmap__polygons_8cpp" kind="file" language="C++">
+    <compoundname>costmap_polygons.cpp</compoundname>
+    <includes local="no">random</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">gtest/gtest.h</includes>
+    <includes refid="costmap__to__polygons_8h" local="no">costmap_converter/costmap_to_polygons.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>geometry_msgs/msg/polygon.hpp</label>
+      </node>
+      <node id="10">
+        <label>nav2_costmap_2d/costmap_2d.hpp</label>
+      </node>
+      <node id="19">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="14">
+        <label>nav_msgs/msg/occupancy_grid.hpp</label>
+      </node>
+      <node id="15">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="6">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="11">
+        <label>nav2_costmap_2d/costmap_2d_ros.hpp</label>
+      </node>
+      <node id="20">
+        <label>Eigen/StdVector</label>
+      </node>
+      <node id="2">
+        <label>random</label>
+      </node>
+      <node id="5">
+        <label>costmap_converter/costmap_to_polygons.h</label>
+        <link refid="costmap__to__polygons_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>geometry_msgs/msg/point.hpp</label>
+      </node>
+      <node id="7">
+        <label>costmap_converter/costmap_converter_interface.h</label>
+        <link refid="costmap__converter__interface_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>gtest/gtest.h</label>
+      </node>
+      <node id="13">
+        <label>costmap_converter_msgs/msg/obstacle_array_msg.hpp</label>
+      </node>
+      <node id="8">
+        <label>mutex</label>
+      </node>
+      <node id="1">
+        <label>costmap_polygons.cpp</label>
+        <link refid="costmap__polygons_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>algorithm</label>
+      </node>
+      <node id="9">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classCostmapToPolygons" prot="public">CostmapToPolygons</innerclass>
+    <innerclass refid="classCostmapToPolygonsDBSMCCHTest" prot="public">CostmapToPolygonsDBSMCCHTest</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="costmap__polygons_8cpp_1aae650a380152a00762e87676df513581" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(CostmapToPolygonsDBSMCCHTest, regionQuery)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="classCostmapToPolygonsDBSMCCHTest" kindref="compound">CostmapToPolygonsDBSMCCHTest</ref></type>
+        </param>
+        <param>
+          <type>regionQuery</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/test/costmap_polygons.cpp" line="102" column="1" bodyfile="costmap_converter/costmap_converter/test/costmap_polygons.cpp" bodystart="102" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="costmap__polygons_8cpp_1a8b0ef4281e47caf21968088c527426d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(CostmapToPolygonsDBSMCCHTest, dbScan)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="classCostmapToPolygonsDBSMCCHTest" kindref="compound">CostmapToPolygonsDBSMCCHTest</ref></type>
+        </param>
+        <param>
+          <type>dbScan</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/test/costmap_polygons.cpp" line="120" column="1" bodyfile="costmap_converter/costmap_converter/test/costmap_polygons.cpp" bodystart="120" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="costmap__polygons_8cpp_1a61247a5ad819c9e3883ff77acd2c6b5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(CostmapToPolygonsDBSMCCH, EmptyMap)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>CostmapToPolygonsDBSMCCH</type>
+        </param>
+        <param>
+          <type>EmptyMap</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/test/costmap_polygons.cpp" line="131" column="1" bodyfile="costmap_converter/costmap_converter/test/costmap_polygons.cpp" bodystart="131" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="costmap__polygons_8cpp_1acfe9918e01dc62ae2bf7a0c030b9ce13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(CostmapToPolygonsDBSMCCH, SimplifyPolygon)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>CostmapToPolygonsDBSMCCH</type>
+        </param>
+        <param>
+          <type>SimplifyPolygon</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/test/costmap_polygons.cpp" line="144" column="1" bodyfile="costmap_converter/costmap_converter/test/costmap_polygons.cpp" bodystart="144" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="costmap__polygons_8cpp_1a9e0bd4240d4bf52e4a7903c34e4f23a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(CostmapToPolygonsDBSMCCH, SimplifyPolygonPerfectLines)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>CostmapToPolygonsDBSMCCH</type>
+        </param>
+        <param>
+          <type>SimplifyPolygonPerfectLines</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/test/costmap_polygons.cpp" line="188" column="1" bodyfile="costmap_converter/costmap_converter/test/costmap_polygons.cpp" bodystart="188" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="costmap__polygons_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/test/costmap_polygons.cpp" line="226" column="5" bodyfile="costmap_converter/costmap_converter/test/costmap_polygons.cpp" bodystart="226" bodyend="230"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtest/gtest.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="costmap__to__polygons_8h" kindref="compound">costmap_converter/costmap_to_polygons.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">geometry_msgs::msg::Point32<sp/>create_point(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::Point32<sp/>result;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>result.x<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>result.y<sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>result.z<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>make<sp/>things<sp/>accesible<sp/>in<sp/>the<sp/>test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classCostmapToPolygons" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCostmapToPolygons" kindref="compound">CostmapToPolygons</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH" kindref="compound">costmap_converter::CostmapToPolygonsDBSMCCH</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint&gt;&amp;<sp/><ref refid="classCostmapToPolygons_1a9db54c20234c1669d26b3dd6e1bc9555" kindref="member">points</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1af086dcaa5d4d7196a94552105bc9b868" kindref="member">occupied_cells_</ref>;}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters" kindref="compound">costmap_converter::CostmapToPolygonsDBSMCCH::Parameters</ref>&amp;<sp/><ref refid="classCostmapToPolygons_1acaf9c2039802ed73c251f0e658368d3a" kindref="member">parameters</ref>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1aacda867bb50b071838a331f98527559c" kindref="member">parameter_</ref>;}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a4fb264f67eb63e68e8d5183f1f0ca4ad" kindref="member">costmap_converter::CostmapToPolygonsDBSMCCH::addPoint</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a30c9e455820f8193735362f325e0de60" kindref="member">costmap_converter::CostmapToPolygonsDBSMCCH::regionQuery</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a0cd5aaaba9344ff25b5c3feb6faa534c" kindref="member">costmap_converter::CostmapToPolygonsDBSMCCH::dbScan</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a25bede95689564c58620c8dcbe860023" kindref="member">costmap_converter::CostmapToPolygonsDBSMCCH::convexHull2</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a96099731e6f2906716bb3f0c5411a389" kindref="member">costmap_converter::CostmapToPolygonsDBSMCCH::simplifyPolygon</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classCostmapToPolygonsDBSMCCHTest" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCostmapToPolygonsDBSMCCHTest" kindref="compound">CostmapToPolygonsDBSMCCHTest</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>::testing::Test</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a989567990c48098f87d5b36182a364cb" kindref="member">SetUp</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1acaf9c2039802ed73c251f0e658368d3a" kindref="member">parameters</ref>().<ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1af298a1d0f7fbd95cd3fab66e366ef520" kindref="member">max_distance_</ref><sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1acaf9c2039802ed73c251f0e658368d3a" kindref="member">parameters</ref>().<ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1a9a03568b3a66137442998a5e74e304a3" kindref="member">max_pts_</ref><sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1acaf9c2039802ed73c251f0e658368d3a" kindref="member">parameters</ref>().<ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1a28994597f67d1be4d306d99f2a7f1fb1" kindref="member">min_pts_</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1acaf9c2039802ed73c251f0e658368d3a" kindref="member">parameters</ref>().<ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1a099e0aab9fc720377ca17d1de8e7b1a1" kindref="member">min_keypoint_separation_</ref><sp/>=<sp/>0.1;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a67e11d0fad4aabd80fbcc1e27a806c6f" kindref="member">costmap</ref>.reset(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>nav2_costmap_2d::Costmap2D(100,<sp/>100,<sp/>0.1,<sp/>-5.,<sp/>-5.));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a5fa67041d5b91feed40135939ef871e7" kindref="member">setCostmap2D</ref>(<ref refid="classCostmapToPolygonsDBSMCCHTest_1a67e11d0fad4aabd80fbcc1e27a806c6f" kindref="member">costmap</ref>.get());</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::random_device<sp/>rand_dev;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::mt19937<sp/>generator(rand_dev());</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::uniform_real_distribution&lt;&gt;<sp/>random_angle(-<ref refid="hateb__config_8hpp_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref>,<sp/><ref refid="hateb__config_8hpp_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::uniform_real_distribution&lt;&gt;<sp/>random_dist(0.,<sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1acaf9c2039802ed73c251f0e658368d3a" kindref="member">parameters</ref>().<ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1af298a1d0f7fbd95cd3fab66e366ef520" kindref="member">max_distance_</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a4fb264f67eb63e68e8d5183f1f0ca4ad" kindref="member">addPoint</ref>(0.,<sp/>0.);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a4fb264f67eb63e68e8d5183f1f0ca4ad" kindref="member">addPoint</ref>(1.3,<sp/>1.3);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>adding<sp/>random<sp/>points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>center_x<sp/>=<sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1a9db54c20234c1669d26b3dd6e1bc9555" kindref="member">points</ref>()[0].x;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>center_y<sp/>=<sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1a9db54c20234c1669d26b3dd6e1bc9555" kindref="member">points</ref>()[0].y;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1acaf9c2039802ed73c251f0e658368d3a" kindref="member">parameters</ref>().max_pts_<sp/>-<sp/>1;<sp/>++i)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha<sp/>=<sp/>random_angle(generator);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/><sp/>=<sp/>random_dist(generator);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wx<sp/>=<sp/>center_x<sp/>+<sp/>std::cos(alpha)<sp/>*<sp/>dist;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wy<sp/>=<sp/>center_y<sp/>+<sp/>std::sin(alpha)<sp/>*<sp/>dist;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a4fb264f67eb63e68e8d5183f1f0ca4ad" kindref="member">addPoint</ref>(wx,<sp/>wy);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>some<sp/>noisy<sp/>points<sp/>not<sp/>belonging<sp/>to<sp/>a<sp/>cluster</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a4fb264f67eb63e68e8d5183f1f0ca4ad" kindref="member">addPoint</ref>(-1,<sp/>-1);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a4fb264f67eb63e68e8d5183f1f0ca4ad" kindref="member">addPoint</ref>(-2,<sp/>-2);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>adding<sp/>random<sp/>points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>center_x<sp/>=<sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1a9db54c20234c1669d26b3dd6e1bc9555" kindref="member">points</ref>()[1].x;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>center_y<sp/>=<sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1a9db54c20234c1669d26b3dd6e1bc9555" kindref="member">points</ref>()[1].y;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1acaf9c2039802ed73c251f0e658368d3a" kindref="member">parameters</ref>().max_pts_/2;<sp/>++i)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha<sp/>=<sp/>random_angle(generator);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/><sp/>=<sp/>random_dist(generator);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wx<sp/>=<sp/>center_x<sp/>+<sp/>std::cos(alpha)<sp/>*<sp/>dist;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wy<sp/>=<sp/>center_y<sp/>+<sp/>std::sin(alpha)<sp/>*<sp/>dist;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a4fb264f67eb63e68e8d5183f1f0ca4ad" kindref="member">addPoint</ref>(wx,<sp/>wy);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a819645f6ec9f5c2d27bbbf82a9b0aa7f" kindref="member">regionQueryTrivial</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>curr_index,<sp/>std::vector&lt;int&gt;&amp;<sp/>neighbor_indices)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>neighbor_indices.clear();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>query_point<sp/>=<sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1a9db54c20234c1669d26b3dd6e1bc9555" kindref="member">points</ref>()[curr_index];</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>int(<ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1a9db54c20234c1669d26b3dd6e1bc9555" kindref="member">points</ref>().size());<sp/>++i)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>curr_index)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>kp<sp/>=<sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1a9db54c20234c1669d26b3dd6e1bc9555" kindref="member">points</ref>()[i];</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/>query_point.x<sp/>-<sp/>kp.x;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dy<sp/>=<sp/>query_point.y<sp/>-<sp/>kp.y;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>sqrt(dx*dx<sp/>+<sp/>dy*dy);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dist<sp/>&lt;<sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>.<ref refid="classCostmapToPolygons_1acaf9c2039802ed73c251f0e658368d3a" kindref="member">parameters</ref>().<ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1af298a1d0f7fbd95cd3fab66e366ef520" kindref="member">max_distance_</ref>)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>neighbor_indices.push_back(i);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCostmapToPolygons" kindref="compound">CostmapToPolygons</ref><sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a6c4061ca66655572862774ccf7ab5723" kindref="member">costmap_to_polygons</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;nav2_costmap_2d::Costmap2D&gt;<sp/><ref refid="classCostmapToPolygonsDBSMCCHTest_1a67e11d0fad4aabd80fbcc1e27a806c6f" kindref="member">costmap</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><ref refid="costmap__polygons_8cpp_1aae650a380152a00762e87676df513581" kindref="member">TEST_F</ref>(<ref refid="classCostmapToPolygonsDBSMCCHTest" kindref="compound">CostmapToPolygonsDBSMCCHTest</ref>,<sp/>regionQuery)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/>neighbors,<sp/>neighbors_trivial;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>costmap_to_polygons.regionQuery(0,<sp/>neighbors);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>regionQueryTrivial(0,<sp/>neighbors_trivial);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>ASSERT_EQ(costmap_to_polygons.parameters().max_pts_<sp/>-<sp/>1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">(neighbors.size()));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>ASSERT_EQ(neighbors_trivial.size(),<sp/>neighbors.size());</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>std::sort(neighbors.begin(),<sp/>neighbors.end());</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>ASSERT_EQ(neighbors_trivial,<sp/>neighbors);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>costmap_to_polygons.regionQuery(1,<sp/>neighbors);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>regionQueryTrivial(1,<sp/>neighbors_trivial);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>ASSERT_EQ(costmap_to_polygons.parameters().max_pts_/2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">(neighbors.size()));</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>ASSERT_EQ(neighbors_trivial.size(),<sp/>neighbors.size());</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>std::sort(neighbors.begin(),<sp/>neighbors.end());</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>ASSERT_EQ(neighbors_trivial,<sp/>neighbors);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><ref refid="costmap__polygons_8cpp_1aae650a380152a00762e87676df513581" kindref="member">TEST_F</ref>(<ref refid="classCostmapToPolygonsDBSMCCHTest" kindref="compound">CostmapToPolygonsDBSMCCHTest</ref>,<sp/>dbScan)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>std::vector&lt;<sp/>std::vector&lt;costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint&gt;<sp/>&gt;<sp/>clusters;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>costmap_to_polygons.dbScan(clusters);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>ASSERT_EQ(3,<sp/>clusters.size());</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>ASSERT_EQ(2,<sp/>clusters[0].size());<sp/></highlight><highlight class="comment">//<sp/>noisy<sp/>points<sp/>not<sp/>belonging<sp/>to<sp/>a<sp/>cluster</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>ASSERT_EQ(costmap_to_polygons.parameters().max_pts_,<sp/>clusters[1].size());<sp/></highlight><highlight class="comment">//<sp/>first<sp/>cluster<sp/>at<sp/>(0,0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>ASSERT_EQ(costmap_to_polygons.parameters().max_pts_/2<sp/>+<sp/>1,<sp/>clusters[2].size());<sp/></highlight><highlight class="comment">//<sp/>second<sp/>cluster<sp/>at<sp/>(1,1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><ref refid="costmap__polygons_8cpp_1a61247a5ad819c9e3883ff77acd2c6b5a" kindref="member">TEST</ref>(CostmapToPolygonsDBSMCCH,<sp/>EmptyMap)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;nav2_costmap_2d::Costmap2D&gt;<sp/>costmap<sp/>=</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_shared&lt;nav2_costmap_2d::Costmap2D&gt;(nav2_costmap_2d::Costmap2D(100,<sp/>100,<sp/>0.1,<sp/>-5.,<sp/>-5.));</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><ref refid="classCostmapToPolygons" kindref="compound">CostmapToPolygons</ref><sp/>costmap_to_polygons;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>costmap_to_polygons.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a5fa67041d5b91feed40135939ef871e7" kindref="member">setCostmap2D</ref>(costmap.get());</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>std::vector&lt;<sp/>std::vector&lt;costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint&gt;<sp/>&gt;<sp/>clusters;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>costmap_to_polygons.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a0cd5aaaba9344ff25b5c3feb6faa534c" kindref="member">dbScan</ref>(clusters);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>ASSERT_EQ(1,<sp/>clusters.size());<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>noise<sp/>cluster<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>ASSERT_EQ(0,<sp/>clusters[0].size());<sp/></highlight><highlight class="comment">//<sp/>noise<sp/>clsuter<sp/>is<sp/>empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><ref refid="costmap__polygons_8cpp_1a61247a5ad819c9e3883ff77acd2c6b5a" kindref="member">TEST</ref>(CostmapToPolygonsDBSMCCH,<sp/>SimplifyPolygon)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>simplification_threshold<sp/>=<sp/>0.1;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><ref refid="classCostmapToPolygons" kindref="compound">CostmapToPolygons</ref><sp/>costmap_to_polygons;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>costmap_to_polygons.<ref refid="classCostmapToPolygons_1acaf9c2039802ed73c251f0e658368d3a" kindref="member">parameters</ref>().<ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1a099e0aab9fc720377ca17d1de8e7b1a1" kindref="member">min_keypoint_separation_</ref><sp/>=<sp/>simplification_threshold;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::Polygon<sp/>polygon;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>polygon.points.push_back(create_point(0.,<sp/>0.));</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>polygon.points.push_back(create_point(1.,<sp/>0.));</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>degenerate<sp/>case<sp/>with<sp/>just<sp/>two<sp/>points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::Polygon<sp/>original_polygon<sp/>=<sp/>polygon;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>costmap_to_polygons.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a96099731e6f2906716bb3f0c5411a389" kindref="member">simplifyPolygon</ref>(polygon);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>ASSERT_EQ(2,<sp/>polygon.points.size());</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>polygon.points.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_FLOAT_EQ(original_polygon.points[i].x,<sp/>polygon.points[i].x);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_FLOAT_EQ(original_polygon.points[i].y,<sp/>polygon.points[i].y);<sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>degenerate<sp/>case<sp/>with<sp/>three<sp/>points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>polygon.points.push_back(create_point(1.,<sp/>simplification_threshold<sp/>/<sp/>2.));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>original_polygon<sp/>=<sp/>polygon;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>costmap_to_polygons.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a96099731e6f2906716bb3f0c5411a389" kindref="member">simplifyPolygon</ref>(polygon);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>ASSERT_EQ(3,<sp/>polygon.points.size());</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>polygon.points.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_FLOAT_EQ(original_polygon.points[i].x,<sp/>polygon.points[i].x);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_FLOAT_EQ(original_polygon.points[i].y,<sp/>polygon.points[i].y);<sp/><sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>polygon.points.push_back(create_point(1.,<sp/>1.));</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>original_polygon<sp/>=<sp/>polygon;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>remove<sp/>the<sp/>point<sp/>that<sp/>has<sp/>to<sp/>be<sp/>removed<sp/>by<sp/>the<sp/>simplification</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>original_polygon.points.erase(original_polygon.points.begin()+2);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>costmap_to_polygons.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a96099731e6f2906716bb3f0c5411a389" kindref="member">simplifyPolygon</ref>(polygon);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>ASSERT_EQ(3,<sp/>polygon.points.size());</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>polygon.points.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_FLOAT_EQ(original_polygon.points[i].x,<sp/>polygon.points[i].x);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_FLOAT_EQ(original_polygon.points[i].y,<sp/>polygon.points[i].y);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><ref refid="costmap__polygons_8cpp_1a61247a5ad819c9e3883ff77acd2c6b5a" kindref="member">TEST</ref>(CostmapToPolygonsDBSMCCH,<sp/>SimplifyPolygonPerfectLines)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>simplification_threshold<sp/>=<sp/>0.1;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><ref refid="classCostmapToPolygons" kindref="compound">CostmapToPolygons</ref><sp/>costmap_to_polygons;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/>costmap_to_polygons.<ref refid="classCostmapToPolygons_1acaf9c2039802ed73c251f0e658368d3a" kindref="member">parameters</ref>().<ref refid="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_1a099e0aab9fc720377ca17d1de8e7b1a1" kindref="member">min_keypoint_separation_</ref><sp/>=<sp/>simplification_threshold;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::Polygon<sp/>polygon;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>100;<sp/>++i)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>polygon.points.push_back(create_point(i*1.,<sp/>0.));</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::Point32<sp/>lastPoint<sp/>=<sp/>polygon.points.back();</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>100;<sp/>++i)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>polygon.points.push_back(create_point(lastPoint.x,<sp/>lastPoint.y<sp/>+<sp/>i<sp/>*<sp/>1.));</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/>lastPoint<sp/>=<sp/>polygon.points.back();</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>100;<sp/>++i)</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>polygon.points.push_back(create_point(lastPoint.x<sp/>+<sp/>i<sp/>*<sp/>1.,<sp/>lastPoint.y));</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/>lastPoint<sp/>=<sp/>polygon.points.back();</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>100;<sp/>++i)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>polygon.points.push_back(create_point(lastPoint.x,<sp/>lastPoint.y<sp/>+<sp/>i<sp/>*<sp/>1.));</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/>lastPoint<sp/>=<sp/>polygon.points.back();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>100;<sp/>++i)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>polygon.points.push_back(create_point(lastPoint.x<sp/>+<sp/>i<sp/>*<sp/>1.,<sp/>lastPoint.y));</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/>costmap_to_polygons.<ref refid="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1a96099731e6f2906716bb3f0c5411a389" kindref="member">simplifyPolygon</ref>(polygon);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>ASSERT_EQ(6,<sp/>polygon.points.size());</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>ASSERT_FLOAT_EQ(<sp/><sp/>0.,<sp/>polygon.points[0].x);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>ASSERT_FLOAT_EQ(<sp/><sp/>0.,<sp/>polygon.points[0].y);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/>ASSERT_FLOAT_EQ(100.,<sp/>polygon.points[1].x);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>ASSERT_FLOAT_EQ(<sp/><sp/>0.,<sp/>polygon.points[1].y);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>ASSERT_FLOAT_EQ(100.,<sp/>polygon.points[2].x);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/>ASSERT_FLOAT_EQ(100.,<sp/>polygon.points[2].y);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>ASSERT_FLOAT_EQ(200.,<sp/>polygon.points[3].x);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/>ASSERT_FLOAT_EQ(100.,<sp/>polygon.points[3].y);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>ASSERT_FLOAT_EQ(200.,<sp/>polygon.points[4].x);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/>ASSERT_FLOAT_EQ(200.,<sp/>polygon.points[4].y);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/>ASSERT_FLOAT_EQ(300.,<sp/>polygon.points[5].x);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/>ASSERT_FLOAT_EQ(200.,<sp/>polygon.points[5].y);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="costmap__polygons_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/>testing::InitGoogleTest(&amp;argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>RUN_ALL_TESTS();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="costmap_converter/costmap_converter/test/costmap_polygons.cpp"/>
+  </compounddef>
+</doxygen>

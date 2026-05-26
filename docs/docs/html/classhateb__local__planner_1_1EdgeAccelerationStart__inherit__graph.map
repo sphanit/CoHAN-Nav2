@@ -1,0 +1,5 @@
+<map id="hateb_local_planner::EdgeAccelerationStart" name="hateb_local_planner::EdgeAccelerationStart">
+<area shape="rect" id="node1" title="Edge defining the cost function for limiting the translational and rotational acceleration at the beg..." alt="" coords="11,228,186,269"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebMultiEdge.html" title=" " alt="" coords="5,109,192,180"/>
+<area shape="rect" id="node3" title=" " alt="" coords="15,5,182,61"/>
+</map>

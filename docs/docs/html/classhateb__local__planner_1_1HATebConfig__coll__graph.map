@@ -1,0 +1,15 @@
+<map id="hateb_local_planner::HATebConfig" name="hateb_local_planner::HATebConfig">
+<area shape="rect" id="node1" title="Config class for the hateb_local_planner and its components." alt="" coords="379,351,532,393"/>
+<area shape="rect" id="node2" href="$classparameters_1_1ParameterHelper.html" title="Generic parameter utility class for ROS2 nodes This class provides a reusable way to declare paramete..." alt="" coords="5,5,220,32"/>
+<area shape="rect" id="node3" href="$structhateb__local__planner_1_1HATebConfig_1_1Recovery.html" title="Recovery/backup related parameters." alt="" coords="23,57,203,98"/>
+<area shape="rect" id="node4" href="$structhateb__local__planner_1_1HATebConfig_1_1RobotFootprint.html" title=" " alt="" coords="5,122,220,163"/>
+<area shape="rect" id="node5" href="$structhateb__local__planner_1_1HATebConfig_1_1GoalTolerance.html" title="Goal tolerance related parameters." alt="" coords="7,187,218,229"/>
+<area shape="rect" id="node6" href="$structhateb__local__planner_1_1HATebConfig_1_1Trajectory.html" title="Trajectory related parameters." alt="" coords="21,253,204,294"/>
+<area shape="rect" id="node7" href="$structhateb__local__planner_1_1HATebConfig_1_1BTModeSwitch.html" title=" " alt="" coords="5,318,220,359"/>
+<area shape="rect" id="node8" href="$structhateb__local__planner_1_1HATebConfig_1_1Hateb.html" title=" " alt="" coords="33,383,192,425"/>
+<area shape="rect" id="node9" href="$structhateb__local__planner_1_1HATebConfig_1_1Obstacles.html" title="Obstacle related parameters." alt="" coords="21,449,204,490"/>
+<area shape="rect" id="node10" href="$structhateb__local__planner_1_1HATebConfig_1_1Agent.html" title="Agent related parameters." alt="" coords="34,514,191,555"/>
+<area shape="rect" id="node11" href="$structhateb__local__planner_1_1HATebConfig_1_1Optimization.html" title="Optimization related parameters." alt="" coords="11,579,214,621"/>
+<area shape="rect" id="node12" href="$structhateb__local__planner_1_1HATebConfig_1_1Robot.html" title="Robot related parameters." alt="" coords="34,645,191,686"/>
+<area shape="rect" id="node13" href="$structhateb__local__planner_1_1HATebConfig_1_1Visualization.html" title="Visualization." alt="" coords="11,710,214,751"/>
+</map>

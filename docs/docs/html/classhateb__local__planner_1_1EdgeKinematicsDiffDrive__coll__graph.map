@@ -1,0 +1,5 @@
+<map id="hateb_local_planner::EdgeKinematicsDiffDrive" name="hateb_local_planner::EdgeKinematicsDiffDrive">
+<area shape="rect" id="node1" title="Edge defining the cost function for satisfying the non&#45;holonomic kinematics of a differential drive m..." alt="" coords="5,228,199,269"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebBinaryEdge.html" title=" " alt="" coords="11,109,193,180"/>
+<area shape="rect" id="node3" title=" " alt="" coords="10,5,194,61"/>
+</map>

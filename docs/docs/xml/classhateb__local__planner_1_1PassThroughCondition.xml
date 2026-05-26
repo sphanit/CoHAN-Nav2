@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1PassThroughCondition" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::PassThroughCondition</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BT::ConditionNode</basecompoundref>
+    <includes refid="passthrough__condition_8h" local="no">passthrough_condition.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1PassThroughCondition_1a99879af1dc92ce8990b50a30f2059f9d" prot="private" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t hateb_local_planner::PassThroughCondition::psg_type_</definition>
+        <argsstring></argsstring>
+        <name>psg_type_</name>
+        <briefdescription>
+<para>Current passage type being evaluated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/passthrough_condition.h" line="80" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/passthrough_condition.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1PassThroughCondition_1a8a1fa869b35c42df2409378b86db7114" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::PassThroughCondition::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/passthrough_condition.h" line="82" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/passthrough_condition.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1PassThroughCondition_1ab545c4175ece4d6fe5e7f2d78e7f132a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::PassThroughCondition::PassThroughCondition</definition>
+        <argsstring>(const std::string &amp;condition_name, const BT::NodeConfiguration &amp;conf)</argsstring>
+        <name>PassThroughCondition</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>condition_name</declname>
+        </param>
+        <param>
+          <type>const BT::NodeConfiguration &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with condition name and configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>condition_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the condition node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration for the behavior tree node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/passthrough_condition.h" line="53" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/passthrough_condition.cpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PassThroughCondition_1a26ff2a258c1318a5f2dcaef3b4b9af60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::PassThroughCondition::PassThroughCondition</definition>
+        <argsstring>()=delete</argsstring>
+        <name>PassThroughCondition</name>
+        <briefdescription>
+<para>Deleted default constructor to enforce proper initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/passthrough_condition.h" line="58" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PassThroughCondition_1ac9e43da512606c36f49e1848dea7cf71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::PassThroughCondition::~PassThroughCondition</definition>
+        <argsstring>() override</argsstring>
+        <name>~PassThroughCondition</name>
+        <briefdescription>
+<para>Virtual destructor for cleanup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/passthrough_condition.h" line="63" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/passthrough_condition.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1PassThroughCondition_1afc07dfdf8a321d257a3428ada70ed1be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BT::NodeStatus</type>
+        <definition>BT::NodeStatus hateb_local_planner::PassThroughCondition::tick</definition>
+        <argsstring>() override</argsstring>
+        <name>tick</name>
+        <briefdescription>
+<para>Method called to evaluate passage conditions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>SUCCESS if in door/pillar passage, FAILURE otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/passthrough_condition.h" line="69" column="18" bodyfile="hateb_local_planner/src/behavior_tree/condition/passthrough_condition.cpp" bodystart="42" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1PassThroughCondition_1aae3e587181f0f842fc2ff3888743c6d8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BT::PortsList</type>
+        <definition>static BT::PortsList hateb_local_planner::PassThroughCondition::providedPorts</definition>
+        <argsstring>()</argsstring>
+        <name>providedPorts</name>
+        <briefdescription>
+<para>Defines input port for passage type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ports list containing passage type as input </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Type of passage (door, pillar, open, wall)</para>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/passthrough_condition.h" line="75" column="24" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/passthrough_condition.h" bodystart="75" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class implementing a condition node for checking passthrough scenarios. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class evaluates whether the robot is at a passage situation that requires special handling. It inherits from BT::ConditionNode to integrate with the behavior tree framework. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::PassThroughCondition</label>
+        <link refid="classhateb__local__planner_1_1PassThroughCondition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::PassThroughCondition</label>
+        <link refid="classhateb__local__planner_1_1PassThroughCondition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/passthrough_condition.h" line="46" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/passthrough_condition.h" bodystart="46" bodyend="83"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1PassThroughCondition_1a8a1fa869b35c42df2409378b86db7114" prot="private" virt="non-virtual"><scope>hateb_local_planner::PassThroughCondition</scope><name>name_</name></member>
+      <member refid="classhateb__local__planner_1_1PassThroughCondition_1ab545c4175ece4d6fe5e7f2d78e7f132a" prot="public" virt="non-virtual"><scope>hateb_local_planner::PassThroughCondition</scope><name>PassThroughCondition</name></member>
+      <member refid="classhateb__local__planner_1_1PassThroughCondition_1a26ff2a258c1318a5f2dcaef3b4b9af60" prot="public" virt="non-virtual"><scope>hateb_local_planner::PassThroughCondition</scope><name>PassThroughCondition</name></member>
+      <member refid="classhateb__local__planner_1_1PassThroughCondition_1aae3e587181f0f842fc2ff3888743c6d8" prot="public" virt="non-virtual"><scope>hateb_local_planner::PassThroughCondition</scope><name>providedPorts</name></member>
+      <member refid="classhateb__local__planner_1_1PassThroughCondition_1a99879af1dc92ce8990b50a30f2059f9d" prot="private" virt="non-virtual"><scope>hateb_local_planner::PassThroughCondition</scope><name>psg_type_</name></member>
+      <member refid="classhateb__local__planner_1_1PassThroughCondition_1afc07dfdf8a321d257a3428ada70ed1be" prot="public" virt="non-virtual"><scope>hateb_local_planner::PassThroughCondition</scope><name>tick</name></member>
+      <member refid="classhateb__local__planner_1_1PassThroughCondition_1ac9e43da512606c36f49e1848dea7cf71" prot="public" virt="non-virtual"><scope>hateb_local_planner::PassThroughCondition</scope><name>~PassThroughCondition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structBlobDetector_1_1Center" kind="struct" language="C++" prot="protected">
+    <compoundname>BlobDetector::Center</compoundname>
+    <includes refid="blob__detector_8h" local="no">blob_detector.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structBlobDetector_1_1Center_1a5b21f8d404a2c81daceb54d305bc94cc" prot="public" static="no" mutable="no">
+        <type>cv::Point2d</type>
+        <definition>cv::Point2d BlobDetector::Center::location</definition>
+        <argsstring></argsstring>
+        <name>location</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="98" column="17" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBlobDetector_1_1Center_1adea7366c0d705a4cdf5910c2cb9fb8b2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BlobDetector::Center::radius</definition>
+        <argsstring></argsstring>
+        <name>radius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="99" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBlobDetector_1_1Center_1adeafa9aefbecf189392a0e6e4b130f1d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BlobDetector::Center::confidence</definition>
+        <argsstring></argsstring>
+        <name>confidence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="100" column="12" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" line="96" column="3" bodyfile="costmap_converter/costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h" bodystart="97" bodyend="101"/>
+    <listofallmembers>
+      <member refid="structBlobDetector_1_1Center_1adeafa9aefbecf189392a0e6e4b130f1d" prot="public" virt="non-virtual"><scope>BlobDetector::Center</scope><name>confidence</name></member>
+      <member refid="structBlobDetector_1_1Center_1a5b21f8d404a2c81daceb54d305bc94cc" prot="public" virt="non-virtual"><scope>BlobDetector::Center</scope><name>location</name></member>
+      <member refid="structBlobDetector_1_1Center_1adea7366c0d705a4cdf5910c2cb9fb8b2" prot="public" virt="non-virtual"><scope>BlobDetector::Center</scope><name>radius</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1EdgeAgentRobotVisibility" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::EdgeAgentRobotVisibility</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseTebBinaryEdge" prot="public" virt="non-virtual">hateb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;</basecompoundref>
+    <includes refid="edge__agent__robot__visibility_8h" local="no">edge_agent_robot_visibility.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeAgentRobotVisibility_1a402e8e74a8d375668c0bcfef9f2fd4e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::EdgeAgentRobotVisibility::EdgeAgentRobotVisibility</definition>
+        <argsstring>()</argsstring>
+        <name>EdgeAgentRobotVisibility</name>
+        <briefdescription>
+<para>Construct edge and set measurement to zero (unused). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_robot_visibility.h" line="57" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_robot_visibility.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1EdgeAgentRobotVisibility_1aac9dd7c85923efa1e8507d1cbddf15ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::EdgeAgentRobotVisibility::computeError</definition>
+        <argsstring>() override</argsstring>
+        <name>computeError</name>
+        <briefdescription>
+<para>Compute the error / cost for the edge. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the visibility between the agent and robot and applies a penalty if the visibility constraint is violated. The error is stored in _error[0]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_robot_visibility.h" line="65" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_robot_visibility.h" bodystart="65" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Edge defining a visibility constraint between an agent and the robot in the optimization graph. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This edge penalizes configurations where the agent and robot are not mutually visible according to the defined criteria. The cost is computed based on the visibility between the agent and robot, and is used to enforce line-of-sight or perception constraints.</para>
+<para>Inherits from <ref refid="classhateb__local__planner_1_1BaseTebBinaryEdge" kindref="compound">BaseTebBinaryEdge&lt;1, double, VertexPose, VertexPose&gt;</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebBinaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseBinaryEdge&lt; D, double , VertexPose , VertexPose  &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeAgentRobotVisibility</label>
+        <link refid="classhateb__local__planner_1_1EdgeAgentRobotVisibility"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hateb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;</label>
+        <link refid="classhateb__local__planner_1_1BaseTebBinaryEdge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>g2o::BaseBinaryEdge&lt; D, double , VertexPose , VertexPose  &gt;</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::EdgeAgentRobotVisibility</label>
+        <link refid="classhateb__local__planner_1_1EdgeAgentRobotVisibility"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_robot_visibility.h" line="52" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/g2o_types/edge_agent_robot_visibility.h" bodystart="52" bodyend="100"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1af5ba7be337a1f51e8f000255ffd40e71" prot="protected" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentRobotVisibility</scope><name>cfg_</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeAgentRobotVisibility_1aac9dd7c85923efa1e8507d1cbddf15ef" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentRobotVisibility</scope><name>computeError</name></member>
+      <member refid="classhateb__local__planner_1_1EdgeAgentRobotVisibility_1a402e8e74a8d375668c0bcfef9f2fd4e8" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentRobotVisibility</scope><name>EdgeAgentRobotVisibility</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a0c0f4853fd8744194a18775226f9b731" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentRobotVisibility</scope><name>getError</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a0b775d38f7afb0f63f9156ed241fbe25" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeAgentRobotVisibility</scope><name>read</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1abc6ae7a9e1fd02416a4a94cbb785ba19" prot="public" virt="non-virtual"><scope>hateb_local_planner::EdgeAgentRobotVisibility</scope><name>setHATebConfig</name></member>
+      <member refid="classhateb__local__planner_1_1BaseTebBinaryEdge_1a85a24cf969c90917f50cb057173527ca" prot="public" virt="virtual"><scope>hateb_local_planner::EdgeAgentRobotVisibility</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

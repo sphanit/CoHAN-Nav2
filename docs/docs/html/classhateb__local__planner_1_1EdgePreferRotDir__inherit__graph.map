@@ -1,0 +1,5 @@
+<map id="hateb_local_planner::EdgePreferRotDir" name="hateb_local_planner::EdgePreferRotDir">
+<area shape="rect" id="node1" title="Edge defining the cost function for penalzing a specified turning direction, in particular left resp...." alt="" coords="21,228,174,269"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseTebBinaryEdge.html" title=" " alt="" coords="6,109,189,180"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,189,61"/>
+</map>

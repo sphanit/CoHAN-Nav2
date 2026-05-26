@@ -1,0 +1,4 @@
+<map id="hateb_local_planner::TwoCirclesFootprint" name="hateb_local_planner::TwoCirclesFootprint">
+<area shape="rect" id="node1" title="Class that approximates the robot/human with two shifted circles." alt="" coords="7,95,164,136"/>
+<area shape="rect" id="node2" href="$classhateb__local__planner_1_1BaseFootprintModel.html" title="Abstract class that defines the interface for footprint/contour models." alt="" coords="5,5,165,47"/>
+</map>

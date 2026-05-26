@@ -1,0 +1,641 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrviz__path__array_1_1AgentPathArrayDisplay" kind="class" language="C++" prot="public">
+    <compoundname>rviz_path_array::AgentPathArrayDisplay</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rviz_common::MessageFilterDisplay&lt; cohan_msgs::msg::AgentPathArray &gt;</basecompoundref>
+    <includes refid="patharray__display_8hpp" local="no">patharray_display.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a3f2ebb44a41cd3f7acc5331f8d6ee134" prot="private" static="no" strong="no">
+        <type></type>
+        <name>LineStyle</name>
+        <enumvalue id="classrviz__path__array_1_1AgentPathArrayDisplay_1a3f2ebb44a41cd3f7acc5331f8d6ee134a2d9b153f49e9663d831a1d30baf55e76" prot="private">
+          <name>LINES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classrviz__path__array_1_1AgentPathArrayDisplay_1a3f2ebb44a41cd3f7acc5331f8d6ee134a8256e1113ecf698ec270a85ae84bec22" prot="private">
+          <name>BILLBOARDS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="105" column="3" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="enum" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70" prot="private" static="no" strong="no">
+        <type></type>
+        <name>PoseStyle</name>
+        <enumvalue id="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70aaa29dc466e54c1a30b6ebe0f9d615671" prot="private">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70a43a5a570f62e99a348a8fe68b60fd639" prot="private">
+          <name>AXES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70a5e1c3b0f007be21d436036bc4c2bb18d" prot="private">
+          <name>ARROWS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="117" column="3" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="117" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a4f9c1eeb4cd1b80ccbdb90e15197383d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Ogre::ManualObject * &gt;</type>
+        <definition>std::vector&lt;Ogre::ManualObject*&gt; rviz_path_array::AgentPathArrayDisplay::manual_objects_</definition>
+        <argsstring></argsstring>
+        <name>manual_objects_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="93" column="15" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a0a3a5fcd25cd12cdea827ef40df1774f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; rviz_rendering::BillboardLine * &gt;</type>
+        <definition>std::vector&lt;rviz_rendering::BillboardLine*&gt; rviz_path_array::AgentPathArrayDisplay::billboard_lines_</definition>
+        <argsstring></argsstring>
+        <name>billboard_lines_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="94" column="15" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a2ae22efd9f69e4d8160413cea221e46d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; rviz_rendering::Axes * &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;rviz_rendering::Axes*&gt; &gt; rviz_path_array::AgentPathArrayDisplay::axes_chain_</definition>
+        <argsstring></argsstring>
+        <name>axes_chain_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="95" column="15" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1ae3c47d6b680bb5c6e8f25371714c30e6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; rviz_rendering::Arrow * &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;rviz_rendering::Arrow*&gt; &gt; rviz_path_array::AgentPathArrayDisplay::arrow_chain_</definition>
+        <argsstring></argsstring>
+        <name>arrow_chain_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="96" column="15" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a1a8b86cf95a80137e7de6bdac063ea9c" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::EnumProperty *</type>
+        <definition>rviz_common::properties::EnumProperty* rviz_path_array::AgentPathArrayDisplay::style_property_</definition>
+        <argsstring></argsstring>
+        <name>style_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="98" column="41" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a758b635e8aad839237ee4efeb4743280" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::ColorProperty *</type>
+        <definition>rviz_common::properties::ColorProperty* rviz_path_array::AgentPathArrayDisplay::color_property_</definition>
+        <argsstring></argsstring>
+        <name>color_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="99" column="42" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1ae3d4817c9bab06ec5f525f8dd604f928" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::FloatProperty *</type>
+        <definition>rviz_common::properties::FloatProperty* rviz_path_array::AgentPathArrayDisplay::alpha_property_</definition>
+        <argsstring></argsstring>
+        <name>alpha_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="100" column="42" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a10945976944c41f072c5e0f796e2958b" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::FloatProperty *</type>
+        <definition>rviz_common::properties::FloatProperty* rviz_path_array::AgentPathArrayDisplay::line_width_property_</definition>
+        <argsstring></argsstring>
+        <name>line_width_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="101" column="42" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a9fb6a964bbad583a29671e36b88b6b00" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::IntProperty *</type>
+        <definition>rviz_common::properties::IntProperty* rviz_path_array::AgentPathArrayDisplay::buffer_length_property_</definition>
+        <argsstring></argsstring>
+        <name>buffer_length_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="102" column="40" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a0e091cf21ab2d1c9bcdfd37c649d29e8" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::VectorProperty *</type>
+        <definition>rviz_common::properties::VectorProperty* rviz_path_array::AgentPathArrayDisplay::offset_property_</definition>
+        <argsstring></argsstring>
+        <name>offset_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="103" column="43" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a6ff4307dabb7caeb672c50de54bcb001" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::EnumProperty *</type>
+        <definition>rviz_common::properties::EnumProperty* rviz_path_array::AgentPathArrayDisplay::pose_style_property_</definition>
+        <argsstring></argsstring>
+        <name>pose_style_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="108" column="41" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1adfd2d5d3b8ddc55fb6ade1a7e731d508" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::FloatProperty *</type>
+        <definition>rviz_common::properties::FloatProperty* rviz_path_array::AgentPathArrayDisplay::pose_axes_length_property_</definition>
+        <argsstring></argsstring>
+        <name>pose_axes_length_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="109" column="42" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1aaf3c6b4256f0eaea17c3f1cbfe9e3cbc" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::FloatProperty *</type>
+        <definition>rviz_common::properties::FloatProperty* rviz_path_array::AgentPathArrayDisplay::pose_axes_radius_property_</definition>
+        <argsstring></argsstring>
+        <name>pose_axes_radius_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="110" column="42" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1ae9215004c16a62ee3c58387e3130e8fc" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::ColorProperty *</type>
+        <definition>rviz_common::properties::ColorProperty* rviz_path_array::AgentPathArrayDisplay::pose_arrow_color_property_</definition>
+        <argsstring></argsstring>
+        <name>pose_arrow_color_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="111" column="42" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a86e0130944e279a8bad1bf72d834ea9d" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::FloatProperty *</type>
+        <definition>rviz_common::properties::FloatProperty* rviz_path_array::AgentPathArrayDisplay::pose_arrow_shaft_length_property_</definition>
+        <argsstring></argsstring>
+        <name>pose_arrow_shaft_length_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="112" column="42" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a3dbf26d82884bc35939d02674076ca5e" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::FloatProperty *</type>
+        <definition>rviz_common::properties::FloatProperty* rviz_path_array::AgentPathArrayDisplay::pose_arrow_head_length_property_</definition>
+        <argsstring></argsstring>
+        <name>pose_arrow_head_length_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="113" column="42" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1abd83816c7ac26faa7a1e19574b8052fb" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::FloatProperty *</type>
+        <definition>rviz_common::properties::FloatProperty* rviz_path_array::AgentPathArrayDisplay::pose_arrow_shaft_diameter_property_</definition>
+        <argsstring></argsstring>
+        <name>pose_arrow_shaft_diameter_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="114" column="42" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a7e65a9ed77554249189bfbecc769d09b" prot="private" static="no" mutable="no">
+        <type>rviz_common::properties::FloatProperty *</type>
+        <definition>rviz_common::properties::FloatProperty* rviz_path_array::AgentPathArrayDisplay::pose_arrow_head_diameter_property_</definition>
+        <argsstring></argsstring>
+        <name>pose_arrow_head_diameter_property_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="115" column="42" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a2cd1e7d7bbcffaf530f8017082c729e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rviz_path_array::AgentPathArrayDisplay::AgentPathArrayDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>AgentPathArrayDisplay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="63" column="3" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="67" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a960d3936630de50ec3903cb450c515c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rviz_path_array::AgentPathArrayDisplay::~AgentPathArrayDisplay</definition>
+        <argsstring>() override</argsstring>
+        <name>~AgentPathArrayDisplay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="64" column="3" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="112" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classrviz__path__array_1_1AgentPathArrayDisplay_1abeea96025eeb1cad913193b41e9f1b09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::reset</definition>
+        <argsstring>() override</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Overridden from Display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="67" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="123" bodyend="126"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a24a180a90a92e17f133911d47b150b01" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::onInitialize</definition>
+        <argsstring>() override</argsstring>
+        <name>onInitialize</name>
+        <briefdescription>
+<para>Overridden from Display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="71" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a8fe3a6fa4ca8ce0839147103ad5e8ea4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::processMessage</definition>
+        <argsstring>(cohan_msgs::msg::AgentPathArray::ConstSharedPtr msg) override</argsstring>
+        <name>processMessage</name>
+        <param>
+          <type>cohan_msgs::msg::AgentPathArray::ConstSharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Overridden from MessageFilterDisplay. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="74" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="331" bodyend="457"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a99915676a9a4e506df03eb9c65eb2830" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::updateBufferLength</definition>
+        <argsstring>()</argsstring>
+        <name>updateBufferLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="77" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="286" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="slot" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a877b546e9b49b6b070d90c9844092e78" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::updateStyle</definition>
+        <argsstring>()</argsstring>
+        <name>updateStyle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="78" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="170" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="slot" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a331af8e6e344cf63b5e0599a88f291a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::updateLineWidth</definition>
+        <argsstring>()</argsstring>
+        <name>updateLineWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="79" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="187" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="slot" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a454649cd654ac6229112b6be2eb5f3d2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::updateOffset</definition>
+        <argsstring>()</argsstring>
+        <name>updateOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="80" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="slot" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a0b79dfe839ad748f38c6ab4b5a79e8b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::updatePoseStyle</definition>
+        <argsstring>()</argsstring>
+        <name>updatePoseStyle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="81" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="204" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="slot" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a323b94ee2c14b6b263709db3501333aa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::updatePoseAxisGeometry</definition>
+        <argsstring>()</argsstring>
+        <name>updatePoseAxisGeometry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="82" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="237" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="slot" id="classrviz__path__array_1_1AgentPathArrayDisplay_1aae4d9ba1f89c8d97177ba7a8e6a5c952" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::updatePoseArrowColor</definition>
+        <argsstring>()</argsstring>
+        <name>updatePoseArrowColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="83" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="246" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="slot" id="classrviz__path__array_1_1AgentPathArrayDisplay_1aa6bf85988a5d7a5bf140bc1612c0c58f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::updatePoseArrowGeometry</definition>
+        <argsstring>()</argsstring>
+        <name>updatePoseArrowGeometry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="84" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="257" bodyend="265"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrviz__path__array_1_1AgentPathArrayDisplay_1af406dc5f132d30bafcf64590e0c16ad4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::destroyObjects</definition>
+        <argsstring>()</argsstring>
+        <name>destroyObjects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="87" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="267" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a9dd454e4ae8301566d3a2355619297bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::allocateArrowVector</definition>
+        <argsstring>(std::vector&lt; rviz_rendering::Arrow * &gt; &amp;arrow_vect, int num)</argsstring>
+        <name>allocateArrowVector</name>
+        <param>
+          <type>std::vector&lt; rviz_rendering::Arrow * &gt; &amp;</type>
+          <declname>arrow_vect</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="88" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="142" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a5533afef50831fb8d36ba88f280556e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::allocateAxesVector</definition>
+        <argsstring>(std::vector&lt; rviz_rendering::Axes * &gt; &amp;axes_vect, int num)</argsstring>
+        <name>allocateAxesVector</name>
+        <param>
+          <type>std::vector&lt; rviz_rendering::Axes * &gt; &amp;</type>
+          <declname>axes_vect</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="89" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="128" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a868e2ce9de11ad4626028068a6eb15a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::destroyPoseAxesChain</definition>
+        <argsstring>()</argsstring>
+        <name>destroyPoseAxesChain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="90" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="156" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classrviz__path__array_1_1AgentPathArrayDisplay_1a46f7fd613d33711302047be63095c20e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rviz_path_array::AgentPathArrayDisplay::destroyPoseArrowChain</definition>
+        <argsstring>()</argsstring>
+        <name>destroyPoseArrowChain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rviz_path_array/src/patharray_display.hpp" line="91" column="8" bodyfile="rviz_path_array/src/patharray_display.cpp" bodystart="163" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Displays a cohan_msgs::msg::AgentPathArray message. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rviz_common::MessageFilterDisplay&lt; cohan_msgs::msg::AgentPathArray &gt;</label>
+      </node>
+      <node id="1">
+        <label>rviz_path_array::AgentPathArrayDisplay</label>
+        <link refid="classrviz__path__array_1_1AgentPathArrayDisplay"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rviz_common::MessageFilterDisplay&lt; cohan_msgs::msg::AgentPathArray &gt;</label>
+      </node>
+      <node id="1">
+        <label>rviz_path_array::AgentPathArrayDisplay</label>
+        <link refid="classrviz__path__array_1_1AgentPathArrayDisplay"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="rviz_path_array/src/patharray_display.hpp" line="60" column="1" bodyfile="rviz_path_array/src/patharray_display.hpp" bodystart="60" bodyend="122"/>
+    <listofallmembers>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a2cd1e7d7bbcffaf530f8017082c729e1" prot="public" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>AgentPathArrayDisplay</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a9dd454e4ae8301566d3a2355619297bf" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>allocateArrowVector</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5533afef50831fb8d36ba88f280556e7" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>allocateAxesVector</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1ae3d4817c9bab06ec5f525f8dd604f928" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>alpha_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1ae3c47d6b680bb5c6e8f25371714c30e6" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>arrow_chain_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70a5e1c3b0f007be21d436036bc4c2bb18d" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>ARROWS</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70a43a5a570f62e99a348a8fe68b60fd639" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>AXES</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a2ae22efd9f69e4d8160413cea221e46d" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>axes_chain_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a0a3a5fcd25cd12cdea827ef40df1774f" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>billboard_lines_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a3f2ebb44a41cd3f7acc5331f8d6ee134a8256e1113ecf698ec270a85ae84bec22" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>BILLBOARDS</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a9fb6a964bbad583a29671e36b88b6b00" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>buffer_length_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a758b635e8aad839237ee4efeb4743280" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>color_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1af406dc5f132d30bafcf64590e0c16ad4" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>destroyObjects</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a46f7fd613d33711302047be63095c20e" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>destroyPoseArrowChain</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a868e2ce9de11ad4626028068a6eb15a2" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>destroyPoseAxesChain</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a10945976944c41f072c5e0f796e2958b" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>line_width_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a3f2ebb44a41cd3f7acc5331f8d6ee134a2d9b153f49e9663d831a1d30baf55e76" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>LINES</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a3f2ebb44a41cd3f7acc5331f8d6ee134" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>LineStyle</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a4f9c1eeb4cd1b80ccbdb90e15197383d" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>manual_objects_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70aaa29dc466e54c1a30b6ebe0f9d615671" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>NONE</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a0e091cf21ab2d1c9bcdfd37c649d29e8" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>offset_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a24a180a90a92e17f133911d47b150b01" prot="protected" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>onInitialize</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1ae9215004c16a62ee3c58387e3130e8fc" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>pose_arrow_color_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a7e65a9ed77554249189bfbecc769d09b" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>pose_arrow_head_diameter_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a3dbf26d82884bc35939d02674076ca5e" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>pose_arrow_head_length_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1abd83816c7ac26faa7a1e19574b8052fb" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>pose_arrow_shaft_diameter_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a86e0130944e279a8bad1bf72d834ea9d" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>pose_arrow_shaft_length_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1adfd2d5d3b8ddc55fb6ade1a7e731d508" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>pose_axes_length_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1aaf3c6b4256f0eaea17c3f1cbfe9e3cbc" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>pose_axes_radius_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a6ff4307dabb7caeb672c50de54bcb001" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>pose_style_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a5407bfe218c5a90dd82395232d501f70" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>PoseStyle</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a8fe3a6fa4ca8ce0839147103ad5e8ea4" prot="protected" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>processMessage</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1abeea96025eeb1cad913193b41e9f1b09" prot="public" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>reset</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a1a8b86cf95a80137e7de6bdac063ea9c" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>style_property_</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a99915676a9a4e506df03eb9c65eb2830" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>updateBufferLength</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a331af8e6e344cf63b5e0599a88f291a0" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>updateLineWidth</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a454649cd654ac6229112b6be2eb5f3d2" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>updateOffset</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1aae4d9ba1f89c8d97177ba7a8e6a5c952" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>updatePoseArrowColor</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1aa6bf85988a5d7a5bf140bc1612c0c58f" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>updatePoseArrowGeometry</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a323b94ee2c14b6b263709db3501333aa" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>updatePoseAxisGeometry</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a0b79dfe839ad748f38c6ab4b5a79e8b2" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>updatePoseStyle</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a877b546e9b49b6b070d90c9844092e78" prot="private" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>updateStyle</name></member>
+      <member refid="classrviz__path__array_1_1AgentPathArrayDisplay_1a960d3936630de50ec3903cb450c515c2" prot="public" virt="non-virtual"><scope>rviz_path_array::AgentPathArrayDisplay</scope><name>~AgentPathArrayDisplay</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

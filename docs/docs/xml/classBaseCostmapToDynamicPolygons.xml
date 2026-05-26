@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classBaseCostmapToDynamicPolygons" kind="class" language="C++" prot="public">
+    <compoundname>BaseCostmapToDynamicPolygons</compoundname>
+    <includes refid="costmap__converter__interface_8h" local="no">costmap_converter_interface.h</includes>
+    <briefdescription>
+<para>This class extends the BaseCostmapToPolygongs class for dynamic costmap conversion plugins in order to incorporate a subsequent costmap converter plugin for static obstacles. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class should not be instantiated. </para>
+    </detaileddescription>
+    <location file="costmap_converter/costmap_converter/include/costmap_converter/costmap_converter_interface.h" line="285" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

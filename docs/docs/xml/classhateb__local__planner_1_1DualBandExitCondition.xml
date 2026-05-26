@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1DualBandExitCondition" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::DualBandExitCondition</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BT::ConditionNode</basecompoundref>
+    <includes refid="dual__band__exit__condition_8h" local="no">dual_band_exit_condition.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1DualBandExitCondition_1a213a68e6a00533b05fd0899c8c73bc2e" prot="private" static="no" mutable="no">
+        <type>agent_path_prediction::msg::AgentsInfo</type>
+        <definition>agent_path_prediction::msg::AgentsInfo hateb_local_planner::DualBandExitCondition::agents_info_</definition>
+        <argsstring></argsstring>
+        <name>agents_info_</name>
+        <briefdescription>
+<para>Information about agents in the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="88" column="42" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1DualBandExitCondition_1a9d2446e50c5157ef83d5d5290898b23c" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::PoseStamped</type>
+        <definition>geometry_msgs::msg::PoseStamped hateb_local_planner::DualBandExitCondition::goal_</definition>
+        <argsstring></argsstring>
+        <name>goal_</name>
+        <briefdescription>
+<para>Current navigation goal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="89" column="35" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1DualBandExitCondition_1a480cda58b3f0887f53840c8b148a1c39" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::DualBandExitCondition::dist_threshold_</definition>
+        <argsstring></argsstring>
+        <name>dist_threshold_</name>
+        <briefdescription>
+<para>Distance threshold for dual band mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="90" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1DualBandExitCondition_1ae4ba96e9e96e9fd3d227164d70fea140" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::DualBandExitCondition::goal_dist_</definition>
+        <argsstring></argsstring>
+        <name>goal_dist_</name>
+        <briefdescription>
+<para>Distance to goal for progress tracking. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="93" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1DualBandExitCondition_1adbada64454c8fb2a60140272070684c5" prot="private" static="no" mutable="no">
+        <type>rclcpp::Clock</type>
+        <definition>rclcpp::Clock hateb_local_planner::DualBandExitCondition::clock_</definition>
+        <argsstring></argsstring>
+        <name>clock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="94" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1DualBandExitCondition_1a9aa77c4bb3d6d4882b9166a40631cb1b" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time hateb_local_planner::DualBandExitCondition::stopped_time_</definition>
+        <argsstring></argsstring>
+        <name>stopped_time_</name>
+        <briefdescription>
+<para>Time when robot was last detected as stopped. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="95" column="16" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1DualBandExitCondition_1a2b2b003e330a5f4bb12fd90d08375e9b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::DualBandExitCondition::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="97" column="15" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1DualBandExitCondition_1a1e6e9ea78a0220c842d5ed116e635aba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::DualBandExitCondition::DualBandExitCondition</definition>
+        <argsstring>(const std::string &amp;condition_name, const BT::NodeConfiguration &amp;conf)</argsstring>
+        <name>DualBandExitCondition</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>condition_name</declname>
+        </param>
+        <param>
+          <type>const BT::NodeConfiguration &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with condition name and configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>condition_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the condition node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration for the behavior tree node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="53" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/dual_band_exit_condition.cpp" bodystart="31" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1DualBandExitCondition_1a72a8b3be8ce0b15a1eca4835fd2a8b5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::DualBandExitCondition::DualBandExitCondition</definition>
+        <argsstring>()=delete</argsstring>
+        <name>DualBandExitCondition</name>
+        <briefdescription>
+<para>Deleted default constructor to enforce proper initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="58" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1DualBandExitCondition_1a995f71a8602c49e10479975bb094eaf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::DualBandExitCondition::~DualBandExitCondition</definition>
+        <argsstring>() override</argsstring>
+        <name>~DualBandExitCondition</name>
+        <briefdescription>
+<para>Virtual destructor for cleanup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="63" column="3" bodyfile="hateb_local_planner/src/behavior_tree/condition/dual_band_exit_condition.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1DualBandExitCondition_1a63bd7b5d5680677d9dd5844393ee6e59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BT::NodeStatus</type>
+        <definition>BT::NodeStatus hateb_local_planner::DualBandExitCondition::tick</definition>
+        <argsstring>() override</argsstring>
+        <name>tick</name>
+        <briefdescription>
+<para>Method called to evaluate the condition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>SUCCESS if dual band mode should be exited, FAILURE otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="69" column="18" bodyfile="hateb_local_planner/src/behavior_tree/condition/dual_band_exit_condition.cpp" bodystart="45" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1DualBandExitCondition_1ab5357b6ceed00d18348ae39a39d76b28" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BT::PortsList</type>
+        <definition>static BT::PortsList hateb_local_planner::DualBandExitCondition::providedPorts</definition>
+        <argsstring>()</argsstring>
+        <name>providedPorts</name>
+        <briefdescription>
+<para>Defines input ports for condition evaluation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ports list containing agents_info, distance threshold and navigation goal as inputs </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="75" column="24" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1DualBandExitCondition_1a9d7922f98c9b7dd7d0f06f5a0fd0fd9d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::DualBandExitCondition::isRobotStuck</definition>
+        <argsstring>()</argsstring>
+        <name>isRobotStuck</name>
+        <briefdescription>
+<para>Checks if the robot has been stuck in place. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if robot hasn&apos;t made progress, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="85" column="8" bodyfile="hateb_local_planner/src/behavior_tree/condition/dual_band_exit_condition.cpp" bodystart="75" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class implementing a condition node for dual band exit criteria. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class checks conditions to determine when to exit the dual band planning mode. It monitors robot&apos;s progress and agent states to make this decision. It inherits from BT::ConditionNode to integrate with the behavior tree framework. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::DualBandExitCondition</label>
+        <link refid="classhateb__local__planner_1_1DualBandExitCondition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BT::ConditionNode</label>
+      </node>
+      <node id="1">
+        <label>hateb_local_planner::DualBandExitCondition</label>
+        <link refid="classhateb__local__planner_1_1DualBandExitCondition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" line="46" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/behavior_tree/condition/dual_band_exit_condition.h" bodystart="46" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1a213a68e6a00533b05fd0899c8c73bc2e" prot="private" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>agents_info_</name></member>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1adbada64454c8fb2a60140272070684c5" prot="private" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>clock_</name></member>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1a480cda58b3f0887f53840c8b148a1c39" prot="private" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>dist_threshold_</name></member>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1a1e6e9ea78a0220c842d5ed116e635aba" prot="public" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>DualBandExitCondition</name></member>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1a72a8b3be8ce0b15a1eca4835fd2a8b5a" prot="public" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>DualBandExitCondition</name></member>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1a9d2446e50c5157ef83d5d5290898b23c" prot="private" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>goal_</name></member>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1ae4ba96e9e96e9fd3d227164d70fea140" prot="private" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>goal_dist_</name></member>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1a9d7922f98c9b7dd7d0f06f5a0fd0fd9d" prot="private" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>isRobotStuck</name></member>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1a2b2b003e330a5f4bb12fd90d08375e9b" prot="private" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>name_</name></member>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1ab5357b6ceed00d18348ae39a39d76b28" prot="public" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>providedPorts</name></member>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1a9aa77c4bb3d6d4882b9166a40631cb1b" prot="private" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>stopped_time_</name></member>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1a63bd7b5d5680677d9dd5844393ee6e59" prot="public" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>tick</name></member>
+      <member refid="classhateb__local__planner_1_1DualBandExitCondition_1a995f71a8602c49e10479975bb094eaf7" prot="public" virt="non-virtual"><scope>hateb_local_planner::DualBandExitCondition</scope><name>~DualBandExitCondition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

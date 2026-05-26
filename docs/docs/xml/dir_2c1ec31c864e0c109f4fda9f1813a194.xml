@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_2c1ec31c864e0c109f4fda9f1813a194" kind="dir">
+    <compoundname>test</compoundname>
+    <innerfile refid="costmap__polygons_8cpp">costmap_polygons.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="costmap_converter/costmap_converter/test/"/>
+  </compounddef>
+</doxygen>

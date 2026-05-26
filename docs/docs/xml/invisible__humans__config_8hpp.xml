@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="invisible__humans__config_8hpp" kind="file" language="C++">
+    <compoundname>invisible_humans_config.hpp</compoundname>
+    <includes local="no">cmath</includes>
+    <includes refid="parameters_8hpp" local="no">ros2_helpers/parameters.hpp</includes>
+    <includedby refid="invisible__humans__detection_8hpp" local="no">invisible_humans_detection.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="3">
+        <label>ros2_helpers/parameters.hpp</label>
+        <link refid="parameters_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cmath</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>invisible_humans_config.hpp</label>
+        <link refid="invisible__humans__config_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="7">
+        <label>rcl_interfaces/msg/parameter_descriptor.hpp</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>rcl_interfaces/msg/integer_range.hpp</label>
+      </node>
+      <node id="11">
+        <label>unordered_map</label>
+      </node>
+      <node id="9">
+        <label>rclcpp_lifecycle/lifecycle_node.hpp</label>
+      </node>
+      <node id="5">
+        <label>rcl_interfaces/msg/floating_point_range.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>invisible_humans_config.hpp</label>
+        <link refid="invisible__humans__config_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>invisible_humans_detection.hpp</label>
+        <link refid="invisible__humans__detection_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>invisible_humans_detection.cpp</label>
+        <link refid="invisible__humans__detection_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classinvisible__humans__detection_1_1InvisibleHumansConfig" prot="public">invisible_humans_detection::InvisibleHumansConfig</innerclass>
+    <innernamespace refid="namespaceinvisible__humans__detection">invisible_humans_detection</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="invisible__humans__config_8hpp_1a016270c7d8ad6a47fd5866ef033f7626" prot="public" static="no">
+        <name>DEFAULT_SAMPLES</name>
+        <initializer>1081</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="34" column="9" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="invisible__humans__config_8hpp_1a7a7cd478a804b4bfd24cf5369b60d8bf" prot="public" static="no">
+        <name>DEFAULT_RANGE_MIN</name>
+        <initializer>0.05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="35" column="9" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="invisible__humans__config_8hpp_1ad2c354b4949b2f1b4ad55efeed3e59c3" prot="public" static="no">
+        <name>DEFAULT_RANGE_MAX</name>
+        <initializer>7.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="36" column="9" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="invisible__humans__config_8hpp_1a78b74eefee5148a74ba254d7b209ecaa" prot="public" static="no">
+        <name>DEFAULT_ANGLE_MIN</name>
+        <initializer>-2.358</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="37" column="9" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="invisible__humans__config_8hpp_1a3018f2f64a0c1470005d85bce5ebfbc5" prot="public" static="no">
+        <name>DEFAULT_ANGLE_MAX</name>
+        <initializer>2.358</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="38" column="9" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="invisible__humans__config_8hpp_1a8621ab24fe5ea40a881438fa352466fe" prot="public" static="no">
+        <name>DEFAULT_SCAN_RESOLUTION</name>
+        <initializer>700</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="39" column="9" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="invisible__humans__config_8hpp_1aecfe69fecc655da965f64af85d9b3b28" prot="public" static="no">
+        <name>DEFAULT_PUBLISH_SCAN</name>
+        <initializer>true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="40" column="9" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="invisible__humans__config_8hpp_1a0742497c9549c179e5cea1e03918b7a6" prot="public" static="no">
+        <name>DEFAULT_HUMAN_RADIUS</name>
+        <initializer>0.31</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" line="41" column="9" bodyfile="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Software<sp/>License<sp/>Agreement<sp/>(MIT<sp/>License)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2022-2025<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Phani<sp/>Teja<sp/>Singamaneni</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INVISIBLE_HUMANS_CONFIG_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INVISIBLE_HUMANS_CONFIG_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="parameters_8hpp" kindref="compound">ros2_helpers/parameters.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Default<sp/>parameter<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="invisible__humans__config_8hpp_1a016270c7d8ad6a47fd5866ef033f7626" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_SAMPLES<sp/>1081</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="invisible__humans__config_8hpp_1a7a7cd478a804b4bfd24cf5369b60d8bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_RANGE_MIN<sp/>0.05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="invisible__humans__config_8hpp_1ad2c354b4949b2f1b4ad55efeed3e59c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_RANGE_MAX<sp/>7.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="invisible__humans__config_8hpp_1a78b74eefee5148a74ba254d7b209ecaa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_ANGLE_MIN<sp/>-2.358</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="invisible__humans__config_8hpp_1a3018f2f64a0c1470005d85bce5ebfbc5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_ANGLE_MAX<sp/>2.358</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="invisible__humans__config_8hpp_1a8621ab24fe5ea40a881438fa352466fe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_SCAN_RESOLUTION<sp/>700</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="invisible__humans__config_8hpp_1aecfe69fecc655da965f64af85d9b3b28" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_PUBLISH_SCAN<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="invisible__humans__config_8hpp_1a0742497c9549c179e5cea1e03918b7a6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_HUMAN_RADIUS<sp/>0.31</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="namespaceinvisible__humans__detection" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceinvisible__humans__detection" kindref="compound">invisible_humans_detection</ref><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig" kindref="compound">InvisibleHumansConfig</ref><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a1600e743bec087901f94861c136e5d11" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a1600e743bec087901f94861c136e5d11" kindref="member">InvisibleHumansConfig</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a2cd8a440935c458a75b78c0d679c2007" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a2cd8a440935c458a75b78c0d679c2007" kindref="member">~InvisibleHumansConfig</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a113fffb5f1c9aed5d2c2fde918567186" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a113fffb5f1c9aed5d2c2fde918567186" kindref="member">initialize</ref>(rclcpp::Node::SharedPtr<sp/>node)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1abb75497aaf65e971e7d10613f89c9e6c" kindref="member">initialize</ref>(node);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(node-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;Initializing<sp/>InvisibleHumansDetectionConfig<sp/>parameters...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a8c7a8d71de10195852d8ee2eb0ec3c32" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a8c7a8d71de10195852d8ee2eb0ec3c32" kindref="member">setupParameterCallback</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Bind<sp/>all<sp/>parameters<sp/>with<sp/>automatic<sp/>updates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a55ef39e7b11ec3656f15427db1b60088" kindref="member">bindParameters</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>parameter<sp/>change<sp/>callback<sp/>-<sp/>parameters<sp/>are<sp/>auto-updated<sp/>by<sp/>bindings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1a7c46052de452247a5f9c236ee3b616b0" kindref="member">setupParameterCallback</ref>([</highlight><highlight class="keyword">this</highlight><highlight class="normal">](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;rclcpp::Parameter&gt;&amp;<sp/>params)<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parameters<sp/>are<sp/>automatically<sp/>updated<sp/>by<sp/>ParameterHelper<sp/>bindings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>any<sp/>custom<sp/>validation<sp/>logic<sp/>here<sp/>if<sp/>needed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>initial<sp/>parameter<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1a39baf91c634c0eda52d6be9992ade42f" kindref="member">loadBoundParameters</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Public<sp/>member<sp/>variables<sp/>for<sp/>configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a93bf65ebb62d6011724a9e23251fd9f2" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a93bf65ebb62d6011724a9e23251fd9f2" kindref="member">ns</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a3affb37deb23d4810c59e26c12464b6c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a3affb37deb23d4810c59e26c12464b6c" kindref="member">samples</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a4ebb693a6867136ed5505ff6c18af64e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a4ebb693a6867136ed5505ff6c18af64e" kindref="member">range_min</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a35a792bb4d7326026afc62de74e97d47" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a35a792bb4d7326026afc62de74e97d47" kindref="member">range_max</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a1e71bc36d5d5bfa1793265b27a5397af" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a1e71bc36d5d5bfa1793265b27a5397af" kindref="member">angle_min</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a24c26b664d48dbe254bd49f4a6c3e390" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a24c26b664d48dbe254bd49f4a6c3e390" kindref="member">angle_max</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a5bd360192433b4315f37ae8c09c41a89" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a5bd360192433b4315f37ae8c09c41a89" kindref="member">scan_resolution</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1ac14e965ac1ce573a4438a5a11eb698b3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1ac14e965ac1ce573a4438a5a11eb698b3" kindref="member">publish_scan</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1af5d2b48a6a297ae56cf6035dfacc372b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1af5d2b48a6a297ae56cf6035dfacc372b" kindref="member">human_radius</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="91" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a55ef39e7b11ec3656f15427db1b60088" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a55ef39e7b11ec3656f15427db1b60088" kindref="member">bindParameters</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>default<sp/>values<sp/>for<sp/>parameters<sp/>BEFORE<sp/>binding</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a93bf65ebb62d6011724a9e23251fd9f2" kindref="member">ns</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a3affb37deb23d4810c59e26c12464b6c" kindref="member">samples</ref><sp/>=<sp/><ref refid="invisible__humans__config_8hpp_1a016270c7d8ad6a47fd5866ef033f7626" kindref="member">DEFAULT_SAMPLES</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a4ebb693a6867136ed5505ff6c18af64e" kindref="member">range_min</ref><sp/>=<sp/><ref refid="invisible__humans__config_8hpp_1a7a7cd478a804b4bfd24cf5369b60d8bf" kindref="member">DEFAULT_RANGE_MIN</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a35a792bb4d7326026afc62de74e97d47" kindref="member">range_max</ref><sp/>=<sp/><ref refid="invisible__humans__config_8hpp_1ad2c354b4949b2f1b4ad55efeed3e59c3" kindref="member">DEFAULT_RANGE_MAX</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a1e71bc36d5d5bfa1793265b27a5397af" kindref="member">angle_min</ref><sp/>=<sp/><ref refid="invisible__humans__config_8hpp_1a78b74eefee5148a74ba254d7b209ecaa" kindref="member">DEFAULT_ANGLE_MIN</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a24c26b664d48dbe254bd49f4a6c3e390" kindref="member">angle_max</ref><sp/>=<sp/><ref refid="invisible__humans__config_8hpp_1a3018f2f64a0c1470005d85bce5ebfbc5" kindref="member">DEFAULT_ANGLE_MAX</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a5bd360192433b4315f37ae8c09c41a89" kindref="member">scan_resolution</ref><sp/>=<sp/><ref refid="invisible__humans__config_8hpp_1a8621ab24fe5ea40a881438fa352466fe" kindref="member">DEFAULT_SCAN_RESOLUTION</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1ac14e965ac1ce573a4438a5a11eb698b3" kindref="member">publish_scan</ref><sp/>=<sp/><ref refid="invisible__humans__config_8hpp_1aecfe69fecc655da965f64af85d9b3b28" kindref="member">DEFAULT_PUBLISH_SCAN</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1af5d2b48a6a297ae56cf6035dfacc372b" kindref="member">human_radius</ref><sp/>=<sp/><ref refid="invisible__humans__config_8hpp_1a0742497c9549c179e5cea1e03918b7a6" kindref="member">DEFAULT_HUMAN_RADIUS</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Bind<sp/>parameters<sp/>with<sp/>automatic<sp/>updates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1a79d5f3143e3b48047bb494c0b13f253e" kindref="member">bindStringParam</ref>(</highlight><highlight class="stringliteral">&quot;ns&quot;</highlight><highlight class="normal">,<sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a93bf65ebb62d6011724a9e23251fd9f2" kindref="member">ns</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Namespace<sp/>for<sp/>multiple<sp/>robots&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1a9bab75fcd38c5af808a98ffa042f86c1" kindref="member">bindIntParam</ref>(</highlight><highlight class="stringliteral">&quot;samples&quot;</highlight><highlight class="normal">,<sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a3affb37deb23d4810c59e26c12464b6c" kindref="member">samples</ref>,<sp/>1,<sp/>10000,<sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>samples<sp/>for<sp/>scanning&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1aaa55665c070adb3fd244d28454f8b6d0" kindref="member">bindFloatParam</ref>(</highlight><highlight class="stringliteral">&quot;range_min&quot;</highlight><highlight class="normal">,<sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a4ebb693a6867136ed5505ff6c18af64e" kindref="member">range_min</ref>,<sp/>0.0,<sp/>10.0,<sp/></highlight><highlight class="stringliteral">&quot;Minimum<sp/>range<sp/>for<sp/>scanning&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1aaa55665c070adb3fd244d28454f8b6d0" kindref="member">bindFloatParam</ref>(</highlight><highlight class="stringliteral">&quot;range_max&quot;</highlight><highlight class="normal">,<sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a35a792bb4d7326026afc62de74e97d47" kindref="member">range_max</ref>,<sp/>0.1,<sp/>100.0,<sp/></highlight><highlight class="stringliteral">&quot;Maximum<sp/>range<sp/>for<sp/>scanning&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1aaa55665c070adb3fd244d28454f8b6d0" kindref="member">bindFloatParam</ref>(</highlight><highlight class="stringliteral">&quot;angle_min&quot;</highlight><highlight class="normal">,<sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a1e71bc36d5d5bfa1793265b27a5397af" kindref="member">angle_min</ref>,<sp/>-6.3,<sp/>6.3,<sp/></highlight><highlight class="stringliteral">&quot;Minimum<sp/>angle<sp/>for<sp/>scanning<sp/>(radians)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1aaa55665c070adb3fd244d28454f8b6d0" kindref="member">bindFloatParam</ref>(</highlight><highlight class="stringliteral">&quot;angle_max&quot;</highlight><highlight class="normal">,<sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a24c26b664d48dbe254bd49f4a6c3e390" kindref="member">angle_max</ref>,<sp/>-6.3,<sp/>6.3,<sp/></highlight><highlight class="stringliteral">&quot;Maximum<sp/>angle<sp/>for<sp/>scanning<sp/>(radians)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1a9bab75fcd38c5af808a98ffa042f86c1" kindref="member">bindIntParam</ref>(</highlight><highlight class="stringliteral">&quot;scan_resolution&quot;</highlight><highlight class="normal">,<sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1a5bd360192433b4315f37ae8c09c41a89" kindref="member">scan_resolution</ref>,<sp/>1,<sp/>10000,<sp/></highlight><highlight class="stringliteral">&quot;Resolution<sp/>of<sp/>the<sp/>scan&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1a2c177f4567e5c37b2456787a1f0a2da4" kindref="member">bindBoolParam</ref>(</highlight><highlight class="stringliteral">&quot;publish_scan&quot;</highlight><highlight class="normal">,<sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1ac14e965ac1ce573a4438a5a11eb698b3" kindref="member">publish_scan</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Whether<sp/>to<sp/>publish<sp/>scan<sp/>data&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>.<ref refid="classparameters_1_1ParameterHelper_1aaa55665c070adb3fd244d28454f8b6d0" kindref="member">bindFloatParam</ref>(</highlight><highlight class="stringliteral">&quot;human_radius&quot;</highlight><highlight class="normal">,<sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1af5d2b48a6a297ae56cf6035dfacc372b" kindref="member">human_radius</ref>,<sp/>0.1,<sp/>1.0,<sp/></highlight><highlight class="stringliteral">&quot;Radius<sp/>of<sp/>a<sp/>human<sp/>for<sp/>detection&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classparameters_1_1ParameterHelper" kindref="compound">parameters::ParameterHelper</ref><sp/><ref refid="classinvisible__humans__detection_1_1InvisibleHumansConfig_1aaed56d7ab215f6a482ac649c6be362ca" kindref="member">param_helper_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>invisible_humans_detection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>INVISIBLE_HUMANS_CONFIG_HPP_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="invisible_humans_detection/include/invisible_humans_detection/invisible_humans_config.hpp"/>
+  </compounddef>
+</doxygen>

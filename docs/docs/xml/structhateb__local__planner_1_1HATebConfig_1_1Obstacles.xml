@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles" kind="struct" language="C++" prot="public">
+    <compoundname>hateb_local_planner::HATebConfig::Obstacles</compoundname>
+    <includes refid="hateb__config_8hpp" local="no">hateb_config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a9aedd93b32031e773eb90363eb1850c4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Obstacles::min_obstacle_dist</definition>
+        <argsstring></argsstring>
+        <name>min_obstacle_dist</name>
+        <briefdescription>
+<para>Minimum desired separation from obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="169" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a5b0f10420f4f81eed5ee696006c6dc7f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Obstacles::inflation_dist</definition>
+        <argsstring></argsstring>
+        <name>inflation_dist</name>
+        <briefdescription>
+<para>buffer zone around obstacles with non-zero penalty costs (should be larger than min_obstacle_dist in order to take effect) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="170" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a44df64b7e60c65e2eb45e8f48361d479" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Obstacles::use_nonlinear_obstacle_penalty</definition>
+        <argsstring></argsstring>
+        <name>use_nonlinear_obstacle_penalty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="171" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a716446c070d3705e2fa0a76cf88fa22e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Obstacles::obstacle_cost_mult</definition>
+        <argsstring></argsstring>
+        <name>obstacle_cost_mult</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="172" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a78955338aef0c40e9b09fbf5c26385a6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Obstacles::dynamic_obstacle_inflation_dist</definition>
+        <argsstring></argsstring>
+        <name>dynamic_obstacle_inflation_dist</name>
+        <briefdescription>
+<para>Buffer zone around predicted locations of dynamic obstacles with non-zero penalty costs (should be larger than min_obstacle_dist in order to take effect) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="174" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a8d985194dc49845e1cd0d2bc84d0cd33" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Obstacles::include_dynamic_obstacles</definition>
+        <argsstring></argsstring>
+        <name>include_dynamic_obstacles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specify whether the movement of dynamic obstacles should be predicted by a constant velocity model (this also effects homotopy class planning); If false, all obstacles are considered to be static. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="175" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a898fa849ace5bbb71fd1a7399f9acf75" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Obstacles::include_costmap_obstacles</definition>
+        <argsstring></argsstring>
+        <name>include_costmap_obstacles</name>
+        <briefdescription>
+<para>Specify whether the obstacles in the costmap should be taken into account directly. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="177" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1ac1043ccf4982cf10f46f71fe99ade034" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Obstacles::costmap_obstacles_behind_robot_dist</definition>
+        <argsstring></argsstring>
+        <name>costmap_obstacles_behind_robot_dist</name>
+        <briefdescription>
+<para>Limit the occupied local costmap obstacles taken into account for planning behind the robot (specify distance in meters) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="178" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1af10fd59f8f3fb7b03654c07c34026a10" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hateb_local_planner::HATebConfig::Obstacles::obstacle_poses_affected</definition>
+        <argsstring></argsstring>
+        <name>obstacle_poses_affected</name>
+        <briefdescription>
+<para>The obstacle position is attached to the closest pose on the trajectory to reduce computational effort, but take a number of neighbors into account as well. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="179" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1acec534d847de268247f57a1ebe6c94f4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Obstacles::legacy_obstacle_association</definition>
+        <argsstring></argsstring>
+        <name>legacy_obstacle_association</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If true, the old association strategy is used (for each obstacle, find the nearest TEB pose), otherwise the new one (for each teb pose, find only &quot;relevant&quot; obstacles). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="180" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1ae4f4beab91c9f3ced3c321a416d4b3b5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Obstacles::obstacle_association_force_inclusion_factor</definition>
+        <argsstring></argsstring>
+        <name>obstacle_association_force_inclusion_factor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The non-legacy obstacle association technique tries to connect only relevant obstacles with the discretized trajectory during optimization, all obstacles within a specifed distance are forced to be included (as a multiple of min_obstacle_dist), e.g. choose 2.0 in order to consider obstacles within a radius of 2.0*min_obstacle_dist. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="182" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a6c928e3d03ba02fb1867cd6bb91c67a3" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::HATebConfig::Obstacles::obstacle_association_cutoff_factor</definition>
+        <argsstring></argsstring>
+        <name>obstacle_association_cutoff_factor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>See obstacle_association_force_inclusion_factor, but beyond a multiple of [value]*min_obstacle_dist all obstacles are ignored during optimization. obstacle_association_force_inclusion_factor is processed first. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="185" column="12" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a17d946b2065e9590908da70dcd15b404" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hateb_local_planner::HATebConfig::Obstacles::costmap_converter_plugin</definition>
+        <argsstring></argsstring>
+        <name>costmap_converter_plugin</name>
+        <briefdescription>
+<para>Define a plugin name of the <ref refid="namespacecostmap__converter" kindref="compound">costmap_converter</ref> package (costmap cells are converted to points/lines/polygons) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="187" column="17" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a1725d0e6b9b4371776964a70c378c0e3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hateb_local_planner::HATebConfig::Obstacles::costmap_converter_spin_thread</definition>
+        <argsstring></argsstring>
+        <name>costmap_converter_spin_thread</name>
+        <briefdescription>
+<para>If <computeroutput>true</computeroutput>, the costmap converter invokes its callback queue in a different thread. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="188" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a642b51a012a21993004c6a0bc925247b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hateb_local_planner::HATebConfig::Obstacles::costmap_converter_rate</definition>
+        <argsstring></argsstring>
+        <name>costmap_converter_rate</name>
+        <briefdescription>
+<para>The rate that defines how often the <ref refid="namespacecostmap__converter" kindref="compound">costmap_converter</ref> plugin processes the current costmap (the value should not be much higher than the costmap update rate) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="189" column="9" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref> related parameters. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" line="168" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/hateb_config.hpp" bodystart="168" bodyend="190"/>
+    <listofallmembers>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a17d946b2065e9590908da70dcd15b404" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>costmap_converter_plugin</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a642b51a012a21993004c6a0bc925247b" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>costmap_converter_rate</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a1725d0e6b9b4371776964a70c378c0e3" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>costmap_converter_spin_thread</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1ac1043ccf4982cf10f46f71fe99ade034" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>costmap_obstacles_behind_robot_dist</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a78955338aef0c40e9b09fbf5c26385a6" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>dynamic_obstacle_inflation_dist</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a898fa849ace5bbb71fd1a7399f9acf75" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>include_costmap_obstacles</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a8d985194dc49845e1cd0d2bc84d0cd33" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>include_dynamic_obstacles</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a5b0f10420f4f81eed5ee696006c6dc7f" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>inflation_dist</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1acec534d847de268247f57a1ebe6c94f4" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>legacy_obstacle_association</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a9aedd93b32031e773eb90363eb1850c4" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>min_obstacle_dist</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a6c928e3d03ba02fb1867cd6bb91c67a3" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>obstacle_association_cutoff_factor</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1ae4f4beab91c9f3ced3c321a416d4b3b5" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>obstacle_association_force_inclusion_factor</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a716446c070d3705e2fa0a76cf88fa22e" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>obstacle_cost_mult</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1af10fd59f8f3fb7b03654c07c34026a10" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>obstacle_poses_affected</name></member>
+      <member refid="structhateb__local__planner_1_1HATebConfig_1_1Obstacles_1a44df64b7e60c65e2eb45e8f48361d479" prot="public" virt="non-virtual"><scope>hateb_local_planner::HATebConfig::Obstacles</scope><name>use_nonlinear_obstacle_penalty</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

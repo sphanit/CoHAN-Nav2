@@ -1,0 +1,439 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhateb__local__planner_1_1TwoCirclesFootprint" kind="class" language="C++" prot="public">
+    <compoundname>hateb_local_planner::TwoCirclesFootprint</compoundname>
+    <basecompoundref refid="classhateb__local__planner_1_1BaseFootprintModel" prot="public" virt="non-virtual">hateb_local_planner::BaseFootprintModel</basecompoundref>
+    <includes refid="footprint__model_8h" local="no">footprint_model.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhateb__local__planner_1_1TwoCirclesFootprint_1a6c76683827fba99ade12f0a3bed0260f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::TwoCirclesFootprint::front_offset_</definition>
+        <argsstring></argsstring>
+        <name>front_offset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="413" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::TwoCirclesFootprint::front_radius_</definition>
+        <argsstring></argsstring>
+        <name>front_radius_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="414" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1TwoCirclesFootprint_1a5e82c07f18a5fe13d77498a10aad6c85" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::TwoCirclesFootprint::rear_offset_</definition>
+        <argsstring></argsstring>
+        <name>rear_offset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="415" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hateb_local_planner::TwoCirclesFootprint::rear_radius_</definition>
+        <argsstring></argsstring>
+        <name>rear_radius_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="416" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhateb__local__planner_1_1TwoCirclesFootprint_1a52a711f7a293606d6970dc565c3c357f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::TwoCirclesFootprint::TwoCirclesFootprint</definition>
+        <argsstring>(double front_offset, double front_radius, double rear_offset, double rear_radius)</argsstring>
+        <name>TwoCirclesFootprint</name>
+        <param>
+          <type>double</type>
+          <declname>front_offset</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>front_radius</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rear_offset</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rear_radius</declname>
+        </param>
+        <briefdescription>
+<para>Default constructor of the abstract obstacle class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>front_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shift the center of the front circle along the robot/human orientation starting from the center at the rear axis (in meters) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>front_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>radius of the front circle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rear_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shift the center of the rear circle along the opposite robot/human orientation starting from the center at the rear axis (in meters) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rear_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>radius of the front circle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="312" column="3" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="312" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TwoCirclesFootprint_1a67f1eb546fd4a9e75fd933c068b0a86d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hateb_local_planner::TwoCirclesFootprint::~TwoCirclesFootprint</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~TwoCirclesFootprint</name>
+        <briefdescription>
+<para>Virtual destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="318" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TwoCirclesFootprint_1a72df33bba245087610a54eacc02a3023" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TwoCirclesFootprint::setParameters</definition>
+        <argsstring>(double front_offset, double front_radius, double rear_offset, double rear_radius)</argsstring>
+        <name>setParameters</name>
+        <param>
+          <type>double</type>
+          <declname>front_offset</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>front_radius</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rear_offset</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rear_radius</declname>
+        </param>
+        <briefdescription>
+<para>Set parameters of the contour/footprint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>front_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shift the center of the front circle along the robot/human orientation starting from the center at the rear axis (in meters) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>front_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>radius of the front circle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rear_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shift the center of the rear circle along the opposite robot/human orientation starting from the center at the rear axis (in meters) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rear_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>radius of the front circle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="327" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="327" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TwoCirclesFootprint_1a47e95f9896cfe76f474d8557281b44a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::TwoCirclesFootprint::calculateDistance</definition>
+        <argsstring>(const PoseSE2 &amp;current_pose, const Obstacle *obstacle) const override</argsstring>
+        <name>calculateDistance</name>
+        <reimplements refid="classhateb__local__planner_1_1BaseFootprintModel_1a72b681ecb2473cef98a42bebd4472945">calculateDistance</reimplements>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>current_pose</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref> *</type>
+          <declname>obstacle</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the distance between the robot/human and an obstacle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current_pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current robot/human pose </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the obstacle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Euclidean distance to the robot/human </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="340" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="340" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TwoCirclesFootprint_1abb28f17e4749f4688515c76bb7e01155" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::TwoCirclesFootprint::estimateSpatioTemporalDistance</definition>
+        <argsstring>(const PoseSE2 &amp;current_pose, const Obstacle *obstacle, double t) const override</argsstring>
+        <name>estimateSpatioTemporalDistance</name>
+        <reimplements refid="classhateb__local__planner_1_1BaseFootprintModel_1ae162fde4a89a0101cca339a3704e27f1">estimateSpatioTemporalDistance</reimplements>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>current_pose</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1Obstacle" kindref="compound">Obstacle</ref> *</type>
+          <declname>obstacle</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Estimate the distance between the robot/human and the predicted location of an obstacle at time t. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current_pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>robot/human pose, from which the distance to the obstacle is estimated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the dynamic obstacle (constant velocity model is assumed) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time, for which the predicted distance to the obstacle is calculated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Euclidean distance to the robot/human </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="354" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="354" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TwoCirclesFootprint_1aa7ecb0cb353aec12157bb0408c279872" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void hateb_local_planner::TwoCirclesFootprint::visualizeModel</definition>
+        <argsstring>(const PoseSE2 &amp;current_pose, std::vector&lt; visualization_msgs::msg::Marker &gt; &amp;markers, const std_msgs::msg::ColorRGBA &amp;color) const override</argsstring>
+        <name>visualizeModel</name>
+        <reimplements refid="classhateb__local__planner_1_1BaseFootprintModel_1ab9bd7f908bba3c23049b208a64a03909">visualizeModel</reimplements>
+        <param>
+          <type>const <ref refid="classhateb__local__planner_1_1PoseSE2" kindref="compound">PoseSE2</ref> &amp;</type>
+          <declname>current_pose</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; visualization_msgs::msg::Marker &gt; &amp;</type>
+          <declname>markers</declname>
+        </param>
+        <param>
+          <type>const std_msgs::msg::ColorRGBA &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Visualize the robot/human using a markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Fill a marker message with all necessary information (type, pose, scale and color). The header, namespace, id and marker lifetime will be overwritten. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current_pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current robot/human pose </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">markers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>container of marker messages describing the robot/human shape </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color of the footprint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="370" column="8" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="370" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TwoCirclesFootprint_1a36e51ac27b5a5c66c7c60af8b4b3359b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::TwoCirclesFootprint::getInscribedRadius</definition>
+        <argsstring>() override</argsstring>
+        <name>getInscribedRadius</name>
+        <reimplements refid="classhateb__local__planner_1_1BaseFootprintModel_1a805f1e7b919244211f1deb4f884e06de">getInscribedRadius</reimplements>
+        <briefdescription>
+<para>Compute the inscribed radius of the footprint model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>inscribed radius </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="400" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="400" bodyend="404"/>
+      </memberdef>
+      <memberdef kind="function" id="classhateb__local__planner_1_1TwoCirclesFootprint_1ad693423391752cedefb9164097ba9f08" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double hateb_local_planner::TwoCirclesFootprint::getCircumscribedRadius</definition>
+        <argsstring>() const override</argsstring>
+        <name>getCircumscribedRadius</name>
+        <reimplements refid="classhateb__local__planner_1_1BaseFootprintModel_1af6f9b6e83795e0ccf558d15c69e50e12">getCircumscribedRadius</reimplements>
+        <briefdescription>
+<para>Compute the circumscribed radius of the footprint model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>circumscribed radius </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="410" column="10" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="410" bodyend="410"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class that approximates the robot/human with two shifted circles. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hateb_local_planner::TwoCirclesFootprint</label>
+        <link refid="classhateb__local__planner_1_1TwoCirclesFootprint"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner::BaseFootprintModel</label>
+        <link refid="classhateb__local__planner_1_1BaseFootprintModel"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hateb_local_planner::TwoCirclesFootprint</label>
+        <link refid="classhateb__local__planner_1_1TwoCirclesFootprint"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hateb_local_planner::BaseFootprintModel</label>
+        <link refid="classhateb__local__planner_1_1BaseFootprintModel"/>
+      </node>
+    </collaborationgraph>
+    <location file="hateb_local_planner/include/hateb_local_planner/footprint_model.h" line="303" column="1" bodyfile="hateb_local_planner/include/hateb_local_planner/footprint_model.h" bodystart="303" bodyend="417"/>
+    <listofallmembers>
+      <member refid="classhateb__local__planner_1_1BaseFootprintModel_1a23994e2593de8cedf5f839058407d8ec" prot="public" virt="non-virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>BaseFootprintModel</name></member>
+      <member refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a47e95f9896cfe76f474d8557281b44a2" prot="public" virt="virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>calculateDistance</name></member>
+      <member refid="classhateb__local__planner_1_1TwoCirclesFootprint_1abb28f17e4749f4688515c76bb7e01155" prot="public" virt="virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>estimateSpatioTemporalDistance</name></member>
+      <member refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a6c76683827fba99ade12f0a3bed0260f" prot="private" virt="non-virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>front_offset_</name></member>
+      <member refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a9dbeb3854023c56930a92e08263c3b47" prot="private" virt="non-virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>front_radius_</name></member>
+      <member refid="classhateb__local__planner_1_1TwoCirclesFootprint_1ad693423391752cedefb9164097ba9f08" prot="public" virt="virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>getCircumscribedRadius</name></member>
+      <member refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a36e51ac27b5a5c66c7c60af8b4b3359b" prot="public" virt="virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>getInscribedRadius</name></member>
+      <member refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a5e82c07f18a5fe13d77498a10aad6c85" prot="private" virt="non-virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>rear_offset_</name></member>
+      <member refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a4ae4f3a70ffece9eba44e7f27467f8ee" prot="private" virt="non-virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>rear_radius_</name></member>
+      <member refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a72df33bba245087610a54eacc02a3023" prot="public" virt="non-virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>setParameters</name></member>
+      <member refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a52a711f7a293606d6970dc565c3c357f" prot="public" virt="non-virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>TwoCirclesFootprint</name></member>
+      <member refid="classhateb__local__planner_1_1TwoCirclesFootprint_1aa7ecb0cb353aec12157bb0408c279872" prot="public" virt="virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>visualizeModel</name></member>
+      <member refid="classhateb__local__planner_1_1BaseFootprintModel_1a011c4b6ecc51affad4f90b37330f52ee" prot="public" virt="virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>~BaseFootprintModel</name></member>
+      <member refid="classhateb__local__planner_1_1TwoCirclesFootprint_1a67f1eb546fd4a9e75fd933c068b0a86d" prot="public" virt="non-virtual"><scope>hateb_local_planner::TwoCirclesFootprint</scope><name>~TwoCirclesFootprint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

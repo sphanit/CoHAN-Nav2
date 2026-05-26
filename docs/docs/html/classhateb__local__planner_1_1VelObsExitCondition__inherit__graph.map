@@ -1,0 +1,4 @@
+<map id="hateb_local_planner::VelObsExitCondition" name="hateb_local_planner::VelObsExitCondition">
+<area shape="rect" id="node1" title="Condition node that checks if an obstacle (human) has stopped in the environment." alt="" coords="5,80,168,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="15,5,158,32"/>
+</map>
