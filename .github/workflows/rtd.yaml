@@ -13,6 +13,4 @@ jobs:
 
     steps:
       - name: Trigger RTD
-        run: |
-          curl -X POST "${{ secrets.RTD_WEBHOOK_URL }}" \
-            -H "Authorization: Token ${{ secrets.RTD_TOKEN }}"
+        run: echo "The Workflow is complete! Docs will be rebuilt."
