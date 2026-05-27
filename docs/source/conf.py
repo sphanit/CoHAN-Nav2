@@ -47,7 +47,7 @@ html_context = {
     "github_user": "sphanit",
     "github_repo": "CoHAN-Nav2",
     "github_version": "main",
-    "conf_py_path": "/docs/",
+    "conf_py_path": "/docs/source/",
 }
 
 # -- Options for EPUB output
