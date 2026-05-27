@@ -13,4 +13,5 @@ jobs:
 
     steps:
       - name: Trigger RTD
-        run: echo "The Workflow is complete! Docs will be rebuilt."
+        # run: echo "The Workflow is complete! Docs will be rebuilt."
+        run: curl -X POST -H "Authorization: Token $RTD_TOKEN" https://readthedocs.org/api/v3/projects/cohan-nav2/versions/latest/builds/
