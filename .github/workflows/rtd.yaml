@@ -15,5 +15,6 @@ jobs:
       - name: Trigger RTD
         run: |
           curl -X POST \
-              -H "Authorization: Token ${{ secrets.RTD_TOKEN }}" \
-              https://readthedocs.org/api/v3/projects/cohan_nav2/versions/latest/builds/
+            -d "branches=main" \
+            -d "token=${{ secrets.RTD_WEBHOOK_TOKEN }}" \
+            ${{ secrets.RTD_WEBHOOK_URL }}
