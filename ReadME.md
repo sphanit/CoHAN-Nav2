@@ -37,7 +37,7 @@ You can find the sample launch and config files in cohan2.0_navigation. Here is 
   ```
 Now you can give a goal to the robot and move the human around with teleop to test the system.
 
-Check the **Required Topics** here to publish all the topics: https://cohan-nav2.readthedocs.io/en/stable/tutorial.html
+Check the **Required Topics** here to publish all the topics: https://cohan-nav2.readthedocs.io/tutorial.html
 
 # Bibtex
 ```
