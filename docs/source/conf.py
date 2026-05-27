@@ -37,6 +37,20 @@ html_theme = 'sphinx_rtd_theme'
 html_show_sourcelink = False
 
 
+html_theme_options = {
+    "repository_url": "https://github.com/sphanit/CoHAN-Nav2",
+    "use_repository_button": True,
+    "use_edit_page_button": True,
+}
+
+html_context = {
+    "display_github": True,
+    "github_user": "sphanit",
+    "github_repo": "CoHAN-Nav2",
+    "github_version": "main",
+    "conf_py_path": "/docs/",
+}
+
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
