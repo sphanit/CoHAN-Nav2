@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Call Read the Docs webhook
+      - name: Trigger RTD
         run: |
-          curl -X POST "${{ secrets.RTD_WEBHOOK_URL }}"
+          curl -X POST "${{ secrets.RTD_WEBHOOK_URL }}" \
+            -H "Authorization: Token ${{ secrets.RTD_TOKEN }}"
