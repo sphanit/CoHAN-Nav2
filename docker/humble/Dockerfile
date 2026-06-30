@@ -45,6 +45,7 @@ RUN source /opt/ros/${ROS_DISTRO}/setup.bash && apt install -y \
     ros-$ROS_DISTRO-navigation2\
     ros-$ROS_DISTRO-libg2o \
     ros-$ROS_DISTRO-nav2-bringup \
+    ros-$ROS_DISTRO-joint-state-publisher \
     libeigen3-dev\
     libqt5gui5 \
     libsqlite3-dev \
