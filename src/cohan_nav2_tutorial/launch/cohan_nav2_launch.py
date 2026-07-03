@@ -157,6 +157,17 @@ def generate_launch_description():
                           'rviz_config': rviz_config_file}.items())
     
     
+    teleop_node = Node(
+        package='teleop_twist_keyboard',
+        executable='teleop_twist_keyboard',
+        name='teleop_twist_keyboard',
+        output='screen',
+        prefix='xterm -e',
+        remappings=[
+            ('/cmd_vel', '/human1/cmd_vel')
+        ]
+    )
+    
     bringup_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(launch_dir, 'bringup_launch.py')),
@@ -224,6 +235,7 @@ def generate_launch_description():
     # Add any conditioned actions or included launch descriptions
     ld.add_action(cohan_sim_node)
     ld.add_action(cohan_sim_node_gui)
+    ld.add_action(teleop_node)
     ld.add_action(rviz_launch)
     ld.add_action(bringup_launch)
     ld.add_action(helper_planners_launch)
